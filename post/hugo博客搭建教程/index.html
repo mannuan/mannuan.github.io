@@ -17,7 +17,11 @@ Hugo安装(Mac) brew install hugo  创建博客 hugo new size myblog  安装主�
 下载m10c $ cd myblog $ git clone https://github.com/vaga/hugo-theme-m10c.git themes/m10c  修改配置文件config.toml 添加一行theme = &quot;m10c&quot;
 本地预览 hugo server --buildDrafts  创建第一篇博客 hugo new post/第一篇博客.md  创建的博客在./contents/post/下面
 使用vscode编辑markdown文件 快捷键Ctrl&#43;Shift&#43;P，输入Markwon: Open Preview to the Side，打开预览模式
-发布博客到github  下面以我的github用户名manuan为例 1. 在github创建一个名为mannuan.github.io的仓库。 2. 把当前的博客打包到public目录下面 hugo --baseUrl=&quot;https://mannuan.github.io/&quot; --buildDrafts 3. 把public里面的内容同步到github cd public git init git add . git commit -m &#39;hugo博客第一次提交&#39; git remote add origin https://github."/>
+发布博客到github  下面以我的github用户名manuan为例
+  在github创建一个名为mannuan.github.io的仓库。
+ 把当前的博客打包到public目录下面
+   hugo --baseUrl=&quot;https://mannuan.github.io/&quot; --buildDrafts
+  把public里面的内容同步到github    cd public"/>
 
     <meta property="og:title" content="Hugo博客搭建教程" />
 <meta property="og:description" content="Hugo介绍 一种基于Go语言的博客框架。
@@ -25,7 +29,11 @@ Hugo安装(Mac) brew install hugo  创建博客 hugo new size myblog  安装主�
 下载m10c $ cd myblog $ git clone https://github.com/vaga/hugo-theme-m10c.git themes/m10c  修改配置文件config.toml 添加一行theme = &quot;m10c&quot;
 本地预览 hugo server --buildDrafts  创建第一篇博客 hugo new post/第一篇博客.md  创建的博客在./contents/post/下面
 使用vscode编辑markdown文件 快捷键Ctrl&#43;Shift&#43;P，输入Markwon: Open Preview to the Side，打开预览模式
-发布博客到github  下面以我的github用户名manuan为例 1. 在github创建一个名为mannuan.github.io的仓库。 2. 把当前的博客打包到public目录下面 hugo --baseUrl=&quot;https://mannuan.github.io/&quot; --buildDrafts 3. 把public里面的内容同步到github cd public git init git add . git commit -m &#39;hugo博客第一次提交&#39; git remote add origin https://github." />
+发布博客到github  下面以我的github用户名manuan为例
+  在github创建一个名为mannuan.github.io的仓库。
+ 把当前的博客打包到public目录下面
+   hugo --baseUrl=&quot;https://mannuan.github.io/&quot; --buildDrafts
+  把public里面的内容同步到github    cd public" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://mannuan.github.io/post/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/" />
 <meta property="article:published_time" content="2019-06-30T21:19:27&#43;08:00"/>
@@ -113,31 +121,60 @@ $ git clone https://github.com/vaga/hugo-theme-m10c.git themes/m10c
 <h1 id="发布博客到-github">发布博客到<code>github</code></h1>
 
 <blockquote>
-<p>下面以我的github用户名<code>manuan</code>为例
-1. 在github创建一个名为<code>mannuan.github.io</code>的仓库。
-2. 把当前的博客打包到<code>public</code>目录下面
-<code>hugo --baseUrl=&quot;https://mannuan.github.io/&quot; --buildDrafts</code>
-3. 把<code>public</code>里面的内容同步到github
-<code>cd public</code>
-<code>git init</code>
-<code>git add .</code>
-<code>git commit -m 'hugo博客第一次提交'</code>
-<code>git remote add origin https://github.com/mannuan/mannuan.github.io.git</code>
-<code>git push -u origin master</code>
-4. 打开浏览器输入<code>https://mannuan.github.io</code>，查看博客。</p>
+<p>下面以我的github用户名<code>manuan</code>为例</p>
 </blockquote>
+
+<ol>
+<li><p>在github创建一个名为<code>mannuan.github.io</code>的仓库。</p></li>
+
+<li><p>把当前的博客打包到<code>public</code>目录下面</p></li>
+</ol>
+
+<blockquote>
+<p><code>hugo --baseUrl=&quot;https://mannuan.github.io/&quot; --buildDrafts</code></p>
+</blockquote>
+
+<ol>
+<li>把<code>public</code>里面的内容同步到github
+<br /></li>
+</ol>
+
+<blockquote>
+<p><code>cd public</code></p>
+
+<p><code>git init</code></p>
+
+<p><code>git add .</code></p>
+
+<p><code>git commit -m 'hugo博客第一次提交'</code></p>
+
+<p><code>git remote add origin https://github.com/mannuan/mannuan.github.io.git</code></p>
+
+<p><code>git push -u origin master</code></p>
+</blockquote>
+
+<ol>
+<li>打开浏览器输入<code>https://mannuan.github.io</code>，查看博客。</li>
+</ol>
 
 <h1 id="博客后期维护">博客后期维护</h1>
 
 <ul>
-<li>创建文章：<code>hugo new post/文章.md</code></li>
-<li>进行打包：<code>hugo --baseUrl=&quot;https://mannuan.github.io/&quot; --buildDrafts</code></li>
-<li>发布博客：
-&gt; <code>cd public</code>
-&gt; <code>git add .</code>
-&gt; <code>git commit -m '第二次提交'</code>
-&gt; <code>git push -u origin master</code></li>
+<li><p>创建文章：<code>hugo new post/文章.md</code></p></li>
+
+<li><p>进行打包：<code>hugo --baseUrl=&quot;https://mannuan.github.io/&quot; --buildDrafts</code></p></li>
+
+<li><p>发布博客：
+&gt; <code>cd public</code></p></li>
 </ul>
+
+<blockquote>
+<p><code>git add .</code></p>
+
+<p><code>git commit -m '第二次提交'</code></p>
+
+<p><code>git push -u origin master</code></p>
+</blockquote>
 
     </div>
     <div class="post-footer">

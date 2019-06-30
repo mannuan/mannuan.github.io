@@ -22,7 +22,11 @@ Hugo安装(Mac) brew install hugo  创建博客 hugo new size myblog  安装主�
 下载m10c $ cd myblog $ git clone https://github.com/vaga/hugo-theme-m10c.git themes/m10c  修改配置文件config.toml 添加一行theme = &amp;quot;m10c&amp;quot;
 本地预览 hugo server --buildDrafts  创建第一篇博客 hugo new post/第一篇博客.md  创建的博客在./contents/post/下面
 使用vscode编辑markdown文件 快捷键Ctrl+Shift+P，输入Markwon: Open Preview to the Side，打开预览模式
-发布博客到github  下面以我的github用户名manuan为例 1. 在github创建一个名为mannuan.github.io的仓库。 2. 把当前的博客打包到public目录下面 hugo --baseUrl=&amp;quot;https://mannuan.github.io/&amp;quot; --buildDrafts 3. 把public里面的内容同步到github cd public git init git add . git commit -m &#39;hugo博客第一次提交&#39; git remote add origin https://github.</description>
+发布博客到github  下面以我的github用户名manuan为例
+  在github创建一个名为mannuan.github.io的仓库。
+ 把当前的博客打包到public目录下面
+   hugo --baseUrl=&amp;quot;https://mannuan.github.io/&amp;quot; --buildDrafts
+  把public里面的内容同步到github    cd public</description>
     </item>
     
     <item>
