@@ -20,9 +20,8 @@ Hugo安装(Mac) brew install hugo  创建博客 hugo new size myblog  安装主�
 发布博客到github  下面以我的github用户名manuan为例
   在github创建一个名为mannuan.github.io的仓库。
  把当前的博客打包到public目录下面
-hugo &ndash;baseUrl=&ldquo;https://mannuan.github.io/&quot; &ndash;buildDrafts
- 把public里面的内容同步到github
-cd public git init git add . git commit -m &lsquo;hugo博客第一次提交&rsquo; git remote add origin https://github."/>
+hugo --baseUrl=&quot;https://mannuan.github.io/&quot; --buildDrafts  把public里面的内容同步到github
+cd public git init git add . git commit -m &#39;hugo博客第一次提交&#39; git remote add origin https://github."/>
 
     <meta property="og:title" content="Hugo博客搭建教程" />
 <meta property="og:description" content="Hugo介绍 一种基于Go语言的博客框架。
@@ -33,9 +32,8 @@ Hugo安装(Mac) brew install hugo  创建博客 hugo new size myblog  安装主�
 发布博客到github  下面以我的github用户名manuan为例
   在github创建一个名为mannuan.github.io的仓库。
  把当前的博客打包到public目录下面
-hugo &ndash;baseUrl=&ldquo;https://mannuan.github.io/&quot; &ndash;buildDrafts
- 把public里面的内容同步到github
-cd public git init git add . git commit -m &lsquo;hugo博客第一次提交&rsquo; git remote add origin https://github." />
+hugo --baseUrl=&quot;https://mannuan.github.io/&quot; --buildDrafts  把public里面的内容同步到github
+cd public git init git add . git commit -m &#39;hugo博客第一次提交&#39; git remote add origin https://github." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://mannuan.github.io/post/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/" />
 <meta property="article:published_time" content="2019-06-30T21:19:27&#43;08:00"/>
@@ -131,16 +129,18 @@ $ git clone https://github.com/vaga/hugo-theme-m10c.git themes/m10c
 
 <li><p>把当前的博客打包到<code>public</code>目录下面</p>
 
-<p>hugo &ndash;baseUrl=&ldquo;<a href="https://mannuan.github.io/&quot;">https://mannuan.github.io/&quot;</a> &ndash;buildDrafts</p></li>
+<pre><code>hugo --baseUrl=&quot;https://mannuan.github.io/&quot; --buildDrafts
+</code></pre></li>
 
 <li><p>把<code>public</code>里面的内容同步到github</p>
 
-<p>cd public
-   git init
-   git add .
-   git commit -m &lsquo;hugo博客第一次提交&rsquo;
-   git remote add origin <a href="https://github.com/mannuan/mannuan.github.io.git">https://github.com/mannuan/mannuan.github.io.git</a>
-   git push -u origin master</p></li>
+<pre><code>cd public
+git init
+git add .
+git commit -m 'hugo博客第一次提交'
+git remote add origin https://github.com/mannuan/  mannuan.github.io.git
+git push -u origin master
+</code></pre></li>
 
 <li><p>打开浏览器输入<code>https://mannuan.github.io</code>，查看博客。</p></li>
 </ol>
@@ -150,18 +150,21 @@ $ git clone https://github.com/vaga/hugo-theme-m10c.git themes/m10c
 <ul>
 <li><p>创建文章：</p>
 
-<p>hugo new post/文章.md</p></li>
+<pre><code>hugo new post/文章.md
+</code></pre></li>
 
 <li><p>进行打包：</p>
 
-<p>hugo &ndash;baseUrl=&ldquo;<a href="https://mannuan.github.io/&quot;">https://mannuan.github.io/&quot;</a> &ndash;buildDrafts</p></li>
+<pre><code>hugo --baseUrl=&quot;https://mannuan.github.io/&quot; --buildDrafts
+</code></pre></li>
 
 <li><p>发布博客：</p>
 
-<p>cd public
-  git add .
-  git commit -m &lsquo;第二次提交&rsquo;
-  git push -u origin master</p></li>
+<pre><code>cd public
+git add .
+git commit -m '第二次提交'
+git push -u origin master
+</code></pre></li>
 </ul>
 
     </div>
