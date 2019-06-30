@@ -25,8 +25,9 @@ Hugo安装(Mac) brew install hugo  创建博客 hugo new size myblog  安装主�
 发布博客到github  下面以我的github用户名manuan为例
   在github创建一个名为mannuan.github.io的仓库。
  把当前的博客打包到public目录下面
-   hugo --baseUrl=&amp;quot;https://mannuan.github.io/&amp;quot; --buildDrafts
-  把public里面的内容同步到github    cd public</description>
+hugo &amp;ndash;baseUrl=&amp;ldquo;https://mannuan.github.io/&amp;quot; &amp;ndash;buildDrafts
+ 把public里面的内容同步到github
+cd public git init git add . git commit -m &amp;lsquo;hugo博客第一次提交&amp;rsquo; git remote add origin https://github.</description>
     </item>
     
     <item>
