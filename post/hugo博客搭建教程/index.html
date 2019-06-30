@@ -12,28 +12,28 @@
     
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Hugo博客搭建教程"/>
-<meta name="twitter:description" content="Hugo介绍 一种基于Go语言的博客框架。
-Hugo安装(Mac) brew install hugo  创建博客 hugo new size myblog  安装主题 themes.gohuo.io上面有很多主题可供选择，比如选择m10c
-下载m10c $ cd myblog $ git clone https://github.com/vaga/hugo-theme-m10c.git themes/m10c  修改配置文件config.toml 添加一行theme = &quot;m10c&quot;
-本地预览 hugo server --buildDrafts  创建第一篇博客 hugo new post/第一篇博客.md  创建的博客在./contents/post/下面
-使用vscode编辑markdown文件 快捷键Ctrl&#43;Shift&#43;P，输入Markwon: Open Preview to the Side，打开预览模式
-发布博客到github  下面以我的github用户名manuan为例
-  在github创建一个名为mannuan.github.io的仓库。
+<meta name="twitter:description" content="Hugo介绍 一种基于 Go 语言的博客框架。
+*Hugo*安装(Mac) brew install hugo  创建博客 hugo new size myblog  安装主题 themes.gohuo.io上面有很多主题可供选择，比如选择m10c
+下载m10c $ cd myblog $ git clone https://github.com/vaga/hugo-theme-m10c.git themes/m10c  修改配置文件config.toml 添加一行：
+ theme = &quot;m10c&quot;  本地预览 hugo server --buildDrafts  创建第一篇博客 hugo new post/第一篇博客.md  创建的博客在./contents/post/下面
+使用*vscode*编辑*markdown*文件 快捷键Ctrl&#43;Shift&#43;P，输入Markwon: Open Preview to the Side，打开预览模式
+发布博客到github  下面以我的*github*用户名*manuan*为例
+  在*github*创建一个名为mannuan.github.io的仓库。
  把当前的博客打包到public目录下面
 hugo --baseUrl=&quot;https://mannuan.github.io/&quot; --buildDrafts  把public里面的内容同步到github
-cd public git init git add . git commit -m &#39;hugo博客第一次提交&#39; git remote add origin https://github."/>
+cd public git init git add ."/>
 
     <meta property="og:title" content="Hugo博客搭建教程" />
-<meta property="og:description" content="Hugo介绍 一种基于Go语言的博客框架。
-Hugo安装(Mac) brew install hugo  创建博客 hugo new size myblog  安装主题 themes.gohuo.io上面有很多主题可供选择，比如选择m10c
-下载m10c $ cd myblog $ git clone https://github.com/vaga/hugo-theme-m10c.git themes/m10c  修改配置文件config.toml 添加一行theme = &quot;m10c&quot;
-本地预览 hugo server --buildDrafts  创建第一篇博客 hugo new post/第一篇博客.md  创建的博客在./contents/post/下面
-使用vscode编辑markdown文件 快捷键Ctrl&#43;Shift&#43;P，输入Markwon: Open Preview to the Side，打开预览模式
-发布博客到github  下面以我的github用户名manuan为例
-  在github创建一个名为mannuan.github.io的仓库。
+<meta property="og:description" content="Hugo介绍 一种基于 Go 语言的博客框架。
+*Hugo*安装(Mac) brew install hugo  创建博客 hugo new size myblog  安装主题 themes.gohuo.io上面有很多主题可供选择，比如选择m10c
+下载m10c $ cd myblog $ git clone https://github.com/vaga/hugo-theme-m10c.git themes/m10c  修改配置文件config.toml 添加一行：
+ theme = &quot;m10c&quot;  本地预览 hugo server --buildDrafts  创建第一篇博客 hugo new post/第一篇博客.md  创建的博客在./contents/post/下面
+使用*vscode*编辑*markdown*文件 快捷键Ctrl&#43;Shift&#43;P，输入Markwon: Open Preview to the Side，打开预览模式
+发布博客到github  下面以我的*github*用户名*manuan*为例
+  在*github*创建一个名为mannuan.github.io的仓库。
  把当前的博客打包到public目录下面
 hugo --baseUrl=&quot;https://mannuan.github.io/&quot; --buildDrafts  把public里面的内容同步到github
-cd public git init git add . git commit -m &#39;hugo博客第一次提交&#39; git remote add origin https://github." />
+cd public git init git add ." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://mannuan.github.io/post/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/" />
 <meta property="article:published_time" content="2019-06-30T21:19:27&#43;08:00"/>
@@ -76,9 +76,9 @@ cd public git init git add . git commit -m &#39;hugo博客第一次提交&#39; g
 
 <h1 id="hugo介绍">Hugo介绍</h1>
 
-<p>一种基于Go语言的博客框架。</p>
+<p>一种基于 <em>Go</em> 语言的博客框架。</p>
 
-<h1 id="hugo安装-mac">Hugo安装(Mac)</h1>
+<h1 id="hugo-安装-mac">*Hugo*安装(<em>Mac</em>)</h1>
 
 <pre><code>brew install hugo
 </code></pre>
@@ -92,7 +92,7 @@ cd public git init git add . git commit -m &#39;hugo博客第一次提交&#39; g
 
 <p><code>themes.gohuo.io</code>上面有很多主题可供选择，比如选择<code>m10c</code></p>
 
-<h2 id="下载-m10c">下载<code>m10c</code></h2>
+<h2 id="下载-m10c">下载<em>m10c</em></h2>
 
 <pre><code>$ cd myblog
 $ git clone https://github.com/vaga/hugo-theme-m10c.git themes/m10c
@@ -100,7 +100,10 @@ $ git clone https://github.com/vaga/hugo-theme-m10c.git themes/m10c
 
 <h2 id="修改配置文件-config-toml">修改配置文件<code>config.toml</code></h2>
 
-<p>添加一行<code>theme = &quot;m10c&quot;</code></p>
+<p>添加一行：</p>
+
+<pre><code>    theme = &quot;m10c&quot;
+</code></pre>
 
 <h1 id="本地预览">本地预览</h1>
 
@@ -114,25 +117,25 @@ $ git clone https://github.com/vaga/hugo-theme-m10c.git themes/m10c
 
 <p>创建的博客在<code>./contents/post/</code>下面</p>
 
-<h1 id="使用-vscode-编辑markdown文件">使用<code>vscode</code>编辑markdown文件</h1>
+<h1 id="使用-vscode-编辑-markdown-文件">使用*vscode*编辑*markdown*文件</h1>
 
 <p>快捷键<code>Ctrl+Shift+P</code>，输入<code>Markwon: Open Preview to the Side</code>，打开预览模式</p>
 
-<h1 id="发布博客到-github">发布博客到<code>github</code></h1>
+<h1 id="发布博客到-github">发布博客到<em>github</em></h1>
 
 <blockquote>
-<p>下面以我的github用户名<code>manuan</code>为例</p>
+<p>下面以我的*github*用户名*manuan*为例</p>
 </blockquote>
 
 <ol>
-<li><p>在github创建一个名为<code>mannuan.github.io</code>的仓库。</p></li>
+<li><p>在*github*创建一个名为<code>mannuan.github.io</code>的仓库。</p></li>
 
 <li><p>把当前的博客打包到<code>public</code>目录下面</p>
 
 <pre><code>hugo --baseUrl=&quot;https://mannuan.github.io/&quot; --buildDrafts
 </code></pre></li>
 
-<li><p>把<code>public</code>里面的内容同步到github</p>
+<li><p>把<code>public</code>里面的内容同步到<em>github</em></p>
 
 <pre><code>cd public
 git init
