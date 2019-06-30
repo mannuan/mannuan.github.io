@@ -6,10 +6,20 @@
     <description>Recent content on My New Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 30 Jun 2019 20:35:25 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 30 Jun 2019 21:19:27 +0800</lastBuildDate>
     
 	<atom:link href="https://mannuan.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Hugo博客搭建教程</title>
+      <link>https://mannuan.github.io/post/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/</link>
+      <pubDate>Sun, 30 Jun 2019 21:19:27 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/</guid>
+      <description> Hugo介绍 一种基于Go语言的博客框架。
+Hugo安装(Mac) brew install hugo  </description>
+    </item>
     
     <item>
       <title>原生js实现JSONP</title>

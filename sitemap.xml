@@ -3,14 +3,19 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://mannuan.github.io/post/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/</loc>
+    <lastmod>2019-06-30T21:19:27+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://mannuan.github.io/</loc>
-    <lastmod>2019-06-30T20:35:25+08:00</lastmod>
+    <lastmod>2019-06-30T21:19:27+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://mannuan.github.io/post/</loc>
-    <lastmod>2019-06-30T20:35:25+08:00</lastmod>
+    <lastmod>2019-06-30T21:19:27+08:00</lastmod>
     <priority>0</priority>
   </url>
   
