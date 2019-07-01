@@ -22,7 +22,7 @@
 实验目的 掌握在路由器上如何配置 RIP 路由协议。
 需求分析 两台路由器通过快速以太网端口连接在一起，每个路由器上设置2个Loopback端口模拟子网，在所有端口运行RIP路由协议，实现所有子网间的互通。
 实验原理 RIP(Routing Information Protocols，路由信息协议)是应用较早、使用较普遍的 IGP(Interior Gateway Protocol，内部网关协议)，适用于小型同类网络，是典型的距离矢量 (distance-vector)协议。 RIP 协议以跳数做为衡量路径开销的，RIP 协议里规定最大跳数为 15。 RIP 在构造路由表时会使用到 3 种计时器:更新计时器、无效计时器、刷新计时器。 它让每台路由器周期性地向每个相邻的邻居发送完整的路由表。路由表包括每个网络或子网 的信息，以及与之相关的度量值。
-实验拓扑 选择设备  路由器：2台Generic（从左边数第一个）  设置路由 Switch&amp;gt;en Switch#conf t Switch(config)#vlan 10 Switch(config-vlan)#vlan 20 Switch(config)#inter vlan 10 Switch(config-if)#ip address 192.168.10.1 255.255.255.0 Switch(config-if)#no shut Switch(config-if)#inter vlan 20 Switch(config-if)#ip address 192.168.20.1 255.255.255.0 Switch(config-if)#no shut Switch(config-if)#end Switch#sh run  左边的2960交换机 Switch&amp;gt;en Switch#conf t Switch(config)#inter fa0/2 Switch(config-if)#switch mode trunk Switch(config-if)#vlan 10 Switch(config-vlan)#inter fa0/1 Switch(config-if)#switchport access vlan 10 Switch(config-if)#end Switch#sh run  右边的2960交换机 Switch&amp;gt;en Switch#conf t Switch(config)#inter fa0/2 Switch(config-if)#switch mode trunk Switch(config-if)#vlan 20 Switch(config-vlan)#inter fa0/1 Switch(config-if)#switchport access vlan 20 Switch(config-if)#end Switch#sh run  设置左边的主机 1、打开&amp;rdquo;IP Configure&amp;rdquo;</description>
+实验拓扑 选择设备  路由器：2台Generic（从左边数第一个）  实验步骤 设置左边的路由器 Router&amp;gt;en Router#conf t Router(config)#inter se2/0 Router(config-if)#ip address 192.168.1.1 255.255.255.0 Router(config-if)#clock rate 64000 Router(config-if)#no shut Router(config-if)#inter loop0 Router(config-if)#ip address 172.16.1.1 255.255.255.0 Router(config-if)#inter loop1 Router(config-if)#ip address 172.16.2.1 255.255.255.0 Router(config-if)#router rip Router(config-router)#network 172.16.0.0 Router(config-router)#network 192.168.1.0 Router(config-router)#end Router#sh run  设置右边的路由器 Router&amp;gt;en Router#conf t Router(config)#inter se2/0 Router(config-if)#ip address 192.</description>
     </item>
     
     <item>
@@ -52,7 +52,7 @@
     </item>
     
     <item>
-      <title>实验八 静态nat</title>
+      <title>实验八 配置静态nat</title>
       <link>https://mannuan.github.io/post/%E5%AE%9E%E9%AA%8C%E5%85%AB-%E9%85%8D%E7%BD%AE%E9%9D%99%E6%80%81nat/</link>
       <pubDate>Mon, 01 Jul 2019 09:06:25 +0800</pubDate>
       
