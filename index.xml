@@ -7,10 +7,23 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright> ©2019 mannuan. All Rights Reserved.</copyright>
-    <lastBuildDate>Mon, 01 Jul 2019 10:50:39 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 01 Jul 2019 17:22:33 +0800</lastBuildDate>
     
 	<atom:link href="https://mannuan.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>实验十 RIP路由协议基本配置</title>
+      <link>https://mannuan.github.io/post/%E5%AE%9E%E9%AA%8C%E5%8D%81-rip%E8%B7%AF%E7%94%B1%E5%8D%8F%E8%AE%AE%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Mon, 01 Jul 2019 17:22:33 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/%E5%AE%9E%E9%AA%8C%E5%8D%81-rip%E8%B7%AF%E7%94%B1%E5%8D%8F%E8%AE%AE%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/</guid>
+      <description>实验平台 Cisco模拟器，Version：5.3.0.0088
+实验目的 掌握在路由器上如何配置 RIP 路由协议。
+需求分析 两台路由器通过快速以太网端口连接在一起，每个路由器上设置2个Loopback端口模拟子网，在所有端口运行RIP路由协议，实现所有子网间的互通。
+实验原理 RIP(Routing Information Protocols，路由信息协议)是应用较早、使用较普遍的 IGP(Interior Gateway Protocol，内部网关协议)，适用于小型同类网络，是典型的距离矢量 (distance-vector)协议。 RIP 协议以跳数做为衡量路径开销的，RIP 协议里规定最大跳数为 15。 RIP 在构造路由表时会使用到 3 种计时器:更新计时器、无效计时器、刷新计时器。 它让每台路由器周期性地向每个相邻的邻居发送完整的路由表。路由表包括每个网络或子网 的信息，以及与之相关的度量值。
+实验拓扑 选择设备  路由器：2台Generic（从左边数第一个）  设置路由 Switch&amp;gt;en Switch#conf t Switch(config)#vlan 10 Switch(config-vlan)#vlan 20 Switch(config)#inter vlan 10 Switch(config-if)#ip address 192.168.10.1 255.255.255.0 Switch(config-if)#no shut Switch(config-if)#inter vlan 20 Switch(config-if)#ip address 192.168.20.1 255.255.255.0 Switch(config-if)#no shut Switch(config-if)#end Switch#sh run  左边的2960交换机 Switch&amp;gt;en Switch#conf t Switch(config)#inter fa0/2 Switch(config-if)#switch mode trunk Switch(config-if)#vlan 10 Switch(config-vlan)#inter fa0/1 Switch(config-if)#switchport access vlan 10 Switch(config-if)#end Switch#sh run  右边的2960交换机 Switch&amp;gt;en Switch#conf t Switch(config)#inter fa0/2 Switch(config-if)#switch mode trunk Switch(config-if)#vlan 20 Switch(config-vlan)#inter fa0/1 Switch(config-if)#switchport access vlan 20 Switch(config-if)#end Switch#sh run  设置左边的主机 1、打开&amp;rdquo;IP Configure&amp;rdquo;</description>
+    </item>
     
     <item>
       <title>实验六 跨交换机实现vlan间的路由</title>
@@ -22,7 +35,7 @@
 实验目的 利用三层交换机跨交换机实现VLAN间路由。
 需求分析 在二层交换机上划分VLAN配置Trunk实现不同VLAN的主机接入，在三层交换机上划分VLAN配置Trunk并配置SVI接口实现不同VLAN间路由。
 实验原理 在二层交换机上划分VLAN可实现不同VLAN的主机接入，而VLAN间的主机通信为不同网段间的通信，需要通过三层设备对数据进行路由转发才可以实现，通过在三层交换机上为各VLAN配置SVI接口，利用三层交换机的路由功能可以实现VLAN间的路由。
-实验拓扑 选择设备  交换机：1台3560-24PS，2台2960 移动终端：2台Generic（从左边数第一个）  设置路由 最上面的交换机 Switch&amp;gt;en Switch#conf t Switch(config)#vlan 10 Switch(config-vlan)#vlan 20 Switch(config)#inter vlan 10 Switch(config-if)#ip address 192.168.10.1 255.255.255.0 Switch(config-if)#no shut Switch(config-if)#inter vlan 20 Switch(config-if)#ip address 192.168.20.1 255.255.255.0 Switch(config-if)#no shut Switch(config-if)#end Switch#sh run  左边的2960交换机 Switch&amp;gt;en Switch#conf t Switch(config)#inter fa0/2 Switch(config-if)#switch mode trunk Switch(config-if)#vlan 10 Switch(config-vlan)#inter fa0/1 Switch(config-if)#switchport access vlan 10 Switch(config-if)#end Switch#sh run  右边的2960交换机 Switch&amp;gt;en Switch#conf t Switch(config)#inter fa0/2 Switch(config-if)#switch mode trunk Switch(config-if)#vlan 20 Switch(config-vlan)#inter fa0/1 Switch(config-if)#switchport access vlan 20 Switch(config-if)#end Switch#sh run  设置左边的主机 1、打开&amp;rdquo;IP Configure&amp;rdquo;</description>
+实验拓扑 选择设备  交换机：1台3560-24PS，2台2960 移动终端：2台Generic（从左边数第一个）  实验步骤 设置最上面的交换机 Switch&amp;gt;en Switch#conf t Switch(config)#vlan 10 Switch(config-vlan)#vlan 20 Switch(config)#inter vlan 10 Switch(config-if)#ip address 192.168.10.1 255.255.255.0 Switch(config-if)#no shut Switch(config-if)#inter vlan 20 Switch(config-if)#ip address 192.168.20.1 255.255.255.0 Switch(config-if)#no shut Switch(config-if)#end Switch#sh run  设置左边的2960交换机 Switch&amp;gt;en Switch#conf t Switch(config)#inter fa0/2 Switch(config-if)#switch mode trunk Switch(config-if)#vlan 10 Switch(config-vlan)#inter fa0/1 Switch(config-if)#switchport access vlan 10 Switch(config-if)#end Switch#sh run  设置右边的2960交换机 Switch&amp;gt;en Switch#conf t Switch(config)#inter fa0/2 Switch(config-if)#switch mode trunk Switch(config-if)#vlan 20 Switch(config-vlan)#inter fa0/1 Switch(config-if)#switchport access vlan 20 Switch(config-if)#end Switch#sh run  设置左边的主机 1、打开&amp;rdquo;IP Configure&amp;rdquo;</description>
     </item>
     
     <item>
@@ -35,7 +48,7 @@
 实验目的 配置网络地址变换，为私有地址的用户提供到外部网络的资源的访问。
 需求分析 ISP 提供商给 IT 企业的一段公共 IP 地址的地址段为 200.1.1.200~100.1.1.210，需要内网使用这段址去访问 Internet，考虑到包括安全在内的诸多因素，公司希望对外部隐藏内部 网络。
 实验原理 在路由器上定义内网与外网接口，利用 NAT 地址池实现内网对外网的访问，并把内网 隐藏起来。
-实验拓扑 选择设备  交换机：1台2960 移动终端：2台Generic（从左边数第一个） 路由器：2台Generic（从左边数第一个）  设置路由 左边的路由器 no Router&amp;gt;en Router#conf t Router(config)#inter se2/0 Router(config-if)#ip address 200.1.1.2 255.255.255.0 Router(config-if)#clock rate 64000 Router(config-if)#no shutdown Router(config-if)#end Router#sh run  右边的路由器 no Router&amp;gt;en Router#conf t Router(config)#ip route 0.0.0.0 0.0.0.0 se2/0 Router(config)#access-list 10 permit 172.16.1.0 0.0.0.255 Router(config)#ip nat pool test 200.1.1.200 200.1.1.210 netmask 255.</description>
+实验拓扑 选择设备  交换机：1台2960 移动终端：2台Generic（从左边数第一个） 路由器：2台Generic（从左边数第一个）  实验步骤 设置左边的路由器 no Router&amp;gt;en Router#conf t Router(config)#inter se2/0 Router(config-if)#ip address 200.1.1.2 255.255.255.0 Router(config-if)#clock rate 64000 Router(config-if)#no shutdown Router(config-if)#end Router#sh run  设置右边的路由器 no Router&amp;gt;en Router#conf t Router(config)#ip route 0.0.0.0 0.0.0.0 se2/0 Router(config)#access-list 10 permit 172.16.1.0 0.0.0.255 Router(config)#ip nat pool test 200.1.1.200 200.1.1.210 netmask 255.</description>
     </item>
     
     <item>
@@ -48,7 +61,7 @@
 实验目的 配置网络地址变换，提供到公司共享服务器的可靠外部访问，即把内网的ip映射到公网ip。
 需求分析 公司需要将 172.16.1.5 和 172.16.1.6 两台主机作为共享服务器，需要外网能够访问，考虑到包括安全在内的诸多因素，公司希望对外部隐藏内部网络。
 实验原理 在路由器上把 172.16.1.5、172.16.1.6 两台主机静态映射到外部，把内网隐藏起来。
-实验拓扑 选择设备  交换机：1台2960 移动终端：2台Generic（从左边数第一个） 路由器：2台Generic（从左边数第一个）  设置路由 左边的路由器 no Router&amp;gt;en Router#conf t Router(config)#inter se2/0 Router(config-if)#ip address 200.1.1.2 255.255.255.0 Router(config-if)#clock rate 64000 Router(config-if)#no shutdown Router(config-if)#end Router#sh run  右边的路由器 no Router&amp;gt;en Router#conf t Router(config)#ip route 0.0.0.0 0.0.0.0 se2/0 Router(config)#ip nat inside source static 172.16.1.5 200.1.1.80 Router(config)#ip nat inside source static 172.16.1.6 200.1.1.81 Router(config)#inter se2/0 Router(config-if)#ip address 200.</description>
+实验拓扑 选择设备  交换机：1台2960 移动终端：2台Generic（从左边数第一个） 路由器：2台Generic（从左边数第一个）  实验步骤 设置左边的路由器 no Router&amp;gt;en Router#conf t Router(config)#inter se2/0 Router(config-if)#ip address 200.1.1.2 255.255.255.0 Router(config-if)#clock rate 64000 Router(config-if)#no shutdown Router(config-if)#end Router#sh run  设置右边的路由器 no Router&amp;gt;en Router#conf t Router(config)#ip route 0.0.0.0 0.0.0.0 se2/0 Router(config)#ip nat inside source static 172.16.1.5 200.1.1.80 Router(config)#ip nat inside source static 172.16.1.6 200.1.1.81 Router(config)#inter se2/0 Router(config-if)#ip address 200.</description>
     </item>
     
     <item>
