@@ -3,6 +3,18 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://mannuan.github.io/categories/</loc>
+    <lastmod>2019-07-01T20:42:46+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mannuan.github.io/tags/mac/</loc>
+    <lastmod>2019-07-01T20:42:46+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://mannuan.github.io/post/mac%E6%88%AA%E5%9B%BE%E7%9A%84%E7%9B%B8%E5%85%B3%E8%AE%BE%E7%BD%AE/</loc>
     <lastmod>2019-07-01T20:42:46+08:00</lastmod>
   </url>
@@ -14,8 +26,50 @@
   </url>
   
   <url>
+    <loc>https://mannuan.github.io/tags/</loc>
+    <lastmod>2019-07-01T20:42:46+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mannuan.github.io/topics/</loc>
+    <lastmod>2019-07-01T20:42:46+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://mannuan.github.io/</loc>
     <lastmod>2019-07-01T20:42:46+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mannuan.github.io/tags/%E6%88%AA%E5%9B%BE/</loc>
+    <lastmod>2019-07-01T20:42:46+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mannuan.github.io/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/</loc>
+    <lastmod>2019-07-01T20:42:46+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mannuan.github.io/topics/%E8%BD%AF%E4%BB%B6%E6%8E%A8%E8%8D%90/</loc>
+    <lastmod>2019-07-01T20:42:46+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mannuan.github.io/tags/acl/</loc>
+    <lastmod>2019-07-01T19:46:42+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mannuan.github.io/tags/cisco/</loc>
+    <lastmod>2019-07-01T19:46:42+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -25,13 +79,67 @@
   </url>
   
   <url>
+    <loc>https://mannuan.github.io/topics/%E5%AE%9E%E9%AA%8C%E5%A4%8D%E7%8E%B0/</loc>
+    <lastmod>2019-07-01T19:46:42+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mannuan.github.io/tags/%E6%B5%81%E9%87%8F%E6%8E%A7%E5%88%B6/</loc>
+    <lastmod>2019-07-01T19:46:42+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mannuan.github.io/tags/%E7%BD%91%E7%BB%9C%E5%AE%9E%E9%AA%8C/</loc>
+    <lastmod>2019-07-01T19:46:42+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mannuan.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</loc>
+    <lastmod>2019-07-01T19:46:42+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mannuan.github.io/tags/vlan/</loc>
+    <lastmod>2019-07-01T19:21:11+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mannuan.github.io/tags/%E5%8D%95%E8%87%82%E8%B7%AF%E7%94%B1/</loc>
+    <lastmod>2019-07-01T19:21:11+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://mannuan.github.io/post/%E5%AE%9E%E9%AA%8C%E5%8D%81%E4%BA%8C-%E5%88%A9%E7%94%A8%E5%8D%95%E8%87%82%E8%B7%AF%E7%94%B1%E5%AE%9E%E7%8E%B0vlan%E9%97%B4%E7%9A%84%E8%B7%AF%E7%94%B1/</loc>
     <lastmod>2019-07-01T19:21:11+08:00</lastmod>
   </url>
   
   <url>
+    <loc>https://mannuan.github.io/tags/ospf/</loc>
+    <lastmod>2019-07-01T18:28:05+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://mannuan.github.io/post/%E5%AE%9E%E9%AA%8C%E5%8D%81%E4%B8%80-ospf%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/</loc>
     <lastmod>2019-07-01T18:28:05+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mannuan.github.io/tags/%E8%B7%AF%E7%94%B1%E5%8D%8F%E8%AE%AE/</loc>
+    <lastmod>2019-07-01T18:28:05+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mannuan.github.io/tags/rip/</loc>
+    <lastmod>2019-07-01T17:22:33+08:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -45,8 +153,20 @@
   </url>
   
   <url>
+    <loc>https://mannuan.github.io/tags/nat/</loc>
+    <lastmod>2019-07-01T10:11:21+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://mannuan.github.io/post/%E5%AE%9E%E9%AA%8C%E4%B9%9D-%E9%85%8D%E7%BD%AE%E5%8A%A8%E6%80%81nat/</loc>
     <lastmod>2019-07-01T10:11:21+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mannuan.github.io/tags/%E7%BD%91%E7%BB%9C%E5%9C%B0%E5%9D%80%E6%98%A0%E5%B0%84/</loc>
+    <lastmod>2019-07-01T10:11:21+08:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -55,8 +175,44 @@
   </url>
   
   <url>
+    <loc>https://mannuan.github.io/tags/chrome/</loc>
+    <lastmod>2019-06-30T23:08:18+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://mannuan.github.io/post/chrome%E8%AE%BE%E7%BD%AEpac%E6%A8%A1%E5%BC%8F%E6%97%A0%E6%95%88%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</loc>
     <lastmod>2019-06-30T23:08:18+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mannuan.github.io/tags/shadowsocks/</loc>
+    <lastmod>2019-06-30T23:08:18+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mannuan.github.io/topics/bug%E4%BF%AE%E5%A4%8D/</loc>
+    <lastmod>2019-06-30T23:08:18+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mannuan.github.io/tags/genpac/</loc>
+    <lastmod>2019-06-30T23:08:18+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mannuan.github.io/categories/%E7%BF%BB%E5%A2%99/</loc>
+    <lastmod>2019-06-30T23:08:18+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mannuan.github.io/tags/hugo/</loc>
+    <lastmod>2019-06-30T21:19:27+08:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -65,17 +221,37 @@
   </url>
   
   <url>
+    <loc>https://mannuan.github.io/topics/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</loc>
+    <lastmod>2019-06-30T21:19:27+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mannuan.github.io/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</loc>
+    <lastmod>2019-06-30T21:19:27+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mannuan.github.io/tags/jsonp/</loc>
+    <lastmod>2019-06-30T20:35:25+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mannuan.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/</loc>
+    <lastmod>2019-06-30T20:35:25+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://mannuan.github.io/post/%E5%8E%9F%E7%94%9Fjs%E5%AE%9E%E7%8E%B0jsonp/</loc>
     <lastmod>2019-06-30T20:35:25+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://mannuan.github.io/categories/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://mannuan.github.io/tags/</loc>
+    <loc>https://mannuan.github.io/tags/%E8%B7%A8%E5%9F%9F/</loc>
+    <lastmod>2019-06-30T20:35:25+08:00</lastmod>
     <priority>0</priority>
   </url>
   
