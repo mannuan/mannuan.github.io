@@ -7,10 +7,23 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright> ©2019 mannuan. All Rights Reserved.</copyright>
-    <lastBuildDate>Mon, 01 Jul 2019 19:21:11 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 01 Jul 2019 19:46:42 +0800</lastBuildDate>
     
 	<atom:link href="https://mannuan.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>实验十三 利用ip标准访问控制列表acl进行网络流量的控制</title>
+      <link>https://mannuan.github.io/post/%E5%AE%9E%E9%AA%8C%E5%8D%81%E4%B8%89-%E5%88%A9%E7%94%A8ip%E6%A0%87%E5%87%86%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6%E5%88%97%E8%A1%A8acl%E8%BF%9B%E8%A1%8C%E7%BD%91%E7%BB%9C%E6%B5%81%E9%87%8F%E7%9A%84%E6%8E%A7%E5%88%B6/</link>
+      <pubDate>Mon, 01 Jul 2019 19:46:42 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/%E5%AE%9E%E9%AA%8C%E5%8D%81%E4%B8%89-%E5%88%A9%E7%94%A8ip%E6%A0%87%E5%87%86%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6%E5%88%97%E8%A1%A8acl%E8%BF%9B%E8%A1%8C%E7%BD%91%E7%BB%9C%E6%B5%81%E9%87%8F%E7%9A%84%E6%8E%A7%E5%88%B6/</guid>
+      <description>实验平台 Cisco模拟器，Version：5.3.0.0088
+实验目的 掌握路由器上编号的标准 IP 访问列表规则及配置。
+需求分析 只允许网段172.16.2.0与172.16.4.0的主机进行通信，不允许172.16.1.0去访问172.16.4.0网段的主机。
+实验原理 IP ACL(IP 访问控制列表或IP访问列表)是实现对流经路由器或交换机的数据包根据一定的规则进行过滤，从而提高网络可管理性和安全性。 IP ACL分为两种:标准IP访问列表和扩展IP访问列表。 标准IP访问列表可以根据数据包的源IP地址定义规则，进行数据包的过滤。 扩展IP访问列表可以根据数据包的源IP、目的IP、源端口、目的端口、协议来定义规则，进行数据包的过滤。 IP ACL基于接口进行规则的应用，分为:入栈应用和出栈应用。 入栈应用是指由外部经该接口进行路由器的数据包进行过滤。 出栈应用是指路由器从该接口向外转发数据时进行数据包的过滤。 IP ACL 的配置有两种方式:按照编号的访问列表，按照命名的访问列表。 标准IP访问列表编号范围是1~99、1300~1999，扩展IP访问列表编号范围是100~199、2000~2699。
+实验拓扑 选择设备  路由器：2台Generic（从左边数第一个） 主机：3台Generic（从左边数第一个）  实验步骤 设置左边的路由器 no Router&amp;gt;en Router#conf t Router(config)#inter loop0 Router(config-if)#ip address 172.16.1.1 255.255.255.0 Router(config-if)#no shut Router(config-if)#inter loop1 Router(config-if)#ip address 172.16.2.1 255.255.255.0 Router(config-if)#no shut Router(config-if)#inter se2/0 Router(config-if)#clock rate 64000 Router(config-if)#ip address 172.16.3.1 255.255.255.0 Router(config-if)#no shut Router(config-if)#exit Router(config)#ip route 0.0.0.0 0.0.0.0 172.16.3.2 Router(config)#end Router#sh run  设置右边的路由器 no Router&amp;gt;en Router#conf t Router(config)#inter se2/0 Router(config-if)#clock rate 64000 Router(config-if)#ip address 172.</description>
+    </item>
     
     <item>
       <title>实验十二 利用单臂路由实现vlan间的路由</title>
