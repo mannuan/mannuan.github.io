@@ -133,7 +133,8 @@ Switch#sh run
 
 <h2 id="设置左边的路由器">设置左边的路由器</h2>
 
-<pre><code>Router&gt;en
+<pre><code>no
+Router&gt;en
 Router#conf t
 Router(config)#inter fa0/0
 Router(config-if)#ip address 172.16.1.1 255.255.255.0
@@ -150,7 +151,8 @@ Router#sh run
 
 <h2 id="设置右边的路由器">设置右边的路由器</h2>
 
-<pre><code>Router&gt;en
+<pre><code>no
+Router&gt;en
 Router#conf t
 Router(config)#inter se2/0
 Router(config-if)#ip address 172.16.2.2 255.255.255.0
