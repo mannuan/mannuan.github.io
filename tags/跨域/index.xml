@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>跨域 on mannuan blog</title>
+    <title>跨域 on Minimo</title>
     <link>https://mannuan.github.io/tags/%E8%B7%A8%E5%9F%9F/</link>
-    <description>Recent content in 跨域 on mannuan blog</description>
+    <description>Recent content in 跨域 on Minimo</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright> ©2019 mannuan. All Rights Reserved.</copyright>
     <lastBuildDate>Sun, 30 Jun 2019 20:35:25 +0800</lastBuildDate>
     
 	<atom:link href="https://mannuan.github.io/tags/%E8%B7%A8%E5%9F%9F/index.xml" rel="self" type="application/rss+xml" />

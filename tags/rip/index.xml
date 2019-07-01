@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>RIP on mannuan blog</title>
+    <title>RIP on Minimo</title>
     <link>https://mannuan.github.io/tags/rip/</link>
-    <description>Recent content in RIP on mannuan blog</description>
+    <description>Recent content in RIP on Minimo</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright> ©2019 mannuan. All Rights Reserved.</copyright>
     <lastBuildDate>Mon, 01 Jul 2019 17:22:33 +0800</lastBuildDate>
     
 	<atom:link href="https://mannuan.github.io/tags/rip/index.xml" rel="self" type="application/rss+xml" />

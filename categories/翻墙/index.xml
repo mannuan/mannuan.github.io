@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>翻墙 on mannuan blog</title>
+    <title>翻墙 on Minimo</title>
     <link>https://mannuan.github.io/categories/%E7%BF%BB%E5%A2%99/</link>
-    <description>Recent content in 翻墙 on mannuan blog</description>
+    <description>Recent content in 翻墙 on Minimo</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright> ©2019 mannuan. All Rights Reserved.</copyright>
     <lastBuildDate>Sun, 30 Jun 2019 23:08:18 +0800</lastBuildDate>
     
 	<atom:link href="https://mannuan.github.io/categories/%E7%BF%BB%E5%A2%99/index.xml" rel="self" type="application/rss+xml" />
