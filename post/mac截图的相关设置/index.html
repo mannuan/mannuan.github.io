@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>Mac截图的相关设置 // mannuan blog</title>
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.55.6" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Junlei Wu" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://mannuan.github.io/css/main.min.fb222e05f6f82c63ca9f2a61b40175e4c15df390babdb6f59982bd612383422c.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Mac截图的相关设置"/>
+<meta name="twitter:description" content="选区域截图默认快捷键 Shift&#43;command&#43;4  默认保存目录 ~/Desktop  修改目录 defaults write com.apple.screencapture location &quot;~/Pictures/ScreenShot&quot;  截图默认后缀 png  修改后缀 defaults write com.apple.screencapture type jpg  删除默认时间后缀 defaults write com.apple.screencapture &quot;include-date&quot; 0  修改默认的文件名称 defaults write com.apple.screencapture name &quot;screenshot&quot;  参看配置 defaults read com.apple.screencapture 输出如下： { &quot;last-messagetrace-stamp&quot; = &quot;583174121.285828&quot;; &quot;last-selection&quot; = { Height = 529; Width = 1041; X = 507; Y = 262; }; &quot;last-selection-display&quot; = 0; location = &quot;~/Pictures/ScreenShot&quot;; name = screenshot; type = jpg; }  缺点分析 mac自带的截图工具，不能修改时间的格式，而且这种格式有空格，不利于作为文件名。虽然可以去除时间后缀，但是时间信息很重要。同时，即使没有时间后缀，生成的图片名中还是存在空格。鉴于上面复杂的问题，我权衡利弊之后果断放弃这个mac自带的截图工具。"/>
+
+    <meta property="og:title" content="Mac截图的相关设置" />
+<meta property="og:description" content="选区域截图默认快捷键 Shift&#43;command&#43;4  默认保存目录 ~/Desktop  修改目录 defaults write com.apple.screencapture location &quot;~/Pictures/ScreenShot&quot;  截图默认后缀 png  修改后缀 defaults write com.apple.screencapture type jpg  删除默认时间后缀 defaults write com.apple.screencapture &quot;include-date&quot; 0  修改默认的文件名称 defaults write com.apple.screencapture name &quot;screenshot&quot;  参看配置 defaults read com.apple.screencapture 输出如下： { &quot;last-messagetrace-stamp&quot; = &quot;583174121.285828&quot;; &quot;last-selection&quot; = { Height = 529; Width = 1041; X = 507; Y = 262; }; &quot;last-selection-display&quot; = 0; location = &quot;~/Pictures/ScreenShot&quot;; name = screenshot; type = jpg; }  缺点分析 mac自带的截图工具，不能修改时间的格式，而且这种格式有空格，不利于作为文件名。虽然可以去除时间后缀，但是时间信息很重要。同时，即使没有时间后缀，生成的图片名中还是存在空格。鉴于上面复杂的问题，我权衡利弊之后果断放弃这个mac自带的截图工具。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mannuan.github.io/post/mac%E6%88%AA%E5%9B%BE%E7%9A%84%E7%9B%B8%E5%85%B3%E8%AE%BE%E7%BD%AE/" />
+<meta property="article:published_time" content="2019-07-01T20:42:46&#43;08:00"/>
+<meta property="article:modified_time" content="2019-07-01T20:42:46&#43;08:00"/>
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://mannuan.github.io/"><img class="app-header-avatar" src="/avatar.jpg" alt="Junlei Wu" /></a>
+      <h1>mannuan blog</h1>
+      <p>The pursuit of the ultimate blogger</p>
+      <div class="app-header-social">
+        
+          <a target="_blank" href="https://github.com/mannuan"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github">
+  <title>github</title>
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+</svg></a>
+        
+          <a target="_blank" href="https://blog.csdn.net/wujunlei1595848"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-link">
+  <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+  <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+</svg></a>
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">Mac截图的相关设置</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Jul 1, 2019
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          1 min read
+        </div></div>
+    </header>
+    <div class="post-content">
+      
+
+<h1 id="选区域截图默认快捷键">选区域截图默认快捷键</h1>
+
+<pre><code>Shift+command+4
+</code></pre>
+
+<h1 id="默认保存目录">默认保存目录</h1>
+
+<pre><code>~/Desktop
+</code></pre>
+
+<h2 id="修改目录">修改目录</h2>
+
+<pre><code>defaults write com.apple.screencapture location &quot;~/Pictures/ScreenShot&quot;
+</code></pre>
+
+<h1 id="截图默认后缀">截图默认后缀</h1>
+
+<pre><code>png
+</code></pre>
+
+<h2 id="修改后缀">修改后缀</h2>
+
+<pre><code>defaults write com.apple.screencapture type jpg
+</code></pre>
+
+<h1 id="删除默认时间后缀">删除默认时间后缀</h1>
+
+<pre><code>defaults write com.apple.screencapture &quot;include-date&quot; 0
+</code></pre>
+
+<h1 id="修改默认的文件名称">修改默认的文件名称</h1>
+
+<pre><code>defaults write com.apple.screencapture name &quot;screenshot&quot;
+</code></pre>
+
+<h1 id="参看配置">参看配置</h1>
+
+<pre><code>defaults read com.apple.screencapture
+输出如下：
+{
+&quot;last-messagetrace-stamp&quot; = &quot;583174121.285828&quot;;
+&quot;last-selection&quot; =     {
+    Height = 529;
+    Width = 1041;
+    X = 507;
+    Y = 262;
+};
+&quot;last-selection-display&quot; = 0;
+location = &quot;~/Pictures/ScreenShot&quot;;
+name = screenshot;
+type = jpg;
+}
+</code></pre>
+
+<h1 id="缺点分析">缺点分析</h1>
+
+<p>mac自带的截图工具，不能修改时间的格式，而且这种格式有空格，不利于作为文件名。虽然可以去除时间后缀，但是时间信息很重要。同时，即使没有时间后缀，生成的图片名中还是存在空格。鉴于上面复杂的问题，我权衡利弊之后果断放弃这个mac自带的截图工具。</p>
+
+<h1 id="更好的截图工具">更好的截图工具</h1>
+
+<p>腾讯开发的一款名为&rdquo;截图&rdquo;的截图工具，它可以自定义目录，自动生成的文件名包含时间信息且没有空格。
+<img src="https://mannuan.github.io/img/Jietu20190701-205833.jpg" width="20%" alt="截图Icon"></p>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>
