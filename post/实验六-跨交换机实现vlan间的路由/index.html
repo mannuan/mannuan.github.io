@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <title>实验六 跨交换机实现vlan间的路由 // mannuan blog</title>
+    <meta charset="utf-8" />
+    <meta name="generator" content="Hugo 0.55.6" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Junlei Wu" />
+    <meta name="description" content="" />
+    <link rel="stylesheet" href="https://mannuan.github.io/css/main.min.fb222e05f6f82c63ca9f2a61b40175e4c15df390babdb6f59982bd612383422c.css" />
+
+    
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="实验六 跨交换机实现vlan间的路由"/>
+<meta name="twitter:description" content="实验平台 Cisco模拟器，Version：5.3.0.0088
+实验目的 利用三层交换机跨交换机实现 VLAN 间路由。
+需求分析 在二层交换机上划分 VLAN 配置 Trunk 实现不同 VLAN 的主机接入，在三层交换机上 划分VLAN 配置 Trunk 并配置 SVI 接口实现不同 VLAN 间路由。
+实验原理 在二层交换机上划分 VLAN 可实现不同 VLAN 的主机接入，而 VLAN 间的主机通信为不同网段间的通信，需要通过三层设备对数据进行路由转发才可以实现，通过在三层交换机 上为各 VLAN 配置 SVI 接口，利用三层交换机的路由功能可以实现 VLAN 间的路由。
+实验拓扑 选择设备  交换机：1台3560-24PS，2台2960 移动终端：2台Generic（从左边数第一个）  设置路由 最上面的交换机 Switch&gt;en Switch#conf t Switch(config)#vlan 10 Switch(config-vlan)#vlan 20 Switch(config-vlan)#exit Switch(config)#inter vlan 10 Switch(config-if)#ip address 192.168.10.1 255.255.255.0 Switch(config-if)#no shut Switch(config-if)#inter vlan 20 Switch(config-if)#ip address 192.168.20.1 255.255.255.0 Switch(config-if)#no shut Switch(config-if)#exit  右边的路由器 no Router&gt;en Router#conf t Router(config)#ip route 0."/>
+
+    <meta property="og:title" content="实验六 跨交换机实现vlan间的路由" />
+<meta property="og:description" content="实验平台 Cisco模拟器，Version：5.3.0.0088
+实验目的 利用三层交换机跨交换机实现 VLAN 间路由。
+需求分析 在二层交换机上划分 VLAN 配置 Trunk 实现不同 VLAN 的主机接入，在三层交换机上 划分VLAN 配置 Trunk 并配置 SVI 接口实现不同 VLAN 间路由。
+实验原理 在二层交换机上划分 VLAN 可实现不同 VLAN 的主机接入，而 VLAN 间的主机通信为不同网段间的通信，需要通过三层设备对数据进行路由转发才可以实现，通过在三层交换机 上为各 VLAN 配置 SVI 接口，利用三层交换机的路由功能可以实现 VLAN 间的路由。
+实验拓扑 选择设备  交换机：1台3560-24PS，2台2960 移动终端：2台Generic（从左边数第一个）  设置路由 最上面的交换机 Switch&gt;en Switch#conf t Switch(config)#vlan 10 Switch(config-vlan)#vlan 20 Switch(config-vlan)#exit Switch(config)#inter vlan 10 Switch(config-if)#ip address 192.168.10.1 255.255.255.0 Switch(config-if)#no shut Switch(config-if)#inter vlan 20 Switch(config-if)#ip address 192.168.20.1 255.255.255.0 Switch(config-if)#no shut Switch(config-if)#exit  右边的路由器 no Router&gt;en Router#conf t Router(config)#ip route 0." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mannuan.github.io/post/%E5%AE%9E%E9%AA%8C%E5%85%AD-%E8%B7%A8%E4%BA%A4%E6%8D%A2%E6%9C%BA%E5%AE%9E%E7%8E%B0vlan%E9%97%B4%E7%9A%84%E8%B7%AF%E7%94%B1/" />
+<meta property="article:published_time" content="2019-07-01T10:50:39&#43;08:00"/>
+<meta property="article:modified_time" content="2019-07-01T10:50:39&#43;08:00"/>
+
+
+  </head>
+  <body>
+    <header class="app-header">
+      <a href="https://mannuan.github.io/"><img class="app-header-avatar" src="/avatar.jpg" alt="Junlei Wu" /></a>
+      <h1>mannuan blog</h1>
+      <p>The pursuit of the ultimate blogger</p>
+      <div class="app-header-social">
+        
+          <a target="_blank" href="https://github.com/mannuan"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-github">
+  <title>github</title>
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+</svg></a>
+        
+          <a target="_blank" href="https://blog.csdn.net/wujunlei1595848"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-link">
+  <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+  <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+</svg></a>
+        
+      </div>
+    </header>
+    <main class="app-container">
+      
+  <article class="post">
+    <header class="post-header">
+      <h1 class ="post-title">实验六 跨交换机实现vlan间的路由</h1>
+      <div class="post-meta">
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-calendar">
+  <title>calendar</title>
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line>
+</svg>
+          Jul 1, 2019
+        </div>
+        <div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-clock">
+  <title>clock</title>
+  <circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline>
+</svg>
+          1 min read
+        </div></div>
+    </header>
+    <div class="post-content">
+      
+
+<h1 id="实验平台">实验平台</h1>
+
+<p>Cisco模拟器，Version：5.3.0.0088</p>
+
+<h1 id="实验目的">实验目的</h1>
+
+<p>利用三层交换机跨交换机实现 VLAN 间路由。</p>
+
+<h1 id="需求分析">需求分析</h1>
+
+<p>在二层交换机上划分 VLAN 配置 Trunk 实现不同 VLAN 的主机接入，在三层交换机上
+划分VLAN 配置 Trunk 并配置 SVI 接口实现不同 VLAN 间路由。</p>
+
+<h1 id="实验原理">实验原理</h1>
+
+<p>在二层交换机上划分 VLAN 可实现不同 VLAN 的主机接入，而 VLAN 间的主机通信为不同网段间的通信，需要通过三层设备对数据进行路由转发才可以实现，通过在三层交换机 上为各 VLAN 配置 SVI 接口，利用三层交换机的路由功能可以实现 VLAN 间的路由。</p>
+
+<h1 id="实验拓扑">实验拓扑</h1>
+
+<p><img src="https://img-blog.csdnimg.cn/20190701103806948.png" width="100%" alt="配置静态nat拓扑图"></p>
+
+<h1 id="选择设备">选择设备</h1>
+
+<ul>
+<li>交换机：1台<code>3560-24PS</code>，2台<code>2960</code></li>
+<li>移动终端：2台<code>Generic</code>（从左边数第一个）</li>
+</ul>
+
+<h1 id="设置路由">设置路由</h1>
+
+<h2 id="最上面的交换机">最上面的交换机</h2>
+
+<pre><code>Switch&gt;en
+Switch#conf t
+Switch(config)#vlan 10
+Switch(config-vlan)#vlan 20
+Switch(config-vlan)#exit
+Switch(config)#inter vlan 10
+Switch(config-if)#ip address 192.168.10.1 255.255.255.0
+Switch(config-if)#no shut
+Switch(config-if)#inter vlan 20
+Switch(config-if)#ip address 192.168.20.1 255.255.255.0
+Switch(config-if)#no shut
+Switch(config-if)#exit
+</code></pre>
+
+<h2 id="右边的路由器">右边的路由器</h2>
+
+<pre><code>no
+Router&gt;en
+Router#conf t
+Router(config)#ip route 0.0.0.0 0.0.0.0 se2/0
+Router(config)#ip nat inside source static 172.16.1.5 200.1.1.80
+Router(config)#ip nat inside source static 172.16.1.6 200.1.1.81
+Router(config)#inter se2/0
+Router(config-if)#ip address 200.1.1.1 255.255.255.0
+Router(config-if)#clock rate 64000
+Router(config-if)#no shut
+Router(config-if)#ip nat outside
+Router(config-if)#inter fa0/0
+Router(config-if)#ip address 172.16.1.1 255.255.255.0
+Router(config-if)#ip nat inside
+Router(config-if)#no shut
+Router(config)#end
+Router#sh run
+</code></pre>
+
+<h2 id="设置上面主机">设置上面主机</h2>
+
+<p>1、打开&rdquo;IP Configure&rdquo;</p>
+
+<p>2、输入：</p>
+
+<pre><code>IP Address: 172.16.1.5
+Subnet Mask: 255.255.255.0
+Default Gateway: 172.16.1.1
+</code></pre>
+
+<h2 id="设置下面主机">设置下面主机</h2>
+
+<p>1、打开&rdquo;IP Configure&rdquo;</p>
+
+<p>2、输入：</p>
+
+<pre><code>IP Address: 172.16.1.6
+Subnet Mask: 255.255.255.0
+Default Gateway: 172.16.1.1
+</code></pre>
+
+<h2 id="测试搭建好的拓扑">测试搭建好的拓扑</h2>
+
+<p>1、打开左边的路由器的命令行：</p>
+
+<pre><code>Router&gt;ping 200.1.1.80
+...
+Router&gt;ping 200.1.1.81
+...
+</code></pre>
+
+<p>2、打开右边的路由器的命令行：</p>
+
+<pre><code>Router&gt;en
+Router#sh ip nat tran
+
+得到下面类似的输出：
+
+Pro  Inside global     Inside local       Outside local      Outside global
+---  200.1.1.80        172.16.1.5         ---                ---
+---  200.1.1.81        172.16.1.6         ---                ---
+</code></pre>
+
+    </div>
+    <div class="post-footer">
+      
+    </div>
+  </article>
+
+    </main>
+  </body>
+</html>

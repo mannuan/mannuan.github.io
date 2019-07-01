@@ -7,10 +7,49 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright> ©2019 mannuan. All Rights Reserved.</copyright>
-    <lastBuildDate>Sun, 30 Jun 2019 23:08:18 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 01 Jul 2019 10:50:39 +0800</lastBuildDate>
     
 	<atom:link href="https://mannuan.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>实验六 跨交换机实现vlan间的路由</title>
+      <link>https://mannuan.github.io/post/%E5%AE%9E%E9%AA%8C%E5%85%AD-%E8%B7%A8%E4%BA%A4%E6%8D%A2%E6%9C%BA%E5%AE%9E%E7%8E%B0vlan%E9%97%B4%E7%9A%84%E8%B7%AF%E7%94%B1/</link>
+      <pubDate>Mon, 01 Jul 2019 10:50:39 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/%E5%AE%9E%E9%AA%8C%E5%85%AD-%E8%B7%A8%E4%BA%A4%E6%8D%A2%E6%9C%BA%E5%AE%9E%E7%8E%B0vlan%E9%97%B4%E7%9A%84%E8%B7%AF%E7%94%B1/</guid>
+      <description>实验平台 Cisco模拟器，Version：5.3.0.0088
+实验目的 利用三层交换机跨交换机实现 VLAN 间路由。
+需求分析 在二层交换机上划分 VLAN 配置 Trunk 实现不同 VLAN 的主机接入，在三层交换机上 划分VLAN 配置 Trunk 并配置 SVI 接口实现不同 VLAN 间路由。
+实验原理 在二层交换机上划分 VLAN 可实现不同 VLAN 的主机接入，而 VLAN 间的主机通信为不同网段间的通信，需要通过三层设备对数据进行路由转发才可以实现，通过在三层交换机 上为各 VLAN 配置 SVI 接口，利用三层交换机的路由功能可以实现 VLAN 间的路由。
+实验拓扑 选择设备  交换机：1台3560-24PS，2台2960 移动终端：2台Generic（从左边数第一个）  设置路由 最上面的交换机 Switch&amp;gt;en Switch#conf t Switch(config)#vlan 10 Switch(config-vlan)#vlan 20 Switch(config-vlan)#exit Switch(config)#inter vlan 10 Switch(config-if)#ip address 192.168.10.1 255.255.255.0 Switch(config-if)#no shut Switch(config-if)#inter vlan 20 Switch(config-if)#ip address 192.168.20.1 255.255.255.0 Switch(config-if)#no shut Switch(config-if)#exit  右边的路由器 no Router&amp;gt;en Router#conf t Router(config)#ip route 0.</description>
+    </item>
+    
+    <item>
+      <title>实验九 配置动态nat</title>
+      <link>https://mannuan.github.io/post/%E5%AE%9E%E9%AA%8C%E4%B9%9D-%E9%85%8D%E7%BD%AE%E5%8A%A8%E6%80%81nat/</link>
+      <pubDate>Mon, 01 Jul 2019 10:11:21 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/%E5%AE%9E%E9%AA%8C%E4%B9%9D-%E9%85%8D%E7%BD%AE%E5%8A%A8%E6%80%81nat/</guid>
+      <description>实验平台 Cisco模拟器，Version：5.3.0.0088
+实验目的 配置网络地址变换，为私有地址的用户提供到外部网络的资源的访问。
+需求分析 ISP 提供商给 IT 企业的一段公共 IP 地址的地址段为 200.1.1.200~100.1.1.210，需要内网使用这段址去访问 Internet，考虑到包括安全在内的诸多因素，公司希望对外部隐藏内部 网络。
+实验原理 在路由器上定义内网与外网接口，利用 NAT 地址池实现内网对外网的访问，并把内网 隐藏起来。
+实验拓扑 选择设备  交换机：1台2960 移动终端：2台Generic（从左边数第一个） 路由器：2台Generic（从左边数第一个）  设置路由 左边的路由器 no Router&amp;gt;en Router#conf t Router(config)#inter se2/0 Router(config-if)#ip address 200.1.1.2 255.255.255.0 Router(config-if)#clock rate 64000 Router(config-if)#no shutdown Router(config-if)#end Router#sh run  右边的路由器 no Router&amp;gt;en Router#conf t Router(config)#ip route 0.0.0.0 0.0.0.0 se2/0 Router(config)#access-list 10 permit 172.16.1.0 0.0.0.255 Router(config)#ip nat pool test 200.1.1.200 200.1.1.210 netmask 255.</description>
+    </item>
+    
+    <item>
+      <title>实验八 静态nat</title>
+      <link>https://mannuan.github.io/post/%E5%AE%9E%E9%AA%8C%E5%85%AB-%E9%85%8D%E7%BD%AE%E9%9D%99%E6%80%81nat/</link>
+      <pubDate>Mon, 01 Jul 2019 09:06:25 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/%E5%AE%9E%E9%AA%8C%E5%85%AB-%E9%85%8D%E7%BD%AE%E9%9D%99%E6%80%81nat/</guid>
+      <description>实验平台 Cisco模拟器，Version：5.3.0.0088
+实验目的 配置网络地址变换，提供到公司共享服务器的可靠外部访问，即把内网的ip映射到公网ip。
+需求分析 公司需要将 172.16.1.5 和 172.16.1.6 两台主机作为共享服务器，需要外网能够访问，考虑到包括安全在内的诸多因素，公司希望对外部隐藏内部网络。
+实验原理 在路由器上把 172.16.1.5、172.16.1.6 两台主机静态映射到外部，把内网隐藏起来。
+实验拓扑 选择设备  交换机：1台2960 移动终端：2台Generic（从左边数第一个） 路由器：2台Generic（从左边数第一个）  设置路由 左边的路由器 no Router&amp;gt;en Router#conf t Router(config)#inter se2/0 Router(config-if)#ip address 200.1.1.2 255.255.255.0 Router(config-if)#clock rate 64000 Router(config-if)#no shutdown Router(config-if)#end Router#sh run  右边的路由器 no Router&amp;gt;en Router#conf t Router(config)#ip route 0.0.0.0 0.0.0.0 se2/0 Router(config)#ip nat inside source static 172.16.1.5 200.1.1.80 Router(config)#ip nat inside source static 172.16.1.6 200.1.1.81 Router(config)#inter se2/0 Router(config-if)#ip address 200.</description>
+    </item>
     
     <item>
       <title>Chrome设置PAC模式无效的解决方案</title>
