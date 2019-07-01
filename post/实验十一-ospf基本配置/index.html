@@ -16,7 +16,7 @@
 实验目的 掌握在路由器上配置OSPF单区域。
 需求分析 需要在路由器和交换机上配置OSPF路由协议，使全网互通，从而实现信息的共享和传递。
 实验原理 OSPF(Open Shortest Path First，开放式最短路径优先)协议，是目前网络中应用最广泛 的路由协议之一。属于内部网关路由协议，能够适应各种规模的网络环境，是典型的链路状 态(link-state)协议。 OSPF 路由协议通过向全网扩散本设备的链路状态信息，使网络中每台设备最终同步一个具有全网链路状态的数据库(LSDB)，然后路由器采用SPF算法，以自己为根，计算到达 其他网络的最短路径，最终形成全网路由信息。 OSPF属于无类路由协议，支持VLSM(变长子网掩码)。OSPF是以组播的形式进行链 路状态的通告的。 在大规模的网络环境中，OSPF支持区域的划分，将网络进行合理规划。划分区域时必须存在area0(骨干区域)。其他区域和骨干区域直接相连，或通过虚链路的方式连接。
-实验拓扑 选择设备  交换机：1台3650-24PS 路由器：2台Generic（从左边数第一个）  实验demo (实验十一ospf基本配置.pkt)[https://mannuan.github.io/file/实验十一ospf基本配置.pkt]
+实验拓扑 选择设备  交换机：1台3650-24PS 路由器：2台Generic（从左边数第一个）  实验demo 实验十一ospf基本配置.pkt
 实验步骤 设置三层交换机 Switch&gt;en Switch(config)#vlan 10 Switch(config-vlan)#vlan 50 Switch(config-vlan)#inter fa0/1 Switch(config-if)#switchport access vlan 10 Switch(config-if)#inter fa0/2 Switch(config-if)#switchport access vlan 10 Switch(config-if)#inter fa0/3 Switch(config-if)#switchport access vlan 50 Switch(config-if)#inter vlan 10 Switch(config-if)#ip address 172.16.1.2 255.255.255.0 Switch(config-if)#no shut Switch(config-if)#inter vlan 50 Switch(config-if)#ip address 172.16.5.1 255.255.255.0 Switch(config-if)#no shut %ospf取别名为123，只能设置为数字 Switch(config-if)#router ospf 123 Switch(config-router)#network 172."/>
 
     <meta property="og:title" content="实验十一 Ospf基本配置" />
@@ -24,7 +24,7 @@
 实验目的 掌握在路由器上配置OSPF单区域。
 需求分析 需要在路由器和交换机上配置OSPF路由协议，使全网互通，从而实现信息的共享和传递。
 实验原理 OSPF(Open Shortest Path First，开放式最短路径优先)协议，是目前网络中应用最广泛 的路由协议之一。属于内部网关路由协议，能够适应各种规模的网络环境，是典型的链路状 态(link-state)协议。 OSPF 路由协议通过向全网扩散本设备的链路状态信息，使网络中每台设备最终同步一个具有全网链路状态的数据库(LSDB)，然后路由器采用SPF算法，以自己为根，计算到达 其他网络的最短路径，最终形成全网路由信息。 OSPF属于无类路由协议，支持VLSM(变长子网掩码)。OSPF是以组播的形式进行链 路状态的通告的。 在大规模的网络环境中，OSPF支持区域的划分，将网络进行合理规划。划分区域时必须存在area0(骨干区域)。其他区域和骨干区域直接相连，或通过虚链路的方式连接。
-实验拓扑 选择设备  交换机：1台3650-24PS 路由器：2台Generic（从左边数第一个）  实验demo (实验十一ospf基本配置.pkt)[https://mannuan.github.io/file/实验十一ospf基本配置.pkt]
+实验拓扑 选择设备  交换机：1台3650-24PS 路由器：2台Generic（从左边数第一个）  实验demo 实验十一ospf基本配置.pkt
 实验步骤 设置三层交换机 Switch&gt;en Switch(config)#vlan 10 Switch(config-vlan)#vlan 50 Switch(config-vlan)#inter fa0/1 Switch(config-if)#switchport access vlan 10 Switch(config-if)#inter fa0/2 Switch(config-if)#switchport access vlan 10 Switch(config-if)#inter fa0/3 Switch(config-if)#switchport access vlan 50 Switch(config-if)#inter vlan 10 Switch(config-if)#ip address 172.16.1.2 255.255.255.0 Switch(config-if)#no shut Switch(config-if)#inter vlan 50 Switch(config-if)#ip address 172.16.5.1 255.255.255.0 Switch(config-if)#no shut %ospf取别名为123，只能设置为数字 Switch(config-if)#router ospf 123 Switch(config-router)#network 172." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://mannuan.github.io/post/%E5%AE%9E%E9%AA%8C%E5%8D%81%E4%B8%80-ospf%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/" />
@@ -108,7 +108,7 @@ OSPF属于无类路由协议，支持VLSM(变长子网掩码)。OSPF是以组播
 
 <h1 id="实验demo">实验demo</h1>
 
-<p>(实验十一ospf基本配置.pkt)[<a href="https://mannuan.github.io/file/实验十一ospf基本配置.pkt">https://mannuan.github.io/file/实验十一ospf基本配置.pkt</a>]</p>
+<p><a href="/file/实验十一ospf基本配置.pkt" target="_blank">实验十一ospf基本配置.pkt</a></p>
 
 <h1 id="实验步骤">实验步骤</h1>
 

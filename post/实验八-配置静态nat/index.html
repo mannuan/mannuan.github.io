@@ -16,7 +16,7 @@
 实验目的 配置网络地址变换，提供到公司共享服务器的可靠外部访问，即把内网的ip映射到公网ip。
 需求分析 公司需要将 172.16.1.5 和 172.16.1.6 两台主机作为共享服务器，需要外网能够访问，考虑到包括安全在内的诸多因素，公司希望对外部隐藏内部网络。
 实验原理 在路由器上把 172.16.1.5、172.16.1.6 两台主机静态映射到外部，把内网隐藏起来。
-实验拓扑 选择设备  交换机：1台2960 移动终端：2台Generic（从左边数第一个） 路由器：2台Generic（从左边数第一个）  实验demo (实验八-配置静态nat.pkt)[https://mannuan.github.io/file/实验八-配置静态nat.pkt]
+实验拓扑 选择设备  交换机：1台2960 移动终端：2台Generic（从左边数第一个） 路由器：2台Generic（从左边数第一个）  实验demo 实验八-配置静态nat.pkt
 实验步骤 设置左边的路由器 no Router&gt;en Router#conf t Router(config)#inter se2/0 Router(config-if)#ip address 200.1.1.2 255.255.255.0 Router(config-if)#clock rate 64000 Router(config-if)#no shutdown Router(config-if)#end Router#sh run  设置右边的路由器 no Router&gt;en Router#conf t Router(config)#ip route 0.0.0.0 0.0.0.0 se2/0 Router(config)#ip nat inside source static 172.16.1.5 200.1.1.80 Router(config)#ip nat inside source static 172.16.1.6 200.1.1.81 Router(config)#inter se2/0 Router(config-if)#ip address 200."/>
 
     <meta property="og:title" content="实验八 配置静态nat" />
@@ -24,7 +24,7 @@
 实验目的 配置网络地址变换，提供到公司共享服务器的可靠外部访问，即把内网的ip映射到公网ip。
 需求分析 公司需要将 172.16.1.5 和 172.16.1.6 两台主机作为共享服务器，需要外网能够访问，考虑到包括安全在内的诸多因素，公司希望对外部隐藏内部网络。
 实验原理 在路由器上把 172.16.1.5、172.16.1.6 两台主机静态映射到外部，把内网隐藏起来。
-实验拓扑 选择设备  交换机：1台2960 移动终端：2台Generic（从左边数第一个） 路由器：2台Generic（从左边数第一个）  实验demo (实验八-配置静态nat.pkt)[https://mannuan.github.io/file/实验八-配置静态nat.pkt]
+实验拓扑 选择设备  交换机：1台2960 移动终端：2台Generic（从左边数第一个） 路由器：2台Generic（从左边数第一个）  实验demo 实验八-配置静态nat.pkt
 实验步骤 设置左边的路由器 no Router&gt;en Router#conf t Router(config)#inter se2/0 Router(config-if)#ip address 200.1.1.2 255.255.255.0 Router(config-if)#clock rate 64000 Router(config-if)#no shutdown Router(config-if)#end Router#sh run  设置右边的路由器 no Router&gt;en Router#conf t Router(config)#ip route 0.0.0.0 0.0.0.0 se2/0 Router(config)#ip nat inside source static 172.16.1.5 200.1.1.80 Router(config)#ip nat inside source static 172.16.1.6 200.1.1.81 Router(config)#inter se2/0 Router(config-if)#ip address 200." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://mannuan.github.io/post/%E5%AE%9E%E9%AA%8C%E5%85%AB-%E9%85%8D%E7%BD%AE%E9%9D%99%E6%80%81nat/" />
@@ -106,7 +106,7 @@
 
 <h1 id="实验demo">实验demo</h1>
 
-<p>(实验八-配置静态nat.pkt)[<a href="https://mannuan.github.io/file/实验八-配置静态nat.pkt">https://mannuan.github.io/file/实验八-配置静态nat.pkt</a>]</p>
+<p><a href="/file/实验八-配置静态nat.pkt" target="_blank">实验八-配置静态nat.pkt</a></p>
 
 <h1 id="实验步骤">实验步骤</h1>
 

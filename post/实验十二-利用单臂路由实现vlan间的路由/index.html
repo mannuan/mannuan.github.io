@@ -16,7 +16,7 @@
 实验目的 掌握如何路由器端口上划分子接口、封装 Dot1Q(IEEE 802.1Q)协议，实现VLAN间的路由。
 需求分析 需要在交换机上配置 VLAN，然后在路由器连接交换机的端口上划分子接口，给相应的VLAN设置IP地址，以实现 VLAN间的路由。
 实验原理 在交换网络中，通过 VLAN 对一个物理网络进行了逻辑划分，不同的 VLAN 之间是无法直接访问的，必须通过三层的路由设备进行连接。一般利用路由器或三层交换机来实现不 同 VLAN 之间的互相访问。 将路由器和交换机相连，使用 IEEE 802.1Q 来启动一个路由器上的子接口成为干道模式，就可以利用路由器来实现 VLAN 之间的通信。 路由器可以从某一个VLAN接收数据包并且将这个数据包转发到另外的一个VLAN，要实施VLAN间的路由，必须在一个路由器的物理接口上启用子接口，也就是将以太网物理 接口划分为多个逻辑的、可编址的接口，并配置成干道模式，每个VLAN对应一个这种接口，这样路由器就能够知道如何到达这些互联的VLAN。
-实验拓扑 选择设备  交换机：1台2960 路由器：1台Generic（从左边数第一个） 主机：2台Generic（从左边数第一个）  实验demo (实验十二-利用单臂路由实现vlan间路由.pkt)[https://mannuan.github.io/file/实验十二-利用单臂路由实现vlan间路由.pkt]
+实验拓扑 选择设备  交换机：1台2960 路由器：1台Generic（从左边数第一个） 主机：2台Generic（从左边数第一个）  实验demo 实验十二-利用单臂路由实现vlan间路由.pkt
 实验步骤 设置交换机 Switch&gt;en Switch#conf t Switch(config)#vlan 10 Switch(config-vlan)#vlan 20 Switch(config-vlan)#inter fa0/1 Switch(config-if)#switchport access vlan 10 Switch(config-if)#inter fa0/2 Switch(config-if)#switchport access vlan 20 Switch(config-if)#inter fa0/3 Switch(config-if)#switchport mode trunk Switch(config-if)#end Switch#sh run  设置路由器 no Router&gt;en Router#conf t Router(config)#inter fa0/0 Router(config-if)#no ip address Router(config-if)#no shut Router(config-if)#inter fa0/0."/>
 
     <meta property="og:title" content="实验十二 利用单臂路由实现vlan间的路由" />
@@ -24,7 +24,7 @@
 实验目的 掌握如何路由器端口上划分子接口、封装 Dot1Q(IEEE 802.1Q)协议，实现VLAN间的路由。
 需求分析 需要在交换机上配置 VLAN，然后在路由器连接交换机的端口上划分子接口，给相应的VLAN设置IP地址，以实现 VLAN间的路由。
 实验原理 在交换网络中，通过 VLAN 对一个物理网络进行了逻辑划分，不同的 VLAN 之间是无法直接访问的，必须通过三层的路由设备进行连接。一般利用路由器或三层交换机来实现不 同 VLAN 之间的互相访问。 将路由器和交换机相连，使用 IEEE 802.1Q 来启动一个路由器上的子接口成为干道模式，就可以利用路由器来实现 VLAN 之间的通信。 路由器可以从某一个VLAN接收数据包并且将这个数据包转发到另外的一个VLAN，要实施VLAN间的路由，必须在一个路由器的物理接口上启用子接口，也就是将以太网物理 接口划分为多个逻辑的、可编址的接口，并配置成干道模式，每个VLAN对应一个这种接口，这样路由器就能够知道如何到达这些互联的VLAN。
-实验拓扑 选择设备  交换机：1台2960 路由器：1台Generic（从左边数第一个） 主机：2台Generic（从左边数第一个）  实验demo (实验十二-利用单臂路由实现vlan间路由.pkt)[https://mannuan.github.io/file/实验十二-利用单臂路由实现vlan间路由.pkt]
+实验拓扑 选择设备  交换机：1台2960 路由器：1台Generic（从左边数第一个） 主机：2台Generic（从左边数第一个）  实验demo 实验十二-利用单臂路由实现vlan间路由.pkt
 实验步骤 设置交换机 Switch&gt;en Switch#conf t Switch(config)#vlan 10 Switch(config-vlan)#vlan 20 Switch(config-vlan)#inter fa0/1 Switch(config-if)#switchport access vlan 10 Switch(config-if)#inter fa0/2 Switch(config-if)#switchport access vlan 20 Switch(config-if)#inter fa0/3 Switch(config-if)#switchport mode trunk Switch(config-if)#end Switch#sh run  设置路由器 no Router&gt;en Router#conf t Router(config)#inter fa0/0 Router(config-if)#no ip address Router(config-if)#no shut Router(config-if)#inter fa0/0." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://mannuan.github.io/post/%E5%AE%9E%E9%AA%8C%E5%8D%81%E4%BA%8C-%E5%88%A9%E7%94%A8%E5%8D%95%E8%87%82%E8%B7%AF%E7%94%B1%E5%AE%9E%E7%8E%B0vlan%E9%97%B4%E7%9A%84%E8%B7%AF%E7%94%B1/" />
@@ -108,7 +108,7 @@
 
 <h1 id="实验demo">实验demo</h1>
 
-<p>(实验十二-利用单臂路由实现vlan间路由.pkt)[<a href="https://mannuan.github.io/file/实验十二-利用单臂路由实现vlan间路由.pkt">https://mannuan.github.io/file/实验十二-利用单臂路由实现vlan间路由.pkt</a>]</p>
+<p><a href="/file/实验十二-利用单臂路由实现vlan间路由.pkt" target="_blank">实验十二-利用单臂路由实现vlan间路由.pkt</a></p>
 
 <h1 id="实验步骤">实验步骤</h1>
 
