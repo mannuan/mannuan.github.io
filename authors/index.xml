@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Authors on Minimo</title>
-    <link>https://mannuan.github.io/authors/</link>
-    <description>Recent content in Authors on Minimo</description>
+    <title>Authors on mannuan</title>
+    <link>/authors/</link>
+    <description>Recent content in Authors on mannuan</description>
     <generator>Hugo -- gohugo.io</generator>
     
-	<atom:link href="https://mannuan.github.io/authors/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/authors/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>

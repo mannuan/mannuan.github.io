@@ -6,17 +6,17 @@
 JSONP的请求过程  请求阶段：浏览器创建一个script标签，并给其src赋值(类似http://example.com/api/?callback=jsonpCallback）。 发送请求：当给script的src赋值时，浏览器就会发起一个请求。 数据响应：服务端将要返回的数据作为参数和函数名称拼接在一起(格式类似”jsonpCallback({name: &#39;abc&#39;})”)返回。当浏览器接收到了响应数据，由于发起请求的是script，所以相当于直接调用jsonpCallback方法，并且传入了一个参数。  服务端交互示意图 '>
 <meta name='theme-color' content='#ffcd00'>
 
-<meta property='og:title' content='原生js实现JSONP • Minimo'>
+<meta property='og:title' content='原生js实现JSONP • mannuan'>
 <meta property='og:description' content=' 介绍 JSONP是JSON with Padding(填充式JSON或参数式JSON)的简写，是一种非常常用的跨域请求方式。主要原理是利用了script标签可以跨域请求的特性，由其src属性发送请求到服务器，服务器返回JavaScript代码，浏览器接受响应，然后就直接执行了，这和通过script标签引用外部文件的原理是一样的。 JSONP由两部分组成：回调函数和数据，回调函数是当响应到来时应该在页面中调用的函数，回调函数的名字一般在请求中指定。当服务器响应时，服务器端就会把该函数和数据拼成字符串返回
 JSONP的请求过程  请求阶段：浏览器创建一个script标签，并给其src赋值(类似http://example.com/api/?callback=jsonpCallback）。 发送请求：当给script的src赋值时，浏览器就会发起一个请求。 数据响应：服务端将要返回的数据作为参数和函数名称拼接在一起(格式类似”jsonpCallback({name: &#39;abc&#39;})”)返回。当浏览器接收到了响应数据，由于发起请求的是script，所以相当于直接调用jsonpCallback方法，并且传入了一个参数。  服务端交互示意图 '>
-<meta property='og:url' content='https://mannuan.github.io/post/%E5%8E%9F%E7%94%9Fjs%E5%AE%9E%E7%8E%B0jsonp/'>
-<meta property='og:site_name' content='Minimo'>
+<meta property='og:url' content='/post/%E5%8E%9F%E7%94%9Fjs%E5%AE%9E%E7%8E%B0jsonp/'>
+<meta property='og:site_name' content='mannuan'>
 <meta property='og:type' content='article'><meta property='article:section' content='post'><meta property='article:tag' content='跨域'><meta property='article:tag' content='JSONP'><meta property='article:published_time' content='2019-06-30T20:35:25&#43;08:00'/><meta property='article:modified_time' content='2019-06-30T20:35:25&#43;08:00'/><meta name='twitter:card' content='summary'>
 
 <meta name="generator" content="Hugo 0.55.6" />
 
-  <title>原生js实现JSONP • Minimo</title>
-  <link rel='canonical' href='https://mannuan.github.io/post/%E5%8E%9F%E7%94%9Fjs%E5%AE%9E%E7%8E%B0jsonp/'>
+  <title>原生js实现JSONP • mannuan</title>
+  <link rel='canonical' href='/post/%E5%8E%9F%E7%94%9Fjs%E5%AE%9E%E7%8E%B0jsonp/'>
   
   
   <link rel='icon' href='/favicon.ico'>
@@ -43,11 +43,11 @@ JSONP的请求过程  请求阶段：浏览器创建一个script标签，并给�
     
     <h2 class='title site-title '>
       <a href='/'>
-      Minimo
+      mannuan
       </a>
     </h2>
     <div class='desc'>
-    Minimalist theme for Hugo
+    Rome was not built in a day.
     </div>
   </header>
 
@@ -148,14 +148,14 @@ JSONP的请求过程  请求阶段：浏览器创建一个script标签，并给�
     <style>.widget-breadcrumbs li:after{content:'\2f '}</style>
   <section class='widget widget-breadcrumbs sep-after'>
     <nav id='breadcrumbs'>
-      <ol><li><a href='/'>Minimo</a></li><li><a href='/post/'>Posts</a></li><li><span>原生js实现JSONP</span></li></ol>
+      <ol><li><a href='/'>mannuan</a></li><li><a href='/post/'>Posts</a></li><li><span>原生js实现JSONP</span></li></ol>
     </nav>
   </section></div>
       </div>
 
       <header id='header' class='header site-header'>
         <div class='container sep-after'>
-          <div class='header-info'><p class='site-title title'>Minimo</p><p class='desc site-desc'>Minimalist theme for Hugo</p>
+          <div class='header-info'><p class='site-title title'>mannuan</p><p class='desc site-desc'>Rome was not built in a day.</p>
           </div>
         </div>
       </header>
@@ -371,7 +371,7 @@ JSONP由两部分组成：回调函数和数据，回调函数是当响应到来
       </li></ul>
   </nav>
 </section><div class='copyright'>
-  <p> &copy; 2017-2019 MunifTanjim </p>
+  <p> &copy; 2019 Junlei Wu </p>
 </div>
 
         </div>

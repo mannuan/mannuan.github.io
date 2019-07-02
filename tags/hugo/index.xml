@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Hugo on Minimo</title>
-    <link>https://mannuan.github.io/tags/hugo/</link>
-    <description>Recent content in Hugo on Minimo</description>
+    <title>Hugo on mannuan</title>
+    <link>/tags/hugo/</link>
+    <description>Recent content in Hugo on mannuan</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Sun, 30 Jun 2019 21:19:27 +0800</lastBuildDate>
     
-	<atom:link href="https://mannuan.github.io/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Hugo博客搭建教程</title>
-      <link>https://mannuan.github.io/post/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/</link>
+      <link>/post/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/</link>
       <pubDate>Sun, 30 Jun 2019 21:19:27 +0800</pubDate>
       
-      <guid>https://mannuan.github.io/post/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/</guid>
+      <guid>/post/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/</guid>
       <description>Hugo介绍 一种基于 Go 语言的博客框架。
 Hugo安装(Mac) brew install hugo  创建博客 hugo new size myblog  安装主题 themes.gohuo.io上面有很多主题可供选择，比如选择m10c
 下载m10c $ cd myblog $ git clone https://github.com/vaga/hugo-theme-m10c.git themes/m10c  修改配置文件 config.toml 添加一行：
@@ -24,7 +24,7 @@ Hugo安装(Mac) brew install hugo  创建博客 hugo new size myblog  安装主�
 发布博客到github  下面以我的github用户名manuan为例
   在github创建一个名为 mannuan.github.io 的仓库。
  把当前的博客打包到 public 目录下面
-hugo --baseUrl=&amp;quot;https://mannuan.</description>
+hugo --baseUrl=&amp;quot;/&amp;quot; --buildDrafts  把 public 里面的内容同步到github</description>
     </item>
     
   </channel>

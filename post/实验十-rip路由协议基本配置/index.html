@@ -10,21 +10,21 @@
 实验步骤 设置左边的路由器 no Router&gt;en Router#conf t Router(config)#inter se2/0 Router(config-if)#ip address 192.168.1.1 255.255.255.0 Router(config-if)#clock rate 64000 Router(config-if)#no shut Router(config-if)#inter loop0 Router(config-if)#ip address 172.16.1.1 255.255.255.0 Router(config-if)#inter loop1 Router(config-if)#ip address 172.16.2.1 255.255.255.0 Router(config-if)#router rip Router(config-router)#network 172.16.0.0 Router(config-router)#network 192.168.1.0 Router(config-router)#end Router#sh run  设置右边的路由器 no Router&gt;en Router#conf t Router(config)#inter se2/0 Router(config-if)#ip address 192.'>
 <meta name='theme-color' content='#ffcd00'>
 
-<meta property='og:title' content='实验十 RIP路由协议基本配置 • Minimo'>
+<meta property='og:title' content='实验十 RIP路由协议基本配置 • mannuan'>
 <meta property='og:description' content='实验平台 Cisco模拟器，Version：5.3.0.0088
 实验目的 掌握在路由器上如何配置 RIP 路由协议。
 需求分析 两台路由器通过快速以太网端口连接在一起，每个路由器上设置2个Loopback端口模拟子网，在所有端口运行RIP路由协议，实现所有子网间的互通。
 实验原理 RIP(Routing Information Protocols，路由信息协议)是应用较早、使用较普遍的 IGP(Interior Gateway Protocol，内部网关协议)，适用于小型同类网络，是典型的距离矢量 (distance-vector)协议。 RIP 协议以跳数做为衡量路径开销的，RIP 协议里规定最大跳数为 15。 RIP 在构造路由表时会使用到 3 种计时器:更新计时器、无效计时器、刷新计时器。 它让每台路由器周期性地向每个相邻的邻居发送完整的路由表。路由表包括每个网络或子网 的信息，以及与之相关的度量值。
 实验拓扑 选择设备  路由器：2台Generic（从左边数第一个）  实验demo 实验十-RIP路由协议基本配置.pkt
 实验步骤 设置左边的路由器 no Router&gt;en Router#conf t Router(config)#inter se2/0 Router(config-if)#ip address 192.168.1.1 255.255.255.0 Router(config-if)#clock rate 64000 Router(config-if)#no shut Router(config-if)#inter loop0 Router(config-if)#ip address 172.16.1.1 255.255.255.0 Router(config-if)#inter loop1 Router(config-if)#ip address 172.16.2.1 255.255.255.0 Router(config-if)#router rip Router(config-router)#network 172.16.0.0 Router(config-router)#network 192.168.1.0 Router(config-router)#end Router#sh run  设置右边的路由器 no Router&gt;en Router#conf t Router(config)#inter se2/0 Router(config-if)#ip address 192.'>
-<meta property='og:url' content='https://mannuan.github.io/post/%E5%AE%9E%E9%AA%8C%E5%8D%81-rip%E8%B7%AF%E7%94%B1%E5%8D%8F%E8%AE%AE%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/'>
-<meta property='og:site_name' content='Minimo'>
+<meta property='og:url' content='/post/%E5%AE%9E%E9%AA%8C%E5%8D%81-rip%E8%B7%AF%E7%94%B1%E5%8D%8F%E8%AE%AE%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/'>
+<meta property='og:site_name' content='mannuan'>
 <meta property='og:type' content='article'><meta property='article:section' content='post'><meta property='article:tag' content='网络实验'><meta property='article:tag' content='RIP'><meta property='article:tag' content='Cisco'><meta property='article:tag' content='路由协议'><meta property='article:published_time' content='2019-07-01T17:22:33&#43;08:00'/><meta property='article:modified_time' content='2019-07-01T17:22:33&#43;08:00'/><meta name='twitter:card' content='summary'>
 
 <meta name="generator" content="Hugo 0.55.6" />
 
-  <title>实验十 RIP路由协议基本配置 • Minimo</title>
-  <link rel='canonical' href='https://mannuan.github.io/post/%E5%AE%9E%E9%AA%8C%E5%8D%81-rip%E8%B7%AF%E7%94%B1%E5%8D%8F%E8%AE%AE%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/'>
+  <title>实验十 RIP路由协议基本配置 • mannuan</title>
+  <link rel='canonical' href='/post/%E5%AE%9E%E9%AA%8C%E5%8D%81-rip%E8%B7%AF%E7%94%B1%E5%8D%8F%E8%AE%AE%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/'>
   
   
   <link rel='icon' href='/favicon.ico'>
@@ -51,11 +51,11 @@
     
     <h2 class='title site-title '>
       <a href='/'>
-      Minimo
+      mannuan
       </a>
     </h2>
     <div class='desc'>
-    Minimalist theme for Hugo
+    Rome was not built in a day.
     </div>
   </header>
 
@@ -156,14 +156,14 @@
     <style>.widget-breadcrumbs li:after{content:'\2f '}</style>
   <section class='widget widget-breadcrumbs sep-after'>
     <nav id='breadcrumbs'>
-      <ol><li><a href='/'>Minimo</a></li><li><a href='/post/'>Posts</a></li><li><span>实验十 RIP路由协议基本配置</span></li></ol>
+      <ol><li><a href='/'>mannuan</a></li><li><a href='/post/'>Posts</a></li><li><span>实验十 RIP路由协议基本配置</span></li></ol>
     </nav>
   </section></div>
       </div>
 
       <header id='header' class='header site-header'>
         <div class='container sep-after'>
-          <div class='header-info'><p class='site-title title'>Minimo</p><p class='desc site-desc'>Minimalist theme for Hugo</p>
+          <div class='header-info'><p class='site-title title'>mannuan</p><p class='desc site-desc'>Rome was not built in a day.</p>
           </div>
         </div>
       </header>
@@ -236,7 +236,7 @@ RIP 在构造路由表时会使用到 3 种计时器:更新计时器、无效计
 
 <h1 id="实验拓扑">实验拓扑</h1>
 
-<p><img src="https://mannuan.github.io/img/Jietu20190701-182338.jpg" width="30%" alt="RIP基本配置拓扑图"></p>
+<p><img src="/images/Jietu20190701-182338.jpg" width="30%" alt="RIP基本配置拓扑图"></p>
 
 <h1 id="选择设备">选择设备</h1>
 
@@ -471,7 +471,7 @@ R    172.16.0.0/16 [120/1] via 192.168.1.1, 00:00:01, Serial2/0
       </li></ul>
   </nav>
 </section><div class='copyright'>
-  <p> &copy; 2017-2019 MunifTanjim </p>
+  <p> &copy; 2019 Junlei Wu </p>
 </div>
 
         </div>

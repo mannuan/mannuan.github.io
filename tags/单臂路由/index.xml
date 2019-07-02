@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>单臂路由 on Minimo</title>
-    <link>https://mannuan.github.io/tags/%E5%8D%95%E8%87%82%E8%B7%AF%E7%94%B1/</link>
-    <description>Recent content in 单臂路由 on Minimo</description>
+    <title>单臂路由 on mannuan</title>
+    <link>/tags/%E5%8D%95%E8%87%82%E8%B7%AF%E7%94%B1/</link>
+    <description>Recent content in 单臂路由 on mannuan</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Mon, 01 Jul 2019 19:21:11 +0800</lastBuildDate>
     
-	<atom:link href="https://mannuan.github.io/tags/%E5%8D%95%E8%87%82%E8%B7%AF%E7%94%B1/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/%E5%8D%95%E8%87%82%E8%B7%AF%E7%94%B1/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>实验十二 利用单臂路由实现vlan间的路由</title>
-      <link>https://mannuan.github.io/post/%E5%AE%9E%E9%AA%8C%E5%8D%81%E4%BA%8C-%E5%88%A9%E7%94%A8%E5%8D%95%E8%87%82%E8%B7%AF%E7%94%B1%E5%AE%9E%E7%8E%B0vlan%E9%97%B4%E7%9A%84%E8%B7%AF%E7%94%B1/</link>
+      <link>/post/%E5%AE%9E%E9%AA%8C%E5%8D%81%E4%BA%8C-%E5%88%A9%E7%94%A8%E5%8D%95%E8%87%82%E8%B7%AF%E7%94%B1%E5%AE%9E%E7%8E%B0vlan%E9%97%B4%E7%9A%84%E8%B7%AF%E7%94%B1/</link>
       <pubDate>Mon, 01 Jul 2019 19:21:11 +0800</pubDate>
       
-      <guid>https://mannuan.github.io/post/%E5%AE%9E%E9%AA%8C%E5%8D%81%E4%BA%8C-%E5%88%A9%E7%94%A8%E5%8D%95%E8%87%82%E8%B7%AF%E7%94%B1%E5%AE%9E%E7%8E%B0vlan%E9%97%B4%E7%9A%84%E8%B7%AF%E7%94%B1/</guid>
+      <guid>/post/%E5%AE%9E%E9%AA%8C%E5%8D%81%E4%BA%8C-%E5%88%A9%E7%94%A8%E5%8D%95%E8%87%82%E8%B7%AF%E7%94%B1%E5%AE%9E%E7%8E%B0vlan%E9%97%B4%E7%9A%84%E8%B7%AF%E7%94%B1/</guid>
       <description>实验平台 Cisco模拟器，Version：5.3.0.0088
 实验目的 掌握如何路由器端口上划分子接口、封装 Dot1Q(IEEE 802.1Q)协议，实现VLAN间的路由。
 需求分析 需要在交换机上配置 VLAN，然后在路由器连接交换机的端口上划分子接口，给相应的VLAN设置IP地址，以实现 VLAN间的路由。

@@ -10,21 +10,21 @@
 实验步骤 设置三层交换机 Switch&gt;en Switch(config)#vlan 10 Switch(config-vlan)#vlan 50 Switch(config-vlan)#inter fa0/1 Switch(config-if)#switchport access vlan 10 Switch(config-if)#inter fa0/2 Switch(config-if)#switchport access vlan 10 Switch(config-if)#inter fa0/3 Switch(config-if)#switchport access vlan 50 Switch(config-if)#inter vlan 10 Switch(config-if)#ip address 172.16.1.2 255.255.255.0 Switch(config-if)#no shut Switch(config-if)#inter vlan 50 Switch(config-if)#ip address 172.16.5.1 255.255.255.0 Switch(config-if)#no shut %ospf取别名为123，只能设置为数字 Switch(config-if)#router ospf 123 Switch(config-router)#network 172.'>
 <meta name='theme-color' content='#ffcd00'>
 
-<meta property='og:title' content='实验十一 Ospf基本配置 • Minimo'>
+<meta property='og:title' content='实验十一 Ospf基本配置 • mannuan'>
 <meta property='og:description' content='实验平台 Cisco模拟器，Version：5.3.0.0088
 实验目的 掌握在路由器上配置OSPF单区域。
 需求分析 需要在路由器和交换机上配置OSPF路由协议，使全网互通，从而实现信息的共享和传递。
 实验原理 OSPF(Open Shortest Path First，开放式最短路径优先)协议，是目前网络中应用最广泛 的路由协议之一。属于内部网关路由协议，能够适应各种规模的网络环境，是典型的链路状 态(link-state)协议。 OSPF 路由协议通过向全网扩散本设备的链路状态信息，使网络中每台设备最终同步一个具有全网链路状态的数据库(LSDB)，然后路由器采用SPF算法，以自己为根，计算到达 其他网络的最短路径，最终形成全网路由信息。 OSPF属于无类路由协议，支持VLSM(变长子网掩码)。OSPF是以组播的形式进行链 路状态的通告的。 在大规模的网络环境中，OSPF支持区域的划分，将网络进行合理规划。划分区域时必须存在area0(骨干区域)。其他区域和骨干区域直接相连，或通过虚链路的方式连接。
 实验拓扑 选择设备  交换机：1台3650-24PS 路由器：2台Generic（从左边数第一个）  实验demo 实验十一ospf基本配置.pkt
 实验步骤 设置三层交换机 Switch&gt;en Switch(config)#vlan 10 Switch(config-vlan)#vlan 50 Switch(config-vlan)#inter fa0/1 Switch(config-if)#switchport access vlan 10 Switch(config-if)#inter fa0/2 Switch(config-if)#switchport access vlan 10 Switch(config-if)#inter fa0/3 Switch(config-if)#switchport access vlan 50 Switch(config-if)#inter vlan 10 Switch(config-if)#ip address 172.16.1.2 255.255.255.0 Switch(config-if)#no shut Switch(config-if)#inter vlan 50 Switch(config-if)#ip address 172.16.5.1 255.255.255.0 Switch(config-if)#no shut %ospf取别名为123，只能设置为数字 Switch(config-if)#router ospf 123 Switch(config-router)#network 172.'>
-<meta property='og:url' content='https://mannuan.github.io/post/%E5%AE%9E%E9%AA%8C%E5%8D%81%E4%B8%80-ospf%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/'>
-<meta property='og:site_name' content='Minimo'>
+<meta property='og:url' content='/post/%E5%AE%9E%E9%AA%8C%E5%8D%81%E4%B8%80-ospf%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/'>
+<meta property='og:site_name' content='mannuan'>
 <meta property='og:type' content='article'><meta property='article:section' content='post'><meta property='article:tag' content='网络实验'><meta property='article:tag' content='OSPF'><meta property='article:tag' content='Cisco'><meta property='article:tag' content='路由协议'><meta property='article:published_time' content='2019-07-01T18:28:05&#43;08:00'/><meta property='article:modified_time' content='2019-07-01T18:28:05&#43;08:00'/><meta name='twitter:card' content='summary'>
 
 <meta name="generator" content="Hugo 0.55.6" />
 
-  <title>实验十一 Ospf基本配置 • Minimo</title>
-  <link rel='canonical' href='https://mannuan.github.io/post/%E5%AE%9E%E9%AA%8C%E5%8D%81%E4%B8%80-ospf%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/'>
+  <title>实验十一 Ospf基本配置 • mannuan</title>
+  <link rel='canonical' href='/post/%E5%AE%9E%E9%AA%8C%E5%8D%81%E4%B8%80-ospf%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/'>
   
   
   <link rel='icon' href='/favicon.ico'>
@@ -51,11 +51,11 @@
     
     <h2 class='title site-title '>
       <a href='/'>
-      Minimo
+      mannuan
       </a>
     </h2>
     <div class='desc'>
-    Minimalist theme for Hugo
+    Rome was not built in a day.
     </div>
   </header>
 
@@ -156,14 +156,14 @@
     <style>.widget-breadcrumbs li:after{content:'\2f '}</style>
   <section class='widget widget-breadcrumbs sep-after'>
     <nav id='breadcrumbs'>
-      <ol><li><a href='/'>Minimo</a></li><li><a href='/post/'>Posts</a></li><li><span>实验十一 Ospf基本配置</span></li></ol>
+      <ol><li><a href='/'>mannuan</a></li><li><a href='/post/'>Posts</a></li><li><span>实验十一 Ospf基本配置</span></li></ol>
     </nav>
   </section></div>
       </div>
 
       <header id='header' class='header site-header'>
         <div class='container sep-after'>
-          <div class='header-info'><p class='site-title title'>Minimo</p><p class='desc site-desc'>Minimalist theme for Hugo</p>
+          <div class='header-info'><p class='site-title title'>mannuan</p><p class='desc site-desc'>Rome was not built in a day.</p>
           </div>
         </div>
       </header>
@@ -237,7 +237,7 @@ OSPF属于无类路由协议，支持VLSM(变长子网掩码)。OSPF是以组播
 
 <h1 id="实验拓扑">实验拓扑</h1>
 
-<p><img src="https://mannuan.github.io/img/Jietu20190701-191731.jpg" width="80%" alt="ospf基本配置拓扑图"></p>
+<p><img src="/images/Jietu20190701-191731.jpg" width="80%" alt="ospf基本配置拓扑图"></p>
 
 <h1 id="选择设备">选择设备</h1>
 
@@ -554,7 +554,7 @@ O       172.16.5.0 [110/783] via 172.16.2.1, 00:05:59, Serial2/0
       </li></ul>
   </nav>
 </section><div class='copyright'>
-  <p> &copy; 2017-2019 MunifTanjim </p>
+  <p> &copy; 2019 Junlei Wu </p>
 </div>
 
         </div>

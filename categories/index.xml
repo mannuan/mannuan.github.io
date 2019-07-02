@@ -1,57 +1,57 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on Minimo</title>
-    <link>https://mannuan.github.io/categories/</link>
-    <description>Recent content in Categories on Minimo</description>
+    <title>Categories on mannuan</title>
+    <link>/categories/</link>
+    <description>Recent content in Categories on mannuan</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Mon, 01 Jul 2019 20:42:46 +0800</lastBuildDate>
     
-	<atom:link href="https://mannuan.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>软件使用</title>
-      <link>https://mannuan.github.io/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/</link>
+      <link>/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/</link>
       <pubDate>Mon, 01 Jul 2019 20:42:46 +0800</pubDate>
       
-      <guid>https://mannuan.github.io/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/</guid>
+      <guid>/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/</guid>
       <description></description>
     </item>
     
     <item>
       <title>计算机网络</title>
-      <link>https://mannuan.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</link>
+      <link>/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</link>
       <pubDate>Mon, 01 Jul 2019 19:46:42 +0800</pubDate>
       
-      <guid>https://mannuan.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</guid>
+      <guid>/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</guid>
       <description></description>
     </item>
     
     <item>
       <title>翻墙</title>
-      <link>https://mannuan.github.io/categories/%E7%BF%BB%E5%A2%99/</link>
+      <link>/categories/%E7%BF%BB%E5%A2%99/</link>
       <pubDate>Sun, 30 Jun 2019 23:08:18 +0800</pubDate>
       
-      <guid>https://mannuan.github.io/categories/%E7%BF%BB%E5%A2%99/</guid>
+      <guid>/categories/%E7%BF%BB%E5%A2%99/</guid>
       <description></description>
     </item>
     
     <item>
       <title>博客搭建</title>
-      <link>https://mannuan.github.io/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</link>
+      <link>/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</link>
       <pubDate>Sun, 30 Jun 2019 21:19:27 +0800</pubDate>
       
-      <guid>https://mannuan.github.io/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</guid>
+      <guid>/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</guid>
       <description></description>
     </item>
     
     <item>
       <title>前端开发</title>
-      <link>https://mannuan.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/</link>
+      <link>/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/</link>
       <pubDate>Sun, 30 Jun 2019 20:35:25 +0800</pubDate>
       
-      <guid>https://mannuan.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/</guid>
+      <guid>/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/</guid>
       <description></description>
     </item>
     

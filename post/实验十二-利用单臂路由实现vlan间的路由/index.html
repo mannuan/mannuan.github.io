@@ -10,21 +10,21 @@
 实验步骤 设置交换机 Switch&gt;en Switch#conf t Switch(config)#vlan 10 Switch(config-vlan)#vlan 20 Switch(config-vlan)#inter fa0/1 Switch(config-if)#switchport access vlan 10 Switch(config-if)#inter fa0/2 Switch(config-if)#switchport access vlan 20 Switch(config-if)#inter fa0/3 Switch(config-if)#switchport mode trunk Switch(config-if)#end Switch#sh run  设置路由器 no Router&gt;en Router#conf t Router(config)#inter fa0/0 Router(config-if)#no ip address Router(config-if)#no shut Router(config-if)#inter fa0/0.'>
 <meta name='theme-color' content='#ffcd00'>
 
-<meta property='og:title' content='实验十二 利用单臂路由实现vlan间的路由 • Minimo'>
+<meta property='og:title' content='实验十二 利用单臂路由实现vlan间的路由 • mannuan'>
 <meta property='og:description' content='实验平台 Cisco模拟器，Version：5.3.0.0088
 实验目的 掌握如何路由器端口上划分子接口、封装 Dot1Q(IEEE 802.1Q)协议，实现VLAN间的路由。
 需求分析 需要在交换机上配置 VLAN，然后在路由器连接交换机的端口上划分子接口，给相应的VLAN设置IP地址，以实现 VLAN间的路由。
 实验原理 在交换网络中，通过 VLAN 对一个物理网络进行了逻辑划分，不同的 VLAN 之间是无法直接访问的，必须通过三层的路由设备进行连接。一般利用路由器或三层交换机来实现不 同 VLAN 之间的互相访问。 将路由器和交换机相连，使用 IEEE 802.1Q 来启动一个路由器上的子接口成为干道模式，就可以利用路由器来实现 VLAN 之间的通信。 路由器可以从某一个VLAN接收数据包并且将这个数据包转发到另外的一个VLAN，要实施VLAN间的路由，必须在一个路由器的物理接口上启用子接口，也就是将以太网物理 接口划分为多个逻辑的、可编址的接口，并配置成干道模式，每个VLAN对应一个这种接口，这样路由器就能够知道如何到达这些互联的VLAN。
 实验拓扑 选择设备  交换机：1台2960 路由器：1台Generic（从左边数第一个） 主机：2台Generic（从左边数第一个）  实验demo 实验十二-利用单臂路由实现vlan间路由.pkt
 实验步骤 设置交换机 Switch&gt;en Switch#conf t Switch(config)#vlan 10 Switch(config-vlan)#vlan 20 Switch(config-vlan)#inter fa0/1 Switch(config-if)#switchport access vlan 10 Switch(config-if)#inter fa0/2 Switch(config-if)#switchport access vlan 20 Switch(config-if)#inter fa0/3 Switch(config-if)#switchport mode trunk Switch(config-if)#end Switch#sh run  设置路由器 no Router&gt;en Router#conf t Router(config)#inter fa0/0 Router(config-if)#no ip address Router(config-if)#no shut Router(config-if)#inter fa0/0.'>
-<meta property='og:url' content='https://mannuan.github.io/post/%E5%AE%9E%E9%AA%8C%E5%8D%81%E4%BA%8C-%E5%88%A9%E7%94%A8%E5%8D%95%E8%87%82%E8%B7%AF%E7%94%B1%E5%AE%9E%E7%8E%B0vlan%E9%97%B4%E7%9A%84%E8%B7%AF%E7%94%B1/'>
-<meta property='og:site_name' content='Minimo'>
+<meta property='og:url' content='/post/%E5%AE%9E%E9%AA%8C%E5%8D%81%E4%BA%8C-%E5%88%A9%E7%94%A8%E5%8D%95%E8%87%82%E8%B7%AF%E7%94%B1%E5%AE%9E%E7%8E%B0vlan%E9%97%B4%E7%9A%84%E8%B7%AF%E7%94%B1/'>
+<meta property='og:site_name' content='mannuan'>
 <meta property='og:type' content='article'><meta property='article:section' content='post'><meta property='article:tag' content='网络实验'><meta property='article:tag' content='VLAN'><meta property='article:tag' content='Cisco'><meta property='article:tag' content='单臂路由'><meta property='article:published_time' content='2019-07-01T19:21:11&#43;08:00'/><meta property='article:modified_time' content='2019-07-01T19:21:11&#43;08:00'/><meta name='twitter:card' content='summary'>
 
 <meta name="generator" content="Hugo 0.55.6" />
 
-  <title>实验十二 利用单臂路由实现vlan间的路由 • Minimo</title>
-  <link rel='canonical' href='https://mannuan.github.io/post/%E5%AE%9E%E9%AA%8C%E5%8D%81%E4%BA%8C-%E5%88%A9%E7%94%A8%E5%8D%95%E8%87%82%E8%B7%AF%E7%94%B1%E5%AE%9E%E7%8E%B0vlan%E9%97%B4%E7%9A%84%E8%B7%AF%E7%94%B1/'>
+  <title>实验十二 利用单臂路由实现vlan间的路由 • mannuan</title>
+  <link rel='canonical' href='/post/%E5%AE%9E%E9%AA%8C%E5%8D%81%E4%BA%8C-%E5%88%A9%E7%94%A8%E5%8D%95%E8%87%82%E8%B7%AF%E7%94%B1%E5%AE%9E%E7%8E%B0vlan%E9%97%B4%E7%9A%84%E8%B7%AF%E7%94%B1/'>
   
   
   <link rel='icon' href='/favicon.ico'>
@@ -51,11 +51,11 @@
     
     <h2 class='title site-title '>
       <a href='/'>
-      Minimo
+      mannuan
       </a>
     </h2>
     <div class='desc'>
-    Minimalist theme for Hugo
+    Rome was not built in a day.
     </div>
   </header>
 
@@ -156,14 +156,14 @@
     <style>.widget-breadcrumbs li:after{content:'\2f '}</style>
   <section class='widget widget-breadcrumbs sep-after'>
     <nav id='breadcrumbs'>
-      <ol><li><a href='/'>Minimo</a></li><li><a href='/post/'>Posts</a></li><li><span>实验十二 利用单臂路由实现vlan间的路由</span></li></ol>
+      <ol><li><a href='/'>mannuan</a></li><li><a href='/post/'>Posts</a></li><li><span>实验十二 利用单臂路由实现vlan间的路由</span></li></ol>
     </nav>
   </section></div>
       </div>
 
       <header id='header' class='header site-header'>
         <div class='container sep-after'>
-          <div class='header-info'><p class='site-title title'>Minimo</p><p class='desc site-desc'>Minimalist theme for Hugo</p>
+          <div class='header-info'><p class='site-title title'>mannuan</p><p class='desc site-desc'>Rome was not built in a day.</p>
           </div>
         </div>
       </header>
@@ -236,7 +236,7 @@ One min read
 
 <h1 id="实验拓扑">实验拓扑</h1>
 
-<p><img src="https://mannuan.github.io/img/Jietu20190701-194224.jpg" width="50%" alt="单臂路由拓扑图"></p>
+<p><img src="/images/Jietu20190701-194224.jpg" width="50%" alt="单臂路由拓扑图"></p>
 
 <h1 id="选择设备">选择设备</h1>
 
@@ -478,7 +478,7 @@ Default Gateway: 192.168.20.1
       </li></ul>
   </nav>
 </section><div class='copyright'>
-  <p> &copy; 2017-2019 MunifTanjim </p>
+  <p> &copy; 2019 Junlei Wu </p>
 </div>
 
         </div>
