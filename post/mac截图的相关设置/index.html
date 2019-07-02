@@ -7,14 +7,14 @@
 
 <meta property='og:title' content='Mac截图的相关设置 • mannuan'>
 <meta property='og:description' content='选区域截图默认快捷键 Shift&#43;command&#43;4  默认保存目录 ~/Desktop  修改目录 defaults write com.apple.screencapture location &quot;~/Pictures/ScreenShot&quot;  截图默认后缀 png  修改后缀 defaults write com.apple.screencapture type jpg  删除默认时间后缀 defaults write com.apple.screencapture &quot;include-date&quot; 0  修改默认的文件名称 defaults write com.apple.screencapture name &quot;screenshot&quot;  参看配置 defaults read com.apple.screencapture 输出如下： { &quot;last-messagetrace-stamp&quot; = &quot;583174121.285828&quot;; &quot;last-selection&quot; = { Height = 529; Width = 1041; X = 507; Y = 262; }; &quot;last-selection-display&quot; = 0; location = &quot;~/Pictures/ScreenShot&quot;; name = screenshot; type = jpg; }  缺点分析 mac自带的截图工具，不能修改时间的格式，而且这种格式有空格，不利于作为文件名。虽然可以去除时间后缀，但是时间信息很重要。同时，即使没有时间后缀，生成的图片名中还是存在空格。鉴于上面复杂的问题，我权衡利弊之后果断放弃这个mac自带的截图工具。'>
-<meta property='og:url' content='/post/mac%E6%88%AA%E5%9B%BE%E7%9A%84%E7%9B%B8%E5%85%B3%E8%AE%BE%E7%BD%AE/'>
+<meta property='og:url' content='https://mannuan.github.io/post/mac%E6%88%AA%E5%9B%BE%E7%9A%84%E7%9B%B8%E5%85%B3%E8%AE%BE%E7%BD%AE/'>
 <meta property='og:site_name' content='mannuan'>
 <meta property='og:type' content='article'><meta property='article:section' content='post'><meta property='article:tag' content='截图'><meta property='article:tag' content='MAC'><meta property='article:published_time' content='2019-07-01T20:42:46&#43;08:00'/><meta property='article:modified_time' content='2019-07-01T20:42:46&#43;08:00'/><meta name='twitter:card' content='summary'>
 
 <meta name="generator" content="Hugo 0.55.6" />
 
   <title>Mac截图的相关设置 • mannuan</title>
-  <link rel='canonical' href='/post/mac%E6%88%AA%E5%9B%BE%E7%9A%84%E7%9B%B8%E5%85%B3%E8%AE%BE%E7%BD%AE/'>
+  <link rel='canonical' href='https://mannuan.github.io/post/mac%E6%88%AA%E5%9B%BE%E7%9A%84%E7%9B%B8%E5%85%B3%E8%AE%BE%E7%BD%AE/'>
   
   
   <link rel='icon' href='/favicon.ico'>

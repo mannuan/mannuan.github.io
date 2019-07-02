@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>跨域 on mannuan</title>
-    <link>/tags/%E8%B7%A8%E5%9F%9F/</link>
+    <link>https://mannuan.github.io/tags/%E8%B7%A8%E5%9F%9F/</link>
     <description>Recent content in 跨域 on mannuan</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Sun, 30 Jun 2019 20:35:25 +0800</lastBuildDate>
     
-	<atom:link href="/tags/%E8%B7%A8%E5%9F%9F/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://mannuan.github.io/tags/%E8%B7%A8%E5%9F%9F/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>原生js实现JSONP</title>
-      <link>/post/%E5%8E%9F%E7%94%9Fjs%E5%AE%9E%E7%8E%B0jsonp/</link>
+      <link>https://mannuan.github.io/post/%E5%8E%9F%E7%94%9Fjs%E5%AE%9E%E7%8E%B0jsonp/</link>
       <pubDate>Sun, 30 Jun 2019 20:35:25 +0800</pubDate>
       
-      <guid>/post/%E5%8E%9F%E7%94%9Fjs%E5%AE%9E%E7%8E%B0jsonp/</guid>
+      <guid>https://mannuan.github.io/post/%E5%8E%9F%E7%94%9Fjs%E5%AE%9E%E7%8E%B0jsonp/</guid>
       <description> 介绍 JSONP是JSON with Padding(填充式JSON或参数式JSON)的简写，是一种非常常用的跨域请求方式。主要原理是利用了script标签可以跨域请求的特性，由其src属性发送请求到服务器，服务器返回JavaScript代码，浏览器接受响应，然后就直接执行了，这和通过script标签引用外部文件的原理是一样的。 JSONP由两部分组成：回调函数和数据，回调函数是当响应到来时应该在页面中调用的函数，回调函数的名字一般在请求中指定。当服务器响应时，服务器端就会把该函数和数据拼成字符串返回
 JSONP的请求过程  请求阶段：浏览器创建一个script标签，并给其src赋值(类似http://example.com/api/?callback=jsonpCallback）。 发送请求：当给script的src赋值时，浏览器就会发起一个请求。 数据响应：服务端将要返回的数据作为参数和函数名称拼接在一起(格式类似”jsonpCallback({name: &#39;abc&#39;})”)返回。当浏览器接收到了响应数据，由于发起请求的是script，所以相当于直接调用jsonpCallback方法，并且传入了一个参数。  服务端交互示意图 </description>
     </item>

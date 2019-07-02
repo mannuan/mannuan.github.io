@@ -2,29 +2,29 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>mannuan</title>
-    <link>/</link>
+    <link>https://mannuan.github.io/</link>
     <description>Recent content on mannuan</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Mon, 01 Jul 2019 20:42:46 +0800</lastBuildDate>
     
-	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://mannuan.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Mac截图的相关设置</title>
-      <link>/post/mac%E6%88%AA%E5%9B%BE%E7%9A%84%E7%9B%B8%E5%85%B3%E8%AE%BE%E7%BD%AE/</link>
+      <link>https://mannuan.github.io/post/mac%E6%88%AA%E5%9B%BE%E7%9A%84%E7%9B%B8%E5%85%B3%E8%AE%BE%E7%BD%AE/</link>
       <pubDate>Mon, 01 Jul 2019 20:42:46 +0800</pubDate>
       
-      <guid>/post/mac%E6%88%AA%E5%9B%BE%E7%9A%84%E7%9B%B8%E5%85%B3%E8%AE%BE%E7%BD%AE/</guid>
+      <guid>https://mannuan.github.io/post/mac%E6%88%AA%E5%9B%BE%E7%9A%84%E7%9B%B8%E5%85%B3%E8%AE%BE%E7%BD%AE/</guid>
       <description>选区域截图默认快捷键 Shift+command+4  默认保存目录 ~/Desktop  修改目录 defaults write com.apple.screencapture location &amp;quot;~/Pictures/ScreenShot&amp;quot;  截图默认后缀 png  修改后缀 defaults write com.apple.screencapture type jpg  删除默认时间后缀 defaults write com.apple.screencapture &amp;quot;include-date&amp;quot; 0  修改默认的文件名称 defaults write com.apple.screencapture name &amp;quot;screenshot&amp;quot;  参看配置 defaults read com.apple.screencapture 输出如下： { &amp;quot;last-messagetrace-stamp&amp;quot; = &amp;quot;583174121.285828&amp;quot;; &amp;quot;last-selection&amp;quot; = { Height = 529; Width = 1041; X = 507; Y = 262; }; &amp;quot;last-selection-display&amp;quot; = 0; location = &amp;quot;~/Pictures/ScreenShot&amp;quot;; name = screenshot; type = jpg; }  缺点分析 mac自带的截图工具，不能修改时间的格式，而且这种格式有空格，不利于作为文件名。虽然可以去除时间后缀，但是时间信息很重要。同时，即使没有时间后缀，生成的图片名中还是存在空格。鉴于上面复杂的问题，我权衡利弊之后果断放弃这个mac自带的截图工具。</description>
     </item>
     
     <item>
       <title>实验十三 利用ip标准访问控制列表acl进行网络流量的控制</title>
-      <link>/post/%E5%AE%9E%E9%AA%8C%E5%8D%81%E4%B8%89-%E5%88%A9%E7%94%A8ip%E6%A0%87%E5%87%86%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6%E5%88%97%E8%A1%A8acl%E8%BF%9B%E8%A1%8C%E7%BD%91%E7%BB%9C%E6%B5%81%E9%87%8F%E7%9A%84%E6%8E%A7%E5%88%B6/</link>
+      <link>https://mannuan.github.io/post/%E5%AE%9E%E9%AA%8C%E5%8D%81%E4%B8%89-%E5%88%A9%E7%94%A8ip%E6%A0%87%E5%87%86%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6%E5%88%97%E8%A1%A8acl%E8%BF%9B%E8%A1%8C%E7%BD%91%E7%BB%9C%E6%B5%81%E9%87%8F%E7%9A%84%E6%8E%A7%E5%88%B6/</link>
       <pubDate>Mon, 01 Jul 2019 19:46:42 +0800</pubDate>
       
-      <guid>/post/%E5%AE%9E%E9%AA%8C%E5%8D%81%E4%B8%89-%E5%88%A9%E7%94%A8ip%E6%A0%87%E5%87%86%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6%E5%88%97%E8%A1%A8acl%E8%BF%9B%E8%A1%8C%E7%BD%91%E7%BB%9C%E6%B5%81%E9%87%8F%E7%9A%84%E6%8E%A7%E5%88%B6/</guid>
+      <guid>https://mannuan.github.io/post/%E5%AE%9E%E9%AA%8C%E5%8D%81%E4%B8%89-%E5%88%A9%E7%94%A8ip%E6%A0%87%E5%87%86%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6%E5%88%97%E8%A1%A8acl%E8%BF%9B%E8%A1%8C%E7%BD%91%E7%BB%9C%E6%B5%81%E9%87%8F%E7%9A%84%E6%8E%A7%E5%88%B6/</guid>
       <description>实验平台 Cisco模拟器，Version：5.3.0.0088
 实验目的 掌握路由器上编号的标准 IP 访问列表规则及配置。
 需求分析 只允许网段172.16.2.0与172.16.4.0的主机进行通信，不允许172.16.1.0去访问172.16.4.0网段的主机。
@@ -35,10 +35,10 @@
     
     <item>
       <title>实验十二 利用单臂路由实现vlan间的路由</title>
-      <link>/post/%E5%AE%9E%E9%AA%8C%E5%8D%81%E4%BA%8C-%E5%88%A9%E7%94%A8%E5%8D%95%E8%87%82%E8%B7%AF%E7%94%B1%E5%AE%9E%E7%8E%B0vlan%E9%97%B4%E7%9A%84%E8%B7%AF%E7%94%B1/</link>
+      <link>https://mannuan.github.io/post/%E5%AE%9E%E9%AA%8C%E5%8D%81%E4%BA%8C-%E5%88%A9%E7%94%A8%E5%8D%95%E8%87%82%E8%B7%AF%E7%94%B1%E5%AE%9E%E7%8E%B0vlan%E9%97%B4%E7%9A%84%E8%B7%AF%E7%94%B1/</link>
       <pubDate>Mon, 01 Jul 2019 19:21:11 +0800</pubDate>
       
-      <guid>/post/%E5%AE%9E%E9%AA%8C%E5%8D%81%E4%BA%8C-%E5%88%A9%E7%94%A8%E5%8D%95%E8%87%82%E8%B7%AF%E7%94%B1%E5%AE%9E%E7%8E%B0vlan%E9%97%B4%E7%9A%84%E8%B7%AF%E7%94%B1/</guid>
+      <guid>https://mannuan.github.io/post/%E5%AE%9E%E9%AA%8C%E5%8D%81%E4%BA%8C-%E5%88%A9%E7%94%A8%E5%8D%95%E8%87%82%E8%B7%AF%E7%94%B1%E5%AE%9E%E7%8E%B0vlan%E9%97%B4%E7%9A%84%E8%B7%AF%E7%94%B1/</guid>
       <description>实验平台 Cisco模拟器，Version：5.3.0.0088
 实验目的 掌握如何路由器端口上划分子接口、封装 Dot1Q(IEEE 802.1Q)协议，实现VLAN间的路由。
 需求分析 需要在交换机上配置 VLAN，然后在路由器连接交换机的端口上划分子接口，给相应的VLAN设置IP地址，以实现 VLAN间的路由。
@@ -49,10 +49,10 @@
     
     <item>
       <title>实验十一 Ospf基本配置</title>
-      <link>/post/%E5%AE%9E%E9%AA%8C%E5%8D%81%E4%B8%80-ospf%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/</link>
+      <link>https://mannuan.github.io/post/%E5%AE%9E%E9%AA%8C%E5%8D%81%E4%B8%80-ospf%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/</link>
       <pubDate>Mon, 01 Jul 2019 18:28:05 +0800</pubDate>
       
-      <guid>/post/%E5%AE%9E%E9%AA%8C%E5%8D%81%E4%B8%80-ospf%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/</guid>
+      <guid>https://mannuan.github.io/post/%E5%AE%9E%E9%AA%8C%E5%8D%81%E4%B8%80-ospf%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/</guid>
       <description>实验平台 Cisco模拟器，Version：5.3.0.0088
 实验目的 掌握在路由器上配置OSPF单区域。
 需求分析 需要在路由器和交换机上配置OSPF路由协议，使全网互通，从而实现信息的共享和传递。
@@ -63,10 +63,10 @@
     
     <item>
       <title>实验十 RIP路由协议基本配置</title>
-      <link>/post/%E5%AE%9E%E9%AA%8C%E5%8D%81-rip%E8%B7%AF%E7%94%B1%E5%8D%8F%E8%AE%AE%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/</link>
+      <link>https://mannuan.github.io/post/%E5%AE%9E%E9%AA%8C%E5%8D%81-rip%E8%B7%AF%E7%94%B1%E5%8D%8F%E8%AE%AE%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/</link>
       <pubDate>Mon, 01 Jul 2019 17:22:33 +0800</pubDate>
       
-      <guid>/post/%E5%AE%9E%E9%AA%8C%E5%8D%81-rip%E8%B7%AF%E7%94%B1%E5%8D%8F%E8%AE%AE%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/</guid>
+      <guid>https://mannuan.github.io/post/%E5%AE%9E%E9%AA%8C%E5%8D%81-rip%E8%B7%AF%E7%94%B1%E5%8D%8F%E8%AE%AE%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/</guid>
       <description>实验平台 Cisco模拟器，Version：5.3.0.0088
 实验目的 掌握在路由器上如何配置 RIP 路由协议。
 需求分析 两台路由器通过快速以太网端口连接在一起，每个路由器上设置2个Loopback端口模拟子网，在所有端口运行RIP路由协议，实现所有子网间的互通。
@@ -77,10 +77,10 @@
     
     <item>
       <title>实验六 跨交换机实现vlan间的路由</title>
-      <link>/post/%E5%AE%9E%E9%AA%8C%E5%85%AD-%E8%B7%A8%E4%BA%A4%E6%8D%A2%E6%9C%BA%E5%AE%9E%E7%8E%B0vlan%E9%97%B4%E7%9A%84%E8%B7%AF%E7%94%B1/</link>
+      <link>https://mannuan.github.io/post/%E5%AE%9E%E9%AA%8C%E5%85%AD-%E8%B7%A8%E4%BA%A4%E6%8D%A2%E6%9C%BA%E5%AE%9E%E7%8E%B0vlan%E9%97%B4%E7%9A%84%E8%B7%AF%E7%94%B1/</link>
       <pubDate>Mon, 01 Jul 2019 10:50:39 +0800</pubDate>
       
-      <guid>/post/%E5%AE%9E%E9%AA%8C%E5%85%AD-%E8%B7%A8%E4%BA%A4%E6%8D%A2%E6%9C%BA%E5%AE%9E%E7%8E%B0vlan%E9%97%B4%E7%9A%84%E8%B7%AF%E7%94%B1/</guid>
+      <guid>https://mannuan.github.io/post/%E5%AE%9E%E9%AA%8C%E5%85%AD-%E8%B7%A8%E4%BA%A4%E6%8D%A2%E6%9C%BA%E5%AE%9E%E7%8E%B0vlan%E9%97%B4%E7%9A%84%E8%B7%AF%E7%94%B1/</guid>
       <description>实验平台 Cisco模拟器，Version：5.3.0.0088
 实验目的 利用三层交换机跨交换机实现VLAN间路由。
 需求分析 在二层交换机上划分VLAN配置Trunk实现不同VLAN的主机接入，在三层交换机上划分VLAN配置Trunk并配置SVI接口实现不同VLAN间路由。
@@ -91,10 +91,10 @@
     
     <item>
       <title>实验九 配置动态nat</title>
-      <link>/post/%E5%AE%9E%E9%AA%8C%E4%B9%9D-%E9%85%8D%E7%BD%AE%E5%8A%A8%E6%80%81nat/</link>
+      <link>https://mannuan.github.io/post/%E5%AE%9E%E9%AA%8C%E4%B9%9D-%E9%85%8D%E7%BD%AE%E5%8A%A8%E6%80%81nat/</link>
       <pubDate>Mon, 01 Jul 2019 10:11:21 +0800</pubDate>
       
-      <guid>/post/%E5%AE%9E%E9%AA%8C%E4%B9%9D-%E9%85%8D%E7%BD%AE%E5%8A%A8%E6%80%81nat/</guid>
+      <guid>https://mannuan.github.io/post/%E5%AE%9E%E9%AA%8C%E4%B9%9D-%E9%85%8D%E7%BD%AE%E5%8A%A8%E6%80%81nat/</guid>
       <description>实验平台 Cisco模拟器，Version：5.3.0.0088
 实验目的 配置网络地址变换，为私有地址的用户提供到外部网络的资源的访问。
 需求分析 ISP 提供商给 IT 企业的一段公共 IP 地址的地址段为 200.1.1.200~100.1.1.210，需要内网使用这段址去访问 Internet，考虑到包括安全在内的诸多因素，公司希望对外部隐藏内部 网络。
@@ -105,10 +105,10 @@
     
     <item>
       <title>实验八 配置静态nat</title>
-      <link>/post/%E5%AE%9E%E9%AA%8C%E5%85%AB-%E9%85%8D%E7%BD%AE%E9%9D%99%E6%80%81nat/</link>
+      <link>https://mannuan.github.io/post/%E5%AE%9E%E9%AA%8C%E5%85%AB-%E9%85%8D%E7%BD%AE%E9%9D%99%E6%80%81nat/</link>
       <pubDate>Mon, 01 Jul 2019 09:06:25 +0800</pubDate>
       
-      <guid>/post/%E5%AE%9E%E9%AA%8C%E5%85%AB-%E9%85%8D%E7%BD%AE%E9%9D%99%E6%80%81nat/</guid>
+      <guid>https://mannuan.github.io/post/%E5%AE%9E%E9%AA%8C%E5%85%AB-%E9%85%8D%E7%BD%AE%E9%9D%99%E6%80%81nat/</guid>
       <description>实验平台 Cisco模拟器，Version：5.3.0.0088
 实验目的 配置网络地址变换，提供到公司共享服务器的可靠外部访问，即把内网的ip映射到公网ip。
 需求分析 公司需要将 172.16.1.5 和 172.16.1.6 两台主机作为共享服务器，需要外网能够访问，考虑到包括安全在内的诸多因素，公司希望对外部隐藏内部网络。
@@ -119,10 +119,10 @@
     
     <item>
       <title>Chrome设置PAC模式无效的解决方案</title>
-      <link>/post/chrome%E8%AE%BE%E7%BD%AEpac%E6%A8%A1%E5%BC%8F%E6%97%A0%E6%95%88%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</link>
+      <link>https://mannuan.github.io/post/chrome%E8%AE%BE%E7%BD%AEpac%E6%A8%A1%E5%BC%8F%E6%97%A0%E6%95%88%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</link>
       <pubDate>Sun, 30 Jun 2019 23:08:18 +0800</pubDate>
       
-      <guid>/post/chrome%E8%AE%BE%E7%BD%AEpac%E6%A8%A1%E5%BC%8F%E6%97%A0%E6%95%88%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</guid>
+      <guid>https://mannuan.github.io/post/chrome%E8%AE%BE%E7%BD%AEpac%E6%A8%A1%E5%BC%8F%E6%97%A0%E6%95%88%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</guid>
       <description>发现问题 以Ubuntu系统为例，我们通过genpac生成autoproxy.pac文件，然后点击系统设置-&amp;gt;网络-&amp;gt;代理设置-&amp;gt;自动，在输入框中输入file://绝对路径/autoproxy.pac。设置好以后，Chrome应当可以自动切换网络，但是Chrome无法访问google的搜索引擎，而火狐浏览器可以正常访问。
 分析问题 出现上面问题的唯一可能就是Chrome设置有误，因此点击设置-&amp;gt;高级设置-&amp;gt;打开代理设置，打开的就是Ubuntu系统的网络设置。因此，我们可以判断自动代理模式设置失效，这里我们就要仔细分析为什么会失效？
 解决方案 出现上面问题的主要原因是：Chrome移除对file://和data:协议的支持，目前只能使用http://协议。因此，我们打算使用nginx实现对本地文件的http映射。
@@ -133,27 +133,27 @@ sudo nginx -s reload  把http://127.0.0.1/autoproxy.pac填写到系统设置-&am
     
     <item>
       <title>Hugo博客搭建教程</title>
-      <link>/post/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/</link>
+      <link>https://mannuan.github.io/post/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/</link>
       <pubDate>Sun, 30 Jun 2019 21:19:27 +0800</pubDate>
       
-      <guid>/post/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/</guid>
+      <guid>https://mannuan.github.io/post/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/</guid>
       <description>Hugo介绍 一种基于 Go 语言的博客框架。
-Hugo安装(Mac) brew install hugo  创建博客 hugo new size myblog  安装主题 themes.gohuo.io上面有很多主题可供选择，比如选择m10c
+Hugo安装(Mac) brew install hugo  创建博客  下面以我的github用户名manuan为例
+ hugo new site mannuan.github.io  安装主题 themes.gohuo.io上面有很多主题可供选择，比如选择m10c
 下载m10c $ cd myblog $ git clone https://github.com/vaga/hugo-theme-m10c.git themes/m10c  修改配置文件 config.toml 添加一行：
- theme = &amp;quot;m10c&amp;quot;  本地预览 hugo server --buildDrafts  创建第一篇博客 hugo new post/第一篇博客.md  创建的博客在 ./contents/post/下面
+theme = &amp;quot;m10c&amp;quot;  本地预览 hugo server -D  创建第一篇博客 hugo new post/第一篇博客.md  创建的博客在 contents/post/下面
 使用vscode编辑markdown文件 快捷键 Ctrl+Shift+P，输入 Markwon: Open Preview to the Side，打开预览模式
-发布博客到github  下面以我的github用户名manuan为例
-  在github创建一个名为 mannuan.github.io 的仓库。
+发布博客到github  在github创建一个名为 mannuan.github.io 的仓库。
  把当前的博客打包到 public 目录下面
-hugo --baseUrl=&amp;quot;/&amp;quot; --buildDrafts  把 public 里面的内容同步到github</description>
+hugo --baseUrl=&amp;quot;https://mannuan.github.io/&amp;quot; -D  把 public 里面的内容同步到github</description>
     </item>
     
     <item>
       <title>原生js实现JSONP</title>
-      <link>/post/%E5%8E%9F%E7%94%9Fjs%E5%AE%9E%E7%8E%B0jsonp/</link>
+      <link>https://mannuan.github.io/post/%E5%8E%9F%E7%94%9Fjs%E5%AE%9E%E7%8E%B0jsonp/</link>
       <pubDate>Sun, 30 Jun 2019 20:35:25 +0800</pubDate>
       
-      <guid>/post/%E5%8E%9F%E7%94%9Fjs%E5%AE%9E%E7%8E%B0jsonp/</guid>
+      <guid>https://mannuan.github.io/post/%E5%8E%9F%E7%94%9Fjs%E5%AE%9E%E7%8E%B0jsonp/</guid>
       <description> 介绍 JSONP是JSON with Padding(填充式JSON或参数式JSON)的简写，是一种非常常用的跨域请求方式。主要原理是利用了script标签可以跨域请求的特性，由其src属性发送请求到服务器，服务器返回JavaScript代码，浏览器接受响应，然后就直接执行了，这和通过script标签引用外部文件的原理是一样的。 JSONP由两部分组成：回调函数和数据，回调函数是当响应到来时应该在页面中调用的函数，回调函数的名字一般在请求中指定。当服务器响应时，服务器端就会把该函数和数据拼成字符串返回
 JSONP的请求过程  请求阶段：浏览器创建一个script标签，并给其src赋值(类似http://example.com/api/?callback=jsonpCallback）。 发送请求：当给script的src赋值时，浏览器就会发起一个请求。 数据响应：服务端将要返回的数据作为参数和函数名称拼接在一起(格式类似”jsonpCallback({name: &#39;abc&#39;})”)返回。当浏览器接收到了响应数据，由于发起请求的是script，所以相当于直接调用jsonpCallback方法，并且传入了一个参数。  服务端交互示意图 </description>
     </item>

@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>RIP on mannuan</title>
-    <link>/tags/rip/</link>
+    <link>https://mannuan.github.io/tags/rip/</link>
     <description>Recent content in RIP on mannuan</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Mon, 01 Jul 2019 17:22:33 +0800</lastBuildDate>
     
-	<atom:link href="/tags/rip/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://mannuan.github.io/tags/rip/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>实验十 RIP路由协议基本配置</title>
-      <link>/post/%E5%AE%9E%E9%AA%8C%E5%8D%81-rip%E8%B7%AF%E7%94%B1%E5%8D%8F%E8%AE%AE%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/</link>
+      <link>https://mannuan.github.io/post/%E5%AE%9E%E9%AA%8C%E5%8D%81-rip%E8%B7%AF%E7%94%B1%E5%8D%8F%E8%AE%AE%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/</link>
       <pubDate>Mon, 01 Jul 2019 17:22:33 +0800</pubDate>
       
-      <guid>/post/%E5%AE%9E%E9%AA%8C%E5%8D%81-rip%E8%B7%AF%E7%94%B1%E5%8D%8F%E8%AE%AE%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/</guid>
+      <guid>https://mannuan.github.io/post/%E5%AE%9E%E9%AA%8C%E5%8D%81-rip%E8%B7%AF%E7%94%B1%E5%8D%8F%E8%AE%AE%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/</guid>
       <description>实验平台 Cisco模拟器，Version：5.3.0.0088
 实验目的 掌握在路由器上如何配置 RIP 路由协议。
 需求分析 两台路由器通过快速以太网端口连接在一起，每个路由器上设置2个Loopback端口模拟子网，在所有端口运行RIP路由协议，实现所有子网间的互通。

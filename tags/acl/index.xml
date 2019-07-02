@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>ACL on mannuan</title>
-    <link>/tags/acl/</link>
+    <link>https://mannuan.github.io/tags/acl/</link>
     <description>Recent content in ACL on mannuan</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Mon, 01 Jul 2019 19:46:42 +0800</lastBuildDate>
     
-	<atom:link href="/tags/acl/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://mannuan.github.io/tags/acl/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>实验十三 利用ip标准访问控制列表acl进行网络流量的控制</title>
-      <link>/post/%E5%AE%9E%E9%AA%8C%E5%8D%81%E4%B8%89-%E5%88%A9%E7%94%A8ip%E6%A0%87%E5%87%86%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6%E5%88%97%E8%A1%A8acl%E8%BF%9B%E8%A1%8C%E7%BD%91%E7%BB%9C%E6%B5%81%E9%87%8F%E7%9A%84%E6%8E%A7%E5%88%B6/</link>
+      <link>https://mannuan.github.io/post/%E5%AE%9E%E9%AA%8C%E5%8D%81%E4%B8%89-%E5%88%A9%E7%94%A8ip%E6%A0%87%E5%87%86%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6%E5%88%97%E8%A1%A8acl%E8%BF%9B%E8%A1%8C%E7%BD%91%E7%BB%9C%E6%B5%81%E9%87%8F%E7%9A%84%E6%8E%A7%E5%88%B6/</link>
       <pubDate>Mon, 01 Jul 2019 19:46:42 +0800</pubDate>
       
-      <guid>/post/%E5%AE%9E%E9%AA%8C%E5%8D%81%E4%B8%89-%E5%88%A9%E7%94%A8ip%E6%A0%87%E5%87%86%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6%E5%88%97%E8%A1%A8acl%E8%BF%9B%E8%A1%8C%E7%BD%91%E7%BB%9C%E6%B5%81%E9%87%8F%E7%9A%84%E6%8E%A7%E5%88%B6/</guid>
+      <guid>https://mannuan.github.io/post/%E5%AE%9E%E9%AA%8C%E5%8D%81%E4%B8%89-%E5%88%A9%E7%94%A8ip%E6%A0%87%E5%87%86%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6%E5%88%97%E8%A1%A8acl%E8%BF%9B%E8%A1%8C%E7%BD%91%E7%BB%9C%E6%B5%81%E9%87%8F%E7%9A%84%E6%8E%A7%E5%88%B6/</guid>
       <description>实验平台 Cisco模拟器，Version：5.3.0.0088
 实验目的 掌握路由器上编号的标准 IP 访问列表规则及配置。
 需求分析 只允许网段172.16.2.0与172.16.4.0的主机进行通信，不允许172.16.1.0去访问172.16.4.0网段的主机。

@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>OSPF on mannuan</title>
-    <link>/tags/ospf/</link>
+    <link>https://mannuan.github.io/tags/ospf/</link>
     <description>Recent content in OSPF on mannuan</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Mon, 01 Jul 2019 18:28:05 +0800</lastBuildDate>
     
-	<atom:link href="/tags/ospf/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://mannuan.github.io/tags/ospf/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>实验十一 Ospf基本配置</title>
-      <link>/post/%E5%AE%9E%E9%AA%8C%E5%8D%81%E4%B8%80-ospf%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/</link>
+      <link>https://mannuan.github.io/post/%E5%AE%9E%E9%AA%8C%E5%8D%81%E4%B8%80-ospf%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/</link>
       <pubDate>Mon, 01 Jul 2019 18:28:05 +0800</pubDate>
       
-      <guid>/post/%E5%AE%9E%E9%AA%8C%E5%8D%81%E4%B8%80-ospf%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/</guid>
+      <guid>https://mannuan.github.io/post/%E5%AE%9E%E9%AA%8C%E5%8D%81%E4%B8%80-ospf%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/</guid>
       <description>实验平台 Cisco模拟器，Version：5.3.0.0088
 实验目的 掌握在路由器上配置OSPF单区域。
 需求分析 需要在路由器和交换机上配置OSPF路由协议，使全网互通，从而实现信息的共享和传递。

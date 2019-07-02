@@ -17,14 +17,14 @@
 实验原理 在二层交换机上划分VLAN可实现不同VLAN的主机接入，而VLAN间的主机通信为不同网段间的通信，需要通过三层设备对数据进行路由转发才可以实现，通过在三层交换机上为各VLAN配置SVI接口，利用三层交换机的路由功能可以实现VLAN间的路由。
 实验拓扑 选择设备  交换机：1台3560-24PS，2台2960 移动终端：2台Generic（从左边数第一个）  实验demo 实验六-跨交换机实现vlan间路由.pkt
 实验步骤 设置最上面的交换机 Switch&gt;en Switch#conf t Switch(config)#vlan 10 Switch(config-vlan)#vlan 20 Switch(config)#inter vlan 10 Switch(config-if)#ip address 192.168.10.1 255.255.255.0 Switch(config-if)#no shut Switch(config-if)#inter vlan 20 Switch(config-if)#ip address 192.168.20.1 255.255.255.0 Switch(config-if)#no shut Switch(config-if)#end Switch#sh run  设置左边的2960交换机 Switch&gt;en Switch#conf t Switch(config)#inter fa0/2 Switch(config-if)#switch mode trunk Switch(config-if)#vlan 10 Switch(config-vlan)#inter fa0/1 Switch(config-if)#switchport access vlan 10 Switch(config-if)#end Switch#sh run  设置右边的2960交换机 Switch&gt;en Switch#conf t Switch(config)#inter fa0/2 Switch(config-if)#switch mode trunk Switch(config-if)#vlan 20 Switch(config-vlan)#inter fa0/1 Switch(config-if)#switchport access vlan 20 Switch(config-if)#end Switch#sh run  设置左边的主机 1、打开&rdquo;IP Configure&rdquo;'>
-<meta property='og:url' content='/post/%E5%AE%9E%E9%AA%8C%E5%85%AD-%E8%B7%A8%E4%BA%A4%E6%8D%A2%E6%9C%BA%E5%AE%9E%E7%8E%B0vlan%E9%97%B4%E7%9A%84%E8%B7%AF%E7%94%B1/'>
+<meta property='og:url' content='https://mannuan.github.io/post/%E5%AE%9E%E9%AA%8C%E5%85%AD-%E8%B7%A8%E4%BA%A4%E6%8D%A2%E6%9C%BA%E5%AE%9E%E7%8E%B0vlan%E9%97%B4%E7%9A%84%E8%B7%AF%E7%94%B1/'>
 <meta property='og:site_name' content='mannuan'>
 <meta property='og:type' content='article'><meta property='article:section' content='post'><meta property='article:tag' content='网络实验'><meta property='article:tag' content='VLAN'><meta property='article:tag' content='Cisco'><meta property='article:tag' content='路由协议'><meta property='article:published_time' content='2019-07-01T10:50:39&#43;08:00'/><meta property='article:modified_time' content='2019-07-01T10:50:39&#43;08:00'/><meta name='twitter:card' content='summary'>
 
 <meta name="generator" content="Hugo 0.55.6" />
 
   <title>实验六 跨交换机实现vlan间的路由 • mannuan</title>
-  <link rel='canonical' href='/post/%E5%AE%9E%E9%AA%8C%E5%85%AD-%E8%B7%A8%E4%BA%A4%E6%8D%A2%E6%9C%BA%E5%AE%9E%E7%8E%B0vlan%E9%97%B4%E7%9A%84%E8%B7%AF%E7%94%B1/'>
+  <link rel='canonical' href='https://mannuan.github.io/post/%E5%AE%9E%E9%AA%8C%E5%85%AD-%E8%B7%A8%E4%BA%A4%E6%8D%A2%E6%9C%BA%E5%AE%9E%E7%8E%B0vlan%E9%97%B4%E7%9A%84%E8%B7%AF%E7%94%B1/'>
   
   
   <link rel='icon' href='/favicon.ico'>
