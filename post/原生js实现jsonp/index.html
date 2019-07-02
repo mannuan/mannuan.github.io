@@ -4,7 +4,7 @@
 <meta name='viewport' content='width=device-width, initial-scale=1'>
 <meta name='description' content=' 介绍 JSONP是JSON with Padding(填充式JSON或参数式JSON)的简写，是一种非常常用的跨域请求方式。主要原理是利用了script标签可以跨域请求的特性，由其src属性发送请求到服务器，服务器返回JavaScript代码，浏览器接受响应，然后就直接执行了，这和通过script标签引用外部文件的原理是一样的。 JSONP由两部分组成：回调函数和数据，回调函数是当响应到来时应该在页面中调用的函数，回调函数的名字一般在请求中指定。当服务器响应时，服务器端就会把该函数和数据拼成字符串返回
 JSONP的请求过程  请求阶段：浏览器创建一个script标签，并给其src赋值(类似http://example.com/api/?callback=jsonpCallback）。 发送请求：当给script的src赋值时，浏览器就会发起一个请求。 数据响应：服务端将要返回的数据作为参数和函数名称拼接在一起(格式类似”jsonpCallback({name: &#39;abc&#39;})”)返回。当浏览器接收到了响应数据，由于发起请求的是script，所以相当于直接调用jsonpCallback方法，并且传入了一个参数。  服务端交互示意图 '>
-<meta name='theme-color' content='#FF0000'>
+<meta name='theme-color' content='#ffffff'>
 
 <meta property='og:title' content='原生js实现JSONP • mannuan'>
 <meta property='og:description' content=' 介绍 JSONP是JSON with Padding(填充式JSON或参数式JSON)的简写，是一种非常常用的跨域请求方式。主要原理是利用了script标签可以跨域请求的特性，由其src属性发送请求到服务器，服务器返回JavaScript代码，浏览器接受响应，然后就直接执行了，这和通过script标签引用外部文件的原理是一样的。 JSONP由两部分组成：回调函数和数据，回调函数是当响应到来时应该在页面中调用的函数，回调函数的名字一般在请求中指定。当服务器响应时，服务器端就会把该函数和数据拼成字符串返回
@@ -21,7 +21,7 @@ JSONP的请求过程  请求阶段：浏览器创建一个script标签，并给�
   
   <link rel='icon' href='/favicon.ico'>
 <link rel='stylesheet' href='/assets/css/main.6a060eb7.css'><link rel='stylesheet' href='/css/custom.css'><style>
-:root{--color-accent:#FF0000;}
+:root{--color-accent:#ffffff;}
 </style>
 
   
@@ -68,16 +68,20 @@ JSONP的请求过程  请求阶段：浏览器创建一个script标签，并给�
     <div class='container'>
       <ul><li class='item'>
   <a href='/'>Home</a></li><li class='item'>
-  <a href='/post/'>blog</a></li><li class='item'>
-  <a href='/docs/sidebar/'>Sidebar</a></li><li class='item has-children'>
-  <a href=''>docs</a><button class='sub-menu-toggler'>
+  <a href='/post/'>blogs</a></li><li class='item has-children'>
+  <a href=''>网络实验</a><button class='sub-menu-toggler'>
     <span class='screen-reader-text'>expand sub menu</span>
     <span class='sign'></span>
   </button>
 
   <ul class='sub-menu'><li class='item'>
-  <a href='/docs/menus/'>Menus</a></li><li class='item'>
-  <a href='/docs/widgets/'>Widgets</a></li></ul></li></ul>
+  <a href='/post/%E5%AE%9E%E9%AA%8C%E4%B9%9D-%E9%85%8D%E7%BD%AE%E5%8A%A8%E6%80%81nat/'>实验九</a></li><li class='item'>
+  <a href='/post/%E5%AE%9E%E9%AA%8C%E5%85%AB-%E9%85%8D%E7%BD%AE%E9%9D%99%E6%80%81nat/'>实验八</a></li><li class='item'>
+  <a href='/post/%E5%AE%9E%E9%AA%8C%E5%85%AD-%E8%B7%A8%E4%BA%A4%E6%8D%A2%E6%9C%BA%E5%AE%9E%E7%8E%B0vlan%E9%97%B4%E7%9A%84%E8%B7%AF%E7%94%B1/'>实验六</a></li><li class='item'>
+  <a href='/post/%E5%AE%9E%E9%AA%8C%E5%8D%81-rip%E8%B7%AF%E7%94%B1%E5%8D%8F%E8%AE%AE%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/'>实验十</a></li><li class='item'>
+  <a href='/post/%E5%AE%9E%E9%AA%8C%E5%8D%81%E4%B8%80-ospf%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/'>实验十一</a></li><li class='item'>
+  <a href='/post/%E5%AE%9E%E9%AA%8C%E5%8D%81%E4%B8%89-%E5%88%A9%E7%94%A8ip%E6%A0%87%E5%87%86%E8%AE%BF%E9%97%AE%E6%8E%A7%E5%88%B6%E5%88%97%E8%A1%A8acl%E8%BF%9B%E8%A1%8C%E7%BD%91%E7%BB%9C%E6%B5%81%E9%87%8F%E7%9A%84%E6%8E%A7%E5%88%B6/'>实验十三</a></li><li class='item'>
+  <a href='/post/%E5%AE%9E%E9%AA%8C%E5%8D%81%E4%BA%8C-%E5%88%A9%E7%94%A8%E5%8D%95%E8%87%82%E8%B7%AF%E7%94%B1%E5%AE%9E%E7%8E%B0vlan%E9%97%B4%E7%9A%84%E8%B7%AF%E7%94%B1/'>实验十二</a></li></ul></li></ul>
     </div>
   </nav>
 
@@ -188,7 +192,9 @@ JSONP的请求过程  请求阶段：浏览器创建一个script标签，并给�
     <ul><li class='item'>
         <a href='/'>Home</a>
       </li><li class='item'>
-        <a href='/post/'>blog</a>
+        <a href='/post/'>blogs</a>
+      </li><li class='item'>
+        <a href='https://github.com/mannuan'>Repo</a>
       </li></ul>
   </div>
 </nav><div class='header-widgets'>
@@ -197,7 +203,7 @@ JSONP的请求过程  请求阶段：浏览器创建一个script标签，并给�
     <style>.widget-breadcrumbs li:after{content:'\2f '}</style>
   <section class='widget widget-breadcrumbs sep-after'>
     <nav id='breadcrumbs'>
-      <ol><li><a href='/'>Home</a></li><li><a href='/post/'>blog</a></li><li><span>原生js实现JSONP</span></li></ol>
+      <ol><li><a href='/'>Home</a></li><li><a href='/post/'>blogs</a></li><li><span>原生js实现JSONP</span></li></ol>
     </nav>
   </section></div>
       </div>
