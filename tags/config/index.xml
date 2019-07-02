@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Configuration on mannuan</title>
+    <link>https://mannuan.github.io/tags/config/</link>
+    <description>Recent content in Configuration on mannuan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 12 Aug 2018 12:30:00 +0600</lastBuildDate>
+    
+	<atom:link href="https://mannuan.github.io/tags/config/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>KaTeX Support</title>
+      <link>https://mannuan.github.io/docs/katex-support/</link>
+      <pubDate>Sun, 12 Aug 2018 12:30:00 +0600</pubDate>
+      
+      <guid>https://mannuan.github.io/docs/katex-support/</guid>
+      <description>For enabling KaTeX, add this to your content&amp;rsquo;s frontmatter:
+--- katex: true --- KaTeX Syntax for Markdown In your Markdown content, use \\(&amp;hellip;\\) delimiters for in-line mathematics.
+For mathematics blocks you can use either $$&amp;hellip;$$ or \\[&amp;hellip;\\] as delimiters.
+Here&amp;rsquo;s an example Markdown content:
+When \\( a \ne 0 \\), there are two solutions to $$ ax^2 + bx + c = 0 $$ and they are: \\[ x = {-b \pm \sqrt{b^2-4ac} \over 2a} \\] Output:</description>
+    </item>
+    
+    <item>
+      <title>Comments Support</title>
+      <link>https://mannuan.github.io/docs/comments-support/</link>
+      <pubDate>Thu, 29 Mar 2018 09:00:00 +0600</pubDate>
+      
+      <guid>https://mannuan.github.io/docs/comments-support/</guid>
+      <description>Minimo has support for comments baked into it.
+Enable/Disable Comments Globally For enabling or disabling comments globally, check the following setting in your config.toml file:
+[params.comments] enable = false  params.comments [Map]:  enable [Boolean]: Enable/Disable comments globally   For Specific Posts The global .Site.Params.comments.enable setting can be overridden for specific posts in their content&amp;rsquo;s frontmatter with this option:
+--- comments: true ---  comments [Boolean]: Enable/Disable comments for specific posts  Of course, you&amp;rsquo;ll also need to setup a comment system ( Disqus or Staticman ).</description>
+    </item>
+    
+    <item>
+      <title>Emoji Support</title>
+      <link>https://mannuan.github.io/docs/emoji-support/</link>
+      <pubDate>Tue, 27 Feb 2018 21:00:00 +0600</pubDate>
+      
+      <guid>https://mannuan.github.io/docs/emoji-support/</guid>
+      <description>First of all, if you really want emojis, set the enableEmoji setting to true in your config.toml file:
+enableEmoji = true This will enable Hugo to find Emoji Shorthands in your content files and render them as Unicode Emoji Characters.
+For example:
+ will become 😃  No, it&amp;rsquo;ll probably not be that colorful! Unless your device&amp;rsquo;s operating system natively supports colorful emojis, you will see a black &amp;amp; white one instead.</description>
+    </item>
+    
+    <item>
+      <title>MathJax Support</title>
+      <link>https://mannuan.github.io/docs/mathjax-support/</link>
+      <pubDate>Tue, 27 Feb 2018 18:00:00 +0600</pubDate>
+      
+      <guid>https://mannuan.github.io/docs/mathjax-support/</guid>
+      <description>For enabling MathJax, add this to your content&amp;rsquo;s frontmatter:
+--- mathjax: true --- MathJax Syntax for Markdown In your Markdown content, use \\(&amp;hellip;\\) delimiters for in-line mathematics.
+For mathematics blocks you can use either $$&amp;hellip;$$ or \\[&amp;hellip;\\] as delimiters.
+Here&amp;rsquo;s an example Markdown content:
+When \\( a \ne 0 \\), there are two solutions to $$ ax^2 + bx + c = 0 $$ and they are: \\[ x = {-b \pm \sqrt{b^2-4ac} \over 2a} \\] Output:</description>
+    </item>
+    
+    <item>
+      <title>Sidebar</title>
+      <link>https://mannuan.github.io/docs/sidebar/</link>
+      <pubDate>Wed, 07 Feb 2018 19:15:00 +0600</pubDate>
+      
+      <guid>https://mannuan.github.io/docs/sidebar/</guid>
+      <description>Enabling Sidebar For enabling Sidebar, use the following configuration options in your config.toml file:
+[params.sidebar] enable = true  params.sidebar [Map]:  enable [Boolean]: Switch for enabling sidebar   Adding Widgets to Sidebar For adding Widgets to the Sidebar, check the Widgets documentation.</description>
+    </item>
+    
+    <item>
+      <title>Widgets</title>
+      <link>https://mannuan.github.io/docs/widgets/</link>
+      <pubDate>Wed, 07 Feb 2018 18:30:00 +0600</pubDate>
+      
+      <guid>https://mannuan.github.io/docs/widgets/</guid>
+      <description>Minimo supports Widgets that you can place on specific Widget Areas.
+Available Widgets Minimo has the following built-in Widgets:
+   Name Slug     1. About about   2. Breadcrumbs breadcrumbs   3. Recent Posts recent_posts   4. Search search   5. Sidebar Menu sidebar_menu   6. Social Menu social_menu   7. Taxonomy Cloud taxonomy_cloud    Widget Configuration Options Here are the configuration options available for the Widgets:</description>
+    </item>
+    
+    <item>
+      <title>Configuration File: config.toml</title>
+      <link>https://mannuan.github.io/docs/config-file/</link>
+      <pubDate>Mon, 25 Sep 2017 08:00:00 +0600</pubDate>
+      
+      <guid>https://mannuan.github.io/docs/config-file/</guid>
+      <description>This is the Minimo&amp;rsquo;s configuration file ( config.toml ) file of this site:
+baseURL = &amp;#34;https://mannuan.github.io/&amp;#34; title = &amp;#34;mannuan&amp;#34; # for smart copyright line, leave this blank and check [params.copyright] copyright = &amp;#34;&amp;#34; theme = &amp;#34;minimo&amp;#34; disqusShortname = &amp;#34;&amp;#34; googleAnalytics = &amp;#34;&amp;#34; Paginate = 10 preserveTaxonomyNames = true enableRobotsTXT = true # generate robots.txt # Syntax Highlighting ( https://gohugo.io/content-management/syntax-highlighting/ ) pygmentsCodefences = true enableEmoji = true # Missing translations will default to this content language defaultContentLanguage = &amp;#34;en&amp;#34; [params.</description>
+    </item>
+    
+  </channel>
+</rss>

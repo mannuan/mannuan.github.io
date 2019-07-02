@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>widgets on mannuan</title>
+    <link>https://mannuan.github.io/tags/widgets/</link>
+    <description>Recent content in widgets on mannuan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 07 Feb 2018 18:30:00 +0600</lastBuildDate>
+    
+	<atom:link href="https://mannuan.github.io/tags/widgets/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Widgets</title>
+      <link>https://mannuan.github.io/docs/widgets/</link>
+      <pubDate>Wed, 07 Feb 2018 18:30:00 +0600</pubDate>
+      
+      <guid>https://mannuan.github.io/docs/widgets/</guid>
+      <description>Minimo supports Widgets that you can place on specific Widget Areas.
+Available Widgets Minimo has the following built-in Widgets:
+   Name Slug     1. About about   2. Breadcrumbs breadcrumbs   3. Recent Posts recent_posts   4. Search search   5. Sidebar Menu sidebar_menu   6. Social Menu social_menu   7. Taxonomy Cloud taxonomy_cloud    Widget Configuration Options Here are the configuration options available for the Widgets:</description>
+    </item>
+    
+  </channel>
+</rss>

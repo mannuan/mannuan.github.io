@@ -5,9 +5,19 @@
     <link>https://mannuan.github.io/authors/</link>
     <description>Recent content in Authors on mannuan</description>
     <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 12 Aug 2018 12:30:00 +0600</lastBuildDate>
     
 	<atom:link href="https://mannuan.github.io/authors/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>muniftanjim</title>
+      <link>https://mannuan.github.io/authors/muniftanjim/</link>
+      <pubDate>Sun, 12 Aug 2018 12:30:00 +0600</pubDate>
+      
+      <guid>https://mannuan.github.io/authors/muniftanjim/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>

@@ -55,5 +55,32 @@
       <description></description>
     </item>
     
+    <item>
+      <title>features</title>
+      <link>https://mannuan.github.io/categories/features/</link>
+      <pubDate>Sun, 12 Aug 2018 12:30:00 +0600</pubDate>
+      
+      <guid>https://mannuan.github.io/categories/features/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>others</title>
+      <link>https://mannuan.github.io/categories/others/</link>
+      <pubDate>Mon, 25 Sep 2017 08:00:00 +0600</pubDate>
+      
+      <guid>https://mannuan.github.io/categories/others/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tutorial</title>
+      <link>https://mannuan.github.io/categories/tutorial/</link>
+      <pubDate>Mon, 25 Sep 2017 06:00:00 +0600</pubDate>
+      
+      <guid>https://mannuan.github.io/categories/tutorial/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>

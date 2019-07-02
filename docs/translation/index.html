@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang='en'><head>
+  <meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='description' content='You can translate Minimo in your own language!
+For example, if you want to translate Minimo in Spanish, you will have to add this to your site&rsquo;s config file:
+[languages.es] lang = &#34;es&#34; languageName = &#34;Spanish&#34; weight = 1 Then create a folder named /i18n/ in your site&rsquo;s root. And create a file /i18n/es.toml with the translated strings.
+For reference template you can see the en.toml file.
+If you want your translation file to be included in Minimo repository, feel free to create a pull request.'>
+<meta name='theme-color' content='#FF0000'>
+
+<meta property='og:title' content='Translation Support • Munif Tanjim'>
+<meta property='og:description' content='You can translate Minimo in your own language!
+For example, if you want to translate Minimo in Spanish, you will have to add this to your site&rsquo;s config file:
+[languages.es] lang = &#34;es&#34; languageName = &#34;Spanish&#34; weight = 1 Then create a folder named /i18n/ in your site&rsquo;s root. And create a file /i18n/es.toml with the translated strings.
+For reference template you can see the en.toml file.
+If you want your translation file to be included in Minimo repository, feel free to create a pull request.'>
+<meta property='og:url' content='https://mannuan.github.io/docs/translation/'>
+<meta property='og:site_name' content='mannuan'>
+<meta property='og:type' content='article'><meta property='og:image' content='https://www.gravatar.com/avatar/058944a54775b387da964cb3cc3670ff?s=256'><meta property='article:author' content='https://facebook.com/MunifTanjim'><meta property='article:section' content='docs'><meta property='article:tag' content='translation'><meta property='article:tag' content='i18n'><meta property='article:published_time' content='2017-09-27T14:00:00&#43;06:00'/><meta property='article:modified_time' content='2017-09-27T14:00:00&#43;06:00'/><meta name='twitter:card' content='summary'><meta name='twitter:creator' content='@MunifTanjim'>
+
+<meta name="generator" content="Hugo 0.55.6" />
+
+  <title>Translation Support • Munif Tanjim</title>
+  <link rel='canonical' href='https://mannuan.github.io/docs/translation/'>
+  
+  
+  <link rel='icon' href='/favicon.ico'>
+<link rel='stylesheet' href='/assets/css/main.6a060eb7.css'><link rel='stylesheet' href='/css/custom.css'><style>
+:root{--color-accent:#FF0000;}
+</style>
+
+  
+
+</head>
+<body class='page type-docs has-sidebar'>
+
+  <div class='site'><div id='sidebar' class='sidebar'>
+  <a class='screen-reader-text' href='#main-menu'>Skip to Main Menu</a>
+
+  <div class='container'><section class='widget widget-about sep-after'>
+  <header>
+    
+    <div class='logo'>
+      <a href='/'>
+        <img src='/images/%e6%88%91%e7%9a%84%e5%a4%b4%e5%83%8f.jpeg'>
+      </a>
+    </div>
+    
+    <h2 class='title site-title '>
+      <a href='/'>
+      mannuan
+      </a>
+    </h2>
+    <div class='desc'>
+    Rome was not built in a day.
+    </div>
+  </header>
+
+</section>
+<section class='widget widget-search sep-after'>
+  <header>
+    <h4 class='title widget-title'>Search</h4>
+  </header>
+
+  <form action='/search' id='search-form' class='search-form'>
+    <label>
+      <span class='screen-reader-text'>Search</span>
+      <input id='search-term' class='search-term' type='search' name='q' placeholder='Search&hellip;'>
+    </label></form>
+
+</section>
+<section class='widget widget-sidebar_menu sep-after'><nav id='sidebar-menu' class='menu sidebar-menu' aria-label='Sidebar Menu'>
+    <div class='container'>
+      <ul><li class='item'>
+  <a href='/'>Home</a></li><li class='item'>
+  <a href='/post/'>blog</a></li><li class='item'>
+  <a href='/docs/sidebar/'>Sidebar</a></li><li class='item has-children'>
+  <a href=''>docs</a><button class='sub-menu-toggler'>
+    <span class='screen-reader-text'>expand sub menu</span>
+    <span class='sign'></span>
+  </button>
+
+  <ul class='sub-menu'><li class='item'>
+  <a href='/docs/menus/'>Menus</a></li><li class='item'>
+  <a href='/docs/widgets/'>Widgets</a></li></ul></li></ul>
+    </div>
+  </nav>
+
+</section><section class='widget widget-taxonomy_cloud sep-after'>
+  <header>
+    <h4 class='title widget-title'>Tags</h4>
+  </header>
+
+  <div class='container list-container'>
+  <ul class='list taxonomy-cloud'><li>
+        <a href='/tags/acl/' style='font-size:1em'>ACL</a>
+      </li><li>
+        <a href='/tags/algolia/' style='font-size:1em'>algolia</a>
+      </li><li>
+        <a href='/tags/authors/' style='font-size:1em'>authors</a>
+      </li><li>
+        <a href='/tags/chroma/' style='font-size:1em'>chroma</a>
+      </li><li>
+        <a href='/tags/chrome/' style='font-size:1em'>Chrome</a>
+      </li><li>
+        <a href='/tags/cisco/' style='font-size:2em'>Cisco</a>
+      </li><li>
+        <a href='/tags/config/' style='font-size:2em'>Configuration</a>
+      </li><li>
+        <a href='/tags/fuse.js/' style='font-size:1em'>fuse.js</a>
+      </li><li>
+        <a href='/tags/genpac/' style='font-size:1em'>genpac</a>
+      </li><li>
+        <a href='/tags/hugo/' style='font-size:1em'>Hugo</a>
+      </li><li>
+        <a href='/tags/i18n/' style='font-size:1em'>i18n</a>
+      </li><li>
+        <a href='/tags/jsonp/' style='font-size:1em'>JSONP</a>
+      </li><li>
+        <a href='/tags/katex/' style='font-size:1em'>katex</a>
+      </li><li>
+        <a href='/tags/lunr.js/' style='font-size:1em'>lunr.js</a>
+      </li><li>
+        <a href='/tags/mac/' style='font-size:1em'>MAC</a>
+      </li><li>
+        <a href='/tags/menus/' style='font-size:1em'>menus</a>
+      </li><li>
+        <a href='/tags/nat/' style='font-size:1.1666666666666667em'>NAT</a>
+      </li><li>
+        <a href='/tags/og/' style='font-size:1em'>Opengraph</a>
+      </li><li>
+        <a href='/tags/ospf/' style='font-size:1em'>OSPF</a>
+      </li><li>
+        <a href='/tags/pygments/' style='font-size:1em'>pygments</a>
+      </li><li>
+        <a href='/tags/rip/' style='font-size:1em'>RIP</a>
+      </li><li>
+        <a href='/tags/search/' style='font-size:1.5em'>search</a>
+      </li><li>
+        <a href='/tags/shadowsocks/' style='font-size:1em'>Shadowsocks</a>
+      </li><li>
+        <a href='/tags/shortcode/' style='font-size:1em'>shortcode</a>
+      </li><li>
+        <a href='/tags/translation/' style='font-size:1em'>translation</a>
+      </li><li>
+        <a href='/tags/vlan/' style='font-size:1.1666666666666667em'>VLAN</a>
+      </li><li>
+        <a href='/tags/widgets/' style='font-size:1em'>widgets</a>
+      </li><li>
+        <a href='/tags/%E5%8D%95%E8%87%82%E8%B7%AF%E7%94%B1/' style='font-size:1em'>单臂路由</a>
+      </li><li>
+        <a href='/tags/%E6%88%AA%E5%9B%BE/' style='font-size:1em'>截图</a>
+      </li><li>
+        <a href='/tags/%E6%B5%81%E9%87%8F%E6%8E%A7%E5%88%B6/' style='font-size:1em'>流量控制</a>
+      </li><li>
+        <a href='/tags/%E7%BD%91%E7%BB%9C%E5%9C%B0%E5%9D%80%E6%98%A0%E5%B0%84/' style='font-size:1.1666666666666667em'>网络地址映射</a>
+      </li><li>
+        <a href='/tags/%E7%BD%91%E7%BB%9C%E5%AE%9E%E9%AA%8C/' style='font-size:2em'>网络实验</a>
+      </li><li>
+        <a href='/tags/%E8%B7%A8%E5%9F%9F/' style='font-size:1em'>跨域</a>
+      </li><li>
+        <a href='/tags/%E8%B7%AF%E7%94%B1%E5%8D%8F%E8%AE%AE/' style='font-size:1.3333333333333333em'>路由协议</a>
+      </li></ul>
+</div>
+
+
+</section>
+</div>
+
+  <div class='sidebar-overlay'></div>
+</div><div class='main'><nav id='main-menu' class='menu main-menu' aria-label='Main Menu'>
+  <div class='container'>
+    <a class='screen-reader-text' href='#content'>Skip to Content</a>
+
+<button id='sidebar-toggler' class='sidebar-toggler' aria-controls='sidebar'>
+  <span class='screen-reader-text'>Toggle Sidebar</span>
+  <span class='open'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="3" y1="12" x2="21" y2="12" />
+  <line x1="3" y1="6" x2="21" y2="6" />
+  <line x1="3" y1="18" x2="21" y2="18" />
+  
+</svg>
+</span>
+  <span class='close'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="18" y1="6" x2="6" y2="18" />
+  <line x1="6" y1="6" x2="18" y2="18" />
+  
+</svg>
+</span>
+</button>
+    <ul><li class='item'>
+        <a href='/'>Home</a>
+      </li><li class='item'>
+        <a href='/post/'>blog</a>
+      </li></ul>
+  </div>
+</nav><div class='header-widgets'>
+        <div class='container'>
+    
+    <style>.widget-breadcrumbs li:after{content:'\2f '}</style>
+  <section class='widget widget-breadcrumbs sep-after'>
+    <nav id='breadcrumbs'>
+      <ol><li><a href='/'>Home</a></li><li><a href='/docs/'>docs</a></li><li><span>Translation Support</span></li></ol>
+    </nav>
+  </section></div>
+      </div>
+
+      <header id='header' class='header site-header'>
+        <div class='container sep-after'>
+          <div class='header-info'><p class='site-title title'>mannuan</p><p class='desc site-desc'>Rome was not built in a day.</p>
+          </div>
+        </div>
+      </header>
+
+      <main id='content'>
+
+
+<article lang='en' class='entry'>
+  <header class='header entry-header'>
+  <div class='container sep-after'>
+    <div class='header-info'>
+      <h1 class='title'>Translation Support</h1>
+      
+
+    </div>
+    <div class='entry-meta'>
+  <span class='posted-on'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+  <line x1="16" y1="2" x2="16" y2="6"/>
+  <line x1="8" y1="2" x2="8" y2="6"/>
+  <line x1="3" y1="10" x2="21" y2="10"/>
+  
+</svg>
+<span class='screen-reader-text'>Posted on </span>
+  <time class='entry-date' datetime='2017-09-27T14:00:00&#43;06:00'>2017, Sep 27</time>
+</span>
+
+  <span class='byline'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M21,21V20c0-2.76-4-5-9-5s-9,2.24-9,5v1"/>
+  <path d="M16,6.37A4,4,0,1,1,12.63,3,4,4,0,0,1,16,6.37Z"/>
+  
+</svg>
+<span class='screen-reader-text'> by </span><a href='/authors/muniftanjim'>Munif Tanjim</a></span>
+  
+<span class='reading-time'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <circle cx="12" cy="12" r="10"/>
+  <polyline points="12 6 12 12 15 15"/>
+  
+</svg>
+One min read
+</span>
+
+
+</div>
+
+
+  </div>
+</header>
+
+  
+  
+
+  <div class='container entry-content'>
+  <p>You can translate Minimo in your own language!</p>
+
+<p>For example, if you want to translate Minimo in Spanish, you will have to add this to your site&rsquo;s config file:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-toml" data-lang="toml">[<span style="color:#a6e22e">languages</span>.<span style="color:#a6e22e">es</span>]
+<span style="color:#a6e22e">lang</span> = <span style="color:#e6db74">&#34;es&#34;</span>
+<span style="color:#a6e22e">languageName</span> = <span style="color:#e6db74">&#34;Spanish&#34;</span>
+<span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">1</span></code></pre></div>
+<p>Then create a folder named <strong><code>/i18n/</code></strong> in your site&rsquo;s root. And create a file <strong><code>/i18n/es.toml</code></strong> with the translated strings.</p>
+
+<p>For reference template you can see the <a href="https://github.com/MunifTanjim/minimo/blob/master/i18n/en.toml" target="_blank">en.toml</a> file.</p>
+
+<p>If you want your translation file to be included in Minimo repository, feel free to create a pull request.</p>
+
+</div>
+
+  
+<footer class='entry-footer'>
+  <div class='container sep-before'><div class='categories'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M22,19a2,2,0,0,1-2,2H4a2,2,0,0,1-2-2V5A2,2,0,0,1,4,3H9l2,3h9a2,2,0,0,1,2,2Z"/>
+  
+</svg>
+<span class='screen-reader-text'>Categories: </span><a class='category' href='/categories/features/'>features</a></div>
+<div class='tags'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M20.59,13.41l-7.17,7.17a2,2,0,0,1-2.83,0L2,12V2H12l8.59,8.59A2,2,0,0,1,20.59,13.41Z"/>
+  <line x1="7" y1="7" x2="7" y2="7"/>
+  
+</svg>
+<span class='screen-reader-text'>Tags: </span><a class='tag' href='/tags/translation/'>translation</a>, <a class='tag' href='/tags/i18n/'>i18n</a></div>
+
+  </div>
+</footer>
+
+
+</article>
+
+<nav class='entry-nav'>
+  <div class='container'><div class='prev-entry sep-before'>
+      <a href='/docs/syntax-highlighting/'>
+        <span aria-hidden='true'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="20" y1="12" x2="4" y2="12"/>
+  <polyline points="10 18 4 12 10 6"/>
+  
+</svg>
+ Previous</span>
+        <span class='screen-reader-text'>Previous post: </span>Syntax Highlighting</a>
+    </div><div class='next-entry sep-before'>
+      <a href='/docs/cover-image/'>
+        <span class='screen-reader-text'>Next post: </span>Cover Image<span aria-hidden='true'>Next <svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="4" y1="12" x2="20" y2="12"/>
+  <polyline points="14 6 20 12 14 18"/>
+  
+</svg>
+</span>
+      </a>
+    </div></div>
+</nav>
+
+
+
+
+      </main>
+
+      <footer id='footer' class='footer'>
+        <div class='container sep-before'><section class='widget widget-social_menu sep-after'><nav aria-label='Social Menu'>
+    <ul><li>
+        <a href='https://github.com/mannuan' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Github account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='mailto:mannuandeyangguang@163.com' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Contact via Email</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+  <polyline points="22,6 12,13 2,6"/>
+  
+</svg>
+</a>
+      </li></ul>
+  </nav>
+</section><div class='copyright'>
+  <p> &copy; 2019 mannuan </p>
+</div>
+
+        </div>
+      </footer>
+
+    </div>
+  </div><script>window.__assets_js_src="/assets/js/"</script>
+
+<script src='/assets/js/main.67d669ac.js'></script><script src='/js/custom.js'></script>
+
+</body>
+
+</html>
+

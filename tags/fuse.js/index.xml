@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>fuse.js on mannuan</title>
+    <link>https://mannuan.github.io/tags/fuse.js/</link>
+    <description>Recent content in fuse.js on mannuan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 06 Jul 2018 01:00:00 +0600</lastBuildDate>
+    
+	<atom:link href="https://mannuan.github.io/tags/fuse.js/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Search: Fuse.js</title>
+      <link>https://mannuan.github.io/docs/search-fuse-js/</link>
+      <pubDate>Fri, 06 Jul 2018 01:00:00 +0600</pubDate>
+      
+      <guid>https://mannuan.github.io/docs/search-fuse-js/</guid>
+      <description> Configure Fuse.js Search Client Select Fuse.js as the search client in your config.toml file:
+[params.search] client = &amp;#34;fuse&amp;#34;</description>
+    </item>
+    
+  </channel>
+</rss>
