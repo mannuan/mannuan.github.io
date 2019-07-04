@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>contains empty filename on mannuan</title>
+    <link>https://mannuan.github.io/tags/contains-empty-filename/</link>
+    <description>Recent content in contains empty filename on mannuan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 13 May 2019 11:10:48 +0800</lastBuildDate>
+    
+	<atom:link href="https://mannuan.github.io/tags/contains-empty-filename/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>dpkg error: package `x&#39; contains empty filename，Sub-process /usr/bin/dpkg returned an error code (2)</title>
+      <link>https://mannuan.github.io/post/dpkg-error-package-x-contains-empty-filename/</link>
+      <pubDate>Mon, 13 May 2019 11:10:48 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/dpkg-error-package-x-contains-empty-filename/</guid>
+      <description>后面的错误“Sub-process /usr/bin/dpkg returned an error code (2)”是由于前面的一个错误引起的
+因此，只需要解决前面的错误就行了
+解决这个错误其实很简单，只需要理解前面一个错误里面的&amp;rdquo;empty filename&amp;rdquo;就行了
+我看过很多教程，说只要删除/var/lib/dpkg/info/x.list就可以了，我试过，每次删除，之后这个目录下面都会重新生成x.list文件
+之后我找到解决方案，发现只要把x.list改为x.list.broke就可以了，之后就没有&amp;rdquo;empty filename的报错&amp;rdquo;</description>
+    </item>
+    
+  </channel>
+</rss>

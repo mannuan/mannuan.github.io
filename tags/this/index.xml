@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>this on mannuan</title>
+    <link>https://mannuan.github.io/tags/this/</link>
+    <description>Recent content in this on mannuan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 22 May 2019 15:27:59 +0800</lastBuildDate>
+    
+	<atom:link href="https://mannuan.github.io/tags/this/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>javascript中的this</title>
+      <link>https://mannuan.github.io/post/javascript%E4%B8%AD%E7%9A%84this/</link>
+      <pubDate>Wed, 22 May 2019 15:27:59 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/javascript%E4%B8%AD%E7%9A%84this/</guid>
+      <description>this的指向分为4种：
+ 作为对象的方法调用： var obj = { a: 1, getA: function(){ console.log(this == obj); console.log(this.a); } } obj.getA();   当函数作为对象的方法被调用时，this指向的是一个局部对象，即当前的这个对象；
+ 作为普通函数调用： global.name = &amp;#39;globalName&amp;#39;; var getName = function(){ return this.name; }; console.log(getName()); // 输出: globalName  //或者 global.name = &amp;#39;globalName&amp;#39;; var myObject = { name: &amp;#34;sven&amp;#34;, getName: function(){ return this.name; } } var getName = myObject.getName; console.log(getName()); //globalName   当this在普通函数里面被用到时，this指向的是一个全局对象，在浏览器上是window，在nodejs上是global
+ 构造函数调用： var MyClass = function(){ this.</description>
+    </item>
+    
+  </channel>
+</rss>

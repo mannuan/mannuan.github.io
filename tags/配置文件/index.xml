@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>配置文件 on mannuan</title>
+    <link>https://mannuan.github.io/tags/%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/</link>
+    <description>Recent content in 配置文件 on mannuan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 26 Jul 2018 11:19:05 +0800</lastBuildDate>
+    
+	<atom:link href="https://mannuan.github.io/tags/%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>python教程之pip使用国内源</title>
+      <link>https://mannuan.github.io/post/python%E6%95%99%E7%A8%8B%E4%B9%8Bpip%E4%BD%BF%E7%94%A8%E5%9B%BD%E5%86%85%E6%BA%90/</link>
+      <pubDate>Thu, 26 Jul 2018 11:19:05 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/python%E6%95%99%E7%A8%8B%E4%B9%8Bpip%E4%BD%BF%E7%94%A8%E5%9B%BD%E5%86%85%E6%BA%90/</guid>
+      <description>配置文件格式：  以阿里云为例
+ [global] index-url = http://mirrors.aliyun.com/pypi/simple/ [install] trusted-host=mirrors.aliyun.com  配置文件路径：  放置配置文件的位置各个操作系统各部相同，下面我将一一列举。
+ linux系统: 超级用户： 如果存在/etc/xdg/目录，则使用/etc/xdg/pip/pip.conf路径；不存在使用/etc/pip.conf路径
+普通用户： 使用.config/pip/pip.conf
+mac系统: 超级用户： .config/pip/pip.conf 普通用户： .pip/pip.conf windows系统： 全局配置（win7及以上系统，这里文件名改为pip.ini）： C:\ProgramData\pip\pip.ini ###</description>
+    </item>
+    
+  </channel>
+</rss>

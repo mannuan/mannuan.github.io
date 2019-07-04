@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>视频下载 on mannuan</title>
+    <link>https://mannuan.github.io/tags/%E8%A7%86%E9%A2%91%E4%B8%8B%E8%BD%BD/</link>
+    <description>Recent content in 视频下载 on mannuan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 04 Apr 2019 09:47:48 +0800</lastBuildDate>
+    
+	<atom:link href="https://mannuan.github.io/tags/%E8%A7%86%E9%A2%91%E4%B8%8B%E8%BD%BD/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>视频下载4大神器</title>
+      <link>https://mannuan.github.io/post/%E8%A7%86%E9%A2%91%E4%B8%8B%E8%BD%BD4%E5%A4%A7%E7%A5%9E%E5%99%A8/</link>
+      <pubDate>Thu, 04 Apr 2019 09:47:48 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/%E8%A7%86%E9%A2%91%E4%B8%8B%E8%BD%BD4%E5%A4%A7%E7%A5%9E%E5%99%A8/</guid>
+      <description> 1、downie 可以下载🌎上面所有你想的到的视频网站的视频，而且下载速度很快。
+2、ykdl 可以通过命令行下载爱奇艺的视频，还有其他网站的视频
+3、you-get 4、youtube-dl </description>
+    </item>
+    
+  </channel>
+</rss>

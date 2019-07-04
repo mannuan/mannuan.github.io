@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>npm国内源 on mannuan</title>
+    <link>https://mannuan.github.io/tags/npm%E5%9B%BD%E5%86%85%E6%BA%90/</link>
+    <description>Recent content in npm国内源 on mannuan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 10 Jun 2019 21:52:20 +0800</lastBuildDate>
+    
+	<atom:link href="https://mannuan.github.io/tags/npm%E5%9B%BD%E5%86%85%E6%BA%90/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>npm快速国内源</title>
+      <link>https://mannuan.github.io/post/npm%E5%BF%AB%E9%80%9F%E5%9B%BD%E5%86%85%E6%BA%90/</link>
+      <pubDate>Mon, 10 Jun 2019 21:52:20 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/npm%E5%BF%AB%E9%80%9F%E5%9B%BD%E5%86%85%E6%BA%90/</guid>
+      <description>淘宝镜像( cnpm ) - 淘宝NPM 镜像，用法和npm一模一样只是把npm改为cnpm</description>
+    </item>
+    
+  </channel>
+</rss>

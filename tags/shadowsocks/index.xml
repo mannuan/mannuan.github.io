@@ -19,9 +19,9 @@
       <description>发现问题 以Ubuntu系统为例，我们通过genpac生成autoproxy.pac文件，然后点击系统设置-&amp;gt;网络-&amp;gt;代理设置-&amp;gt;自动，在输入框中输入file://绝对路径/autoproxy.pac。设置好以后，Chrome应当可以自动切换网络，但是Chrome无法访问google的搜索引擎，而火狐浏览器可以正常访问。
 分析问题 出现上面问题的唯一可能就是Chrome设置有误，因此点击设置-&amp;gt;高级设置-&amp;gt;打开代理设置，打开的就是Ubuntu系统的网络设置。因此，我们可以判断自动代理模式设置失效，这里我们就要仔细分析为什么会失效？
 解决方案 出现上面问题的主要原因是：Chrome移除对file://和data:协议的支持，目前只能使用http://协议。因此，我们打算使用nginx实现对本地文件的http映射。
-安装nginx sudo apt-get install nginx  修改nginx.cnf配置文件 vim /etc/nginx/nginx.conf  在nginx.conf的http{...}代码块中输入:
-server{ listen: 80; server_name: 127.0.0.1; location /autoproxy.pac { alias 绝对路径/autoproxy.pac; } }  重启nginx
-sudo nginx -s reload  把http://127.0.0.1/autoproxy.pac填写到系统设置-&amp;gt;网络-&amp;gt;代理设置-&amp;gt;自动代理中</description>
+安装nginx sudo apt-get install nginx 修改nginx.cnf配置文件 vim /etc/nginx/nginx.conf 在nginx.conf的http{...}代码块中输入:
+server{ listen: 80; server_name: 127.0.0.1; location /autoproxy.pac { alias 绝对路径/autoproxy.pac; } } 重启nginx
+sudo nginx -s reload 把http://127.0.0.1/autoproxy.pac填写到系统设置-&amp;gt;网络-&amp;gt;代理设置-&amp;gt;自动代理中</description>
     </item>
     
   </channel>

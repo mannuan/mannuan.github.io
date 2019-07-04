@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>supervisor on mannuan</title>
+    <link>https://mannuan.github.io/tags/supervisor/</link>
+    <description>Recent content in supervisor on mannuan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 02 Jun 2019 14:11:30 +0800</lastBuildDate>
+    
+	<atom:link href="https://mannuan.github.io/tags/supervisor/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>linux实现内网穿透</title>
+      <link>https://mannuan.github.io/post/linux%E5%AE%9E%E7%8E%B0%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/</link>
+      <pubDate>Sun, 02 Jun 2019 14:11:30 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/linux%E5%AE%9E%E7%8E%B0%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/</guid>
+      <description>穿透工具：frps
+进程管理工具：supervisor</description>
+    </item>
+    
+  </channel>
+</rss>

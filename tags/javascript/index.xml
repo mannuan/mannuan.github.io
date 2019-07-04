@@ -1,0 +1,516 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>javascript on mannuan</title>
+    <link>https://mannuan.github.io/tags/javascript/</link>
+    <description>Recent content in javascript on mannuan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 25 Jun 2019 20:59:45 +0800</lastBuildDate>
+    
+	<atom:link href="https://mannuan.github.io/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>CSS三种引入方式：内联、页级、外联</title>
+      <link>https://mannuan.github.io/post/css%E4%B8%89%E7%A7%8D%E5%BC%95%E5%85%A5%E6%96%B9%E5%BC%8F%E5%86%85%E8%81%94%E9%A1%B5%E7%BA%A7%E5%A4%96%E8%81%94/</link>
+      <pubDate>Tue, 25 Jun 2019 20:59:45 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/css%E4%B8%89%E7%A7%8D%E5%BC%95%E5%85%A5%E6%96%B9%E5%BC%8F%E5%86%85%E8%81%94%E9%A1%B5%E7%BA%A7%E5%A4%96%E8%81%94/</guid>
+      <description>1.内联CSS 内联CSS也可称为行内CSS或者行级CSS，它直接在标签内部引入，显著的优点是十分的便捷、高效；但是同时也造成了不能够重用样式的缺点，如果代码行数到达一定长度不建议采用。通常内联CSS作为测试使用，可以查找代码中bug。
+&amp;lt;body&amp;gt; &amp;lt;div style=&amp;#34;width: 65px;height: 20px;border: 1px solid;&amp;#34;&amp;gt;测试元素div&amp;gt; &amp;lt;body&amp;gt; 2.页级CSS 页级CSS也可称为内部CSS，整体是放在head标签里边的，在style标签里边定义样式，作用范围和字面意思相同，仅限于本页面的元素；如果你写的代码超过了几百行，想想每次把代码页拉到最上边都很烦，所以它在可维护性方面较差。
+&amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;#34;utf-8&amp;#34;/&amp;gt; &amp;lt;title&amp;gt;测试title&amp;gt; &amp;lt;style type=&amp;#34;text/css&amp;#34;&amp;gt; div { width: 65px; height: 20px; border: 1px solid; background: greenyellow; } &amp;lt;/style&amp;gt; &amp;lt;/head&amp;gt; 3. 外联CSS 外联CSS也可称为外部CSS，在实际的项目中通常使用此种方式，它只在页面中使用link或者@import引入即可，可维护性好；并且外联CSS是一个单独的文件，可以作用于多个页面，在修改的时候可以针对性地修改某一块区域，达到多个页面样式同时变更，相较于内联CSS和页级CSS，省去了到每个页面修改的步骤，提高了开发效率，同时一定程度提高了性能。
+接下来具体说说link和@import的区别：
+(1)link: link语法格式中，rel指的是关联(relation)，type指的是类型，href指的是链接文件路径。
+link的作用主要用来引入CSS和网页图标，指示告知搜索引擎，网页之间的关系等。
+(2)@import: @import语法格式务必写在style标签中，后直接加文件路径即可。
+@import作用在CSS文件和页面中，可以在一个CSS文件中引入其他的CSS文件，例如在index.css文件中引入其他CSS文件的样式，整合在一起后，再在index.html中调用一次即可，在实际项目中经常使用，方便管理和维护。
+(3)二者加载顺序影响 HTML加载过程：
+1) 加载HTML-DOM结构 2)CSS和JS 3)图片和多媒体 4)加载事件触发 link和@import都没有放置顺序的要求，但是不同的放置位置可能会造成效果显示的差异。对于link，无论放到哪个位置，都是一边加载数据，一边进行优化，视觉感受很好；而对于@import，放置到哪里，才从哪里开始加载CSS样式，即先加载数据，然后加载样式，如果网速不佳，可能会造成只有数据出来，而样式一点点加载的效果。并且在同一个页面中，调用两种方式，link永远比@import优先级高。
+在项目中使用的时候，一般在页面中调用方式为link，并且放在head标签中；使用@import除了在CSS文件中，在页面调用时，一般加载第三方的样式会使用到，并且需要放置在页面的底部，不会影响自己的网站。</description>
+    </item>
+    
+    <item>
+      <title>JavaScript debugger 语句</title>
+      <link>https://mannuan.github.io/post/javascript-debugger-%E8%AF%AD%E5%8F%A5/</link>
+      <pubDate>Tue, 25 Jun 2019 16:41:26 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/javascript-debugger-%E8%AF%AD%E5%8F%A5/</guid>
+      <description>实例 开启 debugger ，代码在执行到第三行前终止。
+var x = 15 * 5; debugger; document.getElementbyId(&amp;#34;demo&amp;#34;).innerHTML = x;  定义和用法 debugger 语句用于停止执行 JavaScript，并调用 (如果可用) 调试函数。
+使用 debugger 语句类似于在代码中设置断点。
+通常，你可以通过按下 F12 开启调试工具， 并在调试菜单中选择&amp;rdquo;Console&amp;rdquo; 。
+注意： 如果调试工具不可用，则调试语句将无法工作。
+更多 JavaScript 调试信息，及在浏览器不支持的情况下如何激活浏览器的调试工具，请查阅我们的JavaScript调试 教程。
+浏览器支持
+ 语句
+ &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;  debugger
+  Yes
+  Yes
+  Yes
+  Yes
+  Yes
+  语法  JavaScript 版本：
+  1.</description>
+    </item>
+    
+    <item>
+      <title>javascript创建对象的10种模式</title>
+      <link>https://mannuan.github.io/post/javascript%E5%88%9B%E5%BB%BA%E5%AF%B9%E8%B1%A1%E7%9A%8410%E7%A7%8D%E6%A8%A1%E5%BC%8F/</link>
+      <pubDate>Mon, 24 Jun 2019 21:36:00 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/javascript%E5%88%9B%E5%BB%BA%E5%AF%B9%E8%B1%A1%E7%9A%8410%E7%A7%8D%E6%A8%A1%E5%BC%8F/</guid>
+      <description>第1种：对象字面量
+//对象字面量（速度快，推荐使用） var animal = {property: &amp;#34;都要呼吸&amp;#34;, getProperty: function(){return this.property;}}; var person = {feature: &amp;#34;直立行走&amp;#34;, getFeature: function(){return this.feature;}};  第2种：Object构造函数
+var animal = new Object(); animal.property=&amp;#34;都要呼吸&amp;#34;; animal.getProperty=function(){return this.property;} var person = new Object(); person.feature=&amp;#34;直立行走&amp;#34;; person.getFeature = function(){return this.feature;}  第3种：工厂模式
+function createAnimal(){var animal=new Object();animal.property=&amp;#34;都要呼吸&amp;#34;;animal.getProperty=function(){return this.property;} return animal;} function createPerson(){var person=new Object();person.feature=&amp;#34;直立行走&amp;#34;;person.getFeature=function(){return this.feature;} return person;} var animal = createAnimal(); var person = createPerson();  第4种：构造函数模式
+function Animal(){this.property=&amp;#34;都要呼吸&amp;#34;;this.getProperty=function(){return this.property;};} function Person(){this.feature=&amp;#34;直立行走&amp;#34;;this.getFeature=function(){return this.feature;};} var animal = new Animal(); var person = new Person();  第5种：原型模式</description>
+    </item>
+    
+    <item>
+      <title>javascript继承的6种方式</title>
+      <link>https://mannuan.github.io/post/javascript%E7%BB%A7%E6%89%BF%E7%9A%846%E7%A7%8D%E6%96%B9%E5%BC%8F/</link>
+      <pubDate>Mon, 24 Jun 2019 20:07:48 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/javascript%E7%BB%A7%E6%89%BF%E7%9A%846%E7%A7%8D%E6%96%B9%E5%BC%8F/</guid>
+      <description>第一种：原型链继承： function Animal(){ this.property=&amp;#34;都要呼吸&amp;#34;; } Animal.prototype.getProperty = new function(){ return this.property; } function Person(){ this.feature=&amp;#34;直立行走&amp;#34;; } Person.prototype = new Animal(); Person.prototype.getFeature = function(){ return this.feature; } var p1 = new Person(); console.log(p1.getProperty()); console.log(p1.getFeature());  第二种：借用构造函数继承: function Animal(){ this.property=&amp;#34;都要呼吸&amp;#34;; this.getProperty=function(){ return this.property; }; } function Person(){ Animal.call(this); this.feature=&amp;#34;直立行走&amp;#34;; } Person.prototype.getFeature = function(){ return this.feature; } var p1 = new Person(); console.log(p1.getProperty()); console.log(p1.getFeature());  第三种：组合继承:（最常用的继承模式） function Animal(){ this.property=&amp;#34;都要呼吸&amp;#34;; } Animal.prototype.getProperty = function(){ return this.</description>
+    </item>
+    
+    <item>
+      <title>JavaScript-事件对象</title>
+      <link>https://mannuan.github.io/post/javascript-%E4%BA%8B%E4%BB%B6%E5%AF%B9%E8%B1%A1/</link>
+      <pubDate>Sat, 01 Jun 2019 14:28:18 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/javascript-%E4%BA%8B%E4%BB%B6%E5%AF%B9%E8%B1%A1/</guid>
+      <description>触发某个事件时会产生一个事件对象event，这个对象中包含着所有与事件有关的信息。
+ 事件的元素 事件的类型 其它与事件相关的信息  所有浏览器都支持event对象，但存在差异。
+event对象在标准的现代浏览器中会作为参数传入到事件的事件处理函数。
+DOM中的事件对象 属性/方法 类型 读写 说明 bubbles Boolean 只读 表明事件是否支持冒泡 cancelable Boolean 只读 表明是否可以取消默认行为 currentTarget Element 只读 表明事件处理程序当前正在处理事件的那个元素 defaultPrevented Boolean 只读 为true表示已经调用了下面的preventDefault() detail Int 只读 与事件相关的细节信息 eventPhase Int 只读 触发事件处理程序的阶段：1表示捕获，2表示处于目标，3表示冒泡 preventDefault() Function —— 取消事件的默认行为，前提条件是cancelable属性为true stopImmediatePropagation() Function —— 取消事件的进一步捕获或冒泡，同时阻止任何（其他的）事件处理程序被调用 stopPropagation() Function —— 立即停止事件在DOM中的传播，取消进一步的时间捕获或冒泡，前提条件是：bubbles属性为true target Element 只读 事件的目标元素 trusted Boolean 只读 为true表示是浏览器生成的，为false表示是开发人员自定义的事件 type String 只读 被触发的事件类型 view AbstractView 只读 与事件相关的抽象视图，等于发生事件的window对象   在HTML事件处理程序时：变量event（固定）中保存着event对象，无需主动声明，也无需以参数形式传入：
+ 在DOM 0 级和DOM 2 级事件处理程序中，event对象会 以参数的形式传入事件处理函数 中；</description>
+    </item>
+    
+    <item>
+      <title>JavaScript客户端检测</title>
+      <link>https://mannuan.github.io/post/javascript%E5%AE%A2%E6%88%B7%E7%AB%AF%E6%A3%80%E6%B5%8B/</link>
+      <pubDate>Sat, 01 Jun 2019 10:57:50 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/javascript%E5%AE%A2%E6%88%B7%E7%AB%AF%E6%A3%80%E6%B5%8B/</guid>
+      <description>应对各个厂商、各个版本的浏览器对特性支持度的差异，常采取的策略
+ ”最小公分母“策略 客户端检测技术，突破和规避种种局限  不到万不得已不要使用客户端检测；先设计最通用的方案，然后使用特定于浏览器的技术增强该方案。
+常用的客户端检测技术包括：
+能力检测  最常用最方便，只关注能力，不关注浏览器品牌和版本； 两个原则  先检测达成目的的最常用特性，避免测试多个条件
+必须测试实际用到的特性，一个特性存在不一定代表另一个特性也存在
+ 在可能的情况下，尽量使用typeof进行能力检测； 低版本IE下或其他非标准浏览器下，使用typeof检测的值不一定符合标准；  低版本IE的DOM以COM的形式实现，很容易出现typeof检测结果不标准的情况
+ 通过检测对象是否有某些原生属性时，要注意我们的代码是否定义了与要检测到的原生属性同名的属性，确保检测的目标是正确的； 一般通用方法：isHostMethod函数  function isHostMethod(object, property){ var t = typeof object[property]; return t == &amp;#39;function&amp;#39; || (!!(t == &amp;#39;object&amp;#39; &amp;amp;&amp;amp; object[property])) || t == &amp;#39;unknown&amp;#39;; } result = isHostMethod(document, &amp;#39;getElementById&amp;#39;);   根据浏览器不同将能力组合起来是更可取的方法； 如果你预先知道自己的程序需要使用某些特定的浏览器特性，那么最好一次性检测所有相关特性。  怪癖检测  目的是识别浏览器的特殊行为，与能级检测的检测能力刚好相反；
+ 怪癖是个别浏览器独有的，通常归类为bug；
+ 实例：IE8及更早版本中，如果某个实例属性与[[Enumerable]]标记为false的某个原型属性同名，那么属性无法被for-in循环遍历
+  // 怪癖检测 var hasDontEnumQuirk = function(){ var o = {toString: function(){}}; for(var prop in o){ if(prop == &amp;#39;toString&amp;#39;){ return false; } } return true; }(); hasDontEnumQuirk;// false 说明浏览器没有这个怪癖  用户代理检测  通过检测用户代理字符串来确定实际使用的浏览器； 通常是在最后才选择这样的方法，或者想实现某些特定的功能才使用用户代理检测； 主要使用navigator.</description>
+    </item>
+    
+    <item>
+      <title>javascript 事件处理程序</title>
+      <link>https://mannuan.github.io/post/javascript-%E4%BA%8B%E4%BB%B6%E5%A4%84%E7%90%86%E7%A8%8B%E5%BA%8F/</link>
+      <pubDate>Fri, 31 May 2019 21:56:29 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/javascript-%E4%BA%8B%E4%BB%B6%E5%A4%84%E7%90%86%E7%A8%8B%E5%BA%8F/</guid>
+      <description>响应某个事件的函数叫做 事件处理程序 （或 事件侦听器 ），例如：click 事件的处理程序就是 onclick
+ HTML事件处理程序  某个元素支持的所有事件都可以使用一个与相应事件处理程序同名的HTML特性来指定；  &amp;lt;input type=&amp;#34;button&amp;#34; value=&amp;#34;click me&amp;#34; onclick=&amp;#34;alert(&amp;#39;Clicked&amp;#39;)&amp;#34; /&amp;gt;  在这个特性里，不能使用未经转义的HTML语法字符：和号（&amp;amp;）、双引号（&amp;rdquo;&amp;ldquo;）、小于号（&amp;lt;）或大于号（&amp;gt;）；  &amp;lt;input type=&amp;#34;button&amp;#34; value=&amp;#34;click me&amp;#34; onclick=&amp;#34;alert(&amp;amp;quot;Clicked&amp;amp;quot;)&amp;#34; /&amp;gt;  特性值也可以是调用页面中其他地方定义的脚本， HTML事件处理程序在执行时 有权访问全局作用域中的任何代码 ；  &amp;lt;input type=&amp;#34;button&amp;#34; value=&amp;#34;click me&amp;#34; onclick=&amp;#34;showMessage()&amp;#34; /&amp;gt;  HTML事件处理程序内部可以 通过 event 变量直接访问事件对象 ，无需自己定义，也不用从函数的参数列表读取；
+ HTML事件处理程序中的this等于事件的目标元素；
+  &amp;lt;input type=&amp;#34;button&amp;#34; value=&amp;#34;click me&amp;#34; onclick=&amp;#34;alert(this.value)&amp;#34; /&amp;gt;  HTML事件处理程序有着独特的扩展作用域：处理函数内部可以直接访问元素本身、document元素，类似使用with(this)、with(document)进行扩展一样；  &amp;lt;form method=&amp;#34;post&amp;#34;&amp;gt; &amp;lt;input type=&amp;#34;text&amp;#34; name=&amp;#34;username&amp;#34; value=&amp;#34;&amp;#34;&amp;gt; &amp;lt;input type=&amp;#34;button&amp;#34; onclick=&amp;#34;alert(username.value)&amp;#34;&amp;gt; &amp;lt;/form&amp;gt;  删除HTML事件处理程序的方法：设置事件处理程序对应的HTML特性值为null；</description>
+    </item>
+    
+    <item>
+      <title>javascript 事件流</title>
+      <link>https://mannuan.github.io/post/javascript-%E4%BA%8B%E4%BB%B6%E6%B5%81/</link>
+      <pubDate>Fri, 31 May 2019 21:05:41 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/javascript-%E4%BA%8B%E4%BB%B6%E6%B5%81/</guid>
+      <description> 事件流 描述的是从页面中 接收事件的顺序 。
+对待事件流的问题上，IE和Netscape提出了完全相反的两个概念：IE的事件流是 冒泡流 ，而Netscape的事件流是 捕获流。
+事件冒泡  IE的 事件流类型；现已被所有现代浏览器支持； 时间开始时由最具体的元素——文档中嵌套层次最具体的元素（可理解为最小的同心圆）接收，然后事件沿DOM树向上传播到document对象； 所有的现代浏览器都支持冒泡，各浏览器之间的差异  IE8- 事件冒泡到document即停止；
+其他现代浏览器支持一直冒泡到window对象；
+事件捕获  Netscape浏览器的事件流机制； 事件开始时由不具体的节点——文档中嵌套层次最上级的元素（可理解为最大的同心圆）最早接收，然后事件沿着DOM树向下传播，直到传播到最具体的节点； 现代浏览器都支持 事件捕获 模型； DOM2级 事件规范要求：从document对象开始传播；但一般的现代浏览器都从window对象开始捕获。  DOM事件流  ”DOM 2级事件“规定的事件包括三个阶段：事件捕获阶段、处于目标阶段和事件冒泡阶段； 实例：document&amp;gt;html&amp;gt;body&amp;gt;div  在DOM事件流中，实际的目标(div)在捕获阶段不会接收到事件。这意味着在捕获阶段，事件从document到html再到body后就会停止。下一个阶段就是处于&amp;rdquo;处于目标&amp;rdquo;阶段，于是事件在div上发生，并 在事件处理中被看成冒泡阶段的一部分。然后，冒泡阶段发生，事件又传播到文档。
+ ”DOM2级事件“规定：捕获阶段不涉及事件目标；但一般的现代浏览器都会在捕获阶段触发事件对象上的事件；导致的结果就是：有两个机会（捕获、冒泡）在目标对象上面操作事件； IE8- 不支持DOM事件流。  </description>
+    </item>
+    
+    <item>
+      <title>JavaScript 事件</title>
+      <link>https://mannuan.github.io/post/javascript-%E4%BA%8B%E4%BB%B6/</link>
+      <pubDate>Fri, 31 May 2019 20:40:33 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/javascript-%E4%BA%8B%E4%BB%B6/</guid>
+      <description>JavaScript与HTML之间的交互是通过事件实现的。
+事件 ：文档或浏览器窗口中发生的一些交互瞬间；可以使用 侦听器 （或处理程序） 预订 事件，以便事件发生时执行相应的代码。
+这种 侦听事件——执行操作 的模式在传统软件过程中叫做 观察者模式 。
+DOM2级规范开始规范标准化DOM事件，IE8是最后一个仍然使用其专有事件系统的浏览器。
+除了DOM事件，还有BOM事件，HTML5致力于规范BOM事件。
+所有事件：</description>
+    </item>
+    
+    <item>
+      <title>DOM专有扩展</title>
+      <link>https://mannuan.github.io/post/dom%E4%B8%93%E6%9C%89%E6%89%A9%E5%B1%95/</link>
+      <pubDate>Fri, 31 May 2019 15:35:12 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/dom%E4%B8%93%E6%9C%89%E6%89%A9%E5%B1%95/</guid>
+      <description>插入文本： innerText, outerText
+innerText  读取元素中包含的所有文本内容，只读取文本内容； 写入时会删除元素的所有节点，插入文本内容； 不同浏览器处理空白和换行的方式不一样； firefox不支持innerText，但支持textContent属性；   textContent与innerText的不同点在于：innerText会忽略行内的样式和脚本，textContent不会；
+最佳实践 ：从不包含行内样式和行内脚本的DOM中读取文本
+  使用innerText可以过滤标签，快捷地获得纯文本。  function getInnerText(element){ return (typeof element.textContent == &amp;#39;string&amp;#39;) ? element.textContent : element.innerText; } function setInnerText(element, text){ if(typeof element.textContent == &amp;#39;string&amp;#39;){ elemnt.textContent = text; }else{ element.innerText = text; } }  滚动相关  scrollIntoView()：对元素调用此方法可以使页面滚动到与元素顶部平齐； scrollIntoViewIfNeeded(alignCenter)：调用方法的元素不可见的情况下运行，接受一个参数：是否垂直居中，布尔值； scrollByLines(lineCount)：将元素内容滚动到指定的行高； scrollByPages(pageCount)：将元素内容滚动至指定的页面高度；  以上三个方法支持性都不是很好！</description>
+    </item>
+    
+    <item>
+      <title>Javascript焦点管理—document.hasFocus()</title>
+      <link>https://mannuan.github.io/post/javascript%E7%84%A6%E7%82%B9%E7%AE%A1%E7%90%86-document_hasfocus/</link>
+      <pubDate>Fri, 31 May 2019 10:42:39 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/javascript%E7%84%A6%E7%82%B9%E7%AE%A1%E7%90%86-document_hasfocus/</guid>
+      <description> 该方法用于确定文档是否获得焦点； 可以通过检测文档是否获得焦点得知用户是否正在与页面交互。  </description>
+    </item>
+    
+    <item>
+      <title>Javascript焦点管理-document.activeElement</title>
+      <link>https://mannuan.github.io/post/javascript%E7%84%A6%E7%82%B9%E7%AE%A1%E7%90%86-document.activeelement/</link>
+      <pubDate>Fri, 31 May 2019 10:39:01 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/javascript%E7%84%A6%E7%82%B9%E7%AE%A1%E7%90%86-document.activeelement/</guid>
+      <description> document.activeElement指向页面中当前获得焦点的元素； 元素获得焦点的方式； 文档刚加载完，document.activeElement指向document.body； 文档加载期间，document.activeElement指向null。  </description>
+    </item>
+    
+    <item>
+      <title>元素获得焦点的方式</title>
+      <link>https://mannuan.github.io/post/%E5%85%83%E7%B4%A0%E8%8E%B7%E5%BE%97%E7%84%A6%E7%82%B9%E7%9A%84%E6%96%B9%E5%BC%8F/</link>
+      <pubDate>Fri, 31 May 2019 10:33:10 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/%E5%85%83%E7%B4%A0%E8%8E%B7%E5%BE%97%E7%84%A6%E7%82%B9%E7%9A%84%E6%96%B9%E5%BC%8F/</guid>
+      <description> 页面加载 Tab切换 元素的focus()方法  </description>
+    </item>
+    
+    <item>
+      <title>HTML5的特性</title>
+      <link>https://mannuan.github.io/post/html5%E7%9A%84%E7%89%B9%E6%80%A7/</link>
+      <pubDate>Thu, 30 May 2019 22:58:03 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/html5%E7%9A%84%E7%89%B9%E6%80%A7/</guid>
+      <description>HTML5规范定义了一系列与DOM规范重叠的API;
+HTML5的规范涉及面非常广，新增的DOM API只是其一部分。
+ getElementsByClassName()  可以通过document和所有HTML元素对象调用此方法；
+ 返回带有指定类的NodeList;
+ 传入的一个字符串参数可以包含多个类；
+  classList属性  所有元素都拥有，是新集合类型DOMTokenList的对象实例； 访问classList的项: []、item()、classList对象属性; 对象属性: length; 删除一个元素多个类名中的某个类名的旧版方法：  function removeClass(element, toDelClass){ var classNames = element.className.split(/\s+/); var pos = -1, i, len = className.length; for(i=0; i&amp;lt;len; i++){ if(classNames[i] == toDelClass){ pos = i; break; } } classNames.splice(i, 1); element.className = classNames.join(&amp;#39; &amp;#39;); } removeClass(document.body, &amp;#39;any-class&amp;#39;);   使用classList对象的方法操作元素的className：  var element = document.getElementById(&amp;#39;myDiv&amp;#39;); // add(value) -- 如果存在就不添加了 element.</description>
+    </item>
+    
+    <item>
+      <title>DOM扩展-元素遍历</title>
+      <link>https://mannuan.github.io/post/dom%E6%89%A9%E5%B1%95-%E5%85%83%E7%B4%A0%E9%81%8D%E5%8E%86/</link>
+      <pubDate>Thu, 30 May 2019 19:21:47 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/dom%E6%89%A9%E5%B1%95-%E5%85%83%E7%B4%A0%E9%81%8D%E5%8E%86/</guid>
+      <description> 使用循环语句进行常规遍历的不方便性：  元素间的空格(空行)的对待方式不一致，除IE9-外的浏览器都视作文本节点，所以未使用新API之前遍历元素都需要检测节点的类型，跳开空格（空行）代表文本节点。
+ W3C的Element Traversal规范新定义了一组属性：IE9+支持：  childElementCount: 子元素节点的个数； firstElementChild: 第一个子元素节点； lastElementChild: 最后一个子元素节点； previousElementSibling: 后一个元素节点  旧的写法： var i, len, child = element.firstChild; while(child != element.lastChild){ if(child.nodeType == 1){ // 检查是不是元素  processChild(child); } child = child.nextSubling; }  新API下的写法： var i, len, child = element.firstElementChild; while(child != element.lastElementChild){ processChild(child); child = child.nextElementSibling; } </description>
+    </item>
+    
+    <item>
+      <title>DOM扩展-选择符API</title>
+      <link>https://mannuan.github.io/post/dom%E6%89%A9%E5%B1%95-%E9%80%89%E6%8B%A9%E7%AC%A6api/</link>
+      <pubDate>Thu, 30 May 2019 10:58:36 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/dom%E6%89%A9%E5%B1%95-%E9%80%89%E6%8B%A9%E7%AC%A6api/</guid>
+      <description>  选择符API允许直接使用CSS选择器来选取页面元素，众多库推进了选择符API的标准化。
+选择符API性能因为原生，所以性能必定强于各个库同类型的查询操作。
+ querySelector()  Selector API Level 1;
+ 接收一个css选择符（可复杂）,返回匹配的第一个元素或返回null;
+ 传入不支持的选择符会抛出错误；
+ 能调用querySelector()的对象为：Document类型，Element类型，DocumentFragment类型。
+  querySelectorAll()  Selector API Level 1; 接收一个CSS选择符（可复杂），返回所有匹配元素组成的NodeList实例或null; 传入不支持的选择符会抛出错误； 能调用querySelector()的对象为：Document类型，Element类型，DocumentFragment类型。  matchesSelector()  Selector API Level 2; 接收一个css选择器做参数，比较选择符与调用方法的元素是否匹配，返回布尔值； 各个浏览器支持性不同：IE9+通过document.body.msMatchesSelector()支持该方法，Firefox3.6通过document.body.mozMatchesSelector()支持该方法，Safari5+和Chrome通过document.body.webkitMatchesSelector()支持该方法。下面是一个包装的函数：  function matchesSelector(element, selector){ if(element.matchesSelector){ return element.matchesSelector(selector); }else if(element.msMatchesSelector){ return element.msMatchesSelector(selector); }else if(element.mozMatchesSelector){ return element.mozMatchesSelector(selector); }else if(element.webkitMatchesSelector){ return element.webkitMatchesSelector(selector); }else{ throw new Error(&amp;#34;Not supported.&amp;#34;); } } if(matchesSelector(document.body, &amp;#34;body.page1&amp;#34;)){ //执行操作 } </description>
+    </item>
+    
+    <item>
+      <title>DOM扩展的发展和现状</title>
+      <link>https://mannuan.github.io/post/dom%E6%89%A9%E5%B1%95%E7%9A%84%E5%8F%91%E5%B1%95%E5%92%8C%E7%8E%B0%E7%8A%B6/</link>
+      <pubDate>Thu, 30 May 2019 10:37:03 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/dom%E6%89%A9%E5%B1%95%E7%9A%84%E5%8F%91%E5%B1%95%E5%92%8C%E7%8E%B0%E7%8A%B6/</guid>
+      <description>2008年之前，几乎所有的DOM扩展都是专有的，之后W3C着手将一些已经成为事实的专有扩展标准化并写入规范当中；
+大部分扩展都来自社区的呼声，虽然现在标准已经涵盖了大量的以前的DOM扩展，但是各个浏览器的专有扩展依然存在。</description>
+    </item>
+    
+    <item>
+      <title>DOM操作技术</title>
+      <link>https://mannuan.github.io/post/dom%E6%93%8D%E4%BD%9C%E6%8A%80%E6%9C%AF/</link>
+      <pubDate>Wed, 29 May 2019 22:54:44 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/dom%E6%93%8D%E4%BD%9C%E6%8A%80%E6%9C%AF/</guid>
+      <description>DOM操作最大的两个麻烦就是：操作效率问题、浏览器兼容问题
+ 动态脚本  通过修改DOM动态添加的脚本的两种模式：插入外部文件，插入JavaScript代码 插入外部文件  var script = document.createElement(&amp;#39;script&amp;#39;); script.src = &amp;#39;client.js&amp;#39;; document.body.appendChild(script);   封装为外部脚本插入函数  fucntion loadScript(url){ var script = document.createElement(&amp;#39;script&amp;#39;); script.src = url; document.body.appendChild(script); } loadScript(&amp;#39;script.js&amp;#39;);   插入行内代码：不兼容IE,它将&amp;lt;script&amp;gt;视为一个特殊的元素，不允许DOM访问其子节点： ```javascript
+var script = document.createElement(&amp;lsquo;script&amp;rsquo;); var textNode = document.createTextNode(&amp;lsquo;function sayHi(){alert(\&amp;lsquo;Hi!\&amp;lsquo;)}&amp;rsquo;); script.appendChild(textNode);  document.body.appendChild(script);
+ 3. 插入行内代码的兼容性解决方案：行内脚本插入封装函数 ```javascript function loadScript(code){ var script = document.createElement(&#39;script&#39;); try{ script.appendChild(document.createTextNode(code)); }catch(err){ script.text = code; } document.body.appendChild(script); } loadScript(&#39; function sayHi(){alert(&amp;quot;Hi!</description>
+    </item>
+    
+    <item>
+      <title>javascript的Comment、CDATASection、DocumentType、DocumentFragment、Attr类型</title>
+      <link>https://mannuan.github.io/post/javascript%E7%9A%84commentcdatasectiondocumenttypedocumentfragmentattr%E7%B1%BB%E5%9E%8B/</link>
+      <pubDate>Wed, 29 May 2019 22:35:57 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/javascript%E7%9A%84commentcdatasectiondocumenttypedocumentfragmentattr%E7%B1%BB%E5%9E%8B/</guid>
+      <description> Comment类型  nodeType为8，nodeName为#comment，nodeValue为注释内容； Comment类型拥有除splitText()之外的所有的属性和方法； 创建注释节点只需要传入注释内容即可  document.createComment(&amp;#39;Hi&amp;#39;);   一般浏览器不会识别位于后面的注释；
+ 在IE8中，注释节点被视作标签名为&amp;rdquo;!&amp;rdquo; 的元素，注释节点可以使用getElementsByTagName(&#39;!&#39;)取得；
+  CDATASection类型  nodeType为4，nodeName为#cdata-section，nodeValue为CDATA区域的内容； CDATASection类型针对的是XML文档，表示的是CDATA区域，在HTML文档中会错误地把CDATA区域解析为Comment或Element； 针对XML文档，可以使用document.createCDATASection()来创建CDATASection类型对象，接收一个参数：CDATA区域的内容； CDATASection类型继承自Text类型，除了splitText()方法外所有的属性和方法都拥有；  DocumentType类型  nodeType为0；nodeName为#document，nodeValue为null； 不能动态的创建，只能有html文档规定； document.doctype.name(entities、notations这两个属性没有用)属性； 使用document.doctype访问DocumentType对象；  DocumentFragment类型  文档碎片； DocumentFragment节点类型在文档中没有对应标记，它是游离于文档之外的； DocumentFragment类型是一种轻量级的文档（类似完整的HTML文档），可以包含和控制节点，但不会像完整的文档那样占用额外的资源； nodeType为11;nodeName为#document-fragment；nodeValue为null；可以包含任意类型的子节点； DocumentFrgment类型一般作为一个节点仓库来使用，可以在里面保存将来可能添加到文档的节点，然后DocumentFragment整体插入到文档内； DocumentFragment类型继承了node类型的所有方法； 创建：document.createDocumentFragment(); 文档碎片可以通过appendChild(DoCFrag), insertBefore(DocFrag)来插入文档，此时文档碎片便成为了文档的一部分；  Attr类型  元素的特性在DOM中以Attr类型来表示； 特性就是存在于元素的attributes属性对象中的节点； 三个属性：name, value, specified; 创建特性节点：document.createAttribute(attrName); 新创建的特性节点需要添加到元素上，使用元素的setAttribute(attrName)方法； html &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html&amp;gt; &amp;lt;body&amp;gt; &amp;lt;div id=&amp;quot;123&amp;quot; style=&amp;quot;height: 20px;&amp;quot;&amp;gt;123&amp;lt;/div&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;script&amp;gt; ele.setAttribute(&#39;align&#39;, &#39;left&#39;); &amp;lt;/script&amp;gt; &amp;lt;/html&amp;gt;  6. 不建议直接访问元素的特性节点（getAttributeNode()等），而使用getAttribute(), setAttribute(), removeAttribute()来访问和操作元素的特性。  </description>
+    </item>
+    
+    <item>
+      <title>javascript Text类型</title>
+      <link>https://mannuan.github.io/post/javascript-text%E7%B1%BB%E5%9E%8B/</link>
+      <pubDate>Wed, 29 May 2019 20:35:30 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/javascript-text%E7%B1%BB%E5%9E%8B/</guid>
+      <description>nodeType为3, nodeName为#text; 不支持子节点； 可以包含转义的HTML字符； 文本节点的值可以通过nodeValue属性或data属性访问；  &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html&amp;gt; &amp;lt;body&amp;gt; &amp;lt;div id=&amp;#34;123&amp;#34; style=&amp;#34;height: 20px;&amp;#34;&amp;gt;123&amp;lt;/div&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;script&amp;gt; var text = document.createTextNode(&amp;#34;Hello world!&amp;#34;); console.log(text.nodeType); // 输出：3  console.log(text.nodeName); // 输出：#text  console.log(text.nodeValue); // 输出：Hello world!  console.log(text.data); // 输出：Hello world!  console.log(text.nodeValue.length); // 输出：12  console.log(text.data.length); // 输出：12  &amp;lt;/script&amp;gt; &amp;lt;/html&amp;gt;  操作文本节点的方法
+ 默认情况下。每个包含内容的元素最多只能有一个文本节点，而且必须有内容存在；
+ 创建和修改文本节点时，字符串会经过HTML（或XML）编码转义，防止对原文档造成解析错误；
+  div.firstChild.nodeValue = &amp;#34;&amp;lt;p&amp;gt;Hello world!&amp;lt;/p&amp;gt;&amp;#34;; // &amp;#34;&amp;amp;lt;p&amp;amp;gt;Hello world!&amp;amp;lt;/p&amp;amp;gt;&amp;#34;  创建文本节点  document.createTextNode(); 可以人为使一个元素包含多个文本节点，虽然多个文本节点的表现形式与单个节点的表现形式没什么两样；  &amp;lt;!</description>
+    </item>
+    
+    <item>
+      <title>javascript操作文本节点的方法</title>
+      <link>https://mannuan.github.io/post/javascript%E6%93%8D%E4%BD%9C%E6%96%87%E6%9C%AC%E8%8A%82%E7%82%B9%E7%9A%84%E6%96%B9%E6%B3%95/</link>
+      <pubDate>Wed, 29 May 2019 20:31:09 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/javascript%E6%93%8D%E4%BD%9C%E6%96%87%E6%9C%AC%E8%8A%82%E7%82%B9%E7%9A%84%E6%96%B9%E6%B3%95/</guid>
+      <description> appendText(text); deleteData(offset, count); insertData(offset, count); replaceData(offset, count, text); splitText(offset); substringData(offset, count);  </description>
+    </item>
+    
+    <item>
+      <title>javascript Element类型</title>
+      <link>https://mannuan.github.io/post/javascript-element%E7%B1%BB%E5%9E%8B/</link>
+      <pubDate>Wed, 29 May 2019 16:05:24 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/javascript-element%E7%B1%BB%E5%9E%8B/</guid>
+      <description>Element节点是Element类型的实例； Element节点的nodeName与tagName属性元素的标签名的大写;nodeValue为null;  &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html&amp;gt; &amp;lt;body&amp;gt; &amp;lt;div id=&amp;#34;123&amp;#34;&amp;gt;123&amp;lt;/div&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;script&amp;gt; var _div = document.getElementById(&amp;#34;123&amp;#34;); console.log(_div.nodeName); console.log(_div.tagName); console.log(_div.nodeValue); &amp;lt;/script&amp;gt; &amp;lt;/html&amp;gt;  最佳实践：在比较标签名与字符串时，最好先将标签名转为为全小写。  HTML元素  所有HTML元素都由HTMLElement类型表示，HTMLElement类型继承自Element类型并添加了一些属性和方法；   所有HTML元素都是由HTMLElement或者其子类型表示的，每个HTML元素都由与之关联的类型，如：HTMLAnchorElement, HTMLBodyElement, HTMLDivElement&amp;hellip;, 这些类型都继承HTMLElement类型的属性和方法，也有着自己的扩展
+  大部分HTML标签的原生特性作为Element节点对象的属性都可以直接通过&amp;rdquo;.&amp;ldquo;或&amp;rdquo;[]&amp;ldquo;操作符读写，但无法读写自定义的特性（见下面的取得特性一节）  &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html&amp;gt; &amp;lt;body&amp;gt; &amp;lt;div id=&amp;#34;123&amp;#34;&amp;gt;123&amp;lt;/div&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;script&amp;gt; var _div = document.getElementById(&amp;#34;123&amp;#34;); console.log(_div.id); console.log(_div.className); console.log(_div.name); console.log(_div[&amp;#34;id&amp;#34;]); console.log(_div[&amp;#34;className&amp;#34;]); console.log(_div[&amp;#34;name&amp;#34;]); &amp;lt;/script&amp;gt; &amp;lt;/html&amp;gt;  class为ES的保留字，使用“.” 或&amp;rdquo;[]&amp;ldquo;访问元素类名需要使用className。  取得特性 getAttribute(), setAttribute(), removeAttribute()三个特性操作的方法：
+ 传递给getAttribute()的特性名字符串与实际的特性名相同，比如：要获取class的特性值，应该传入&amp;rsquo;class&amp;rsquo;,而不是&amp;rsquo;className&amp;rsquo;; 通过getAttribute()方法可以取得自定义特性； 最佳实践：根据HTML5的规范推荐，自定义特性应该加上data-前缀以便验证； getAttribute()方法与节点的访问方法&amp;rdquo;.</description>
+    </item>
+    
+    <item>
+      <title>getElementById()的注意事项</title>
+      <link>https://mannuan.github.io/post/getelementbyid%E7%9A%84%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/</link>
+      <pubDate>Wed, 29 May 2019 11:13:42 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/getelementbyid%E7%9A%84%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/</guid>
+      <description> 传入参数对应的ID的元素不存在，返回null； 传入参数大小写需与实际元素id特性严格匹配； 多个元素的id特性相同，方法返回文档中第一次出现的那个；  </description>
+    </item>
+    
+    <item>
+      <title>Document类型</title>
+      <link>https://mannuan.github.io/post/document%E7%B1%BB%E5%9E%8B/</link>
+      <pubDate>Wed, 29 May 2019 09:43:41 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/document%E7%B1%BB%E5%9E%8B/</guid>
+      <description>文档的子节点  使用documentElement属性快捷访问页面的元素； 使用body属性可以快捷的访问页面的元素; doctype属性可在部分浏览器下访问文档的类型声明；各个浏览器对于文档声明的支持方式存在较大差异：IE8-:文档类型声明被解释为一个注释，当做comment节点，document.doctype返回值为null；大部分浏览器：文档类型声明作为文档的第一个子节点，是一个DocumentType节点，可以通过document.doctype, document.childNodes[0], document.firstChild访问  &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html&amp;gt; &amp;lt;head&amp;gt;&amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;script&amp;gt; console.log(document.doctype); // 输出: &amp;lt;!DOCTYPE html&amp;gt;  console.log(document.childNodes[0]); // 输出: &amp;lt;!DOCTYPE html&amp;gt;  console.log(document.firstChild); // 输出: &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;/script&amp;gt; &amp;lt;/html&amp;gt;  各个浏览器对于元素外的注释的解析方式不同，比如  &amp;lt;!--第一条注释--&amp;gt; &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html&amp;gt; &amp;lt;body&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;script&amp;gt; console.log(document.childNodes.length); // chrome输出: 3 &amp;lt;/script&amp;gt; &amp;lt;/html&amp;gt; &amp;lt;!--第二条注释--&amp;gt; 部分浏览器会为两个注释都建立注释节点，部分浏览器会忽略第二条，只为第一条创建注释节点，大部分浏览器现在回完全忽略第二条注释，比如这里的chrome。
+文档信息  title属性用于便捷读写title标签； URL属性只读，referrer属性只读； domain属性可读可写，但不能设置为当前URL中不包含的域，通过设置domain属性相同可实现框架间不同子域页面的JavaScript通信； document.domain只能往上级域名方向设置，设置为非上级域名会报错，不能设置为顶级域名; 使用document.domain实现跨父子域  查找元素  getElementById()的注意事项; getElementByTagName() 方法返回的是HTMLCollection对象；  &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html&amp;gt; &amp;lt;body&amp;gt; &amp;lt;div&amp;gt;123&amp;lt;/div&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;script&amp;gt; console.</description>
+    </item>
+    
+    <item>
+      <title>Document类型、HTMLDocument类型和document对象的区别</title>
+      <link>https://mannuan.github.io/post/document%E7%B1%BB%E5%9E%8Bhtmldocument%E7%B1%BB%E5%9E%8B%E5%92%8Cdocument%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%8C%BA%E5%88%AB/</link>
+      <pubDate>Tue, 28 May 2019 11:19:13 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/document%E7%B1%BB%E5%9E%8Bhtmldocument%E7%B1%BB%E5%9E%8B%E5%92%8Cdocument%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%8C%BA%E5%88%AB/</guid>
+      <description> Dcoment表示文档，这里的文档可以是HTML文档，也可以是XML文档，换句话说Document类型能表示HTML和XML等文档； HTMLDocument对象继承自Document对象，专用于表示HTML文档； document对象是HTMLDocument对象的一个实例，表示整个HTML页面，又叫做页面的根节点；  Document对象（根节点）的特征：
+&amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html&amp;gt; &amp;lt;head&amp;gt;&amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;script&amp;gt; console.log(document.nodeType); console.log(document.nodeName); console.log(document.nodeValue); console.log(document.parentNode); console.log(document.ownerDocument); console.log(document.childNodes); // 其子节点可能是一个DocumentType(最多一个)、Element(最多一个)、ProcessingInstruction或Comment  &amp;lt;/script&amp;gt; &amp;lt;/html&amp;gt;</description>
+    </item>
+    
+    <item>
+      <title>Javascript-DOM中NodeList对象转数组的通用方法</title>
+      <link>https://mannuan.github.io/post/javascript-dom%E4%B8%ADnodelist%E5%AF%B9%E8%B1%A1%E8%BD%AC%E6%95%B0%E7%BB%84%E7%9A%84%E9%80%9A%E7%94%A8%E6%96%B9%E6%B3%95/</link>
+      <pubDate>Tue, 28 May 2019 10:19:01 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/javascript-dom%E4%B8%ADnodelist%E5%AF%B9%E8%B1%A1%E8%BD%AC%E6%95%B0%E7%BB%84%E7%9A%84%E9%80%9A%E7%94%A8%E6%96%B9%E6%B3%95/</guid>
+      <description>举例说明：
+&amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html&amp;gt; &amp;lt;head&amp;gt;&amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;ul id=&amp;#34;ul&amp;#34;&amp;gt; &amp;lt;li&amp;gt; 123 &amp;lt;/li&amp;gt; &amp;lt;li&amp;gt; 456 &amp;lt;/li&amp;gt; &amp;lt;li&amp;gt; 789 &amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;script&amp;gt; var _childNodes = document.getElementById(&amp;#34;ul&amp;#34;).childNodes; function convertToArray(nodes) { var array = null; try { array = Array.prototype.slice.call(nodes, 0); // 针对非IE浏览器  } catch (ex) { array = new Array(); for (var i = 0, len = nodes.length; i &amp;lt; len; i++) { array.push(nodes[i]); } } return array; } console.log(convertToArray(_childNodes)); &amp;lt;/script&amp;gt; &amp;lt;/html&amp;gt;</description>
+    </item>
+    
+    <item>
+      <title>function中的arguments转数组的标准方法</title>
+      <link>https://mannuan.github.io/post/function%E4%B8%AD%E7%9A%84arguments%E8%BD%AC%E6%95%B0%E7%BB%84%E7%9A%84%E6%A0%87%E5%87%86%E6%96%B9%E6%B3%95/</link>
+      <pubDate>Tue, 28 May 2019 09:53:04 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/function%E4%B8%AD%E7%9A%84arguments%E8%BD%AC%E6%95%B0%E7%BB%84%E7%9A%84%E6%A0%87%E5%87%86%E6%96%B9%E6%B3%95/</guid>
+      <description>举例说明:
+function arr(){ console.log(arguments); // 输出：[Arguments] { &amp;#39;0&amp;#39;: 1, &amp;#39;1&amp;#39;: 2, &amp;#39;2&amp;#39;: 3 }  _array = Array.prototype.slice.apply(arguments); console.log(_array); // 输出：[ 1, 2, 3 ] } arr(1, 2, 3) </description>
+    </item>
+    
+    <item>
+      <title>DOM-Node基本类型</title>
+      <link>https://mannuan.github.io/post/dom-node%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B/</link>
+      <pubDate>Mon, 27 May 2019 22:35:44 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/dom-node%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B/</guid>
+      <description>DOM1级定义了一个Node接口，该接口作为Node类型实现;  // 节点类型（nodeType）1~12 Node.ELEMENT_NODE; // 1 Node.ATTRIBUTE_NODE; // 2 Node.TEXT_NODE; // 3 Node.CDATA_SECTION_NODE; // 4 Node.ENTITY_REFERENCE_NODE; // 5 Node.ENTITY_NODE; // 6 Node.PROCESSING_INSTRUCTION_NODE; // 7 Node.COMMENT_NODE; // 8 Node.DOCUMENT_NODE; // 9 Node.DOCUMENT_TYPE_NODE; // 10 Node.DOCUMENT_FRAGMENT_NODE; // 11 Node.NOTATION_NODE; // 12   JavaScript中所有节点类型都继承自Node类型，所有的节点类型都共享相同的基本属性和方法；
+ 最佳实践：对节点进行操作时，最好使用nodeType检测节点的类型;
+  nodeName和nodeValue 对于元素节点(nodeType === 1)，nodeName是元素标签名的大写，nodeValue的值始终是null;
+&amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html&amp;gt; &amp;lt;head&amp;gt;&amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;div id=&amp;#34;ele&amp;#34;&amp;gt; some text &amp;lt;/div&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;script&amp;gt; var ele = document.getElementById(&amp;#34;ele&amp;#34;); console.log(ele.nodeType === 1); // 输出：true  console.</description>
+    </item>
+    
+    <item>
+      <title>用闭包实现命令模式</title>
+      <link>https://mannuan.github.io/post/%E7%94%A8%E9%97%AD%E5%8C%85%E5%AE%9E%E7%8E%B0%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F/</link>
+      <pubDate>Mon, 27 May 2019 14:04:01 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/%E7%94%A8%E9%97%AD%E5%8C%85%E5%AE%9E%E7%8E%B0%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F/</guid>
+      <description>var Tv = { open: function(){ console.log(&amp;#39;打开电视机&amp;#39;); }, close: function(){ console.log(&amp;#39;关上电视机&amp;#39;); }, }; var OpenTvCommand = function(receiver){ this.receiver = receiver; }; OpenTvCommand.prototype.execute = function(){ this.receiver.open(); // 执行命令，打开电视机 }; OpenTvCommand.prototype.undo = function(){ this.receiver.close(); // 撤销命令，关闭电视机 }; command = new OpenTvCommand(Tv); command.execute() // 输出：打开电视机 command.undo() // 输出：关上电视机  博客参考自JavaScript设计模式与开发实践，[p41-p42]</description>
+    </item>
+    
+    <item>
+      <title>闭包和面向对象设计的等价实现举例</title>
+      <link>https://mannuan.github.io/post/%E9%97%AD%E5%8C%85%E5%92%8C%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%AE%BE%E8%AE%A1%E7%9A%84%E7%AD%89%E4%BB%B7%E5%AE%9E%E7%8E%B0%E4%B8%BE%E4%BE%8B/</link>
+      <pubDate>Mon, 27 May 2019 11:30:08 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/%E9%97%AD%E5%8C%85%E5%92%8C%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%AE%BE%E8%AE%A1%E7%9A%84%E7%AD%89%E4%BB%B7%E5%AE%9E%E7%8E%B0%E4%B8%BE%E4%BE%8B/</guid>
+      <description>下面这段是闭包的代码：
+var extent = function(){ var value = 0; return { call: function(){ value++; console.log(value); } } }; var extent = extent(); extent.call(); // 输出：1 extent.call(); // 输出：2 extent.call(); // 输出：3  转换成面向对象的写法是：
+var extent = { value: 0, call: function(){ this.value++; console.log(this.value); } }; extent.call(); // 输出：1 extent.call(); // 输出：2 extent.call(); // 输出：3  原型链写法：
+var extent = function(){ this.value = 0; }; Extent.prototype.call = function(){ this.value++; console.log(this.value); } var extent = new Extent(); extent.</description>
+    </item>
+    
+    <item>
+      <title>javascript闭包详解</title>
+      <link>https://mannuan.github.io/post/javascript%E9%97%AD%E5%8C%85%E8%AF%A6%E8%A7%A3/</link>
+      <pubDate>Mon, 27 May 2019 10:45:04 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/javascript%E9%97%AD%E5%8C%85%E8%AF%A6%E8%A7%A3/</guid>
+      <description>闭包的两个知识点：  变量搜索方向：在javascript中，函数可以创造函数作用域。在函数作用域里面可以看到外面的变量，而函数的外面无法访问到函数里面的变量。因此，在作用域里面的变量搜索方向是：自内向外。比如，下面这段代码就验证了这个搜索方向：  var a = 1; var func1 = function(){ var b = 2; var func2 = function(){ var c = 3; console.log(b); // 输出：2  console.log(a); // 输出：1  } func2(); console.log(c); // 输出：Uncaught ReferenceError: c is not defined }; func1();   变量的生存的周期：全局变量的生存周期是永久的，局部变量随着函数调用的结束而销毁。  // 例一 var func = function(){ var a = 1; // 退出函数后局部变量a将被销毁  console.log(a); }; func(); // 例二 var func = function(){ var a = 1; return function(){ a++; console.</description>
+    </item>
+    
+    <item>
+      <title>javascript函数递归实现</title>
+      <link>https://mannuan.github.io/post/javascript%E5%87%BD%E6%95%B0%E9%80%92%E5%BD%92%E5%AE%9E%E7%8E%B0/</link>
+      <pubDate>Wed, 22 May 2019 22:39:20 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/javascript%E5%87%BD%E6%95%B0%E9%80%92%E5%BD%92%E5%AE%9E%E7%8E%B0/</guid>
+      <description>在非严格模式下：  主要通过arguments.callee实现递归，它是一个指向正在执行的函数的指针。
+ function factorial(num){ if(num &amp;lt;= 1){ return 1; }else{ return num * arguments.callee(num - 1); } }  在严格模式下：  虽然访问arguments.callee这个属性会导致错误，但是可以使用函数表达式来达成相同的结果。
+ var factorial = function f(num){ if(num &amp;lt;= 1){ return 1; }else{ return num * f(num-1); } };  本篇博客参考自JavaScript高级程序设计，[p177-p178]</description>
+    </item>
+    
+    <item>
+      <title>v8引擎源码—Array.prototype.push实现详解</title>
+      <link>https://mannuan.github.io/post/v8%E5%BC%95%E6%93%8E%E6%BA%90%E7%A0%81array.prototype.push%E5%AE%9E%E7%8E%B0%E8%AF%A6%E8%A7%A3/</link>
+      <pubDate>Wed, 22 May 2019 21:14:58 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/v8%E5%BC%95%E6%93%8E%E6%BA%90%E7%A0%81array.prototype.push%E5%AE%9E%E7%8E%B0%E8%AF%A6%E8%A7%A3/</guid>
+      <description>具体实现如下： function ArrayPush(){ var n = TO_UINT32(this.length); // 被push的对象的length  var m = %_AraumentsLength(); // push的参数个数  for(var i=0; i&amp;lt;m; i++){ this[i+n] = %_Arguments(i); // 复制元素 （1）  } this.length = n + m; // 修正length属性的值  return this.length; }   从上面的代码可以看出，Array.prototype.push实际上是一个属性复制的过程，把参数按照下标依次添加到被push的对象上面，同时修改了对象的length属性，不需要关注被修改的对象是数组还是类数组。 因此，我们可以把任意类型的对象传入到Array.prototype.push中，比如下面这个例子：
+ var a = {}; Array.prototype.push.call(a, &amp;#34;first&amp;#34;, &amp;#34;second&amp;#34;); console.log(a);   观察上面这个例子我们发现如果要实现javascript中call和apply的区别与联系中&amp;rdquo;借用其他对象的方法&amp;rdquo;，需要满足下面的条件：
+ 对象本身可以存取属性；
+ 对象的length属性可读写；
+   本篇博客参考自JavaScript设计模式与开发实践，[p33-p34]</description>
+    </item>
+    
+    <item>
+      <title>javascript中call和apply的区别与联系</title>
+      <link>https://mannuan.github.io/post/javascript%E4%B8%ADcall%E5%92%8Capply%E7%9A%84%E5%8C%BA%E5%88%AB%E4%B8%8E%E8%81%94%E7%B3%BB/</link>
+      <pubDate>Wed, 22 May 2019 20:47:29 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/javascript%E4%B8%ADcall%E5%92%8Capply%E7%9A%84%E5%8C%BA%E5%88%AB%E4%B8%8E%E8%81%94%E7%B3%BB/</guid>
+      <description>apply接收两个参数：  指定了函数体内this对象的指向； 一个带下标的集合（可以是数组或类数组）   var func = function(a, b, c){ console.log([a, b, c]); // 输出[1, 2, 3] } func.apply(null, [1, 2, 3]);  call接收一个或多个参数：  指定了函数体内this对象的指向； 从第二个参数往后，每个参数被依次传入函数；   var func = function(a, b, c){ console.log([a, b, c]); // 输出[1, 2, 3] } func.call(null, 1, 2, 3);   从上面的两个例子我们可以看出apply和call的唯一的区别就是：传入参数的数量是否固定。通常call在以下情况使用：  函数传入的参数数量确定； 需要清晰地表达形参和实参之间的对应关系  apply和call使用注意点：  如果传入的第一个参数是null，this就会指向全局对象，在浏览器上面是window，在nodejs上是global; 在1的条件下，如果使用严格模式，函数体内的this还是为null;   var func = function(a, b, c){ &amp;#34;use strict&amp;#34;; console.</description>
+    </item>
+    
+    <item>
+      <title>javascript中的this</title>
+      <link>https://mannuan.github.io/post/javascript%E4%B8%AD%E7%9A%84this/</link>
+      <pubDate>Wed, 22 May 2019 15:27:59 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/javascript%E4%B8%AD%E7%9A%84this/</guid>
+      <description>this的指向分为4种：
+ 作为对象的方法调用： var obj = { a: 1, getA: function(){ console.log(this == obj); console.log(this.a); } } obj.getA();   当函数作为对象的方法被调用时，this指向的是一个局部对象，即当前的这个对象；
+ 作为普通函数调用： global.name = &amp;#39;globalName&amp;#39;; var getName = function(){ return this.name; }; console.log(getName()); // 输出: globalName  //或者 global.name = &amp;#39;globalName&amp;#39;; var myObject = { name: &amp;#34;sven&amp;#34;, getName: function(){ return this.name; } } var getName = myObject.getName; console.log(getName()); //globalName   当this在普通函数里面被用到时，this指向的是一个全局对象，在浏览器上是window，在nodejs上是global
+ 构造函数调用： var MyClass = function(){ this.</description>
+    </item>
+    
+    <item>
+      <title>js通过代码来理解构造函数的实现过程</title>
+      <link>https://mannuan.github.io/post/js%E9%80%9A%E8%BF%87%E4%BB%A3%E7%A0%81%E6%9D%A5%E7%90%86%E8%A7%A3%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E7%9A%84%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/</link>
+      <pubDate>Wed, 22 May 2019 10:23:08 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/js%E9%80%9A%E8%BF%87%E4%BB%A3%E7%A0%81%E6%9D%A5%E7%90%86%E8%A7%A3%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E7%9A%84%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/</guid>
+      <description>原生实现
+ function Person(name){ this.name = name; }; Person.prototype.getName = function(){ return this.name; } var a = new Person(&amp;#39;sven&amp;#39;); console.log(a.name); console.log(a.getName()); console.log(Object.getPrototypeOf(a) === Person.prototype);  代码实现
+function Person(name){ this.name = name; }; Person.prototype.getName = function(){ return this.name; } var objectFactory = function(){ var obj = new Object(), Constructor = [].shift.call(arguments); obj.__proto__ = Constructor.prototype; var ret = Constructor.apply(obj, arguments); return typeof ret === &amp;#34;object&amp;#34; ? ret: obj; } var a = objectFactory(Person, &amp;#34;sven&amp;#34;); console.</description>
+    </item>
+    
+    <item>
+      <title>js: new Object()与Object.create()的区别</title>
+      <link>https://mannuan.github.io/post/new-object%E4%B8%8Eobject.create%E7%9A%84%E5%8C%BA%E5%88%AB/</link>
+      <pubDate>Wed, 22 May 2019 09:37:59 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/new-object%E4%B8%8Eobject.create%E7%9A%84%E5%8C%BA%E5%88%AB/</guid>
+      <description>语法：  Object.create(proto, [propertiesObject])
+//方法创建一个新对象，使用现有的对象来提供新创建的对象的proto。
+ 参数：   proto : 必须。表示新建对象的原型对象，即该参数会被赋值到目标对象(即新对象，或说是最后返回的对象)的原型上。该参数可以是null， 对象， 函数的prototype属性 （创建空的对象时需传null , 否则会抛出TypeError异常）。 propertiesObject : 可选。 添加到新创建对象的可枚举属性（即其自身的属性，而不是原型链上的枚举属性）对象的属性描述符以及相应的属性名称。这些属性对应Object.defineProperties()的第二个参数。  3 返回值：
+在指定原型对象上添加新属性后的对象。
+ 案例说明：  1）创建对象的方式不同
+new Object() 通过构造函数来创建对象, 添加的属性是在自身实例下。
+Object.create() es6创建对象的另一种方式，可以理解为继承一个对象, 添加的属性是在原型下。
+// new Object() 方式创建 var a = { rep : &amp;#39;apple&amp;#39; }; var b = newObject(a); console.log(b); // {rep: &amp;#34;apple&amp;#34;} console.log(b.__proto__); //{} console.log(b.rep); // {rep: &amp;#34;apple&amp;#34;} // Object.create() 方式创建 var a = { rep: &amp;#39;apple&amp;#39; }; var b = Object.</description>
+    </item>
+    
+    <item>
+      <title>js 引用类型的判断</title>
+      <link>https://mannuan.github.io/post/js-%E5%BC%95%E7%94%A8%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%88%A4%E6%96%AD/</link>
+      <pubDate>Mon, 20 May 2019 11:22:15 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/js-%E5%BC%95%E7%94%A8%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%88%A4%E6%96%AD/</guid>
+      <description> result = 变量 instanceof 数据类型; //ECMAScript 提供了 instanceof 操作符来检测引用类型   Array,Regex和Date等引用数据类型都是Object的实例，因此&amp;rdquo;instanceof&amp;rdquo;返回的都是&amp;rdquo;object&amp;rdquo;
+ </description>
+    </item>
+    
+    <item>
+      <title>js Function详解</title>
+      <link>https://mannuan.github.io/post/js-function%E8%AF%A6%E8%A7%A3/</link>
+      <pubDate>Mon, 20 May 2019 11:09:31 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/js-function%E8%AF%A6%E8%A7%A3/</guid>
+      <description> Function不介意传入多少个参数，也不在乎传入参数的类型（参数在内部使用数组来表示，在函数内部可以通过arguments访问）； Function没有重载 Function传入的参数只能按值传递(即使传入的是引用类型)，详细请看js Function 参数按值传递详解 Function可以设置默认参数，比如：  function randomNum(max=100, start=33){ return Math.floor(Math.random() * max + start) } console.log(randomNum(1000, 33)); </description>
+    </item>
+    
+    <item>
+      <title>js Function 参数按值传递详解</title>
+      <link>https://mannuan.github.io/post/js-function-%E5%8F%82%E6%95%B0%E6%8C%89%E5%80%BC%E4%BC%A0%E9%80%92%E8%AF%A6%E8%A7%A3/</link>
+      <pubDate>Mon, 20 May 2019 11:08:29 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/js-function-%E5%8F%82%E6%95%B0%E6%8C%89%E5%80%BC%E4%BC%A0%E9%80%92%E8%AF%A6%E8%A7%A3/</guid>
+      <description>  如果传入参数是基本数据类型，那么按值传递是很容易理解的； 如果传入参数是引用数据类型，那么会很容易陷入误区，错误地认为是引用传递；   错误例子一：
+function setColor(obj){ obj.color = &amp;#34;red&amp;#34;; } var picture = new Object(); setColor(picture); console.log(picture); //&amp;#34;red&amp;#34;  看到上面这个例子后，很容易认为：”函数的值是传入了引用，然后通过引用修改了对象的属性。“
+纠正例子二：
+function setColor(obj){ obj.color = &amp;#34;red&amp;#34;; obj = new Object(); obj.color = &amp;#34;blue&amp;#34;; } var picture = new Object(); setColor(picture); console.log(picture.color); //&amp;#34;red&amp;#34;  我们发现，如果函数传入的是引用，那么在函数内部的修改picture的引用就会对象把指向color为”blue“的对象；但是根据输出的结果，很显然是错误；
+ 结论：因此，不管函数传入的是什么数据类型，都是按值传递的。
+ </description>
+    </item>
+    
+    <item>
+      <title>js 的6个数据类型</title>
+      <link>https://mannuan.github.io/post/js-%E7%9A%846%E4%B8%AA%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</link>
+      <pubDate>Mon, 20 May 2019 10:20:08 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/js-%E7%9A%846%E4%B8%AA%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</guid>
+      <description>| 数据类型 | typeof | 访问方式 | 包含关系 | 大小关系
+&amp;mdash;|&amp;mdash;|&amp;mdash;|&amp;mdash;|&amp;mdash;|&amp;mdash;
+Undefined | 基本 | &amp;ldquo;undefined&amp;rdquo; | 按值访问 | Undefined是null的一个子集 | Undefined=null
+null(首字母小写) | &amp;ldquo;object&amp;rdquo; | null包含Undefined | null=Underfined
+Boolean | &amp;ldquo;boolean&amp;rdquo; | |
+Number | &amp;ldquo;number&amp;rdquo; | |
+String(不是引用类型) | &amp;ldquo;string&amp;rdquo; | |
+Object | 复杂 | &amp;ldquo;object&amp;rdquo; | 按引用访问 | |</description>
+    </item>
+    
+    <item>
+      <title>js 相等和不相等操作符总结</title>
+      <link>https://mannuan.github.io/post/js-%E7%9B%B8%E7%AD%89%E5%92%8C%E4%B8%8D%E7%9B%B8%E7%AD%89%E6%93%8D%E4%BD%9C%E7%AC%A6%E6%80%BB%E7%BB%93/</link>
+      <pubDate>Fri, 17 May 2019 16:50:40 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/js-%E7%9B%B8%E7%AD%89%E5%92%8C%E4%B8%8D%E7%9B%B8%E7%AD%89%E6%93%8D%E4%BD%9C%E7%AC%A6%E6%80%BB%E7%BB%93/</guid>
+      <description>操作符两边操作数先转换数据类型，然后再比较它们的相等性，具体的规则如下：
+   操作符规则 操作符a的数据类型 操作符b的数据类型 == != 备注     Boolean转为Number — — — Boolean无条件转为Number类型   String转为Number Number — — —   Object转为a.valueOf() 除了Object之外的所有类型 — — —   null undefined true false null等于underfined   NaN — false true NaN不等于NaN   Object Object — — 如果a和b指向同一个对象，相等操作符返回true，否则返回false     上述表格归纳自javascript高级程序设计，[p51-p53]
+ </description>
+    </item>
+    
+  </channel>
+</rss>

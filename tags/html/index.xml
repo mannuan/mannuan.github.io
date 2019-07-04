@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>html on mannuan</title>
+    <link>https://mannuan.github.io/tags/html/</link>
+    <description>Recent content in html on mannuan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 05 Jun 2019 21:48:37 +0800</lastBuildDate>
+    
+	<atom:link href="https://mannuan.github.io/tags/html/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>html中文字体压缩工具</title>
+      <link>https://mannuan.github.io/post/html%E4%B8%AD%E6%96%87%E5%AD%97%E4%BD%93%E5%8E%8B%E7%BC%A9%E5%B7%A5%E5%85%B7/</link>
+      <pubDate>Wed, 05 Jun 2019 21:48:37 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/html%E4%B8%AD%E6%96%87%E5%AD%97%E4%BD%93%E5%8E%8B%E7%BC%A9%E5%B7%A5%E5%85%B7/</guid>
+      <description>字蛛是一个中文字体压缩器，让网页自由引入中文字体成为可能。</description>
+    </item>
+    
+    <item>
+      <title>HTML字符编码</title>
+      <link>https://mannuan.github.io/post/html%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81/</link>
+      <pubDate>Wed, 05 Jun 2019 21:34:37 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/html%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81/</guid>
+      <description>HTML里可以用 &amp;amp;#字符编码; 表示一个字符，x表示编码值用十六进制表示&amp;#x672A; 表示字符编码为十六进制672A的字符 ，就是中文“未”字。
+更多编码详见HTML特殊字符编码对照表</description>
+    </item>
+    
+    <item>
+      <title>html解决中文乱码</title>
+      <link>https://mannuan.github.io/post/html%E8%A7%A3%E5%86%B3%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81/</link>
+      <pubDate>Wed, 05 Jun 2019 10:14:58 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/html%E8%A7%A3%E5%86%B3%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81/</guid>
+      <description>&amp;lt;html&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;#34;UTF-8&amp;#34;/&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt;</description>
+    </item>
+    
+    <item>
+      <title>HTML5之插入标记innerHTML</title>
+      <link>https://mannuan.github.io/post/html5%E4%B9%8B%E6%8F%92%E5%85%A5%E6%A0%87%E8%AE%B0innerhtml/</link>
+      <pubDate>Fri, 31 May 2019 11:33:01 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/html5%E4%B9%8B%E6%8F%92%E5%85%A5%E6%A0%87%E8%AE%B0innerhtml/</guid>
+      <description>处于安全等方面的考虑：
+ 通过innerHTML直接插入&amp;lt;script&amp;gt;元素在大多数浏览器中并不会执行其中的脚本； 通过innerHTML直接插入&amp;lt;style&amp;gt;在一些浏览器中无效。   在这些浏览器中，这两个元素被认为是”无作用域的元素“（不会在页面上显示的元素），如果通过innerHTML插入的字符串开头就是”无作用域的元素“，那么这些浏览器就会解决这个字符串前先删除该元素。解决的方法：在这些”无作用域的元素“前临时增加一个有作用域的元素，之后再将临时元素删除，同时为脚本元素设置defer特性。
+  部分元素不支持innerHTML; 冷知识：firefox浏览器在XHTML文档中设置innerHTML是要求XHTML必须严格符合要求，否则，innerHTML将会静默地失败； 最佳实践：使用innerHTML插入代码片时，请通过特定的方法过滤掉script标签（可能引入恶意脚本）。  </description>
+    </item>
+    
+    <item>
+      <title>Document类型、HTMLDocument类型和document对象的区别</title>
+      <link>https://mannuan.github.io/post/document%E7%B1%BB%E5%9E%8Bhtmldocument%E7%B1%BB%E5%9E%8B%E5%92%8Cdocument%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%8C%BA%E5%88%AB/</link>
+      <pubDate>Tue, 28 May 2019 11:19:13 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/document%E7%B1%BB%E5%9E%8Bhtmldocument%E7%B1%BB%E5%9E%8B%E5%92%8Cdocument%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%8C%BA%E5%88%AB/</guid>
+      <description> Dcoment表示文档，这里的文档可以是HTML文档，也可以是XML文档，换句话说Document类型能表示HTML和XML等文档； HTMLDocument对象继承自Document对象，专用于表示HTML文档； document对象是HTMLDocument对象的一个实例，表示整个HTML页面，又叫做页面的根节点；  Document对象（根节点）的特征：
+&amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html&amp;gt; &amp;lt;head&amp;gt;&amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;script&amp;gt; console.log(document.nodeType); console.log(document.nodeName); console.log(document.nodeValue); console.log(document.parentNode); console.log(document.ownerDocument); console.log(document.childNodes); // 其子节点可能是一个DocumentType(最多一个)、Element(最多一个)、ProcessingInstruction或Comment  &amp;lt;/script&amp;gt; &amp;lt;/html&amp;gt;</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>机器学习 on mannuan</title>
+    <link>https://mannuan.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</link>
+    <description>Recent content in 机器学习 on mannuan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 02 Jun 2019 18:42:49 +0800</lastBuildDate>
+    
+	<atom:link href="https://mannuan.github.io/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>numpy softmax实现</title>
+      <link>https://mannuan.github.io/post/numpy-softmax%E5%AE%9E%E7%8E%B0/</link>
+      <pubDate>Sun, 02 Jun 2019 18:42:49 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/numpy-softmax%E5%AE%9E%E7%8E%B0/</guid>
+      <description># -*- coding: utf-8 -*- import numpy as np def softmax(x): x_row_max = x.max(axis=-1) x_row_max = x_row_max.reshape(list(x.shape)[:-1]+[1]) x = x - x_row_max x_exp = np.exp(x) x_exp_row_sum = x_exp.sum(axis=-1).reshape(list(x.shape)[:-1]+[1]) softmax = x_exp / x_exp_row_sum return softmax if __name__ == &amp;#34;__main__&amp;#34;: m = np.random.randn(2, 2, 2) + 2 m = softmax(m) m = m.</description>
+    </item>
+    
+    <item>
+      <title>准确率、精准率、召回率和F1值详解</title>
+      <link>https://mannuan.github.io/post/%E5%87%86%E7%A1%AE%E7%8E%87%E7%B2%BE%E5%87%86%E7%8E%87%E5%8F%AC%E5%9B%9E%E7%8E%87%E5%92%8Cf1%E5%80%BC%E8%AF%A6%E8%A7%A3/</link>
+      <pubDate>Sun, 02 Jun 2019 17:37:07 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/%E5%87%86%E7%A1%AE%E7%8E%87%E7%B2%BE%E5%87%86%E7%8E%87%E5%8F%AC%E5%9B%9E%E7%8E%87%E5%92%8Cf1%E5%80%BC%E8%AF%A6%E8%A7%A3/</guid>
+      <description>专业术语的中英文对照表 英文名     准确率 Accuracy   精准率 Precise   召回率 Recall   F1值 F1 measure    Precise和Recall是广泛应用在信息检索和统计学分类领域的两个度量值，用来评价结果的质量；F1 measure是综合Precise和Recall两个指标的评估指标，用于综合反映整体的指标。Precise、Recall和F1 measure都是通过混淆矩阵计算出来的，下表是对混淆矩阵的介绍：
+混淆矩阵 &amp;nbsp; 预测的类别 &amp;nbsp; 实际的类别 &amp;nbsp; Positive Negative 合计 Positive TP FN 正样本 Negative FP TN 负样本 &amp;nbsp; 合计 样本被预测为Positive 样本被预测为Negative Positive+Negative   其中： TP表示正确地把正样本预测为正； FN表示错误地把正样本预测为负； FP表示错误地把负样本预测为正； TN表示正确地把负样本预测为负；
+ Precise 表示正确预测正样本占实际预测为正样本的比例
+$$Precise = \frac{TP}{TP+FP}$$
+Recall 表示正确预测正样本占正样本的比例
+$$Recall = \frac{TP}{TP+FN}$$</description>
+    </item>
+    
+    <item>
+      <title>机器学习面试知识点一(无监督和有监督算法的区别)</title>
+      <link>https://mannuan.github.io/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%97%A0%E7%9B%91%E7%9D%A3%E5%92%8C%E6%9C%89%E7%9B%91%E7%9D%A3%E7%AE%97%E6%B3%95%E7%9A%84%E5%8C%BA%E5%88%AB/</link>
+      <pubDate>Fri, 20 Jul 2018 17:05:28 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%97%A0%E7%9B%91%E7%9D%A3%E5%92%8C%E6%9C%89%E7%9B%91%E7%9D%A3%E7%AE%97%E6%B3%95%E7%9A%84%E5%8C%BA%E5%88%AB/</guid>
+      <description>对监督学习的理解： 监督学习，通俗来讲就是分类，就是把训练样本，在某种评价下得到最佳的模型，然后再利用这个模型将输入映射为相应的输出，对输出进行简单的判断从而实现分类的目的。在人对事物的认识中，我们从孩时就被大人们教授这是鸟，那是房子等等。我们所见到的景物就是输入数据，而大人们对这些事物的判断结果就是相应的输出。当我们见识多了以后，脑子就慢慢地得到了一些泛化的模型，这就是训练得到的那个函数，从而没有大人在旁边指点的时候，我们就可自己分辨哪些是房子，哪些是鸟。
+对无监督学习的理解： 它与非监督学习的不同之处，在于我们事先没有任何训练样本，而直接对数据进行建模。比如我们去参观一个画展，我们完全对艺术一无所知,但是欣赏完多幅作品之后，我们也能把它们分成不同的派别。比如哪些更朦胧一点，哪些更写实一些，即使我们不知道什么叫做朦胧派，什么叫做写实派，但是至少我们能把他们分成两个类。无监督学习的里典型的例子就是聚类。聚类的目的在于把相似的东西聚在一起，而我们并不关心这一类是什么。因此，一个聚类算法只需要知道如何计算相似度就可以开始工作了。</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>爬虫 on mannuan</title>
+    <link>https://mannuan.github.io/categories/%E7%88%AC%E8%99%AB/</link>
+    <description>Recent content in 爬虫 on mannuan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 11 Jun 2019 17:01:24 +0800</lastBuildDate>
+    
+	<atom:link href="https://mannuan.github.io/categories/%E7%88%AC%E8%99%AB/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>python字体文件woff转xml</title>
+      <link>https://mannuan.github.io/post/python%E5%AD%97%E4%BD%93%E6%96%87%E4%BB%B6woff%E8%BD%ACxml/</link>
+      <pubDate>Tue, 11 Jun 2019 17:01:24 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/python%E5%AD%97%E4%BD%93%E6%96%87%E4%BB%B6woff%E8%BD%ACxml/</guid>
+      <description>from fontTools.ttLib import TTFont def get(): font = TTFont(&amp;#39;./tyc-num.woff&amp;#39;) font.</description>
+    </item>
+    
+    <item>
+      <title>反爬机制之字体反爬详解</title>
+      <link>https://mannuan.github.io/post/%E5%8F%8D%E7%88%AC%E6%9C%BA%E5%88%B6%E4%B9%8B%E5%AD%97%E4%BD%93%E5%8F%8D%E7%88%AC%E8%AF%A6%E8%A7%A3/</link>
+      <pubDate>Wed, 05 Jun 2019 21:45:30 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/%E5%8F%8D%E7%88%AC%E6%9C%BA%E5%88%B6%E4%B9%8B%E5%AD%97%E4%BD%93%E5%8F%8D%E7%88%AC%E8%AF%A6%E8%A7%A3/</guid>
+      <description>字体反爬，顾名思义就是利用自定义的字符编码与字体文件的映射呈现文字的一种反爬措施。下面我们通过例子来详细介绍字体反爬是怎么实现的以及解决方案。
+ 目录
+字符编码
+CSS3 @font-face 规则
+html文件（example.html）:
+woff字体文件（example.woff）:
+html显示效果：
+解决方案：
+字符编码 字体爬虫就是使用类似自定义的字符编码的形式来呈现文字，字符编码的详细信息见HTML字符编码；
+CSS3 @font-face 规则 在 CSS3 之前，web 设计师必须使用已在用户计算机上安装好的字体。
+通过 CSS3，web 设计师可以使用他们喜欢的任意字体。
+当您您找到或购买到希望使用的字体时，可将该字体文件存放到 web 服务器上，它会在需要时被自动下载到用户的计算机上。
+您“自己的”的字体是在 CSS3 @font-face 规则中定义的。
+html文件（example.html）: &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta http-equiv=&amp;#34;Content-Type&amp;#34; content=&amp;#34;text/html; charset=utf-8&amp;#34;/&amp;gt; &amp;lt;title&amp;gt;example&amp;lt;/title&amp;gt; &amp;lt;style type=&amp;#34;text/css&amp;#34;&amp;gt; @font-face{ font-family: &amp;#34;example&amp;#34;; src:url(&amp;#34;./example.woff&amp;#34;) format(&amp;#39;woff&amp;#39;); } .review { font-family: &amp;#34;example&amp;#34;; } &amp;lt;/style&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;p&amp;gt; 找了好久才 &amp;lt;svgmsti class=&amp;#34;review&amp;#34;&amp;gt;&amp;amp;#xe54b;&amp;lt;/svgmsti&amp;gt;到，问了 &amp;lt;svgmsti class=&amp;#34;review&amp;#34;&amp;gt;&amp;amp;#xe36d;&amp;lt;/svgmsti&amp;gt; &amp;lt;svgmsti class=&amp;#34;review&amp;#34;&amp;gt;&amp;amp;#xebb5;&amp;lt;/svgmsti&amp;gt;他 &amp;lt;svgmsti class=&amp;#34;review&amp;#34;&amp;gt;&amp;amp;#xf3c6;&amp;lt;/svgmsti&amp;gt;己也不知 &amp;lt;svgmsti class=&amp;#34;review&amp;#34;&amp;gt;&amp;amp;#xef46;&amp;lt;/svgmsti&amp;gt;看了点评 &amp;lt;svgmsti class=&amp;#34;review&amp;#34;&amp;gt;&amp;amp;#xf75f;&amp;lt;/svgmsti&amp;gt; &amp;lt;svgmsti class=&amp;#34;review&amp;#34;&amp;gt;&amp;amp;#xe8dd;&amp;lt;/svgmsti&amp;gt;电话才知 &amp;lt;svgmsti class=&amp;#34;review&amp;#34;&amp;gt;&amp;amp;#xef46;&amp;lt;/svgmsti&amp;gt;，人挺多的上菜 &amp;lt;svgmsti class=&amp;#34;review&amp;#34;&amp;gt;&amp;amp;#xee1a;&amp;lt;/svgmsti&amp;gt;慢 &amp;lt;svgmsti class=&amp;#34;review&amp;#34;&amp;gt;&amp;amp;#xe8dd;&amp;lt;/svgmsti&amp;gt;，凉菜都吃完 &amp;lt;svgmsti class=&amp;#34;review&amp;#34;&amp;gt;&amp;amp;#xe5bd;&amp;lt;/svgmsti&amp;gt;别的 &amp;lt;svgmsti class=&amp;#34;review&amp;#34;&amp;gt;&amp;amp;#xeb5a;&amp;lt;/svgmsti&amp;gt;还没 &amp;lt;svgmsti class=&amp;#34;review&amp;#34;&amp;gt;&amp;amp;#xf40e;&amp;lt;/svgmsti&amp;gt;来，凉 &amp;lt;svgmsti class=&amp;#34;review&amp;#34;&amp;gt;&amp;amp;#xeb5a;&amp;lt;/svgmsti&amp;gt;很 &amp;lt;svgmsti class=&amp;#34;review&amp;#34;&amp;gt;&amp;amp;#xe082;&amp;lt;/svgmsti&amp;gt;胃 &amp;lt;svgmsti class=&amp;#34;review&amp;#34;&amp;gt;&amp;amp;#xee1a;&amp;lt;/svgmsti&amp;gt;好吃的。 &amp;lt;/p&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt; woff字体文件（example.</description>
+    </item>
+    
+    <item>
+      <title>大众点评评论反爬解决方案</title>
+      <link>https://mannuan.github.io/post/%E5%A4%A7%E4%BC%97%E7%82%B9%E8%AF%84%E8%AF%84%E8%AE%BA%E5%8F%8D%E7%88%AC%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</link>
+      <pubDate>Wed, 05 Jun 2019 16:55:30 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/%E5%A4%A7%E4%BC%97%E7%82%B9%E8%AF%84%E8%AF%84%E8%AE%BA%E5%8F%8D%E7%88%AC%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</guid>
+      <description>  目前大众点评主要有两种反爬的机制：css反爬和字体反爬。
+ css反爬的解决方案 具体详见反爬机制之css反爬详解
+字体反爬的解决方案 </description>
+    </item>
+    
+    <item>
+      <title>反爬机制之css反爬详解</title>
+      <link>https://mannuan.github.io/post/%E5%8F%8D%E7%88%AC%E6%9C%BA%E5%88%B6%E4%B9%8Bcss%E5%8F%8D%E7%88%AC%E8%AF%A6%E8%A7%A3/</link>
+      <pubDate>Wed, 05 Jun 2019 16:52:42 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/%E5%8F%8D%E7%88%AC%E6%9C%BA%E5%88%B6%E4%B9%8Bcss%E5%8F%8D%E7%88%AC%E8%AF%A6%E8%A7%A3/</guid>
+      <description>css反爬，顾名思义就是利用css样式移动背景图片达到呈现文字效果的一种反爬措施。下面我们通过例子来详细介绍css反爬是怎么实现的以及解决方法。
+ 目录
+html代码（example.html）:
+css文件（example.css）：
+svg文件（example.svg）：
+html显示效果：
+规律总结：
+解决方案实现代码（python）：
+最终效果：
+html代码（example.html）: &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html&amp;gt; &amp;lt;head&amp;gt; &amp;lt;title&amp;gt;example&amp;lt;/title&amp;gt; &amp;lt;meta http-equiv=&amp;#34;Content-Type&amp;#34; content=&amp;#34;text/html; charset=utf-8&amp;#34;/&amp;gt; &amp;lt;link rel=&amp;#34;stylesheet&amp;#34; type=&amp;#34;text/css&amp;#34; href=&amp;#34;./example.css&amp;#34;&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;p&amp;gt; 之前 &amp;lt;svgmsti class=&amp;#34;cmpubq&amp;#34;&amp;gt;&amp;lt;/svgmsti&amp;gt;杭州，回 &amp;lt;svgmsti class=&amp;#34;cmpmdy&amp;#34;&amp;gt;&amp;lt;/svgmsti&amp;gt;海前选择 &amp;lt;svgmsti class=&amp;#34;cmpcj2&amp;#34;&amp;gt;&amp;lt;/svgmsti&amp;gt; &amp;lt;svgmsti class=&amp;#34;cmpfaa&amp;#34;&amp;gt;&amp;lt;/svgmsti&amp;gt;这里吃一顿，原 &amp;lt;svgmsti class=&amp;#34;cmpu0e&amp;#34;&amp;gt;&amp;lt;/svgmsti&amp;gt; &amp;lt;svgmsti class=&amp;#34;cmpug6&amp;#34;&amp;gt;&amp;lt;/svgmsti&amp;gt;想吃 &amp;lt;svgmsti class=&amp;#34;cmpu6y&amp;#34;&amp;gt;&amp;lt;/svgmsti&amp;gt; &amp;lt;svgmsti class=&amp;#34;cmppiv&amp;#34;&amp;gt;&amp;lt;/svgmsti&amp;gt;家 &amp;lt;svgmsti class=&amp;#34;cmp3wu&amp;#34;&amp;gt;&amp;lt;/svgmsti&amp;gt;，无意间发现 &amp;lt;svgmsti class=&amp;#34;cmpcj2&amp;#34;&amp;gt;&amp;lt;/svgmsti&amp;gt;这家 &amp;lt;svgmsti class=&amp;#34;cmpj8o&amp;#34;&amp;gt;&amp;lt;/svgmsti&amp;gt;，所以决 &amp;lt;svgmsti class=&amp;#34;cmpq7h&amp;#34;&amp;gt;&amp;lt;/svgmsti&amp;gt;要 &amp;lt;svgmsti class=&amp;#34;cmpfaa&amp;#34;&amp;gt;&amp;lt;/svgmsti&amp;gt;打卡！ &amp;lt;/p&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt; css文件（example.css）： svgmsti[class^=&amp;#34;cmp&amp;#34;]{ width: 14px; height: 30px; margin-top: -9px; background-image: url(./example.svg); background-repeat: no-repeat; display: inline-block; vertical-align: middle; } .</description>
+    </item>
+    
+    <item>
+      <title>pyquery获取文本节点（TextNode）</title>
+      <link>https://mannuan.github.io/post/pyquery%E8%8E%B7%E5%8F%96%E6%96%87%E6%9C%AC%E8%8A%82%E7%82%B9textnode/</link>
+      <pubDate>Wed, 05 Jun 2019 11:45:30 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/pyquery%E8%8E%B7%E5%8F%96%E6%96%87%E6%9C%AC%E8%8A%82%E7%82%B9textnode/</guid>
+      <description>from pyquery import PyQuery as pq p = pq(字符串) for i in p.contents(): print(i)</description>
+    </item>
+    
+    <item>
+      <title>pyquery如何读取xml或html文件不乱码</title>
+      <link>https://mannuan.github.io/post/pyquery%E5%A6%82%E4%BD%95%E8%AF%BB%E5%8F%96xml%E6%88%96html%E6%96%87%E4%BB%B6%E4%B8%8D%E4%B9%B1%E7%A0%81/</link>
+      <pubDate>Tue, 04 Jun 2019 14:26:42 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/pyquery%E5%A6%82%E4%BD%95%E8%AF%BB%E5%8F%96xml%E6%88%96html%E6%96%87%E4%BB%B6%E4%B8%8D%E4%B9%B1%E7%A0%81/</guid>
+      <description>from pyquery as PyQuery as pq with open(文件路径, &amp;#34;r&amp;#34;) as f: str = f.read().encode(&amp;#34;utf-8&amp;#34;) //设置&amp;#34;utf-8&amp;#34;编码，这一步很重要 p = pq(str)</description>
+    </item>
+    
+    <item>
+      <title>pyquery如何解析xml</title>
+      <link>https://mannuan.github.io/post/pyquery%E5%A6%82%E4%BD%95%E8%A7%A3%E6%9E%90xml/</link>
+      <pubDate>Tue, 04 Jun 2019 14:07:27 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/pyquery%E5%A6%82%E4%BD%95%E8%A7%A3%E6%9E%90xml/</guid>
+      <description>之前遇到pyquery解析svg文件(xml格式)的时候发现无法获取节点，比如下面这个svg文件：
+&amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;UTF-8&amp;#34; standalone=&amp;#34;no&amp;#34;?&amp;gt; &amp;lt;!DOCTYPE svg PUBLIC &amp;#34;-//W3C//DTD SVG 1.1//EN&amp;#34; &amp;#34;http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd&amp;#34;&amp;gt; &amp;lt;svg xmlns=&amp;#34;http://www.w3.org/2000/svg&amp;#34; version=&amp;#34;1.1&amp;#34; xmlns:xlink=&amp;#34;http://www.w3.org/1999/xlink&amp;#34; width=&amp;#34;650px&amp;#34; height=&amp;#34;3030.0px&amp;#34;&amp;gt; &amp;lt;style&amp;gt;text {font-family:PingFangSC-Regular,Microsoft YaHei,&amp;#39;Hiragino Sans GB&amp;#39;,Helvetica;font-size:14px;fill:#282828;}&amp;lt;/style&amp;gt; &amp;lt;text x=&amp;#34;0&amp;#34; y=&amp;#34;35&amp;#34;&amp;gt;呜愉伸治译喊傲著逢循托从巨毒高翼阻聋巴垂级茧郎暑聚渣啦秘炊奋睁连撤宁畅搁刚轮蜂缺幕葵&amp;lt;/text&amp;gt; &amp;lt;text x=&amp;#34;0&amp;#34; y=&amp;#34;79&amp;#34;&amp;gt;搞陆林卵窝提格桑南隔选膛奸修担穴罐胖宅圆馒杏至鲁类痒宝拌让必油匀困双拢砖轧凑辜亦银牧&amp;lt;/text&amp;gt; &amp;lt;/svg&amp;gt; 我在用下面的python代码提取text节点的时候，发现无法提取，没有任何输出：
+from pyquery import PyQuery as pq with open(文件路径, &amp;#34;r&amp;#34;) as f: svg = f.read().encode(&amp;#34;utf-8&amp;#34;) p = pq(svg) for i in p(&amp;#34;text&amp;#34;).items(): print(i) 之后，我把pyquery的解析方式，强制设置为 paser=&amp;quot;html&amp;quot; 后，就行了：
+from pyquery import PyQuery as pq with open(文件路径, &amp;#34;r&amp;#34;) as f: svg = f.read().encode(&amp;#34;utf-8&amp;#34;) p = pq(svg, parser=&amp;#34;html&amp;#34;) for i in p(&amp;#34;text&amp;#34;).</description>
+    </item>
+    
+    <item>
+      <title>pyspider如何刷新项目的状态</title>
+      <link>https://mannuan.github.io/post/pyspider%E5%A6%82%E4%BD%95%E5%88%B7%E6%96%B0%E9%A1%B9%E7%9B%AE%E7%9A%84%E7%8A%B6%E6%80%81/</link>
+      <pubDate>Thu, 30 May 2019 17:01:13 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/pyspider%E5%A6%82%E4%BD%95%E5%88%B7%E6%96%B0%E9%A1%B9%E7%9B%AE%E7%9A%84%E7%8A%B6%E6%80%81/</guid>
+      <description> 关闭pyspider 进入data目录 删除目录下面除了project.db之外的文件 重新启动pyspider  </description>
+    </item>
+    
+    <item>
+      <title>百度知道爬虫</title>
+      <link>https://mannuan.github.io/post/%E7%99%BE%E5%BA%A6%E7%9F%A5%E9%81%93%E7%88%AC%E8%99%AB/</link>
+      <pubDate>Thu, 30 May 2019 15:31:41 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/%E7%99%BE%E5%BA%A6%E7%9F%A5%E9%81%93%E7%88%AC%E8%99%AB/</guid>
+      <description>工具： pyspider
+数据库： mongodb
+思路：  假设你要根据两个关键字搜索百度知道答案，比如：”购物“和”价格“； 组建爬虫的url，需要把这两个关键字转化为url编码的格式，url编码教程详见； 取出搜索页面列表上面所有项的url链接; 然后，爬取步骤3的url，取出页面上面的question和最佳答案； 循环往复，进行2、3、4步骤；  代码： #!/usr/bin/env python # -*- encoding: utf-8 -*- from pyspider.libs.base_handler import * from urllib.parse import quote, unquote from pymongo import MongoClient import datetime import time import random client = MongoClient(&amp;#34;自定义数据库接口&amp;#34;) db = client.自定义数据库名 class Handler(BaseHandler): crawl_config = { } key_word1 = quote(&amp;#34;自定义关键字1&amp;#34;.encode(&amp;#34;GB2312&amp;#34;)) key_word2_list = [&amp;#34;自定义关键字2&amp;#34;] key_word2_list = [quote(i.encode(&amp;#34;GB2312&amp;#34;)) for i in key_word2_list] url_format = &amp;#34;https://zhidao.baidu.com/search?word={}&amp;amp;ie=gbk&amp;amp;site=-1&amp;amp;sites=0&amp;amp;date=0&amp;amp;pn={}&amp;#34; page_num = 76 # 最大页码 start_page = 0 # 开始的页码 max_random = 5 # 随机数的最大值 headers1 = { &amp;#34;Accept&amp;#34;: &amp;#34;text/html,application/xhtml+xml,application/xml;q=0.</description>
+    </item>
+    
+  </channel>
+</rss>

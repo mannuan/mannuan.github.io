@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>nodejs on mannuan</title>
+    <link>https://mannuan.github.io/tags/nodejs/</link>
+    <description>Recent content in nodejs on mannuan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 28 Jun 2019 17:49:10 +0800</lastBuildDate>
+    
+	<atom:link href="https://mannuan.github.io/tags/nodejs/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>测试Ajax的Nodejs服务端代码</title>
+      <link>https://mannuan.github.io/post/%E6%B5%8B%E8%AF%95ajax%E7%9A%84nodejs%E6%9C%8D%E5%8A%A1%E7%AB%AF%E4%BB%A3%E7%A0%81/</link>
+      <pubDate>Fri, 28 Jun 2019 17:49:10 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/%E6%B5%8B%E8%AF%95ajax%E7%9A%84nodejs%E6%9C%8D%E5%8A%A1%E7%AB%AF%E4%BB%A3%E7%A0%81/</guid>
+      <description>前言  由于使用Ajax必须要有一个服务端来接收消息，为了方便我使用Nodejs来搭建服务端。同时，为了兼顾实践跨域的方法，我在这里搭建了两个服务端。其中，一个服务端用来响应Ajax请求，另外一个服务端用作加载页面。这样就产生了跨域的问题，我采用的是cors的解决方案，具体的实现，请看sever1的代码。
+ 前期准备工作  安装nodejs，可以参看我的这篇教程 选择koa2作为服务端 安装模块：koa，koa-router，koa2-cors，koa-bodyparser，koa-art-template，path  服务端交互示意图 文件路径示意图 server1.js var Koa = require(&amp;#39;koa&amp;#39;); var Router = require(&amp;#39;koa-router&amp;#39;); var cors = require(&amp;#39;koa2-cors&amp;#39;); var bodyParser = require(&amp;#39;koa-bodyparser&amp;#39;); var app = new Koa(); var router = new Router(); //下面的代码必须写在设置路由的前面 app.use(cors({ origin: function (ctx) { return &amp;#39;http://127.0.0.1:4000&amp;#39;; }, exposeHeaders: [&amp;#39;WWW-Authenticate&amp;#39;, &amp;#39;Server-Authorization&amp;#39;], maxAge: 5, credentials: true, allowMethods: [&amp;#39;GET&amp;#39;, &amp;#39;POST&amp;#39;, &amp;#39;DELETE&amp;#39;], allowHeaders: [&amp;#39;Content-Type&amp;#39;, &amp;#39;Authorization&amp;#39;, &amp;#39;Accept&amp;#39;], })); //配置post提交数据的中间件 app.use(bodyParser()); //处理get请求 router.get(&amp;#39;/get&amp;#39;, async function(ctx){ ctx.</description>
+    </item>
+    
+    <item>
+      <title>nodejs安装教程（完美避坑，适用于mac和linux）</title>
+      <link>https://mannuan.github.io/post/nodejs%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%E5%AE%8C%E7%BE%8E%E9%81%BF%E5%9D%91%E9%80%82%E7%94%A8%E4%BA%8Emac%E5%92%8Clinux/</link>
+      <pubDate>Fri, 28 Jun 2019 15:25:12 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/nodejs%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%E5%AE%8C%E7%BE%8E%E9%81%BF%E5%9D%91%E9%80%82%E7%94%A8%E4%BA%8Emac%E5%92%8Clinux/</guid>
+      <description>安装nodejs mac端 brew install node 如果安装速度慢，可以到nodejs官网下载pkg安装包；
+linux端 sudo apt-get install nodejs 检查安装 node -v npm -v 修改node_modules目录权限 教程
+添加node_modules路径 教程</description>
+    </item>
+    
+    <item>
+      <title>node require can&#39;t find module(mac或linux，不支持window)</title>
+      <link>https://mannuan.github.io/post/node-require-cant-find-module/</link>
+      <pubDate>Fri, 28 Jun 2019 11:40:44 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/node-require-cant-find-module/</guid>
+      <description> 前言  我已经正确的安装了node，并且我使用npm install -g 安装包没有出错，但是就是require(&amp;lsquo;安装包&amp;rsquo;)报错，我的安装在&amp;rsquo;/usr/local/lib/node_modules&amp;rsquo;下面
+ 原因分析 可能是node命令早不到npm的安装包的安装目录，于是我打印了node默认的模块目录：
+&amp;gt;&amp;gt;node &amp;gt;module.paths [ &#39;/Users/用户名/repl/node_modules&#39;, &#39;/Users/用户名/node_modules&#39;, &#39;/Users/node_modules&#39;, &#39;/node_modules&#39;, &#39;/Users/用户名/.node_modules&#39;, &#39;/Users/用户名/.node_libraries&#39;, &#39;/usr/local/lib/node&#39; ]  我发现，‘/usr/local/lib/node_modules’目录并没有包含在里面，于是我使用下面的命令
+&amp;gt;module.paths.push(&#39;/usr/local/lib/node_modules&#39;)  虽然这个命令生效了，但它是暂时性的。但我并不知道如何永久的把我的模块目录添加进去。 为了解决这个问题，我使用软链接的来解决这个问题
+解决方案 ln -sfn /usr/local/lib/node_modules /Users/用户名/node_modules  由于根据npm WARN checkPermissions Missing write access to /usr/local/lib/node_modules，node_module目录的拥有者是当前用户，所以没有必要使用sudo.
+ </description>
+    </item>
+    
+  </channel>
+</rss>

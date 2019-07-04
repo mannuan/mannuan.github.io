@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>方法 on mannuan</title>
+    <link>https://mannuan.github.io/tags/%E6%96%B9%E6%B3%95/</link>
+    <description>Recent content in 方法 on mannuan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 30 May 2019 10:03:59 +0800</lastBuildDate>
+    
+	<atom:link href="https://mannuan.github.io/tags/%E6%96%B9%E6%B3%95/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>table, tbody, tr 元素的属性和方法</title>
+      <link>https://mannuan.github.io/post/table-tbody-tr-%E5%85%83%E7%B4%A0%E7%9A%84%E5%B1%9E%E6%80%A7%E5%92%8C%E6%96%B9%E6%B3%95/</link>
+      <pubDate>Thu, 30 May 2019 10:03:59 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/table-tbody-tr-%E5%85%83%E7%B4%A0%E7%9A%84%E5%B1%9E%E6%80%A7%E5%92%8C%E6%96%B9%E6%B3%95/</guid>
+      <description>&amp;lt;table&amp;gt;元素的属性和方法：  caption：返回表格的caption元素节点，没有则返回null； tHead, tBodies, tFoot: 返回表格&amp;lt;thead&amp;gt;, &amp;lt;tbody&amp;gt;, &amp;lt;tfoot&amp;gt;元素； rows: 返回元素所有行&amp;lt;tr&amp;gt;元素的HTMLCollection; createTHead(), createTFoot(), createCaption(): 创建&amp;lt;thead&amp;gt;, &amp;lt;tfoot&amp;gt;, &amp;lt;caption&amp;gt;空元素，将其放到表格中，返回创建的&amp;lt;thead&amp;gt;, &amp;lt;tfoot&amp;gt;, &amp;lt;caption&amp;gt;元素节点； deleteTHead(), deleteTFoot(), deleteCaption(): 删除&amp;lt;thead&amp;gt;, &amp;lt;tfoot&amp;gt;, &amp;lt;caption&amp;gt;空元素，无返回值（或返回值为undefined） deleteRow(pos): 删除指定位置（注意参数不是索引，而是从0开始的位置）的行，返回undefined; insertRow(pos): 向rows集合中的指定位置（不是索引）插入一行；  &amp;lt;tbody&amp;gt;元素的属性和方法：  rows: 返回&amp;lt;tbody&amp;gt;元素下所有行&amp;lt;tr&amp;gt;元素的HTMLCollection; deleteRow(pos): 删除指定位置（注意参数不是索引，而是从0开始的位置）的行，返回undefined; insertRow(pos):向rows集合中的指定位置（不是索引）插入一行；  &amp;lt;tr&amp;gt;元素的属性和方法：  cells: 返回&amp;lt;tr&amp;gt;元素中单元格的HTMLCollection; deleteCell(pos): 删除指定位置（不是索引）的单元格； insertCell(pos): 向cells集合中的指定位置（不是索引）插入一个单元格，返回对新插入单元格的引用；   &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html&amp;gt; &amp;lt;body&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;script&amp;gt; // 创建table  var table = document.createElement(&amp;#39;table&amp;#39;); table.border = 1; table.width = &amp;#39;100%&amp;#39;; // 创建caption  var caption = table.</description>
+    </item>
+    
+  </channel>
+</rss>

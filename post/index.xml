@@ -16,7 +16,7 @@
       <pubDate>Mon, 01 Jul 2019 20:42:46 +0800</pubDate>
       
       <guid>https://mannuan.github.io/post/mac%E6%88%AA%E5%9B%BE%E7%9A%84%E7%9B%B8%E5%85%B3%E8%AE%BE%E7%BD%AE/</guid>
-      <description>选区域截图默认快捷键 Shift+command+4  默认保存目录 ~/Desktop  修改目录 defaults write com.apple.screencapture location &amp;quot;~/Pictures/ScreenShot&amp;quot;  截图默认后缀 png  修改后缀 defaults write com.apple.screencapture type jpg  删除默认时间后缀 defaults write com.apple.screencapture &amp;quot;include-date&amp;quot; 0  修改默认的文件名称 defaults write com.apple.screencapture name &amp;quot;screenshot&amp;quot;  参看配置 defaults read com.apple.screencapture 输出如下： { &amp;quot;last-messagetrace-stamp&amp;quot; = &amp;quot;583174121.285828&amp;quot;; &amp;quot;last-selection&amp;quot; = { Height = 529; Width = 1041; X = 507; Y = 262; }; &amp;quot;last-selection-display&amp;quot; = 0; location = &amp;quot;~/Pictures/ScreenShot&amp;quot;; name = screenshot; type = jpg; }  缺点分析 mac自带的截图工具，不能修改时间的格式，而且这种格式有空格，不利于作为文件名。虽然可以去除时间后缀，但是时间信息很重要。同时，即使没有时间后缀，生成的图片名中还是存在空格。鉴于上面复杂的问题，我权衡利弊之后果断放弃这个mac自带的截图工具。</description>
+      <description>选区域截图默认快捷键 Shift+command+4  默认保存目录 ~/Desktop  修改目录 defaults write com.apple.screencapture location &amp;#34;~/Pictures/ScreenShot&amp;#34; 截图默认后缀 png  修改后缀 defaults write com.apple.screencapture type jpg 删除默认时间后缀 defaults write com.apple.screencapture &amp;#34;include-date&amp;#34; 0 修改默认的文件名称 defaults write com.apple.screencapture name &amp;#34;screenshot&amp;#34; 参看配置 defaults read com.apple.screencapture 输出如下： { &amp;quot;last-messagetrace-stamp&amp;quot; = &amp;quot;583174121.285828&amp;quot;; &amp;quot;last-selection&amp;quot; = { Height = 529; Width = 1041; X = 507; Y = 262; }; &amp;quot;last-selection-display&amp;quot; = 0; location = &amp;quot;~/Pictures/ScreenShot&amp;quot;; name = screenshot; type = jpg; }  缺点分析 mac自带的截图工具，不能修改时间的格式，而且这种格式有空格，不利于作为文件名。虽然可以去除时间后缀，但是时间信息很重要。同时，即使没有时间后缀，生成的图片名中还是存在空格。鉴于上面复杂的问题，我权衡利弊之后果断放弃这个mac自带的截图工具。</description>
     </item>
     
     <item>
@@ -48,7 +48,7 @@
     </item>
     
     <item>
-      <title>实验十一 Ospf基本配置</title>
+      <title>实验十一 ospf基本配置</title>
       <link>https://mannuan.github.io/post/%E5%AE%9E%E9%AA%8C%E5%8D%81%E4%B8%80-ospf%E5%9F%BA%E6%9C%AC%E9%85%8D%E7%BD%AE/</link>
       <pubDate>Mon, 01 Jul 2019 18:28:05 +0800</pubDate>
       
@@ -127,9 +127,9 @@
       <description>发现问题 以Ubuntu系统为例，我们通过genpac生成autoproxy.pac文件，然后点击系统设置-&amp;gt;网络-&amp;gt;代理设置-&amp;gt;自动，在输入框中输入file://绝对路径/autoproxy.pac。设置好以后，Chrome应当可以自动切换网络，但是Chrome无法访问google的搜索引擎，而火狐浏览器可以正常访问。
 分析问题 出现上面问题的唯一可能就是Chrome设置有误，因此点击设置-&amp;gt;高级设置-&amp;gt;打开代理设置，打开的就是Ubuntu系统的网络设置。因此，我们可以判断自动代理模式设置失效，这里我们就要仔细分析为什么会失效？
 解决方案 出现上面问题的主要原因是：Chrome移除对file://和data:协议的支持，目前只能使用http://协议。因此，我们打算使用nginx实现对本地文件的http映射。
-安装nginx sudo apt-get install nginx  修改nginx.cnf配置文件 vim /etc/nginx/nginx.conf  在nginx.conf的http{...}代码块中输入:
-server{ listen: 80; server_name: 127.0.0.1; location /autoproxy.pac { alias 绝对路径/autoproxy.pac; } }  重启nginx
-sudo nginx -s reload  把http://127.0.0.1/autoproxy.pac填写到系统设置-&amp;gt;网络-&amp;gt;代理设置-&amp;gt;自动代理中</description>
+安装nginx sudo apt-get install nginx 修改nginx.cnf配置文件 vim /etc/nginx/nginx.conf 在nginx.conf的http{...}代码块中输入:
+server{ listen: 80; server_name: 127.0.0.1; location /autoproxy.pac { alias 绝对路径/autoproxy.pac; } } 重启nginx
+sudo nginx -s reload 把http://127.0.0.1/autoproxy.pac填写到系统设置-&amp;gt;网络-&amp;gt;代理设置-&amp;gt;自动代理中</description>
     </item>
     
     <item>
@@ -139,24 +139,1797 @@ sudo nginx -s reload  把http://127.0.0.1/autoproxy.pac填写到系统设置-&am
       
       <guid>https://mannuan.github.io/post/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/</guid>
       <description>Hugo介绍 一种基于 Go 语言的博客框架。
-Hugo安装(Mac) brew install hugo  创建博客  下面以我的github用户名manuan为例
- hugo new site mannuan.github.io  安装主题 themes.gohuo.io上面有很多主题可供选择，比如选择m10c
-下载m10c $ cd myblog $ git clone https://github.com/vaga/hugo-theme-m10c.git themes/m10c  修改配置文件 config.toml 添加一行：
-theme = &amp;quot;m10c&amp;quot;  本地预览 hugo server -D  创建第一篇博客 hugo new post/第一篇博客.md  创建的博客在 contents/post/下面
+Hugo安装(Mac) brew install hugo 创建博客  下面以我的github用户名manuan为例
+ hugo new site mannuan.github.io 安装主题 themes.gohuo.io上面有很多主题可供选择，比如选择m10c
+下载m10c $ cd myblog $ git clone https://github.com/vaga/hugo-theme-m10c.git themes/m10c 修改配置文件 config.toml 添加一行：
+theme = &amp;#34;m10c&amp;#34; 本地预览 hugo server -D 创建第一篇博客 hugo new post/第一篇博客.md 创建的博客在 contents/post/下面
 使用vscode编辑markdown文件 快捷键 Ctrl+Shift+P，输入 Markwon: Open Preview to the Side，打开预览模式
 发布博客到github  在github创建一个名为 mannuan.github.io 的仓库。
  把当前的博客打包到 public 目录下面
-hugo --baseUrl=&amp;quot;https://mannuan.github.io/&amp;quot; -D  把 public 里面的内容同步到github</description>
+  hugo --baseUrl=&amp;#34;https://mannuan.github.io/&amp;#34; -D  把 public 里面的内容同步到github  cd public git init git add .</description>
     </item>
     
     <item>
       <title>原生js实现JSONP</title>
       <link>https://mannuan.github.io/post/%E5%8E%9F%E7%94%9Fjs%E5%AE%9E%E7%8E%B0jsonp/</link>
-      <pubDate>Sun, 30 Jun 2019 20:35:25 +0800</pubDate>
+      <pubDate>Sat, 29 Jun 2019 21:41:57 +0800</pubDate>
       
       <guid>https://mannuan.github.io/post/%E5%8E%9F%E7%94%9Fjs%E5%AE%9E%E7%8E%B0jsonp/</guid>
-      <description> 介绍 JSONP是JSON with Padding(填充式JSON或参数式JSON)的简写，是一种非常常用的跨域请求方式。主要原理是利用了script标签可以跨域请求的特性，由其src属性发送请求到服务器，服务器返回JavaScript代码，浏览器接受响应，然后就直接执行了，这和通过script标签引用外部文件的原理是一样的。 JSONP由两部分组成：回调函数和数据，回调函数是当响应到来时应该在页面中调用的函数，回调函数的名字一般在请求中指定。当服务器响应时，服务器端就会把该函数和数据拼成字符串返回
-JSONP的请求过程  请求阶段：浏览器创建一个script标签，并给其src赋值(类似http://example.com/api/?callback=jsonpCallback）。 发送请求：当给script的src赋值时，浏览器就会发起一个请求。 数据响应：服务端将要返回的数据作为参数和函数名称拼接在一起(格式类似”jsonpCallback({name: &#39;abc&#39;})”)返回。当浏览器接收到了响应数据，由于发起请求的是script，所以相当于直接调用jsonpCallback方法，并且传入了一个参数。  服务端交互示意图 </description>
+      <description>介绍 JSONP是JSON with Padding(填充式JSON或参数式JSON)的简写，是一种非常常用的跨域请求方式。主要原理是利用了script 标签可以跨域请求的特性，由其 src属性发送请求到服务器，服务器返回JavaScript 代码，浏览器接受响应，然后就直接执行了，这和通过 script 标签引用外部文件的原理是一样的。
+JSONP由两部分组成：回调函数和数据，回调函数是当响应到来时应该在页面中调用的函数，回调函数的名字一般在请求中指定。当服务器响应时，服务器端就会把该函数和数据拼成字符串返回。
+JSONP 的请求过程  请求阶段：浏览器创建一个 script 标签，并给其src 赋值(类似 http://example.com/api/?callback=jsonpCallback）。 发送请求：当给script的src赋值时，浏览器就会发起一个请求。 数据响应：服务端将要返回的数据作为参数和函数名称拼接在一起(格式类似”jsonpCallback({name: &#39;abc&#39;})”)返回。当浏览器接收到了响应数据，由于发起请求的是 script，所以相当于直接调用 jsonpCallback 方法，并且传入了一个参数。  服务端交互示意图 server1代码(Nodejs实现) var Koa = require(&amp;#39;koa&amp;#39;); var Router = require(&amp;#39;koa-router&amp;#39;); var querystring = require(&amp;#39;querystring&amp;#39;); var app = new Koa(); var router = new Router(); //处理get请求 router.get(&amp;#39;/get&amp;#39;, async function(ctx){ var params = querystring.parse(ctx.request.url.split(&amp;#39;?&amp;#39;)[1]); var data = { message: &amp;#34;我是&amp;#34; + ctx.request.header.host + &amp;#34;，我收到了你的get请求！！！&amp;#34; } ctx.status=200; ctx.</description>
+    </item>
+    
+    <item>
+      <title>验证Promise是同步的</title>
+      <link>https://mannuan.github.io/post/%E9%AA%8C%E8%AF%81promise%E6%98%AF%E5%90%8C%E6%AD%A5%E7%9A%84/</link>
+      <pubDate>Fri, 28 Jun 2019 22:05:48 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/%E9%AA%8C%E8%AF%81promise%E6%98%AF%E5%90%8C%E6%AD%A5%E7%9A%84/</guid>
+      <description>前言 Promise是ES6提出的解决异步编程导致陷入回调的地狱问题。
+例子1 console.log(1); var a=new Promise(function(resolve, reject){ console.log(2); resolve(); }); console.log(2); var b = new Promise(function(resolve, reject){ console.log(4); resolve(); }); console.log(5); a.then(function(){ console.log(6); }); b.then(function(){ console.log(7); });   顺序输出：1~7
+ 例子2 console.log(1); var a = new Promise(function(resolve, reject){ resolve(); console.log(2); }); a.then(function(){ console.log(6); }); console.log(3); var b = new Promise(function(resolve, reject){ resolve(); console.log(4); }); b.then(function(){ console.log(7); }); console.log(5);   顺序输出：1~7
+ 结论 Promise本身是同步的，但.then和.catch方法是异步的</description>
+    </item>
+    
+    <item>
+      <title>原生js、jQuery和Vue.js的Ajax的详细对比</title>
+      <link>https://mannuan.github.io/post/%E5%8E%9F%E7%94%9Fjsjquery%E5%92%8Cvue.js%E7%9A%84ajax%E7%9A%84%E8%AF%A6%E7%BB%86%E5%AF%B9%E6%AF%94/</link>
+      <pubDate>Fri, 28 Jun 2019 21:35:46 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/%E5%8E%9F%E7%94%9Fjsjquery%E5%92%8Cvue.js%E7%9A%84ajax%E7%9A%84%E8%AF%A6%E7%BB%86%E5%AF%B9%E6%AF%94/</guid>
+      <description>原生js ajax(&amp;#39;get&amp;#39;, &amp;#39;http://127.0.0.1:3000/get&amp;#39;, function(response){ alert(JSON.parse(response)[&amp;#39;message&amp;#39;]); }); ajax(&amp;#39;post&amp;#39;, &amp;#39;http://127.0.0.1:3000/post&amp;#39;, function (response) { alert(JSON.parse(response)[&amp;#39;message&amp;#39;]); }, JSON.stringify({name: &amp;#34;post测试&amp;#34;})); function ajax(method, url, callback, data, async){ var data=data || null; var async=async || true; var xhr = new window.XMLHttpRequest || ActiveXObject(&amp;#39;Microsoft.XMLHTTP&amp;#39;); xhr.open(method, url, async); xhr.setRequestHeader(&amp;#39;content-type&amp;#39;, &amp;#39;application/json&amp;#39;); xhr.send(data); console.log(&amp;#34;发送的数据是：&amp;#34;+data); xhr.onreadystatechange = function(){ if(xhr.readyState === 4){ if(xhr.status &amp;gt;=200&amp;amp;&amp;amp;xhr.status&amp;lt;300||xhr.status==304){ console.log(&amp;#34;完成请求，响应就绪&amp;#34;); callback(this.responseText); } } } }  原生js-Promise ajax(&amp;#39;get&amp;#39;, &amp;#39;http://127.0.0.1:3000/get&amp;#39;).then(function (data) { alert(JSON.parse(data).message); }).catch(function (error) { alert(error); }); ajax(&amp;#39;post&amp;#39;, &amp;#39;http://127.</description>
+    </item>
+    
+    <item>
+      <title>关于Ajax的jQuery、Vue.js、原生js的各个版本的实现对比</title>
+      <link>https://mannuan.github.io/post/%E5%85%B3%E4%BA%8Eajax%E7%9A%84jqueryvue.js%E5%8E%9F%E7%94%9Fjs%E7%9A%84%E5%90%84%E4%B8%AA%E7%89%88%E6%9C%AC%E7%9A%84%E5%AE%9E%E7%8E%B0%E5%AF%B9%E6%AF%94/</link>
+      <pubDate>Fri, 28 Jun 2019 20:38:26 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/%E5%85%B3%E4%BA%8Eajax%E7%9A%84jqueryvue.js%E5%8E%9F%E7%94%9Fjs%E7%9A%84%E5%90%84%E4%B8%AA%E7%89%88%E6%9C%AC%E7%9A%84%E5%AE%9E%E7%8E%B0%E5%AF%B9%E6%AF%94/</guid>
+      <description>目录
+前言
+1、原生js实现
+2、原生js实现——Promise版本
+3、jQuery实现
+4、Vue.js实现
+总结
+前言  下面对于各个版本的Ajax代码，想要实际测试它们，可以把它命名为server2.html，然后放在当前目录views目录下面。具体的教程可以看测试Ajax的Nodejs服务端代码
+ 1、原生js实现 &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;#34;zh&amp;#34;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;#34;UTF-8&amp;#34;&amp;gt; &amp;lt;title&amp;gt;原生js版本&amp;lt;/title&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;div&amp;gt;&amp;lt;button&amp;gt;点击我发送get请求&amp;lt;/button&amp;gt;&amp;lt;/div&amp;gt; &amp;lt;div&amp;gt;&amp;lt;button&amp;gt;点击我发送post请求&amp;lt;/button&amp;gt;&amp;lt;/div&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;script&amp;gt; document.getElementsByTagName(&amp;#39;button&amp;#39;)[0].addEventListener(&amp;#39;click&amp;#39;, function () { ajax(&amp;#39;get&amp;#39;, &amp;#39;http://127.0.0.1:3000/get&amp;#39;, function (response) { alert(JSON.parse(response)[&amp;#39;message&amp;#39;]); }); }); document.getElementsByTagName(&amp;#39;button&amp;#39;)[1].addEventListener(&amp;#39;click&amp;#39;, function () { ajax(&amp;#39;post&amp;#39;, &amp;#39;http://127.0.0.1:3000/post&amp;#39;, function (response) { alert(JSON.parse(response)[&amp;#39;message&amp;#39;]); }, JSON.stringify({ name: &amp;#34;post测试&amp;#34; })); }); function ajax(method, url, callback, data, async) { data = data || null; async = async || true; var xhr = new window.</description>
+    </item>
+    
+    <item>
+      <title>测试Ajax的Nodejs服务端代码</title>
+      <link>https://mannuan.github.io/post/%E6%B5%8B%E8%AF%95ajax%E7%9A%84nodejs%E6%9C%8D%E5%8A%A1%E7%AB%AF%E4%BB%A3%E7%A0%81/</link>
+      <pubDate>Fri, 28 Jun 2019 17:49:10 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/%E6%B5%8B%E8%AF%95ajax%E7%9A%84nodejs%E6%9C%8D%E5%8A%A1%E7%AB%AF%E4%BB%A3%E7%A0%81/</guid>
+      <description>前言  由于使用Ajax必须要有一个服务端来接收消息，为了方便我使用Nodejs来搭建服务端。同时，为了兼顾实践跨域的方法，我在这里搭建了两个服务端。其中，一个服务端用来响应Ajax请求，另外一个服务端用作加载页面。这样就产生了跨域的问题，我采用的是cors的解决方案，具体的实现，请看sever1的代码。
+ 前期准备工作  安装nodejs，可以参看我的这篇教程 选择koa2作为服务端 安装模块：koa，koa-router，koa2-cors，koa-bodyparser，koa-art-template，path  服务端交互示意图 文件路径示意图 server1.js var Koa = require(&amp;#39;koa&amp;#39;); var Router = require(&amp;#39;koa-router&amp;#39;); var cors = require(&amp;#39;koa2-cors&amp;#39;); var bodyParser = require(&amp;#39;koa-bodyparser&amp;#39;); var app = new Koa(); var router = new Router(); //下面的代码必须写在设置路由的前面 app.use(cors({ origin: function (ctx) { return &amp;#39;http://127.0.0.1:4000&amp;#39;; }, exposeHeaders: [&amp;#39;WWW-Authenticate&amp;#39;, &amp;#39;Server-Authorization&amp;#39;], maxAge: 5, credentials: true, allowMethods: [&amp;#39;GET&amp;#39;, &amp;#39;POST&amp;#39;, &amp;#39;DELETE&amp;#39;], allowHeaders: [&amp;#39;Content-Type&amp;#39;, &amp;#39;Authorization&amp;#39;, &amp;#39;Accept&amp;#39;], })); //配置post提交数据的中间件 app.use(bodyParser()); //处理get请求 router.get(&amp;#39;/get&amp;#39;, async function(ctx){ ctx.</description>
+    </item>
+    
+    <item>
+      <title>nodejs安装教程（完美避坑，适用于mac和linux）</title>
+      <link>https://mannuan.github.io/post/nodejs%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%E5%AE%8C%E7%BE%8E%E9%81%BF%E5%9D%91%E9%80%82%E7%94%A8%E4%BA%8Emac%E5%92%8Clinux/</link>
+      <pubDate>Fri, 28 Jun 2019 15:25:12 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/nodejs%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%E5%AE%8C%E7%BE%8E%E9%81%BF%E5%9D%91%E9%80%82%E7%94%A8%E4%BA%8Emac%E5%92%8Clinux/</guid>
+      <description>安装nodejs mac端 brew install node 如果安装速度慢，可以到nodejs官网下载pkg安装包；
+linux端 sudo apt-get install nodejs 检查安装 node -v npm -v 修改node_modules目录权限 教程
+添加node_modules路径 教程</description>
+    </item>
+    
+    <item>
+      <title>node require can&#39;t find module(mac或linux，不支持window)</title>
+      <link>https://mannuan.github.io/post/node-require-cant-find-module/</link>
+      <pubDate>Fri, 28 Jun 2019 11:40:44 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/node-require-cant-find-module/</guid>
+      <description> 前言  我已经正确的安装了node，并且我使用npm install -g 安装包没有出错，但是就是require(&amp;lsquo;安装包&amp;rsquo;)报错，我的安装在&amp;rsquo;/usr/local/lib/node_modules&amp;rsquo;下面
+ 原因分析 可能是node命令早不到npm的安装包的安装目录，于是我打印了node默认的模块目录：
+&amp;gt;&amp;gt;node &amp;gt;module.paths [ &#39;/Users/用户名/repl/node_modules&#39;, &#39;/Users/用户名/node_modules&#39;, &#39;/Users/node_modules&#39;, &#39;/node_modules&#39;, &#39;/Users/用户名/.node_modules&#39;, &#39;/Users/用户名/.node_libraries&#39;, &#39;/usr/local/lib/node&#39; ]  我发现，‘/usr/local/lib/node_modules’目录并没有包含在里面，于是我使用下面的命令
+&amp;gt;module.paths.push(&#39;/usr/local/lib/node_modules&#39;)  虽然这个命令生效了，但它是暂时性的。但我并不知道如何永久的把我的模块目录添加进去。 为了解决这个问题，我使用软链接的来解决这个问题
+解决方案 ln -sfn /usr/local/lib/node_modules /Users/用户名/node_modules  由于根据npm WARN checkPermissions Missing write access to /usr/local/lib/node_modules，node_module目录的拥有者是当前用户，所以没有必要使用sudo.
+ </description>
+    </item>
+    
+    <item>
+      <title>npm list -g出错</title>
+      <link>https://mannuan.github.io/post/npm-list-g%E5%87%BA%E9%94%99/</link>
+      <pubDate>Fri, 28 Jun 2019 11:06:38 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/npm-list-g%E5%87%BA%E9%94%99/</guid>
+      <description>前言  我是在重装node之后遇到这个问题的
+ 原因分析 当你已经安装node之后，它给你以下提示说明你已经安装好了：
+This package has installed: Node.js v10.16.0 to /usr/local/bin/node npm v6.9.0 to /usr/local/bin/npm Make sure that /usr/local/bin is in your $PATH.  但是，当你使用下面命令，报错了
+npm list -g 推测 我认为可能是没有卸载干净
+解决方案 我使用ls -a命令打印出了home目录下面的隐藏文件，发现了几个可以目录, &amp;quot;.npm&amp;quot;, &amp;quot;.npminstall_tarball&amp;quot;, &amp;quot;.node-gyp&amp;quot;。我把他们删除以后就不报错了
+结论 这些隐藏目录下面的配置文件的优先级比较高，导致出错</description>
+    </item>
+    
+    <item>
+      <title>npm WARN checkPermissions Missing write access to /usr/local/lib/node_modules</title>
+      <link>https://mannuan.github.io/post/npm-warn-checkpermissions-missing-write-to/</link>
+      <pubDate>Fri, 28 Jun 2019 10:40:30 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/npm-warn-checkpermissions-missing-write-to/</guid>
+      <description> 原因分析  详看错误提示：npm ERR! Error: EACCES: permission denied, access &amp;lsquo;/usr/local/lib/node_modules&amp;rsquo; 推测当前用户没有对&amp;rdquo;node_modules&amp;rdquo;的写入权限
+ 验证推测 &amp;gt;&amp;gt; ls -lth /usr/local/lib/node_modules total 0 drwxr-xr-x 24 root wheel 768B May 29 05:21 npm  观看上面的结果推测成立
+解决方案 方案一（不推荐） 修改&amp;rdquo;node_modules&amp;rdquo;的权限，增加”写入“权限；
+sudo chmod 775 /usr/local/lib/node_modules  并不推荐这种方案，因为这个目录完全不会有root用户进行访问
+ 方案二 （推荐） 改变&amp;rdquo;node_nodules&amp;rdquo;目录的拥有者
+sudo chown -R $USER /usr/local/lib/node_modules</description>
+    </item>
+    
+    <item>
+      <title>mac下pkg安装包卸载</title>
+      <link>https://mannuan.github.io/post/mac%E4%B8%8Bpkg%E5%AE%89%E8%A3%85%E5%8C%85%E5%8D%B8%E8%BD%BD/</link>
+      <pubDate>Fri, 28 Jun 2019 10:15:17 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/mac%E4%B8%8Bpkg%E5%AE%89%E8%A3%85%E5%8C%85%E5%8D%B8%E8%BD%BD/</guid>
+      <description>Mac下的安装和删除都比windows更加简单清晰，这点在dmg方式下非常明显，但很多时候我们会使用pkg来进行安装，这样的安装想删除就有点麻烦了。
+比如，我安装了Golang这个pkg用于go语言的编译，安装后确实可以使用，但安装的是一个工具链，并不是一个应用软件。所以在Application目录下是没有内容的，你可以查到安装在/usr/local/go这个目录下，但是否所有的内容都安装在这个目录下呢？我删除这个pkg的目的是为了用源码直接编译出工具链来应用，如果还有其他一些配置文件遗漏，可能会导致后续配置的问题。
+经过一些搜索和学习，觉得有两个方法：
+ 使用pkgutil命令  首先运行pkgutil --pkgs | grep -i go，这样会列出含有go字样的pkg
+这里我们可以看到，运行命令后列出了所有名字中含有&amp;rdquo;go&amp;rdquo;的pkg，其中com.googlecode.go就是我们golang的pkg，也就是我们要删除的pkg。
+然后运行pkgutil &amp;ndash;files com.googlecode.go这个命令，这个命令会列出pkg的所有安装的文件，根据这个列表就可以保证删除干净了，再也没有后患。
+比如对于golang的pkg，虽然有长长的一个列表，我们还是可以总结出来，除/usr/local/go之外，还有etc/paths.d/go这个文件需要删除。
+ 直接使用工具，这样可以傻瓜化的一键搞定，下载地址：http://www.corecode.at/uninstallpkg/   除了这两个方法之外，还有其他的方法，不过我觉得这两个方法比较清晰简单。第一个方法主要是手动删除，适用于熟练的资深工程师；第二个方法一键完成，适用于一切玩家。</description>
+    </item>
+    
+    <item>
+      <title>优化mac触摸板（Trackpad）使用体验的推荐设置</title>
+      <link>https://mannuan.github.io/post/%E4%BC%98%E5%8C%96mac%E8%A7%A6%E6%91%B8%E6%9D%BFtrackpad%E4%BD%BF%E7%94%A8%E4%BD%93%E9%AA%8C%E7%9A%84%E6%8E%A8%E8%8D%90%E8%AE%BE%E7%BD%AE/</link>
+      <pubDate>Thu, 27 Jun 2019 16:54:48 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/%E4%BC%98%E5%8C%96mac%E8%A7%A6%E6%91%B8%E6%9D%BFtrackpad%E4%BD%BF%E7%94%A8%E4%BD%93%E9%AA%8C%E7%9A%84%E6%8E%A8%E8%8D%90%E8%AE%BE%E7%BD%AE/</guid>
+      <description>右键菜单 使用”双指点击“代替”右键“
+上下左右滚动页面 使用”双指拖动“代替”鼠标“
+切换窗口 使用”四指拖动“代替”传统的组合快捷键“
+快捷返回桌面 使用”五指释放“代替”传统的组合快捷键“
+打开Launchpad 使用”五指收回“
+左键点击 使用”单指轻触“代替左键点击</description>
+    </item>
+    
+    <item>
+      <title>iTerm2的常用快捷键</title>
+      <link>https://mannuan.github.io/post/iterm2%E7%9A%84%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/</link>
+      <pubDate>Thu, 27 Jun 2019 16:29:24 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/iterm2%E7%9A%84%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/</guid>
+      <description>   快捷键 功能     command+D 新建Tab   command+数字 切换Tab    </description>
+    </item>
+    
+    <item>
+      <title>mac使用快捷键打开iTerm2</title>
+      <link>https://mannuan.github.io/post/mac%E4%BD%BF%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE%E6%89%93%E5%BC%80iterm2/</link>
+      <pubDate>Thu, 27 Jun 2019 15:46:51 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/mac%E4%BD%BF%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE%E6%89%93%E5%BC%80iterm2/</guid>
+      <description>前言  使用快捷键打开item窗口的一个前提是iTerm必须已经打开了
+ 选择iTerm2，点击prefences 点击Profiles 新建窗口实例 常用的窗口属性 设置窗口名称 设置窗口字体 设置窗口透明度 设置窗口的快捷键 设置窗口的位置 有多种设置窗口位置的方法，比如”置顶“，”正常模式“等</description>
+    </item>
+    
+    <item>
+      <title>关于Content-Type几种值的区别及用法</title>
+      <link>https://mannuan.github.io/post/%E5%85%B3%E4%BA%8Econtent-type%E5%87%A0%E7%A7%8D%E5%80%BC%E7%9A%84%E5%8C%BA%E5%88%AB%E5%8F%8A%E7%94%A8%E6%B3%95/</link>
+      <pubDate>Wed, 26 Jun 2019 22:44:53 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/%E5%85%B3%E4%BA%8Econtent-type%E5%87%A0%E7%A7%8D%E5%80%BC%E7%9A%84%E5%8C%BA%E5%88%AB%E5%8F%8A%E7%94%A8%E6%B3%95/</guid>
+      <description>1、Content-Type 的值类型：
+1.1 application/json：消息主体是序列化后的 JSON 字符串
+1.2 application/x-www-form-urlencoded：数据被编码为名称/值对。这是标准的编码格式
+1.3 multipart/form-data： 需要在表单中进行文件上传时，就需要使用该格式。常见的媒体格式是上传文件之时使用的
+1.4 text/plain：数据以纯文本形式(text/json/xml/html)进行编码，其中不含任何控件或格式字符。
+2、application/json 和 application/x-www-form-urlencoded的区别
+2.1 application/json：作用： 告诉服务器请求的主题内容是json格式的字符串，服务器端会对json字符串进行解析，好处： 前端人员不需要关心数据结构的复杂度，只要是标准的json格式就能提交成功。
+2.2 application/x-www-form- urlencoded：是Jquery的Ajax请求默认方式作用：在请求发送过程中会对数据进行序列化处理，以键值对形式？key1=value1&amp;amp;key2=value2的方式发送到服务器，好处： 所有浏览器都支持
+3、 application/x-www-form-urlencoded：信息数据被编码为名称/值对，这是标准且默认的编码格式
+3.1 当action为get时候，客户端把form数据转换成一个字串append到url后面，用&amp;rsquo;?&amp;lsquo;分割。
+3.2 当action为post时候，浏览器把form数据封装到http body中，然后发送到server。（可以取消post请求的预检请求）
+Vue中 content-type 设置</description>
+    </item>
+    
+    <item>
+      <title>网站优化 14条--雅虎十四条优化原则</title>
+      <link>https://mannuan.github.io/post/%E7%BD%91%E7%AB%99%E4%BC%98%E5%8C%96-14%E6%9D%A1-%E9%9B%85%E8%99%8E%E5%8D%81%E5%9B%9B%E6%9D%A1%E4%BC%98%E5%8C%96%E5%8E%9F%E5%88%99/</link>
+      <pubDate>Wed, 26 Jun 2019 10:22:31 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/%E7%BD%91%E7%AB%99%E4%BC%98%E5%8C%96-14%E6%9D%A1-%E9%9B%85%E8%99%8E%E5%8D%81%E5%9B%9B%E6%9D%A1%E4%BC%98%E5%8C%96%E5%8E%9F%E5%88%99/</guid>
+      <description>相信互联网已经越来越成为人们生活中不可或缺的一部分。Ajax，flex等等富客户端的应用使得人们越加“幸福”地体验着许多原先只能在C/S实 现的功 能。比如Google机会已经把最基本的office应用都搬到了互联网上。当然便利的同时毫无疑问的也使页面的速度越来越慢。自己是做前端开发的，在性能方面，根据Yahoo的调查，后台只占5%，而前端高达95%之多，其中有88%的东西是可以优化的。
+[外链图片转存失败(img- edenZ0UF-1562139364811)(http://www.phpv.net/uploadfile/month_200901/local_xahdWW7qeV.jpg)]
+以上是一张web2.0页面的生命周期图。工程师很形象地讲它分成了“怀孕，出生，毕业，结婚”四个阶段。如果在我们点击网页链接的时候能够意识到 这个过程而不是简单的请求-响应的话，我们便可以挖掘出很多细节上可以提升性能的东西。今天听了淘宝小马哥的一个对yahoo开发团队对web性能研究的 一个讲座，感觉收获很大，想在blog上做个分享。
+相信很多人都听过优化网站性能的14条规则。更多的信息可见developer.yahoo.com
+   1. 尽可能的减少 HTTP 的请求数 content     2. 使用 CDN（Content Delivery Network） server   3. 添加 Expires 头(或者 Cache-control ) server   4. Gzip 组件 server   5. 将 CSS 样式放在页面的上方 css   6. 将脚本移动到底部（包括内联的） javascript   7. 避免使用 CSS 中的 Expressions css   8. 将 JavaScript 和 CSS 独立成外部文件 javascript css   9.</description>
+    </item>
+    
+    <item>
+      <title>CSS三种引入方式：内联、页级、外联</title>
+      <link>https://mannuan.github.io/post/css%E4%B8%89%E7%A7%8D%E5%BC%95%E5%85%A5%E6%96%B9%E5%BC%8F%E5%86%85%E8%81%94%E9%A1%B5%E7%BA%A7%E5%A4%96%E8%81%94/</link>
+      <pubDate>Tue, 25 Jun 2019 20:59:45 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/css%E4%B8%89%E7%A7%8D%E5%BC%95%E5%85%A5%E6%96%B9%E5%BC%8F%E5%86%85%E8%81%94%E9%A1%B5%E7%BA%A7%E5%A4%96%E8%81%94/</guid>
+      <description>1.内联CSS 内联CSS也可称为行内CSS或者行级CSS，它直接在标签内部引入，显著的优点是十分的便捷、高效；但是同时也造成了不能够重用样式的缺点，如果代码行数到达一定长度不建议采用。通常内联CSS作为测试使用，可以查找代码中bug。
+&amp;lt;body&amp;gt; &amp;lt;div style=&amp;#34;width: 65px;height: 20px;border: 1px solid;&amp;#34;&amp;gt;测试元素div&amp;gt; &amp;lt;body&amp;gt; 2.页级CSS 页级CSS也可称为内部CSS，整体是放在head标签里边的，在style标签里边定义样式，作用范围和字面意思相同，仅限于本页面的元素；如果你写的代码超过了几百行，想想每次把代码页拉到最上边都很烦，所以它在可维护性方面较差。
+&amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;#34;utf-8&amp;#34;/&amp;gt; &amp;lt;title&amp;gt;测试title&amp;gt; &amp;lt;style type=&amp;#34;text/css&amp;#34;&amp;gt; div { width: 65px; height: 20px; border: 1px solid; background: greenyellow; } &amp;lt;/style&amp;gt; &amp;lt;/head&amp;gt; 3. 外联CSS 外联CSS也可称为外部CSS，在实际的项目中通常使用此种方式，它只在页面中使用link或者@import引入即可，可维护性好；并且外联CSS是一个单独的文件，可以作用于多个页面，在修改的时候可以针对性地修改某一块区域，达到多个页面样式同时变更，相较于内联CSS和页级CSS，省去了到每个页面修改的步骤，提高了开发效率，同时一定程度提高了性能。
+接下来具体说说link和@import的区别：
+(1)link: link语法格式中，rel指的是关联(relation)，type指的是类型，href指的是链接文件路径。
+link的作用主要用来引入CSS和网页图标，指示告知搜索引擎，网页之间的关系等。
+(2)@import: @import语法格式务必写在style标签中，后直接加文件路径即可。
+@import作用在CSS文件和页面中，可以在一个CSS文件中引入其他的CSS文件，例如在index.css文件中引入其他CSS文件的样式，整合在一起后，再在index.html中调用一次即可，在实际项目中经常使用，方便管理和维护。
+(3)二者加载顺序影响 HTML加载过程：
+1) 加载HTML-DOM结构 2)CSS和JS 3)图片和多媒体 4)加载事件触发 link和@import都没有放置顺序的要求，但是不同的放置位置可能会造成效果显示的差异。对于link，无论放到哪个位置，都是一边加载数据，一边进行优化，视觉感受很好；而对于@import，放置到哪里，才从哪里开始加载CSS样式，即先加载数据，然后加载样式，如果网速不佳，可能会造成只有数据出来，而样式一点点加载的效果。并且在同一个页面中，调用两种方式，link永远比@import优先级高。
+在项目中使用的时候，一般在页面中调用方式为link，并且放在head标签中；使用@import除了在CSS文件中，在页面调用时，一般加载第三方的样式会使用到，并且需要放置在页面的底部，不会影响自己的网站。</description>
+    </item>
+    
+    <item>
+      <title>JavaScript debugger 语句</title>
+      <link>https://mannuan.github.io/post/javascript-debugger-%E8%AF%AD%E5%8F%A5/</link>
+      <pubDate>Tue, 25 Jun 2019 16:41:26 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/javascript-debugger-%E8%AF%AD%E5%8F%A5/</guid>
+      <description>实例 开启 debugger ，代码在执行到第三行前终止。
+var x = 15 * 5; debugger; document.getElementbyId(&amp;#34;demo&amp;#34;).innerHTML = x;  定义和用法 debugger 语句用于停止执行 JavaScript，并调用 (如果可用) 调试函数。
+使用 debugger 语句类似于在代码中设置断点。
+通常，你可以通过按下 F12 开启调试工具， 并在调试菜单中选择&amp;rdquo;Console&amp;rdquo; 。
+注意： 如果调试工具不可用，则调试语句将无法工作。
+更多 JavaScript 调试信息，及在浏览器不支持的情况下如何激活浏览器的调试工具，请查阅我们的JavaScript调试 教程。
+浏览器支持
+ 语句
+ &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;  debugger
+  Yes
+  Yes
+  Yes
+  Yes
+  Yes
+  语法  JavaScript 版本：
+  1.</description>
+    </item>
+    
+    <item>
+      <title>javascript创建对象的10种模式</title>
+      <link>https://mannuan.github.io/post/javascript%E5%88%9B%E5%BB%BA%E5%AF%B9%E8%B1%A1%E7%9A%8410%E7%A7%8D%E6%A8%A1%E5%BC%8F/</link>
+      <pubDate>Mon, 24 Jun 2019 21:36:00 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/javascript%E5%88%9B%E5%BB%BA%E5%AF%B9%E8%B1%A1%E7%9A%8410%E7%A7%8D%E6%A8%A1%E5%BC%8F/</guid>
+      <description>第1种：对象字面量
+//对象字面量（速度快，推荐使用） var animal = {property: &amp;#34;都要呼吸&amp;#34;, getProperty: function(){return this.property;}}; var person = {feature: &amp;#34;直立行走&amp;#34;, getFeature: function(){return this.feature;}};  第2种：Object构造函数
+var animal = new Object(); animal.property=&amp;#34;都要呼吸&amp;#34;; animal.getProperty=function(){return this.property;} var person = new Object(); person.feature=&amp;#34;直立行走&amp;#34;; person.getFeature = function(){return this.feature;}  第3种：工厂模式
+function createAnimal(){var animal=new Object();animal.property=&amp;#34;都要呼吸&amp;#34;;animal.getProperty=function(){return this.property;} return animal;} function createPerson(){var person=new Object();person.feature=&amp;#34;直立行走&amp;#34;;person.getFeature=function(){return this.feature;} return person;} var animal = createAnimal(); var person = createPerson();  第4种：构造函数模式
+function Animal(){this.property=&amp;#34;都要呼吸&amp;#34;;this.getProperty=function(){return this.property;};} function Person(){this.feature=&amp;#34;直立行走&amp;#34;;this.getFeature=function(){return this.feature;};} var animal = new Animal(); var person = new Person();  第5种：原型模式</description>
+    </item>
+    
+    <item>
+      <title>javascript继承的6种方式</title>
+      <link>https://mannuan.github.io/post/javascript%E7%BB%A7%E6%89%BF%E7%9A%846%E7%A7%8D%E6%96%B9%E5%BC%8F/</link>
+      <pubDate>Mon, 24 Jun 2019 20:07:48 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/javascript%E7%BB%A7%E6%89%BF%E7%9A%846%E7%A7%8D%E6%96%B9%E5%BC%8F/</guid>
+      <description>第一种：原型链继承： function Animal(){ this.property=&amp;#34;都要呼吸&amp;#34;; } Animal.prototype.getProperty = new function(){ return this.property; } function Person(){ this.feature=&amp;#34;直立行走&amp;#34;; } Person.prototype = new Animal(); Person.prototype.getFeature = function(){ return this.feature; } var p1 = new Person(); console.log(p1.getProperty()); console.log(p1.getFeature());  第二种：借用构造函数继承: function Animal(){ this.property=&amp;#34;都要呼吸&amp;#34;; this.getProperty=function(){ return this.property; }; } function Person(){ Animal.call(this); this.feature=&amp;#34;直立行走&amp;#34;; } Person.prototype.getFeature = function(){ return this.feature; } var p1 = new Person(); console.log(p1.getProperty()); console.log(p1.getFeature());  第三种：组合继承:（最常用的继承模式） function Animal(){ this.property=&amp;#34;都要呼吸&amp;#34;; } Animal.prototype.getProperty = function(){ return this.</description>
+    </item>
+    
+    <item>
+      <title>强大的pdf压缩工具</title>
+      <link>https://mannuan.github.io/post/%E5%BC%BA%E5%A4%A7%E7%9A%84pdf%E5%8E%8B%E7%BC%A9%E5%B7%A5%E5%85%B7/</link>
+      <pubDate>Sat, 22 Jun 2019 23:55:21 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/%E5%BC%BA%E5%A4%A7%E7%9A%84pdf%E5%8E%8B%E7%BC%A9%E5%B7%A5%E5%85%B7/</guid>
+      <description>Smallpdf目前是全网免费的pdf压缩工具中压缩率最高的，没有之一。但是由于目前在线的版本开始收费了，所以我专门下载了离线版进行crack，供以后长期使用。目前这个离线版本的压缩效果还是相当不错，它比目前流行的pdf压缩工具PDFCompressor的压缩效果要好50%。yqiq, fnas</description>
+    </item>
+    
+    <item>
+      <title>关于mac的time machine功能</title>
+      <link>https://mannuan.github.io/post/%E5%85%B3%E4%BA%8Emac%E7%9A%84time-machine%E5%8A%9F%E8%83%BD/</link>
+      <pubDate>Sat, 22 Jun 2019 19:24:23 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/%E5%85%B3%E4%BA%8Emac%E7%9A%84time-machine%E5%8A%9F%E8%83%BD/</guid>
+      <description>前言  最近这一个月，我发现我的mac空间不足了。我一直以为是我项目占据了很多空间。因此，不停的进行清理不用的东西。最后，还是发现空间不够。这个清理工作反反复复持续了几周，我电脑硬盘的可以存储空间还是很少。在不经意间，我用外部硬盘time machine备份了一下电脑，瞬间多了一大半的存储空间。我前面几个月也是经常备份电脑的，但是最近这个月由于论文和找工作的缘故没有时间备份。
+ 总结 mac如果开启time machine功能，就会定期进行备份。如果不用外部硬盘进行备份，就会先被分在本机硬盘上。这样会消耗大量的存储空间。但是，如果不开time machine，资料就没有保障。因此，定期用外部硬盘进行备份尤为重要。</description>
+    </item>
+    
+    <item>
+      <title>css书写常见错误</title>
+      <link>https://mannuan.github.io/post/css%E4%B9%A6%E5%86%99%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF/</link>
+      <pubDate>Sat, 22 Jun 2019 15:13:59 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/css%E4%B9%A6%E5%86%99%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF/</guid>
+      <description> 每个属性之间用分号&amp;rdquo;;&amp;ldquo;隔开;  </description>
+    </item>
+    
+    <item>
+      <title>vue常见错误汇总</title>
+      <link>https://mannuan.github.io/post/vue%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF%E6%B1%87%E6%80%BB/</link>
+      <pubDate>Sat, 22 Jun 2019 10:33:31 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/vue%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF%E6%B1%87%E6%80%BB/</guid>
+      <description> new Vue(), V要大写 .vue文件中的&amp;lt;template&amp;gt;&amp;lt;/template&amp;gt;中不可以出现空行 vue模板中的el指向的是id，所以为了标识id，在前面要加上&amp;rdquo;#&amp;rdquo;  </description>
+    </item>
+    
+    <item>
+      <title>attr()和addClass()的区别</title>
+      <link>https://mannuan.github.io/post/attr%E5%92%8Caddclass%E7%9A%84%E5%8C%BA%E5%88%AB/</link>
+      <pubDate>Sat, 22 Jun 2019 09:28:13 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/attr%E5%92%8Caddclass%E7%9A%84%E5%8C%BA%E5%88%AB/</guid>
+      <description>   方法 addClass() attr()     用途 追加样式 设置样式   对同一个网页元素操作 &amp;lt;p&amp;gt;test&amp;lt;/p&amp;gt;    第1次使用方法 $(&amp;quot;p&amp;quot;).addClass(&amp;quot;high&amp;quot;); $(&amp;quot;p&amp;quot;).attr(&amp;quot;class&amp;quot;, &amp;quot;high&amp;quot;);   第1次结果 &amp;lt;p class=&amp;quot;high&amp;quot;&amp;gt;test&amp;lt;/p&amp;gt;    再次使用方法 $(&amp;quot;p&amp;quot;).addClass(&amp;quot;another&amp;quot;); $(&amp;quot;p&amp;quot;).attr(&amp;quot;class&amp;quot;, &amp;quot;another&amp;quot;);   最终结果 &amp;lt;p class=&amp;quot;high another&amp;quot;&amp;gt;test&amp;lt;/p&amp;gt; &amp;lt;p class=&amp;quot;another&amp;quot;&amp;gt;test&amp;lt;/p&amp;gt;    </description>
+    </item>
+    
+    <item>
+      <title>val()方法的选中功能</title>
+      <link>https://mannuan.github.io/post/val%E6%96%B9%E6%B3%95%E7%9A%84%E9%80%89%E4%B8%AD%E5%8A%9F%E8%83%BD/</link>
+      <pubDate>Sat, 22 Jun 2019 09:27:53 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/val%E6%96%B9%E6%B3%95%E7%9A%84%E9%80%89%E4%B8%AD%E5%8A%9F%E8%83%BD/</guid>
+      <description>&amp;lt;select id=&amp;#34;single&amp;#34;&amp;gt; &amp;lt;option&amp;gt;选择1号&amp;lt;/option&amp;gt; &amp;lt;option&amp;gt;选择2号&amp;lt;/option&amp;gt; &amp;lt;option&amp;gt;选择3号&amp;lt;/option&amp;gt; &amp;lt;/select&amp;gt; &amp;lt;select id=&amp;#34;multiple&amp;#34; multiple=&amp;#34;multiple&amp;#34; style=&amp;#34;height:120px;&amp;#34;&amp;gt; &amp;lt;option selected=&amp;#34;selected&amp;#34;&amp;gt;选择1号&amp;lt;/option&amp;gt; &amp;lt;option&amp;gt;选择2号&amp;lt;/option&amp;gt; &amp;lt;option&amp;gt;选择3号&amp;lt;/option&amp;gt; &amp;lt;option&amp;gt;选择4号&amp;lt;/option&amp;gt; &amp;lt;option selected=&amp;#34;selected&amp;#34;&amp;gt;选择5号&amp;lt;/option&amp;gt; &amp;lt;/select&amp;gt; &amp;lt;input type=&amp;#34;checkbox&amp;#34; value=&amp;#34;check1&amp;#34;/&amp;gt;多选1 &amp;lt;input type=&amp;#34;checkbox&amp;#34; value=&amp;#34;check2&amp;#34;/&amp;gt;多选2 &amp;lt;input type=&amp;#34;checkbox&amp;#34; value=&amp;#34;check3&amp;#34;/&amp;gt;多选3 &amp;lt;input type=&amp;#34;checkbox&amp;#34; value=&amp;#34;check4&amp;#34;/&amp;gt;多选4 &amp;lt;input type=&amp;#34;radio&amp;#34; value=&amp;#34;radio1&amp;#34;/&amp;gt;单选1 &amp;lt;input type=&amp;#34;radio&amp;#34; value=&amp;#34;radio2&amp;#34;/&amp;gt;单选2 &amp;lt;input type=&amp;#34;radio&amp;#34; value=&amp;#34;radio3&amp;#34;/&amp;gt;单选3 该网页中的一些元素是默认选中的，可以通过val()方法来改变它们的选中项。如果要使第1个下拉框的第2项被选中，可以用以下jQuery代码实现：
+$(&amp;#34;#single&amp;#34;).val(&amp;#34;选择2号&amp;#34;);  如果使下拉框的第2项和第3项被选中，可以用以下jQuery代码实现:
+$(&amp;#34;#multiple&amp;#34;).val([&amp;#34;选择2号&amp;#34;, &amp;#34;选择3号&amp;#34;]);  按照上面类似的写法，下面的代码可以使多选框和单选框被选中，jQuery代码如下：
+$(&amp;#34;:checkbox&amp;#34;).val([&amp;#34;check2&amp;#34;, &amp;#34;check3&amp;#34;]); $(&amp;#34;:radio&amp;#34;).val([&amp;#34;radio2&amp;#34;]); </description>
+    </item>
+    
+    <item>
+      <title>parent()，parents()与closest()的区别</title>
+      <link>https://mannuan.github.io/post/parentparents%E4%B8%8Eclosest%E7%9A%84%E5%8C%BA%E5%88%AB/</link>
+      <pubDate>Sat, 22 Jun 2019 09:27:26 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/parentparents%E4%B8%8Eclosest%E7%9A%84%E5%8C%BA%E5%88%AB/</guid>
+      <description>   方法 描述 示例     parent() 获得集合中每个匹配元素的父级元素 $(&#39;.item-1&#39;).parent().css(&#39;background-color&#39;,&#39;red&#39;); parent()方法从指定类型的直接父节点开始查找。parent()返回一个元素节点。   parents() 获得集合中每个匹配元素的祖先元素 $(&#39;.item-1&#39;).parents(&#39;ul&#39;).css(&#39;background-color&#39;, &#39;red&#39;);
+parents()方法查找同parent()方法类似，不同的一点在于，当它找到第一个父节点时并没有停止查找，而是继续查找，最后返回多个父节点。   closest() 从元素本身开始，逐级向上级元素匹配，并返回最先匹配的祖先元素 $(.item-1).closest(&amp;quot;ul&amp;quot;).css(&amp;quot;background-color&amp;quot;, &#39;red&#39;);
+closest()方法查找是从包含自身的节点找起，它同parents()方法类似，不同点在于它的只返回匹配的第一个节点。    </description>
+    </item>
+    
+    <item>
+      <title>snippet,让你编码效率翻倍</title>
+      <link>https://mannuan.github.io/post/snippet%E8%AE%A9%E4%BD%A0%E7%BC%96%E7%A0%81%E6%95%88%E7%8E%87%E7%BF%BB%E5%80%8D/</link>
+      <pubDate>Sat, 22 Jun 2019 09:26:50 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/snippet%E8%AE%A9%E4%BD%A0%E7%BC%96%E7%A0%81%E6%95%88%E7%8E%87%E7%BF%BB%E5%80%8D/</guid>
+      <description>为什么谈到Snippet
+今天下午在用vscode做小程序的时候，发现很不方便，因为商店里提供的代码片段极为有限，而且平时几乎每天都需要用到代码片段，所以就在思考他们是怎么做到给别人提供代码的，我可以自定义代码片段吗。然后查了下，果然，这在vscode里自带的（好像藏得有点深），是可以自定义的，然后在做完自己的任务后捣鼓了下，基本了解了snippet的语法，突然有种打开新世界大门的感觉。做个记录，上菜了
+如何打开snippet配置
+这里以vscode为例，其他编辑器大概也差不多。在vscode中快捷键「Ctrl + Shift + P」打开命令窗口，然后输入snippet,选择 [配置用户代码片段]，点击后，就可以愉快的进行片段的编写了
+Snippet怎么用
+先上一个Demo
+&amp;#34;html template&amp;#34;: { &amp;#34;prefix&amp;#34;: &amp;#34;ht&amp;#34;, &amp;#34;body&amp;#34;: [ &amp;#34;&amp;lt;!DOCTYPE html&amp;gt;&amp;#34;, &amp;#34;&amp;lt;html lang=\&amp;#34;en\&amp;#34;&amp;gt;&amp;#34;, &amp;#34;&amp;lt;head&amp;gt;&amp;#34;, &amp;#34; &amp;lt;meta charset=\&amp;#34;UTF-8\&amp;#34;&amp;gt;&amp;#34;, &amp;#34; &amp;lt;title&amp;gt;${1:$CURRENT_DATE}&amp;lt;/title&amp;gt;&amp;#34;, &amp;#34;&amp;lt;/head&amp;gt;&amp;#34;, &amp;#34;&amp;lt;body&amp;gt;&amp;#34;, &amp;#34; &amp;lt;div class=\&amp;#34;${2|container,wrapper|}\&amp;#34;&amp;gt;&amp;#34;, &amp;#34; ${3}&amp;#34;, &amp;#34; &amp;lt;/div&amp;gt;&amp;#34;, &amp;#34;&amp;lt;/body&amp;gt;&amp;#34;, &amp;#34;&amp;lt;/html&amp;gt;&amp;#34;, ], &amp;#34;description&amp;#34;: &amp;#34;create a html frame&amp;#34; } 基础结构
+ 片段名字 prefix（前缀，输入的触发条件，比如上面例子中当我输入ht后，就能tab出来片段） body（主体部分，在里面根据语法定义自己需要的代码片段） description（说明，片段的具体描述）  基础语法
+ 每个逗号代表一整行的结束，双引号需要用转义字符  $number表示光标跳转的顺序，比如$1表示光标首次需要跳转的位置，相同序号的会在一起，另外$0表示最终光标位置 变量，在未赋值的情况下提供默认值，这里提供一些变量  TM_SELECTED_TEXT：当前选定的文本或空字符串； TM_CURRENT_LINE：当前行的内容； TM_CURRENT_WORD：光标所处单词或空字符串 TM_LINE_INDEX：行号（从零开始）； TM_LINE_NUMBER：行号（从一开始）； TM_FILENAME：当前文档的文件名； TM_FILENAME_BASE：当前文档的文件名（不含后缀名）； TM_DIRECTORY：当前文档所在目录； TM_FILEPATH：当前文档的完整文件路径； CLIPBOARD：当前剪贴板中内容。时间相关CURRENT_YEAR: 当前年份； CURRENT_YEAR_SHORT: 当前年份的后两位； CURRENT_MONTH: 格式化为两位数字的当前月份，如 02； CURRENT_MONTH_NAME: 当前月份的全称，如 July；CURRENT_MONTH_NAME_SHORT: 当前月份的简称，如 Jul； CURRENT_DATE: 当天月份第几天； CURRENT_DAY_NAME: 当天周几，如 Monday； CURRENT_DAY_NAME_SHORT: 当天周几的简称，如 Mon；CURRENT_HOUR: 当前小时（24小时制）； CURRENT_MINUTE: 当前分钟； CURRENT_SECOND: 当前秒数。</description>
+    </item>
+    
+    <item>
+      <title>jQuery插入节点的方法</title>
+      <link>https://mannuan.github.io/post/jquery%E6%8F%92%E5%85%A5%E8%8A%82%E7%82%B9%E7%9A%84%E6%96%B9%E6%B3%95/</link>
+      <pubDate>Fri, 21 Jun 2019 19:59:30 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/jquery%E6%8F%92%E5%85%A5%E8%8A%82%E7%82%B9%E7%9A%84%E6%96%B9%E6%B3%95/</guid>
+      <description>方法 描述 示例     append() 向每个匹配的元素内部追加内容 HTML代码: &amp;lt;p&amp;gt;我想说：&amp;lt;/p&amp;gt; jQuery代码: $(&amp;quot;p&amp;quot;).append(&amp;quot;&amp;lt;b&amp;gt;你好&amp;lt;/b&amp;gt;&amp;quot;); 结果: &amp;lt;p&amp;gt;我想说：&amp;lt;b&amp;gt;你好&amp;lt;/b&amp;gt;&amp;lt;/p&amp;gt;   appendTo() 将所有匹配的元素追加到指定元素中，实际上，使用该方法是颠倒了常规的$(A).append(B)的操作，即不是将B追加到A中，而是将A追加到B中 HTML代码：
+&amp;lt;p&amp;gt;我想说:&amp;lt;/p&amp;gt; jQuery代码:
+$(&amp;quot;&amp;lt;b&amp;gt;你好&amp;lt;/b&amp;gt;&amp;quot;).appendTo(&amp;quot;p&amp;quot;); 结果:
+&amp;lt;p&amp;gt;我想说：&amp;lt;b&amp;gt;你好&amp;lt;/b&amp;gt;&amp;lt;/p&amp;gt;   prepend() 向每个匹配的元素内部前置内容 HTML代码：
+&amp;lt;p&amp;gt;我想说：&amp;lt;/p&amp;gt; jQuery代码：
+$(&amp;quot;p&amp;quot;).prepend(&amp;quot;&amp;lt;b&amp;gt;你好&amp;lt;/b&amp;gt;&amp;quot;);
+结果：
+&amp;lt;p&amp;gt;&amp;lt;b&amp;gt;你好&amp;lt;/b&amp;gt;我想说：&amp;lt;/p&amp;gt;   prependTo() 将所有匹配的元素前置到指定的元素中。实际上，使用该方法是颠倒了常规的$(A).prepend(B)的操作，即不是将B前置到A中，而是将A前置到B中 HTML代码：
+&amp;lt;p&amp;gt;我想说：&amp;lt;/p&amp;gt;
+jQuery代码:
+$(&amp;quot;&amp;lt;b&amp;gt;你好&amp;lt;/b&amp;gt;&amp;quot;).prependTo(&amp;quot;p&amp;quot;);
+结果:
+&amp;lt;p&amp;gt;&amp;lt;b&amp;gt;你好&amp;lt;/b&amp;gt;我想说：&amp;lt;/p&amp;gt;   after() 在每个匹配的元素之后插入内容 HTML代码：
+&amp;lt;p&amp;gt;我想说：&amp;lt;/p&amp;gt;
+jQuery代码：
+$(&amp;quot;p&amp;quot;).after(&amp;quot;&amp;lt;b&amp;gt;你好&amp;lt;/b&amp;gt;&amp;quot;);
+结果：
+&amp;lt;p&amp;gt;我想说：&amp;lt;/p&amp;gt;&amp;lt;b&amp;gt;你好&amp;lt;/b&amp;gt;   insertAfter() 将所有匹配的元素插入到指定元素的后面。实际上，使用该方法是颠倒了常规的$(A).after(B)的操作，即不是讲B插入到A后面，而是将A插入到B后面 HTML代码：
+&amp;lt;p&amp;gt;我想说：&amp;lt;/p&amp;gt;
+jQuery代码:
+$(&amp;quot;&amp;lt;b&amp;gt;你好&amp;lt;/b&amp;gt;&amp;quot;).insertAfter(&amp;quot;p&amp;quot;);
+结果：
+&amp;lt;p&amp;gt;我想说：&amp;lt;/p&amp;gt;&amp;lt;b&amp;gt;你好&amp;lt;/b&amp;gt;   before() 在每个匹配的元素之前插入内容 HTML代码：</description>
+    </item>
+    
+    <item>
+      <title>表单选择器</title>
+      <link>https://mannuan.github.io/post/%E8%A1%A8%E5%8D%95%E9%80%89%E6%8B%A9%E5%99%A8/</link>
+      <pubDate>Fri, 21 Jun 2019 13:43:32 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/%E8%A1%A8%E5%8D%95%E9%80%89%E6%8B%A9%E5%99%A8/</guid>
+      <description>   选择器 描述 返回 示例     :input 选取所有的&amp;lt;input&amp;gt;、&amp;lt;textarea&amp;gt;、&amp;lt;select&amp;gt;和&amp;lt;button&amp;gt;元素 集合元素 $(&amp;quot;:input&amp;quot;)选取所有&amp;lt;input&amp;gt;、&amp;lt;textarea&amp;gt;、&amp;lt;select&amp;gt;和&amp;lt;button&amp;gt;元素   :text 选取所有的单行文本框 集合元素 $(&amp;quot;:text&amp;quot;)选取所有的单行文本框   :password 选取所有的密码框 集合元素 $(&amp;quot;:password&amp;quot;)选取所有的密码框   :radio 选取所有的单选框 集合元素 $(&amp;quot;:radio&amp;quot;)选取所有的单选框   :checkbox 选取所有的复选框 集合元素 $(&amp;quot;:checkbox&amp;quot;)选取所有的复选框   :submit 选取所有的提交按钮 集合元素 $(&amp;quot;:submit&amp;quot;)选取所有的提交按钮   :image 选取所有的图像按钮 集合元素 $(&amp;quot;:image&amp;quot;)选取所有的图像按钮   :reset 选取所有的重置按钮 集合元素 $(&amp;quot;:reset&amp;quot;)选取所有的重置按钮   :button 选取所有按钮 集合元素 $(&amp;quot;:button&amp;quot;)选取所有的按钮   :file 选取所有的上传域 集合元素 $(&amp;quot;:file&amp;quot;)选取所有的上传域   :hidden 选取所有不可见元素 集合元素 $(&amp;quot;:hidden&amp;quot;)选取所有不可见元素（已经在不可见过滤选择器中讲解过）    </description>
+    </item>
+    
+    <item>
+      <title>表单对象属性过滤选择器</title>
+      <link>https://mannuan.github.io/post/%E8%A1%A8%E5%8D%95%E5%AF%B9%E8%B1%A1%E5%B1%9E%E6%80%A7%E8%BF%87%E6%BB%A4%E9%80%89%E6%8B%A9%E5%99%A8/</link>
+      <pubDate>Fri, 21 Jun 2019 11:20:44 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/%E8%A1%A8%E5%8D%95%E5%AF%B9%E8%B1%A1%E5%B1%9E%E6%80%A7%E8%BF%87%E6%BB%A4%E9%80%89%E6%8B%A9%E5%99%A8/</guid>
+      <description>   选择器 描述 返回 示例     :enabled 选取所有可用的元素 集合元素 $(&#39;#form1:enabled&#39;);选取id为&amp;rdquo;form1&amp;rdquo;的表单内的所有可用元素   :disabled 选取所有不可用的元素 集合元素 $(&amp;quot;#form2:disabled&amp;quot;)选取id为&amp;rdquo;form2&amp;rdquo;的表单内的所有不可用的元素   :checked 选取所有被选中的元素（单选框，复选框） 集合元素 $(&amp;quot;input:checked&amp;quot;)；选取所有被选中的&amp;lt;input&amp;gt;元素   :selected 选取所有被选中的选项元素（下拉列表） 集合元素 $(&amp;quot;select option:checked&amp;quot;);选取所有被选中的选项元素    </description>
+    </item>
+    
+    <item>
+      <title>子元素过滤选择器</title>
+      <link>https://mannuan.github.io/post/%E5%AD%90%E5%85%83%E7%B4%A0%E8%BF%87%E6%BB%A4%E9%80%89%E6%8B%A9%E5%99%A8/</link>
+      <pubDate>Fri, 21 Jun 2019 11:10:26 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/%E5%AD%90%E5%85%83%E7%B4%A0%E8%BF%87%E6%BB%A4%E9%80%89%E6%8B%A9%E5%99%A8/</guid>
+      <description>   选择器 描述 返回 示例     :nth-child(index/even/odd/equation) 选取每个父元素下的第index个子元素或者奇偶元素（index从1算起） 集合元素 :eq(index)只匹配一个元素，而:nth-child将为每一个父元素匹配子元素，并且:nth-child(index)的index是从1开始的，而:eq(index)是从0算起的   :first-child 选取每个父元素的第一个子元素 集合元素 :first只返回单个元素，而:first-child选择符将为每个父元素匹配第一个子元素。
+例如$(&#39;ul li:first-child&#39;)；选取每个&amp;lt;ul&amp;gt;中第一个&amp;lt;li&amp;gt;元素   :last-child 选取每个父元素的最后子元素 集合元素 同样，:last只返回单个元素，而:last-child选择符将为每个父元素匹配最后一个子元素。
+例如$(&#39;ul li:last-child&#39;);选择每个&amp;lt;ul&amp;gt;中最后一个&amp;lt;li&amp;gt;元素   :only-child 如果某个元素是它父元素中唯一的子元素，那么将会被匹配。如果父元素中含有其他元素，则不会被匹配 集合元素 $(&#39;ul li:only-child&#39;)
+在&amp;lt;ul&amp;gt;中选取是唯一子元素的&amp;lt;li&amp;gt;元素    </description>
+    </item>
+    
+    <item>
+      <title>属性过滤选择器</title>
+      <link>https://mannuan.github.io/post/%E5%B1%9E%E6%80%A7%E8%BF%87%E6%BB%A4%E9%80%89%E6%8B%A9%E5%99%A8/</link>
+      <pubDate>Fri, 21 Jun 2019 10:48:25 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/%E5%B1%9E%E6%80%A7%E8%BF%87%E6%BB%A4%E9%80%89%E6%8B%A9%E5%99%A8/</guid>
+      <description>   选择器 描述 返回 示例     [attribute] 选取拥有此属性的元素 集合元素 $(‘div[id]’)选取拥有属性id的元素   [attribute=value] 选取属性的值为value的元素 集合元素 $(‘div[title=test]’)选取属性title为“test”的&amp;lt;div&amp;gt;元素   [attribute!=value] 选取属性的值不等于value的元素 集合元素 $(&#39;div[title!=test]&#39;)选取属性title不等于&amp;rdquo;test&amp;rdquo;的&amp;lt;div&amp;gt;元素（注意：没有属性title的&amp;lt;div&amp;gt;元素也会被选取）   [attribute^=value] 选取属性的值以value开始的元素 集合元素 $(&#39;div[title^=test]&#39;)选取属性title以“test”开始的&amp;lt;div&amp;gt;元素   [attribute$=value] 选取属性的值以value结束的元素 集合元素 $(&#39;div[title$=test]&#39;)选取属性title以“test”结束的&amp;lt;div&amp;gt;元素   [attribute*=value] 选取属性的值含有value的元素 集合元素 $(&#39;div[title*=test]&#39;)选取属性title含有&amp;rdquo;test&amp;rdquo;的&amp;lt;div&amp;gt;元素   `[attribute =value]` 选取属性等于给定字符串或以该字符串为前缀（该字符串后跟一个连字符“-”）的元素 集合元素   [attribute~=value] 选取属性用空格分隔的值中包含一个给定值的元素 集合元素 $(&#39;div[title~=&amp;quot;uk&amp;quot;]&#39;)选取属性title用空格分隔的值中包含字符uk的元素   [attribute1][attribute2]...[attributeN] 用属性选择器合并成一个复合属性选择器，满足多个条件。每选择一次，缩小一次范围。 集合元素 $(&#39;div[id][title$=&amp;quot;test&amp;quot;]&#39;)选取拥有属性id，并且属性title以“test”结束的&amp;lt;div&amp;gt;元素    </description>
+    </item>
+    
+    <item>
+      <title>可见性过滤选择器</title>
+      <link>https://mannuan.github.io/post/%E5%8F%AF%E8%A7%81%E6%80%A7%E8%BF%87%E6%BB%A4%E9%80%89%E6%8B%A9%E5%99%A8/</link>
+      <pubDate>Fri, 21 Jun 2019 10:26:07 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/%E5%8F%AF%E8%A7%81%E6%80%A7%E8%BF%87%E6%BB%A4%E9%80%89%E6%8B%A9%E5%99%A8/</guid>
+      <description>   选择器 描述 返回 示例     :hidden 选取所有不可见的元素 集合元素 $(&amp;quot;:hidden&amp;quot;)选取所有不可见的元素。包括&amp;lt;input type=&amp;quot;hidden&amp;quot;/&amp;gt;，&amp;lt;div style=&amp;quot;display:none&amp;quot;&amp;gt;和&amp;lt;div style=&amp;quot;visibility:hidden;&amp;quot;&amp;gt;等元素。如果只想选取&amp;lt;input&amp;gt;元素，可以使用$(&amp;quot;input:hiddden&amp;quot;)   :visible 选取所有可见的元素 集合元素 $(&amp;quot;div:visible&amp;quot;)选取所有可见的&amp;lt;div&amp;gt;元素    </description>
+    </item>
+    
+    <item>
+      <title>内容过滤选择器</title>
+      <link>https://mannuan.github.io/post/%E5%86%85%E5%AE%B9%E8%BF%87%E6%BB%A4%E9%80%89%E6%8B%A9%E5%99%A8/</link>
+      <pubDate>Fri, 21 Jun 2019 10:17:10 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/%E5%86%85%E5%AE%B9%E8%BF%87%E6%BB%A4%E9%80%89%E6%8B%A9%E5%99%A8/</guid>
+      <description>   选择器 描述 返回 示例     :contains(text) 选取含有文本内容为“text”的元素 集合元素 $(&#39;div:contains(&#39;我&#39;)&#39;)选取含有文本“我”的&amp;lt;div&amp;gt;元素   :empty 选取不包含子元素或者文本的空元素 集合元素 $(&#39;div:empty&#39;)选取不包含子元素（包括文本元素）的&amp;lt;div&amp;gt;空元素   :has(selector) 选取含有选择器所匹配的元素的元素 集合元素 $(&#39;div:has(p)&#39;)选取含有&amp;lt;p&amp;gt;元素的&amp;lt;div&amp;gt;元素   :parent 选取含有子元素或者文本的元素 集合元素 $(&#39;div:parent&#39;)选取拥有子元素（包括文本元素）的&amp;lt;div&amp;gt;元素    </description>
+    </item>
+    
+    <item>
+      <title>基本过滤选择器</title>
+      <link>https://mannuan.github.io/post/%E5%9F%BA%E6%9C%AC%E8%BF%87%E6%BB%A4%E9%80%89%E6%8B%A9%E5%99%A8/</link>
+      <pubDate>Fri, 21 Jun 2019 10:07:50 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/%E5%9F%BA%E6%9C%AC%E8%BF%87%E6%BB%A4%E9%80%89%E6%8B%A9%E5%99%A8/</guid>
+      <description>   选择器 描述 返回 示例     :first 选取第一个元素 单个元素 $(&#39;div:first&#39;)选取所有&amp;lt;div&amp;gt;元素中第一个&amp;lt;div&amp;gt;元素   :last 选取最后一个元素 单个元素 $(&#39;div:last&#39;)选取所有元素最后一个`元素   :not(selector) 去除所有与给定选择器匹配的元素 集合元素 $(&#39;input:not(.myClass)&#39;)选取class不是myClass的&amp;lt;input&amp;gt;元素   :even 选取索引是偶数的所有元素，索引从0开始 集合元素 $(&#39;input:even&#39;)选取索引是偶数的&amp;lt;input&amp;gt;元素   :odd 选取索引是奇数的所有元素，索引从0开始 集合元素 $(&#39;input:odd&#39;)选取索引是奇数的&amp;lt;input&amp;gt;元素   :eq(index) 选取索引等于index的元素（index从0开始） 单个元素 $(&#39;input:eq(1)&#39;)选取索引等于1的元素   :gt(index) 选取索引大于index的元素(index从0开始) 集合元素 $(&#39;input:gt(1)&#39;)选取索引大于1的&amp;lt;input&amp;gt;元素（注：大于1，不包括1）   :lt(index) 选取索引小于index的元素(index从0开始) 集合元素 $(&#39;input:lt(1)&#39;)选取索引小于1的&amp;lt;input&amp;gt;元素（注：小于1，不包括1）   :header 选取所有的标题元素，例如h1，h2，h3等等 集合元素 $(&#39;:header&#39;)选取网页中所有的&amp;lt;h1&amp;gt;，&amp;lt;h2&amp;gt;，&amp;lt;h3&amp;gt;&amp;hellip;&amp;hellip;   :animated 选取当前正在执行动画的所有元素 集合元素 $(&#39;div:animated&#39;)选取正在执行动画的&amp;lt;div&amp;gt;元素   :focus 选取当前获取焦点的元素 集合元素 $(&#39;:focus&#39;)选取当前获取焦点的元素    </description>
+    </item>
+    
+    <item>
+      <title>层次选择器的4种选择器列表</title>
+      <link>https://mannuan.github.io/post/%E5%B1%82%E6%AC%A1%E9%80%89%E6%8B%A9%E5%99%A8%E7%9A%844%E7%A7%8D%E9%80%89%E6%8B%A9%E5%99%A8%E5%88%97%E8%A1%A8/</link>
+      <pubDate>Fri, 21 Jun 2019 09:16:52 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/%E5%B1%82%E6%AC%A1%E9%80%89%E6%8B%A9%E5%99%A8%E7%9A%844%E7%A7%8D%E9%80%89%E6%8B%A9%E5%99%A8%E5%88%97%E8%A1%A8/</guid>
+      <description>   选择器 描述 返回 示例     $(&amp;quot;ancestor descendant&amp;quot;) 选取ancestor元素里的所有descendant（后代）元素 集合元素span $(&amp;quot;div span&amp;quot;)
+选取&amp;lt;div&amp;gt;里的所有的&amp;lt;span&amp;gt;元素   $(&amp;quot;parent &amp;gt; child&amp;quot;) 选取parent元素下的child（子）元素，与$(&amp;quot;ancestor descendant&amp;quot;)
+有区别，$(&amp;quot;ancestor descendant&amp;quot;)
+选择的是后代元素 集合元素 $(&amp;quot;div &amp;gt; span&amp;quot;)
+选取&amp;lt;div&amp;gt;元素下元素名是&amp;lt;span&amp;gt;的子元素   $(&amp;quot;prev + next&amp;quot;) 选取紧接在prev元素后的next元素 集合元素 $(&amp;quot;.one + div&amp;quot;)
+选取class为one的下一个&amp;lt;div&amp;gt;同辈元素   $(&amp;quot;prev ~ siblings&amp;quot;) 选取prev元素之后的所有siblings元素 集合元素 $(&amp;quot;#two ~ div&amp;quot;)
+选取id为two的元素后面的所有&amp;lt;div&amp;gt;同辈元素    </description>
+    </item>
+    
+    <item>
+      <title>jQuery基本选择器</title>
+      <link>https://mannuan.github.io/post/jquery%E5%9F%BA%E6%9C%AC%E9%80%89%E6%8B%A9%E5%99%A8/</link>
+      <pubDate>Fri, 21 Jun 2019 09:02:54 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/jquery%E5%9F%BA%E6%9C%AC%E9%80%89%E6%8B%A9%E5%99%A8/</guid>
+      <description>   选择器 描述 返回 示例     #id 根据给定的id匹配一个元素 单个元素 $(&amp;quot;#test&amp;quot;)选取id为test的元素   .class 根据给定的类名匹配元素 集合元素 $(&amp;quot;.test&amp;quot;)选取所有class为test的元素   element 根据给定的元素名匹配元素 集合元素 $(&amp;quot;p&amp;quot;)选取所有的&amp;lt;p&amp;gt;元素   * 匹配所有元素 集合元素 $(&amp;quot;*&amp;quot;)选取所有的元素   selector1, selector2, &amp;hellip;., selectorN 将每一个选择器匹配到的元素合并后一起返回 集合元素 $(&amp;quot;div, span, p.myClass&amp;quot;)选取所有&amp;lt;div&amp;gt;,&amp;lt;span&amp;gt;和拥有class为myclass的&amp;lt;p&amp;gt;标签的一组元素    </description>
+    </item>
+    
+    <item>
+      <title>SVD分解</title>
+      <link>https://mannuan.github.io/post/svd%E5%88%86%E8%A7%A3/</link>
+      <pubDate>Thu, 20 Jun 2019 21:38:38 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/svd%E5%88%86%E8%A7%A3/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python3 快速替换多个字符的高效方法</title>
+      <link>https://mannuan.github.io/post/python3-%E5%BF%AB%E9%80%9F%E6%9B%BF%E6%8D%A2%E5%A4%9A%E4%B8%AA%E5%AD%97%E7%AC%A6%E7%9A%84%E9%AB%98%E6%95%88%E6%96%B9%E6%B3%95/</link>
+      <pubDate>Thu, 20 Jun 2019 14:13:09 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/python3-%E5%BF%AB%E9%80%9F%E6%9B%BF%E6%8D%A2%E5%A4%9A%E4%B8%AA%E5%AD%97%E7%AC%A6%E7%9A%84%E9%AB%98%E6%95%88%E6%96%B9%E6%B3%95/</guid>
+      <description>前言 在我们遇到需要把字符串中多个指定字符转换成其他字符时，我们通常使用多个.replace()方法实现替换的目的。然而，当需要替换的字符很多的时候，使用.replace()就太麻烦了。
+解决方案 str.maketrans(in_str1, out_str2), 这是一个类似于对字符串之间建立映射的一个方法，且两个输入字符串的长度必须相等。下面我将举一个简单例子来说明它的使用方法：
+a = &amp;#34;hello-world!&amp;#34; trans = str.maketrans(&amp;#34;h-w&amp;#34;, &amp;#34;H W&amp;#34;) # 建立映射关系 a.translate(trans) // 输出&amp;#34;Hello World!</description>
+    </item>
+    
+    <item>
+      <title>anki保留字</title>
+      <link>https://mannuan.github.io/post/anki%E4%BF%9D%E7%95%99%E5%AD%97/</link>
+      <pubDate>Wed, 19 Jun 2019 22:31:31 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/anki%E4%BF%9D%E7%95%99%E5%AD%97/</guid>
+      <description>   保留字 备注     FrontSide 正面，   type 打字   cloze 填空    </description>
+    </item>
+    
+    <item>
+      <title>anki最新开发文档（2.1）</title>
+      <link>https://mannuan.github.io/post/anki%E6%9C%80%E6%96%B0%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A32.1/</link>
+      <pubDate>Wed, 19 Jun 2019 21:50:21 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/anki%E6%9C%80%E6%96%B0%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A32.1/</guid>
+      <description>注意：开发文档里面不重要的内容，本篇博客不进行翻译，依然英文显示
+ 基础 卡片（Cards） 卡片就是问题和答案对——即正反两面分别是问题和答案。Anki的卡片不是一张真正的卡片，它一直显示问题，回答完显示答案。举一个例子：
+ 问题：氧气的化学符号是什么？
+ 当你考虑问题完毕，点击卡片就会显示如下内容：
+ 问题：氧气到的化学符号是什么？
+回答：O
+ 然后在卡片的最下方，你可以选择一个选项告诉anki你的学习情况。
+牌组（Desks） 牌组是卡片的集合。你可以把卡片放在不同的牌组中学习，而没有必要一次性全部学完。每个牌组都可以有不同的设置，比如每天显示多少张卡片，或卡片下一次复习的时间。
+牌组之间可以多层嵌套，形成树形结构。Anki通过&amp;rdquo;::&amp;ldquo;来表明不同的层次。比如，一个名为“Chinese::Hanzi”的牌组，表示Hanzi牌组包含在Chinese牌组中。如果你选择“Hanzi”那么就只会显示“Hanzi”牌组中的卡片；如果你选择&amp;rdquo;Chinese&amp;rdquo;牌组就会显示全部包括在“Hanzi”牌组中的卡片。
+为了形成树形结构，我们不仅可以通过“::“符号，还可以使用拖拽的方式。嵌套在其他牌组下面的牌组称为子牌组（名称中至少出现一次&amp;rdquo;::&amp;ldquo;）,最外面的牌组可以被称为超级牌组或父牌组。
+Anki有一个默认牌组；任何其他牌组都是分离自这个默认牌组。Anki将会隐藏这个默认牌组当这个牌组中没有卡片，或已经存在其他的牌组。另外，你也可以重命名默认牌组并使用它。
+牌组可以放不同话题的卡片，而不是特定的卡片。具体可以参看合理的使用牌组部分。
+关于卡片在牌组中的显示顺序，可以查阅显示顺序部分。
+笔记和字段（Notes &amp;amp; Fields） 当制作卡片的时候，我们通常希望一些信息可以通过多张卡片显示出来。比如，如果你学习法语，你学习”bonjour“的意思是”hello“,你可能希望创建一张卡片显示&amp;rdquo;bonjour&amp;rdquo;回答&amp;rdquo;hello&amp;rdquo;，然后另一张卡片问你”hello“回答&amp;rdquo;bonjour&amp;rdquo;。前面一张卡片让你辨别单词含义，后面一张卡片则让你把单词翻译成本国语言。
+当使用纸质卡片的时候，你唯一的选择是两次写出信息，每张卡片一次。一些计算机卡片程序通过翻转正反面，使用更加轻松。这种程序对纸质情况有改进，但是存在两个缺点：
+ Because such programs don’t track your performance of recognition and production separately, cards will tend not to be shown to you at the optimum time, meaning you forget more than you’d like, or you study more than is necessary. Reversing the question and answer only works when you want exactly the same content on each side.</description>
+    </item>
+    
+    <item>
+      <title>jquery要点</title>
+      <link>https://mannuan.github.io/post/jquery%E8%A6%81%E7%82%B9/</link>
+      <pubDate>Wed, 19 Jun 2019 17:06:44 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/jquery%E8%A6%81%E7%82%B9/</guid>
+      <description> jQuery中最有特色的莫过于它的链式操作方式——即对发生在同一个jQuery对象上的一组动作，可以直接连写而无需重复获取对象。这一特点是jQuery的代码无比优雅。 百度CDN: https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js     window.onload与$(document).ready()的对比(p6) window.onload $(document).ready()     执行时机 必须等待网页中所有元素加载完毕后（包括元素的所有关联文件）完全加载到浏览器后才能执行——即js此时可以访问页面中的任何元素 网页中所有DOM结构绘制完毕后就执行，可能DOM元素关联的东西并没有加载完—即DOM完全就绪   多次使用 不能同时编写多个以下代码无法正确执行：
+window.onload = function(){
+alert(&amp;quot;test1&amp;quot;)
+};
+window.onload = function(){
+alert(&amp;quot;test2&amp;quot;);
+}
+结果只会输出“test2”
+$(window).load(function(){
+//编写代码
+});
+等价于JavaScript中的以下代码：
+window.onload = function(){
+//编写代码
+} 能同时编写多个一下代码正确执行：
+$(document).ready(function(){
+alert(&amp;quot;Hello World!&amp;quot;);
+});
+$(document).ready(function(){
+alert(&amp;quot;Hello again!&amp;quot;);
+});
+结果两次都输出   简化写法 无 $(document).ready(function(){
+//...
+})
+可以简化为：
+$function(){
+//...
+}
+第二种方式为：
+$().ready(function(){
+//...
+});    </description>
+    </item>
+    
+    <item>
+      <title>linux 和windows下使用ffmpeg将mkv转换为mp4</title>
+      <link>https://mannuan.github.io/post/linux-%E5%92%8Cwindows%E4%B8%8B%E4%BD%BF%E7%94%A8ffmpeg%E5%B0%86mkv%E8%BD%AC%E6%8D%A2%E4%B8%BAmp4/</link>
+      <pubDate>Mon, 17 Jun 2019 14:56:15 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/linux-%E5%92%8Cwindows%E4%B8%8B%E4%BD%BF%E7%94%A8ffmpeg%E5%B0%86mkv%E8%BD%AC%E6%8D%A2%E4%B8%BAmp4/</guid>
+      <description>ffmpeg -i 名称.mkv -s hd720 -c:v libx264 -crf 23 -c:a aac -strict -2 名称.</description>
+    </item>
+    
+    <item>
+      <title>四六级信息匹配技巧</title>
+      <link>https://mannuan.github.io/post/%E5%9B%9B%E5%85%AD%E7%BA%A7%E4%BF%A1%E6%81%AF%E5%8C%B9%E9%85%8D%E6%8A%80%E5%B7%A7/</link>
+      <pubDate>Thu, 13 Jun 2019 10:48:34 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/%E5%9B%9B%E5%85%AD%E7%BA%A7%E4%BF%A1%E6%81%AF%E5%8C%B9%E9%85%8D%E6%8A%80%E5%B7%A7/</guid>
+      <description> 标出每个问题的定位词； 然后对每一个选项分别进行定位词的查找，标出每个选项里面的定位词；  </description>
+    </item>
+    
+    <item>
+      <title>四六级仔细阅读技巧</title>
+      <link>https://mannuan.github.io/post/%E5%9B%9B%E5%85%AD%E7%BA%A7%E4%BB%94%E7%BB%86%E9%98%85%E8%AF%BB%E6%8A%80%E5%B7%A7/</link>
+      <pubDate>Wed, 12 Jun 2019 10:12:23 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/%E5%9B%9B%E5%85%AD%E7%BA%A7%E4%BB%94%E7%BB%86%E9%98%85%E8%AF%BB%E6%8A%80%E5%B7%A7/</guid>
+      <description> 引言 四六级阅读中，真正与解题有关的句子总共占了文章的1/3，因此真正用到的高级词汇不会很多。使用一些技巧可以快速的通过考试，如下：
+ 浏览一遍问题的题干（不要翻译，只需要看句子的主谓宾），并标出定位词（最多由三个单词组成，找定位词主要靠个人感觉，需要多练） 读懂题干的意思 根据定位词定位1~2句话，优先选择定位词后面的句子，实在不行至多定位4句话，如果3句话定位不了，暂时先看后面的题目（定位的过程中，不要翻译，重要的事情说三遍，不要翻译，一般来说题目的序号和段落的序号是成正比的，举个例子，一般最后一题的答案会出现在最后一个段落） 精读定位句，遇到和答案长的一样的一定是正确答案，遇到绝对的词一定是错误选项 如果下一题的定位词也在这题的定位句中，那么可以把当前的定位句向后扩充到3句   表示绝对的词汇总（但出现在正确答案里面）：completely, 定位句前移的词（定位词后面的句子如果以这种词开头，就选择定位词前面的句子作为定位句）：if 表达否定的词：far from
+ </description>
+    </item>
+    
+    <item>
+      <title>webpack如何设置是否自动开启浏览器</title>
+      <link>https://mannuan.github.io/post/webpack%E5%A6%82%E4%BD%95%E8%AE%BE%E7%BD%AE%E6%98%AF%E5%90%A6%E8%87%AA%E5%8A%A8%E5%BC%80%E5%90%AF%E6%B5%8F%E8%A7%88%E5%99%A8/</link>
+      <pubDate>Tue, 11 Jun 2019 22:56:41 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/webpack%E5%A6%82%E4%BD%95%E8%AE%BE%E7%BD%AE%E6%98%AF%E5%90%A6%E8%87%AA%E5%8A%A8%E5%BC%80%E5%90%AF%E6%B5%8F%E8%A7%88%E5%99%A8/</guid>
+      <description> 当我们执行npm run dev命令的时候，我们想要自动开启浏览器，那么只需要在webpack-dev-server后面加上&amp;rdquo;&amp;ndash;open&amp;rdquo;参数，具体在package.json文件里面设置，配置文件内容如下：
+ { &amp;#34;name&amp;#34;: &amp;#34;webpack-demo1&amp;#34;, &amp;#34;version&amp;#34;: &amp;#34;1.0.0&amp;#34;, &amp;#34;main&amp;#34;: &amp;#34;main.js&amp;#34;, &amp;#34;scripts&amp;#34;: { &amp;#34;dev&amp;#34;: &amp;#34;webpack-dev-server --open&amp;#34;, &amp;#34;build&amp;#34;: &amp;#34;webpack -p&amp;#34; }, &amp;#34;license&amp;#34;: &amp;#34;MIT&amp;#34; }</description>
+    </item>
+    
+    <item>
+      <title>在UEFI模式下，linux误删EFI分区后，重新恢复引导</title>
+      <link>https://mannuan.github.io/post/%E5%9C%A8uefi%E6%A8%A1%E5%BC%8F%E4%B8%8Blinux%E8%AF%AF%E5%88%A0efi%E5%88%86%E5%8C%BA%E5%90%8E%E9%87%8D%E6%96%B0%E6%81%A2%E5%A4%8D%E5%BC%95%E5%AF%BC/</link>
+      <pubDate>Tue, 11 Jun 2019 19:13:55 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/%E5%9C%A8uefi%E6%A8%A1%E5%BC%8F%E4%B8%8Blinux%E8%AF%AF%E5%88%A0efi%E5%88%86%E5%8C%BA%E5%90%8E%E9%87%8D%E6%96%B0%E6%81%A2%E5%A4%8D%E5%BC%95%E5%AF%BC/</guid>
+      <description>遇到上面情况，我们通常使用boot-repair修复引导。但是这时会弹出一个错误： GPT detected. Please create a BIOS-Boot partition
+ 遇到这个情况以后，我就疯狂百度资料，一直在找现成的解决方案，但是都不是没有解决问题的方案。这个期间我大概花了我半天的时间在检索资料，之后由于实在找不到资料。我只能冷静地分析这个错误，&amp;rdquo;Please create Bios-Boot partition&amp;rdquo;这个提示其实是提醒你创建一个用于引导的分区。由于是在UEFI模式下面，所以我们要创建一个格式为fat32 标识为boot, esp的分区（右键可以设置标签），如下图所示：
+创建好上面的分区以后，再使用boot-repair进行修复引导，就不会报错了😀😀😀😀😀</description>
+    </item>
+    
+    <item>
+      <title>python字体文件woff转xml</title>
+      <link>https://mannuan.github.io/post/python%E5%AD%97%E4%BD%93%E6%96%87%E4%BB%B6woff%E8%BD%ACxml/</link>
+      <pubDate>Tue, 11 Jun 2019 17:01:24 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/python%E5%AD%97%E4%BD%93%E6%96%87%E4%BB%B6woff%E8%BD%ACxml/</guid>
+      <description>from fontTools.ttLib import TTFont def get(): font = TTFont(&amp;#39;./tyc-num.woff&amp;#39;) font.</description>
+    </item>
+    
+    <item>
+      <title>webpack安装教程</title>
+      <link>https://mannuan.github.io/post/webpack%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</link>
+      <pubDate>Mon, 10 Jun 2019 21:54:53 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/webpack%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</guid>
+      <description>cnpm install -g webpack cnpm install -g webpack-cli cnpm install -g webpack-dev-server</description>
+    </item>
+    
+    <item>
+      <title>npm快速国内源</title>
+      <link>https://mannuan.github.io/post/npm%E5%BF%AB%E9%80%9F%E5%9B%BD%E5%86%85%E6%BA%90/</link>
+      <pubDate>Mon, 10 Jun 2019 21:52:20 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/npm%E5%BF%AB%E9%80%9F%E5%9B%BD%E5%86%85%E6%BA%90/</guid>
+      <description>淘宝镜像( cnpm ) - 淘宝NPM 镜像，用法和npm一模一样只是把npm改为cnpm</description>
+    </item>
+    
+    <item>
+      <title>linux不需要重装系统就可以调整分区</title>
+      <link>https://mannuan.github.io/post/linux%E4%B8%8D%E9%9C%80%E8%A6%81%E9%87%8D%E8%A3%85%E7%B3%BB%E7%BB%9F%E5%B0%B1%E5%8F%AF%E4%BB%A5%E8%B0%83%E6%95%B4%E5%88%86%E5%8C%BA/</link>
+      <pubDate>Mon, 10 Jun 2019 20:46:27 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/linux%E4%B8%8D%E9%9C%80%E8%A6%81%E9%87%8D%E8%A3%85%E7%B3%BB%E7%BB%9F%E5%B0%B1%E5%8F%AF%E4%BB%A5%E8%B0%83%E6%95%B4%E5%88%86%E5%8C%BA/</guid>
+      <description>介绍 Gparted是一个针对于linux分区调整的可视化工具。它是一个微型的linux操作系统封装了一些分区的命令，以一个iso格式的文件存在，选择gparted- live-*.iso这样的文件点击下载。
+刻录 下载完成之后，你需要准备一个刻录工具（比如软碟通）和一个8G以上的U盘。这个刻录的教程，百度一下就有很多。
+使用 刻录完成以后，你在开机</description>
+    </item>
+    
+    <item>
+      <title>六级听力-连读词组</title>
+      <link>https://mannuan.github.io/post/%E5%85%AD%E7%BA%A7%E5%90%AC%E5%8A%9B-%E8%BF%9E%E8%AF%BB%E8%AF%8D%E7%BB%84/</link>
+      <pubDate>Mon, 10 Jun 2019 15:50:06 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/%E5%85%AD%E7%BA%A7%E5%90%AC%E5%8A%9B-%E8%BF%9E%E8%AF%BB%E8%AF%8D%E7%BB%84/</guid>
+      <description>   词组 备注     this year 2017.12.第一套.长对话(1).第九句话   result in =resulting   One major 2017.12.第一套.长对话(1)    </description>
+    </item>
+    
+    <item>
+      <title>六级词汇—程度词</title>
+      <link>https://mannuan.github.io/post/%E5%85%AD%E7%BA%A7%E8%AF%8D%E6%B1%87%E7%A8%8B%E5%BA%A6%E8%AF%8D/</link>
+      <pubDate>Mon, 10 Jun 2019 12:55:32 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/%E5%85%AD%E7%BA%A7%E8%AF%8D%E6%B1%87%E7%A8%8B%E5%BA%A6%E8%AF%8D/</guid>
+      <description>   单词 备注     outreach         </description>
+    </item>
+    
+    <item>
+      <title>六级词汇—动作词</title>
+      <link>https://mannuan.github.io/post/%E5%85%AD%E7%BA%A7%E8%AF%8D%E6%B1%87%E5%8A%A8%E4%BD%9C%E8%AF%8D/</link>
+      <pubDate>Mon, 10 Jun 2019 12:51:20 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/%E5%85%AD%E7%BA%A7%E8%AF%8D%E6%B1%87%E5%8A%A8%E4%BD%9C%E8%AF%8D/</guid>
+      <description>   单词 备注     poke         </description>
+    </item>
+    
+    <item>
+      <title>六级词汇—消极词</title>
+      <link>https://mannuan.github.io/post/%E5%85%AD%E7%BA%A7%E8%AF%8D%E6%B1%87%E6%B6%88%E6%9E%81%E8%AF%8D/</link>
+      <pubDate>Mon, 10 Jun 2019 12:48:39 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/%E5%85%AD%E7%BA%A7%E8%AF%8D%E6%B1%87%E6%B6%88%E6%9E%81%E8%AF%8D/</guid>
+      <description>   单词 备注     indignant 愤慨的   impose 强加    </description>
+    </item>
+    
+    <item>
+      <title>可以查前后缀和形近词的词典</title>
+      <link>https://mannuan.github.io/post/%E5%8F%AF%E4%BB%A5%E6%9F%A5%E5%89%8D%E5%90%8E%E7%BC%80%E5%92%8C%E5%BD%A2%E8%BF%91%E8%AF%8D%E7%9A%84%E8%AF%8D%E5%85%B8/</link>
+      <pubDate>Sun, 09 Jun 2019 12:53:37 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/%E5%8F%AF%E4%BB%A5%E6%9F%A5%E5%89%8D%E5%90%8E%E7%BC%80%E5%92%8C%E5%BD%A2%E8%BF%91%E8%AF%8D%E7%9A%84%E8%AF%8D%E5%85%B8/</guid>
+      <description>柯林斯词典(collins)
+海词词典</description>
+    </item>
+    
+    <item>
+      <title>六级词汇—反义词</title>
+      <link>https://mannuan.github.io/post/%E5%85%AD%E7%BA%A7%E8%AF%8D%E6%B1%87%E5%8F%8D%E4%B9%89%E8%AF%8D/</link>
+      <pubDate>Sun, 09 Jun 2019 11:29:17 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/%E5%85%AD%E7%BA%A7%E8%AF%8D%E6%B1%87%E5%8F%8D%E4%B9%89%E8%AF%8D/</guid>
+      <description>   单词a 单词b     indignity dignity        </description>
+    </item>
+    
+    <item>
+      <title>六级词汇—前后缀</title>
+      <link>https://mannuan.github.io/post/%E5%85%AD%E7%BA%A7%E8%AF%8D%E6%B1%87%E5%89%8D%E5%90%8E%E7%BC%80/</link>
+      <pubDate>Sat, 08 Jun 2019 22:07:18 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/%E5%85%AD%E7%BA%A7%E8%AF%8D%E6%B1%87%E5%89%8D%E5%90%8E%E7%BC%80/</guid>
+      <description>   公共部分 单词 备注     ability accountability, liability, availability Responsibility includes liability, blame, and accountability, that is a deep threat to the emotions. 责任包括赔偿责任，归咎、问责制，这是威胁到深有所感。   in incur, inflict,    de derail    re reclaim, retailer,    dis discrete(不), disclose,     </description>
+    </item>
+    
+    <item>
+      <title>六级词汇—集体名词</title>
+      <link>https://mannuan.github.io/post/%E5%85%AD%E7%BA%A7%E8%AF%8D%E6%B1%87%E9%9B%86%E4%BD%93%E5%90%8D%E8%AF%8D/</link>
+      <pubDate>Sat, 08 Jun 2019 21:56:25 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/%E5%85%AD%E7%BA%A7%E8%AF%8D%E6%B1%87%E9%9B%86%E4%BD%93%E5%90%8D%E8%AF%8D/</guid>
+      <description>   单词 备注     offspring         </description>
+    </item>
+    
+    <item>
+      <title>六级词汇—单复数</title>
+      <link>https://mannuan.github.io/post/%E5%85%AD%E7%BA%A7%E8%AF%8D%E6%B1%87%E5%8D%95%E5%A4%8D%E6%95%B0/</link>
+      <pubDate>Sat, 08 Jun 2019 16:12:50 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/%E5%85%AD%E7%BA%A7%E8%AF%8D%E6%B1%87%E5%8D%95%E5%A4%8D%E6%95%B0/</guid>
+      <description>   单数 复数     criterion criteria    </description>
+    </item>
+    
+    <item>
+      <title>六级词汇—衍生词</title>
+      <link>https://mannuan.github.io/post/%E5%85%AD%E7%BA%A7%E8%AF%8D%E6%B1%87%E8%A1%8D%E7%94%9F%E8%AF%8D/</link>
+      <pubDate>Sat, 08 Jun 2019 11:20:53 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/%E5%85%AD%E7%BA%A7%E8%AF%8D%E6%B1%87%E8%A1%8D%E7%94%9F%E8%AF%8D/</guid>
+      <description>词汇 quantity, quota,</description>
+    </item>
+    
+    <item>
+      <title>六级词汇—僻义词</title>
+      <link>https://mannuan.github.io/post/%E5%85%AD%E7%BA%A7%E8%AF%8D%E6%B1%87%E5%83%BB%E4%B9%89%E8%AF%8D/</link>
+      <pubDate>Sat, 08 Jun 2019 10:55:34 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/%E5%85%AD%E7%BA%A7%E8%AF%8D%E6%B1%87%E5%83%BB%E4%B9%89%E8%AF%8D/</guid>
+      <description>   单词 僻义     treatment 待遇   presence 风度   clearance 结关    </description>
+    </item>
+    
+    <item>
+      <title>六级词汇—词性对比</title>
+      <link>https://mannuan.github.io/post/%E5%85%AD%E7%BA%A7%E8%AF%8D%E6%B1%87%E8%AF%8D%E6%80%A7%E5%AF%B9%E6%AF%94/</link>
+      <pubDate>Fri, 07 Jun 2019 21:12:34 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/%E5%85%AD%E7%BA%A7%E8%AF%8D%E6%B1%87%E8%AF%8D%E6%80%A7%E5%AF%B9%E6%AF%94/</guid>
+      <description>vt. vi. adj. adv. n. prep. 备注     ascertain         certain          certain,
+certainty
+| |
+accustom | | custom | | custom | |
+expend | | | | expenditure | |
+| | analytical | | analysis | |
+magnify | magnify | | | magnitude | |</description>
+    </item>
+    
+    <item>
+      <title>六级词汇—形近词</title>
+      <link>https://mannuan.github.io/post/%E5%85%AD%E7%BA%A7%E8%AF%8D%E6%B1%87%E5%BD%A2%E8%BF%91%E8%AF%8D/</link>
+      <pubDate>Fri, 07 Jun 2019 20:54:18 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/%E5%85%AD%E7%BA%A7%E8%AF%8D%E6%B1%87%E5%BD%A2%E8%BF%91%E8%AF%8D/</guid>
+      <description>   词汇     populate, popular,   dread,dead,   loom,room，   foster,faster ,   skeptical,sceptical ,   rely,relay ,   revive,retrieve ,   shutter,shelter,    </description>
+    </item>
+    
+    <item>
+      <title>六级词汇—近义词</title>
+      <link>https://mannuan.github.io/post/%E5%85%AD%E7%BA%A7%E8%AF%8D%E6%B1%87%E8%BF%91%E4%B9%89%E8%AF%8D/</link>
+      <pubDate>Fri, 07 Jun 2019 20:40:20 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/%E5%85%AD%E7%BA%A7%E8%AF%8D%E6%B1%87%E8%BF%91%E4%B9%89%E8%AF%8D/</guid>
+      <description>在区分近义词的时候，没有必要详细的记忆每个单词的具体含义，只要记住每个近义词之间的区别和共有的含义，就可以很轻松的使用。
+    近义词 备注     inhabit,populate, reside,dwell 居住于
+reside书面用词，指合法的永久性居住，也指在豪华的住宅里居住；
+inhabit强调人或动物居住在某个地区并已适应某种特殊环境；
+populate强调有人居住，population的动词形式；
+dwell文学上的用词，口语中通常用live代替。   amplify,magnify 放大，
+maglify可指用光学仪器使物体看上去显得变大；也指事实上把某物增大，有时用于夸张意味。
+amplify: 在科技中常指声音的扩大或电磁波的增强。也指补充了细节、详述或扩大内容等。此词系正式用语   prevalent, popular popular指适应大众爱好、需要，为大家所公认或接受。   deteriorate,crumble    intricate,complex complex侧重内在关系的复杂，需通过仔细研究与了解才能掌握和运用。
+intricate着重指错综复杂，令人迷惑理解。   plea,appeal 请求   extinct,dead 无生命   additive,cumulative 附加的   female,feminine 女性的
+female侧重于性别雌性；
+feminine侧重于阴性   skeptical,suspicious 怀疑的
+skeptical强调观点；
+suspicious强调状态或外在的表现形式   timid,shy 害羞的
+timid强调胆子小;   comply,obey comply指答应某人已经提出或可能要求做的某事，与with连用。   collide,conflict 冲突</description>
+    </item>
+    
+    <item>
+      <title>wkhtmltopdf：一个 Linux 中将网页转成 PDF 的智能工具</title>
+      <link>https://mannuan.github.io/post/wkhtmltopdf%E4%B8%80%E4%B8%AA-linux-%E4%B8%AD%E5%B0%86%E7%BD%91%E9%A1%B5%E8%BD%AC%E6%88%90-pdf-%E7%9A%84%E6%99%BA%E8%83%BD%E5%B7%A5%E5%85%B7/</link>
+      <pubDate>Fri, 07 Jun 2019 17:41:03 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/wkhtmltopdf%E4%B8%80%E4%B8%AA-linux-%E4%B8%AD%E5%B0%86%E7%BD%91%E9%A1%B5%E8%BD%AC%E6%88%90-pdf-%E7%9A%84%E6%99%BA%E8%83%BD%E5%B7%A5%E5%85%B7/</guid>
+      <description>用法： wkhtmltopdf http://google.com google.pdf 下载（deb）： wkhtmlpdf
+开源代码代码： wkhtmlpdf.git</description>
+    </item>
+    
+    <item>
+      <title>App can&#39;t be opened because it is from an unidentified developer</title>
+      <link>https://mannuan.github.io/post/app-cant-be-opened-because-it-is-from-an-unidentified-developer/</link>
+      <pubDate>Thu, 06 Jun 2019 14:18:46 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/app-cant-be-opened-because-it-is-from-an-unidentified-developer/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>html中文字体压缩工具</title>
+      <link>https://mannuan.github.io/post/html%E4%B8%AD%E6%96%87%E5%AD%97%E4%BD%93%E5%8E%8B%E7%BC%A9%E5%B7%A5%E5%85%B7/</link>
+      <pubDate>Wed, 05 Jun 2019 21:48:37 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/html%E4%B8%AD%E6%96%87%E5%AD%97%E4%BD%93%E5%8E%8B%E7%BC%A9%E5%B7%A5%E5%85%B7/</guid>
+      <description>字蛛是一个中文字体压缩器，让网页自由引入中文字体成为可能。</description>
+    </item>
+    
+    <item>
+      <title>反爬机制之字体反爬详解</title>
+      <link>https://mannuan.github.io/post/%E5%8F%8D%E7%88%AC%E6%9C%BA%E5%88%B6%E4%B9%8B%E5%AD%97%E4%BD%93%E5%8F%8D%E7%88%AC%E8%AF%A6%E8%A7%A3/</link>
+      <pubDate>Wed, 05 Jun 2019 21:45:30 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/%E5%8F%8D%E7%88%AC%E6%9C%BA%E5%88%B6%E4%B9%8B%E5%AD%97%E4%BD%93%E5%8F%8D%E7%88%AC%E8%AF%A6%E8%A7%A3/</guid>
+      <description>字体反爬，顾名思义就是利用自定义的字符编码与字体文件的映射呈现文字的一种反爬措施。下面我们通过例子来详细介绍字体反爬是怎么实现的以及解决方案。
+ 目录
+字符编码
+CSS3 @font-face 规则
+html文件（example.html）:
+woff字体文件（example.woff）:
+html显示效果：
+解决方案：
+字符编码 字体爬虫就是使用类似自定义的字符编码的形式来呈现文字，字符编码的详细信息见HTML字符编码；
+CSS3 @font-face 规则 在 CSS3 之前，web 设计师必须使用已在用户计算机上安装好的字体。
+通过 CSS3，web 设计师可以使用他们喜欢的任意字体。
+当您您找到或购买到希望使用的字体时，可将该字体文件存放到 web 服务器上，它会在需要时被自动下载到用户的计算机上。
+您“自己的”的字体是在 CSS3 @font-face 规则中定义的。
+html文件（example.html）: &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta http-equiv=&amp;#34;Content-Type&amp;#34; content=&amp;#34;text/html; charset=utf-8&amp;#34;/&amp;gt; &amp;lt;title&amp;gt;example&amp;lt;/title&amp;gt; &amp;lt;style type=&amp;#34;text/css&amp;#34;&amp;gt; @font-face{ font-family: &amp;#34;example&amp;#34;; src:url(&amp;#34;./example.woff&amp;#34;) format(&amp;#39;woff&amp;#39;); } .review { font-family: &amp;#34;example&amp;#34;; } &amp;lt;/style&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;p&amp;gt; 找了好久才 &amp;lt;svgmsti class=&amp;#34;review&amp;#34;&amp;gt;&amp;amp;#xe54b;&amp;lt;/svgmsti&amp;gt;到，问了 &amp;lt;svgmsti class=&amp;#34;review&amp;#34;&amp;gt;&amp;amp;#xe36d;&amp;lt;/svgmsti&amp;gt; &amp;lt;svgmsti class=&amp;#34;review&amp;#34;&amp;gt;&amp;amp;#xebb5;&amp;lt;/svgmsti&amp;gt;他 &amp;lt;svgmsti class=&amp;#34;review&amp;#34;&amp;gt;&amp;amp;#xf3c6;&amp;lt;/svgmsti&amp;gt;己也不知 &amp;lt;svgmsti class=&amp;#34;review&amp;#34;&amp;gt;&amp;amp;#xef46;&amp;lt;/svgmsti&amp;gt;看了点评 &amp;lt;svgmsti class=&amp;#34;review&amp;#34;&amp;gt;&amp;amp;#xf75f;&amp;lt;/svgmsti&amp;gt; &amp;lt;svgmsti class=&amp;#34;review&amp;#34;&amp;gt;&amp;amp;#xe8dd;&amp;lt;/svgmsti&amp;gt;电话才知 &amp;lt;svgmsti class=&amp;#34;review&amp;#34;&amp;gt;&amp;amp;#xef46;&amp;lt;/svgmsti&amp;gt;，人挺多的上菜 &amp;lt;svgmsti class=&amp;#34;review&amp;#34;&amp;gt;&amp;amp;#xee1a;&amp;lt;/svgmsti&amp;gt;慢 &amp;lt;svgmsti class=&amp;#34;review&amp;#34;&amp;gt;&amp;amp;#xe8dd;&amp;lt;/svgmsti&amp;gt;，凉菜都吃完 &amp;lt;svgmsti class=&amp;#34;review&amp;#34;&amp;gt;&amp;amp;#xe5bd;&amp;lt;/svgmsti&amp;gt;别的 &amp;lt;svgmsti class=&amp;#34;review&amp;#34;&amp;gt;&amp;amp;#xeb5a;&amp;lt;/svgmsti&amp;gt;还没 &amp;lt;svgmsti class=&amp;#34;review&amp;#34;&amp;gt;&amp;amp;#xf40e;&amp;lt;/svgmsti&amp;gt;来，凉 &amp;lt;svgmsti class=&amp;#34;review&amp;#34;&amp;gt;&amp;amp;#xeb5a;&amp;lt;/svgmsti&amp;gt;很 &amp;lt;svgmsti class=&amp;#34;review&amp;#34;&amp;gt;&amp;amp;#xe082;&amp;lt;/svgmsti&amp;gt;胃 &amp;lt;svgmsti class=&amp;#34;review&amp;#34;&amp;gt;&amp;amp;#xee1a;&amp;lt;/svgmsti&amp;gt;好吃的。 &amp;lt;/p&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt; woff字体文件（example.</description>
+    </item>
+    
+    <item>
+      <title>HTML字符编码</title>
+      <link>https://mannuan.github.io/post/html%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81/</link>
+      <pubDate>Wed, 05 Jun 2019 21:34:37 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/html%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81/</guid>
+      <description>HTML里可以用 &amp;amp;#字符编码; 表示一个字符，x表示编码值用十六进制表示&amp;#x672A; 表示字符编码为十六进制672A的字符 ，就是中文“未”字。
+更多编码详见HTML特殊字符编码对照表</description>
+    </item>
+    
+    <item>
+      <title>HTML特殊字符编码对照表</title>
+      <link>https://mannuan.github.io/post/html%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E5%AF%B9%E7%85%A7%E8%A1%A8/</link>
+      <pubDate>Wed, 05 Jun 2019 21:23:04 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/html%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E5%AF%B9%E7%85%A7%E8%A1%A8/</guid>
+      <description>   特殊符号 命名实体 十进制编码 特殊符号 命名实体 十进制编码 特殊符号 命名实体 十进制编码     Α &amp;Alpha; &amp;#913; Β &amp;Beta; &amp;#914; Γ &amp;Gamma; &amp;#915;   Δ &amp;Delta; &amp;#916; Ε &amp;Epsilon; &amp;#917; Ζ &amp;Zeta; &amp;#918;   Η &amp;Eta; &amp;#919; Θ &amp;Theta; &amp;#920; Ι &amp;Iota; &amp;#921;   Κ &amp;Kappa; &amp;#922; Λ &amp;Lambda; &amp;#923; Μ &amp;Mu; &amp;#924;   Ν &amp;Nu; &amp;#925; Ξ &amp;Xi; &amp;#926; Ο &amp;Omicron; &amp;#927;   Π &amp;Pi; &amp;#928; Ρ &amp;Rho; &amp;#929; Σ &amp;Sigma; &amp;#931;   Τ &amp;Tau; &amp;#932; Υ &amp;Upsilon; &amp;#933; Φ &amp;Phi; &amp;#934;   Χ &amp;Chi; &amp;#935; Ψ &amp;Psi; &amp;#936; Ω &amp;Omega; &amp;#937;   α &amp;alpha; &amp;#945; β &amp;beta; &amp;#946; γ &amp;gamma; &amp;#947;   δ &amp;delta; &amp;#948; ε &amp;epsilon; &amp;#949; ζ &amp;zeta; &amp;#950;   η &amp;eta; &amp;#951; θ &amp;theta; &amp;#952; ι &amp;iota; &amp;#953;   κ &amp;kappa; &amp;#954; λ &amp;lambda; &amp;#955; μ &amp;mu; &amp;#956;   ν &amp;nu; &amp;#957; ξ &amp;xi; &amp;#958; ο &amp;omicron; &amp;#959;   π &amp;pi; &amp;#960; ρ &amp;rho; &amp;#961; ς &amp;sigmaf; &amp;#962;   σ &amp;sigma; &amp;#963; τ &amp;tau; &amp;#964; υ &amp;upsilon; &amp;#965;   φ &amp;phi; &amp;#966; χ &amp;chi; &amp;#967; ψ &amp;psi; &amp;#968;   ω &amp;omega; &amp;#969; ϑ &amp;thetasym; &amp;#977; ϒ &amp;upsih; &amp;#978;   ϖ &amp;piv; &amp;#982; • &amp;bull; &amp;#8226; … &amp;hellip; &amp;#8230;   ′ &amp;prime; &amp;#8242; ″ &amp;Prime; &amp;#8243; ‾ &amp;oline; &amp;#8254;   ⁄ &amp;frasl; &amp;#8260; ℘ &amp;weierp; &amp;#8472; ℑ &amp;image; &amp;#8465;   ℜ &amp;real; &amp;#8476; ™ &amp;trade; &amp;#8482; ℵ &amp;alefsym; &amp;#8501;   ← &amp;larr; &amp;#8592; ↑ &amp;uarr; &amp;#8593; → &amp;rarr; &amp;#8594;   ↓ &amp;darr; &amp;#8595; ↔ &amp;harr; &amp;#8596; ↵ &amp;crarr; &amp;#8629;   ⇐ &amp;lArr; &amp;#8656; ⇑ &amp;uArr; &amp;#8657; ⇒ &amp;rArr; &amp;#8658;   ⇓ &amp;dArr; &amp;#8659; ⇔ &amp;hArr; &amp;#8660; ∀ &amp;forall; &amp;#8704;   ∂ &amp;part; &amp;#8706; ∃ &amp;exist; &amp;#8707; ∅ &amp;empty; &amp;#8709;   ∇ &amp;nabla; &amp;#8711; ∈ &amp;isin; &amp;#8712; ∉ &amp;notin; &amp;#8713;   ∋ &amp;ni; &amp;#8715; ∏ &amp;prod; &amp;#8719; ∑ &amp;sum; &amp;#8722;   − &amp;minus; &amp;#8722; ∗ &amp;lowast; &amp;#8727; √ &amp;radic; &amp;#8730;   ∝ &amp;prop; &amp;#8733; ∞ &amp;infin; &amp;#8734; ∠ &amp;ang; &amp;#8736;   ∧ &amp;and; &amp;#8869; ∨ &amp;or; &amp;#8870; ∩ &amp;cap; &amp;#8745;   ∪ &amp;cup; &amp;#8746; ∫ &amp;int; &amp;#8747; ∴ &amp;there4; &amp;#8756;   ∼ &amp;sim; &amp;#8764; ≅ &amp;cong; &amp;#8773; ≈ &amp;asymp; &amp;#8773;   ≠ &amp;ne; &amp;#8800; ≡ &amp;equiv; &amp;#8801; ≤ &amp;le; &amp;#8804;   ≥ &amp;ge; &amp;#8805; ⊂ &amp;sub; &amp;#8834; ⊃ &amp;sup; &amp;#8835;   ⊄ &amp;nsub; &amp;#8836; ⊆ &amp;sube; &amp;#8838; ⊇ &amp;supe; &amp;#8839;   ⊕ &amp;oplus; &amp;#8853; ⊗ &amp;otimes; &amp;#8855; ⊥ &amp;perp; &amp;#8869;   ⋅ &amp;sdot; &amp;#8901; ⌈ &amp;lceil; &amp;#8968; ⌉ &amp;rceil; &amp;#8969;   ⌊ &amp;lfloor; &amp;#8970; ⌋ &amp;rfloor; &amp;#8971; ◊ &amp;loz; &amp;#9674;   ♠ &amp;spades; &amp;#9824; ♣ &amp;clubs; &amp;#9827; ♥ &amp;hearts; &amp;#9829;   ♦ &amp;diams; &amp;#9830;  &amp;nbsp; &amp;#160; ¡ &amp;iexcl; &amp;#161;   ¢ &amp;cent; &amp;#162; £ &amp;pound; &amp;#163; ¤ &amp;curren; &amp;#164;   ¥ &amp;yen; &amp;#165; ¦ &amp;brvbar; &amp;#166; § &amp;sect; &amp;#167;   ¨ &amp;uml; &amp;#168; © &amp;copy; &amp;#169; ª &amp;ordf; &amp;#170;   « &amp;laquo; &amp;#171; ¬ &amp;not; &amp;#172; ­ &amp;shy; &amp;#173;   ® &amp;reg; &amp;#174; ¯ &amp;macr; &amp;#175; ° &amp;deg; &amp;#176;   ± &amp;plusmn; &amp;#177; ² &amp;sup2; &amp;#178; ³ &amp;sup3; &amp;#179;   ´ &amp;acute; &amp;#180; µ &amp;micro; &amp;amp;#181 &amp;ldquo; &amp;quot; &amp;#34;   &amp;lt; &amp;lt; &amp;#60; &amp;gt; &amp;gt; &amp;#62; &amp;lsquo;  &amp;#39;    </description>
+    </item>
+    
+    <item>
+      <title>大众点评评论反爬解决方案</title>
+      <link>https://mannuan.github.io/post/%E5%A4%A7%E4%BC%97%E7%82%B9%E8%AF%84%E8%AF%84%E8%AE%BA%E5%8F%8D%E7%88%AC%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</link>
+      <pubDate>Wed, 05 Jun 2019 16:55:30 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/%E5%A4%A7%E4%BC%97%E7%82%B9%E8%AF%84%E8%AF%84%E8%AE%BA%E5%8F%8D%E7%88%AC%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</guid>
+      <description>  目前大众点评主要有两种反爬的机制：css反爬和字体反爬。
+ css反爬的解决方案 具体详见反爬机制之css反爬详解
+字体反爬的解决方案 </description>
+    </item>
+    
+    <item>
+      <title>反爬机制之css反爬详解</title>
+      <link>https://mannuan.github.io/post/%E5%8F%8D%E7%88%AC%E6%9C%BA%E5%88%B6%E4%B9%8Bcss%E5%8F%8D%E7%88%AC%E8%AF%A6%E8%A7%A3/</link>
+      <pubDate>Wed, 05 Jun 2019 16:52:42 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/%E5%8F%8D%E7%88%AC%E6%9C%BA%E5%88%B6%E4%B9%8Bcss%E5%8F%8D%E7%88%AC%E8%AF%A6%E8%A7%A3/</guid>
+      <description>css反爬，顾名思义就是利用css样式移动背景图片达到呈现文字效果的一种反爬措施。下面我们通过例子来详细介绍css反爬是怎么实现的以及解决方法。
+ 目录
+html代码（example.html）:
+css文件（example.css）：
+svg文件（example.svg）：
+html显示效果：
+规律总结：
+解决方案实现代码（python）：
+最终效果：
+html代码（example.html）: &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html&amp;gt; &amp;lt;head&amp;gt; &amp;lt;title&amp;gt;example&amp;lt;/title&amp;gt; &amp;lt;meta http-equiv=&amp;#34;Content-Type&amp;#34; content=&amp;#34;text/html; charset=utf-8&amp;#34;/&amp;gt; &amp;lt;link rel=&amp;#34;stylesheet&amp;#34; type=&amp;#34;text/css&amp;#34; href=&amp;#34;./example.css&amp;#34;&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;p&amp;gt; 之前 &amp;lt;svgmsti class=&amp;#34;cmpubq&amp;#34;&amp;gt;&amp;lt;/svgmsti&amp;gt;杭州，回 &amp;lt;svgmsti class=&amp;#34;cmpmdy&amp;#34;&amp;gt;&amp;lt;/svgmsti&amp;gt;海前选择 &amp;lt;svgmsti class=&amp;#34;cmpcj2&amp;#34;&amp;gt;&amp;lt;/svgmsti&amp;gt; &amp;lt;svgmsti class=&amp;#34;cmpfaa&amp;#34;&amp;gt;&amp;lt;/svgmsti&amp;gt;这里吃一顿，原 &amp;lt;svgmsti class=&amp;#34;cmpu0e&amp;#34;&amp;gt;&amp;lt;/svgmsti&amp;gt; &amp;lt;svgmsti class=&amp;#34;cmpug6&amp;#34;&amp;gt;&amp;lt;/svgmsti&amp;gt;想吃 &amp;lt;svgmsti class=&amp;#34;cmpu6y&amp;#34;&amp;gt;&amp;lt;/svgmsti&amp;gt; &amp;lt;svgmsti class=&amp;#34;cmppiv&amp;#34;&amp;gt;&amp;lt;/svgmsti&amp;gt;家 &amp;lt;svgmsti class=&amp;#34;cmp3wu&amp;#34;&amp;gt;&amp;lt;/svgmsti&amp;gt;，无意间发现 &amp;lt;svgmsti class=&amp;#34;cmpcj2&amp;#34;&amp;gt;&amp;lt;/svgmsti&amp;gt;这家 &amp;lt;svgmsti class=&amp;#34;cmpj8o&amp;#34;&amp;gt;&amp;lt;/svgmsti&amp;gt;，所以决 &amp;lt;svgmsti class=&amp;#34;cmpq7h&amp;#34;&amp;gt;&amp;lt;/svgmsti&amp;gt;要 &amp;lt;svgmsti class=&amp;#34;cmpfaa&amp;#34;&amp;gt;&amp;lt;/svgmsti&amp;gt;打卡！ &amp;lt;/p&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt; css文件（example.css）： svgmsti[class^=&amp;#34;cmp&amp;#34;]{ width: 14px; height: 30px; margin-top: -9px; background-image: url(./example.svg); background-repeat: no-repeat; display: inline-block; vertical-align: middle; } .</description>
+    </item>
+    
+    <item>
+      <title>python with 打开多个文件</title>
+      <link>https://mannuan.github.io/post/python-with-%E6%89%93%E5%BC%80%E5%A4%9A%E4%B8%AA%E6%96%87%E4%BB%B6/</link>
+      <pubDate>Wed, 05 Jun 2019 15:44:42 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/python-with-%E6%89%93%E5%BC%80%E5%A4%9A%E4%B8%AA%E6%96%87%E4%BB%B6/</guid>
+      <description>with open(&amp;#34;./example.html&amp;#34;, &amp;#34;r&amp;#34;) as f1, open(&amp;#34;./example.css&amp;#34;, &amp;#34;r&amp;#34;) as f2, open(&amp;#34;./example.svg&amp;#34;, &amp;#34;r&amp;#34;) as f3: html = f1.read() css = f2.read() svg = f3.</description>
+    </item>
+    
+    <item>
+      <title>pyquery获取文本节点（TextNode）</title>
+      <link>https://mannuan.github.io/post/pyquery%E8%8E%B7%E5%8F%96%E6%96%87%E6%9C%AC%E8%8A%82%E7%82%B9textnode/</link>
+      <pubDate>Wed, 05 Jun 2019 11:45:30 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/pyquery%E8%8E%B7%E5%8F%96%E6%96%87%E6%9C%AC%E8%8A%82%E7%82%B9textnode/</guid>
+      <description>from pyquery import PyQuery as pq p = pq(字符串) for i in p.contents(): print(i)</description>
+    </item>
+    
+    <item>
+      <title>html解决中文乱码</title>
+      <link>https://mannuan.github.io/post/html%E8%A7%A3%E5%86%B3%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81/</link>
+      <pubDate>Wed, 05 Jun 2019 10:14:58 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/html%E8%A7%A3%E5%86%B3%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81/</guid>
+      <description>&amp;lt;html&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;#34;UTF-8&amp;#34;/&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt;</description>
+    </item>
+    
+    <item>
+      <title>pyquery如何读取xml或html文件不乱码</title>
+      <link>https://mannuan.github.io/post/pyquery%E5%A6%82%E4%BD%95%E8%AF%BB%E5%8F%96xml%E6%88%96html%E6%96%87%E4%BB%B6%E4%B8%8D%E4%B9%B1%E7%A0%81/</link>
+      <pubDate>Tue, 04 Jun 2019 14:26:42 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/pyquery%E5%A6%82%E4%BD%95%E8%AF%BB%E5%8F%96xml%E6%88%96html%E6%96%87%E4%BB%B6%E4%B8%8D%E4%B9%B1%E7%A0%81/</guid>
+      <description>from pyquery as PyQuery as pq with open(文件路径, &amp;#34;r&amp;#34;) as f: str = f.read().encode(&amp;#34;utf-8&amp;#34;) //设置&amp;#34;utf-8&amp;#34;编码，这一步很重要 p = pq(str)</description>
+    </item>
+    
+    <item>
+      <title>pyquery如何解析xml</title>
+      <link>https://mannuan.github.io/post/pyquery%E5%A6%82%E4%BD%95%E8%A7%A3%E6%9E%90xml/</link>
+      <pubDate>Tue, 04 Jun 2019 14:07:27 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/pyquery%E5%A6%82%E4%BD%95%E8%A7%A3%E6%9E%90xml/</guid>
+      <description>之前遇到pyquery解析svg文件(xml格式)的时候发现无法获取节点，比如下面这个svg文件：
+&amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;UTF-8&amp;#34; standalone=&amp;#34;no&amp;#34;?&amp;gt; &amp;lt;!DOCTYPE svg PUBLIC &amp;#34;-//W3C//DTD SVG 1.1//EN&amp;#34; &amp;#34;http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd&amp;#34;&amp;gt; &amp;lt;svg xmlns=&amp;#34;http://www.w3.org/2000/svg&amp;#34; version=&amp;#34;1.1&amp;#34; xmlns:xlink=&amp;#34;http://www.w3.org/1999/xlink&amp;#34; width=&amp;#34;650px&amp;#34; height=&amp;#34;3030.0px&amp;#34;&amp;gt; &amp;lt;style&amp;gt;text {font-family:PingFangSC-Regular,Microsoft YaHei,&amp;#39;Hiragino Sans GB&amp;#39;,Helvetica;font-size:14px;fill:#282828;}&amp;lt;/style&amp;gt; &amp;lt;text x=&amp;#34;0&amp;#34; y=&amp;#34;35&amp;#34;&amp;gt;呜愉伸治译喊傲著逢循托从巨毒高翼阻聋巴垂级茧郎暑聚渣啦秘炊奋睁连撤宁畅搁刚轮蜂缺幕葵&amp;lt;/text&amp;gt; &amp;lt;text x=&amp;#34;0&amp;#34; y=&amp;#34;79&amp;#34;&amp;gt;搞陆林卵窝提格桑南隔选膛奸修担穴罐胖宅圆馒杏至鲁类痒宝拌让必油匀困双拢砖轧凑辜亦银牧&amp;lt;/text&amp;gt; &amp;lt;/svg&amp;gt; 我在用下面的python代码提取text节点的时候，发现无法提取，没有任何输出：
+from pyquery import PyQuery as pq with open(文件路径, &amp;#34;r&amp;#34;) as f: svg = f.read().encode(&amp;#34;utf-8&amp;#34;) p = pq(svg) for i in p(&amp;#34;text&amp;#34;).items(): print(i) 之后，我把pyquery的解析方式，强制设置为 paser=&amp;quot;html&amp;quot; 后，就行了：
+from pyquery import PyQuery as pq with open(文件路径, &amp;#34;r&amp;#34;) as f: svg = f.read().encode(&amp;#34;utf-8&amp;#34;) p = pq(svg, parser=&amp;#34;html&amp;#34;) for i in p(&amp;#34;text&amp;#34;).</description>
+    </item>
+    
+    <item>
+      <title>冒泡排序、选择排序和插入排序的比较</title>
+      <link>https://mannuan.github.io/post/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F%E5%92%8C%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F%E7%9A%84%E6%AF%94%E8%BE%83/</link>
+      <pubDate>Mon, 03 Jun 2019 21:57:21 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F%E5%92%8C%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F%E7%9A%84%E6%AF%94%E8%BE%83/</guid>
+      <description> 冒泡排序 算法流程 假设存在一个长度为N的数组，按照从左至右的顺序升序排列。首先，通过N-1次数
+javascript代码 function bubbleSort(){ var arr = arguments[0]; for(var end=arr.length-1; end&amp;gt;0; end--){ for(var i=0; i&amp;lt;end; i++){ if(arr[i] &amp;gt; arr[end]){ var tmp = arr[i]; arr[i] = arr[end]; arr[end] = tmp; } } } } function randomNum(max=100, start=33){ return Math.floor(Math.random() * max + start) } var arr = []; var length = randomNum(30, 1); for(var i=0; i&amp;lt;length; i++){ // 创建随机数组  arr.push(randomNum()); } console.log(arr); bubbleSort(arr); console.log(arr);  选择排序 </description>
+    </item>
+    
+    <item>
+      <title>markdown常用语法大全</title>
+      <link>https://mannuan.github.io/post/markdown%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95%E5%A4%A7%E5%85%A8/</link>
+      <pubDate>Mon, 03 Jun 2019 14:35:36 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/markdown%E5%B8%B8%E7%94%A8%E8%AF%AD%E6%B3%95%E5%A4%A7%E5%85%A8/</guid>
+      <description>标记 作用 备注     文字 字体加粗    连续两个空格 换行    连续两个回车 或 在空行处输出连续两个&amp;lt;br/&amp;gt;&amp;lt;br/&amp;gt; 空行    &amp;amp;nbsp; 它叫不换行空格，全称是 No-Break Space，它是最常见和我们使用最多的空格，大多数的人可能只接触了&amp;amp;nbsp;，它是按下space键产生的空格。 在HTML中，如果你用空格键产生此空格，空格是不会累加的（只算1个）。要使用html实体表示才可累加，该空格占据宽度受字体影响明显而强烈。   &amp;amp;ensp; 它叫“半角空格”，全称是 En Space ，en是字体排印学的计量单位，为em宽度的一半。根据定义，它等同于字体度的一半（如16px字体中就是8px）。名义上是小写字母n的宽度。 此空格传承空格家族一贯的特性：透明的，此空格有个相当稳健的特性，就是其占据的宽度正好是1/2个中文宽度，而且基本上不受字体影响。   &amp;amp;emsp; 它叫“全角空格”，全称是 Em Space ，em是字体排印学的计量单位，相当于当前指定的点数。例如，1em在16px的字体中就是16px。 此空格也传承空格家族一贯的特性：透明的，此空格也有个相当稳健的特性，就是其占据的宽度正好是1个中文宽度，而且基本上不受字体影响。   &amp;amp;thinsp; 它叫“窄空格”，全称是 Thin Space    。我们不妨称之为“瘦弱空格”，就是该空格长得比较瘦弱，身体单薄，占据的宽度比较小。它是em之六分之一宽。     &amp;amp;zwnj; 它叫零宽不连字，全称是 Zero Width Non Joiner，简称“ZWNJ”，是一个不打印字符，放在电子文本的两个字符之间，抑制本来会发生的连字，而是以这两个字符原本的字形来绘制。 Unicode中的零宽不连字字符映射为“”（zero width non-joiner，U+200C），HTML字符值引用为：“‌”   !</description>
+    </item>
+    
+    <item>
+      <title>numpy softmax实现</title>
+      <link>https://mannuan.github.io/post/numpy-softmax%E5%AE%9E%E7%8E%B0/</link>
+      <pubDate>Sun, 02 Jun 2019 18:42:49 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/numpy-softmax%E5%AE%9E%E7%8E%B0/</guid>
+      <description># -*- coding: utf-8 -*- import numpy as np def softmax(x): x_row_max = x.max(axis=-1) x_row_max = x_row_max.reshape(list(x.shape)[:-1]+[1]) x = x - x_row_max x_exp = np.exp(x) x_exp_row_sum = x_exp.sum(axis=-1).reshape(list(x.shape)[:-1]+[1]) softmax = x_exp / x_exp_row_sum return softmax if __name__ == &amp;#34;__main__&amp;#34;: m = np.random.randn(2, 2, 2) + 2 m = softmax(m) m = m.</description>
+    </item>
+    
+    <item>
+      <title>准确率、精准率、召回率和F1值详解</title>
+      <link>https://mannuan.github.io/post/%E5%87%86%E7%A1%AE%E7%8E%87%E7%B2%BE%E5%87%86%E7%8E%87%E5%8F%AC%E5%9B%9E%E7%8E%87%E5%92%8Cf1%E5%80%BC%E8%AF%A6%E8%A7%A3/</link>
+      <pubDate>Sun, 02 Jun 2019 17:37:07 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/%E5%87%86%E7%A1%AE%E7%8E%87%E7%B2%BE%E5%87%86%E7%8E%87%E5%8F%AC%E5%9B%9E%E7%8E%87%E5%92%8Cf1%E5%80%BC%E8%AF%A6%E8%A7%A3/</guid>
+      <description>专业术语的中英文对照表 英文名     准确率 Accuracy   精准率 Precise   召回率 Recall   F1值 F1 measure    Precise和Recall是广泛应用在信息检索和统计学分类领域的两个度量值，用来评价结果的质量；F1 measure是综合Precise和Recall两个指标的评估指标，用于综合反映整体的指标。Precise、Recall和F1 measure都是通过混淆矩阵计算出来的，下表是对混淆矩阵的介绍：
+混淆矩阵 &amp;nbsp; 预测的类别 &amp;nbsp; 实际的类别 &amp;nbsp; Positive Negative 合计 Positive TP FN 正样本 Negative FP TN 负样本 &amp;nbsp; 合计 样本被预测为Positive 样本被预测为Negative Positive+Negative   其中： TP表示正确地把正样本预测为正； FN表示错误地把正样本预测为负； FP表示错误地把负样本预测为正； TN表示正确地把负样本预测为负；
+ Precise 表示正确预测正样本占实际预测为正样本的比例
+$$Precise = \frac{TP}{TP+FP}$$
+Recall 表示正确预测正样本占正样本的比例
+$$Recall = \frac{TP}{TP+FN}$$</description>
+    </item>
+    
+    <item>
+      <title>linux实现内网穿透</title>
+      <link>https://mannuan.github.io/post/linux%E5%AE%9E%E7%8E%B0%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/</link>
+      <pubDate>Sun, 02 Jun 2019 14:11:30 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/linux%E5%AE%9E%E7%8E%B0%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/</guid>
+      <description>穿透工具：frps
+进程管理工具：supervisor</description>
+    </item>
+    
+    <item>
+      <title>linux命令之nohup</title>
+      <link>https://mannuan.github.io/post/linux%E5%91%BD%E4%BB%A4%E4%B9%8Bnohup/</link>
+      <pubDate>Sun, 02 Jun 2019 13:51:44 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/linux%E5%91%BD%E4%BB%A4%E4%B9%8Bnohup/</guid>
+      <description> 结合后台运行命令&amp;amp;使用  nohup command &amp;gt;&amp;gt; log_path 2&amp;gt;&amp;amp;1 &amp;amp;</description>
+    </item>
+    
+    <item>
+      <title>JavaScript-事件对象</title>
+      <link>https://mannuan.github.io/post/javascript-%E4%BA%8B%E4%BB%B6%E5%AF%B9%E8%B1%A1/</link>
+      <pubDate>Sat, 01 Jun 2019 14:28:18 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/javascript-%E4%BA%8B%E4%BB%B6%E5%AF%B9%E8%B1%A1/</guid>
+      <description>触发某个事件时会产生一个事件对象event，这个对象中包含着所有与事件有关的信息。
+ 事件的元素 事件的类型 其它与事件相关的信息  所有浏览器都支持event对象，但存在差异。
+event对象在标准的现代浏览器中会作为参数传入到事件的事件处理函数。
+DOM中的事件对象 属性/方法 类型 读写 说明 bubbles Boolean 只读 表明事件是否支持冒泡 cancelable Boolean 只读 表明是否可以取消默认行为 currentTarget Element 只读 表明事件处理程序当前正在处理事件的那个元素 defaultPrevented Boolean 只读 为true表示已经调用了下面的preventDefault() detail Int 只读 与事件相关的细节信息 eventPhase Int 只读 触发事件处理程序的阶段：1表示捕获，2表示处于目标，3表示冒泡 preventDefault() Function —— 取消事件的默认行为，前提条件是cancelable属性为true stopImmediatePropagation() Function —— 取消事件的进一步捕获或冒泡，同时阻止任何（其他的）事件处理程序被调用 stopPropagation() Function —— 立即停止事件在DOM中的传播，取消进一步的时间捕获或冒泡，前提条件是：bubbles属性为true target Element 只读 事件的目标元素 trusted Boolean 只读 为true表示是浏览器生成的，为false表示是开发人员自定义的事件 type String 只读 被触发的事件类型 view AbstractView 只读 与事件相关的抽象视图，等于发生事件的window对象   在HTML事件处理程序时：变量event（固定）中保存着event对象，无需主动声明，也无需以参数形式传入：
+ 在DOM 0 级和DOM 2 级事件处理程序中，event对象会 以参数的形式传入事件处理函数 中；</description>
+    </item>
+    
+    <item>
+      <title>JavaScript客户端检测</title>
+      <link>https://mannuan.github.io/post/javascript%E5%AE%A2%E6%88%B7%E7%AB%AF%E6%A3%80%E6%B5%8B/</link>
+      <pubDate>Sat, 01 Jun 2019 10:57:50 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/javascript%E5%AE%A2%E6%88%B7%E7%AB%AF%E6%A3%80%E6%B5%8B/</guid>
+      <description>应对各个厂商、各个版本的浏览器对特性支持度的差异，常采取的策略
+ ”最小公分母“策略 客户端检测技术，突破和规避种种局限  不到万不得已不要使用客户端检测；先设计最通用的方案，然后使用特定于浏览器的技术增强该方案。
+常用的客户端检测技术包括：
+能力检测  最常用最方便，只关注能力，不关注浏览器品牌和版本； 两个原则  先检测达成目的的最常用特性，避免测试多个条件
+必须测试实际用到的特性，一个特性存在不一定代表另一个特性也存在
+ 在可能的情况下，尽量使用typeof进行能力检测； 低版本IE下或其他非标准浏览器下，使用typeof检测的值不一定符合标准；  低版本IE的DOM以COM的形式实现，很容易出现typeof检测结果不标准的情况
+ 通过检测对象是否有某些原生属性时，要注意我们的代码是否定义了与要检测到的原生属性同名的属性，确保检测的目标是正确的； 一般通用方法：isHostMethod函数  function isHostMethod(object, property){ var t = typeof object[property]; return t == &amp;#39;function&amp;#39; || (!!(t == &amp;#39;object&amp;#39; &amp;amp;&amp;amp; object[property])) || t == &amp;#39;unknown&amp;#39;; } result = isHostMethod(document, &amp;#39;getElementById&amp;#39;);   根据浏览器不同将能力组合起来是更可取的方法； 如果你预先知道自己的程序需要使用某些特定的浏览器特性，那么最好一次性检测所有相关特性。  怪癖检测  目的是识别浏览器的特殊行为，与能级检测的检测能力刚好相反；
+ 怪癖是个别浏览器独有的，通常归类为bug；
+ 实例：IE8及更早版本中，如果某个实例属性与[[Enumerable]]标记为false的某个原型属性同名，那么属性无法被for-in循环遍历
+  // 怪癖检测 var hasDontEnumQuirk = function(){ var o = {toString: function(){}}; for(var prop in o){ if(prop == &amp;#39;toString&amp;#39;){ return false; } } return true; }(); hasDontEnumQuirk;// false 说明浏览器没有这个怪癖  用户代理检测  通过检测用户代理字符串来确定实际使用的浏览器； 通常是在最后才选择这样的方法，或者想实现某些特定的功能才使用用户代理检测； 主要使用navigator.</description>
+    </item>
+    
+    <item>
+      <title>javascript 事件处理程序</title>
+      <link>https://mannuan.github.io/post/javascript-%E4%BA%8B%E4%BB%B6%E5%A4%84%E7%90%86%E7%A8%8B%E5%BA%8F/</link>
+      <pubDate>Fri, 31 May 2019 21:56:29 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/javascript-%E4%BA%8B%E4%BB%B6%E5%A4%84%E7%90%86%E7%A8%8B%E5%BA%8F/</guid>
+      <description>响应某个事件的函数叫做 事件处理程序 （或 事件侦听器 ），例如：click 事件的处理程序就是 onclick
+ HTML事件处理程序  某个元素支持的所有事件都可以使用一个与相应事件处理程序同名的HTML特性来指定；  &amp;lt;input type=&amp;#34;button&amp;#34; value=&amp;#34;click me&amp;#34; onclick=&amp;#34;alert(&amp;#39;Clicked&amp;#39;)&amp;#34; /&amp;gt;  在这个特性里，不能使用未经转义的HTML语法字符：和号（&amp;amp;）、双引号（&amp;rdquo;&amp;ldquo;）、小于号（&amp;lt;）或大于号（&amp;gt;）；  &amp;lt;input type=&amp;#34;button&amp;#34; value=&amp;#34;click me&amp;#34; onclick=&amp;#34;alert(&amp;amp;quot;Clicked&amp;amp;quot;)&amp;#34; /&amp;gt;  特性值也可以是调用页面中其他地方定义的脚本， HTML事件处理程序在执行时 有权访问全局作用域中的任何代码 ；  &amp;lt;input type=&amp;#34;button&amp;#34; value=&amp;#34;click me&amp;#34; onclick=&amp;#34;showMessage()&amp;#34; /&amp;gt;  HTML事件处理程序内部可以 通过 event 变量直接访问事件对象 ，无需自己定义，也不用从函数的参数列表读取；
+ HTML事件处理程序中的this等于事件的目标元素；
+  &amp;lt;input type=&amp;#34;button&amp;#34; value=&amp;#34;click me&amp;#34; onclick=&amp;#34;alert(this.value)&amp;#34; /&amp;gt;  HTML事件处理程序有着独特的扩展作用域：处理函数内部可以直接访问元素本身、document元素，类似使用with(this)、with(document)进行扩展一样；  &amp;lt;form method=&amp;#34;post&amp;#34;&amp;gt; &amp;lt;input type=&amp;#34;text&amp;#34; name=&amp;#34;username&amp;#34; value=&amp;#34;&amp;#34;&amp;gt; &amp;lt;input type=&amp;#34;button&amp;#34; onclick=&amp;#34;alert(username.value)&amp;#34;&amp;gt; &amp;lt;/form&amp;gt;  删除HTML事件处理程序的方法：设置事件处理程序对应的HTML特性值为null；</description>
+    </item>
+    
+    <item>
+      <title>javascript 事件流</title>
+      <link>https://mannuan.github.io/post/javascript-%E4%BA%8B%E4%BB%B6%E6%B5%81/</link>
+      <pubDate>Fri, 31 May 2019 21:05:41 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/javascript-%E4%BA%8B%E4%BB%B6%E6%B5%81/</guid>
+      <description> 事件流 描述的是从页面中 接收事件的顺序 。
+对待事件流的问题上，IE和Netscape提出了完全相反的两个概念：IE的事件流是 冒泡流 ，而Netscape的事件流是 捕获流。
+事件冒泡  IE的 事件流类型；现已被所有现代浏览器支持； 时间开始时由最具体的元素——文档中嵌套层次最具体的元素（可理解为最小的同心圆）接收，然后事件沿DOM树向上传播到document对象； 所有的现代浏览器都支持冒泡，各浏览器之间的差异  IE8- 事件冒泡到document即停止；
+其他现代浏览器支持一直冒泡到window对象；
+事件捕获  Netscape浏览器的事件流机制； 事件开始时由不具体的节点——文档中嵌套层次最上级的元素（可理解为最大的同心圆）最早接收，然后事件沿着DOM树向下传播，直到传播到最具体的节点； 现代浏览器都支持 事件捕获 模型； DOM2级 事件规范要求：从document对象开始传播；但一般的现代浏览器都从window对象开始捕获。  DOM事件流  ”DOM 2级事件“规定的事件包括三个阶段：事件捕获阶段、处于目标阶段和事件冒泡阶段； 实例：document&amp;gt;html&amp;gt;body&amp;gt;div  在DOM事件流中，实际的目标(div)在捕获阶段不会接收到事件。这意味着在捕获阶段，事件从document到html再到body后就会停止。下一个阶段就是处于&amp;rdquo;处于目标&amp;rdquo;阶段，于是事件在div上发生，并 在事件处理中被看成冒泡阶段的一部分。然后，冒泡阶段发生，事件又传播到文档。
+ ”DOM2级事件“规定：捕获阶段不涉及事件目标；但一般的现代浏览器都会在捕获阶段触发事件对象上的事件；导致的结果就是：有两个机会（捕获、冒泡）在目标对象上面操作事件； IE8- 不支持DOM事件流。  </description>
+    </item>
+    
+    <item>
+      <title>JavaScript 事件</title>
+      <link>https://mannuan.github.io/post/javascript-%E4%BA%8B%E4%BB%B6/</link>
+      <pubDate>Fri, 31 May 2019 20:40:33 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/javascript-%E4%BA%8B%E4%BB%B6/</guid>
+      <description>JavaScript与HTML之间的交互是通过事件实现的。
+事件 ：文档或浏览器窗口中发生的一些交互瞬间；可以使用 侦听器 （或处理程序） 预订 事件，以便事件发生时执行相应的代码。
+这种 侦听事件——执行操作 的模式在传统软件过程中叫做 观察者模式 。
+DOM2级规范开始规范标准化DOM事件，IE8是最后一个仍然使用其专有事件系统的浏览器。
+除了DOM事件，还有BOM事件，HTML5致力于规范BOM事件。
+所有事件：</description>
+    </item>
+    
+    <item>
+      <title>DOM专有扩展</title>
+      <link>https://mannuan.github.io/post/dom%E4%B8%93%E6%9C%89%E6%89%A9%E5%B1%95/</link>
+      <pubDate>Fri, 31 May 2019 15:35:12 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/dom%E4%B8%93%E6%9C%89%E6%89%A9%E5%B1%95/</guid>
+      <description>插入文本： innerText, outerText
+innerText  读取元素中包含的所有文本内容，只读取文本内容； 写入时会删除元素的所有节点，插入文本内容； 不同浏览器处理空白和换行的方式不一样； firefox不支持innerText，但支持textContent属性；   textContent与innerText的不同点在于：innerText会忽略行内的样式和脚本，textContent不会；
+最佳实践 ：从不包含行内样式和行内脚本的DOM中读取文本
+  使用innerText可以过滤标签，快捷地获得纯文本。  function getInnerText(element){ return (typeof element.textContent == &amp;#39;string&amp;#39;) ? element.textContent : element.innerText; } function setInnerText(element, text){ if(typeof element.textContent == &amp;#39;string&amp;#39;){ elemnt.textContent = text; }else{ element.innerText = text; } }  滚动相关  scrollIntoView()：对元素调用此方法可以使页面滚动到与元素顶部平齐； scrollIntoViewIfNeeded(alignCenter)：调用方法的元素不可见的情况下运行，接受一个参数：是否垂直居中，布尔值； scrollByLines(lineCount)：将元素内容滚动到指定的行高； scrollByPages(pageCount)：将元素内容滚动至指定的页面高度；  以上三个方法支持性都不是很好！</description>
+    </item>
+    
+    <item>
+      <title>HTML5之插入标记innerHTML</title>
+      <link>https://mannuan.github.io/post/html5%E4%B9%8B%E6%8F%92%E5%85%A5%E6%A0%87%E8%AE%B0innerhtml/</link>
+      <pubDate>Fri, 31 May 2019 11:33:01 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/html5%E4%B9%8B%E6%8F%92%E5%85%A5%E6%A0%87%E8%AE%B0innerhtml/</guid>
+      <description>处于安全等方面的考虑：
+ 通过innerHTML直接插入&amp;lt;script&amp;gt;元素在大多数浏览器中并不会执行其中的脚本； 通过innerHTML直接插入&amp;lt;style&amp;gt;在一些浏览器中无效。   在这些浏览器中，这两个元素被认为是”无作用域的元素“（不会在页面上显示的元素），如果通过innerHTML插入的字符串开头就是”无作用域的元素“，那么这些浏览器就会解决这个字符串前先删除该元素。解决的方法：在这些”无作用域的元素“前临时增加一个有作用域的元素，之后再将临时元素删除，同时为脚本元素设置defer特性。
+  部分元素不支持innerHTML; 冷知识：firefox浏览器在XHTML文档中设置innerHTML是要求XHTML必须严格符合要求，否则，innerHTML将会静默地失败； 最佳实践：使用innerHTML插入代码片时，请通过特定的方法过滤掉script标签（可能引入恶意脚本）。  </description>
+    </item>
+    
+    <item>
+      <title>Javascript焦点管理—document.hasFocus()</title>
+      <link>https://mannuan.github.io/post/javascript%E7%84%A6%E7%82%B9%E7%AE%A1%E7%90%86-document_hasfocus/</link>
+      <pubDate>Fri, 31 May 2019 10:42:39 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/javascript%E7%84%A6%E7%82%B9%E7%AE%A1%E7%90%86-document_hasfocus/</guid>
+      <description> 该方法用于确定文档是否获得焦点； 可以通过检测文档是否获得焦点得知用户是否正在与页面交互。  </description>
+    </item>
+    
+    <item>
+      <title>Javascript焦点管理-document.activeElement</title>
+      <link>https://mannuan.github.io/post/javascript%E7%84%A6%E7%82%B9%E7%AE%A1%E7%90%86-document.activeelement/</link>
+      <pubDate>Fri, 31 May 2019 10:39:01 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/javascript%E7%84%A6%E7%82%B9%E7%AE%A1%E7%90%86-document.activeelement/</guid>
+      <description> document.activeElement指向页面中当前获得焦点的元素； 元素获得焦点的方式； 文档刚加载完，document.activeElement指向document.body； 文档加载期间，document.activeElement指向null。  </description>
+    </item>
+    
+    <item>
+      <title>元素获得焦点的方式</title>
+      <link>https://mannuan.github.io/post/%E5%85%83%E7%B4%A0%E8%8E%B7%E5%BE%97%E7%84%A6%E7%82%B9%E7%9A%84%E6%96%B9%E5%BC%8F/</link>
+      <pubDate>Fri, 31 May 2019 10:33:10 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/%E5%85%83%E7%B4%A0%E8%8E%B7%E5%BE%97%E7%84%A6%E7%82%B9%E7%9A%84%E6%96%B9%E5%BC%8F/</guid>
+      <description> 页面加载 Tab切换 元素的focus()方法  </description>
+    </item>
+    
+    <item>
+      <title>orcle jdk linux 安装教程</title>
+      <link>https://mannuan.github.io/post/orcle-jdk-linux-%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</link>
+      <pubDate>Fri, 31 May 2019 10:25:24 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/orcle-jdk-linux-%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</guid>
+      <description> 将*.tar.gz解压（以jdk8.144为例）：
+tar -xzvf jdk-8u144-linux-x64.tar.gz  得到的文件夹为jdk1.8.0_144，将其移动到/usr/lib/jvm中： bash sudo mv jdk1.8.0_144 /usr/lib/jvm   设置环境变量：
+sudo gedit /etc/profile 打开文件，在结尾处输入：
+export JAVA_HOME=/usr/lib/jvm/jdk1.8.0_144 export JRE_HOME=/usr/lib/jvm/jdk1.8.0_144/jre export CLASSPATH=.:$JAVA_HOME/lib:$JRE_HOME/lib:$CLASSPATH export PATH=$JAVA_HOME/bin:$JRE_HOME/bin:$PATH 生效配置文件：
+  source /etc/profile  创建jdk软链接：  update-alternatives --install /usr/bin/java java /usr/lib/jvm/jdk1.8.0_144/bin/java 300 update-alternatives --install /usr/bin/javac javac /usr/lib/jvm/jdk1.8.0_144/bin/javac 300  设置默认jdk：  update-alternatives --config java  查看jdk版本，检查是否安装完成：  java -version</description>
+    </item>
+    
+    <item>
+      <title>HTML5的特性</title>
+      <link>https://mannuan.github.io/post/html5%E7%9A%84%E7%89%B9%E6%80%A7/</link>
+      <pubDate>Thu, 30 May 2019 22:58:03 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/html5%E7%9A%84%E7%89%B9%E6%80%A7/</guid>
+      <description>HTML5规范定义了一系列与DOM规范重叠的API;
+HTML5的规范涉及面非常广，新增的DOM API只是其一部分。
+ getElementsByClassName()  可以通过document和所有HTML元素对象调用此方法；
+ 返回带有指定类的NodeList;
+ 传入的一个字符串参数可以包含多个类；
+  classList属性  所有元素都拥有，是新集合类型DOMTokenList的对象实例； 访问classList的项: []、item()、classList对象属性; 对象属性: length; 删除一个元素多个类名中的某个类名的旧版方法：  function removeClass(element, toDelClass){ var classNames = element.className.split(/\s+/); var pos = -1, i, len = className.length; for(i=0; i&amp;lt;len; i++){ if(classNames[i] == toDelClass){ pos = i; break; } } classNames.splice(i, 1); element.className = classNames.join(&amp;#39; &amp;#39;); } removeClass(document.body, &amp;#39;any-class&amp;#39;);   使用classList对象的方法操作元素的className：  var element = document.getElementById(&amp;#39;myDiv&amp;#39;); // add(value) -- 如果存在就不添加了 element.</description>
+    </item>
+    
+    <item>
+      <title>DOM扩展-元素遍历</title>
+      <link>https://mannuan.github.io/post/dom%E6%89%A9%E5%B1%95-%E5%85%83%E7%B4%A0%E9%81%8D%E5%8E%86/</link>
+      <pubDate>Thu, 30 May 2019 19:21:47 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/dom%E6%89%A9%E5%B1%95-%E5%85%83%E7%B4%A0%E9%81%8D%E5%8E%86/</guid>
+      <description> 使用循环语句进行常规遍历的不方便性：  元素间的空格(空行)的对待方式不一致，除IE9-外的浏览器都视作文本节点，所以未使用新API之前遍历元素都需要检测节点的类型，跳开空格（空行）代表文本节点。
+ W3C的Element Traversal规范新定义了一组属性：IE9+支持：  childElementCount: 子元素节点的个数； firstElementChild: 第一个子元素节点； lastElementChild: 最后一个子元素节点； previousElementSibling: 后一个元素节点  旧的写法： var i, len, child = element.firstChild; while(child != element.lastChild){ if(child.nodeType == 1){ // 检查是不是元素  processChild(child); } child = child.nextSubling; }  新API下的写法： var i, len, child = element.firstElementChild; while(child != element.lastElementChild){ processChild(child); child = child.nextElementSibling; } </description>
+    </item>
+    
+    <item>
+      <title>pyspider如何刷新项目的状态</title>
+      <link>https://mannuan.github.io/post/pyspider%E5%A6%82%E4%BD%95%E5%88%B7%E6%96%B0%E9%A1%B9%E7%9B%AE%E7%9A%84%E7%8A%B6%E6%80%81/</link>
+      <pubDate>Thu, 30 May 2019 17:01:13 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/pyspider%E5%A6%82%E4%BD%95%E5%88%B7%E6%96%B0%E9%A1%B9%E7%9B%AE%E7%9A%84%E7%8A%B6%E6%80%81/</guid>
+      <description> 关闭pyspider 进入data目录 删除目录下面除了project.db之外的文件 重新启动pyspider  </description>
+    </item>
+    
+    <item>
+      <title>mongodb常用命令大全</title>
+      <link>https://mannuan.github.io/post/mongodb%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8/</link>
+      <pubDate>Thu, 30 May 2019 16:16:20 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/mongodb%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8/</guid>
+      <description>关键字的名称：test
+数据表名：test
+搜索关键字：test
+    作用 命令 例子     列出所有包含test的item {&amp;quot;test&amp;quot;: {&amp;quot;$exists&amp;quot;: true}} db.getCollection(&#39;test&#39;).find({&amp;quot;test&amp;quot;: {&amp;quot;$exists&amp;quot;: true}})   根据test进行排序 {&amp;quot;test&amp;quot;: 1或-1}，&amp;rdquo;1&amp;rdquo;表示升序，”-1“表示降序 db.getCollection(&#39;test&#39;).find().sort({&amp;quot;test&amp;quot;: -1})   列出所有符合正则表达式的item {&amp;quot;test&amp;quot;: {&amp;quot;$regex&amp;quot;: &amp;quot;test&amp;quot;}} db.getCollection(&#39;test&#39;).find({&amp;quot;test&amp;quot;: {&amp;quot;$regex&amp;quot;: &amp;quot;test&amp;quot;}})   限制列出的item的数量 数字 db.getCollection(&#39;test&#39;).find().limit(自定义数字)   列出所有符合字符串长度的item {&amp;quot;$where&amp;quot;: &amp;quot;(this.test.length &amp;gt; 自定义长度)&amp;quot;} db.getCollection(&#39;test&#39;).find({&amp;quot;$where&amp;quot;: &amp;quot;(this.test.length &amp;gt; 自定义长度)&amp;quot;})   统计item的数量 collection.count_documents({}) db.getCollection(&amp;quot;test&amp;quot;).count_documents({})    持续更新&amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>百度知道爬虫</title>
+      <link>https://mannuan.github.io/post/%E7%99%BE%E5%BA%A6%E7%9F%A5%E9%81%93%E7%88%AC%E8%99%AB/</link>
+      <pubDate>Thu, 30 May 2019 15:31:41 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/%E7%99%BE%E5%BA%A6%E7%9F%A5%E9%81%93%E7%88%AC%E8%99%AB/</guid>
+      <description>工具： pyspider
+数据库： mongodb
+思路：  假设你要根据两个关键字搜索百度知道答案，比如：”购物“和”价格“； 组建爬虫的url，需要把这两个关键字转化为url编码的格式，url编码教程详见； 取出搜索页面列表上面所有项的url链接; 然后，爬取步骤3的url，取出页面上面的question和最佳答案； 循环往复，进行2、3、4步骤；  代码： #!/usr/bin/env python # -*- encoding: utf-8 -*- from pyspider.libs.base_handler import * from urllib.parse import quote, unquote from pymongo import MongoClient import datetime import time import random client = MongoClient(&amp;#34;自定义数据库接口&amp;#34;) db = client.自定义数据库名 class Handler(BaseHandler): crawl_config = { } key_word1 = quote(&amp;#34;自定义关键字1&amp;#34;.encode(&amp;#34;GB2312&amp;#34;)) key_word2_list = [&amp;#34;自定义关键字2&amp;#34;] key_word2_list = [quote(i.encode(&amp;#34;GB2312&amp;#34;)) for i in key_word2_list] url_format = &amp;#34;https://zhidao.baidu.com/search?word={}&amp;amp;ie=gbk&amp;amp;site=-1&amp;amp;sites=0&amp;amp;date=0&amp;amp;pn={}&amp;#34; page_num = 76 # 最大页码 start_page = 0 # 开始的页码 max_random = 5 # 随机数的最大值 headers1 = { &amp;#34;Accept&amp;#34;: &amp;#34;text/html,application/xhtml+xml,application/xml;q=0.</description>
+    </item>
+    
+    <item>
+      <title>百度搜索-url编码</title>
+      <link>https://mannuan.github.io/post/%E7%99%BE%E5%BA%A6%E6%90%9C%E7%B4%A2-url%E7%BC%96%E7%A0%81/</link>
+      <pubDate>Thu, 30 May 2019 11:38:44 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/%E7%99%BE%E5%BA%A6%E6%90%9C%E7%B4%A2-url%E7%BC%96%E7%A0%81/</guid>
+      <description>  百度搜索编码的格式与国际上面其他搜索的格式有所不同，比如google的是UTF-8，但是百度使用的是GB2312编码。
+ 应用场景  在爬虫当中我们经常需要组装url来进行页面的爬虫，这个时候我们就需要把搜索的关键字编码为url的形式，下面我们以python3代码为例讲解url的编码和解码：  # -*- coding: utf-8 -*- from urllib.parse import quote, unquote key_word = &amp;#34;购车&amp;#34;; # url编码 key_word_quote = quote(key_word.encode(&amp;#34;GB2312&amp;#34;), &amp;#39;gbk&amp;#39;) print(key_word_quote) # url解码 print(unquote(key_word_quote, &amp;#39;gbk&amp;#39;))</description>
+    </item>
+    
+    <item>
+      <title>DOM扩展-选择符API</title>
+      <link>https://mannuan.github.io/post/dom%E6%89%A9%E5%B1%95-%E9%80%89%E6%8B%A9%E7%AC%A6api/</link>
+      <pubDate>Thu, 30 May 2019 10:58:36 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/dom%E6%89%A9%E5%B1%95-%E9%80%89%E6%8B%A9%E7%AC%A6api/</guid>
+      <description>  选择符API允许直接使用CSS选择器来选取页面元素，众多库推进了选择符API的标准化。
+选择符API性能因为原生，所以性能必定强于各个库同类型的查询操作。
+ querySelector()  Selector API Level 1;
+ 接收一个css选择符（可复杂）,返回匹配的第一个元素或返回null;
+ 传入不支持的选择符会抛出错误；
+ 能调用querySelector()的对象为：Document类型，Element类型，DocumentFragment类型。
+  querySelectorAll()  Selector API Level 1; 接收一个CSS选择符（可复杂），返回所有匹配元素组成的NodeList实例或null; 传入不支持的选择符会抛出错误； 能调用querySelector()的对象为：Document类型，Element类型，DocumentFragment类型。  matchesSelector()  Selector API Level 2; 接收一个css选择器做参数，比较选择符与调用方法的元素是否匹配，返回布尔值； 各个浏览器支持性不同：IE9+通过document.body.msMatchesSelector()支持该方法，Firefox3.6通过document.body.mozMatchesSelector()支持该方法，Safari5+和Chrome通过document.body.webkitMatchesSelector()支持该方法。下面是一个包装的函数：  function matchesSelector(element, selector){ if(element.matchesSelector){ return element.matchesSelector(selector); }else if(element.msMatchesSelector){ return element.msMatchesSelector(selector); }else if(element.mozMatchesSelector){ return element.mozMatchesSelector(selector); }else if(element.webkitMatchesSelector){ return element.webkitMatchesSelector(selector); }else{ throw new Error(&amp;#34;Not supported.&amp;#34;); } } if(matchesSelector(document.body, &amp;#34;body.page1&amp;#34;)){ //执行操作 } </description>
+    </item>
+    
+    <item>
+      <title>DOM扩展的发展和现状</title>
+      <link>https://mannuan.github.io/post/dom%E6%89%A9%E5%B1%95%E7%9A%84%E5%8F%91%E5%B1%95%E5%92%8C%E7%8E%B0%E7%8A%B6/</link>
+      <pubDate>Thu, 30 May 2019 10:37:03 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/dom%E6%89%A9%E5%B1%95%E7%9A%84%E5%8F%91%E5%B1%95%E5%92%8C%E7%8E%B0%E7%8A%B6/</guid>
+      <description>2008年之前，几乎所有的DOM扩展都是专有的，之后W3C着手将一些已经成为事实的专有扩展标准化并写入规范当中；
+大部分扩展都来自社区的呼声，虽然现在标准已经涵盖了大量的以前的DOM扩展，但是各个浏览器的专有扩展依然存在。</description>
+    </item>
+    
+    <item>
+      <title>table, tbody, tr 元素的属性和方法</title>
+      <link>https://mannuan.github.io/post/table-tbody-tr-%E5%85%83%E7%B4%A0%E7%9A%84%E5%B1%9E%E6%80%A7%E5%92%8C%E6%96%B9%E6%B3%95/</link>
+      <pubDate>Thu, 30 May 2019 10:03:59 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/table-tbody-tr-%E5%85%83%E7%B4%A0%E7%9A%84%E5%B1%9E%E6%80%A7%E5%92%8C%E6%96%B9%E6%B3%95/</guid>
+      <description>&amp;lt;table&amp;gt;元素的属性和方法：  caption：返回表格的caption元素节点，没有则返回null； tHead, tBodies, tFoot: 返回表格&amp;lt;thead&amp;gt;, &amp;lt;tbody&amp;gt;, &amp;lt;tfoot&amp;gt;元素； rows: 返回元素所有行&amp;lt;tr&amp;gt;元素的HTMLCollection; createTHead(), createTFoot(), createCaption(): 创建&amp;lt;thead&amp;gt;, &amp;lt;tfoot&amp;gt;, &amp;lt;caption&amp;gt;空元素，将其放到表格中，返回创建的&amp;lt;thead&amp;gt;, &amp;lt;tfoot&amp;gt;, &amp;lt;caption&amp;gt;元素节点； deleteTHead(), deleteTFoot(), deleteCaption(): 删除&amp;lt;thead&amp;gt;, &amp;lt;tfoot&amp;gt;, &amp;lt;caption&amp;gt;空元素，无返回值（或返回值为undefined） deleteRow(pos): 删除指定位置（注意参数不是索引，而是从0开始的位置）的行，返回undefined; insertRow(pos): 向rows集合中的指定位置（不是索引）插入一行；  &amp;lt;tbody&amp;gt;元素的属性和方法：  rows: 返回&amp;lt;tbody&amp;gt;元素下所有行&amp;lt;tr&amp;gt;元素的HTMLCollection; deleteRow(pos): 删除指定位置（注意参数不是索引，而是从0开始的位置）的行，返回undefined; insertRow(pos):向rows集合中的指定位置（不是索引）插入一行；  &amp;lt;tr&amp;gt;元素的属性和方法：  cells: 返回&amp;lt;tr&amp;gt;元素中单元格的HTMLCollection; deleteCell(pos): 删除指定位置（不是索引）的单元格； insertCell(pos): 向cells集合中的指定位置（不是索引）插入一个单元格，返回对新插入单元格的引用；   &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html&amp;gt; &amp;lt;body&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;script&amp;gt; // 创建table  var table = document.createElement(&amp;#39;table&amp;#39;); table.border = 1; table.width = &amp;#39;100%&amp;#39;; // 创建caption  var caption = table.</description>
+    </item>
+    
+    <item>
+      <title>DOM操作技术</title>
+      <link>https://mannuan.github.io/post/dom%E6%93%8D%E4%BD%9C%E6%8A%80%E6%9C%AF/</link>
+      <pubDate>Wed, 29 May 2019 22:54:44 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/dom%E6%93%8D%E4%BD%9C%E6%8A%80%E6%9C%AF/</guid>
+      <description>DOM操作最大的两个麻烦就是：操作效率问题、浏览器兼容问题
+ 动态脚本  通过修改DOM动态添加的脚本的两种模式：插入外部文件，插入JavaScript代码 插入外部文件  var script = document.createElement(&amp;#39;script&amp;#39;); script.src = &amp;#39;client.js&amp;#39;; document.body.appendChild(script);   封装为外部脚本插入函数  fucntion loadScript(url){ var script = document.createElement(&amp;#39;script&amp;#39;); script.src = url; document.body.appendChild(script); } loadScript(&amp;#39;script.js&amp;#39;);   插入行内代码：不兼容IE,它将&amp;lt;script&amp;gt;视为一个特殊的元素，不允许DOM访问其子节点： ```javascript
+var script = document.createElement(&amp;lsquo;script&amp;rsquo;); var textNode = document.createTextNode(&amp;lsquo;function sayHi(){alert(\&amp;lsquo;Hi!\&amp;lsquo;)}&amp;rsquo;); script.appendChild(textNode);  document.body.appendChild(script);
+ 3. 插入行内代码的兼容性解决方案：行内脚本插入封装函数 ```javascript function loadScript(code){ var script = document.createElement(&#39;script&#39;); try{ script.appendChild(document.createTextNode(code)); }catch(err){ script.text = code; } document.body.appendChild(script); } loadScript(&#39; function sayHi(){alert(&amp;quot;Hi!</description>
+    </item>
+    
+    <item>
+      <title>javascript的Comment、CDATASection、DocumentType、DocumentFragment、Attr类型</title>
+      <link>https://mannuan.github.io/post/javascript%E7%9A%84commentcdatasectiondocumenttypedocumentfragmentattr%E7%B1%BB%E5%9E%8B/</link>
+      <pubDate>Wed, 29 May 2019 22:35:57 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/javascript%E7%9A%84commentcdatasectiondocumenttypedocumentfragmentattr%E7%B1%BB%E5%9E%8B/</guid>
+      <description> Comment类型  nodeType为8，nodeName为#comment，nodeValue为注释内容； Comment类型拥有除splitText()之外的所有的属性和方法； 创建注释节点只需要传入注释内容即可  document.createComment(&amp;#39;Hi&amp;#39;);   一般浏览器不会识别位于后面的注释；
+ 在IE8中，注释节点被视作标签名为&amp;rdquo;!&amp;rdquo; 的元素，注释节点可以使用getElementsByTagName(&#39;!&#39;)取得；
+  CDATASection类型  nodeType为4，nodeName为#cdata-section，nodeValue为CDATA区域的内容； CDATASection类型针对的是XML文档，表示的是CDATA区域，在HTML文档中会错误地把CDATA区域解析为Comment或Element； 针对XML文档，可以使用document.createCDATASection()来创建CDATASection类型对象，接收一个参数：CDATA区域的内容； CDATASection类型继承自Text类型，除了splitText()方法外所有的属性和方法都拥有；  DocumentType类型  nodeType为0；nodeName为#document，nodeValue为null； 不能动态的创建，只能有html文档规定； document.doctype.name(entities、notations这两个属性没有用)属性； 使用document.doctype访问DocumentType对象；  DocumentFragment类型  文档碎片； DocumentFragment节点类型在文档中没有对应标记，它是游离于文档之外的； DocumentFragment类型是一种轻量级的文档（类似完整的HTML文档），可以包含和控制节点，但不会像完整的文档那样占用额外的资源； nodeType为11;nodeName为#document-fragment；nodeValue为null；可以包含任意类型的子节点； DocumentFrgment类型一般作为一个节点仓库来使用，可以在里面保存将来可能添加到文档的节点，然后DocumentFragment整体插入到文档内； DocumentFragment类型继承了node类型的所有方法； 创建：document.createDocumentFragment(); 文档碎片可以通过appendChild(DoCFrag), insertBefore(DocFrag)来插入文档，此时文档碎片便成为了文档的一部分；  Attr类型  元素的特性在DOM中以Attr类型来表示； 特性就是存在于元素的attributes属性对象中的节点； 三个属性：name, value, specified; 创建特性节点：document.createAttribute(attrName); 新创建的特性节点需要添加到元素上，使用元素的setAttribute(attrName)方法； html &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html&amp;gt; &amp;lt;body&amp;gt; &amp;lt;div id=&amp;quot;123&amp;quot; style=&amp;quot;height: 20px;&amp;quot;&amp;gt;123&amp;lt;/div&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;script&amp;gt; ele.setAttribute(&#39;align&#39;, &#39;left&#39;); &amp;lt;/script&amp;gt; &amp;lt;/html&amp;gt;  6. 不建议直接访问元素的特性节点（getAttributeNode()等），而使用getAttribute(), setAttribute(), removeAttribute()来访问和操作元素的特性。  </description>
+    </item>
+    
+    <item>
+      <title>javascript Text类型</title>
+      <link>https://mannuan.github.io/post/javascript-text%E7%B1%BB%E5%9E%8B/</link>
+      <pubDate>Wed, 29 May 2019 20:35:30 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/javascript-text%E7%B1%BB%E5%9E%8B/</guid>
+      <description>nodeType为3, nodeName为#text; 不支持子节点； 可以包含转义的HTML字符； 文本节点的值可以通过nodeValue属性或data属性访问；  &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html&amp;gt; &amp;lt;body&amp;gt; &amp;lt;div id=&amp;#34;123&amp;#34; style=&amp;#34;height: 20px;&amp;#34;&amp;gt;123&amp;lt;/div&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;script&amp;gt; var text = document.createTextNode(&amp;#34;Hello world!&amp;#34;); console.log(text.nodeType); // 输出：3  console.log(text.nodeName); // 输出：#text  console.log(text.nodeValue); // 输出：Hello world!  console.log(text.data); // 输出：Hello world!  console.log(text.nodeValue.length); // 输出：12  console.log(text.data.length); // 输出：12  &amp;lt;/script&amp;gt; &amp;lt;/html&amp;gt;  操作文本节点的方法
+ 默认情况下。每个包含内容的元素最多只能有一个文本节点，而且必须有内容存在；
+ 创建和修改文本节点时，字符串会经过HTML（或XML）编码转义，防止对原文档造成解析错误；
+  div.firstChild.nodeValue = &amp;#34;&amp;lt;p&amp;gt;Hello world!&amp;lt;/p&amp;gt;&amp;#34;; // &amp;#34;&amp;amp;lt;p&amp;amp;gt;Hello world!&amp;amp;lt;/p&amp;amp;gt;&amp;#34;  创建文本节点  document.createTextNode(); 可以人为使一个元素包含多个文本节点，虽然多个文本节点的表现形式与单个节点的表现形式没什么两样；  &amp;lt;!</description>
+    </item>
+    
+    <item>
+      <title>javascript操作文本节点的方法</title>
+      <link>https://mannuan.github.io/post/javascript%E6%93%8D%E4%BD%9C%E6%96%87%E6%9C%AC%E8%8A%82%E7%82%B9%E7%9A%84%E6%96%B9%E6%B3%95/</link>
+      <pubDate>Wed, 29 May 2019 20:31:09 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/javascript%E6%93%8D%E4%BD%9C%E6%96%87%E6%9C%AC%E8%8A%82%E7%82%B9%E7%9A%84%E6%96%B9%E6%B3%95/</guid>
+      <description> appendText(text); deleteData(offset, count); insertData(offset, count); replaceData(offset, count, text); splitText(offset); substringData(offset, count);  </description>
+    </item>
+    
+    <item>
+      <title>javascript Element类型</title>
+      <link>https://mannuan.github.io/post/javascript-element%E7%B1%BB%E5%9E%8B/</link>
+      <pubDate>Wed, 29 May 2019 16:05:24 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/javascript-element%E7%B1%BB%E5%9E%8B/</guid>
+      <description>Element节点是Element类型的实例； Element节点的nodeName与tagName属性元素的标签名的大写;nodeValue为null;  &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html&amp;gt; &amp;lt;body&amp;gt; &amp;lt;div id=&amp;#34;123&amp;#34;&amp;gt;123&amp;lt;/div&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;script&amp;gt; var _div = document.getElementById(&amp;#34;123&amp;#34;); console.log(_div.nodeName); console.log(_div.tagName); console.log(_div.nodeValue); &amp;lt;/script&amp;gt; &amp;lt;/html&amp;gt;  最佳实践：在比较标签名与字符串时，最好先将标签名转为为全小写。  HTML元素  所有HTML元素都由HTMLElement类型表示，HTMLElement类型继承自Element类型并添加了一些属性和方法；   所有HTML元素都是由HTMLElement或者其子类型表示的，每个HTML元素都由与之关联的类型，如：HTMLAnchorElement, HTMLBodyElement, HTMLDivElement&amp;hellip;, 这些类型都继承HTMLElement类型的属性和方法，也有着自己的扩展
+  大部分HTML标签的原生特性作为Element节点对象的属性都可以直接通过&amp;rdquo;.&amp;ldquo;或&amp;rdquo;[]&amp;ldquo;操作符读写，但无法读写自定义的特性（见下面的取得特性一节）  &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html&amp;gt; &amp;lt;body&amp;gt; &amp;lt;div id=&amp;#34;123&amp;#34;&amp;gt;123&amp;lt;/div&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;script&amp;gt; var _div = document.getElementById(&amp;#34;123&amp;#34;); console.log(_div.id); console.log(_div.className); console.log(_div.name); console.log(_div[&amp;#34;id&amp;#34;]); console.log(_div[&amp;#34;className&amp;#34;]); console.log(_div[&amp;#34;name&amp;#34;]); &amp;lt;/script&amp;gt; &amp;lt;/html&amp;gt;  class为ES的保留字，使用“.” 或&amp;rdquo;[]&amp;ldquo;访问元素类名需要使用className。  取得特性 getAttribute(), setAttribute(), removeAttribute()三个特性操作的方法：
+ 传递给getAttribute()的特性名字符串与实际的特性名相同，比如：要获取class的特性值，应该传入&amp;rsquo;class&amp;rsquo;,而不是&amp;rsquo;className&amp;rsquo;; 通过getAttribute()方法可以取得自定义特性； 最佳实践：根据HTML5的规范推荐，自定义特性应该加上data-前缀以便验证； getAttribute()方法与节点的访问方法&amp;rdquo;.</description>
+    </item>
+    
+    <item>
+      <title>getElementById()的注意事项</title>
+      <link>https://mannuan.github.io/post/getelementbyid%E7%9A%84%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/</link>
+      <pubDate>Wed, 29 May 2019 11:13:42 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/getelementbyid%E7%9A%84%E6%B3%A8%E6%84%8F%E4%BA%8B%E9%A1%B9/</guid>
+      <description> 传入参数对应的ID的元素不存在，返回null； 传入参数大小写需与实际元素id特性严格匹配； 多个元素的id特性相同，方法返回文档中第一次出现的那个；  </description>
+    </item>
+    
+    <item>
+      <title>Document类型</title>
+      <link>https://mannuan.github.io/post/document%E7%B1%BB%E5%9E%8B/</link>
+      <pubDate>Wed, 29 May 2019 09:43:41 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/document%E7%B1%BB%E5%9E%8B/</guid>
+      <description>文档的子节点  使用documentElement属性快捷访问页面的元素； 使用body属性可以快捷的访问页面的元素; doctype属性可在部分浏览器下访问文档的类型声明；各个浏览器对于文档声明的支持方式存在较大差异：IE8-:文档类型声明被解释为一个注释，当做comment节点，document.doctype返回值为null；大部分浏览器：文档类型声明作为文档的第一个子节点，是一个DocumentType节点，可以通过document.doctype, document.childNodes[0], document.firstChild访问  &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html&amp;gt; &amp;lt;head&amp;gt;&amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;script&amp;gt; console.log(document.doctype); // 输出: &amp;lt;!DOCTYPE html&amp;gt;  console.log(document.childNodes[0]); // 输出: &amp;lt;!DOCTYPE html&amp;gt;  console.log(document.firstChild); // 输出: &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;/script&amp;gt; &amp;lt;/html&amp;gt;  各个浏览器对于元素外的注释的解析方式不同，比如  &amp;lt;!--第一条注释--&amp;gt; &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html&amp;gt; &amp;lt;body&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;script&amp;gt; console.log(document.childNodes.length); // chrome输出: 3 &amp;lt;/script&amp;gt; &amp;lt;/html&amp;gt; &amp;lt;!--第二条注释--&amp;gt; 部分浏览器会为两个注释都建立注释节点，部分浏览器会忽略第二条，只为第一条创建注释节点，大部分浏览器现在回完全忽略第二条注释，比如这里的chrome。
+文档信息  title属性用于便捷读写title标签； URL属性只读，referrer属性只读； domain属性可读可写，但不能设置为当前URL中不包含的域，通过设置domain属性相同可实现框架间不同子域页面的JavaScript通信； document.domain只能往上级域名方向设置，设置为非上级域名会报错，不能设置为顶级域名; 使用document.domain实现跨父子域  查找元素  getElementById()的注意事项; getElementByTagName() 方法返回的是HTMLCollection对象；  &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html&amp;gt; &amp;lt;body&amp;gt; &amp;lt;div&amp;gt;123&amp;lt;/div&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;script&amp;gt; console.</description>
+    </item>
+    
+    <item>
+      <title>vs code快捷键大全</title>
+      <link>https://mannuan.github.io/post/vs-code%E5%BF%AB%E6%8D%B7%E9%94%AE%E5%A4%A7%E5%85%A8/</link>
+      <pubDate>Tue, 28 May 2019 19:19:41 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/vs-code%E5%BF%AB%E6%8D%B7%E9%94%AE%E5%A4%A7%E5%85%A8/</guid>
+      <description>名称 快捷键     上下移动行 Alt(option) + 上下键   删除行 Ctrl(command) + Shift() + K    持续更新中&amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>Document类型、HTMLDocument类型和document对象的区别</title>
+      <link>https://mannuan.github.io/post/document%E7%B1%BB%E5%9E%8Bhtmldocument%E7%B1%BB%E5%9E%8B%E5%92%8Cdocument%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%8C%BA%E5%88%AB/</link>
+      <pubDate>Tue, 28 May 2019 11:19:13 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/document%E7%B1%BB%E5%9E%8Bhtmldocument%E7%B1%BB%E5%9E%8B%E5%92%8Cdocument%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%8C%BA%E5%88%AB/</guid>
+      <description> Dcoment表示文档，这里的文档可以是HTML文档，也可以是XML文档，换句话说Document类型能表示HTML和XML等文档； HTMLDocument对象继承自Document对象，专用于表示HTML文档； document对象是HTMLDocument对象的一个实例，表示整个HTML页面，又叫做页面的根节点；  Document对象（根节点）的特征：
+&amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html&amp;gt; &amp;lt;head&amp;gt;&amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;script&amp;gt; console.log(document.nodeType); console.log(document.nodeName); console.log(document.nodeValue); console.log(document.parentNode); console.log(document.ownerDocument); console.log(document.childNodes); // 其子节点可能是一个DocumentType(最多一个)、Element(最多一个)、ProcessingInstruction或Comment  &amp;lt;/script&amp;gt; &amp;lt;/html&amp;gt;</description>
+    </item>
+    
+    <item>
+      <title>Javascript-DOM中NodeList对象转数组的通用方法</title>
+      <link>https://mannuan.github.io/post/javascript-dom%E4%B8%ADnodelist%E5%AF%B9%E8%B1%A1%E8%BD%AC%E6%95%B0%E7%BB%84%E7%9A%84%E9%80%9A%E7%94%A8%E6%96%B9%E6%B3%95/</link>
+      <pubDate>Tue, 28 May 2019 10:19:01 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/javascript-dom%E4%B8%ADnodelist%E5%AF%B9%E8%B1%A1%E8%BD%AC%E6%95%B0%E7%BB%84%E7%9A%84%E9%80%9A%E7%94%A8%E6%96%B9%E6%B3%95/</guid>
+      <description>举例说明：
+&amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html&amp;gt; &amp;lt;head&amp;gt;&amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;ul id=&amp;#34;ul&amp;#34;&amp;gt; &amp;lt;li&amp;gt; 123 &amp;lt;/li&amp;gt; &amp;lt;li&amp;gt; 456 &amp;lt;/li&amp;gt; &amp;lt;li&amp;gt; 789 &amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;script&amp;gt; var _childNodes = document.getElementById(&amp;#34;ul&amp;#34;).childNodes; function convertToArray(nodes) { var array = null; try { array = Array.prototype.slice.call(nodes, 0); // 针对非IE浏览器  } catch (ex) { array = new Array(); for (var i = 0, len = nodes.length; i &amp;lt; len; i++) { array.push(nodes[i]); } } return array; } console.log(convertToArray(_childNodes)); &amp;lt;/script&amp;gt; &amp;lt;/html&amp;gt;</description>
+    </item>
+    
+    <item>
+      <title>function中的arguments转数组的标准方法</title>
+      <link>https://mannuan.github.io/post/function%E4%B8%AD%E7%9A%84arguments%E8%BD%AC%E6%95%B0%E7%BB%84%E7%9A%84%E6%A0%87%E5%87%86%E6%96%B9%E6%B3%95/</link>
+      <pubDate>Tue, 28 May 2019 09:53:04 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/function%E4%B8%AD%E7%9A%84arguments%E8%BD%AC%E6%95%B0%E7%BB%84%E7%9A%84%E6%A0%87%E5%87%86%E6%96%B9%E6%B3%95/</guid>
+      <description>举例说明:
+function arr(){ console.log(arguments); // 输出：[Arguments] { &amp;#39;0&amp;#39;: 1, &amp;#39;1&amp;#39;: 2, &amp;#39;2&amp;#39;: 3 }  _array = Array.prototype.slice.apply(arguments); console.log(_array); // 输出：[ 1, 2, 3 ] } arr(1, 2, 3) </description>
+    </item>
+    
+    <item>
+      <title>DOM-Node基本类型</title>
+      <link>https://mannuan.github.io/post/dom-node%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B/</link>
+      <pubDate>Mon, 27 May 2019 22:35:44 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/dom-node%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B/</guid>
+      <description>DOM1级定义了一个Node接口，该接口作为Node类型实现;  // 节点类型（nodeType）1~12 Node.ELEMENT_NODE; // 1 Node.ATTRIBUTE_NODE; // 2 Node.TEXT_NODE; // 3 Node.CDATA_SECTION_NODE; // 4 Node.ENTITY_REFERENCE_NODE; // 5 Node.ENTITY_NODE; // 6 Node.PROCESSING_INSTRUCTION_NODE; // 7 Node.COMMENT_NODE; // 8 Node.DOCUMENT_NODE; // 9 Node.DOCUMENT_TYPE_NODE; // 10 Node.DOCUMENT_FRAGMENT_NODE; // 11 Node.NOTATION_NODE; // 12   JavaScript中所有节点类型都继承自Node类型，所有的节点类型都共享相同的基本属性和方法；
+ 最佳实践：对节点进行操作时，最好使用nodeType检测节点的类型;
+  nodeName和nodeValue 对于元素节点(nodeType === 1)，nodeName是元素标签名的大写，nodeValue的值始终是null;
+&amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html&amp;gt; &amp;lt;head&amp;gt;&amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;div id=&amp;#34;ele&amp;#34;&amp;gt; some text &amp;lt;/div&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;script&amp;gt; var ele = document.getElementById(&amp;#34;ele&amp;#34;); console.log(ele.nodeType === 1); // 输出：true  console.</description>
+    </item>
+    
+    <item>
+      <title>用闭包实现命令模式</title>
+      <link>https://mannuan.github.io/post/%E7%94%A8%E9%97%AD%E5%8C%85%E5%AE%9E%E7%8E%B0%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F/</link>
+      <pubDate>Mon, 27 May 2019 14:04:01 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/%E7%94%A8%E9%97%AD%E5%8C%85%E5%AE%9E%E7%8E%B0%E5%91%BD%E4%BB%A4%E6%A8%A1%E5%BC%8F/</guid>
+      <description>var Tv = { open: function(){ console.log(&amp;#39;打开电视机&amp;#39;); }, close: function(){ console.log(&amp;#39;关上电视机&amp;#39;); }, }; var OpenTvCommand = function(receiver){ this.receiver = receiver; }; OpenTvCommand.prototype.execute = function(){ this.receiver.open(); // 执行命令，打开电视机 }; OpenTvCommand.prototype.undo = function(){ this.receiver.close(); // 撤销命令，关闭电视机 }; command = new OpenTvCommand(Tv); command.execute() // 输出：打开电视机 command.undo() // 输出：关上电视机  博客参考自JavaScript设计模式与开发实践，[p41-p42]</description>
+    </item>
+    
+    <item>
+      <title>闭包和面向对象设计的等价实现举例</title>
+      <link>https://mannuan.github.io/post/%E9%97%AD%E5%8C%85%E5%92%8C%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%AE%BE%E8%AE%A1%E7%9A%84%E7%AD%89%E4%BB%B7%E5%AE%9E%E7%8E%B0%E4%B8%BE%E4%BE%8B/</link>
+      <pubDate>Mon, 27 May 2019 11:30:08 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/%E9%97%AD%E5%8C%85%E5%92%8C%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%AE%BE%E8%AE%A1%E7%9A%84%E7%AD%89%E4%BB%B7%E5%AE%9E%E7%8E%B0%E4%B8%BE%E4%BE%8B/</guid>
+      <description>下面这段是闭包的代码：
+var extent = function(){ var value = 0; return { call: function(){ value++; console.log(value); } } }; var extent = extent(); extent.call(); // 输出：1 extent.call(); // 输出：2 extent.call(); // 输出：3  转换成面向对象的写法是：
+var extent = { value: 0, call: function(){ this.value++; console.log(this.value); } }; extent.call(); // 输出：1 extent.call(); // 输出：2 extent.call(); // 输出：3  原型链写法：
+var extent = function(){ this.value = 0; }; Extent.prototype.call = function(){ this.value++; console.log(this.value); } var extent = new Extent(); extent.</description>
+    </item>
+    
+    <item>
+      <title>javascript闭包详解</title>
+      <link>https://mannuan.github.io/post/javascript%E9%97%AD%E5%8C%85%E8%AF%A6%E8%A7%A3/</link>
+      <pubDate>Mon, 27 May 2019 10:45:04 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/javascript%E9%97%AD%E5%8C%85%E8%AF%A6%E8%A7%A3/</guid>
+      <description>闭包的两个知识点：  变量搜索方向：在javascript中，函数可以创造函数作用域。在函数作用域里面可以看到外面的变量，而函数的外面无法访问到函数里面的变量。因此，在作用域里面的变量搜索方向是：自内向外。比如，下面这段代码就验证了这个搜索方向：  var a = 1; var func1 = function(){ var b = 2; var func2 = function(){ var c = 3; console.log(b); // 输出：2  console.log(a); // 输出：1  } func2(); console.log(c); // 输出：Uncaught ReferenceError: c is not defined }; func1();   变量的生存的周期：全局变量的生存周期是永久的，局部变量随着函数调用的结束而销毁。  // 例一 var func = function(){ var a = 1; // 退出函数后局部变量a将被销毁  console.log(a); }; func(); // 例二 var func = function(){ var a = 1; return function(){ a++; console.</description>
+    </item>
+    
+    <item>
+      <title>交换机断网的原因分析</title>
+      <link>https://mannuan.github.io/post/%E4%BA%A4%E6%8D%A2%E6%9C%BA%E6%96%AD%E7%BD%91%E7%9A%84%E5%8E%9F%E5%9B%A0%E5%88%86%E6%9E%90/</link>
+      <pubDate>Mon, 27 May 2019 10:26:25 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/%E4%BA%A4%E6%8D%A2%E6%9C%BA%E6%96%AD%E7%BD%91%E7%9A%84%E5%8E%9F%E5%9B%A0%E5%88%86%E6%9E%90/</guid>
+      <description>网卡扩展坞由于带电会影响交换机，导致局域网断网  持续更新&amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>javascript函数递归实现</title>
+      <link>https://mannuan.github.io/post/javascript%E5%87%BD%E6%95%B0%E9%80%92%E5%BD%92%E5%AE%9E%E7%8E%B0/</link>
+      <pubDate>Wed, 22 May 2019 22:39:20 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/javascript%E5%87%BD%E6%95%B0%E9%80%92%E5%BD%92%E5%AE%9E%E7%8E%B0/</guid>
+      <description>在非严格模式下：  主要通过arguments.callee实现递归，它是一个指向正在执行的函数的指针。
+ function factorial(num){ if(num &amp;lt;= 1){ return 1; }else{ return num * arguments.callee(num - 1); } }  在严格模式下：  虽然访问arguments.callee这个属性会导致错误，但是可以使用函数表达式来达成相同的结果。
+ var factorial = function f(num){ if(num &amp;lt;= 1){ return 1; }else{ return num * f(num-1); } };  本篇博客参考自JavaScript高级程序设计，[p177-p178]</description>
+    </item>
+    
+    <item>
+      <title>v8引擎源码—Array.prototype.push实现详解</title>
+      <link>https://mannuan.github.io/post/v8%E5%BC%95%E6%93%8E%E6%BA%90%E7%A0%81array.prototype.push%E5%AE%9E%E7%8E%B0%E8%AF%A6%E8%A7%A3/</link>
+      <pubDate>Wed, 22 May 2019 21:14:58 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/v8%E5%BC%95%E6%93%8E%E6%BA%90%E7%A0%81array.prototype.push%E5%AE%9E%E7%8E%B0%E8%AF%A6%E8%A7%A3/</guid>
+      <description>具体实现如下： function ArrayPush(){ var n = TO_UINT32(this.length); // 被push的对象的length  var m = %_AraumentsLength(); // push的参数个数  for(var i=0; i&amp;lt;m; i++){ this[i+n] = %_Arguments(i); // 复制元素 （1）  } this.length = n + m; // 修正length属性的值  return this.length; }   从上面的代码可以看出，Array.prototype.push实际上是一个属性复制的过程，把参数按照下标依次添加到被push的对象上面，同时修改了对象的length属性，不需要关注被修改的对象是数组还是类数组。 因此，我们可以把任意类型的对象传入到Array.prototype.push中，比如下面这个例子：
+ var a = {}; Array.prototype.push.call(a, &amp;#34;first&amp;#34;, &amp;#34;second&amp;#34;); console.log(a);   观察上面这个例子我们发现如果要实现javascript中call和apply的区别与联系中&amp;rdquo;借用其他对象的方法&amp;rdquo;，需要满足下面的条件：
+ 对象本身可以存取属性；
+ 对象的length属性可读写；
+   本篇博客参考自JavaScript设计模式与开发实践，[p33-p34]</description>
+    </item>
+    
+    <item>
+      <title>javascript中call和apply的区别与联系</title>
+      <link>https://mannuan.github.io/post/javascript%E4%B8%ADcall%E5%92%8Capply%E7%9A%84%E5%8C%BA%E5%88%AB%E4%B8%8E%E8%81%94%E7%B3%BB/</link>
+      <pubDate>Wed, 22 May 2019 20:47:29 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/javascript%E4%B8%ADcall%E5%92%8Capply%E7%9A%84%E5%8C%BA%E5%88%AB%E4%B8%8E%E8%81%94%E7%B3%BB/</guid>
+      <description>apply接收两个参数：  指定了函数体内this对象的指向； 一个带下标的集合（可以是数组或类数组）   var func = function(a, b, c){ console.log([a, b, c]); // 输出[1, 2, 3] } func.apply(null, [1, 2, 3]);  call接收一个或多个参数：  指定了函数体内this对象的指向； 从第二个参数往后，每个参数被依次传入函数；   var func = function(a, b, c){ console.log([a, b, c]); // 输出[1, 2, 3] } func.call(null, 1, 2, 3);   从上面的两个例子我们可以看出apply和call的唯一的区别就是：传入参数的数量是否固定。通常call在以下情况使用：  函数传入的参数数量确定； 需要清晰地表达形参和实参之间的对应关系  apply和call使用注意点：  如果传入的第一个参数是null，this就会指向全局对象，在浏览器上面是window，在nodejs上是global; 在1的条件下，如果使用严格模式，函数体内的this还是为null;   var func = function(a, b, c){ &amp;#34;use strict&amp;#34;; console.</description>
+    </item>
+    
+    <item>
+      <title>javascript中的this</title>
+      <link>https://mannuan.github.io/post/javascript%E4%B8%AD%E7%9A%84this/</link>
+      <pubDate>Wed, 22 May 2019 15:27:59 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/javascript%E4%B8%AD%E7%9A%84this/</guid>
+      <description>this的指向分为4种：
+ 作为对象的方法调用： var obj = { a: 1, getA: function(){ console.log(this == obj); console.log(this.a); } } obj.getA();   当函数作为对象的方法被调用时，this指向的是一个局部对象，即当前的这个对象；
+ 作为普通函数调用： global.name = &amp;#39;globalName&amp;#39;; var getName = function(){ return this.name; }; console.log(getName()); // 输出: globalName  //或者 global.name = &amp;#39;globalName&amp;#39;; var myObject = { name: &amp;#34;sven&amp;#34;, getName: function(){ return this.name; } } var getName = myObject.getName; console.log(getName()); //globalName   当this在普通函数里面被用到时，this指向的是一个全局对象，在浏览器上是window，在nodejs上是global
+ 构造函数调用： var MyClass = function(){ this.</description>
+    </item>
+    
+    <item>
+      <title>js通过代码来理解构造函数的实现过程</title>
+      <link>https://mannuan.github.io/post/js%E9%80%9A%E8%BF%87%E4%BB%A3%E7%A0%81%E6%9D%A5%E7%90%86%E8%A7%A3%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E7%9A%84%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/</link>
+      <pubDate>Wed, 22 May 2019 10:23:08 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/js%E9%80%9A%E8%BF%87%E4%BB%A3%E7%A0%81%E6%9D%A5%E7%90%86%E8%A7%A3%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E7%9A%84%E5%AE%9E%E7%8E%B0%E8%BF%87%E7%A8%8B/</guid>
+      <description>原生实现
+ function Person(name){ this.name = name; }; Person.prototype.getName = function(){ return this.name; } var a = new Person(&amp;#39;sven&amp;#39;); console.log(a.name); console.log(a.getName()); console.log(Object.getPrototypeOf(a) === Person.prototype);  代码实现
+function Person(name){ this.name = name; }; Person.prototype.getName = function(){ return this.name; } var objectFactory = function(){ var obj = new Object(), Constructor = [].shift.call(arguments); obj.__proto__ = Constructor.prototype; var ret = Constructor.apply(obj, arguments); return typeof ret === &amp;#34;object&amp;#34; ? ret: obj; } var a = objectFactory(Person, &amp;#34;sven&amp;#34;); console.</description>
+    </item>
+    
+    <item>
+      <title>js: new Object()与Object.create()的区别</title>
+      <link>https://mannuan.github.io/post/new-object%E4%B8%8Eobject.create%E7%9A%84%E5%8C%BA%E5%88%AB/</link>
+      <pubDate>Wed, 22 May 2019 09:37:59 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/new-object%E4%B8%8Eobject.create%E7%9A%84%E5%8C%BA%E5%88%AB/</guid>
+      <description>语法：  Object.create(proto, [propertiesObject])
+//方法创建一个新对象，使用现有的对象来提供新创建的对象的proto。
+ 参数：   proto : 必须。表示新建对象的原型对象，即该参数会被赋值到目标对象(即新对象，或说是最后返回的对象)的原型上。该参数可以是null， 对象， 函数的prototype属性 （创建空的对象时需传null , 否则会抛出TypeError异常）。 propertiesObject : 可选。 添加到新创建对象的可枚举属性（即其自身的属性，而不是原型链上的枚举属性）对象的属性描述符以及相应的属性名称。这些属性对应Object.defineProperties()的第二个参数。  3 返回值：
+在指定原型对象上添加新属性后的对象。
+ 案例说明：  1）创建对象的方式不同
+new Object() 通过构造函数来创建对象, 添加的属性是在自身实例下。
+Object.create() es6创建对象的另一种方式，可以理解为继承一个对象, 添加的属性是在原型下。
+// new Object() 方式创建 var a = { rep : &amp;#39;apple&amp;#39; }; var b = newObject(a); console.log(b); // {rep: &amp;#34;apple&amp;#34;} console.log(b.__proto__); //{} console.log(b.rep); // {rep: &amp;#34;apple&amp;#34;} // Object.create() 方式创建 var a = { rep: &amp;#39;apple&amp;#39; }; var b = Object.</description>
+    </item>
+    
+    <item>
+      <title>js 引用类型的判断</title>
+      <link>https://mannuan.github.io/post/js-%E5%BC%95%E7%94%A8%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%88%A4%E6%96%AD/</link>
+      <pubDate>Mon, 20 May 2019 11:22:15 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/js-%E5%BC%95%E7%94%A8%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%88%A4%E6%96%AD/</guid>
+      <description> result = 变量 instanceof 数据类型; //ECMAScript 提供了 instanceof 操作符来检测引用类型   Array,Regex和Date等引用数据类型都是Object的实例，因此&amp;rdquo;instanceof&amp;rdquo;返回的都是&amp;rdquo;object&amp;rdquo;
+ </description>
+    </item>
+    
+    <item>
+      <title>js Function详解</title>
+      <link>https://mannuan.github.io/post/js-function%E8%AF%A6%E8%A7%A3/</link>
+      <pubDate>Mon, 20 May 2019 11:09:31 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/js-function%E8%AF%A6%E8%A7%A3/</guid>
+      <description> Function不介意传入多少个参数，也不在乎传入参数的类型（参数在内部使用数组来表示，在函数内部可以通过arguments访问）； Function没有重载 Function传入的参数只能按值传递(即使传入的是引用类型)，详细请看js Function 参数按值传递详解 Function可以设置默认参数，比如：  function randomNum(max=100, start=33){ return Math.floor(Math.random() * max + start) } console.log(randomNum(1000, 33)); </description>
+    </item>
+    
+    <item>
+      <title>js Function 参数按值传递详解</title>
+      <link>https://mannuan.github.io/post/js-function-%E5%8F%82%E6%95%B0%E6%8C%89%E5%80%BC%E4%BC%A0%E9%80%92%E8%AF%A6%E8%A7%A3/</link>
+      <pubDate>Mon, 20 May 2019 11:08:29 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/js-function-%E5%8F%82%E6%95%B0%E6%8C%89%E5%80%BC%E4%BC%A0%E9%80%92%E8%AF%A6%E8%A7%A3/</guid>
+      <description>  如果传入参数是基本数据类型，那么按值传递是很容易理解的； 如果传入参数是引用数据类型，那么会很容易陷入误区，错误地认为是引用传递；   错误例子一：
+function setColor(obj){ obj.color = &amp;#34;red&amp;#34;; } var picture = new Object(); setColor(picture); console.log(picture); //&amp;#34;red&amp;#34;  看到上面这个例子后，很容易认为：”函数的值是传入了引用，然后通过引用修改了对象的属性。“
+纠正例子二：
+function setColor(obj){ obj.color = &amp;#34;red&amp;#34;; obj = new Object(); obj.color = &amp;#34;blue&amp;#34;; } var picture = new Object(); setColor(picture); console.log(picture.color); //&amp;#34;red&amp;#34;  我们发现，如果函数传入的是引用，那么在函数内部的修改picture的引用就会对象把指向color为”blue“的对象；但是根据输出的结果，很显然是错误；
+ 结论：因此，不管函数传入的是什么数据类型，都是按值传递的。
+ </description>
+    </item>
+    
+    <item>
+      <title>js 的6个数据类型</title>
+      <link>https://mannuan.github.io/post/js-%E7%9A%846%E4%B8%AA%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</link>
+      <pubDate>Mon, 20 May 2019 10:20:08 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/js-%E7%9A%846%E4%B8%AA%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</guid>
+      <description>| 数据类型 | typeof | 访问方式 | 包含关系 | 大小关系
+&amp;mdash;|&amp;mdash;|&amp;mdash;|&amp;mdash;|&amp;mdash;|&amp;mdash;
+Undefined | 基本 | &amp;ldquo;undefined&amp;rdquo; | 按值访问 | Undefined是null的一个子集 | Undefined=null
+null(首字母小写) | &amp;ldquo;object&amp;rdquo; | null包含Undefined | null=Underfined
+Boolean | &amp;ldquo;boolean&amp;rdquo; | |
+Number | &amp;ldquo;number&amp;rdquo; | |
+String(不是引用类型) | &amp;ldquo;string&amp;rdquo; | |
+Object | 复杂 | &amp;ldquo;object&amp;rdquo; | 按引用访问 | |</description>
+    </item>
+    
+    <item>
+      <title>js 相等和不相等操作符总结</title>
+      <link>https://mannuan.github.io/post/js-%E7%9B%B8%E7%AD%89%E5%92%8C%E4%B8%8D%E7%9B%B8%E7%AD%89%E6%93%8D%E4%BD%9C%E7%AC%A6%E6%80%BB%E7%BB%93/</link>
+      <pubDate>Fri, 17 May 2019 16:50:40 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/js-%E7%9B%B8%E7%AD%89%E5%92%8C%E4%B8%8D%E7%9B%B8%E7%AD%89%E6%93%8D%E4%BD%9C%E7%AC%A6%E6%80%BB%E7%BB%93/</guid>
+      <description>操作符两边操作数先转换数据类型，然后再比较它们的相等性，具体的规则如下：
+   操作符规则 操作符a的数据类型 操作符b的数据类型 == != 备注     Boolean转为Number — — — Boolean无条件转为Number类型   String转为Number Number — — —   Object转为a.valueOf() 除了Object之外的所有类型 — — —   null undefined true false null等于underfined   NaN — false true NaN不等于NaN   Object Object — — 如果a和b指向同一个对象，相等操作符返回true，否则返回false     上述表格归纳自javascript高级程序设计，[p51-p53]
+ </description>
+    </item>
+    
+    <item>
+      <title>jupyter_notebook_config.py的配置详解</title>
+      <link>https://mannuan.github.io/post/jupyter_notebook_config.py%E7%9A%84%E9%85%8D%E7%BD%AE%E8%AF%A6%E8%A7%A3/</link>
+      <pubDate>Wed, 15 May 2019 15:55:13 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/jupyter_notebook_config.py%E7%9A%84%E9%85%8D%E7%BD%AE%E8%AF%A6%E8%A7%A3/</guid>
+      <description># Configuration file for jupyter-notebook. #------------------------------------------------------------------------------ # Application(SingletonConfigurable) configuration #------------------------------------------------------------------------------ ## This is an application. ## The date format used by logging formatters for %(asctime)s #c.Application.log_datefmt = &amp;#39;%Y-%m-%d %H:%M:%S&amp;#39; ## The Logging format template #c.Application.log_format = &amp;#39;[%(name)s]%(highlevel)s %(message)s&amp;#39; ## Set the log level by value or name. #c.Application.log_level = 30 #------------------------------------------------------------------------------ # JupyterApp(Application) configuration #------------------------------------------------------------------------------ ## Base class for Jupyter applications ## Answer yes to any prompts. #c.JupyterApp.answer_yes = False ## Full path of a config file.</description>
+    </item>
+    
+    <item>
+      <title>jupyter_notebook_config.py常用配置</title>
+      <link>https://mannuan.github.io/post/jupyter_notebook_config.py%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Wed, 15 May 2019 15:41:21 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/jupyter_notebook_config.py%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE/</guid>
+      <description># -*- coding: utf-8 -*- # notebook服务会监听的IP地址，这个ip地址最好不要填任意的，否则不安全 c.NotebookApp.ip = &amp;#39;localhost&amp;#39; # 这条命令会与下面的一条命令hostnames冲突，如果这个设置为True,这下面这条命令不生效，反之，则生效 c.NotebookApp.allow_remote_access = True # 为本地主机取多个ip别名 c.NotebookApp.local_hostnames = [&amp;#39;localhost&amp;#39;] c.NotebookApp.open_browser = False c.NotebookApp.password = &amp;#34;密码&amp;#34; c.NotebookApp.port = 8888 c.NotebookApp.notebook_dir = &amp;#34;文件路径&amp;#34; 密码的生成详见jupyter如何设置密码
+如果，想要在其他主机上面访问 jupyter, 必须设置
+c.NotebookApp.allow_remote_access = True</description>
+    </item>
+    
+    <item>
+      <title>jupyter 如何设置密码</title>
+      <link>https://mannuan.github.io/post/jupyter-%E5%A6%82%E4%BD%95%E8%AE%BE%E7%BD%AE%E5%AF%86%E7%A0%81/</link>
+      <pubDate>Wed, 15 May 2019 15:32:20 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/jupyter-%E5%A6%82%E4%BD%95%E8%AE%BE%E7%BD%AE%E5%AF%86%E7%A0%81/</guid>
+      <description>打开python命令行，输入
+from notebook.auth import passwd passwd() 以密码&amp;rdquo;123&amp;rdquo;为例，输出结果得到如下
+&amp;#39;sha1:da00fa1e950a:0adb64c8359ef97932e5dde02d6167e140bac4e0&amp;#39; 然后把上面的sha写入到配置文件&amp;rdquo;jupyter_notebook_config.py&amp;rdquo;, 这个文件一般需要使用命令生成
+完整的一条配置命令如下：
+c.NotebookApp.password = &amp;#39;sha1:da00fa1e950a:0adb64c8359ef97932e5dde02d6167e140bac4e0&amp;#39; 上面这条配置命令可以放在配置文件任意位置</description>
+    </item>
+    
+    <item>
+      <title>jupyter_notebook_config.py 文件的生成命令</title>
+      <link>https://mannuan.github.io/post/jupyter_notebook_config.py-%E6%96%87%E4%BB%B6%E7%9A%84%E7%94%9F%E6%88%90%E5%91%BD%E4%BB%A4/</link>
+      <pubDate>Wed, 15 May 2019 15:12:25 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/jupyter_notebook_config.py-%E6%96%87%E4%BB%B6%E7%9A%84%E7%94%9F%E6%88%90%E5%91%BD%E4%BB%A4/</guid>
+      <description>jupyter notebook --generate-config</description>
+    </item>
+    
+    <item>
+      <title>apt-get: error loading libgcc_s.so.1的解决方案</title>
+      <link>https://mannuan.github.io/post/apt-get-error-loading-libgcc_s.so.1%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</link>
+      <pubDate>Mon, 13 May 2019 11:14:49 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/apt-get-error-loading-libgcc_s.so.1%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</guid>
+      <description>出现这个问题的主要原因是&amp;rdquo;/lib/x86_64-linux-gnu/&amp;ldquo;目录下缺少libgcc_s.so.1
+解决方案：从其他相同操作系统的主机上的&amp;rdquo;/lib/x86_64-linux-gnu/&amp;ldquo;目录，拷贝libgcc_s.so.1</description>
+    </item>
+    
+    <item>
+      <title>dpkg error: package `x&#39; contains empty filename，Sub-process /usr/bin/dpkg returned an error code (2)</title>
+      <link>https://mannuan.github.io/post/dpkg-error-package-x-contains-empty-filename/</link>
+      <pubDate>Mon, 13 May 2019 11:10:48 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/dpkg-error-package-x-contains-empty-filename/</guid>
+      <description>后面的错误“Sub-process /usr/bin/dpkg returned an error code (2)”是由于前面的一个错误引起的
+因此，只需要解决前面的错误就行了
+解决这个错误其实很简单，只需要理解前面一个错误里面的&amp;rdquo;empty filename&amp;rdquo;就行了
+我看过很多教程，说只要删除/var/lib/dpkg/info/x.list就可以了，我试过，每次删除，之后这个目录下面都会重新生成x.list文件
+之后我找到解决方案，发现只要把x.list改为x.list.broke就可以了，之后就没有&amp;rdquo;empty filename的报错&amp;rdquo;</description>
+    </item>
+    
+    <item>
+      <title>阿里云免费ssl证书申请</title>
+      <link>https://mannuan.github.io/post/%E9%98%BF%E9%87%8C%E4%BA%91%E5%85%8D%E8%B4%B9ssl%E8%AF%81%E4%B9%A6%E7%94%B3%E8%AF%B7/</link>
+      <pubDate>Thu, 02 May 2019 14:01:32 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/%E9%98%BF%E9%87%8C%E4%BA%91%E5%85%8D%E8%B4%B9ssl%E8%AF%81%E4%B9%A6%E7%94%B3%E8%AF%B7/</guid>
+      <description> 第一步：在阿里云申请域名  登录阿里云， 在搜索框中输入&amp;rdquo;域名 控制台&amp;rdquo;， 进行域名的购买或则注册。   我强烈不推荐购买阿里云的二手域名，虽然价格很便宜，但是大多数域名都有问题，比如被注册局暂停解析等等
+ 第二步：在阿里云申请免费的ssl证书  同样在搜索框中输入&amp;rdquo;dns 控制台&amp;rdquo;， 在域名的列表里面可以看到你已经购买的域名， 然后在列表的每个item中点击“更多”，出现&amp;rdquo;ssl&amp;rdquo;证书的字样，点击进去。 选择免费版的ssl证书（这里只能单个子域名进行注册） 点击申请，跳到ssl证书列表页面， 点击验证，大概过5-6分钟，ssl证书就可以审核通过， 下载证书我推荐下载nginx版本的，nginx配置域名最方便，配置域名的教程可以参看我的https服务器搭建详细教程(ubuntu系统实测可行)这个教程  </description>
+    </item>
+    
+    <item>
+      <title>linux如何查看文件夹占用磁盘空间</title>
+      <link>https://mannuan.github.io/post/linux%E5%A6%82%E4%BD%95%E6%9F%A5%E7%9C%8B%E6%96%87%E4%BB%B6%E5%A4%B9%E5%8D%A0%E7%94%A8%E7%A3%81%E7%9B%98%E7%A9%BA%E9%97%B4/</link>
+      <pubDate>Thu, 02 May 2019 13:42:05 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/linux%E5%A6%82%E4%BD%95%E6%9F%A5%E7%9C%8B%E6%96%87%E4%BB%B6%E5%A4%B9%E5%8D%A0%E7%94%A8%E7%A3%81%E7%9B%98%E7%A9%BA%E9%97%B4/</guid>
+      <description>du -h -d 1  查看当前目录下面所有文件夹所占的空间
+ </description>
+    </item>
+    
+    <item>
+      <title>https服务器搭建详细教程(ubuntu系统实测可行)</title>
+      <link>https://mannuan.github.io/post/https%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8B-ubuntu%E7%B3%BB%E7%BB%9F%E5%AE%9E%E6%B5%8B%E5%8F%AF%E8%A1%8C/</link>
+      <pubDate>Wed, 01 May 2019 22:50:58 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/https%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8B-ubuntu%E7%B3%BB%E7%BB%9F%E5%AE%9E%E6%B5%8B%E5%8F%AF%E8%A1%8C/</guid>
+      <description>第一步：把指定的域名绑定到服务器指定的端口 1、安装nginx sudo apt-get install nginx  查看nginx版本，确认安装成功
+nginx -v  安装完nginx以后，通过浏览器访问127.0.0.1，再次确认安装成功（访问127.0.0.1其实等价于访问127.0.0.1:80）  2、修改nginx配置文件 sudo vim /etc/nginx/nginx.conf  通过上面的命令打开文件以后，键盘按 “i” 键，进入编辑模式，然后找到类似下面的内容：   ssl的获取可以参看我的阿里云免费ssl证书申请
+http { #在这里填写你的配置  #下面省略若干行..... }  完整的配置是这样的（第一个server配置的是http服务，第二个server配置的https服务）：  http { server { listen 80; server_name 指定的域名; root html; index index.html index.htm; location / { proxy_pass http://127.0.0.1:指定的端口/; proxy_set_header X-Real-IP $remote_addr; proxy_set_header Host $host; proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for; proxy_http_version 1.1; proxy_set_header Upgrade $http_upgrade; proxy_set_header Connection &amp;#34;upgrade&amp;#34;; proxy_redirect off; } } server { listen 443; server_name 指定的域名; ssl on; root html; index index.</description>
+    </item>
+    
+    <item>
+      <title>linux修改设备名</title>
+      <link>https://mannuan.github.io/post/linux%E4%BF%AE%E6%94%B9%E8%AE%BE%E5%A4%87%E5%90%8D/</link>
+      <pubDate>Wed, 01 May 2019 21:39:53 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/linux%E4%BF%AE%E6%94%B9%E8%AE%BE%E5%A4%87%E5%90%8D/</guid>
+      <description>只要修改两个文件：
+ /etc/hostname
+ /etc/hosts
+  </description>
+    </item>
+    
+    <item>
+      <title>视频下载4大神器</title>
+      <link>https://mannuan.github.io/post/%E8%A7%86%E9%A2%91%E4%B8%8B%E8%BD%BD4%E5%A4%A7%E7%A5%9E%E5%99%A8/</link>
+      <pubDate>Thu, 04 Apr 2019 09:47:48 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/%E8%A7%86%E9%A2%91%E4%B8%8B%E8%BD%BD4%E5%A4%A7%E7%A5%9E%E5%99%A8/</guid>
+      <description> 1、downie 可以下载🌎上面所有你想的到的视频网站的视频，而且下载速度很快。
+2、ykdl 可以通过命令行下载爱奇艺的视频，还有其他网站的视频
+3、you-get 4、youtube-dl </description>
+    </item>
+    
+    <item>
+      <title>在开启用户验证的情况下，如何登录mongodb用户</title>
+      <link>https://mannuan.github.io/post/%E5%9C%A8%E5%BC%80%E5%90%AF%E7%94%A8%E6%88%B7%E9%AA%8C%E8%AF%81%E7%9A%84%E6%83%85%E5%86%B5%E4%B8%8B%E5%A6%82%E4%BD%95%E7%99%BB%E5%BD%95mongodb%E7%94%A8%E6%88%B7/</link>
+      <pubDate>Tue, 12 Feb 2019 15:54:27 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/%E5%9C%A8%E5%BC%80%E5%90%AF%E7%94%A8%E6%88%B7%E9%AA%8C%E8%AF%81%E7%9A%84%E6%83%85%E5%86%B5%E4%B8%8B%E5%A6%82%E4%BD%95%E7%99%BB%E5%BD%95mongodb%E7%94%A8%E6%88%B7/</guid>
+      <description> 1、以test用户和数据库admin为例：
+ use admin db.auth(&amp;#34;test&amp;#34;,&amp;#34;test&amp;#34;) # 两个test分别是用户名和密码</description>
+    </item>
+    
+    <item>
+      <title>mongodb创建root和普通user</title>
+      <link>https://mannuan.github.io/post/mongodb%E5%88%9B%E5%BB%BAroot%E5%92%8C%E6%99%AE%E9%80%9Auser/</link>
+      <pubDate>Tue, 12 Feb 2019 15:47:41 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/mongodb%E5%88%9B%E5%BB%BAroot%E5%92%8C%E6%99%AE%E9%80%9Auser/</guid>
+      <description>1、创建管理员，下面以用户test1为例：
+use admin db.createUser({user: &amp;#34;test1&amp;#34;, pwd: &amp;#34;test1&amp;#34;, roles: [{role: &amp;#34;root&amp;#34;, db: &amp;#34;admin&amp;#34;}]}) 2、创建test2db对应的test2用户:
+use test2db db.createUser({user: &amp;#34;test2&amp;#34;, pwd: &amp;#34;test2&amp;#34;, roles: [{role: &amp;#34;readWrite&amp;#34;, db: &amp;#34;test2db&amp;#34; }]})</description>
+    </item>
+    
+    <item>
+      <title>mongodb多实例启动和开启用户验证</title>
+      <link>https://mannuan.github.io/post/mongodb%E5%A4%9A%E5%AE%9E%E4%BE%8B%E5%90%AF%E5%8A%A8%E5%92%8C%E5%BC%80%E5%90%AF%E7%94%A8%E6%88%B7%E9%AA%8C%E8%AF%81/</link>
+      <pubDate>Tue, 12 Feb 2019 14:43:06 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/mongodb%E5%A4%9A%E5%AE%9E%E4%BE%8B%E5%90%AF%E5%8A%A8%E5%92%8C%E5%BC%80%E5%90%AF%E7%94%A8%E6%88%B7%E9%AA%8C%E8%AF%81/</guid>
+      <description>在这里，我不废话，直接给出mongodb配置文件模板
+# mongod.conf # for documentation of all options, see: # http://docs.mongodb.org/manual/reference/configuration-options/ # Where and how to store data. storage: dbPath: mongodb数据库的路径（自己可以随便取，只要不与默认的一样就行了） journal: enabled: true # engine: # mmapv1: # wiredTiger: # where to write logging data. systemLog: destination: file logAppend: true path: mongodb日志路径（自己可以随便取，只要不与默认的一样就行了） # network interfaces net: port: 端口0~65536(不常用的端口可以随便取，不可以和默认的一样) bindIp: 0.0.0.0 # how the process runs processManagement: # timeZoneInfo: /usr/share/zoneinfo fork: false #开启用户认证 security: authorization: enabled #operationProfiling: #replication: #sharding: ## Enterprise-Only Options: #auditLog: #snmp:  </description>
+    </item>
+    
+    <item>
+      <title>linux创建用户并给用户sudo权限</title>
+      <link>https://mannuan.github.io/post/linux%E5%88%9B%E5%BB%BA%E7%94%A8%E6%88%B7%E5%B9%B6%E7%BB%99%E7%94%A8%E6%88%B7sudo%E6%9D%83%E9%99%90/</link>
+      <pubDate>Mon, 11 Feb 2019 22:43:53 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/linux%E5%88%9B%E5%BB%BA%E7%94%A8%E6%88%B7%E5%B9%B6%E7%BB%99%E7%94%A8%E6%88%B7sudo%E6%9D%83%E9%99%90/</guid>
+      <description>这些年，我看了很多关于创建linux用户的博客。发现当中都是写了一大堆废话，都是复制粘贴的，而且介绍的一点都不全面，有些甚至直接是错误的。
+我在这里将按如下步骤来详细的描述创建用户的过程。以用户名test为例：
+1、
+useradd -d /home/test -m test 上面表示的是创建一个名为test的用户，且同时给他在home目录下面创建了文件夹。
+2、
+passwd test 上面的命令是给test用户设置密码。
+3、
+usermod -s /bin/bash test 上面这段代码的含义是，把命令行的模式换为bash，默认是sh。你肯定会问为什么要这样，因为如果使用默认的sh，你打开终端的提示符显示的是$，不是“用户名$主机名”这种形式。
+4、
+usermod -a -G sudo test usermod -a -G adm test 上面这个代码的意思是，把test用户添加到sudo和admin用户组里面。这里要注意的是系统里面的admin的用户组的名字是&amp;rdquo;adm&amp;rdquo;。
+还有，我经常看到博客说只要改/etc/sudoers文件就可以了。虽然这种方法可行，但是这种方法不利于管理用户。最重要的是，这种方法很low，很垃圾，我很看不起这种方法。做为高水平的技术人才，该装逼的地方还是要装逼的，这样才可彰显牛逼之处。
+5、
+groups test 上面这个命令的意思是检查test所在的用户组
+6、
+sudo su 首先，你要重新登录一下，然后输入上面这个命令，密码就是使用该用户的密码，然后你就发现可以sudo了，哈哈哈哈啊哈哈，这样你就成功了。</description>
+    </item>
+    
+    <item>
+      <title>mac修改默认终端为iterm2</title>
+      <link>https://mannuan.github.io/post/mac%E4%BF%AE%E6%94%B9%E9%BB%98%E8%AE%A4%E7%BB%88%E7%AB%AF%E4%B8%BAiterm2/</link>
+      <pubDate>Thu, 30 Aug 2018 11:03:37 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/mac%E4%BF%AE%E6%94%B9%E9%BB%98%E8%AE%A4%E7%BB%88%E7%AB%AF%E4%B8%BAiterm2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>brew安装卡死原因</title>
+      <link>https://mannuan.github.io/post/brew%E5%AE%89%E8%A3%85%E5%8D%A1%E6%AD%BB%E5%8E%9F%E5%9B%A0/</link>
+      <pubDate>Wed, 29 Aug 2018 10:16:40 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/brew%E5%AE%89%E8%A3%85%E5%8D%A1%E6%AD%BB%E5%8E%9F%E5%9B%A0/</guid>
+      <description>1.command line tools没有安装，如果执行在线安装的命令也卡死，请看我的上一篇博客的离线安装方法；</description>
+    </item>
+    
+    <item>
+      <title>mac command line tools离线安装</title>
+      <link>https://mannuan.github.io/post/mac-command-line-tools%E7%A6%BB%E7%BA%BF%E5%AE%89%E8%A3%85/</link>
+      <pubDate>Wed, 29 Aug 2018 10:10:05 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/mac-command-line-tools%E7%A6%BB%E7%BA%BF%E5%AE%89%E8%A3%85/</guid>
+      <description>https://developer.apple.com/download/more/</description>
+    </item>
+    
+    <item>
+      <title>正则表达式符号大全</title>
+      <link>https://mannuan.github.io/post/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%AC%A6%E5%8F%B7%E5%A4%A7%E5%85%A8/</link>
+      <pubDate>Tue, 31 Jul 2018 19:25:12 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%AC%A6%E5%8F%B7%E5%A4%A7%E5%85%A8/</guid>
+      <description>字符 描述     \ 将下一个字符标记为一个特殊字符、或一个原义字符、或一个向后引用、或一个八进制转义符。例如，“n”匹配字符“n”。“\n”匹配一个换行符。串行“\\”匹配“\”而“\(”则匹配“(”。   ^ 匹配输入字符串的开始位置。如果设置了RegExp对象的Multiline属性，^也匹配“\n”或“\r”之后的位置。   $ 匹配输入字符串的结束位置。如果设置了RegExp对象的Multiline属性，$也匹配“\n”或“\r”之前的位置。   * 匹配前面的子表达式零次或多次。例如，zo*能匹配“z”以及“zoo”。*等价于{0,}。   + 匹配前面的子表达式一次或多次。例如，“zo+”能匹配“zo”以及“zoo”，但不能匹配“z”。+等价于{1,}。   ? 匹配前面的子表达式零次或一次。例如，“do(es)?”可以匹配“does”或“does”中的“do”。?等价于{0,1}。   {n} n是一个非负整数。匹配确定的n次。例如，“o{2}”不能匹配“Bob”中的“o”，但是能匹配“food”中的两个o。   {n,} n是一个非负整数。至少匹配n次。例如，“o{2,}”不能匹配“Bob”中的“o”，但能匹配“foooood”中的所有o。“o{1,}”等价于“o+”。“o{0,}”则等价于“o*”。   {n,m} m和n均为非负整数，其中n&amp;lt;=m。最少匹配n次且最多匹配m次。例如，“o{1,3}”将匹配“fooooood”中的前三个o。“o{0,1}”等价于“o?”。请注意在逗号和两个数之间不能有空格。   ? 当该字符紧跟在任何一个其他限制符（*,+,?，{n}，{n,}，{n,m}）后面时，匹配模式是非贪婪的。非贪婪模式尽可能少的匹配所搜索的字符串，而默认的贪婪模式则尽可能多的匹配所搜索的字符串。例如，对于字符串“oooo”，“o+?”将匹配单个“o”，而“o+”将匹配所有“o”。   . 匹配除“\n”之外的任何单个字符。要匹配包括“\n”在内的任何字符，请使用像“`(.   (pattern) 匹配pattern并获取这一匹配。所获取的匹配可以从产生的Matches集合得到，在VBScript中使用SubMatches集合，在JScript中则使用$0…$9属性。要匹配圆括号字符，请使用“\(”或“\)”。   (?:pattern) 匹配pattern但不获取匹配结果，也就是说这是一个非获取匹配，不进行存储供以后使用。这在使用或字符“`(   (?=pattern) 正向肯定预查，在任何匹配pattern的字符串开始处匹配查找字符串。这是一个非获取匹配，也就是说，该匹配不需要获取供以后使用。例如，“`Windows(?=95   (?!pattern) 正向否定预查，在任何不匹配pattern的字符串开始处匹配查找字符串。这是一个非获取匹配，也就是说，该匹配不需要获取供以后使用。例如“`Windows(?!95   (?</description>
+    </item>
+    
+    <item>
+      <title>python教程之pip使用国内源</title>
+      <link>https://mannuan.github.io/post/python%E6%95%99%E7%A8%8B%E4%B9%8Bpip%E4%BD%BF%E7%94%A8%E5%9B%BD%E5%86%85%E6%BA%90/</link>
+      <pubDate>Thu, 26 Jul 2018 11:19:05 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/python%E6%95%99%E7%A8%8B%E4%B9%8Bpip%E4%BD%BF%E7%94%A8%E5%9B%BD%E5%86%85%E6%BA%90/</guid>
+      <description>配置文件格式：  以阿里云为例
+ [global] index-url = http://mirrors.aliyun.com/pypi/simple/ [install] trusted-host=mirrors.aliyun.com  配置文件路径：  放置配置文件的位置各个操作系统各部相同，下面我将一一列举。
+ linux系统: 超级用户： 如果存在/etc/xdg/目录，则使用/etc/xdg/pip/pip.conf路径；不存在使用/etc/pip.conf路径
+普通用户： 使用.config/pip/pip.conf
+mac系统: 超级用户： .config/pip/pip.conf 普通用户： .pip/pip.conf windows系统： 全局配置（win7及以上系统，这里文件名改为pip.ini）： C:\ProgramData\pip\pip.ini ###</description>
+    </item>
+    
+    <item>
+      <title>对mongodb的aggregate管道用法的理解</title>
+      <link>https://mannuan.github.io/post/%E5%AF%B9mongodb%E7%9A%84aggregate%E7%AE%A1%E9%81%93%E7%94%A8%E6%B3%95%E7%9A%84%E7%90%86%E8%A7%A3/</link>
+      <pubDate>Mon, 23 Jul 2018 19:56:12 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/%E5%AF%B9mongodb%E7%9A%84aggregate%E7%AE%A1%E9%81%93%E7%94%A8%E6%B3%95%E7%9A%84%E7%90%86%E8%A7%A3/</guid>
+      <description>最近看了一些关于mongodb的教程，感觉很费力，尤其涉及到了一些复杂的操作。比如很多贴上了大段数据来描述样例、或者翻译了大段官方文档的文字，这些都让我感觉疲劳。 下面我用自己写的一些话来描述我对mongodb聚合的理解：
+ 注： &amp;lt;&amp;gt;用来标识变量（即里面的内容可以替换成其他），可以按照&amp;lt;&amp;gt;里面的单词的含义来理解下面的代码。
+ 例子：假设你有一组数据，需要按照顺序做这些操作：筛选、分组、求和，你可以用如下代码实现：
+db.&amp;lt;collection_name&amp;gt;.aggregate([ {$match:key}, {$group:{_id:$&amp;lt;group_filed_name&amp;gt;, &amp;lt;dispaly_field_name&amp;gt;:{$first:&amp;lt;nonkey_name&amp;gt;}}}, {$group:{_id:null, &amp;lt;sum_name&amp;gt;:{$sum:$&amp;lt;sum_field_name&amp;gt;}}} ]).next().get(&#39;&amp;lt;sum_name&amp;gt;&#39;)    &amp;lt; key&amp;gt;表示用来筛选的关键字，它的里面结构形如
+ {&amp;lt;key1_name&amp;gt;:&amp;lt;key1_value&amp;gt;, &amp;lt;key2_name&amp;gt;:&amp;lt;key2_value&amp;gt;, ...}   表示用来给数据分组的字段名称，其中 _id 是一个内置的关键字，在_id所在字段的值用来划分分组。
+ 表示最后输出的字段的名称，表示某个非关键字字段的名称
+ 在第二步分组操作做完显示的数据结构是这样的
+ {_id:&amp;lt;group_field1_value&amp;gt;,  :}
+ {_id:, :}
+&amp;hellip;
+  * 表示最后要显示的求和字段的名称，表示要求和的字段的名称,_id:null表示不分组，这里使用$group符号的原因是$sum必须在$group实现
+ 在求和之后数据的结构是这样的
+ {_id:null,&amp;lt;sum_name&amp;gt;:&amp;lt;sum_value&amp;gt;}     从上面的例子，我们不难看出mongodb的聚合管道操作它允许分组、求和、筛选等等不同的操作依次进行，从代码里面使用了”[]“这个列表操作符，可以想像mongodb的聚合操作就像python的列表一样依次进行读取、操作，而且聚合操作允许重复多次进行的相同的操作。因此，我认为不管多复杂的操作只要分成一些基本操作，都可以用mongodb的聚合操作实现。</description>
+    </item>
+    
+    <item>
+      <title>机器学习面试知识点一(无监督和有监督算法的区别)</title>
+      <link>https://mannuan.github.io/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%97%A0%E7%9B%91%E7%9D%A3%E5%92%8C%E6%9C%89%E7%9B%91%E7%9D%A3%E7%AE%97%E6%B3%95%E7%9A%84%E5%8C%BA%E5%88%AB/</link>
+      <pubDate>Fri, 20 Jul 2018 17:05:28 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E6%97%A0%E7%9B%91%E7%9D%A3%E5%92%8C%E6%9C%89%E7%9B%91%E7%9D%A3%E7%AE%97%E6%B3%95%E7%9A%84%E5%8C%BA%E5%88%AB/</guid>
+      <description>对监督学习的理解： 监督学习，通俗来讲就是分类，就是把训练样本，在某种评价下得到最佳的模型，然后再利用这个模型将输入映射为相应的输出，对输出进行简单的判断从而实现分类的目的。在人对事物的认识中，我们从孩时就被大人们教授这是鸟，那是房子等等。我们所见到的景物就是输入数据，而大人们对这些事物的判断结果就是相应的输出。当我们见识多了以后，脑子就慢慢地得到了一些泛化的模型，这就是训练得到的那个函数，从而没有大人在旁边指点的时候，我们就可自己分辨哪些是房子，哪些是鸟。
+对无监督学习的理解： 它与非监督学习的不同之处，在于我们事先没有任何训练样本，而直接对数据进行建模。比如我们去参观一个画展，我们完全对艺术一无所知,但是欣赏完多幅作品之后，我们也能把它们分成不同的派别。比如哪些更朦胧一点，哪些更写实一些，即使我们不知道什么叫做朦胧派，什么叫做写实派，但是至少我们能把他们分成两个类。无监督学习的里典型的例子就是聚类。聚类的目的在于把相似的东西聚在一起，而我们并不关心这一类是什么。因此，一个聚类算法只需要知道如何计算相似度就可以开始工作了。</description>
     </item>
     
   </channel>

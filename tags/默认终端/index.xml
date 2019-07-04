@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>默认终端 on mannuan</title>
+    <link>https://mannuan.github.io/tags/%E9%BB%98%E8%AE%A4%E7%BB%88%E7%AB%AF/</link>
+    <description>Recent content in 默认终端 on mannuan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 30 Aug 2018 11:03:37 +0800</lastBuildDate>
+    
+	<atom:link href="https://mannuan.github.io/tags/%E9%BB%98%E8%AE%A4%E7%BB%88%E7%AB%AF/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>mac修改默认终端为iterm2</title>
+      <link>https://mannuan.github.io/post/mac%E4%BF%AE%E6%94%B9%E9%BB%98%E8%AE%A4%E7%BB%88%E7%AB%AF%E4%B8%BAiterm2/</link>
+      <pubDate>Thu, 30 Aug 2018 11:03:37 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/mac%E4%BF%AE%E6%94%B9%E9%BB%98%E8%AE%A4%E7%BB%88%E7%AB%AF%E4%B8%BAiterm2/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

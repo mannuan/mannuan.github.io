@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ajax on mannuan</title>
+    <link>https://mannuan.github.io/tags/ajax/</link>
+    <description>Recent content in ajax on mannuan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 28 Jun 2019 21:35:46 +0800</lastBuildDate>
+    
+	<atom:link href="https://mannuan.github.io/tags/ajax/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>原生js、jQuery和Vue.js的Ajax的详细对比</title>
+      <link>https://mannuan.github.io/post/%E5%8E%9F%E7%94%9Fjsjquery%E5%92%8Cvue.js%E7%9A%84ajax%E7%9A%84%E8%AF%A6%E7%BB%86%E5%AF%B9%E6%AF%94/</link>
+      <pubDate>Fri, 28 Jun 2019 21:35:46 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/%E5%8E%9F%E7%94%9Fjsjquery%E5%92%8Cvue.js%E7%9A%84ajax%E7%9A%84%E8%AF%A6%E7%BB%86%E5%AF%B9%E6%AF%94/</guid>
+      <description>原生js ajax(&amp;#39;get&amp;#39;, &amp;#39;http://127.0.0.1:3000/get&amp;#39;, function(response){ alert(JSON.parse(response)[&amp;#39;message&amp;#39;]); }); ajax(&amp;#39;post&amp;#39;, &amp;#39;http://127.0.0.1:3000/post&amp;#39;, function (response) { alert(JSON.parse(response)[&amp;#39;message&amp;#39;]); }, JSON.stringify({name: &amp;#34;post测试&amp;#34;})); function ajax(method, url, callback, data, async){ var data=data || null; var async=async || true; var xhr = new window.XMLHttpRequest || ActiveXObject(&amp;#39;Microsoft.XMLHTTP&amp;#39;); xhr.open(method, url, async); xhr.setRequestHeader(&amp;#39;content-type&amp;#39;, &amp;#39;application/json&amp;#39;); xhr.send(data); console.log(&amp;#34;发送的数据是：&amp;#34;+data); xhr.onreadystatechange = function(){ if(xhr.readyState === 4){ if(xhr.status &amp;gt;=200&amp;amp;&amp;amp;xhr.status&amp;lt;300||xhr.status==304){ console.log(&amp;#34;完成请求，响应就绪&amp;#34;); callback(this.responseText); } } } }  原生js-Promise ajax(&amp;#39;get&amp;#39;, &amp;#39;http://127.0.0.1:3000/get&amp;#39;).then(function (data) { alert(JSON.parse(data).message); }).catch(function (error) { alert(error); }); ajax(&amp;#39;post&amp;#39;, &amp;#39;http://127.</description>
+    </item>
+    
+    <item>
+      <title>关于Ajax的jQuery、Vue.js、原生js的各个版本的实现对比</title>
+      <link>https://mannuan.github.io/post/%E5%85%B3%E4%BA%8Eajax%E7%9A%84jqueryvue.js%E5%8E%9F%E7%94%9Fjs%E7%9A%84%E5%90%84%E4%B8%AA%E7%89%88%E6%9C%AC%E7%9A%84%E5%AE%9E%E7%8E%B0%E5%AF%B9%E6%AF%94/</link>
+      <pubDate>Fri, 28 Jun 2019 20:38:26 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/%E5%85%B3%E4%BA%8Eajax%E7%9A%84jqueryvue.js%E5%8E%9F%E7%94%9Fjs%E7%9A%84%E5%90%84%E4%B8%AA%E7%89%88%E6%9C%AC%E7%9A%84%E5%AE%9E%E7%8E%B0%E5%AF%B9%E6%AF%94/</guid>
+      <description>目录
+前言
+1、原生js实现
+2、原生js实现——Promise版本
+3、jQuery实现
+4、Vue.js实现
+总结
+前言  下面对于各个版本的Ajax代码，想要实际测试它们，可以把它命名为server2.html，然后放在当前目录views目录下面。具体的教程可以看测试Ajax的Nodejs服务端代码
+ 1、原生js实现 &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html lang=&amp;#34;zh&amp;#34;&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta charset=&amp;#34;UTF-8&amp;#34;&amp;gt; &amp;lt;title&amp;gt;原生js版本&amp;lt;/title&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;div&amp;gt;&amp;lt;button&amp;gt;点击我发送get请求&amp;lt;/button&amp;gt;&amp;lt;/div&amp;gt; &amp;lt;div&amp;gt;&amp;lt;button&amp;gt;点击我发送post请求&amp;lt;/button&amp;gt;&amp;lt;/div&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;script&amp;gt; document.getElementsByTagName(&amp;#39;button&amp;#39;)[0].addEventListener(&amp;#39;click&amp;#39;, function () { ajax(&amp;#39;get&amp;#39;, &amp;#39;http://127.0.0.1:3000/get&amp;#39;, function (response) { alert(JSON.parse(response)[&amp;#39;message&amp;#39;]); }); }); document.getElementsByTagName(&amp;#39;button&amp;#39;)[1].addEventListener(&amp;#39;click&amp;#39;, function () { ajax(&amp;#39;post&amp;#39;, &amp;#39;http://127.0.0.1:3000/post&amp;#39;, function (response) { alert(JSON.parse(response)[&amp;#39;message&amp;#39;]); }, JSON.stringify({ name: &amp;#34;post测试&amp;#34; })); }); function ajax(method, url, callback, data, async) { data = data || null; async = async || true; var xhr = new window.</description>
+    </item>
+    
+    <item>
+      <title>测试Ajax的Nodejs服务端代码</title>
+      <link>https://mannuan.github.io/post/%E6%B5%8B%E8%AF%95ajax%E7%9A%84nodejs%E6%9C%8D%E5%8A%A1%E7%AB%AF%E4%BB%A3%E7%A0%81/</link>
+      <pubDate>Fri, 28 Jun 2019 17:49:10 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/%E6%B5%8B%E8%AF%95ajax%E7%9A%84nodejs%E6%9C%8D%E5%8A%A1%E7%AB%AF%E4%BB%A3%E7%A0%81/</guid>
+      <description>前言  由于使用Ajax必须要有一个服务端来接收消息，为了方便我使用Nodejs来搭建服务端。同时，为了兼顾实践跨域的方法，我在这里搭建了两个服务端。其中，一个服务端用来响应Ajax请求，另外一个服务端用作加载页面。这样就产生了跨域的问题，我采用的是cors的解决方案，具体的实现，请看sever1的代码。
+ 前期准备工作  安装nodejs，可以参看我的这篇教程 选择koa2作为服务端 安装模块：koa，koa-router，koa2-cors，koa-bodyparser，koa-art-template，path  服务端交互示意图 文件路径示意图 server1.js var Koa = require(&amp;#39;koa&amp;#39;); var Router = require(&amp;#39;koa-router&amp;#39;); var cors = require(&amp;#39;koa2-cors&amp;#39;); var bodyParser = require(&amp;#39;koa-bodyparser&amp;#39;); var app = new Koa(); var router = new Router(); //下面的代码必须写在设置路由的前面 app.use(cors({ origin: function (ctx) { return &amp;#39;http://127.0.0.1:4000&amp;#39;; }, exposeHeaders: [&amp;#39;WWW-Authenticate&amp;#39;, &amp;#39;Server-Authorization&amp;#39;], maxAge: 5, credentials: true, allowMethods: [&amp;#39;GET&amp;#39;, &amp;#39;POST&amp;#39;, &amp;#39;DELETE&amp;#39;], allowHeaders: [&amp;#39;Content-Type&amp;#39;, &amp;#39;Authorization&amp;#39;, &amp;#39;Accept&amp;#39;], })); //配置post提交数据的中间件 app.use(bodyParser()); //处理get请求 router.get(&amp;#39;/get&amp;#39;, async function(ctx){ ctx.</description>
+    </item>
+    
+    <item>
+      <title>关于Content-Type几种值的区别及用法</title>
+      <link>https://mannuan.github.io/post/%E5%85%B3%E4%BA%8Econtent-type%E5%87%A0%E7%A7%8D%E5%80%BC%E7%9A%84%E5%8C%BA%E5%88%AB%E5%8F%8A%E7%94%A8%E6%B3%95/</link>
+      <pubDate>Wed, 26 Jun 2019 22:44:53 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/%E5%85%B3%E4%BA%8Econtent-type%E5%87%A0%E7%A7%8D%E5%80%BC%E7%9A%84%E5%8C%BA%E5%88%AB%E5%8F%8A%E7%94%A8%E6%B3%95/</guid>
+      <description>1、Content-Type 的值类型：
+1.1 application/json：消息主体是序列化后的 JSON 字符串
+1.2 application/x-www-form-urlencoded：数据被编码为名称/值对。这是标准的编码格式
+1.3 multipart/form-data： 需要在表单中进行文件上传时，就需要使用该格式。常见的媒体格式是上传文件之时使用的
+1.4 text/plain：数据以纯文本形式(text/json/xml/html)进行编码，其中不含任何控件或格式字符。
+2、application/json 和 application/x-www-form-urlencoded的区别
+2.1 application/json：作用： 告诉服务器请求的主题内容是json格式的字符串，服务器端会对json字符串进行解析，好处： 前端人员不需要关心数据结构的复杂度，只要是标准的json格式就能提交成功。
+2.2 application/x-www-form- urlencoded：是Jquery的Ajax请求默认方式作用：在请求发送过程中会对数据进行序列化处理，以键值对形式？key1=value1&amp;amp;key2=value2的方式发送到服务器，好处： 所有浏览器都支持
+3、 application/x-www-form-urlencoded：信息数据被编码为名称/值对，这是标准且默认的编码格式
+3.1 当action为get时候，客户端把form数据转换成一个字串append到url后面，用&amp;rsquo;?&amp;lsquo;分割。
+3.2 当action为post时候，浏览器把form数据封装到http body中，然后发送到server。（可以取消post请求的预检请求）
+Vue中 content-type 设置</description>
+    </item>
+    
+  </channel>
+</rss>

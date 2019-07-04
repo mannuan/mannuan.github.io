@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>召回率 on mannuan</title>
+    <link>https://mannuan.github.io/tags/%E5%8F%AC%E5%9B%9E%E7%8E%87/</link>
+    <description>Recent content in 召回率 on mannuan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 02 Jun 2019 17:37:07 +0800</lastBuildDate>
+    
+	<atom:link href="https://mannuan.github.io/tags/%E5%8F%AC%E5%9B%9E%E7%8E%87/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>准确率、精准率、召回率和F1值详解</title>
+      <link>https://mannuan.github.io/post/%E5%87%86%E7%A1%AE%E7%8E%87%E7%B2%BE%E5%87%86%E7%8E%87%E5%8F%AC%E5%9B%9E%E7%8E%87%E5%92%8Cf1%E5%80%BC%E8%AF%A6%E8%A7%A3/</link>
+      <pubDate>Sun, 02 Jun 2019 17:37:07 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/%E5%87%86%E7%A1%AE%E7%8E%87%E7%B2%BE%E5%87%86%E7%8E%87%E5%8F%AC%E5%9B%9E%E7%8E%87%E5%92%8Cf1%E5%80%BC%E8%AF%A6%E8%A7%A3/</guid>
+      <description>专业术语的中英文对照表 英文名     准确率 Accuracy   精准率 Precise   召回率 Recall   F1值 F1 measure    Precise和Recall是广泛应用在信息检索和统计学分类领域的两个度量值，用来评价结果的质量；F1 measure是综合Precise和Recall两个指标的评估指标，用于综合反映整体的指标。Precise、Recall和F1 measure都是通过混淆矩阵计算出来的，下表是对混淆矩阵的介绍：
+混淆矩阵 &amp;nbsp; 预测的类别 &amp;nbsp; 实际的类别 &amp;nbsp; Positive Negative 合计 Positive TP FN 正样本 Negative FP TN 负样本 &amp;nbsp; 合计 样本被预测为Positive 样本被预测为Negative Positive+Negative   其中： TP表示正确地把正样本预测为正； FN表示错误地把正样本预测为负； FP表示错误地把负样本预测为正； TN表示正确地把负样本预测为负；
+ Precise 表示正确预测正样本占实际预测为正样本的比例
+$$Precise = \frac{TP}{TP+FP}$$
+Recall 表示正确预测正样本占正样本的比例
+$$Recall = \frac{TP}{TP+FN}$$</description>
+    </item>
+    
+  </channel>
+</rss>

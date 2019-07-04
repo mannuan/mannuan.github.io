@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>function on mannuan</title>
+    <link>https://mannuan.github.io/tags/function/</link>
+    <description>Recent content in function on mannuan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 28 May 2019 09:53:04 +0800</lastBuildDate>
+    
+	<atom:link href="https://mannuan.github.io/tags/function/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>function中的arguments转数组的标准方法</title>
+      <link>https://mannuan.github.io/post/function%E4%B8%AD%E7%9A%84arguments%E8%BD%AC%E6%95%B0%E7%BB%84%E7%9A%84%E6%A0%87%E5%87%86%E6%96%B9%E6%B3%95/</link>
+      <pubDate>Tue, 28 May 2019 09:53:04 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/function%E4%B8%AD%E7%9A%84arguments%E8%BD%AC%E6%95%B0%E7%BB%84%E7%9A%84%E6%A0%87%E5%87%86%E6%96%B9%E6%B3%95/</guid>
+      <description>举例说明:
+function arr(){ console.log(arguments); // 输出：[Arguments] { &amp;#39;0&amp;#39;: 1, &amp;#39;1&amp;#39;: 2, &amp;#39;2&amp;#39;: 3 }  _array = Array.prototype.slice.apply(arguments); console.log(_array); // 输出：[ 1, 2, 3 ] } arr(1, 2, 3) </description>
+    </item>
+    
+    <item>
+      <title>js Function详解</title>
+      <link>https://mannuan.github.io/post/js-function%E8%AF%A6%E8%A7%A3/</link>
+      <pubDate>Mon, 20 May 2019 11:09:31 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/js-function%E8%AF%A6%E8%A7%A3/</guid>
+      <description> Function不介意传入多少个参数，也不在乎传入参数的类型（参数在内部使用数组来表示，在函数内部可以通过arguments访问）； Function没有重载 Function传入的参数只能按值传递(即使传入的是引用类型)，详细请看js Function 参数按值传递详解 Function可以设置默认参数，比如：  function randomNum(max=100, start=33){ return Math.floor(Math.random() * max + start) } console.log(randomNum(1000, 33)); </description>
+    </item>
+    
+    <item>
+      <title>js Function 参数按值传递详解</title>
+      <link>https://mannuan.github.io/post/js-function-%E5%8F%82%E6%95%B0%E6%8C%89%E5%80%BC%E4%BC%A0%E9%80%92%E8%AF%A6%E8%A7%A3/</link>
+      <pubDate>Mon, 20 May 2019 11:08:29 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/js-function-%E5%8F%82%E6%95%B0%E6%8C%89%E5%80%BC%E4%BC%A0%E9%80%92%E8%AF%A6%E8%A7%A3/</guid>
+      <description>  如果传入参数是基本数据类型，那么按值传递是很容易理解的； 如果传入参数是引用数据类型，那么会很容易陷入误区，错误地认为是引用传递；   错误例子一：
+function setColor(obj){ obj.color = &amp;#34;red&amp;#34;; } var picture = new Object(); setColor(picture); console.log(picture); //&amp;#34;red&amp;#34;  看到上面这个例子后，很容易认为：”函数的值是传入了引用，然后通过引用修改了对象的属性。“
+纠正例子二：
+function setColor(obj){ obj.color = &amp;#34;red&amp;#34;; obj = new Object(); obj.color = &amp;#34;blue&amp;#34;; } var picture = new Object(); setColor(picture); console.log(picture.color); //&amp;#34;red&amp;#34;  我们发现，如果函数传入的是引用，那么在函数内部的修改picture的引用就会对象把指向color为”blue“的对象；但是根据输出的结果，很显然是错误；
+ 结论：因此，不管函数传入的是什么数据类型，都是按值传递的。
+ </description>
+    </item>
+    
+  </channel>
+</rss>

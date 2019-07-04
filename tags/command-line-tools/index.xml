@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>command-line-tools on mannuan</title>
+    <link>https://mannuan.github.io/tags/command-line-tools/</link>
+    <description>Recent content in command-line-tools on mannuan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 29 Aug 2018 10:10:05 +0800</lastBuildDate>
+    
+	<atom:link href="https://mannuan.github.io/tags/command-line-tools/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>mac command line tools离线安装</title>
+      <link>https://mannuan.github.io/post/mac-command-line-tools%E7%A6%BB%E7%BA%BF%E5%AE%89%E8%A3%85/</link>
+      <pubDate>Wed, 29 Aug 2018 10:10:05 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/mac-command-line-tools%E7%A6%BB%E7%BA%BF%E5%AE%89%E8%A3%85/</guid>
+      <description>https://developer.apple.com/download/more/</description>
+    </item>
+    
+  </channel>
+</rss>

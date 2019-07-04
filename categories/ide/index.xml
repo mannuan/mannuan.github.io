@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ide on mannuan</title>
+    <link>https://mannuan.github.io/categories/ide/</link>
+    <description>Recent content in ide on mannuan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 22 Jun 2019 09:26:50 +0800</lastBuildDate>
+    
+	<atom:link href="https://mannuan.github.io/categories/ide/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>snippet,让你编码效率翻倍</title>
+      <link>https://mannuan.github.io/post/snippet%E8%AE%A9%E4%BD%A0%E7%BC%96%E7%A0%81%E6%95%88%E7%8E%87%E7%BF%BB%E5%80%8D/</link>
+      <pubDate>Sat, 22 Jun 2019 09:26:50 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/snippet%E8%AE%A9%E4%BD%A0%E7%BC%96%E7%A0%81%E6%95%88%E7%8E%87%E7%BF%BB%E5%80%8D/</guid>
+      <description>为什么谈到Snippet
+今天下午在用vscode做小程序的时候，发现很不方便，因为商店里提供的代码片段极为有限，而且平时几乎每天都需要用到代码片段，所以就在思考他们是怎么做到给别人提供代码的，我可以自定义代码片段吗。然后查了下，果然，这在vscode里自带的（好像藏得有点深），是可以自定义的，然后在做完自己的任务后捣鼓了下，基本了解了snippet的语法，突然有种打开新世界大门的感觉。做个记录，上菜了
+如何打开snippet配置
+这里以vscode为例，其他编辑器大概也差不多。在vscode中快捷键「Ctrl + Shift + P」打开命令窗口，然后输入snippet,选择 [配置用户代码片段]，点击后，就可以愉快的进行片段的编写了
+Snippet怎么用
+先上一个Demo
+&amp;#34;html template&amp;#34;: { &amp;#34;prefix&amp;#34;: &amp;#34;ht&amp;#34;, &amp;#34;body&amp;#34;: [ &amp;#34;&amp;lt;!DOCTYPE html&amp;gt;&amp;#34;, &amp;#34;&amp;lt;html lang=\&amp;#34;en\&amp;#34;&amp;gt;&amp;#34;, &amp;#34;&amp;lt;head&amp;gt;&amp;#34;, &amp;#34; &amp;lt;meta charset=\&amp;#34;UTF-8\&amp;#34;&amp;gt;&amp;#34;, &amp;#34; &amp;lt;title&amp;gt;${1:$CURRENT_DATE}&amp;lt;/title&amp;gt;&amp;#34;, &amp;#34;&amp;lt;/head&amp;gt;&amp;#34;, &amp;#34;&amp;lt;body&amp;gt;&amp;#34;, &amp;#34; &amp;lt;div class=\&amp;#34;${2|container,wrapper|}\&amp;#34;&amp;gt;&amp;#34;, &amp;#34; ${3}&amp;#34;, &amp;#34; &amp;lt;/div&amp;gt;&amp;#34;, &amp;#34;&amp;lt;/body&amp;gt;&amp;#34;, &amp;#34;&amp;lt;/html&amp;gt;&amp;#34;, ], &amp;#34;description&amp;#34;: &amp;#34;create a html frame&amp;#34; } 基础结构
+ 片段名字 prefix（前缀，输入的触发条件，比如上面例子中当我输入ht后，就能tab出来片段） body（主体部分，在里面根据语法定义自己需要的代码片段） description（说明，片段的具体描述）  基础语法
+ 每个逗号代表一整行的结束，双引号需要用转义字符  $number表示光标跳转的顺序，比如$1表示光标首次需要跳转的位置，相同序号的会在一起，另外$0表示最终光标位置 变量，在未赋值的情况下提供默认值，这里提供一些变量  TM_SELECTED_TEXT：当前选定的文本或空字符串； TM_CURRENT_LINE：当前行的内容； TM_CURRENT_WORD：光标所处单词或空字符串 TM_LINE_INDEX：行号（从零开始）； TM_LINE_NUMBER：行号（从一开始）； TM_FILENAME：当前文档的文件名； TM_FILENAME_BASE：当前文档的文件名（不含后缀名）； TM_DIRECTORY：当前文档所在目录； TM_FILEPATH：当前文档的完整文件路径； CLIPBOARD：当前剪贴板中内容。时间相关CURRENT_YEAR: 当前年份； CURRENT_YEAR_SHORT: 当前年份的后两位； CURRENT_MONTH: 格式化为两位数字的当前月份，如 02； CURRENT_MONTH_NAME: 当前月份的全称，如 July；CURRENT_MONTH_NAME_SHORT: 当前月份的简称，如 Jul； CURRENT_DATE: 当天月份第几天； CURRENT_DAY_NAME: 当天周几，如 Monday； CURRENT_DAY_NAME_SHORT: 当天周几的简称，如 Mon；CURRENT_HOUR: 当前小时（24小时制）； CURRENT_MINUTE: 当前分钟； CURRENT_SECOND: 当前秒数。</description>
+    </item>
+    
+    <item>
+      <title>vs code快捷键大全</title>
+      <link>https://mannuan.github.io/post/vs-code%E5%BF%AB%E6%8D%B7%E9%94%AE%E5%A4%A7%E5%85%A8/</link>
+      <pubDate>Tue, 28 May 2019 19:19:41 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/vs-code%E5%BF%AB%E6%8D%B7%E9%94%AE%E5%A4%A7%E5%85%A8/</guid>
+      <description>名称 快捷键     上下移动行 Alt(option) + 上下键   删除行 Ctrl(command) + Shift() + K    持续更新中&amp;hellip;</description>
+    </item>
+    
+  </channel>
+</rss>

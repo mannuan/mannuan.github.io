@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>python on mannuan</title>
+    <link>https://mannuan.github.io/tags/python/</link>
+    <description>Recent content in python on mannuan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 05 Jun 2019 15:44:42 +0800</lastBuildDate>
+    
+	<atom:link href="https://mannuan.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>python with 打开多个文件</title>
+      <link>https://mannuan.github.io/post/python-with-%E6%89%93%E5%BC%80%E5%A4%9A%E4%B8%AA%E6%96%87%E4%BB%B6/</link>
+      <pubDate>Wed, 05 Jun 2019 15:44:42 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/python-with-%E6%89%93%E5%BC%80%E5%A4%9A%E4%B8%AA%E6%96%87%E4%BB%B6/</guid>
+      <description>with open(&amp;#34;./example.html&amp;#34;, &amp;#34;r&amp;#34;) as f1, open(&amp;#34;./example.css&amp;#34;, &amp;#34;r&amp;#34;) as f2, open(&amp;#34;./example.svg&amp;#34;, &amp;#34;r&amp;#34;) as f3: html = f1.read() css = f2.read() svg = f3.</description>
+    </item>
+    
+    <item>
+      <title>jupyter_notebook_config.py常用配置</title>
+      <link>https://mannuan.github.io/post/jupyter_notebook_config.py%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE/</link>
+      <pubDate>Wed, 15 May 2019 15:41:21 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/jupyter_notebook_config.py%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE/</guid>
+      <description># -*- coding: utf-8 -*- # notebook服务会监听的IP地址，这个ip地址最好不要填任意的，否则不安全 c.NotebookApp.ip = &amp;#39;localhost&amp;#39; # 这条命令会与下面的一条命令hostnames冲突，如果这个设置为True,这下面这条命令不生效，反之，则生效 c.NotebookApp.allow_remote_access = True # 为本地主机取多个ip别名 c.NotebookApp.local_hostnames = [&amp;#39;localhost&amp;#39;] c.NotebookApp.open_browser = False c.NotebookApp.password = &amp;#34;密码&amp;#34; c.NotebookApp.port = 8888 c.NotebookApp.notebook_dir = &amp;#34;文件路径&amp;#34; 密码的生成详见jupyter如何设置密码
+如果，想要在其他主机上面访问 jupyter, 必须设置
+c.NotebookApp.allow_remote_access = True</description>
+    </item>
+    
+    <item>
+      <title>jupyter_notebook_config.py 文件的生成命令</title>
+      <link>https://mannuan.github.io/post/jupyter_notebook_config.py-%E6%96%87%E4%BB%B6%E7%9A%84%E7%94%9F%E6%88%90%E5%91%BD%E4%BB%A4/</link>
+      <pubDate>Wed, 15 May 2019 15:12:25 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/jupyter_notebook_config.py-%E6%96%87%E4%BB%B6%E7%9A%84%E7%94%9F%E6%88%90%E5%91%BD%E4%BB%A4/</guid>
+      <description>jupyter notebook --generate-config</description>
+    </item>
+    
+    <item>
+      <title>python教程之pip使用国内源</title>
+      <link>https://mannuan.github.io/post/python%E6%95%99%E7%A8%8B%E4%B9%8Bpip%E4%BD%BF%E7%94%A8%E5%9B%BD%E5%86%85%E6%BA%90/</link>
+      <pubDate>Thu, 26 Jul 2018 11:19:05 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/python%E6%95%99%E7%A8%8B%E4%B9%8Bpip%E4%BD%BF%E7%94%A8%E5%9B%BD%E5%86%85%E6%BA%90/</guid>
+      <description>配置文件格式：  以阿里云为例
+ [global] index-url = http://mirrors.aliyun.com/pypi/simple/ [install] trusted-host=mirrors.aliyun.com  配置文件路径：  放置配置文件的位置各个操作系统各部相同，下面我将一一列举。
+ linux系统: 超级用户： 如果存在/etc/xdg/目录，则使用/etc/xdg/pip/pip.conf路径；不存在使用/etc/pip.conf路径
+普通用户： 使用.config/pip/pip.conf
+mac系统: 超级用户： .config/pip/pip.conf 普通用户： .pip/pip.conf windows系统： 全局配置（win7及以上系统，这里文件名改为pip.ini）： C:\ProgramData\pip\pip.ini ###</description>
+    </item>
+    
+  </channel>
+</rss>

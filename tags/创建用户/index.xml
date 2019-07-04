@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>创建用户 on mannuan</title>
+    <link>https://mannuan.github.io/tags/%E5%88%9B%E5%BB%BA%E7%94%A8%E6%88%B7/</link>
+    <description>Recent content in 创建用户 on mannuan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 12 Feb 2019 15:47:41 +0800</lastBuildDate>
+    
+	<atom:link href="https://mannuan.github.io/tags/%E5%88%9B%E5%BB%BA%E7%94%A8%E6%88%B7/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>mongodb创建root和普通user</title>
+      <link>https://mannuan.github.io/post/mongodb%E5%88%9B%E5%BB%BAroot%E5%92%8C%E6%99%AE%E9%80%9Auser/</link>
+      <pubDate>Tue, 12 Feb 2019 15:47:41 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/mongodb%E5%88%9B%E5%BB%BAroot%E5%92%8C%E6%99%AE%E9%80%9Auser/</guid>
+      <description>1、创建管理员，下面以用户test1为例：
+use admin db.createUser({user: &amp;#34;test1&amp;#34;, pwd: &amp;#34;test1&amp;#34;, roles: [{role: &amp;#34;root&amp;#34;, db: &amp;#34;admin&amp;#34;}]}) 2、创建test2db对应的test2用户:
+use test2db db.createUser({user: &amp;#34;test2&amp;#34;, pwd: &amp;#34;test2&amp;#34;, roles: [{role: &amp;#34;readWrite&amp;#34;, db: &amp;#34;test2db&amp;#34; }]})</description>
+    </item>
+    
+    <item>
+      <title>linux创建用户并给用户sudo权限</title>
+      <link>https://mannuan.github.io/post/linux%E5%88%9B%E5%BB%BA%E7%94%A8%E6%88%B7%E5%B9%B6%E7%BB%99%E7%94%A8%E6%88%B7sudo%E6%9D%83%E9%99%90/</link>
+      <pubDate>Mon, 11 Feb 2019 22:43:53 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/linux%E5%88%9B%E5%BB%BA%E7%94%A8%E6%88%B7%E5%B9%B6%E7%BB%99%E7%94%A8%E6%88%B7sudo%E6%9D%83%E9%99%90/</guid>
+      <description>这些年，我看了很多关于创建linux用户的博客。发现当中都是写了一大堆废话，都是复制粘贴的，而且介绍的一点都不全面，有些甚至直接是错误的。
+我在这里将按如下步骤来详细的描述创建用户的过程。以用户名test为例：
+1、
+useradd -d /home/test -m test 上面表示的是创建一个名为test的用户，且同时给他在home目录下面创建了文件夹。
+2、
+passwd test 上面的命令是给test用户设置密码。
+3、
+usermod -s /bin/bash test 上面这段代码的含义是，把命令行的模式换为bash，默认是sh。你肯定会问为什么要这样，因为如果使用默认的sh，你打开终端的提示符显示的是$，不是“用户名$主机名”这种形式。
+4、
+usermod -a -G sudo test usermod -a -G adm test 上面这个代码的意思是，把test用户添加到sudo和admin用户组里面。这里要注意的是系统里面的admin的用户组的名字是&amp;rdquo;adm&amp;rdquo;。
+还有，我经常看到博客说只要改/etc/sudoers文件就可以了。虽然这种方法可行，但是这种方法不利于管理用户。最重要的是，这种方法很low，很垃圾，我很看不起这种方法。做为高水平的技术人才，该装逼的地方还是要装逼的，这样才可彰显牛逼之处。
+5、
+groups test 上面这个命令的意思是检查test所在的用户组
+6、
+sudo su 首先，你要重新登录一下，然后输入上面这个命令，密码就是使用该用户的密码，然后你就发现可以sudo了，哈哈哈哈啊哈哈，这样你就成功了。</description>
+    </item>
+    
+  </channel>
+</rss>

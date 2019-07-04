@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>设置 on mannuan</title>
+    <link>https://mannuan.github.io/tags/%E8%AE%BE%E7%BD%AE/</link>
+    <description>Recent content in 设置 on mannuan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 11 Jun 2019 22:56:41 +0800</lastBuildDate>
+    
+	<atom:link href="https://mannuan.github.io/tags/%E8%AE%BE%E7%BD%AE/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>webpack如何设置是否自动开启浏览器</title>
+      <link>https://mannuan.github.io/post/webpack%E5%A6%82%E4%BD%95%E8%AE%BE%E7%BD%AE%E6%98%AF%E5%90%A6%E8%87%AA%E5%8A%A8%E5%BC%80%E5%90%AF%E6%B5%8F%E8%A7%88%E5%99%A8/</link>
+      <pubDate>Tue, 11 Jun 2019 22:56:41 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/webpack%E5%A6%82%E4%BD%95%E8%AE%BE%E7%BD%AE%E6%98%AF%E5%90%A6%E8%87%AA%E5%8A%A8%E5%BC%80%E5%90%AF%E6%B5%8F%E8%A7%88%E5%99%A8/</guid>
+      <description> 当我们执行npm run dev命令的时候，我们想要自动开启浏览器，那么只需要在webpack-dev-server后面加上&amp;rdquo;&amp;ndash;open&amp;rdquo;参数，具体在package.json文件里面设置，配置文件内容如下：
+ { &amp;#34;name&amp;#34;: &amp;#34;webpack-demo1&amp;#34;, &amp;#34;version&amp;#34;: &amp;#34;1.0.0&amp;#34;, &amp;#34;main&amp;#34;: &amp;#34;main.js&amp;#34;, &amp;#34;scripts&amp;#34;: { &amp;#34;dev&amp;#34;: &amp;#34;webpack-dev-server --open&amp;#34;, &amp;#34;build&amp;#34;: &amp;#34;webpack -p&amp;#34; }, &amp;#34;license&amp;#34;: &amp;#34;MIT&amp;#34; }</description>
+    </item>
+    
+  </channel>
+</rss>

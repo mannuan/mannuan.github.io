@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>html5 on mannuan</title>
+    <link>https://mannuan.github.io/tags/html5/</link>
+    <description>Recent content in html5 on mannuan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 31 May 2019 11:33:01 +0800</lastBuildDate>
+    
+	<atom:link href="https://mannuan.github.io/tags/html5/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>HTML5之插入标记innerHTML</title>
+      <link>https://mannuan.github.io/post/html5%E4%B9%8B%E6%8F%92%E5%85%A5%E6%A0%87%E8%AE%B0innerhtml/</link>
+      <pubDate>Fri, 31 May 2019 11:33:01 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/html5%E4%B9%8B%E6%8F%92%E5%85%A5%E6%A0%87%E8%AE%B0innerhtml/</guid>
+      <description>处于安全等方面的考虑：
+ 通过innerHTML直接插入&amp;lt;script&amp;gt;元素在大多数浏览器中并不会执行其中的脚本； 通过innerHTML直接插入&amp;lt;style&amp;gt;在一些浏览器中无效。   在这些浏览器中，这两个元素被认为是”无作用域的元素“（不会在页面上显示的元素），如果通过innerHTML插入的字符串开头就是”无作用域的元素“，那么这些浏览器就会解决这个字符串前先删除该元素。解决的方法：在这些”无作用域的元素“前临时增加一个有作用域的元素，之后再将临时元素删除，同时为脚本元素设置defer特性。
+  部分元素不支持innerHTML; 冷知识：firefox浏览器在XHTML文档中设置innerHTML是要求XHTML必须严格符合要求，否则，innerHTML将会静默地失败； 最佳实践：使用innerHTML插入代码片时，请通过特定的方法过滤掉script标签（可能引入恶意脚本）。  </description>
+    </item>
+    
+  </channel>
+</rss>

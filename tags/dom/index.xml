@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>dom on mannuan</title>
+    <link>https://mannuan.github.io/tags/dom/</link>
+    <description>Recent content in dom on mannuan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 28 May 2019 10:19:01 +0800</lastBuildDate>
+    
+	<atom:link href="https://mannuan.github.io/tags/dom/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Javascript-DOM中NodeList对象转数组的通用方法</title>
+      <link>https://mannuan.github.io/post/javascript-dom%E4%B8%ADnodelist%E5%AF%B9%E8%B1%A1%E8%BD%AC%E6%95%B0%E7%BB%84%E7%9A%84%E9%80%9A%E7%94%A8%E6%96%B9%E6%B3%95/</link>
+      <pubDate>Tue, 28 May 2019 10:19:01 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/javascript-dom%E4%B8%ADnodelist%E5%AF%B9%E8%B1%A1%E8%BD%AC%E6%95%B0%E7%BB%84%E7%9A%84%E9%80%9A%E7%94%A8%E6%96%B9%E6%B3%95/</guid>
+      <description>举例说明：
+&amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html&amp;gt; &amp;lt;head&amp;gt;&amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;ul id=&amp;#34;ul&amp;#34;&amp;gt; &amp;lt;li&amp;gt; 123 &amp;lt;/li&amp;gt; &amp;lt;li&amp;gt; 456 &amp;lt;/li&amp;gt; &amp;lt;li&amp;gt; 789 &amp;lt;/li&amp;gt; &amp;lt;/ul&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;script&amp;gt; var _childNodes = document.getElementById(&amp;#34;ul&amp;#34;).childNodes; function convertToArray(nodes) { var array = null; try { array = Array.prototype.slice.call(nodes, 0); // 针对非IE浏览器  } catch (ex) { array = new Array(); for (var i = 0, len = nodes.length; i &amp;lt; len; i++) { array.push(nodes[i]); } } return array; } console.log(convertToArray(_childNodes)); &amp;lt;/script&amp;gt; &amp;lt;/html&amp;gt;</description>
+    </item>
+    
+  </channel>
+</rss>

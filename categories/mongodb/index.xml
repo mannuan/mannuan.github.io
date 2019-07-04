@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>mongodb on mannuan</title>
+    <link>https://mannuan.github.io/categories/mongodb/</link>
+    <description>Recent content in mongodb on mannuan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 30 May 2019 16:16:20 +0800</lastBuildDate>
+    
+	<atom:link href="https://mannuan.github.io/categories/mongodb/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>mongodb常用命令大全</title>
+      <link>https://mannuan.github.io/post/mongodb%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8/</link>
+      <pubDate>Thu, 30 May 2019 16:16:20 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/mongodb%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8/</guid>
+      <description>关键字的名称：test
+数据表名：test
+搜索关键字：test
+    作用 命令 例子     列出所有包含test的item {&amp;quot;test&amp;quot;: {&amp;quot;$exists&amp;quot;: true}} db.getCollection(&#39;test&#39;).find({&amp;quot;test&amp;quot;: {&amp;quot;$exists&amp;quot;: true}})   根据test进行排序 {&amp;quot;test&amp;quot;: 1或-1}，&amp;rdquo;1&amp;rdquo;表示升序，”-1“表示降序 db.getCollection(&#39;test&#39;).find().sort({&amp;quot;test&amp;quot;: -1})   列出所有符合正则表达式的item {&amp;quot;test&amp;quot;: {&amp;quot;$regex&amp;quot;: &amp;quot;test&amp;quot;}} db.getCollection(&#39;test&#39;).find({&amp;quot;test&amp;quot;: {&amp;quot;$regex&amp;quot;: &amp;quot;test&amp;quot;}})   限制列出的item的数量 数字 db.getCollection(&#39;test&#39;).find().limit(自定义数字)   列出所有符合字符串长度的item {&amp;quot;$where&amp;quot;: &amp;quot;(this.test.length &amp;gt; 自定义长度)&amp;quot;} db.getCollection(&#39;test&#39;).find({&amp;quot;$where&amp;quot;: &amp;quot;(this.test.length &amp;gt; 自定义长度)&amp;quot;})   统计item的数量 collection.count_documents({}) db.getCollection(&amp;quot;test&amp;quot;).count_documents({})    持续更新&amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>在开启用户验证的情况下，如何登录mongodb用户</title>
+      <link>https://mannuan.github.io/post/%E5%9C%A8%E5%BC%80%E5%90%AF%E7%94%A8%E6%88%B7%E9%AA%8C%E8%AF%81%E7%9A%84%E6%83%85%E5%86%B5%E4%B8%8B%E5%A6%82%E4%BD%95%E7%99%BB%E5%BD%95mongodb%E7%94%A8%E6%88%B7/</link>
+      <pubDate>Tue, 12 Feb 2019 15:54:27 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/%E5%9C%A8%E5%BC%80%E5%90%AF%E7%94%A8%E6%88%B7%E9%AA%8C%E8%AF%81%E7%9A%84%E6%83%85%E5%86%B5%E4%B8%8B%E5%A6%82%E4%BD%95%E7%99%BB%E5%BD%95mongodb%E7%94%A8%E6%88%B7/</guid>
+      <description> 1、以test用户和数据库admin为例：
+ use admin db.auth(&amp;#34;test&amp;#34;,&amp;#34;test&amp;#34;) # 两个test分别是用户名和密码</description>
+    </item>
+    
+    <item>
+      <title>mongodb创建root和普通user</title>
+      <link>https://mannuan.github.io/post/mongodb%E5%88%9B%E5%BB%BAroot%E5%92%8C%E6%99%AE%E9%80%9Auser/</link>
+      <pubDate>Tue, 12 Feb 2019 15:47:41 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/mongodb%E5%88%9B%E5%BB%BAroot%E5%92%8C%E6%99%AE%E9%80%9Auser/</guid>
+      <description>1、创建管理员，下面以用户test1为例：
+use admin db.createUser({user: &amp;#34;test1&amp;#34;, pwd: &amp;#34;test1&amp;#34;, roles: [{role: &amp;#34;root&amp;#34;, db: &amp;#34;admin&amp;#34;}]}) 2、创建test2db对应的test2用户:
+use test2db db.createUser({user: &amp;#34;test2&amp;#34;, pwd: &amp;#34;test2&amp;#34;, roles: [{role: &amp;#34;readWrite&amp;#34;, db: &amp;#34;test2db&amp;#34; }]})</description>
+    </item>
+    
+    <item>
+      <title>mongodb多实例启动和开启用户验证</title>
+      <link>https://mannuan.github.io/post/mongodb%E5%A4%9A%E5%AE%9E%E4%BE%8B%E5%90%AF%E5%8A%A8%E5%92%8C%E5%BC%80%E5%90%AF%E7%94%A8%E6%88%B7%E9%AA%8C%E8%AF%81/</link>
+      <pubDate>Tue, 12 Feb 2019 14:43:06 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/mongodb%E5%A4%9A%E5%AE%9E%E4%BE%8B%E5%90%AF%E5%8A%A8%E5%92%8C%E5%BC%80%E5%90%AF%E7%94%A8%E6%88%B7%E9%AA%8C%E8%AF%81/</guid>
+      <description>在这里，我不废话，直接给出mongodb配置文件模板
+# mongod.conf # for documentation of all options, see: # http://docs.mongodb.org/manual/reference/configuration-options/ # Where and how to store data. storage: dbPath: mongodb数据库的路径（自己可以随便取，只要不与默认的一样就行了） journal: enabled: true # engine: # mmapv1: # wiredTiger: # where to write logging data. systemLog: destination: file logAppend: true path: mongodb日志路径（自己可以随便取，只要不与默认的一样就行了） # network interfaces net: port: 端口0~65536(不常用的端口可以随便取，不可以和默认的一样) bindIp: 0.0.0.0 # how the process runs processManagement: # timeZoneInfo: /usr/share/zoneinfo fork: false #开启用户认证 security: authorization: enabled #operationProfiling: #replication: #sharding: ## Enterprise-Only Options: #auditLog: #snmp:  </description>
+    </item>
+    
+    <item>
+      <title>对mongodb的aggregate管道用法的理解</title>
+      <link>https://mannuan.github.io/post/%E5%AF%B9mongodb%E7%9A%84aggregate%E7%AE%A1%E9%81%93%E7%94%A8%E6%B3%95%E7%9A%84%E7%90%86%E8%A7%A3/</link>
+      <pubDate>Mon, 23 Jul 2018 19:56:12 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/%E5%AF%B9mongodb%E7%9A%84aggregate%E7%AE%A1%E9%81%93%E7%94%A8%E6%B3%95%E7%9A%84%E7%90%86%E8%A7%A3/</guid>
+      <description>最近看了一些关于mongodb的教程，感觉很费力，尤其涉及到了一些复杂的操作。比如很多贴上了大段数据来描述样例、或者翻译了大段官方文档的文字，这些都让我感觉疲劳。 下面我用自己写的一些话来描述我对mongodb聚合的理解：
+ 注： &amp;lt;&amp;gt;用来标识变量（即里面的内容可以替换成其他），可以按照&amp;lt;&amp;gt;里面的单词的含义来理解下面的代码。
+ 例子：假设你有一组数据，需要按照顺序做这些操作：筛选、分组、求和，你可以用如下代码实现：
+db.&amp;lt;collection_name&amp;gt;.aggregate([ {$match:key}, {$group:{_id:$&amp;lt;group_filed_name&amp;gt;, &amp;lt;dispaly_field_name&amp;gt;:{$first:&amp;lt;nonkey_name&amp;gt;}}}, {$group:{_id:null, &amp;lt;sum_name&amp;gt;:{$sum:$&amp;lt;sum_field_name&amp;gt;}}} ]).next().get(&#39;&amp;lt;sum_name&amp;gt;&#39;)    &amp;lt; key&amp;gt;表示用来筛选的关键字，它的里面结构形如
+ {&amp;lt;key1_name&amp;gt;:&amp;lt;key1_value&amp;gt;, &amp;lt;key2_name&amp;gt;:&amp;lt;key2_value&amp;gt;, ...}   表示用来给数据分组的字段名称，其中 _id 是一个内置的关键字，在_id所在字段的值用来划分分组。
+ 表示最后输出的字段的名称，表示某个非关键字字段的名称
+ 在第二步分组操作做完显示的数据结构是这样的
+ {_id:&amp;lt;group_field1_value&amp;gt;,  :}
+ {_id:, :}
+&amp;hellip;
+  * 表示最后要显示的求和字段的名称，表示要求和的字段的名称,_id:null表示不分组，这里使用$group符号的原因是$sum必须在$group实现
+ 在求和之后数据的结构是这样的
+ {_id:null,&amp;lt;sum_name&amp;gt;:&amp;lt;sum_value&amp;gt;}     从上面的例子，我们不难看出mongodb的聚合管道操作它允许分组、求和、筛选等等不同的操作依次进行，从代码里面使用了”[]“这个列表操作符，可以想像mongodb的聚合操作就像python的列表一样依次进行读取、操作，而且聚合操作允许重复多次进行的相同的操作。因此，我认为不管多复杂的操作只要分成一些基本操作，都可以用mongodb的聚合操作实现。</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>iterm2 on mannuan</title>
+    <link>https://mannuan.github.io/tags/iterm2/</link>
+    <description>Recent content in iterm2 on mannuan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 27 Jun 2019 16:29:24 +0800</lastBuildDate>
+    
+	<atom:link href="https://mannuan.github.io/tags/iterm2/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>iTerm2的常用快捷键</title>
+      <link>https://mannuan.github.io/post/iterm2%E7%9A%84%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/</link>
+      <pubDate>Thu, 27 Jun 2019 16:29:24 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/iterm2%E7%9A%84%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/</guid>
+      <description>   快捷键 功能     command+D 新建Tab   command+数字 切换Tab    </description>
+    </item>
+    
+    <item>
+      <title>mac使用快捷键打开iTerm2</title>
+      <link>https://mannuan.github.io/post/mac%E4%BD%BF%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE%E6%89%93%E5%BC%80iterm2/</link>
+      <pubDate>Thu, 27 Jun 2019 15:46:51 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/mac%E4%BD%BF%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE%E6%89%93%E5%BC%80iterm2/</guid>
+      <description>前言  使用快捷键打开item窗口的一个前提是iTerm必须已经打开了
+ 选择iTerm2，点击prefences 点击Profiles 新建窗口实例 常用的窗口属性 设置窗口名称 设置窗口字体 设置窗口透明度 设置窗口的快捷键 设置窗口的位置 有多种设置窗口位置的方法，比如”置顶“，”正常模式“等</description>
+    </item>
+    
+    <item>
+      <title>mac修改默认终端为iterm2</title>
+      <link>https://mannuan.github.io/post/mac%E4%BF%AE%E6%94%B9%E9%BB%98%E8%AE%A4%E7%BB%88%E7%AB%AF%E4%B8%BAiterm2/</link>
+      <pubDate>Thu, 30 Aug 2018 11:03:37 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/mac%E4%BF%AE%E6%94%B9%E9%BB%98%E8%AE%A4%E7%BB%88%E7%AB%AF%E4%B8%BAiterm2/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

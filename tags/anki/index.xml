@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>anki on mannuan</title>
+    <link>https://mannuan.github.io/tags/anki/</link>
+    <description>Recent content in anki on mannuan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 19 Jun 2019 22:31:31 +0800</lastBuildDate>
+    
+	<atom:link href="https://mannuan.github.io/tags/anki/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>anki保留字</title>
+      <link>https://mannuan.github.io/post/anki%E4%BF%9D%E7%95%99%E5%AD%97/</link>
+      <pubDate>Wed, 19 Jun 2019 22:31:31 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/anki%E4%BF%9D%E7%95%99%E5%AD%97/</guid>
+      <description>   保留字 备注     FrontSide 正面，   type 打字   cloze 填空    </description>
+    </item>
+    
+    <item>
+      <title>anki最新开发文档（2.1）</title>
+      <link>https://mannuan.github.io/post/anki%E6%9C%80%E6%96%B0%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A32.1/</link>
+      <pubDate>Wed, 19 Jun 2019 21:50:21 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/anki%E6%9C%80%E6%96%B0%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A32.1/</guid>
+      <description>注意：开发文档里面不重要的内容，本篇博客不进行翻译，依然英文显示
+ 基础 卡片（Cards） 卡片就是问题和答案对——即正反两面分别是问题和答案。Anki的卡片不是一张真正的卡片，它一直显示问题，回答完显示答案。举一个例子：
+ 问题：氧气的化学符号是什么？
+ 当你考虑问题完毕，点击卡片就会显示如下内容：
+ 问题：氧气到的化学符号是什么？
+回答：O
+ 然后在卡片的最下方，你可以选择一个选项告诉anki你的学习情况。
+牌组（Desks） 牌组是卡片的集合。你可以把卡片放在不同的牌组中学习，而没有必要一次性全部学完。每个牌组都可以有不同的设置，比如每天显示多少张卡片，或卡片下一次复习的时间。
+牌组之间可以多层嵌套，形成树形结构。Anki通过&amp;rdquo;::&amp;ldquo;来表明不同的层次。比如，一个名为“Chinese::Hanzi”的牌组，表示Hanzi牌组包含在Chinese牌组中。如果你选择“Hanzi”那么就只会显示“Hanzi”牌组中的卡片；如果你选择&amp;rdquo;Chinese&amp;rdquo;牌组就会显示全部包括在“Hanzi”牌组中的卡片。
+为了形成树形结构，我们不仅可以通过“::“符号，还可以使用拖拽的方式。嵌套在其他牌组下面的牌组称为子牌组（名称中至少出现一次&amp;rdquo;::&amp;ldquo;）,最外面的牌组可以被称为超级牌组或父牌组。
+Anki有一个默认牌组；任何其他牌组都是分离自这个默认牌组。Anki将会隐藏这个默认牌组当这个牌组中没有卡片，或已经存在其他的牌组。另外，你也可以重命名默认牌组并使用它。
+牌组可以放不同话题的卡片，而不是特定的卡片。具体可以参看合理的使用牌组部分。
+关于卡片在牌组中的显示顺序，可以查阅显示顺序部分。
+笔记和字段（Notes &amp;amp; Fields） 当制作卡片的时候，我们通常希望一些信息可以通过多张卡片显示出来。比如，如果你学习法语，你学习”bonjour“的意思是”hello“,你可能希望创建一张卡片显示&amp;rdquo;bonjour&amp;rdquo;回答&amp;rdquo;hello&amp;rdquo;，然后另一张卡片问你”hello“回答&amp;rdquo;bonjour&amp;rdquo;。前面一张卡片让你辨别单词含义，后面一张卡片则让你把单词翻译成本国语言。
+当使用纸质卡片的时候，你唯一的选择是两次写出信息，每张卡片一次。一些计算机卡片程序通过翻转正反面，使用更加轻松。这种程序对纸质情况有改进，但是存在两个缺点：
+ Because such programs don’t track your performance of recognition and production separately, cards will tend not to be shown to you at the optimum time, meaning you forget more than you’d like, or you study more than is necessary. Reversing the question and answer only works when you want exactly the same content on each side.</description>
+    </item>
+    
+  </channel>
+</rss>

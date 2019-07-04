@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>数学 on mannuan</title>
+    <link>https://mannuan.github.io/categories/%E6%95%B0%E5%AD%A6/</link>
+    <description>Recent content in 数学 on mannuan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 20 Jun 2019 21:38:38 +0800</lastBuildDate>
+    
+	<atom:link href="https://mannuan.github.io/categories/%E6%95%B0%E5%AD%A6/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>SVD分解</title>
+      <link>https://mannuan.github.io/post/svd%E5%88%86%E8%A7%A3/</link>
+      <pubDate>Thu, 20 Jun 2019 21:38:38 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/svd%E5%88%86%E8%A7%A3/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

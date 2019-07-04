@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>MAC on mannuan</title>
+    <title>mac on mannuan</title>
     <link>https://mannuan.github.io/tags/mac/</link>
-    <description>Recent content in MAC on mannuan</description>
+    <description>Recent content in mac on mannuan</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Mon, 01 Jul 2019 20:42:46 +0800</lastBuildDate>
     
@@ -16,7 +16,37 @@
       <pubDate>Mon, 01 Jul 2019 20:42:46 +0800</pubDate>
       
       <guid>https://mannuan.github.io/post/mac%E6%88%AA%E5%9B%BE%E7%9A%84%E7%9B%B8%E5%85%B3%E8%AE%BE%E7%BD%AE/</guid>
-      <description>选区域截图默认快捷键 Shift+command+4  默认保存目录 ~/Desktop  修改目录 defaults write com.apple.screencapture location &amp;quot;~/Pictures/ScreenShot&amp;quot;  截图默认后缀 png  修改后缀 defaults write com.apple.screencapture type jpg  删除默认时间后缀 defaults write com.apple.screencapture &amp;quot;include-date&amp;quot; 0  修改默认的文件名称 defaults write com.apple.screencapture name &amp;quot;screenshot&amp;quot;  参看配置 defaults read com.apple.screencapture 输出如下： { &amp;quot;last-messagetrace-stamp&amp;quot; = &amp;quot;583174121.285828&amp;quot;; &amp;quot;last-selection&amp;quot; = { Height = 529; Width = 1041; X = 507; Y = 262; }; &amp;quot;last-selection-display&amp;quot; = 0; location = &amp;quot;~/Pictures/ScreenShot&amp;quot;; name = screenshot; type = jpg; }  缺点分析 mac自带的截图工具，不能修改时间的格式，而且这种格式有空格，不利于作为文件名。虽然可以去除时间后缀，但是时间信息很重要。同时，即使没有时间后缀，生成的图片名中还是存在空格。鉴于上面复杂的问题，我权衡利弊之后果断放弃这个mac自带的截图工具。</description>
+      <description>选区域截图默认快捷键 Shift+command+4  默认保存目录 ~/Desktop  修改目录 defaults write com.apple.screencapture location &amp;#34;~/Pictures/ScreenShot&amp;#34; 截图默认后缀 png  修改后缀 defaults write com.apple.screencapture type jpg 删除默认时间后缀 defaults write com.apple.screencapture &amp;#34;include-date&amp;#34; 0 修改默认的文件名称 defaults write com.apple.screencapture name &amp;#34;screenshot&amp;#34; 参看配置 defaults read com.apple.screencapture 输出如下： { &amp;quot;last-messagetrace-stamp&amp;quot; = &amp;quot;583174121.285828&amp;quot;; &amp;quot;last-selection&amp;quot; = { Height = 529; Width = 1041; X = 507; Y = 262; }; &amp;quot;last-selection-display&amp;quot; = 0; location = &amp;quot;~/Pictures/ScreenShot&amp;quot;; name = screenshot; type = jpg; }  缺点分析 mac自带的截图工具，不能修改时间的格式，而且这种格式有空格，不利于作为文件名。虽然可以去除时间后缀，但是时间信息很重要。同时，即使没有时间后缀，生成的图片名中还是存在空格。鉴于上面复杂的问题，我权衡利弊之后果断放弃这个mac自带的截图工具。</description>
+    </item>
+    
+    <item>
+      <title>mac使用快捷键打开iTerm2</title>
+      <link>https://mannuan.github.io/post/mac%E4%BD%BF%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE%E6%89%93%E5%BC%80iterm2/</link>
+      <pubDate>Thu, 27 Jun 2019 15:46:51 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/mac%E4%BD%BF%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE%E6%89%93%E5%BC%80iterm2/</guid>
+      <description>前言  使用快捷键打开item窗口的一个前提是iTerm必须已经打开了
+ 选择iTerm2，点击prefences 点击Profiles 新建窗口实例 常用的窗口属性 设置窗口名称 设置窗口字体 设置窗口透明度 设置窗口的快捷键 设置窗口的位置 有多种设置窗口位置的方法，比如”置顶“，”正常模式“等</description>
+    </item>
+    
+    <item>
+      <title>关于mac的time machine功能</title>
+      <link>https://mannuan.github.io/post/%E5%85%B3%E4%BA%8Emac%E7%9A%84time-machine%E5%8A%9F%E8%83%BD/</link>
+      <pubDate>Sat, 22 Jun 2019 19:24:23 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/%E5%85%B3%E4%BA%8Emac%E7%9A%84time-machine%E5%8A%9F%E8%83%BD/</guid>
+      <description>前言  最近这一个月，我发现我的mac空间不足了。我一直以为是我项目占据了很多空间。因此，不停的进行清理不用的东西。最后，还是发现空间不够。这个清理工作反反复复持续了几周，我电脑硬盘的可以存储空间还是很少。在不经意间，我用外部硬盘time machine备份了一下电脑，瞬间多了一大半的存储空间。我前面几个月也是经常备份电脑的，但是最近这个月由于论文和找工作的缘故没有时间备份。
+ 总结 mac如果开启time machine功能，就会定期进行备份。如果不用外部硬盘进行备份，就会先被分在本机硬盘上。这样会消耗大量的存储空间。但是，如果不开time machine，资料就没有保障。因此，定期用外部硬盘进行备份尤为重要。</description>
+    </item>
+    
+    <item>
+      <title>linux如何查看文件夹占用磁盘空间</title>
+      <link>https://mannuan.github.io/post/linux%E5%A6%82%E4%BD%95%E6%9F%A5%E7%9C%8B%E6%96%87%E4%BB%B6%E5%A4%B9%E5%8D%A0%E7%94%A8%E7%A3%81%E7%9B%98%E7%A9%BA%E9%97%B4/</link>
+      <pubDate>Thu, 02 May 2019 13:42:05 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/linux%E5%A6%82%E4%BD%95%E6%9F%A5%E7%9C%8B%E6%96%87%E4%BB%B6%E5%A4%B9%E5%8D%A0%E7%94%A8%E7%A3%81%E7%9B%98%E7%A9%BA%E9%97%B4/</guid>
+      <description>du -h -d 1  查看当前目录下面所有文件夹所占的空间
+ </description>
     </item>
     
   </channel>

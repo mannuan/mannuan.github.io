@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>工具 on mannuan</title>
+    <link>https://mannuan.github.io/categories/%E5%B7%A5%E5%85%B7/</link>
+    <description>Recent content in 工具 on mannuan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 22 Jun 2019 23:55:21 +0800</lastBuildDate>
+    
+	<atom:link href="https://mannuan.github.io/categories/%E5%B7%A5%E5%85%B7/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>强大的pdf压缩工具</title>
+      <link>https://mannuan.github.io/post/%E5%BC%BA%E5%A4%A7%E7%9A%84pdf%E5%8E%8B%E7%BC%A9%E5%B7%A5%E5%85%B7/</link>
+      <pubDate>Sat, 22 Jun 2019 23:55:21 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/%E5%BC%BA%E5%A4%A7%E7%9A%84pdf%E5%8E%8B%E7%BC%A9%E5%B7%A5%E5%85%B7/</guid>
+      <description>Smallpdf目前是全网免费的pdf压缩工具中压缩率最高的，没有之一。但是由于目前在线的版本开始收费了，所以我专门下载了离线版进行crack，供以后长期使用。目前这个离线版本的压缩效果还是相当不错，它比目前流行的pdf压缩工具PDFCompressor的压缩效果要好50%。yqiq, fnas</description>
+    </item>
+    
+    <item>
+      <title>wkhtmltopdf：一个 Linux 中将网页转成 PDF 的智能工具</title>
+      <link>https://mannuan.github.io/post/wkhtmltopdf%E4%B8%80%E4%B8%AA-linux-%E4%B8%AD%E5%B0%86%E7%BD%91%E9%A1%B5%E8%BD%AC%E6%88%90-pdf-%E7%9A%84%E6%99%BA%E8%83%BD%E5%B7%A5%E5%85%B7/</link>
+      <pubDate>Fri, 07 Jun 2019 17:41:03 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/wkhtmltopdf%E4%B8%80%E4%B8%AA-linux-%E4%B8%AD%E5%B0%86%E7%BD%91%E9%A1%B5%E8%BD%AC%E6%88%90-pdf-%E7%9A%84%E6%99%BA%E8%83%BD%E5%B7%A5%E5%85%B7/</guid>
+      <description>用法： wkhtmltopdf http://google.com google.pdf 下载（deb）： wkhtmlpdf
+开源代码代码： wkhtmlpdf.git</description>
+    </item>
+    
+    <item>
+      <title>视频下载4大神器</title>
+      <link>https://mannuan.github.io/post/%E8%A7%86%E9%A2%91%E4%B8%8B%E8%BD%BD4%E5%A4%A7%E7%A5%9E%E5%99%A8/</link>
+      <pubDate>Thu, 04 Apr 2019 09:47:48 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/%E8%A7%86%E9%A2%91%E4%B8%8B%E8%BD%BD4%E5%A4%A7%E7%A5%9E%E5%99%A8/</guid>
+      <description> 1、downie 可以下载🌎上面所有你想的到的视频网站的视频，而且下载速度很快。
+2、ykdl 可以通过命令行下载爱奇艺的视频，还有其他网站的视频
+3、you-get 4、youtube-dl </description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>打开文件 on mannuan</title>
+    <link>https://mannuan.github.io/tags/%E6%89%93%E5%BC%80%E6%96%87%E4%BB%B6/</link>
+    <description>Recent content in 打开文件 on mannuan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 05 Jun 2019 15:44:42 +0800</lastBuildDate>
+    
+	<atom:link href="https://mannuan.github.io/tags/%E6%89%93%E5%BC%80%E6%96%87%E4%BB%B6/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>python with 打开多个文件</title>
+      <link>https://mannuan.github.io/post/python-with-%E6%89%93%E5%BC%80%E5%A4%9A%E4%B8%AA%E6%96%87%E4%BB%B6/</link>
+      <pubDate>Wed, 05 Jun 2019 15:44:42 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/python-with-%E6%89%93%E5%BC%80%E5%A4%9A%E4%B8%AA%E6%96%87%E4%BB%B6/</guid>
+      <description>with open(&amp;#34;./example.html&amp;#34;, &amp;#34;r&amp;#34;) as f1, open(&amp;#34;./example.css&amp;#34;, &amp;#34;r&amp;#34;) as f2, open(&amp;#34;./example.svg&amp;#34;, &amp;#34;r&amp;#34;) as f3: html = f1.read() css = f2.read() svg = f3.</description>
+    </item>
+    
+  </channel>
+</rss>

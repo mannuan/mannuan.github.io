@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>用户验证 on mannuan</title>
+    <link>https://mannuan.github.io/tags/%E7%94%A8%E6%88%B7%E9%AA%8C%E8%AF%81/</link>
+    <description>Recent content in 用户验证 on mannuan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 12 Feb 2019 15:54:27 +0800</lastBuildDate>
+    
+	<atom:link href="https://mannuan.github.io/tags/%E7%94%A8%E6%88%B7%E9%AA%8C%E8%AF%81/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>在开启用户验证的情况下，如何登录mongodb用户</title>
+      <link>https://mannuan.github.io/post/%E5%9C%A8%E5%BC%80%E5%90%AF%E7%94%A8%E6%88%B7%E9%AA%8C%E8%AF%81%E7%9A%84%E6%83%85%E5%86%B5%E4%B8%8B%E5%A6%82%E4%BD%95%E7%99%BB%E5%BD%95mongodb%E7%94%A8%E6%88%B7/</link>
+      <pubDate>Tue, 12 Feb 2019 15:54:27 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/%E5%9C%A8%E5%BC%80%E5%90%AF%E7%94%A8%E6%88%B7%E9%AA%8C%E8%AF%81%E7%9A%84%E6%83%85%E5%86%B5%E4%B8%8B%E5%A6%82%E4%BD%95%E7%99%BB%E5%BD%95mongodb%E7%94%A8%E6%88%B7/</guid>
+      <description> 1、以test用户和数据库admin为例：
+ use admin db.auth(&amp;#34;test&amp;#34;,&amp;#34;test&amp;#34;) # 两个test分别是用户名和密码</description>
+    </item>
+    
+  </channel>
+</rss>

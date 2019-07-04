@@ -17,14 +17,14 @@
       
       <guid>https://mannuan.github.io/post/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/</guid>
       <description>Hugo介绍 一种基于 Go 语言的博客框架。
-Hugo安装(Mac) brew install hugo  创建博客  下面以我的github用户名manuan为例
- hugo new site mannuan.github.io  安装主题 themes.gohuo.io上面有很多主题可供选择，比如选择m10c
-下载m10c $ cd myblog $ git clone https://github.com/vaga/hugo-theme-m10c.git themes/m10c  修改配置文件 config.toml 添加一行：
-theme = &amp;quot;m10c&amp;quot;  本地预览 hugo server -D  创建第一篇博客 hugo new post/第一篇博客.md  创建的博客在 contents/post/下面
+Hugo安装(Mac) brew install hugo 创建博客  下面以我的github用户名manuan为例
+ hugo new site mannuan.github.io 安装主题 themes.gohuo.io上面有很多主题可供选择，比如选择m10c
+下载m10c $ cd myblog $ git clone https://github.com/vaga/hugo-theme-m10c.git themes/m10c 修改配置文件 config.toml 添加一行：
+theme = &amp;#34;m10c&amp;#34; 本地预览 hugo server -D 创建第一篇博客 hugo new post/第一篇博客.md 创建的博客在 contents/post/下面
 使用vscode编辑markdown文件 快捷键 Ctrl+Shift+P，输入 Markwon: Open Preview to the Side，打开预览模式
 发布博客到github  在github创建一个名为 mannuan.github.io 的仓库。
  把当前的博客打包到 public 目录下面
-hugo --baseUrl=&amp;quot;https://mannuan.github.io/&amp;quot; -D  把 public 里面的内容同步到github</description>
+  hugo --baseUrl=&amp;#34;https://mannuan.github.io/&amp;#34; -D  把 public 里面的内容同步到github  cd public git init git add .</description>
     </item>
     
   </channel>

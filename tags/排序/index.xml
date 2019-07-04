@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>排序 on mannuan</title>
+    <link>https://mannuan.github.io/tags/%E6%8E%92%E5%BA%8F/</link>
+    <description>Recent content in 排序 on mannuan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 03 Jun 2019 21:57:21 +0800</lastBuildDate>
+    
+	<atom:link href="https://mannuan.github.io/tags/%E6%8E%92%E5%BA%8F/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>冒泡排序、选择排序和插入排序的比较</title>
+      <link>https://mannuan.github.io/post/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F%E5%92%8C%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F%E7%9A%84%E6%AF%94%E8%BE%83/</link>
+      <pubDate>Mon, 03 Jun 2019 21:57:21 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F%E5%92%8C%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F%E7%9A%84%E6%AF%94%E8%BE%83/</guid>
+      <description> 冒泡排序 算法流程 假设存在一个长度为N的数组，按照从左至右的顺序升序排列。首先，通过N-1次数
+javascript代码 function bubbleSort(){ var arr = arguments[0]; for(var end=arr.length-1; end&amp;gt;0; end--){ for(var i=0; i&amp;lt;end; i++){ if(arr[i] &amp;gt; arr[end]){ var tmp = arr[i]; arr[i] = arr[end]; arr[end] = tmp; } } } } function randomNum(max=100, start=33){ return Math.floor(Math.random() * max + start) } var arr = []; var length = randomNum(30, 1); for(var i=0; i&amp;lt;length; i++){ // 创建随机数组  arr.push(randomNum()); } console.log(arr); bubbleSort(arr); console.log(arr);  选择排序 </description>
+    </item>
+    
+  </channel>
+</rss>

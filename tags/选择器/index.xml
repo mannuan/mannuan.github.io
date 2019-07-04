@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>选择器 on mannuan</title>
+    <link>https://mannuan.github.io/tags/%E9%80%89%E6%8B%A9%E5%99%A8/</link>
+    <description>Recent content in 选择器 on mannuan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 21 Jun 2019 11:20:44 +0800</lastBuildDate>
+    
+	<atom:link href="https://mannuan.github.io/tags/%E9%80%89%E6%8B%A9%E5%99%A8/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>表单对象属性过滤选择器</title>
+      <link>https://mannuan.github.io/post/%E8%A1%A8%E5%8D%95%E5%AF%B9%E8%B1%A1%E5%B1%9E%E6%80%A7%E8%BF%87%E6%BB%A4%E9%80%89%E6%8B%A9%E5%99%A8/</link>
+      <pubDate>Fri, 21 Jun 2019 11:20:44 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/%E8%A1%A8%E5%8D%95%E5%AF%B9%E8%B1%A1%E5%B1%9E%E6%80%A7%E8%BF%87%E6%BB%A4%E9%80%89%E6%8B%A9%E5%99%A8/</guid>
+      <description>   选择器 描述 返回 示例     :enabled 选取所有可用的元素 集合元素 $(&#39;#form1:enabled&#39;);选取id为&amp;rdquo;form1&amp;rdquo;的表单内的所有可用元素   :disabled 选取所有不可用的元素 集合元素 $(&amp;quot;#form2:disabled&amp;quot;)选取id为&amp;rdquo;form2&amp;rdquo;的表单内的所有不可用的元素   :checked 选取所有被选中的元素（单选框，复选框） 集合元素 $(&amp;quot;input:checked&amp;quot;)；选取所有被选中的&amp;lt;input&amp;gt;元素   :selected 选取所有被选中的选项元素（下拉列表） 集合元素 $(&amp;quot;select option:checked&amp;quot;);选取所有被选中的选项元素    </description>
+    </item>
+    
+    <item>
+      <title>可见性过滤选择器</title>
+      <link>https://mannuan.github.io/post/%E5%8F%AF%E8%A7%81%E6%80%A7%E8%BF%87%E6%BB%A4%E9%80%89%E6%8B%A9%E5%99%A8/</link>
+      <pubDate>Fri, 21 Jun 2019 10:26:07 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/%E5%8F%AF%E8%A7%81%E6%80%A7%E8%BF%87%E6%BB%A4%E9%80%89%E6%8B%A9%E5%99%A8/</guid>
+      <description>   选择器 描述 返回 示例     :hidden 选取所有不可见的元素 集合元素 $(&amp;quot;:hidden&amp;quot;)选取所有不可见的元素。包括&amp;lt;input type=&amp;quot;hidden&amp;quot;/&amp;gt;，&amp;lt;div style=&amp;quot;display:none&amp;quot;&amp;gt;和&amp;lt;div style=&amp;quot;visibility:hidden;&amp;quot;&amp;gt;等元素。如果只想选取&amp;lt;input&amp;gt;元素，可以使用$(&amp;quot;input:hiddden&amp;quot;)   :visible 选取所有可见的元素 集合元素 $(&amp;quot;div:visible&amp;quot;)选取所有可见的&amp;lt;div&amp;gt;元素    </description>
+    </item>
+    
+  </channel>
+</rss>

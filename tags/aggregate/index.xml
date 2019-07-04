@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>aggregate on mannuan</title>
+    <link>https://mannuan.github.io/tags/aggregate/</link>
+    <description>Recent content in aggregate on mannuan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 23 Jul 2018 19:56:12 +0800</lastBuildDate>
+    
+	<atom:link href="https://mannuan.github.io/tags/aggregate/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>对mongodb的aggregate管道用法的理解</title>
+      <link>https://mannuan.github.io/post/%E5%AF%B9mongodb%E7%9A%84aggregate%E7%AE%A1%E9%81%93%E7%94%A8%E6%B3%95%E7%9A%84%E7%90%86%E8%A7%A3/</link>
+      <pubDate>Mon, 23 Jul 2018 19:56:12 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/%E5%AF%B9mongodb%E7%9A%84aggregate%E7%AE%A1%E9%81%93%E7%94%A8%E6%B3%95%E7%9A%84%E7%90%86%E8%A7%A3/</guid>
+      <description>最近看了一些关于mongodb的教程，感觉很费力，尤其涉及到了一些复杂的操作。比如很多贴上了大段数据来描述样例、或者翻译了大段官方文档的文字，这些都让我感觉疲劳。 下面我用自己写的一些话来描述我对mongodb聚合的理解：
+ 注： &amp;lt;&amp;gt;用来标识变量（即里面的内容可以替换成其他），可以按照&amp;lt;&amp;gt;里面的单词的含义来理解下面的代码。
+ 例子：假设你有一组数据，需要按照顺序做这些操作：筛选、分组、求和，你可以用如下代码实现：
+db.&amp;lt;collection_name&amp;gt;.aggregate([ {$match:key}, {$group:{_id:$&amp;lt;group_filed_name&amp;gt;, &amp;lt;dispaly_field_name&amp;gt;:{$first:&amp;lt;nonkey_name&amp;gt;}}}, {$group:{_id:null, &amp;lt;sum_name&amp;gt;:{$sum:$&amp;lt;sum_field_name&amp;gt;}}} ]).next().get(&#39;&amp;lt;sum_name&amp;gt;&#39;)    &amp;lt; key&amp;gt;表示用来筛选的关键字，它的里面结构形如
+ {&amp;lt;key1_name&amp;gt;:&amp;lt;key1_value&amp;gt;, &amp;lt;key2_name&amp;gt;:&amp;lt;key2_value&amp;gt;, ...}   表示用来给数据分组的字段名称，其中 _id 是一个内置的关键字，在_id所在字段的值用来划分分组。
+ 表示最后输出的字段的名称，表示某个非关键字字段的名称
+ 在第二步分组操作做完显示的数据结构是这样的
+ {_id:&amp;lt;group_field1_value&amp;gt;,  :}
+ {_id:, :}
+&amp;hellip;
+  * 表示最后要显示的求和字段的名称，表示要求和的字段的名称,_id:null表示不分组，这里使用$group符号的原因是$sum必须在$group实现
+ 在求和之后数据的结构是这样的
+ {_id:null,&amp;lt;sum_name&amp;gt;:&amp;lt;sum_value&amp;gt;}     从上面的例子，我们不难看出mongodb的聚合管道操作它允许分组、求和、筛选等等不同的操作依次进行，从代码里面使用了”[]“这个列表操作符，可以想像mongodb的聚合操作就像python的列表一样依次进行读取、操作，而且聚合操作允许重复多次进行的相同的操作。因此，我认为不管多复杂的操作只要分成一些基本操作，都可以用mongodb的聚合操作实现。</description>
+    </item>
+    
+  </channel>
+</rss>

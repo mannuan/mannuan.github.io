@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Array.prototype.push on mannuan</title>
+    <link>https://mannuan.github.io/tags/array.prototype.push/</link>
+    <description>Recent content in Array.prototype.push on mannuan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 22 May 2019 21:14:58 +0800</lastBuildDate>
+    
+	<atom:link href="https://mannuan.github.io/tags/array.prototype.push/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>v8引擎源码—Array.prototype.push实现详解</title>
+      <link>https://mannuan.github.io/post/v8%E5%BC%95%E6%93%8E%E6%BA%90%E7%A0%81array.prototype.push%E5%AE%9E%E7%8E%B0%E8%AF%A6%E8%A7%A3/</link>
+      <pubDate>Wed, 22 May 2019 21:14:58 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/v8%E5%BC%95%E6%93%8E%E6%BA%90%E7%A0%81array.prototype.push%E5%AE%9E%E7%8E%B0%E8%AF%A6%E8%A7%A3/</guid>
+      <description>具体实现如下： function ArrayPush(){ var n = TO_UINT32(this.length); // 被push的对象的length  var m = %_AraumentsLength(); // push的参数个数  for(var i=0; i&amp;lt;m; i++){ this[i+n] = %_Arguments(i); // 复制元素 （1）  } this.length = n + m; // 修正length属性的值  return this.length; }   从上面的代码可以看出，Array.prototype.push实际上是一个属性复制的过程，把参数按照下标依次添加到被push的对象上面，同时修改了对象的length属性，不需要关注被修改的对象是数组还是类数组。 因此，我们可以把任意类型的对象传入到Array.prototype.push中，比如下面这个例子：
+ var a = {}; Array.prototype.push.call(a, &amp;#34;first&amp;#34;, &amp;#34;second&amp;#34;); console.log(a);   观察上面这个例子我们发现如果要实现javascript中call和apply的区别与联系中&amp;rdquo;借用其他对象的方法&amp;rdquo;，需要满足下面的条件：
+ 对象本身可以存取属性；
+ 对象的length属性可读写；
+   本篇博客参考自JavaScript设计模式与开发实践，[p33-p34]</description>
+    </item>
+    
+  </channel>
+</rss>

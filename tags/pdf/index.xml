@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>pdf on mannuan</title>
+    <link>https://mannuan.github.io/tags/pdf/</link>
+    <description>Recent content in pdf on mannuan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 07 Jun 2019 17:41:03 +0800</lastBuildDate>
+    
+	<atom:link href="https://mannuan.github.io/tags/pdf/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>wkhtmltopdf：一个 Linux 中将网页转成 PDF 的智能工具</title>
+      <link>https://mannuan.github.io/post/wkhtmltopdf%E4%B8%80%E4%B8%AA-linux-%E4%B8%AD%E5%B0%86%E7%BD%91%E9%A1%B5%E8%BD%AC%E6%88%90-pdf-%E7%9A%84%E6%99%BA%E8%83%BD%E5%B7%A5%E5%85%B7/</link>
+      <pubDate>Fri, 07 Jun 2019 17:41:03 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/wkhtmltopdf%E4%B8%80%E4%B8%AA-linux-%E4%B8%AD%E5%B0%86%E7%BD%91%E9%A1%B5%E8%BD%AC%E6%88%90-pdf-%E7%9A%84%E6%99%BA%E8%83%BD%E5%B7%A5%E5%85%B7/</guid>
+      <description>用法： wkhtmltopdf http://google.com google.pdf 下载（deb）： wkhtmlpdf
+开源代码代码： wkhtmlpdf.git</description>
+    </item>
+    
+  </channel>
+</rss>

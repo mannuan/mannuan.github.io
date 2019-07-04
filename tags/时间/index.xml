@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>时间 on mannuan</title>
+    <link>https://mannuan.github.io/tags/%E6%97%B6%E9%97%B4/</link>
+    <description>Recent content in 时间 on mannuan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 31 May 2019 20:40:33 +0800</lastBuildDate>
+    
+	<atom:link href="https://mannuan.github.io/tags/%E6%97%B6%E9%97%B4/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>JavaScript 事件</title>
+      <link>https://mannuan.github.io/post/javascript-%E4%BA%8B%E4%BB%B6/</link>
+      <pubDate>Fri, 31 May 2019 20:40:33 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/javascript-%E4%BA%8B%E4%BB%B6/</guid>
+      <description>JavaScript与HTML之间的交互是通过事件实现的。
+事件 ：文档或浏览器窗口中发生的一些交互瞬间；可以使用 侦听器 （或处理程序） 预订 事件，以便事件发生时执行相应的代码。
+这种 侦听事件——执行操作 的模式在传统软件过程中叫做 观察者模式 。
+DOM2级规范开始规范标准化DOM事件，IE8是最后一个仍然使用其专有事件系统的浏览器。
+除了DOM事件，还有BOM事件，HTML5致力于规范BOM事件。
+所有事件：</description>
+    </item>
+    
+  </channel>
+</rss>

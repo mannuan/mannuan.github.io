@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>brew on mannuan</title>
+    <link>https://mannuan.github.io/tags/brew/</link>
+    <description>Recent content in brew on mannuan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 29 Aug 2018 10:16:40 +0800</lastBuildDate>
+    
+	<atom:link href="https://mannuan.github.io/tags/brew/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>brew安装卡死原因</title>
+      <link>https://mannuan.github.io/post/brew%E5%AE%89%E8%A3%85%E5%8D%A1%E6%AD%BB%E5%8E%9F%E5%9B%A0/</link>
+      <pubDate>Wed, 29 Aug 2018 10:16:40 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/brew%E5%AE%89%E8%A3%85%E5%8D%A1%E6%AD%BB%E5%8E%9F%E5%9B%A0/</guid>
+      <description>1.command line tools没有安装，如果执行在线安装的命令也卡死，请看我的上一篇博客的离线安装方法；</description>
+    </item>
+    
+  </channel>
+</rss>

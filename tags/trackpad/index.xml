@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Trackpad on mannuan</title>
+    <link>https://mannuan.github.io/tags/trackpad/</link>
+    <description>Recent content in Trackpad on mannuan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 27 Jun 2019 16:54:48 +0800</lastBuildDate>
+    
+	<atom:link href="https://mannuan.github.io/tags/trackpad/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>优化mac触摸板（Trackpad）使用体验的推荐设置</title>
+      <link>https://mannuan.github.io/post/%E4%BC%98%E5%8C%96mac%E8%A7%A6%E6%91%B8%E6%9D%BFtrackpad%E4%BD%BF%E7%94%A8%E4%BD%93%E9%AA%8C%E7%9A%84%E6%8E%A8%E8%8D%90%E8%AE%BE%E7%BD%AE/</link>
+      <pubDate>Thu, 27 Jun 2019 16:54:48 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/%E4%BC%98%E5%8C%96mac%E8%A7%A6%E6%91%B8%E6%9D%BFtrackpad%E4%BD%BF%E7%94%A8%E4%BD%93%E9%AA%8C%E7%9A%84%E6%8E%A8%E8%8D%90%E8%AE%BE%E7%BD%AE/</guid>
+      <description>右键菜单 使用”双指点击“代替”右键“
+上下左右滚动页面 使用”双指拖动“代替”鼠标“
+切换窗口 使用”四指拖动“代替”传统的组合快捷键“
+快捷返回桌面 使用”五指释放“代替”传统的组合快捷键“
+打开Launchpad 使用”五指收回“
+左键点击 使用”单指轻触“代替左键点击</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>字体反爬 on mannuan</title>
+    <link>https://mannuan.github.io/tags/%E5%AD%97%E4%BD%93%E5%8F%8D%E7%88%AC/</link>
+    <description>Recent content in 字体反爬 on mannuan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 05 Jun 2019 21:45:30 +0800</lastBuildDate>
+    
+	<atom:link href="https://mannuan.github.io/tags/%E5%AD%97%E4%BD%93%E5%8F%8D%E7%88%AC/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>反爬机制之字体反爬详解</title>
+      <link>https://mannuan.github.io/post/%E5%8F%8D%E7%88%AC%E6%9C%BA%E5%88%B6%E4%B9%8B%E5%AD%97%E4%BD%93%E5%8F%8D%E7%88%AC%E8%AF%A6%E8%A7%A3/</link>
+      <pubDate>Wed, 05 Jun 2019 21:45:30 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/%E5%8F%8D%E7%88%AC%E6%9C%BA%E5%88%B6%E4%B9%8B%E5%AD%97%E4%BD%93%E5%8F%8D%E7%88%AC%E8%AF%A6%E8%A7%A3/</guid>
+      <description>字体反爬，顾名思义就是利用自定义的字符编码与字体文件的映射呈现文字的一种反爬措施。下面我们通过例子来详细介绍字体反爬是怎么实现的以及解决方案。
+ 目录
+字符编码
+CSS3 @font-face 规则
+html文件（example.html）:
+woff字体文件（example.woff）:
+html显示效果：
+解决方案：
+字符编码 字体爬虫就是使用类似自定义的字符编码的形式来呈现文字，字符编码的详细信息见HTML字符编码；
+CSS3 @font-face 规则 在 CSS3 之前，web 设计师必须使用已在用户计算机上安装好的字体。
+通过 CSS3，web 设计师可以使用他们喜欢的任意字体。
+当您您找到或购买到希望使用的字体时，可将该字体文件存放到 web 服务器上，它会在需要时被自动下载到用户的计算机上。
+您“自己的”的字体是在 CSS3 @font-face 规则中定义的。
+html文件（example.html）: &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta http-equiv=&amp;#34;Content-Type&amp;#34; content=&amp;#34;text/html; charset=utf-8&amp;#34;/&amp;gt; &amp;lt;title&amp;gt;example&amp;lt;/title&amp;gt; &amp;lt;style type=&amp;#34;text/css&amp;#34;&amp;gt; @font-face{ font-family: &amp;#34;example&amp;#34;; src:url(&amp;#34;./example.woff&amp;#34;) format(&amp;#39;woff&amp;#39;); } .review { font-family: &amp;#34;example&amp;#34;; } &amp;lt;/style&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;p&amp;gt; 找了好久才 &amp;lt;svgmsti class=&amp;#34;review&amp;#34;&amp;gt;&amp;amp;#xe54b;&amp;lt;/svgmsti&amp;gt;到，问了 &amp;lt;svgmsti class=&amp;#34;review&amp;#34;&amp;gt;&amp;amp;#xe36d;&amp;lt;/svgmsti&amp;gt; &amp;lt;svgmsti class=&amp;#34;review&amp;#34;&amp;gt;&amp;amp;#xebb5;&amp;lt;/svgmsti&amp;gt;他 &amp;lt;svgmsti class=&amp;#34;review&amp;#34;&amp;gt;&amp;amp;#xf3c6;&amp;lt;/svgmsti&amp;gt;己也不知 &amp;lt;svgmsti class=&amp;#34;review&amp;#34;&amp;gt;&amp;amp;#xef46;&amp;lt;/svgmsti&amp;gt;看了点评 &amp;lt;svgmsti class=&amp;#34;review&amp;#34;&amp;gt;&amp;amp;#xf75f;&amp;lt;/svgmsti&amp;gt; &amp;lt;svgmsti class=&amp;#34;review&amp;#34;&amp;gt;&amp;amp;#xe8dd;&amp;lt;/svgmsti&amp;gt;电话才知 &amp;lt;svgmsti class=&amp;#34;review&amp;#34;&amp;gt;&amp;amp;#xef46;&amp;lt;/svgmsti&amp;gt;，人挺多的上菜 &amp;lt;svgmsti class=&amp;#34;review&amp;#34;&amp;gt;&amp;amp;#xee1a;&amp;lt;/svgmsti&amp;gt;慢 &amp;lt;svgmsti class=&amp;#34;review&amp;#34;&amp;gt;&amp;amp;#xe8dd;&amp;lt;/svgmsti&amp;gt;，凉菜都吃完 &amp;lt;svgmsti class=&amp;#34;review&amp;#34;&amp;gt;&amp;amp;#xe5bd;&amp;lt;/svgmsti&amp;gt;别的 &amp;lt;svgmsti class=&amp;#34;review&amp;#34;&amp;gt;&amp;amp;#xeb5a;&amp;lt;/svgmsti&amp;gt;还没 &amp;lt;svgmsti class=&amp;#34;review&amp;#34;&amp;gt;&amp;amp;#xf40e;&amp;lt;/svgmsti&amp;gt;来，凉 &amp;lt;svgmsti class=&amp;#34;review&amp;#34;&amp;gt;&amp;amp;#xeb5a;&amp;lt;/svgmsti&amp;gt;很 &amp;lt;svgmsti class=&amp;#34;review&amp;#34;&amp;gt;&amp;amp;#xe082;&amp;lt;/svgmsti&amp;gt;胃 &amp;lt;svgmsti class=&amp;#34;review&amp;#34;&amp;gt;&amp;amp;#xee1a;&amp;lt;/svgmsti&amp;gt;好吃的。 &amp;lt;/p&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;/html&amp;gt; woff字体文件（example.</description>
+    </item>
+    
+  </channel>
+</rss>

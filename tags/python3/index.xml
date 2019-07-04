@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>python3 on mannuan</title>
+    <link>https://mannuan.github.io/tags/python3/</link>
+    <description>Recent content in python3 on mannuan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 20 Jun 2019 14:13:09 +0800</lastBuildDate>
+    
+	<atom:link href="https://mannuan.github.io/tags/python3/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>python3 快速替换多个字符的高效方法</title>
+      <link>https://mannuan.github.io/post/python3-%E5%BF%AB%E9%80%9F%E6%9B%BF%E6%8D%A2%E5%A4%9A%E4%B8%AA%E5%AD%97%E7%AC%A6%E7%9A%84%E9%AB%98%E6%95%88%E6%96%B9%E6%B3%95/</link>
+      <pubDate>Thu, 20 Jun 2019 14:13:09 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/python3-%E5%BF%AB%E9%80%9F%E6%9B%BF%E6%8D%A2%E5%A4%9A%E4%B8%AA%E5%AD%97%E7%AC%A6%E7%9A%84%E9%AB%98%E6%95%88%E6%96%B9%E6%B3%95/</guid>
+      <description>前言 在我们遇到需要把字符串中多个指定字符转换成其他字符时，我们通常使用多个.replace()方法实现替换的目的。然而，当需要替换的字符很多的时候，使用.replace()就太麻烦了。
+解决方案 str.maketrans(in_str1, out_str2), 这是一个类似于对字符串之间建立映射的一个方法，且两个输入字符串的长度必须相等。下面我将举一个简单例子来说明它的使用方法：
+a = &amp;#34;hello-world!&amp;#34; trans = str.maketrans(&amp;#34;h-w&amp;#34;, &amp;#34;H W&amp;#34;) # 建立映射关系 a.translate(trans) // 输出&amp;#34;Hello World!</description>
+    </item>
+    
+  </channel>
+</rss>

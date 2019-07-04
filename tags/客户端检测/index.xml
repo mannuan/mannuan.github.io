@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>客户端检测 on mannuan</title>
+    <link>https://mannuan.github.io/tags/%E5%AE%A2%E6%88%B7%E7%AB%AF%E6%A3%80%E6%B5%8B/</link>
+    <description>Recent content in 客户端检测 on mannuan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 01 Jun 2019 10:57:50 +0800</lastBuildDate>
+    
+	<atom:link href="https://mannuan.github.io/tags/%E5%AE%A2%E6%88%B7%E7%AB%AF%E6%A3%80%E6%B5%8B/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>JavaScript客户端检测</title>
+      <link>https://mannuan.github.io/post/javascript%E5%AE%A2%E6%88%B7%E7%AB%AF%E6%A3%80%E6%B5%8B/</link>
+      <pubDate>Sat, 01 Jun 2019 10:57:50 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/javascript%E5%AE%A2%E6%88%B7%E7%AB%AF%E6%A3%80%E6%B5%8B/</guid>
+      <description>应对各个厂商、各个版本的浏览器对特性支持度的差异，常采取的策略
+ ”最小公分母“策略 客户端检测技术，突破和规避种种局限  不到万不得已不要使用客户端检测；先设计最通用的方案，然后使用特定于浏览器的技术增强该方案。
+常用的客户端检测技术包括：
+能力检测  最常用最方便，只关注能力，不关注浏览器品牌和版本； 两个原则  先检测达成目的的最常用特性，避免测试多个条件
+必须测试实际用到的特性，一个特性存在不一定代表另一个特性也存在
+ 在可能的情况下，尽量使用typeof进行能力检测； 低版本IE下或其他非标准浏览器下，使用typeof检测的值不一定符合标准；  低版本IE的DOM以COM的形式实现，很容易出现typeof检测结果不标准的情况
+ 通过检测对象是否有某些原生属性时，要注意我们的代码是否定义了与要检测到的原生属性同名的属性，确保检测的目标是正确的； 一般通用方法：isHostMethod函数  function isHostMethod(object, property){ var t = typeof object[property]; return t == &amp;#39;function&amp;#39; || (!!(t == &amp;#39;object&amp;#39; &amp;amp;&amp;amp; object[property])) || t == &amp;#39;unknown&amp;#39;; } result = isHostMethod(document, &amp;#39;getElementById&amp;#39;);   根据浏览器不同将能力组合起来是更可取的方法； 如果你预先知道自己的程序需要使用某些特定的浏览器特性，那么最好一次性检测所有相关特性。  怪癖检测  目的是识别浏览器的特殊行为，与能级检测的检测能力刚好相反；
+ 怪癖是个别浏览器独有的，通常归类为bug；
+ 实例：IE8及更早版本中，如果某个实例属性与[[Enumerable]]标记为false的某个原型属性同名，那么属性无法被for-in循环遍历
+  // 怪癖检测 var hasDontEnumQuirk = function(){ var o = {toString: function(){}}; for(var prop in o){ if(prop == &amp;#39;toString&amp;#39;){ return false; } } return true; }(); hasDontEnumQuirk;// false 说明浏览器没有这个怪癖  用户代理检测  通过检测用户代理字符串来确定实际使用的浏览器； 通常是在最后才选择这样的方法，或者想实现某些特定的功能才使用用户代理检测； 主要使用navigator.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>document类型 on mannuan</title>
+    <link>https://mannuan.github.io/tags/document%E7%B1%BB%E5%9E%8B/</link>
+    <description>Recent content in document类型 on mannuan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 29 May 2019 09:43:41 +0800</lastBuildDate>
+    
+	<atom:link href="https://mannuan.github.io/tags/document%E7%B1%BB%E5%9E%8B/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Document类型</title>
+      <link>https://mannuan.github.io/post/document%E7%B1%BB%E5%9E%8B/</link>
+      <pubDate>Wed, 29 May 2019 09:43:41 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/document%E7%B1%BB%E5%9E%8B/</guid>
+      <description>文档的子节点  使用documentElement属性快捷访问页面的元素； 使用body属性可以快捷的访问页面的元素; doctype属性可在部分浏览器下访问文档的类型声明；各个浏览器对于文档声明的支持方式存在较大差异：IE8-:文档类型声明被解释为一个注释，当做comment节点，document.doctype返回值为null；大部分浏览器：文档类型声明作为文档的第一个子节点，是一个DocumentType节点，可以通过document.doctype, document.childNodes[0], document.firstChild访问  &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html&amp;gt; &amp;lt;head&amp;gt;&amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;script&amp;gt; console.log(document.doctype); // 输出: &amp;lt;!DOCTYPE html&amp;gt;  console.log(document.childNodes[0]); // 输出: &amp;lt;!DOCTYPE html&amp;gt;  console.log(document.firstChild); // 输出: &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;/script&amp;gt; &amp;lt;/html&amp;gt;  各个浏览器对于元素外的注释的解析方式不同，比如  &amp;lt;!--第一条注释--&amp;gt; &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html&amp;gt; &amp;lt;body&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;script&amp;gt; console.log(document.childNodes.length); // chrome输出: 3 &amp;lt;/script&amp;gt; &amp;lt;/html&amp;gt; &amp;lt;!--第二条注释--&amp;gt; 部分浏览器会为两个注释都建立注释节点，部分浏览器会忽略第二条，只为第一条创建注释节点，大部分浏览器现在回完全忽略第二条注释，比如这里的chrome。
+文档信息  title属性用于便捷读写title标签； URL属性只读，referrer属性只读； domain属性可读可写，但不能设置为当前URL中不包含的域，通过设置domain属性相同可实现框架间不同子域页面的JavaScript通信； document.domain只能往上级域名方向设置，设置为非上级域名会报错，不能设置为顶级域名; 使用document.domain实现跨父子域  查找元素  getElementById()的注意事项; getElementByTagName() 方法返回的是HTMLCollection对象；  &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html&amp;gt; &amp;lt;body&amp;gt; &amp;lt;div&amp;gt;123&amp;lt;/div&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;script&amp;gt; console.</description>
+    </item>
+    
+  </channel>
+</rss>
