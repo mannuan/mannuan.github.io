@@ -30,16 +30,6 @@
     </item>
     
     <item>
-      <title>关于mac的time machine功能</title>
-      <link>https://mannuan.github.io/post/%E5%85%B3%E4%BA%8Emac%E7%9A%84time-machine%E5%8A%9F%E8%83%BD/</link>
-      <pubDate>Sat, 22 Jun 2019 19:24:23 +0800</pubDate>
-      
-      <guid>https://mannuan.github.io/post/%E5%85%B3%E4%BA%8Emac%E7%9A%84time-machine%E5%8A%9F%E8%83%BD/</guid>
-      <description>前言  最近这一个月，我发现我的mac空间不足了。我一直以为是我项目占据了很多空间。因此，不停的进行清理不用的东西。最后，还是发现空间不够。这个清理工作反反复复持续了几周，我电脑硬盘的可以存储空间还是很少。在不经意间，我用外部硬盘time machine备份了一下电脑，瞬间多了一大半的存储空间。我前面几个月也是经常备份电脑的，但是最近这个月由于论文和找工作的缘故没有时间备份。
- 总结 mac如果开启time machine功能，就会定期进行备份。如果不用外部硬盘进行备份，就会先被分在本机硬盘上。这样会消耗大量的存储空间。但是，如果不开time machine，资料就没有保障。因此，定期用外部硬盘进行备份尤为重要。</description>
-    </item>
-    
-    <item>
       <title>linux如何查看文件夹占用磁盘空间</title>
       <link>https://mannuan.github.io/post/linux%E5%A6%82%E4%BD%95%E6%9F%A5%E7%9C%8B%E6%96%87%E4%BB%B6%E5%A4%B9%E5%8D%A0%E7%94%A8%E7%A3%81%E7%9B%98%E7%A9%BA%E9%97%B4/</link>
       <pubDate>Thu, 02 May 2019 13:42:05 +0800</pubDate>

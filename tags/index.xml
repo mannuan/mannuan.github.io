@@ -5,10 +5,19 @@
     <link>https://mannuan.github.io/tags/</link>
     <description>Recent content in Tags on mannuan</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 01 Jul 2019 20:42:46 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 04 Jul 2019 14:22:18 +0800</lastBuildDate>
     
 	<atom:link href="https://mannuan.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>简历</title>
+      <link>https://mannuan.github.io/tags/%E7%AE%80%E5%8E%86/</link>
+      <pubDate>Thu, 04 Jul 2019 14:22:18 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/tags/%E7%AE%80%E5%8E%86/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>mac</title>
@@ -371,6 +380,15 @@
     </item>
     
     <item>
+      <title>time machine</title>
+      <link>https://mannuan.github.io/tags/time-machine/</link>
+      <pubDate>Sat, 22 Jun 2019 19:24:23 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/tags/time-machine/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>css</title>
       <link>https://mannuan.github.io/tags/css/</link>
       <pubDate>Sat, 22 Jun 2019 15:13:59 +0800</pubDate>
@@ -403,6 +421,15 @@
       <pubDate>Fri, 21 Jun 2019 11:20:44 +0800</pubDate>
       
       <guid>https://mannuan.github.io/tags/%E9%80%89%E6%8B%A9%E5%99%A8/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>子元素</title>
+      <link>https://mannuan.github.io/tags/%E5%AD%90%E5%85%83%E7%B4%A0/</link>
+      <pubDate>Fri, 21 Jun 2019 11:10:26 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/tags/%E5%AD%90%E5%85%83%E7%B4%A0/</guid>
       <description></description>
     </item>
     
@@ -704,20 +731,38 @@
     </item>
     
     <item>
+      <title>反爬</title>
+      <link>https://mannuan.github.io/tags/%E5%8F%8D%E7%88%AC/</link>
+      <pubDate>Wed, 05 Jun 2019 16:55:30 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/tags/%E5%8F%8D%E7%88%AC/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>大众点评</title>
+      <link>https://mannuan.github.io/tags/%E5%A4%A7%E4%BC%97%E7%82%B9%E8%AF%84/</link>
+      <pubDate>Wed, 05 Jun 2019 16:55:30 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/tags/%E5%A4%A7%E4%BC%97%E7%82%B9%E8%AF%84/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>评论</title>
+      <link>https://mannuan.github.io/tags/%E8%AF%84%E8%AE%BA/</link>
+      <pubDate>Wed, 05 Jun 2019 16:55:30 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/tags/%E8%AF%84%E8%AE%BA/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>css反爬</title>
       <link>https://mannuan.github.io/tags/css%E5%8F%8D%E7%88%AC/</link>
       <pubDate>Wed, 05 Jun 2019 16:52:42 +0800</pubDate>
       
       <guid>https://mannuan.github.io/tags/css%E5%8F%8D%E7%88%AC/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>反爬</title>
-      <link>https://mannuan.github.io/tags/%E5%8F%8D%E7%88%AC/</link>
-      <pubDate>Wed, 05 Jun 2019 16:52:42 +0800</pubDate>
-      
-      <guid>https://mannuan.github.io/tags/%E5%8F%8D%E7%88%AC/</guid>
       <description></description>
     </item>
     
@@ -1042,6 +1087,15 @@
       <pubDate>Mon, 27 May 2019 14:04:01 +0800</pubDate>
       
       <guid>https://mannuan.github.io/tags/%E9%97%AD%E5%8C%85/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>面向对象</title>
+      <link>https://mannuan.github.io/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</link>
+      <pubDate>Mon, 27 May 2019 11:30:08 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/</guid>
       <description></description>
     </item>
     
