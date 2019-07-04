@@ -16,7 +16,7 @@
       <pubDate>Tue, 04 Jun 2019 14:26:42 +0800</pubDate>
       
       <guid>https://mannuan.github.io/post/pyquery%E5%A6%82%E4%BD%95%E8%AF%BB%E5%8F%96xml%E6%88%96html%E6%96%87%E4%BB%B6%E4%B8%8D%E4%B9%B1%E7%A0%81/</guid>
-      <description>from pyquery import PyQuery as pq with open(文件路径, &amp;#34;r&amp;#34;) as f: str = f.read().encode(&amp;#34;utf-8&amp;#34;) #设置&amp;#34;utf-8&amp;#34;编码，这一步很重要 p = pq(str)</description>
+      <description># -*- coding: utf-8 -*- from pyquery import PyQuery as pq with open(文件路径, &amp;#34;r&amp;#34;) as f: str = f.read().encode(&amp;#34;utf-8&amp;#34;) #设置&amp;#34;utf-8&amp;#34;编码，这一步很重要 p = pq(str)</description>
     </item>
     
     <item>
