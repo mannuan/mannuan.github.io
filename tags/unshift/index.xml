@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>unshift on mannuan</title>
+    <link>https://mannuan.github.io/tags/unshift/</link>
+    <description>Recent content in unshift on mannuan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 04 Jul 2019 20:53:05 +0800</lastBuildDate>
+    
+	<atom:link href="https://mannuan.github.io/tags/unshift/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>js数组类型的常用方法</title>
+      <link>https://mannuan.github.io/post/20190704205305/</link>
+      <pubDate>Thu, 04 Jul 2019 20:53:05 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190704205305/</guid>
+      <description>concat() 合并数组 var a = [1, 2, 3]; var b = [2, 3, 4]; var c = a.concat(b); console.log(a); //[1,2,3] console.log(b); //[2,3,4] console.log(c); //[1, 2, 3, 2, 3, 4]  join() 把数组连接成为字符串，并用指定分隔符隔开 var a = [1, 2, 3]; console.log(a.join(&amp;#34;/&amp;#34;)); // 1/2/3   和python的语法不同，方向刚好是相反的，而且python要求合并的必须是字符串类型
+ # -*- coding: utf-8 -*- a = [1, 2, 3] a = [str(i) for i in a] print(&amp;#34;/&amp;#34;.join(a)) pop() 取出并返回栈顶元素 var a = [1, 2, 3]; console.</description>
+    </item>
+    
+  </channel>
+</rss>

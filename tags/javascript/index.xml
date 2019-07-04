@@ -5,10 +5,34 @@
     <link>https://mannuan.github.io/tags/javascript/</link>
     <description>Recent content in javascript on mannuan</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 25 Jun 2019 20:59:45 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 04 Jul 2019 21:54:03 +0800</lastBuildDate>
     
 	<atom:link href="https://mannuan.github.io/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>toString()、toLocaleString()和valueOf()的区别</title>
+      <link>https://mannuan.github.io/post/20190704215403/</link>
+      <pubDate>Thu, 04 Jul 2019 21:54:03 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190704215403/</guid>
+      <description> 注意没有toLocalString()这种方法
+ 这几个方法主要在两种数据类型中使用
+* 引用类型：Object, Array, Date
+* 基本数据类型：Number, Boolean
+其中只在：Date 和Number这两种类型中有区别
+ Date类型 var a = new Date(); console.log(a.toString()); // Thu Jul 04 2019 22:42:17 GMT+0800 (China Standard Time) console.log(a.toLocaleString()); // 7/4/2019, 10:42:17 PM console.log(a.valueOf()); // 1562251337216  Number类型 var a = new Number(1000); console.log(a.toString()); //1000 console.log(a.toLocaleString()); //1,000 console.log(a.valueOf()); //1000  总结  toString()方法获取的是String(传统字符串),而toLocaleString()方法获取的是LocaleString(本地环境字符串)。 如果你开发的脚本在世界范围都有人使用，那么将对象转换成字符串时请使用toString()方法来完成。 如果是为了返回时间类型的数据，推荐使用LocaleString()。 若是在后台处理字符串，请务必使用toString()。  </description>
+    </item>
+    
+    <item>
+      <title>js数组类型的常用方法</title>
+      <link>https://mannuan.github.io/post/20190704205305/</link>
+      <pubDate>Thu, 04 Jul 2019 20:53:05 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190704205305/</guid>
+      <description>concat() 合并数组 var a = [1, 2, 3]; var b = [2, 3, 4]; var c = a.concat(b); console.log(a); //[1,2,3] console.log(b); //[2,3,4] console.log(c); //[1, 2, 3, 2, 3, 4]  join() 把数组连接成为字符串，并用指定分隔符隔开 var a = [1, 2, 3]; console.log(a.join(&amp;#34;/&amp;#34;)); // 1/2/3   和python的语法不同，方向刚好是相反的，而且python要求合并的必须是字符串类型
+ # -*- coding: utf-8 -*- a = [1, 2, 3] a = [str(i) for i in a] print(&amp;#34;/&amp;#34;.join(a)) pop() 取出并返回栈顶元素 var a = [1, 2, 3]; console.</description>
+    </item>
     
     <item>
       <title>CSS三种引入方式：内联、页级、外联</title>

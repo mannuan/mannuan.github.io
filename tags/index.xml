@@ -5,10 +5,136 @@
     <link>https://mannuan.github.io/tags/</link>
     <description>Recent content in Tags on mannuan</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 04 Jul 2019 20:27:04 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 04 Jul 2019 21:54:03 +0800</lastBuildDate>
     
 	<atom:link href="https://mannuan.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>javascript</title>
+      <link>https://mannuan.github.io/tags/javascript/</link>
+      <pubDate>Thu, 04 Jul 2019 21:54:03 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/tags/javascript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>toLocaleString</title>
+      <link>https://mannuan.github.io/tags/tolocalestring/</link>
+      <pubDate>Thu, 04 Jul 2019 21:54:03 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/tags/tolocalestring/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>toString</title>
+      <link>https://mannuan.github.io/tags/tostring/</link>
+      <pubDate>Thu, 04 Jul 2019 21:54:03 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/tags/tostring/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>valueof</title>
+      <link>https://mannuan.github.io/tags/valueof/</link>
+      <pubDate>Thu, 04 Jul 2019 21:54:03 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/tags/valueof/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>concat</title>
+      <link>https://mannuan.github.io/tags/concat/</link>
+      <pubDate>Thu, 04 Jul 2019 20:53:05 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/tags/concat/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>join</title>
+      <link>https://mannuan.github.io/tags/join/</link>
+      <pubDate>Thu, 04 Jul 2019 20:53:05 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/tags/join/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pop</title>
+      <link>https://mannuan.github.io/tags/pop/</link>
+      <pubDate>Thu, 04 Jul 2019 20:53:05 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/tags/pop/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>push</title>
+      <link>https://mannuan.github.io/tags/push/</link>
+      <pubDate>Thu, 04 Jul 2019 20:53:05 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/tags/push/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>reverse</title>
+      <link>https://mannuan.github.io/tags/reverse/</link>
+      <pubDate>Thu, 04 Jul 2019 20:53:05 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/tags/reverse/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>shift</title>
+      <link>https://mannuan.github.io/tags/shift/</link>
+      <pubDate>Thu, 04 Jul 2019 20:53:05 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/tags/shift/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sort</title>
+      <link>https://mannuan.github.io/tags/sort/</link>
+      <pubDate>Thu, 04 Jul 2019 20:53:05 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/tags/sort/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>splice</title>
+      <link>https://mannuan.github.io/tags/splice/</link>
+      <pubDate>Thu, 04 Jul 2019 20:53:05 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/tags/splice/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>unshift</title>
+      <link>https://mannuan.github.io/tags/unshift/</link>
+      <pubDate>Thu, 04 Jul 2019 20:53:05 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/tags/unshift/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>数组</title>
+      <link>https://mannuan.github.io/tags/%E6%95%B0%E7%BB%84/</link>
+      <pubDate>Thu, 04 Jul 2019 20:53:05 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/tags/%E6%95%B0%E7%BB%84/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>datetime</title>
@@ -367,15 +493,6 @@
       <pubDate>Wed, 26 Jun 2019 10:22:31 +0800</pubDate>
       
       <guid>https://mannuan.github.io/tags/web%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>javascript</title>
-      <link>https://mannuan.github.io/tags/javascript/</link>
-      <pubDate>Tue, 25 Jun 2019 20:59:45 +0800</pubDate>
-      
-      <guid>https://mannuan.github.io/tags/javascript/</guid>
       <description></description>
     </item>
     
