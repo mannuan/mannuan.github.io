@@ -12,10 +12,10 @@
     
     <item>
       <title>linux命令之nohup</title>
-      <link>https://mannuan.github.io/post/linux%E5%91%BD%E4%BB%A4%E4%B9%8Bnohup/</link>
+      <link>https://mannuan.github.io/post/20190602135144/</link>
       <pubDate>Sun, 02 Jun 2019 13:51:44 +0800</pubDate>
       
-      <guid>https://mannuan.github.io/post/linux%E5%91%BD%E4%BB%A4%E4%B9%8Bnohup/</guid>
+      <guid>https://mannuan.github.io/post/20190602135144/</guid>
       <description> 结合后台运行命令&amp;amp;使用  nohup command &amp;gt;&amp;gt; log_path 2&amp;gt;&amp;amp;1 &amp;amp;</description>
     </item>
     

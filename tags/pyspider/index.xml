@@ -12,10 +12,10 @@
     
     <item>
       <title>百度知道爬虫</title>
-      <link>https://mannuan.github.io/post/%E7%99%BE%E5%BA%A6%E7%9F%A5%E9%81%93%E7%88%AC%E8%99%AB/</link>
+      <link>https://mannuan.github.io/post/20190530153141/</link>
       <pubDate>Thu, 30 May 2019 15:31:41 +0800</pubDate>
       
-      <guid>https://mannuan.github.io/post/%E7%99%BE%E5%BA%A6%E7%9F%A5%E9%81%93%E7%88%AC%E8%99%AB/</guid>
+      <guid>https://mannuan.github.io/post/20190530153141/</guid>
       <description>工具： pyspider
 数据库： mongodb
 思路：  假设你要根据两个关键字搜索百度知道答案，比如：”购物“和”价格“； 组建爬虫的url，需要把这两个关键字转化为url编码的格式，url编码教程详见； 取出搜索页面列表上面所有项的url链接; 然后，爬取步骤3的url，取出页面上面的question和最佳答案； 循环往复，进行2、3、4步骤；  代码： #!/usr/bin/env python # -*- encoding: utf-8 -*- from pyspider.libs.base_handler import * from urllib.parse import quote, unquote from pymongo import MongoClient import datetime import time import random client = MongoClient(&amp;#34;自定义数据库接口&amp;#34;) db = client.自定义数据库名 class Handler(BaseHandler): crawl_config = { } key_word1 = quote(&amp;#34;自定义关键字1&amp;#34;.encode(&amp;#34;GB2312&amp;#34;)) key_word2_list = [&amp;#34;自定义关键字2&amp;#34;] key_word2_list = [quote(i.encode(&amp;#34;GB2312&amp;#34;)) for i in key_word2_list] url_format = &amp;#34;https://zhidao.baidu.com/search?word={}&amp;amp;ie=gbk&amp;amp;site=-1&amp;amp;sites=0&amp;amp;date=0&amp;amp;pn={}&amp;#34; page_num = 76 # 最大页码 start_page = 0 # 开始的页码 max_random = 5 # 随机数的最大值 headers1 = { &amp;#34;Accept&amp;#34;: &amp;#34;text/html,application/xhtml+xml,application/xml;q=0.</description>

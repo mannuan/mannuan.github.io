@@ -12,10 +12,10 @@
     
     <item>
       <title>https服务器搭建详细教程(ubuntu系统实测可行)</title>
-      <link>https://mannuan.github.io/post/https%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8B-ubuntu%E7%B3%BB%E7%BB%9F%E5%AE%9E%E6%B5%8B%E5%8F%AF%E8%A1%8C/</link>
+      <link>https://mannuan.github.io/post/20190501225058/</link>
       <pubDate>Wed, 01 May 2019 22:50:58 +0800</pubDate>
       
-      <guid>https://mannuan.github.io/post/https%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8B-ubuntu%E7%B3%BB%E7%BB%9F%E5%AE%9E%E6%B5%8B%E5%8F%AF%E8%A1%8C/</guid>
+      <guid>https://mannuan.github.io/post/20190501225058/</guid>
       <description>第一步：把指定的域名绑定到服务器指定的端口 1、安装nginx sudo apt-get install nginx  查看nginx版本，确认安装成功
 nginx -v  安装完nginx以后，通过浏览器访问127.0.0.1，再次确认安装成功（访问127.0.0.1其实等价于访问127.0.0.1:80）  2、修改nginx配置文件 sudo vim /etc/nginx/nginx.conf  通过上面的命令打开文件以后，键盘按 “i” 键，进入编辑模式，然后找到类似下面的内容：   ssl的获取可以参看我的阿里云免费ssl证书申请
 http { #在这里填写你的配置  #下面省略若干行..... }  完整的配置是这样的（第一个server配置的是http服务，第二个server配置的https服务）：  http { server { listen 80; server_name 指定的域名; root html; index index.html index.htm; location / { proxy_pass http://127.0.0.1:指定的端口/; proxy_set_header X-Real-IP $remote_addr; proxy_set_header Host $host; proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for; proxy_http_version 1.1; proxy_set_header Upgrade $http_upgrade; proxy_set_header Connection &amp;#34;upgrade&amp;#34;; proxy_redirect off; } } server { listen 443; server_name 指定的域名; ssl on; root html; index index.</description>

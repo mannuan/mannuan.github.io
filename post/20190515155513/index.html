@@ -1,0 +1,1402 @@
+<!DOCTYPE html>
+<html lang='en'><head>
+  <meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='description' content='# Configuration file for jupyter-notebook. #------------------------------------------------------------------------------ # Application(SingletonConfigurable) configuration #------------------------------------------------------------------------------ ## This is an application. ## The date format used by logging formatters for %(asctime)s #c.Application.log_datefmt = &#39;%Y-%m-%d %H:%M:%S&#39; ## The Logging format template #c.Application.log_format = &#39;[%(name)s]%(highlevel)s %(message)s&#39; ## Set the log level by value or name. #c.Application.log_level = 30 #------------------------------------------------------------------------------ # JupyterApp(Application) configuration #------------------------------------------------------------------------------ ## Base class for Jupyter applications ## Answer yes to any prompts. #c.JupyterApp.answer_yes = False ## Full path of a config file.'>
+<meta name='theme-color' content='#ffffff'>
+
+<meta property='og:title' content='jupyter_notebook_config.py的配置详解 • mannuan'>
+<meta property='og:description' content='# Configuration file for jupyter-notebook. #------------------------------------------------------------------------------ # Application(SingletonConfigurable) configuration #------------------------------------------------------------------------------ ## This is an application. ## The date format used by logging formatters for %(asctime)s #c.Application.log_datefmt = &#39;%Y-%m-%d %H:%M:%S&#39; ## The Logging format template #c.Application.log_format = &#39;[%(name)s]%(highlevel)s %(message)s&#39; ## Set the log level by value or name. #c.Application.log_level = 30 #------------------------------------------------------------------------------ # JupyterApp(Application) configuration #------------------------------------------------------------------------------ ## Base class for Jupyter applications ## Answer yes to any prompts. #c.JupyterApp.answer_yes = False ## Full path of a config file.'>
+<meta property='og:url' content='https://mannuan.github.io/post/20190515155513/'>
+<meta property='og:site_name' content='mannuan'>
+<meta property='og:type' content='article'><meta property='og:image' content='https://www.gravatar.com/avatar/8bacfd69855171c6f53247456732f68a?s=256'><meta property='article:section' content='post'><meta property='article:tag' content='配置'><meta property='article:tag' content='jupyter'><meta property='article:published_time' content='2019-05-15T15:55:13&#43;08:00'/><meta property='article:modified_time' content='2019-05-15T15:55:13&#43;08:00'/><meta name='twitter:card' content='summary'>
+
+<meta name="generator" content="Hugo 0.55.6" />
+
+  <title>jupyter_notebook_config.py的配置详解 • mannuan</title>
+  <link rel='canonical' href='https://mannuan.github.io/post/20190515155513/'>
+  
+  
+  <link rel='icon' href='/favicon.ico'>
+<link rel='stylesheet' href='/assets/css/main.6a060eb7.css'><link rel='stylesheet' href='/css/custom.css'><style>
+:root{--color-accent:#ffffff;}
+</style>
+
+  
+
+</head>
+<body class='page type-post has-sidebar'>
+
+  <div class='site'><div id='sidebar' class='sidebar'>
+  <a class='screen-reader-text' href='#main-menu'>Skip to Main Menu</a>
+
+  <div class='container'><section class='widget widget-about sep-after'>
+  <header>
+    
+    <div class='logo'>
+      <a href='/'>
+        <img src='/images/%e6%88%91%e7%9a%84%e5%a4%b4%e5%83%8f.jpeg'>
+      </a>
+    </div>
+    
+    <h2 class='title site-title '>
+      <a href='/'>
+      mannuan
+      </a>
+    </h2>
+    <div class='desc'>
+    Rome was not built in a day.
+    </div>
+  </header>
+
+</section>
+<section class='widget widget-search sep-after'>
+  <header>
+    <h4 class='title widget-title'>Search</h4>
+  </header>
+
+  <form action='/search' id='search-form' class='search-form'>
+    <label>
+      <span class='screen-reader-text'>Search</span>
+      <input id='search-term' class='search-term' type='search' name='q' placeholder='Search&hellip;'>
+    </label></form>
+
+</section>
+<section class='widget widget-sidebar_menu sep-after'><nav id='sidebar-menu' class='menu sidebar-menu' aria-label='Sidebar Menu'>
+    <div class='container'>
+      <ul><li class='item'>
+  <a href='/'>Home</a></li><li class='item'>
+  <a href='/post/'>blogs</a></li><li class='item has-children'>
+  <a href=''>网络实验</a><button class='sub-menu-toggler'>
+    <span class='screen-reader-text'>expand sub menu</span>
+    <span class='sign'></span>
+  </button>
+
+  <ul class='sub-menu'><li class='item'>
+  <a href='/post/20190701101121/'>实验九</a></li><li class='item'>
+  <a href='/post/20190701090625/'>实验八</a></li><li class='item'>
+  <a href='/post/20190701105039/'>实验六</a></li><li class='item'>
+  <a href='/post/20190701172233/'>实验十</a></li><li class='item'>
+  <a href='/post/20190701182805/'>实验十一</a></li><li class='item'>
+  <a href='/post/20190701194642/'>实验十三</a></li><li class='item'>
+  <a href='/post/20190701192111/'>实验十二</a></li></ul></li></ul>
+    </div>
+  </nav>
+
+</section><section class='widget widget-taxonomy_cloud sep-after'>
+  <header>
+    <h4 class='title widget-title'>Tags</h4>
+  </header>
+
+  <div class='container list-container'>
+  <ul class='list taxonomy-cloud'><li>
+        <a href='/tags/acl/' style='font-size:1em'>ACL</a>
+      </li><li>
+        <a href='/tags/aggregate/' style='font-size:1em'>aggregate</a>
+      </li><li>
+        <a href='/tags/ajax/' style='font-size:1.0731707317073171em'>ajax</a>
+      </li><li>
+        <a href='/tags/algolia/' style='font-size:1em'>algolia</a>
+      </li><li>
+        <a href='/tags/anki/' style='font-size:1.024390243902439em'>anki</a>
+      </li><li>
+        <a href='/tags/arguments%E8%BD%AC%E6%95%B0%E7%BB%84/' style='font-size:1em'>arguments转数组</a>
+      </li><li>
+        <a href='/tags/array.prototype.push/' style='font-size:1em'>Array.prototype.push</a>
+      </li><li>
+        <a href='/tags/authors/' style='font-size:1em'>authors</a>
+      </li><li>
+        <a href='/tags/brew/' style='font-size:1em'>brew</a>
+      </li><li>
+        <a href='/tags/chroma/' style='font-size:1em'>chroma</a>
+      </li><li>
+        <a href='/tags/chrome/' style='font-size:1em'>Chrome</a>
+      </li><li>
+        <a href='/tags/cisco/' style='font-size:1.1463414634146343em'>Cisco</a>
+      </li><li>
+        <a href='/tags/cnpm/' style='font-size:1em'>cnpm</a>
+      </li><li>
+        <a href='/tags/command-line-tools/' style='font-size:1em'>command-line-tools</a>
+      </li><li>
+        <a href='/tags/config/' style='font-size:1.1463414634146343em'>Configuration</a>
+      </li><li>
+        <a href='/tags/contains-empty-filename/' style='font-size:1em'>contains empty filename</a>
+      </li><li>
+        <a href='/tags/content-type/' style='font-size:1em'>content-type</a>
+      </li><li>
+        <a href='/tags/cors/' style='font-size:1em'>cors</a>
+      </li><li>
+        <a href='/tags/css/' style='font-size:1em'>css</a>
+      </li><li>
+        <a href='/tags/css%E5%8F%8D%E7%88%AC/' style='font-size:1em'>css反爬</a>
+      </li><li>
+        <a href='/tags/debug/' style='font-size:1em'>debug</a>
+      </li><li>
+        <a href='/tags/document/' style='font-size:1em'>document</a>
+      </li><li>
+        <a href='/tags/document%E7%B1%BB%E5%9E%8B/' style='font-size:1em'>document类型</a>
+      </li><li>
+        <a href='/tags/dom/' style='font-size:1em'>dom</a>
+      </li><li>
+        <a href='/tags/dom%E6%89%A9%E5%B1%95/' style='font-size:1.024390243902439em'>DOM扩展</a>
+      </li><li>
+        <a href='/tags/dpkg-error/' style='font-size:1em'>dpkg error</a>
+      </li><li>
+        <a href='/tags/f1/' style='font-size:1em'>F1</a>
+      </li><li>
+        <a href='/tags/frps/' style='font-size:1em'>frps</a>
+      </li><li>
+        <a href='/tags/function/' style='font-size:1.048780487804878em'>function</a>
+      </li><li>
+        <a href='/tags/fuse.js/' style='font-size:1em'>fuse.js</a>
+      </li><li>
+        <a href='/tags/genpac/' style='font-size:1em'>genpac</a>
+      </li><li>
+        <a href='/tags/html/' style='font-size:1.0975609756097562em'>html</a>
+      </li><li>
+        <a href='/tags/html5/' style='font-size:1em'>html5</a>
+      </li><li>
+        <a href='/tags/https/' style='font-size:1.024390243902439em'>https</a>
+      </li><li>
+        <a href='/tags/hugo/' style='font-size:1em'>Hugo</a>
+      </li><li>
+        <a href='/tags/i18n/' style='font-size:1em'>i18n</a>
+      </li><li>
+        <a href='/tags/iterm2/' style='font-size:1.048780487804878em'>iterm2</a>
+      </li><li>
+        <a href='/tags/java/' style='font-size:1em'>java</a>
+      </li><li>
+        <a href='/tags/javascript/' style='font-size:2em'>javascript</a>
+      </li><li>
+        <a href='/tags/jquery/' style='font-size:1.3414634146341464em'>jquery</a>
+      </li><li>
+        <a href='/tags/jsonp/' style='font-size:1em'>jsonp</a>
+      </li><li>
+        <a href='/tags/jupyter/' style='font-size:1.0731707317073171em'>jupyter</a>
+      </li><li>
+        <a href='/tags/katex/' style='font-size:1em'>katex</a>
+      </li><li>
+        <a href='/tags/koa/' style='font-size:1em'>koa</a>
+      </li><li>
+        <a href='/tags/linux/' style='font-size:1.1463414634146343em'>linux</a>
+      </li><li>
+        <a href='/tags/lunr.js/' style='font-size:1em'>lunr.js</a>
+      </li><li>
+        <a href='/tags/mac/' style='font-size:1.048780487804878em'>MAC</a>
+      </li><li>
+        <a href='/tags/markdown/' style='font-size:1em'>markdown</a>
+      </li><li>
+        <a href='/tags/menus/' style='font-size:1em'>menus</a>
+      </li><li>
+        <a href='/tags/mongodb/' style='font-size:1.048780487804878em'>mongodb</a>
+      </li><li>
+        <a href='/tags/nat/' style='font-size:1.024390243902439em'>NAT</a>
+      </li><li>
+        <a href='/tags/node/' style='font-size:1em'>node</a>
+      </li><li>
+        <a href='/tags/nodejs/' style='font-size:1.048780487804878em'>nodejs</a>
+      </li><li>
+        <a href='/tags/nohup/' style='font-size:1em'>nohup</a>
+      </li><li>
+        <a href='/tags/npm%E5%9B%BD%E5%86%85%E6%BA%90/' style='font-size:1em'>npm国内源</a>
+      </li><li>
+        <a href='/tags/npm%E6%8A%A5%E9%94%99/' style='font-size:1em'>npm报错</a>
+      </li><li>
+        <a href='/tags/numpy/' style='font-size:1em'>numpy</a>
+      </li><li>
+        <a href='/tags/og/' style='font-size:1em'>Opengraph</a>
+      </li><li>
+        <a href='/tags/ospf/' style='font-size:1em'>OSPF</a>
+      </li><li>
+        <a href='/tags/pdf/' style='font-size:1em'>pdf</a>
+      </li><li>
+        <a href='/tags/pdf%E5%8E%8B%E7%BC%A9/' style='font-size:1em'>pdf压缩</a>
+      </li><li>
+        <a href='/tags/pip/' style='font-size:1em'>pip</a>
+      </li><li>
+        <a href='/tags/pkg/' style='font-size:1em'>pkg</a>
+      </li><li>
+        <a href='/tags/promise/' style='font-size:1em'>promise</a>
+      </li><li>
+        <a href='/tags/pygments/' style='font-size:1em'>pygments</a>
+      </li><li>
+        <a href='/tags/pyquery/' style='font-size:1.048780487804878em'>pyquery</a>
+      </li><li>
+        <a href='/tags/pyspider/' style='font-size:1em'>pyspider</a>
+      </li><li>
+        <a href='/tags/python/' style='font-size:1.0731707317073171em'>python</a>
+      </li><li>
+        <a href='/tags/python3/' style='font-size:1em'>python3</a>
+      </li><li>
+        <a href='/tags/rip/' style='font-size:1em'>RIP</a>
+      </li><li>
+        <a href='/tags/root/' style='font-size:1em'>root</a>
+      </li><li>
+        <a href='/tags/search/' style='font-size:1.0731707317073171em'>search</a>
+      </li><li>
+        <a href='/tags/shadowsocks/' style='font-size:1em'>Shadowsocks</a>
+      </li><li>
+        <a href='/tags/shortcode/' style='font-size:1em'>shortcode</a>
+      </li><li>
+        <a href='/tags/smallpdf/' style='font-size:1em'>smallpdf</a>
+      </li><li>
+        <a href='/tags/softmax/' style='font-size:1em'>softmax</a>
+      </li><li>
+        <a href='/tags/ssl/' style='font-size:1em'>ssl</a>
+      </li><li>
+        <a href='/tags/sudo/' style='font-size:1em'>sudo</a>
+      </li><li>
+        <a href='/tags/supervisor/' style='font-size:1em'>supervisor</a>
+      </li><li>
+        <a href='/tags/svd/' style='font-size:1em'>SVD</a>
+      </li><li>
+        <a href='/tags/table%E6%A0%87%E7%AD%BE/' style='font-size:1em'>table标签</a>
+      </li><li>
+        <a href='/tags/text%E7%B1%BB%E5%9E%8B/' style='font-size:1em'>text类型</a>
+      </li><li>
+        <a href='/tags/this/' style='font-size:1em'>this</a>
+      </li><li>
+        <a href='/tags/time-machine/' style='font-size:1em'>time machine</a>
+      </li><li>
+        <a href='/tags/trackpad/' style='font-size:1em'>Trackpad</a>
+      </li><li>
+        <a href='/tags/translation/' style='font-size:1em'>translation</a>
+      </li><li>
+        <a href='/tags/ubuntu/' style='font-size:1em'>ubuntu</a>
+      </li><li>
+        <a href='/tags/uefi/' style='font-size:1em'>uefi</a>
+      </li><li>
+        <a href='/tags/unidentified-developer/' style='font-size:1em'>unidentified developer</a>
+      </li><li>
+        <a href='/tags/url%E7%BC%96%E7%A0%81%E5%92%8C%E8%A7%A3%E7%A0%81/' style='font-size:1em'>url编码和解码</a>
+      </li><li>
+        <a href='/tags/v8%E5%BC%95%E6%93%8E/' style='font-size:1em'>v8引擎</a>
+      </li><li>
+        <a href='/tags/val/' style='font-size:1em'>val</a>
+      </li><li>
+        <a href='/tags/vlan/' style='font-size:1.024390243902439em'>VLAN</a>
+      </li><li>
+        <a href='/tags/vscode/' style='font-size:1.024390243902439em'>vscode</a>
+      </li><li>
+        <a href='/tags/vue/' style='font-size:1.048780487804878em'>vue</a>
+      </li><li>
+        <a href='/tags/webpack/' style='font-size:1em'>webpack</a>
+      </li><li>
+        <a href='/tags/webpack%E5%AE%89%E8%A3%85/' style='font-size:1em'>webpack安装</a>
+      </li><li>
+        <a href='/tags/web%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD/' style='font-size:1em'>web前端性能</a>
+      </li><li>
+        <a href='/tags/widgets/' style='font-size:1em'>widgets</a>
+      </li><li>
+        <a href='/tags/xml/' style='font-size:1.024390243902439em'>xml</a>
+      </li><li>
+        <a href='/tags/%E4%BA%A4%E6%8D%A2%E6%9C%BA/' style='font-size:1em'>交换机</a>
+      </li><li>
+        <a href='/tags/%E4%BF%A1%E6%81%AF%E5%8C%B9%E9%85%8D/' style='font-size:1em'>信息匹配</a>
+      </li><li>
+        <a href='/tags/%E5%83%BB%E4%B9%89/' style='font-size:1em'>僻义</a>
+      </li><li>
+        <a href='/tags/%E5%85%83%E7%B4%A0%E9%81%8D%E5%8E%86/' style='font-size:1em'>元素遍历</a>
+      </li><li>
+        <a href='/tags/%E5%85%AD%E7%BA%A7/' style='font-size:1.2926829268292683em'>六级</a>
+      </li><li>
+        <a href='/tags/%E5%86%92%E6%B3%A1/' style='font-size:1em'>冒泡</a>
+      </li><li>
+        <a href='/tags/%E5%87%86%E7%A1%AE%E7%8E%87/' style='font-size:1em'>准确率</a>
+      </li><li>
+        <a href='/tags/%E5%88%86%E5%8C%BA/' style='font-size:1.024390243902439em'>分区</a>
+      </li><li>
+        <a href='/tags/%E5%88%9B%E5%BB%BA%E7%94%A8%E6%88%B7/' style='font-size:1.024390243902439em'>创建用户</a>
+      </li><li>
+        <a href='/tags/%E5%89%8D%E7%AB%AF/' style='font-size:1em'>前端</a>
+      </li><li>
+        <a href='/tags/%E5%8D%95%E5%A4%8D%E6%95%B0/' style='font-size:1em'>单复数</a>
+      </li><li>
+        <a href='/tags/%E5%8D%95%E8%87%82%E8%B7%AF%E7%94%B1/' style='font-size:1em'>单臂路由</a>
+      </li><li>
+        <a href='/tags/%E5%8E%9F%E7%94%9Fjs/' style='font-size:1em'>原生js</a>
+      </li><li>
+        <a href='/tags/%E5%8F%8D%E7%88%AC/' style='font-size:1.024390243902439em'>反爬</a>
+      </li><li>
+        <a href='/tags/%E5%8F%8D%E8%AE%BD/' style='font-size:1em'>反讽</a>
+      </li><li>
+        <a href='/tags/%E5%8F%AC%E5%9B%9E%E7%8E%87/' style='font-size:1em'>召回率</a>
+      </li><li>
+        <a href='/tags/%E5%90%AC%E5%8A%9B/' style='font-size:1em'>听力</a>
+      </li><li>
+        <a href='/tags/%E5%9B%9B%E5%85%AD%E7%BA%A7/' style='font-size:1.024390243902439em'>四六级</a>
+      </li><li>
+        <a href='/tags/%E5%9B%BD%E5%86%85%E9%95%9C%E5%83%8F/' style='font-size:1em'>国内镜像</a>
+      </li><li>
+        <a href='/tags/%E5%9F%9F%E5%90%8D/' style='font-size:1em'>域名</a>
+      </li><li>
+        <a href='/tags/%E5%A4%9A%E5%AE%9E%E4%BE%8B/' style='font-size:1em'>多实例</a>
+      </li><li>
+        <a href='/tags/%E5%A4%A7%E4%BC%97%E7%82%B9%E8%AF%84/' style='font-size:1em'>大众点评</a>
+      </li><li>
+        <a href='/tags/%E5%AD%90%E5%85%83%E7%B4%A0/' style='font-size:1em'>子元素</a>
+      </li><li>
+        <a href='/tags/%E5%AD%97%E4%BD%93%E5%8F%8D%E7%88%AC/' style='font-size:1em'>字体反爬</a>
+      </li><li>
+        <a href='/tags/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81/' style='font-size:1.024390243902439em'>字符编码</a>
+      </li><li>
+        <a href='/tags/%E5%AE%A2%E6%88%B7%E7%AB%AF%E6%A3%80%E6%B5%8B/' style='font-size:1em'>客户端检测</a>
+      </li><li>
+        <a href='/tags/%E5%B1%9E%E6%80%A7/' style='font-size:1em'>属性</a>
+      </li><li>
+        <a href='/tags/%E5%BC%95%E5%AF%BC/' style='font-size:1em'>引导</a>
+      </li><li>
+        <a href='/tags/%E5%BD%A2%E8%BF%91/' style='font-size:1em'>形近</a>
+      </li><li>
+        <a href='/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/' style='font-size:1.048780487804878em'>快捷键</a>
+      </li><li>
+        <a href='/tags/%E6%88%AA%E5%9B%BE/' style='font-size:1em'>截图</a>
+      </li><li>
+        <a href='/tags/%E6%89%93%E5%BC%80%E6%96%87%E4%BB%B6/' style='font-size:1em'>打开文件</a>
+      </li><li>
+        <a href='/tags/%E6%8E%92%E5%BA%8F/' style='font-size:1em'>排序</a>
+      </li><li>
+        <a href='/tags/%E6%8F%92%E5%85%A5/' style='font-size:1em'>插入</a>
+      </li><li>
+        <a href='/tags/%E6%96%AD%E7%BD%91/' style='font-size:1em'>断网</a>
+      </li><li>
+        <a href='/tags/%E6%96%B9%E6%B3%95/' style='font-size:1em'>方法</a>
+      </li><li>
+        <a href='/tags/%E6%97%A0%E7%9B%91%E7%9D%A3/' style='font-size:1em'>无监督</a>
+      </li><li>
+        <a href='/tags/%E6%97%B6%E9%97%B4/' style='font-size:1em'>时间</a>
+      </li><li>
+        <a href='/tags/%E6%99%AE%E9%80%9Auser/' style='font-size:1em'>普通user</a>
+      </li><li>
+        <a href='/tags/%E6%9B%BF%E6%8D%A2%E5%AD%97%E7%AC%A6/' style='font-size:1em'>替换字符</a>
+      </li><li>
+        <a href='/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/' style='font-size:1em'>服务器</a>
+      </li><li>
+        <a href='/tags/%E6%B5%81%E9%87%8F%E6%8E%A7%E5%88%B6/' style='font-size:1em'>流量控制</a>
+      </li><li>
+        <a href='/tags/%E6%B6%88%E6%9E%81/' style='font-size:1em'>消极</a>
+      </li><li>
+        <a href='/tags/%E7%88%AC%E8%99%AB/' style='font-size:1.024390243902439em'>爬虫</a>
+      </li><li>
+        <a href='/tags/%E7%94%A8%E6%88%B7%E9%AA%8C%E8%AF%81/' style='font-size:1em'>用户验证</a>
+      </li><li>
+        <a href='/tags/%E7%9B%91%E7%9D%A3/' style='font-size:1em'>监督</a>
+      </li><li>
+        <a href='/tags/%E7%AC%A6%E5%8F%B7/' style='font-size:1em'>符号</a>
+      </li><li>
+        <a href='/tags/%E7%AE%80%E5%8E%86/' style='font-size:1em'>简历</a>
+      </li><li>
+        <a href='/tags/%E7%B2%BE%E5%87%86%E7%8E%87/' style='font-size:1em'>精准率</a>
+      </li><li>
+        <a href='/tags/%E7%BB%A7%E6%89%BF/' style='font-size:1em'>继承</a>
+      </li><li>
+        <a href='/tags/%E7%BC%96%E7%A0%81/' style='font-size:1em'>编码</a>
+      </li><li>
+        <a href='/tags/%E7%BD%91%E7%BB%9C%E5%9C%B0%E5%9D%80%E6%98%A0%E5%B0%84/' style='font-size:1.024390243902439em'>网络地址映射</a>
+      </li><li>
+        <a href='/tags/%E7%BD%91%E7%BB%9C%E5%AE%9E%E9%AA%8C/' style='font-size:1.1463414634146343em'>网络实验</a>
+      </li><li>
+        <a href='/tags/%E7%BF%BB%E8%AF%91/' style='font-size:1em'>翻译</a>
+      </li><li>
+        <a href='/tags/%E8%8B%B1%E8%AF%AD/' style='font-size:1.024390243902439em'>英语</a>
+      </li><li>
+        <a href='/tags/%E8%A7%86%E9%A2%91%E4%B8%8B%E8%BD%BD/' style='font-size:1em'>视频下载</a>
+      </li><li>
+        <a href='/tags/%E8%A7%A3%E8%AF%BB/' style='font-size:1em'>解读</a>
+      </li><li>
+        <a href='/tags/%E8%AE%BE%E7%BD%AE/' style='font-size:1em'>设置</a>
+      </li><li>
+        <a href='/tags/%E8%AF%81%E4%B9%A6%E7%94%B3%E8%AF%B7/' style='font-size:1em'>证书申请</a>
+      </li><li>
+        <a href='/tags/%E8%AF%84%E8%AE%BA/' style='font-size:1em'>评论</a>
+      </li><li>
+        <a href='/tags/%E8%AF%8D%E6%80%A7/' style='font-size:1em'>词性</a>
+      </li><li>
+        <a href='/tags/%E8%AF%8D%E6%B1%87/' style='font-size:1.1463414634146343em'>词汇</a>
+      </li><li>
+        <a href='/tags/%E8%B7%A8%E5%9F%9F/' style='font-size:1em'>跨域</a>
+      </li><li>
+        <a href='/tags/%E8%B7%AF%E7%94%B1%E5%8D%8F%E8%AE%AE/' style='font-size:1.048780487804878em'>路由协议</a>
+      </li><li>
+        <a href='/tags/%E8%BF%90%E7%BB%B4/' style='font-size:1em'>运维</a>
+      </li><li>
+        <a href='/tags/%E8%BF%91%E4%B9%89%E8%AF%8D/' style='font-size:1em'>近义词</a>
+      </li><li>
+        <a href='/tags/%E9%80%89%E6%8B%A9%E5%99%A8/' style='font-size:1.0975609756097562em'>选择器</a>
+      </li><li>
+        <a href='/tags/%E9%85%8D%E7%BD%AE/' style='font-size:1.024390243902439em'>配置</a>
+      </li><li>
+        <a href='/tags/%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/' style='font-size:1em'>配置文件</a>
+      </li><li>
+        <a href='/tags/%E9%97%AD%E5%8C%85/' style='font-size:1.048780487804878em'>闭包</a>
+      </li><li>
+        <a href='/tags/%E9%98%85%E8%AF%BB%E6%8A%80%E5%B7%A7/' style='font-size:1em'>阅读技巧</a>
+      </li><li>
+        <a href='/tags/%E9%98%BF%E9%87%8C%E4%BA%91/' style='font-size:1em'>阿里云</a>
+      </li><li>
+        <a href='/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/' style='font-size:1em'>面向对象</a>
+      </li><li>
+        <a href='/tags/%E9%BB%98%E8%AE%A4%E7%BB%88%E7%AB%AF/' style='font-size:1em'>默认终端</a>
+      </li></ul>
+</div>
+
+
+</section>
+</div>
+
+  <div class='sidebar-overlay'></div>
+</div><div class='main'><nav id='main-menu' class='menu main-menu' aria-label='Main Menu'>
+  <div class='container'>
+    <a class='screen-reader-text' href='#content'>Skip to Content</a>
+
+<button id='sidebar-toggler' class='sidebar-toggler' aria-controls='sidebar'>
+  <span class='screen-reader-text'>Toggle Sidebar</span>
+  <span class='open'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="3" y1="12" x2="21" y2="12" />
+  <line x1="3" y1="6" x2="21" y2="6" />
+  <line x1="3" y1="18" x2="21" y2="18" />
+  
+</svg>
+</span>
+  <span class='close'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="18" y1="6" x2="6" y2="18" />
+  <line x1="6" y1="6" x2="18" y2="18" />
+  
+</svg>
+</span>
+</button>
+    <ul><li class='item'>
+        <a href='/'>Home</a>
+      </li><li class='item'>
+        <a href='/post/'>blogs</a>
+      </li><li class='item'>
+        <a href='https://github.com/mannuan'>Repo</a>
+      </li></ul>
+  </div>
+</nav><div class='header-widgets'>
+        <div class='container'>
+    
+    <style>.widget-breadcrumbs li:after{content:'\2f '}</style>
+  <section class='widget widget-breadcrumbs sep-after'>
+    <nav id='breadcrumbs'>
+      <ol><li><a href='/'>Home</a></li><li><a href='/post/'>blogs</a></li><li><span>jupyter_notebook_config.py的配置详解</span></li></ol>
+    </nav>
+  </section></div>
+      </div>
+
+      <header id='header' class='header site-header'>
+        <div class='container sep-after'>
+          <div class='header-info'><p class='site-title title'>mannuan</p><p class='desc site-desc'>Rome was not built in a day.</p>
+          </div>
+        </div>
+      </header>
+
+      <main id='content'>
+
+
+<article lang='en' class='entry'>
+  <header class='header entry-header'>
+  <div class='container sep-after'>
+    <div class='header-info'>
+      <h1 class='title'>jupyter_notebook_config.py的配置详解</h1>
+      
+
+    </div>
+    <div class='entry-meta'>
+  <span class='posted-on'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+  <line x1="16" y1="2" x2="16" y2="6"/>
+  <line x1="8" y1="2" x2="8" y2="6"/>
+  <line x1="3" y1="10" x2="21" y2="10"/>
+  
+</svg>
+<span class='screen-reader-text'>Posted on </span>
+  <time class='entry-date' datetime='2019-05-15T15:55:13&#43;08:00'>2019, May 15</time>
+</span>
+
+  <span class='byline'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M21,21V20c0-2.76-4-5-9-5s-9,2.24-9,5v1"/>
+  <path d="M16,6.37A4,4,0,1,1,12.63,3,4,4,0,0,1,16,6.37Z"/>
+  
+</svg>
+<span class='screen-reader-text'> by </span><a href='/authors/mannuan'>mannuan</a></span>
+  
+<span class='reading-time'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <circle cx="12" cy="12" r="10"/>
+  <polyline points="12 6 12 12 15 15"/>
+  
+</svg>
+19 mins read
+</span>
+
+
+</div>
+
+
+  </div>
+</header>
+
+  
+  
+
+  <div class='container entry-content'>
+  <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e"># Configuration file for jupyter-notebook.</span>
+
+<span style="color:#75715e">#------------------------------------------------------------------------------</span>
+<span style="color:#75715e"># Application(SingletonConfigurable) configuration</span>
+<span style="color:#75715e">#------------------------------------------------------------------------------</span>
+
+<span style="color:#75715e">## This is an application.</span>
+
+<span style="color:#75715e">## The date format used by logging formatters for %(asctime)s</span>
+<span style="color:#75715e">#c.Application.log_datefmt = &#39;%Y-%m-%d %H:%M:%S&#39;</span>
+
+<span style="color:#75715e">## The Logging format template</span>
+<span style="color:#75715e">#c.Application.log_format = &#39;[%(name)s]%(highlevel)s %(message)s&#39;</span>
+
+<span style="color:#75715e">## Set the log level by value or name.</span>
+<span style="color:#75715e">#c.Application.log_level = 30</span>
+
+<span style="color:#75715e">#------------------------------------------------------------------------------</span>
+<span style="color:#75715e"># JupyterApp(Application) configuration</span>
+<span style="color:#75715e">#------------------------------------------------------------------------------</span>
+
+<span style="color:#75715e">## Base class for Jupyter applications</span>
+
+<span style="color:#75715e">## Answer yes to any prompts.</span>
+<span style="color:#75715e">#c.JupyterApp.answer_yes = False</span>
+
+<span style="color:#75715e">## Full path of a config file.</span>
+<span style="color:#75715e">#c.JupyterApp.config_file = &#39;&#39;</span>
+
+<span style="color:#75715e">## Specify a config file to load.</span>
+<span style="color:#75715e">#c.JupyterApp.config_file_name = &#39;&#39;</span>
+
+<span style="color:#75715e">## Generate default config file.</span>
+<span style="color:#75715e">#c.JupyterApp.generate_config = False</span>
+
+<span style="color:#75715e">#------------------------------------------------------------------------------</span>
+<span style="color:#75715e"># NotebookApp(JupyterApp) configuration</span>
+<span style="color:#75715e">#------------------------------------------------------------------------------</span>
+
+<span style="color:#75715e">## Set the Access-Control-Allow-Credentials: true header</span>
+<span style="color:#75715e">#c.NotebookApp.allow_credentials = False</span>
+
+<span style="color:#75715e">## Set the Access-Control-Allow-Origin header</span>
+<span style="color:#75715e">#  </span>
+<span style="color:#75715e">#  Use &#39;*&#39; to allow any origin to access your server.</span>
+<span style="color:#75715e">#  </span>
+<span style="color:#75715e">#  Takes precedence over allow_origin_pat.</span>
+<span style="color:#75715e">#c.NotebookApp.allow_origin = &#39;&#39;</span>
+
+<span style="color:#75715e">## Use a regular expression for the Access-Control-Allow-Origin header</span>
+<span style="color:#75715e">#  </span>
+<span style="color:#75715e">#  Requests from an origin matching the expression will get replies with:</span>
+<span style="color:#75715e">#  </span>
+<span style="color:#75715e">#      Access-Control-Allow-Origin: origin</span>
+<span style="color:#75715e">#  </span>
+<span style="color:#75715e">#  where `origin` is the origin of the request.</span>
+<span style="color:#75715e">#  </span>
+<span style="color:#75715e">#  Ignored if allow_origin is set.</span>
+<span style="color:#75715e">#c.NotebookApp.allow_origin_pat = &#39;&#39;</span>
+
+<span style="color:#75715e">## Allow password to be changed at login for the notebook server.</span>
+<span style="color:#75715e">#  </span>
+<span style="color:#75715e">#  While loggin in with a token, the notebook server UI will give the opportunity</span>
+<span style="color:#75715e">#  to the user to enter a new password at the same time that will replace the</span>
+<span style="color:#75715e">#  token login mechanism.</span>
+<span style="color:#75715e">#  </span>
+<span style="color:#75715e">#  This can be set to false to prevent changing password from the UI/API.</span>
+<span style="color:#75715e">#c.NotebookApp.allow_password_change = True</span>
+
+<span style="color:#75715e">## Allow requests where the Host header doesn&#39;t point to a local server</span>
+<span style="color:#75715e">#  </span>
+<span style="color:#75715e">#  By default, requests get a 403 forbidden response if the &#39;Host&#39; header shows</span>
+<span style="color:#75715e">#  that the browser thinks it&#39;s on a non-local domain. Setting this option to</span>
+<span style="color:#75715e">#  True disables this check.</span>
+<span style="color:#75715e">#  </span>
+<span style="color:#75715e">#  This protects against &#39;DNS rebinding&#39; attacks, where a remote web server</span>
+<span style="color:#75715e">#  serves you a page and then changes its DNS to send later requests to a local</span>
+<span style="color:#75715e">#  IP, bypassing same-origin checks.</span>
+<span style="color:#75715e">#  </span>
+<span style="color:#75715e">#  Local IP addresses (such as 127.0.0.1 and ::1) are allowed as local, along</span>
+<span style="color:#75715e">#  with hostnames configured in local_hostnames.</span>
+<span style="color:#75715e">#c.NotebookApp.allow_remote_access = False</span>
+
+<span style="color:#75715e">## Whether to allow the user to run the notebook as root.</span>
+<span style="color:#75715e">#c.NotebookApp.allow_root = False</span>
+
+<span style="color:#75715e">## DEPRECATED use base_url</span>
+<span style="color:#75715e">#c.NotebookApp.base_project_url = &#39;/&#39;</span>
+
+<span style="color:#75715e">## The base URL for the notebook server.</span>
+<span style="color:#75715e">#  </span>
+<span style="color:#75715e">#  Leading and trailing slashes can be omitted, and will automatically be added.</span>
+<span style="color:#75715e">#c.NotebookApp.base_url = &#39;/&#39;</span>
+
+<span style="color:#75715e">## Specify what command to use to invoke a web browser when opening the notebook.</span>
+<span style="color:#75715e">#  If not specified, the default browser will be determined by the `webbrowser`</span>
+<span style="color:#75715e">#  standard library module, which allows setting of the BROWSER environment</span>
+<span style="color:#75715e">#  variable to override it.</span>
+<span style="color:#75715e">#c.NotebookApp.browser = &#39;&#39;</span>
+
+<span style="color:#75715e">## The full path to an SSL/TLS certificate file.</span>
+<span style="color:#75715e">#c.NotebookApp.certfile = &#39;&#39;</span>
+
+<span style="color:#75715e">## The full path to a certificate authority certificate for SSL/TLS client</span>
+<span style="color:#75715e">#  authentication.</span>
+<span style="color:#75715e">#c.NotebookApp.client_ca = &#39;&#39;</span>
+
+<span style="color:#75715e">## The config manager class to use</span>
+<span style="color:#75715e">#c.NotebookApp.config_manager_class = &#39;notebook.services.config.manager.ConfigManager&#39;</span>
+
+<span style="color:#75715e">## The notebook manager class to use.</span>
+<span style="color:#75715e">#c.NotebookApp.contents_manager_class = &#39;notebook.services.contents.largefilemanager.LargeFileManager&#39;</span>
+
+<span style="color:#75715e">## Extra keyword arguments to pass to `set_secure_cookie`. See tornado&#39;s</span>
+<span style="color:#75715e">#  set_secure_cookie docs for details.</span>
+<span style="color:#75715e">#c.NotebookApp.cookie_options = {}</span>
+
+<span style="color:#75715e">## The random bytes used to secure cookies. By default this is a new random</span>
+<span style="color:#75715e">#  number every time you start the Notebook. Set it to a value in a config file</span>
+<span style="color:#75715e">#  to enable logins to persist across server sessions.</span>
+<span style="color:#75715e">#  </span>
+<span style="color:#75715e">#  Note: Cookie secrets should be kept private, do not share config files with</span>
+<span style="color:#75715e">#  cookie_secret stored in plaintext (you can read the value from a file).</span>
+<span style="color:#75715e">#c.NotebookApp.cookie_secret = b&#39;&#39;</span>
+
+<span style="color:#75715e">## The file where the cookie secret is stored.</span>
+<span style="color:#75715e">#c.NotebookApp.cookie_secret_file = &#39;&#39;</span>
+
+<span style="color:#75715e">## Override URL shown to users.</span>
+<span style="color:#75715e">#  </span>
+<span style="color:#75715e">#  Replace actual URL, including protocol, address, port and base URL, with the</span>
+<span style="color:#75715e">#  given value when displaying URL to the users. Do not change the actual</span>
+<span style="color:#75715e">#  connection URL. If authentication token is enabled, the token is added to the</span>
+<span style="color:#75715e">#  custom URL automatically.</span>
+<span style="color:#75715e">#  </span>
+<span style="color:#75715e">#  This option is intended to be used when the URL to display to the user cannot</span>
+<span style="color:#75715e">#  be determined reliably by the Jupyter notebook server (proxified or</span>
+<span style="color:#75715e">#  containerized setups for example).</span>
+<span style="color:#75715e">#c.NotebookApp.custom_display_url = &#39;&#39;</span>
+
+<span style="color:#75715e">## The default URL to redirect to from `/`</span>
+<span style="color:#75715e">#c.NotebookApp.default_url = &#39;/tree&#39;</span>
+
+<span style="color:#75715e">## Disable cross-site-request-forgery protection</span>
+<span style="color:#75715e">#  </span>
+<span style="color:#75715e">#  Jupyter notebook 4.3.1 introduces protection from cross-site request</span>
+<span style="color:#75715e">#  forgeries, requiring API requests to either:</span>
+<span style="color:#75715e">#  </span>
+<span style="color:#75715e">#  - originate from pages served by this server (validated with XSRF cookie and</span>
+<span style="color:#75715e">#  token), or - authenticate with a token</span>
+<span style="color:#75715e">#  </span>
+<span style="color:#75715e">#  Some anonymous compute resources still desire the ability to run code,</span>
+<span style="color:#75715e">#  completely without authentication. These services can disable all</span>
+<span style="color:#75715e">#  authentication and security checks, with the full knowledge of what that</span>
+<span style="color:#75715e">#  implies.</span>
+<span style="color:#75715e">#c.NotebookApp.disable_check_xsrf = False</span>
+
+<span style="color:#75715e">## Whether to enable MathJax for typesetting math/TeX</span>
+<span style="color:#75715e">#  </span>
+<span style="color:#75715e">#  MathJax is the javascript library Jupyter uses to render math/LaTeX. It is</span>
+<span style="color:#75715e">#  very large, so you may want to disable it if you have a slow internet</span>
+<span style="color:#75715e">#  connection, or for offline use of the notebook.</span>
+<span style="color:#75715e">#  </span>
+<span style="color:#75715e">#  When disabled, equations etc. will appear as their untransformed TeX source.</span>
+<span style="color:#75715e">#c.NotebookApp.enable_mathjax = True</span>
+
+<span style="color:#75715e">## extra paths to look for Javascript notebook extensions</span>
+<span style="color:#75715e">#c.NotebookApp.extra_nbextensions_path = []</span>
+
+<span style="color:#75715e">## handlers that should be loaded at higher priority than the default services</span>
+<span style="color:#75715e">#c.NotebookApp.extra_services = []</span>
+
+<span style="color:#75715e">## Extra paths to search for serving static files.</span>
+<span style="color:#75715e">#  </span>
+<span style="color:#75715e">#  This allows adding javascript/css to be available from the notebook server</span>
+<span style="color:#75715e">#  machine, or overriding individual files in the IPython</span>
+<span style="color:#75715e">#c.NotebookApp.extra_static_paths = []</span>
+
+<span style="color:#75715e">## Extra paths to search for serving jinja templates.</span>
+<span style="color:#75715e">#  </span>
+<span style="color:#75715e">#  Can be used to override templates from notebook.templates.</span>
+<span style="color:#75715e">#c.NotebookApp.extra_template_paths = []</span>
+
+<span style="color:#75715e">## </span>
+<span style="color:#75715e">#c.NotebookApp.file_to_run = &#39;&#39;</span>
+
+<span style="color:#75715e">## Extra keyword arguments to pass to `get_secure_cookie`. See tornado&#39;s</span>
+<span style="color:#75715e">#  get_secure_cookie docs for details.</span>
+<span style="color:#75715e">#c.NotebookApp.get_secure_cookie_kwargs = {}</span>
+
+<span style="color:#75715e">## Deprecated: Use minified JS file or not, mainly use during dev to avoid JS</span>
+<span style="color:#75715e">#  recompilation</span>
+<span style="color:#75715e">#c.NotebookApp.ignore_minified_js = False</span>
+
+<span style="color:#75715e">## (bytes/sec) Maximum rate at which stream output can be sent on iopub before</span>
+<span style="color:#75715e">#  they are limited.</span>
+<span style="color:#75715e">#c.NotebookApp.iopub_data_rate_limit = 1000000</span>
+
+<span style="color:#75715e">## (msgs/sec) Maximum rate at which messages can be sent on iopub before they are</span>
+<span style="color:#75715e">#  limited.</span>
+<span style="color:#75715e">#c.NotebookApp.iopub_msg_rate_limit = 1000</span>
+
+<span style="color:#75715e">## The IP address the notebook server will listen on.</span>
+<span style="color:#75715e">#c.NotebookApp.ip = &#39;localhost&#39;</span>
+
+<span style="color:#75715e">## Supply extra arguments that will be passed to Jinja environment.</span>
+<span style="color:#75715e">#c.NotebookApp.jinja_environment_options = {}</span>
+
+<span style="color:#75715e">## Extra variables to supply to jinja templates when rendering.</span>
+<span style="color:#75715e">#c.NotebookApp.jinja_template_vars = {}</span>
+
+<span style="color:#75715e">## The kernel manager class to use.</span>
+<span style="color:#75715e">#c.NotebookApp.kernel_manager_class = &#39;notebook.services.kernels.kernelmanager.MappingKernelManager&#39;</span>
+
+<span style="color:#75715e">## The kernel spec manager class to use. Should be a subclass of</span>
+<span style="color:#75715e">#  `jupyter_client.kernelspec.KernelSpecManager`.</span>
+<span style="color:#75715e">#  </span>
+<span style="color:#75715e">#  The Api of KernelSpecManager is provisional and might change without warning</span>
+<span style="color:#75715e">#  between this version of Jupyter and the next stable one.</span>
+<span style="color:#75715e">#c.NotebookApp.kernel_spec_manager_class = &#39;jupyter_client.kernelspec.KernelSpecManager&#39;</span>
+
+<span style="color:#75715e">## The full path to a private key file for usage with SSL/TLS.</span>
+<span style="color:#75715e">#c.NotebookApp.keyfile = &#39;&#39;</span>
+
+<span style="color:#75715e">## Hostnames to allow as local when allow_remote_access is False.</span>
+<span style="color:#75715e">#  </span>
+<span style="color:#75715e">#  Local IP addresses (such as 127.0.0.1 and ::1) are automatically accepted as</span>
+<span style="color:#75715e">#  local as well.</span>
+<span style="color:#75715e">#c.NotebookApp.local_hostnames = [&#39;localhost&#39;]</span>
+
+<span style="color:#75715e">## The login handler class to use.</span>
+<span style="color:#75715e">#c.NotebookApp.login_handler_class = &#39;notebook.auth.login.LoginHandler&#39;</span>
+
+<span style="color:#75715e">## The logout handler class to use.</span>
+<span style="color:#75715e">#c.NotebookApp.logout_handler_class = &#39;notebook.auth.logout.LogoutHandler&#39;</span>
+
+<span style="color:#75715e">## The MathJax.js configuration file that is to be used.</span>
+<span style="color:#75715e">#c.NotebookApp.mathjax_config = &#39;TeX-AMS-MML_HTMLorMML-full,Safe&#39;</span>
+
+<span style="color:#75715e">## A custom url for MathJax.js. Should be in the form of a case-sensitive url to</span>
+<span style="color:#75715e">#  MathJax, for example:  /static/components/MathJax/MathJax.js</span>
+<span style="color:#75715e">#c.NotebookApp.mathjax_url = &#39;&#39;</span>
+
+<span style="color:#75715e">## Sets the maximum allowed size of the client request body, specified in  the</span>
+<span style="color:#75715e">#  Content-Length request header field. If the size in a request  exceeds the</span>
+<span style="color:#75715e">#  configured value, a malformed HTTP message is returned to the client.</span>
+<span style="color:#75715e">#  </span>
+<span style="color:#75715e">#  Note: max_body_size is applied even in streaming mode.</span>
+<span style="color:#75715e">#c.NotebookApp.max_body_size = 536870912</span>
+
+<span style="color:#75715e">## Gets or sets the maximum amount of memory, in bytes, that is allocated  for</span>
+<span style="color:#75715e">#  use by the buffer manager.</span>
+<span style="color:#75715e">#c.NotebookApp.max_buffer_size = 536870912</span>
+
+<span style="color:#75715e">## Dict of Python modules to load as notebook server extensions.Entry values can</span>
+<span style="color:#75715e">#  be used to enable and disable the loading ofthe extensions. The extensions</span>
+<span style="color:#75715e">#  will be loaded in alphabetical order.</span>
+<span style="color:#75715e">#c.NotebookApp.nbserver_extensions = {}</span>
+
+<span style="color:#75715e">## The directory to use for notebooks and kernels.</span>
+<span style="color:#75715e">#c.NotebookApp.notebook_dir = &#39;&#39;</span>
+
+<span style="color:#75715e">## Whether to open in a browser after starting. The specific browser used is</span>
+<span style="color:#75715e">#  platform dependent and determined by the python standard library `webbrowser`</span>
+<span style="color:#75715e">#  module, unless it is overridden using the --browser (NotebookApp.browser)</span>
+<span style="color:#75715e">#  configuration option.</span>
+<span style="color:#75715e">#c.NotebookApp.open_browser = True</span>
+
+<span style="color:#75715e">## Hashed password to use for web authentication.</span>
+<span style="color:#75715e">#  </span>
+<span style="color:#75715e">#  To generate, type in a python/IPython shell:</span>
+<span style="color:#75715e">#  </span>
+<span style="color:#75715e">#    from notebook.auth import passwd; passwd()</span>
+<span style="color:#75715e">#  </span>
+<span style="color:#75715e">#  The string should be of the form type:salt:hashed-password.</span>
+<span style="color:#75715e">#c.NotebookApp.password = &#39;&#39;</span>
+
+<span style="color:#75715e">## Forces users to use a password for the Notebook server. This is useful in a</span>
+<span style="color:#75715e">#  multi user environment, for instance when everybody in the LAN can access each</span>
+<span style="color:#75715e">#  other&#39;s machine through ssh.</span>
+<span style="color:#75715e">#  </span>
+<span style="color:#75715e">#  In such a case, server the notebook server on localhost is not secure since</span>
+<span style="color:#75715e">#  any user can connect to the notebook server via ssh.</span>
+<span style="color:#75715e">#c.NotebookApp.password_required = False</span>
+
+<span style="color:#75715e">## The port the notebook server will listen on.</span>
+<span style="color:#75715e">#c.NotebookApp.port = 8888</span>
+
+<span style="color:#75715e">## The number of additional ports to try if the specified port is not available.</span>
+<span style="color:#75715e">#c.NotebookApp.port_retries = 50</span>
+
+<span style="color:#75715e">## DISABLED: use %pylab or %matplotlib in the notebook to enable matplotlib.</span>
+<span style="color:#75715e">#c.NotebookApp.pylab = &#39;disabled&#39;</span>
+
+<span style="color:#75715e">## If True, display a button in the dashboard to quit (shutdown the notebook</span>
+<span style="color:#75715e">#  server).</span>
+<span style="color:#75715e">#c.NotebookApp.quit_button = True</span>
+
+<span style="color:#75715e">## (sec) Time window used to  check the message and data rate limits.</span>
+<span style="color:#75715e">#c.NotebookApp.rate_limit_window = 3</span>
+
+<span style="color:#75715e">## Reraise exceptions encountered loading server extensions?</span>
+<span style="color:#75715e">#c.NotebookApp.reraise_server_extension_failures = False</span>
+
+<span style="color:#75715e">## DEPRECATED use the nbserver_extensions dict instead</span>
+<span style="color:#75715e">#c.NotebookApp.server_extensions = []</span>
+
+<span style="color:#75715e">## The session manager class to use.</span>
+<span style="color:#75715e">#c.NotebookApp.session_manager_class = &#39;notebook.services.sessions.sessionmanager.SessionManager&#39;</span>
+
+<span style="color:#75715e">## Shut down the server after N seconds with no kernels or terminals running and</span>
+<span style="color:#75715e">#  no activity. This can be used together with culling idle kernels</span>
+<span style="color:#75715e">#  (MappingKernelManager.cull_idle_timeout) to shutdown the notebook server when</span>
+<span style="color:#75715e">#  it&#39;s not in use. This is not precisely timed: it may shut down up to a minute</span>
+<span style="color:#75715e">#  later. 0 (the default) disables this automatic shutdown.</span>
+<span style="color:#75715e">#c.NotebookApp.shutdown_no_activity_timeout = 0</span>
+
+<span style="color:#75715e">## Supply SSL options for the tornado HTTPServer. See the tornado docs for</span>
+<span style="color:#75715e">#  details.</span>
+<span style="color:#75715e">#c.NotebookApp.ssl_options = {}</span>
+
+<span style="color:#75715e">## Supply overrides for terminado. Currently only supports &#34;shell_command&#34;.</span>
+<span style="color:#75715e">#c.NotebookApp.terminado_settings = {}</span>
+
+<span style="color:#75715e">## Set to False to disable terminals.</span>
+<span style="color:#75715e">#  </span>
+<span style="color:#75715e">#  This does *not* make the notebook server more secure by itself. Anything the</span>
+<span style="color:#75715e">#  user can in a terminal, they can also do in a notebook.</span>
+<span style="color:#75715e">#  </span>
+<span style="color:#75715e">#  Terminals may also be automatically disabled if the terminado package is not</span>
+<span style="color:#75715e">#  available.</span>
+<span style="color:#75715e">#c.NotebookApp.terminals_enabled = True</span>
+
+<span style="color:#75715e">## Token used for authenticating first-time connections to the server.</span>
+<span style="color:#75715e">#  </span>
+<span style="color:#75715e">#  When no password is enabled, the default is to generate a new, random token.</span>
+<span style="color:#75715e">#  </span>
+<span style="color:#75715e">#  Setting to an empty string disables authentication altogether, which is NOT</span>
+<span style="color:#75715e">#  RECOMMENDED.</span>
+<span style="color:#75715e">#c.NotebookApp.token = &#39;&lt;generated&gt;&#39;</span>
+
+<span style="color:#75715e">## Supply overrides for the tornado.web.Application that the Jupyter notebook</span>
+<span style="color:#75715e">#  uses.</span>
+<span style="color:#75715e">#c.NotebookApp.tornado_settings = {}</span>
+
+<span style="color:#75715e">## Whether to trust or not X-Scheme/X-Forwarded-Proto and X-Real-Ip/X-Forwarded-</span>
+<span style="color:#75715e">#  For headerssent by the upstream reverse proxy. Necessary if the proxy handles</span>
+<span style="color:#75715e">#  SSL</span>
+<span style="color:#75715e">#c.NotebookApp.trust_xheaders = False</span>
+
+<span style="color:#75715e">## DEPRECATED, use tornado_settings</span>
+<span style="color:#75715e">#c.NotebookApp.webapp_settings = {}</span>
+
+<span style="color:#75715e">## Specify Where to open the notebook on startup. This is the `new` argument</span>
+<span style="color:#75715e">#  passed to the standard library method `webbrowser.open`. The behaviour is not</span>
+<span style="color:#75715e">#  guaranteed, but depends on browser support. Valid values are:</span>
+<span style="color:#75715e">#  </span>
+<span style="color:#75715e">#   - 2 opens a new tab,</span>
+<span style="color:#75715e">#   - 1 opens a new window,</span>
+<span style="color:#75715e">#   - 0 opens in an existing window.</span>
+<span style="color:#75715e">#  </span>
+<span style="color:#75715e">#  See the `webbrowser.open` documentation for details.</span>
+<span style="color:#75715e">#c.NotebookApp.webbrowser_open_new = 2</span>
+
+<span style="color:#75715e">## Set the tornado compression options for websocket connections.</span>
+<span style="color:#75715e">#  </span>
+<span style="color:#75715e">#  This value will be returned from</span>
+<span style="color:#75715e">#  :meth:`WebSocketHandler.get_compression_options`. None (default) will disable</span>
+<span style="color:#75715e">#  compression. A dict (even an empty one) will enable compression.</span>
+<span style="color:#75715e">#  </span>
+<span style="color:#75715e">#  See the tornado docs for WebSocketHandler.get_compression_options for details.</span>
+<span style="color:#75715e">#c.NotebookApp.websocket_compression_options = None</span>
+
+<span style="color:#75715e">## The base URL for websockets, if it differs from the HTTP server (hint: it</span>
+<span style="color:#75715e">#  almost certainly doesn&#39;t).</span>
+<span style="color:#75715e">#  </span>
+<span style="color:#75715e">#  Should be in the form of an HTTP origin: ws[s]://hostname[:port]</span>
+<span style="color:#75715e">#c.NotebookApp.websocket_url = &#39;&#39;</span>
+
+<span style="color:#75715e">#------------------------------------------------------------------------------</span>
+<span style="color:#75715e"># ConnectionFileMixin(LoggingConfigurable) configuration</span>
+<span style="color:#75715e">#------------------------------------------------------------------------------</span>
+
+<span style="color:#75715e">## Mixin for configurable classes that work with connection files</span>
+
+<span style="color:#75715e">## JSON file in which to store connection info [default: kernel-&lt;pid&gt;.json]</span>
+<span style="color:#75715e">#  </span>
+<span style="color:#75715e">#  This file will contain the IP, ports, and authentication key needed to connect</span>
+<span style="color:#75715e">#  clients to this kernel. By default, this file will be created in the security</span>
+<span style="color:#75715e">#  dir of the current profile, but can be specified by absolute path.</span>
+<span style="color:#75715e">#c.ConnectionFileMixin.connection_file = &#39;&#39;</span>
+
+<span style="color:#75715e">## set the control (ROUTER) port [default: random]</span>
+<span style="color:#75715e">#c.ConnectionFileMixin.control_port = 0</span>
+
+<span style="color:#75715e">## set the heartbeat port [default: random]</span>
+<span style="color:#75715e">#c.ConnectionFileMixin.hb_port = 0</span>
+
+<span style="color:#75715e">## set the iopub (PUB) port [default: random]</span>
+<span style="color:#75715e">#c.ConnectionFileMixin.iopub_port = 0</span>
+
+<span style="color:#75715e">## Set the kernel&#39;s IP address [default localhost]. If the IP address is</span>
+<span style="color:#75715e">#  something other than localhost, then Consoles on other machines will be able</span>
+<span style="color:#75715e">#  to connect to the Kernel, so be careful!</span>
+<span style="color:#75715e">#c.ConnectionFileMixin.ip = &#39;&#39;</span>
+
+<span style="color:#75715e">## set the shell (ROUTER) port [default: random]</span>
+<span style="color:#75715e">#c.ConnectionFileMixin.shell_port = 0</span>
+
+<span style="color:#75715e">## set the stdin (ROUTER) port [default: random]</span>
+<span style="color:#75715e">#c.ConnectionFileMixin.stdin_port = 0</span>
+
+<span style="color:#75715e">## </span>
+<span style="color:#75715e">#c.ConnectionFileMixin.transport = &#39;tcp&#39;</span>
+
+<span style="color:#75715e">#------------------------------------------------------------------------------</span>
+<span style="color:#75715e"># KernelManager(ConnectionFileMixin) configuration</span>
+<span style="color:#75715e">#------------------------------------------------------------------------------</span>
+
+<span style="color:#75715e">## Manages a single kernel in a subprocess on this host.</span>
+<span style="color:#75715e">#  </span>
+<span style="color:#75715e">#  This version starts kernels with Popen.</span>
+
+<span style="color:#75715e">## Should we autorestart the kernel if it dies.</span>
+<span style="color:#75715e">#c.KernelManager.autorestart = True</span>
+
+<span style="color:#75715e">## DEPRECATED: Use kernel_name instead.</span>
+<span style="color:#75715e">#  </span>
+<span style="color:#75715e">#  The Popen Command to launch the kernel. Override this if you have a custom</span>
+<span style="color:#75715e">#  kernel. If kernel_cmd is specified in a configuration file, Jupyter does not</span>
+<span style="color:#75715e">#  pass any arguments to the kernel, because it cannot make any assumptions about</span>
+<span style="color:#75715e">#  the arguments that the kernel understands. In particular, this means that the</span>
+<span style="color:#75715e">#  kernel does not receive the option --debug if it given on the Jupyter command</span>
+<span style="color:#75715e">#  line.</span>
+<span style="color:#75715e">#c.KernelManager.kernel_cmd = []</span>
+
+<span style="color:#75715e">## Time to wait for a kernel to terminate before killing it, in seconds.</span>
+<span style="color:#75715e">#c.KernelManager.shutdown_wait_time = 5.0</span>
+
+<span style="color:#75715e">#------------------------------------------------------------------------------</span>
+<span style="color:#75715e"># Session(Configurable) configuration</span>
+<span style="color:#75715e">#------------------------------------------------------------------------------</span>
+
+<span style="color:#75715e">## Object for handling serialization and sending of messages.</span>
+<span style="color:#75715e">#  </span>
+<span style="color:#75715e">#  The Session object handles building messages and sending them with ZMQ sockets</span>
+<span style="color:#75715e">#  or ZMQStream objects.  Objects can communicate with each other over the</span>
+<span style="color:#75715e">#  network via Session objects, and only need to work with the dict-based IPython</span>
+<span style="color:#75715e">#  message spec. The Session will handle serialization/deserialization, security,</span>
+<span style="color:#75715e">#  and metadata.</span>
+<span style="color:#75715e">#  </span>
+<span style="color:#75715e">#  Sessions support configurable serialization via packer/unpacker traits, and</span>
+<span style="color:#75715e">#  signing with HMAC digests via the key/keyfile traits.</span>
+<span style="color:#75715e">#  </span>
+<span style="color:#75715e">#  Parameters ----------</span>
+<span style="color:#75715e">#  </span>
+<span style="color:#75715e">#  debug : bool</span>
+<span style="color:#75715e">#      whether to trigger extra debugging statements</span>
+<span style="color:#75715e">#  packer/unpacker : str : &#39;json&#39;, &#39;pickle&#39; or import_string</span>
+<span style="color:#75715e">#      importstrings for methods to serialize message parts.  If just</span>
+<span style="color:#75715e">#      &#39;json&#39; or &#39;pickle&#39;, predefined JSON and pickle packers will be used.</span>
+<span style="color:#75715e">#      Otherwise, the entire importstring must be used.</span>
+<span style="color:#75715e">#  </span>
+<span style="color:#75715e">#      The functions must accept at least valid JSON input, and output *bytes*.</span>
+<span style="color:#75715e">#  </span>
+<span style="color:#75715e">#      For example, to use msgpack:</span>
+<span style="color:#75715e">#      packer = &#39;msgpack.packb&#39;, unpacker=&#39;msgpack.unpackb&#39;</span>
+<span style="color:#75715e">#  pack/unpack : callables</span>
+<span style="color:#75715e">#      You can also set the pack/unpack callables for serialization directly.</span>
+<span style="color:#75715e">#  session : bytes</span>
+<span style="color:#75715e">#      the ID of this Session object.  The default is to generate a new UUID.</span>
+<span style="color:#75715e">#  username : unicode</span>
+<span style="color:#75715e">#      username added to message headers.  The default is to ask the OS.</span>
+<span style="color:#75715e">#  key : bytes</span>
+<span style="color:#75715e">#      The key used to initialize an HMAC signature.  If unset, messages</span>
+<span style="color:#75715e">#      will not be signed or checked.</span>
+<span style="color:#75715e">#  keyfile : filepath</span>
+<span style="color:#75715e">#      The file containing a key.  If this is set, `key` will be initialized</span>
+<span style="color:#75715e">#      to the contents of the file.</span>
+
+<span style="color:#75715e">## Threshold (in bytes) beyond which an object&#39;s buffer should be extracted to</span>
+<span style="color:#75715e">#  avoid pickling.</span>
+<span style="color:#75715e">#c.Session.buffer_threshold = 1024</span>
+
+<span style="color:#75715e">## Whether to check PID to protect against calls after fork.</span>
+<span style="color:#75715e">#  </span>
+<span style="color:#75715e">#  This check can be disabled if fork-safety is handled elsewhere.</span>
+<span style="color:#75715e">#c.Session.check_pid = True</span>
+
+<span style="color:#75715e">## Threshold (in bytes) beyond which a buffer should be sent without copying.</span>
+<span style="color:#75715e">#c.Session.copy_threshold = 65536</span>
+
+<span style="color:#75715e">## Debug output in the Session</span>
+<span style="color:#75715e">#c.Session.debug = False</span>
+
+<span style="color:#75715e">## The maximum number of digests to remember.</span>
+<span style="color:#75715e">#  </span>
+<span style="color:#75715e">#  The digest history will be culled when it exceeds this value.</span>
+<span style="color:#75715e">#c.Session.digest_history_size = 65536</span>
+
+<span style="color:#75715e">## The maximum number of items for a container to be introspected for custom</span>
+<span style="color:#75715e">#  serialization. Containers larger than this are pickled outright.</span>
+<span style="color:#75715e">#c.Session.item_threshold = 64</span>
+
+<span style="color:#75715e">## execution key, for signing messages.</span>
+<span style="color:#75715e">#c.Session.key = b&#39;&#39;</span>
+
+<span style="color:#75715e">## path to file containing execution key.</span>
+<span style="color:#75715e">#c.Session.keyfile = &#39;&#39;</span>
+
+<span style="color:#75715e">## Metadata dictionary, which serves as the default top-level metadata dict for</span>
+<span style="color:#75715e">#  each message.</span>
+<span style="color:#75715e">#c.Session.metadata = {}</span>
+
+<span style="color:#75715e">## The name of the packer for serializing messages. Should be one of &#39;json&#39;,</span>
+<span style="color:#75715e">#  &#39;pickle&#39;, or an import name for a custom callable serializer.</span>
+<span style="color:#75715e">#c.Session.packer = &#39;json&#39;</span>
+
+<span style="color:#75715e">## The UUID identifying this session.</span>
+<span style="color:#75715e">#c.Session.session = &#39;&#39;</span>
+
+<span style="color:#75715e">## The digest scheme used to construct the message signatures. Must have the form</span>
+<span style="color:#75715e">#  &#39;hmac-HASH&#39;.</span>
+<span style="color:#75715e">#c.Session.signature_scheme = &#39;hmac-sha256&#39;</span>
+
+<span style="color:#75715e">## The name of the unpacker for unserializing messages. Only used with custom</span>
+<span style="color:#75715e">#  functions for `packer`.</span>
+<span style="color:#75715e">#c.Session.unpacker = &#39;json&#39;</span>
+
+<span style="color:#75715e">## Username for the Session. Default is your system username.</span>
+<span style="color:#75715e">#c.Session.username = &#39;用户名&#39;</span>
+
+<span style="color:#75715e">#------------------------------------------------------------------------------</span>
+<span style="color:#75715e"># MultiKernelManager(LoggingConfigurable) configuration</span>
+<span style="color:#75715e">#------------------------------------------------------------------------------</span>
+
+<span style="color:#75715e">## A class for managing multiple kernels.</span>
+
+<span style="color:#75715e">## The name of the default kernel to start</span>
+<span style="color:#75715e">#c.MultiKernelManager.default_kernel_name = &#39;python3&#39;</span>
+
+<span style="color:#75715e">## The kernel manager class.  This is configurable to allow subclassing of the</span>
+<span style="color:#75715e">#  KernelManager for customized behavior.</span>
+<span style="color:#75715e">#c.MultiKernelManager.kernel_manager_class = &#39;jupyter_client.ioloop.IOLoopKernelManager&#39;</span>
+
+<span style="color:#75715e">#------------------------------------------------------------------------------</span>
+<span style="color:#75715e"># MappingKernelManager(MultiKernelManager) configuration</span>
+<span style="color:#75715e">#------------------------------------------------------------------------------</span>
+
+<span style="color:#75715e">## A KernelManager that handles notebook mapping and HTTP error handling</span>
+
+<span style="color:#75715e">## Whether messages from kernels whose frontends have disconnected should be</span>
+<span style="color:#75715e">#  buffered in-memory.</span>
+<span style="color:#75715e">#  </span>
+<span style="color:#75715e">#  When True (default), messages are buffered and replayed on reconnect, avoiding</span>
+<span style="color:#75715e">#  lost messages due to interrupted connectivity.</span>
+<span style="color:#75715e">#  </span>
+<span style="color:#75715e">#  Disable if long-running kernels will produce too much output while no</span>
+<span style="color:#75715e">#  frontends are connected.</span>
+<span style="color:#75715e">#c.MappingKernelManager.buffer_offline_messages = True</span>
+
+<span style="color:#75715e">## Whether to consider culling kernels which are busy. Only effective if</span>
+<span style="color:#75715e">#  cull_idle_timeout &gt; 0.</span>
+<span style="color:#75715e">#c.MappingKernelManager.cull_busy = False</span>
+
+<span style="color:#75715e">## Whether to consider culling kernels which have one or more connections. Only</span>
+<span style="color:#75715e">#  effective if cull_idle_timeout &gt; 0.</span>
+<span style="color:#75715e">#c.MappingKernelManager.cull_connected = False</span>
+
+<span style="color:#75715e">## Timeout (in seconds) after which a kernel is considered idle and ready to be</span>
+<span style="color:#75715e">#  culled. Values of 0 or lower disable culling. Very short timeouts may result</span>
+<span style="color:#75715e">#  in kernels being culled for users with poor network connections.</span>
+<span style="color:#75715e">#c.MappingKernelManager.cull_idle_timeout = 0</span>
+
+<span style="color:#75715e">## The interval (in seconds) on which to check for idle kernels exceeding the</span>
+<span style="color:#75715e">#  cull timeout value.</span>
+<span style="color:#75715e">#c.MappingKernelManager.cull_interval = 300</span>
+
+<span style="color:#75715e">## Timeout for giving up on a kernel (in seconds).</span>
+<span style="color:#75715e">#  </span>
+<span style="color:#75715e">#  On starting and restarting kernels, we check whether the kernel is running and</span>
+<span style="color:#75715e">#  responsive by sending kernel_info_requests. This sets the timeout in seconds</span>
+<span style="color:#75715e">#  for how long the kernel can take before being presumed dead.  This affects the</span>
+<span style="color:#75715e">#  MappingKernelManager (which handles kernel restarts)  and the</span>
+<span style="color:#75715e">#  ZMQChannelsHandler (which handles the startup).</span>
+<span style="color:#75715e">#c.MappingKernelManager.kernel_info_timeout = 60</span>
+
+<span style="color:#75715e">## </span>
+<span style="color:#75715e">#c.MappingKernelManager.root_dir = &#39;&#39;</span>
+
+<span style="color:#75715e">#------------------------------------------------------------------------------</span>
+<span style="color:#75715e"># ContentsManager(LoggingConfigurable) configuration</span>
+<span style="color:#75715e">#------------------------------------------------------------------------------</span>
+
+<span style="color:#75715e">## Base class for serving files and directories.</span>
+<span style="color:#75715e">#  </span>
+<span style="color:#75715e">#  This serves any text or binary file, as well as directories, with special</span>
+<span style="color:#75715e">#  handling for JSON notebook documents.</span>
+<span style="color:#75715e">#  </span>
+<span style="color:#75715e">#  Most APIs take a path argument, which is always an API-style unicode path, and</span>
+<span style="color:#75715e">#  always refers to a directory.</span>
+<span style="color:#75715e">#  </span>
+<span style="color:#75715e">#  - unicode, not url-escaped</span>
+<span style="color:#75715e">#  - &#39;/&#39;-separated</span>
+<span style="color:#75715e">#  - leading and trailing &#39;/&#39; will be stripped</span>
+<span style="color:#75715e">#  - if unspecified, path defaults to &#39;&#39;,</span>
+<span style="color:#75715e">#    indicating the root path.</span>
+
+<span style="color:#75715e">## Allow access to hidden files</span>
+<span style="color:#75715e">#c.ContentsManager.allow_hidden = False</span>
+
+<span style="color:#75715e">## </span>
+<span style="color:#75715e">#c.ContentsManager.checkpoints = None</span>
+
+<span style="color:#75715e">## </span>
+<span style="color:#75715e">#c.ContentsManager.checkpoints_class = &#39;notebook.services.contents.checkpoints.Checkpoints&#39;</span>
+
+<span style="color:#75715e">## </span>
+<span style="color:#75715e">#c.ContentsManager.checkpoints_kwargs = {}</span>
+
+<span style="color:#75715e">## handler class to use when serving raw file requests.</span>
+<span style="color:#75715e">#  </span>
+<span style="color:#75715e">#  Default is a fallback that talks to the ContentsManager API, which may be</span>
+<span style="color:#75715e">#  inefficient, especially for large files.</span>
+<span style="color:#75715e">#  </span>
+<span style="color:#75715e">#  Local files-based ContentsManagers can use a StaticFileHandler subclass, which</span>
+<span style="color:#75715e">#  will be much more efficient.</span>
+<span style="color:#75715e">#  </span>
+<span style="color:#75715e">#  Access to these files should be Authenticated.</span>
+<span style="color:#75715e">#c.ContentsManager.files_handler_class = &#39;notebook.files.handlers.FilesHandler&#39;</span>
+
+<span style="color:#75715e">## Extra parameters to pass to files_handler_class.</span>
+<span style="color:#75715e">#  </span>
+<span style="color:#75715e">#  For example, StaticFileHandlers generally expect a `path` argument specifying</span>
+<span style="color:#75715e">#  the root directory from which to serve files.</span>
+<span style="color:#75715e">#c.ContentsManager.files_handler_params = {}</span>
+
+<span style="color:#75715e">## Glob patterns to hide in file and directory listings.</span>
+<span style="color:#75715e">#c.ContentsManager.hide_globs = [&#39;__pycache__&#39;, &#39;*.pyc&#39;, &#39;*.pyo&#39;, &#39;.DS_Store&#39;, &#39;*.so&#39;, &#39;*.dylib&#39;, &#39;*~&#39;]</span>
+
+<span style="color:#75715e">## Python callable or importstring thereof</span>
+<span style="color:#75715e">#  </span>
+<span style="color:#75715e">#  To be called on a contents model prior to save.</span>
+<span style="color:#75715e">#  </span>
+<span style="color:#75715e">#  This can be used to process the structure, such as removing notebook outputs</span>
+<span style="color:#75715e">#  or other side effects that should not be saved.</span>
+<span style="color:#75715e">#  </span>
+<span style="color:#75715e">#  It will be called as (all arguments passed by keyword)::</span>
+<span style="color:#75715e">#  </span>
+<span style="color:#75715e">#      hook(path=path, model=model, contents_manager=self)</span>
+<span style="color:#75715e">#  </span>
+<span style="color:#75715e">#  - model: the model to be saved. Includes file contents.</span>
+<span style="color:#75715e">#    Modifying this dict will affect the file that is stored.</span>
+<span style="color:#75715e">#  - path: the API path of the save destination</span>
+<span style="color:#75715e">#  - contents_manager: this ContentsManager instance</span>
+<span style="color:#75715e">#c.ContentsManager.pre_save_hook = None</span>
+
+<span style="color:#75715e">## </span>
+<span style="color:#75715e">#c.ContentsManager.root_dir = &#39;/&#39;</span>
+
+<span style="color:#75715e">## The base name used when creating untitled directories.</span>
+<span style="color:#75715e">#c.ContentsManager.untitled_directory = &#39;Untitled Folder&#39;</span>
+
+<span style="color:#75715e">## The base name used when creating untitled files.</span>
+<span style="color:#75715e">#c.ContentsManager.untitled_file = &#39;untitled&#39;</span>
+
+<span style="color:#75715e">## The base name used when creating untitled notebooks.</span>
+<span style="color:#75715e">#c.ContentsManager.untitled_notebook = &#39;Untitled&#39;</span>
+
+<span style="color:#75715e">#------------------------------------------------------------------------------</span>
+<span style="color:#75715e"># FileManagerMixin(Configurable) configuration</span>
+<span style="color:#75715e">#------------------------------------------------------------------------------</span>
+
+<span style="color:#75715e">## Mixin for ContentsAPI classes that interact with the filesystem.</span>
+<span style="color:#75715e">#  </span>
+<span style="color:#75715e">#  Provides facilities for reading, writing, and copying both notebooks and</span>
+<span style="color:#75715e">#  generic files.</span>
+<span style="color:#75715e">#  </span>
+<span style="color:#75715e">#  Shared by FileContentsManager and FileCheckpoints.</span>
+<span style="color:#75715e">#  </span>
+<span style="color:#75715e">#  Note ---- Classes using this mixin must provide the following attributes:</span>
+<span style="color:#75715e">#  </span>
+<span style="color:#75715e">#  root_dir : unicode</span>
+<span style="color:#75715e">#      A directory against against which API-style paths are to be resolved.</span>
+<span style="color:#75715e">#  </span>
+<span style="color:#75715e">#  log : logging.Logger</span>
+
+<span style="color:#75715e">## By default notebooks are saved on disk on a temporary file and then if</span>
+<span style="color:#75715e">#  succefully written, it replaces the old ones. This procedure, namely</span>
+<span style="color:#75715e">#  &#39;atomic_writing&#39;, causes some bugs on file system whitout operation order</span>
+<span style="color:#75715e">#  enforcement (like some networked fs). If set to False, the new notebook is</span>
+<span style="color:#75715e">#  written directly on the old one which could fail (eg: full filesystem or quota</span>
+<span style="color:#75715e">#  )</span>
+<span style="color:#75715e">#c.FileManagerMixin.use_atomic_writing = True</span>
+
+<span style="color:#75715e">#------------------------------------------------------------------------------</span>
+<span style="color:#75715e"># FileContentsManager(FileManagerMixin,ContentsManager) configuration</span>
+<span style="color:#75715e">#------------------------------------------------------------------------------</span>
+
+<span style="color:#75715e">## If True (default), deleting files will send them to the platform&#39;s</span>
+<span style="color:#75715e">#  trash/recycle bin, where they can be recovered. If False, deleting files</span>
+<span style="color:#75715e">#  really deletes them.</span>
+<span style="color:#75715e">#c.FileContentsManager.delete_to_trash = True</span>
+
+<span style="color:#75715e">## Python callable or importstring thereof</span>
+<span style="color:#75715e">#  </span>
+<span style="color:#75715e">#  to be called on the path of a file just saved.</span>
+<span style="color:#75715e">#  </span>
+<span style="color:#75715e">#  This can be used to process the file on disk, such as converting the notebook</span>
+<span style="color:#75715e">#  to a script or HTML via nbconvert.</span>
+<span style="color:#75715e">#  </span>
+<span style="color:#75715e">#  It will be called as (all arguments passed by keyword)::</span>
+<span style="color:#75715e">#  </span>
+<span style="color:#75715e">#      hook(os_path=os_path, model=model, contents_manager=instance)</span>
+<span style="color:#75715e">#  </span>
+<span style="color:#75715e">#  - path: the filesystem path to the file just written - model: the model</span>
+<span style="color:#75715e">#  representing the file - contents_manager: this ContentsManager instance</span>
+<span style="color:#75715e">#c.FileContentsManager.post_save_hook = None</span>
+
+<span style="color:#75715e">## </span>
+<span style="color:#75715e">#c.FileContentsManager.root_dir = &#39;&#39;</span>
+
+<span style="color:#75715e">## DEPRECATED, use post_save_hook. Will be removed in Notebook 5.0</span>
+<span style="color:#75715e">#c.FileContentsManager.save_script = False</span>
+
+<span style="color:#75715e">#------------------------------------------------------------------------------</span>
+<span style="color:#75715e"># NotebookNotary(LoggingConfigurable) configuration</span>
+<span style="color:#75715e">#------------------------------------------------------------------------------</span>
+
+<span style="color:#75715e">## A class for computing and verifying notebook signatures.</span>
+
+<span style="color:#75715e">## The hashing algorithm used to sign notebooks.</span>
+<span style="color:#75715e">#c.NotebookNotary.algorithm = &#39;sha256&#39;</span>
+
+<span style="color:#75715e">## The sqlite file in which to store notebook signatures. By default, this will</span>
+<span style="color:#75715e">#  be in your Jupyter data directory. You can set it to &#39;:memory:&#39; to disable</span>
+<span style="color:#75715e">#  sqlite writing to the filesystem.</span>
+<span style="color:#75715e">#c.NotebookNotary.db_file = &#39;&#39;</span>
+
+<span style="color:#75715e">## The secret key with which notebooks are signed.</span>
+<span style="color:#75715e">#c.NotebookNotary.secret = b&#39;&#39;</span>
+
+<span style="color:#75715e">## The file where the secret key is stored.</span>
+<span style="color:#75715e">#c.NotebookNotary.secret_file = &#39;&#39;</span>
+
+<span style="color:#75715e">## A callable returning the storage backend for notebook signatures. The default</span>
+<span style="color:#75715e">#  uses an SQLite database.</span>
+<span style="color:#75715e">#c.NotebookNotary.store_factory = traitlets.Undefined</span>
+
+<span style="color:#75715e">#------------------------------------------------------------------------------</span>
+<span style="color:#75715e"># KernelSpecManager(LoggingConfigurable) configuration</span>
+<span style="color:#75715e">#------------------------------------------------------------------------------</span>
+
+<span style="color:#75715e">## If there is no Python kernelspec registered and the IPython kernel is</span>
+<span style="color:#75715e">#  available, ensure it is added to the spec list.</span>
+<span style="color:#75715e">#c.KernelSpecManager.ensure_native_kernel = True</span>
+
+<span style="color:#75715e">## The kernel spec class.  This is configurable to allow subclassing of the</span>
+<span style="color:#75715e">#  KernelSpecManager for customized behavior.</span>
+<span style="color:#75715e">#c.KernelSpecManager.kernel_spec_class = &#39;jupyter_client.kernelspec.KernelSpec&#39;</span>
+
+<span style="color:#75715e">## Whitelist of allowed kernel names.</span>
+<span style="color:#75715e">#  </span>
+<span style="color:#75715e">#  By default, all installed kernels are allowed.</span>
+<span style="color:#75715e">#c.KernelSpecManager.whitelist = set()</span></code></pre></div>
+</div>
+
+  
+<footer class='entry-footer'>
+  <div class='container sep-before'><div class='categories'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M22,19a2,2,0,0,1-2,2H4a2,2,0,0,1-2-2V5A2,2,0,0,1,4,3H9l2,3h9a2,2,0,0,1,2,2Z"/>
+  
+</svg>
+<span class='screen-reader-text'>Categories: </span><a class='category' href='/categories/jupyter/'>jupyter</a></div>
+<div class='tags'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M20.59,13.41l-7.17,7.17a2,2,0,0,1-2.83,0L2,12V2H12l8.59,8.59A2,2,0,0,1,20.59,13.41Z"/>
+  <line x1="7" y1="7" x2="7" y2="7"/>
+  
+</svg>
+<span class='screen-reader-text'>Tags: </span><a class='tag' href='/tags/%E9%85%8D%E7%BD%AE/'>配置</a>, <a class='tag' href='/tags/jupyter/'>jupyter</a></div>
+
+  </div>
+</footer>
+
+
+</article>
+
+<nav class='entry-nav'>
+  <div class='container'><div class='prev-entry sep-before'>
+      <a href='/post/20190515154121/'>
+        <span aria-hidden='true'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="20" y1="12" x2="4" y2="12"/>
+  <polyline points="10 18 4 12 10 6"/>
+  
+</svg>
+ Previous</span>
+        <span class='screen-reader-text'>Previous post: </span>jupyter_notebook_config.py常用配置</a>
+    </div><div class='next-entry sep-before'>
+      <a href='/post/20190517165040/'>
+        <span class='screen-reader-text'>Next post: </span>js 相等和不相等操作符总结<span aria-hidden='true'>Next <svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="4" y1="12" x2="20" y2="12"/>
+  <polyline points="14 6 20 12 14 18"/>
+  
+</svg>
+</span>
+      </a>
+    </div></div>
+</nav>
+
+
+
+
+      </main>
+
+      <footer id='footer' class='footer'>
+        <div class='container sep-before'><section class='widget widget-social_menu sep-after'><nav aria-label='Social Menu'>
+    <ul><li>
+        <a href='https://github.com/mannuan' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Github account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='mailto:mannuandeyangguang@163.com' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Contact via Email</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+  <polyline points="22,6 12,13 2,6"/>
+  
+</svg>
+</a>
+      </li></ul>
+  </nav>
+</section><div class='copyright'>
+  <p> &copy; 2019 mannuan </p>
+</div>
+
+        </div>
+      </footer>
+
+    </div>
+  </div><script>window.__assets_js_src="/assets/js/"</script>
+
+<script src='/assets/js/main.67d669ac.js'></script><script src='/js/custom.js'></script>
+
+</body>
+
+</html>
+

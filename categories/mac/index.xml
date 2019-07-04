@@ -12,10 +12,10 @@
     
     <item>
       <title>nodejs安装教程（完美避坑，适用于mac和linux）</title>
-      <link>https://mannuan.github.io/post/nodejs%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%E5%AE%8C%E7%BE%8E%E9%81%BF%E5%9D%91%E9%80%82%E7%94%A8%E4%BA%8Emac%E5%92%8Clinux/</link>
+      <link>https://mannuan.github.io/post/20190628152512/</link>
       <pubDate>Fri, 28 Jun 2019 15:25:12 +0800</pubDate>
       
-      <guid>https://mannuan.github.io/post/nodejs%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B%E5%AE%8C%E7%BE%8E%E9%81%BF%E5%9D%91%E9%80%82%E7%94%A8%E4%BA%8Emac%E5%92%8Clinux/</guid>
+      <guid>https://mannuan.github.io/post/20190628152512/</guid>
       <description>安装nodejs mac端 brew install node 如果安装速度慢，可以到nodejs官网下载pkg安装包；
 linux端 sudo apt-get install nodejs 检查安装 node -v npm -v 修改node_modules目录权限 教程
 添加node_modules路径 教程</description>
@@ -23,10 +23,10 @@ linux端 sudo apt-get install nodejs 检查安装 node -v npm -v 修改node_modu
     
     <item>
       <title>node require can&#39;t find module(mac或linux，不支持window)</title>
-      <link>https://mannuan.github.io/post/node-require-cant-find-module/</link>
+      <link>https://mannuan.github.io/post/20190628114044/</link>
       <pubDate>Fri, 28 Jun 2019 11:40:44 +0800</pubDate>
       
-      <guid>https://mannuan.github.io/post/node-require-cant-find-module/</guid>
+      <guid>https://mannuan.github.io/post/20190628114044/</guid>
       <description> 前言  我已经正确的安装了node，并且我使用npm install -g 安装包没有出错，但是就是require(&amp;lsquo;安装包&amp;rsquo;)报错，我的安装在&amp;rsquo;/usr/local/lib/node_modules&amp;rsquo;下面
  原因分析 可能是node命令早不到npm的安装包的安装目录，于是我打印了node默认的模块目录：
 &amp;gt;&amp;gt;node &amp;gt;module.paths [ &#39;/Users/用户名/repl/node_modules&#39;, &#39;/Users/用户名/node_modules&#39;, &#39;/Users/node_modules&#39;, &#39;/node_modules&#39;, &#39;/Users/用户名/.node_modules&#39;, &#39;/Users/用户名/.node_libraries&#39;, &#39;/usr/local/lib/node&#39; ]  我发现，‘/usr/local/lib/node_modules’目录并没有包含在里面，于是我使用下面的命令
@@ -37,10 +37,10 @@ linux端 sudo apt-get install nodejs 检查安装 node -v npm -v 修改node_modu
     
     <item>
       <title>npm list -g出错</title>
-      <link>https://mannuan.github.io/post/npm-list-g%E5%87%BA%E9%94%99/</link>
+      <link>https://mannuan.github.io/post/20190628110638/</link>
       <pubDate>Fri, 28 Jun 2019 11:06:38 +0800</pubDate>
       
-      <guid>https://mannuan.github.io/post/npm-list-g%E5%87%BA%E9%94%99/</guid>
+      <guid>https://mannuan.github.io/post/20190628110638/</guid>
       <description>前言  我是在重装node之后遇到这个问题的
  原因分析 当你已经安装node之后，它给你以下提示说明你已经安装好了：
 This package has installed: Node.js v10.16.0 to /usr/local/bin/node npm v6.9.0 to /usr/local/bin/npm Make sure that /usr/local/bin is in your $PATH.  但是，当你使用下面命令，报错了
@@ -51,10 +51,10 @@ npm list -g 推测 我认为可能是没有卸载干净
     
     <item>
       <title>npm WARN checkPermissions Missing write access to /usr/local/lib/node_modules</title>
-      <link>https://mannuan.github.io/post/npm-warn-checkpermissions-missing-write-to/</link>
+      <link>https://mannuan.github.io/post/20190628104030/</link>
       <pubDate>Fri, 28 Jun 2019 10:40:30 +0800</pubDate>
       
-      <guid>https://mannuan.github.io/post/npm-warn-checkpermissions-missing-write-to/</guid>
+      <guid>https://mannuan.github.io/post/20190628104030/</guid>
       <description> 原因分析  详看错误提示：npm ERR! Error: EACCES: permission denied, access &amp;lsquo;/usr/local/lib/node_modules&amp;rsquo; 推测当前用户没有对&amp;rdquo;node_modules&amp;rdquo;的写入权限
  验证推测 &amp;gt;&amp;gt; ls -lth /usr/local/lib/node_modules total 0 drwxr-xr-x 24 root wheel 768B May 29 05:21 npm  观看上面的结果推测成立
 解决方案 方案一（不推荐） 修改&amp;rdquo;node_modules&amp;rdquo;的权限，增加”写入“权限；
@@ -65,10 +65,10 @@ sudo chown -R $USER /usr/local/lib/node_modules</description>
     
     <item>
       <title>mac下pkg安装包卸载</title>
-      <link>https://mannuan.github.io/post/mac%E4%B8%8Bpkg%E5%AE%89%E8%A3%85%E5%8C%85%E5%8D%B8%E8%BD%BD/</link>
+      <link>https://mannuan.github.io/post/20190628101517/</link>
       <pubDate>Fri, 28 Jun 2019 10:15:17 +0800</pubDate>
       
-      <guid>https://mannuan.github.io/post/mac%E4%B8%8Bpkg%E5%AE%89%E8%A3%85%E5%8C%85%E5%8D%B8%E8%BD%BD/</guid>
+      <guid>https://mannuan.github.io/post/20190628101517/</guid>
       <description>Mac下的安装和删除都比windows更加简单清晰，这点在dmg方式下非常明显，但很多时候我们会使用pkg来进行安装，这样的安装想删除就有点麻烦了。
 比如，我安装了Golang这个pkg用于go语言的编译，安装后确实可以使用，但安装的是一个工具链，并不是一个应用软件。所以在Application目录下是没有内容的，你可以查到安装在/usr/local/go这个目录下，但是否所有的内容都安装在这个目录下呢？我删除这个pkg的目的是为了用源码直接编译出工具链来应用，如果还有其他一些配置文件遗漏，可能会导致后续配置的问题。
 经过一些搜索和学习，觉得有两个方法：
@@ -81,10 +81,10 @@ sudo chown -R $USER /usr/local/lib/node_modules</description>
     
     <item>
       <title>优化mac触摸板（Trackpad）使用体验的推荐设置</title>
-      <link>https://mannuan.github.io/post/%E4%BC%98%E5%8C%96mac%E8%A7%A6%E6%91%B8%E6%9D%BFtrackpad%E4%BD%BF%E7%94%A8%E4%BD%93%E9%AA%8C%E7%9A%84%E6%8E%A8%E8%8D%90%E8%AE%BE%E7%BD%AE/</link>
+      <link>https://mannuan.github.io/post/20190627165448/</link>
       <pubDate>Thu, 27 Jun 2019 16:54:48 +0800</pubDate>
       
-      <guid>https://mannuan.github.io/post/%E4%BC%98%E5%8C%96mac%E8%A7%A6%E6%91%B8%E6%9D%BFtrackpad%E4%BD%BF%E7%94%A8%E4%BD%93%E9%AA%8C%E7%9A%84%E6%8E%A8%E8%8D%90%E8%AE%BE%E7%BD%AE/</guid>
+      <guid>https://mannuan.github.io/post/20190627165448/</guid>
       <description>右键菜单 使用”双指点击“代替”右键“
 上下左右滚动页面 使用”双指拖动“代替”鼠标“
 切换窗口 使用”四指拖动“代替”传统的组合快捷键“
@@ -95,66 +95,66 @@ sudo chown -R $USER /usr/local/lib/node_modules</description>
     
     <item>
       <title>iTerm2的常用快捷键</title>
-      <link>https://mannuan.github.io/post/iterm2%E7%9A%84%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/</link>
+      <link>https://mannuan.github.io/post/20190627162924/</link>
       <pubDate>Thu, 27 Jun 2019 16:29:24 +0800</pubDate>
       
-      <guid>https://mannuan.github.io/post/iterm2%E7%9A%84%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/</guid>
+      <guid>https://mannuan.github.io/post/20190627162924/</guid>
       <description>   快捷键 功能     command+D 新建Tab   command+数字 切换Tab    </description>
     </item>
     
     <item>
       <title>mac使用快捷键打开iTerm2</title>
-      <link>https://mannuan.github.io/post/mac%E4%BD%BF%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE%E6%89%93%E5%BC%80iterm2/</link>
+      <link>https://mannuan.github.io/post/20190627154651/</link>
       <pubDate>Thu, 27 Jun 2019 15:46:51 +0800</pubDate>
       
-      <guid>https://mannuan.github.io/post/mac%E4%BD%BF%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE%E6%89%93%E5%BC%80iterm2/</guid>
+      <guid>https://mannuan.github.io/post/20190627154651/</guid>
       <description>前言  使用快捷键打开item窗口的一个前提是iTerm必须已经打开了
  选择iTerm2，点击prefences 点击Profiles 新建窗口实例 常用的窗口属性 设置窗口名称 设置窗口字体 设置窗口透明度 设置窗口的快捷键 设置窗口的位置 有多种设置窗口位置的方法，比如”置顶“，”正常模式“等</description>
     </item>
     
     <item>
       <title>关于mac的time machine功能</title>
-      <link>https://mannuan.github.io/post/%E5%85%B3%E4%BA%8Emac%E7%9A%84time-machine%E5%8A%9F%E8%83%BD/</link>
+      <link>https://mannuan.github.io/post/20190622192423/</link>
       <pubDate>Sat, 22 Jun 2019 19:24:23 +0800</pubDate>
       
-      <guid>https://mannuan.github.io/post/%E5%85%B3%E4%BA%8Emac%E7%9A%84time-machine%E5%8A%9F%E8%83%BD/</guid>
+      <guid>https://mannuan.github.io/post/20190622192423/</guid>
       <description>前言  最近这一个月，我发现我的mac空间不足了。我一直以为是我项目占据了很多空间。因此，不停的进行清理不用的东西。最后，还是发现空间不够。这个清理工作反反复复持续了几周，我电脑硬盘的可以存储空间还是很少。在不经意间，我用外部硬盘time machine备份了一下电脑，瞬间多了一大半的存储空间。我前面几个月也是经常备份电脑的，但是最近这个月由于论文和找工作的缘故没有时间备份。
  总结 mac如果开启time machine功能，就会定期进行备份。如果不用外部硬盘进行备份，就会先被分在本机硬盘上。这样会消耗大量的存储空间。但是，如果不开time machine，资料就没有保障。因此，定期用外部硬盘进行备份尤为重要。</description>
     </item>
     
     <item>
       <title>App can&#39;t be opened because it is from an unidentified developer</title>
-      <link>https://mannuan.github.io/post/app-cant-be-opened-because-it-is-from-an-unidentified-developer/</link>
+      <link>https://mannuan.github.io/post/20190606141846/</link>
       <pubDate>Thu, 06 Jun 2019 14:18:46 +0800</pubDate>
       
-      <guid>https://mannuan.github.io/post/app-cant-be-opened-because-it-is-from-an-unidentified-developer/</guid>
+      <guid>https://mannuan.github.io/post/20190606141846/</guid>
       <description></description>
     </item>
     
     <item>
       <title>mac修改默认终端为iterm2</title>
-      <link>https://mannuan.github.io/post/mac%E4%BF%AE%E6%94%B9%E9%BB%98%E8%AE%A4%E7%BB%88%E7%AB%AF%E4%B8%BAiterm2/</link>
+      <link>https://mannuan.github.io/post/20180830110337/</link>
       <pubDate>Thu, 30 Aug 2018 11:03:37 +0800</pubDate>
       
-      <guid>https://mannuan.github.io/post/mac%E4%BF%AE%E6%94%B9%E9%BB%98%E8%AE%A4%E7%BB%88%E7%AB%AF%E4%B8%BAiterm2/</guid>
+      <guid>https://mannuan.github.io/post/20180830110337/</guid>
       <description></description>
     </item>
     
     <item>
       <title>brew安装卡死原因</title>
-      <link>https://mannuan.github.io/post/brew%E5%AE%89%E8%A3%85%E5%8D%A1%E6%AD%BB%E5%8E%9F%E5%9B%A0/</link>
+      <link>https://mannuan.github.io/post/20180829101640/</link>
       <pubDate>Wed, 29 Aug 2018 10:16:40 +0800</pubDate>
       
-      <guid>https://mannuan.github.io/post/brew%E5%AE%89%E8%A3%85%E5%8D%A1%E6%AD%BB%E5%8E%9F%E5%9B%A0/</guid>
+      <guid>https://mannuan.github.io/post/20180829101640/</guid>
       <description>1.command line tools没有安装，如果执行在线安装的命令也卡死，请看我的上一篇博客的离线安装方法；</description>
     </item>
     
     <item>
       <title>mac command line tools离线安装</title>
-      <link>https://mannuan.github.io/post/mac-command-line-tools%E7%A6%BB%E7%BA%BF%E5%AE%89%E8%A3%85/</link>
+      <link>https://mannuan.github.io/post/20180829101005/</link>
       <pubDate>Wed, 29 Aug 2018 10:10:05 +0800</pubDate>
       
-      <guid>https://mannuan.github.io/post/mac-command-line-tools%E7%A6%BB%E7%BA%BF%E5%AE%89%E8%A3%85/</guid>
+      <guid>https://mannuan.github.io/post/20180829101005/</guid>
       <description>https://developer.apple.com/download/more/</description>
     </item>
     

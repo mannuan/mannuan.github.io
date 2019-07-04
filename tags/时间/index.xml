@@ -12,10 +12,10 @@
     
     <item>
       <title>JavaScript 事件</title>
-      <link>https://mannuan.github.io/post/javascript-%E4%BA%8B%E4%BB%B6/</link>
+      <link>https://mannuan.github.io/post/20190531204033/</link>
       <pubDate>Fri, 31 May 2019 20:40:33 +0800</pubDate>
       
-      <guid>https://mannuan.github.io/post/javascript-%E4%BA%8B%E4%BB%B6/</guid>
+      <guid>https://mannuan.github.io/post/20190531204033/</guid>
       <description>JavaScript与HTML之间的交互是通过事件实现的。
 事件 ：文档或浏览器窗口中发生的一些交互瞬间；可以使用 侦听器 （或处理程序） 预订 事件，以便事件发生时执行相应的代码。
 这种 侦听事件——执行操作 的模式在传统软件过程中叫做 观察者模式 。

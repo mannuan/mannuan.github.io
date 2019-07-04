@@ -12,10 +12,10 @@
     
     <item>
       <title>关于Ajax的jQuery、Vue.js、原生js的各个版本的实现对比</title>
-      <link>https://mannuan.github.io/post/%E5%85%B3%E4%BA%8Eajax%E7%9A%84jqueryvue.js%E5%8E%9F%E7%94%9Fjs%E7%9A%84%E5%90%84%E4%B8%AA%E7%89%88%E6%9C%AC%E7%9A%84%E5%AE%9E%E7%8E%B0%E5%AF%B9%E6%AF%94/</link>
+      <link>https://mannuan.github.io/post/20190628203826/</link>
       <pubDate>Fri, 28 Jun 2019 20:38:26 +0800</pubDate>
       
-      <guid>https://mannuan.github.io/post/%E5%85%B3%E4%BA%8Eajax%E7%9A%84jqueryvue.js%E5%8E%9F%E7%94%9Fjs%E7%9A%84%E5%90%84%E4%B8%AA%E7%89%88%E6%9C%AC%E7%9A%84%E5%AE%9E%E7%8E%B0%E5%AF%B9%E6%AF%94/</guid>
+      <guid>https://mannuan.github.io/post/20190628203826/</guid>
       <description>目录
 前言
 1、原生js实现
@@ -29,10 +29,10 @@
     
     <item>
       <title>关于Content-Type几种值的区别及用法</title>
-      <link>https://mannuan.github.io/post/%E5%85%B3%E4%BA%8Econtent-type%E5%87%A0%E7%A7%8D%E5%80%BC%E7%9A%84%E5%8C%BA%E5%88%AB%E5%8F%8A%E7%94%A8%E6%B3%95/</link>
+      <link>https://mannuan.github.io/post/20190626224453/</link>
       <pubDate>Wed, 26 Jun 2019 22:44:53 +0800</pubDate>
       
-      <guid>https://mannuan.github.io/post/%E5%85%B3%E4%BA%8Econtent-type%E5%87%A0%E7%A7%8D%E5%80%BC%E7%9A%84%E5%8C%BA%E5%88%AB%E5%8F%8A%E7%94%A8%E6%B3%95/</guid>
+      <guid>https://mannuan.github.io/post/20190626224453/</guid>
       <description>1、Content-Type 的值类型：
 1.1 application/json：消息主体是序列化后的 JSON 字符串
 1.2 application/x-www-form-urlencoded：数据被编码为名称/值对。这是标准的编码格式
@@ -49,10 +49,10 @@ Vue中 content-type 设置</description>
     
     <item>
       <title>vue常见错误汇总</title>
-      <link>https://mannuan.github.io/post/vue%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF%E6%B1%87%E6%80%BB/</link>
+      <link>https://mannuan.github.io/post/20190622103331/</link>
       <pubDate>Sat, 22 Jun 2019 10:33:31 +0800</pubDate>
       
-      <guid>https://mannuan.github.io/post/vue%E5%B8%B8%E8%A7%81%E9%94%99%E8%AF%AF%E6%B1%87%E6%80%BB/</guid>
+      <guid>https://mannuan.github.io/post/20190622103331/</guid>
       <description> new Vue(), V要大写 .vue文件中的&amp;lt;template&amp;gt;&amp;lt;/template&amp;gt;中不可以出现空行 vue模板中的el指向的是id，所以为了标识id，在前面要加上&amp;rdquo;#&amp;rdquo;  </description>
     </item>
     

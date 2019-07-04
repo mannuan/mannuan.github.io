@@ -12,10 +12,10 @@
     
     <item>
       <title>mongodb常用命令大全</title>
-      <link>https://mannuan.github.io/post/mongodb%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8/</link>
+      <link>https://mannuan.github.io/post/20190530161620/</link>
       <pubDate>Thu, 30 May 2019 16:16:20 +0800</pubDate>
       
-      <guid>https://mannuan.github.io/post/mongodb%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8/</guid>
+      <guid>https://mannuan.github.io/post/20190530161620/</guid>
       <description>关键字的名称：test
 数据表名：test
 搜索关键字：test
@@ -24,10 +24,10 @@
     
     <item>
       <title>百度知道爬虫</title>
-      <link>https://mannuan.github.io/post/%E7%99%BE%E5%BA%A6%E7%9F%A5%E9%81%93%E7%88%AC%E8%99%AB/</link>
+      <link>https://mannuan.github.io/post/20190530153141/</link>
       <pubDate>Thu, 30 May 2019 15:31:41 +0800</pubDate>
       
-      <guid>https://mannuan.github.io/post/%E7%99%BE%E5%BA%A6%E7%9F%A5%E9%81%93%E7%88%AC%E8%99%AB/</guid>
+      <guid>https://mannuan.github.io/post/20190530153141/</guid>
       <description>工具： pyspider
 数据库： mongodb
 思路：  假设你要根据两个关键字搜索百度知道答案，比如：”购物“和”价格“； 组建爬虫的url，需要把这两个关键字转化为url编码的格式，url编码教程详见； 取出搜索页面列表上面所有项的url链接; 然后，爬取步骤3的url，取出页面上面的question和最佳答案； 循环往复，进行2、3、4步骤；  代码： #!/usr/bin/env python # -*- encoding: utf-8 -*- from pyspider.libs.base_handler import * from urllib.parse import quote, unquote from pymongo import MongoClient import datetime import time import random client = MongoClient(&amp;#34;自定义数据库接口&amp;#34;) db = client.自定义数据库名 class Handler(BaseHandler): crawl_config = { } key_word1 = quote(&amp;#34;自定义关键字1&amp;#34;.encode(&amp;#34;GB2312&amp;#34;)) key_word2_list = [&amp;#34;自定义关键字2&amp;#34;] key_word2_list = [quote(i.encode(&amp;#34;GB2312&amp;#34;)) for i in key_word2_list] url_format = &amp;#34;https://zhidao.baidu.com/search?word={}&amp;amp;ie=gbk&amp;amp;site=-1&amp;amp;sites=0&amp;amp;date=0&amp;amp;pn={}&amp;#34; page_num = 76 # 最大页码 start_page = 0 # 开始的页码 max_random = 5 # 随机数的最大值 headers1 = { &amp;#34;Accept&amp;#34;: &amp;#34;text/html,application/xhtml+xml,application/xml;q=0.</description>
@@ -35,10 +35,10 @@
     
     <item>
       <title>mongodb多实例启动和开启用户验证</title>
-      <link>https://mannuan.github.io/post/mongodb%E5%A4%9A%E5%AE%9E%E4%BE%8B%E5%90%AF%E5%8A%A8%E5%92%8C%E5%BC%80%E5%90%AF%E7%94%A8%E6%88%B7%E9%AA%8C%E8%AF%81/</link>
+      <link>https://mannuan.github.io/post/20190212144306/</link>
       <pubDate>Tue, 12 Feb 2019 14:43:06 +0800</pubDate>
       
-      <guid>https://mannuan.github.io/post/mongodb%E5%A4%9A%E5%AE%9E%E4%BE%8B%E5%90%AF%E5%8A%A8%E5%92%8C%E5%BC%80%E5%90%AF%E7%94%A8%E6%88%B7%E9%AA%8C%E8%AF%81/</guid>
+      <guid>https://mannuan.github.io/post/20190212144306/</guid>
       <description>在这里，我不废话，直接给出mongodb配置文件模板
 # mongod.conf # for documentation of all options, see: # http://docs.mongodb.org/manual/reference/configuration-options/ # Where and how to store data. storage: dbPath: mongodb数据库的路径（自己可以随便取，只要不与默认的一样就行了） journal: enabled: true # engine: # mmapv1: # wiredTiger: # where to write logging data. systemLog: destination: file logAppend: true path: mongodb日志路径（自己可以随便取，只要不与默认的一样就行了） # network interfaces net: port: 端口0~65536(不常用的端口可以随便取，不可以和默认的一样) bindIp: 0.0.0.0 # how the process runs processManagement: # timeZoneInfo: /usr/share/zoneinfo fork: false #开启用户认证 security: authorization: enabled #operationProfiling: #replication: #sharding: ## Enterprise-Only Options: #auditLog: #snmp:  </description>
     </item>

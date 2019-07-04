@@ -12,10 +12,10 @@
     
     <item>
       <title>snippet,让你编码效率翻倍</title>
-      <link>https://mannuan.github.io/post/snippet%E8%AE%A9%E4%BD%A0%E7%BC%96%E7%A0%81%E6%95%88%E7%8E%87%E7%BF%BB%E5%80%8D/</link>
+      <link>https://mannuan.github.io/post/20190622092650/</link>
       <pubDate>Sat, 22 Jun 2019 09:26:50 +0800</pubDate>
       
-      <guid>https://mannuan.github.io/post/snippet%E8%AE%A9%E4%BD%A0%E7%BC%96%E7%A0%81%E6%95%88%E7%8E%87%E7%BF%BB%E5%80%8D/</guid>
+      <guid>https://mannuan.github.io/post/20190622092650/</guid>
       <description>为什么谈到Snippet
 今天下午在用vscode做小程序的时候，发现很不方便，因为商店里提供的代码片段极为有限，而且平时几乎每天都需要用到代码片段，所以就在思考他们是怎么做到给别人提供代码的，我可以自定义代码片段吗。然后查了下，果然，这在vscode里自带的（好像藏得有点深），是可以自定义的，然后在做完自己的任务后捣鼓了下，基本了解了snippet的语法，突然有种打开新世界大门的感觉。做个记录，上菜了
 如何打开snippet配置
@@ -29,10 +29,10 @@ Snippet怎么用
     
     <item>
       <title>vs code快捷键大全</title>
-      <link>https://mannuan.github.io/post/vs-code%E5%BF%AB%E6%8D%B7%E9%94%AE%E5%A4%A7%E5%85%A8/</link>
+      <link>https://mannuan.github.io/post/20190528191941/</link>
       <pubDate>Tue, 28 May 2019 19:19:41 +0800</pubDate>
       
-      <guid>https://mannuan.github.io/post/vs-code%E5%BF%AB%E6%8D%B7%E9%94%AE%E5%A4%A7%E5%85%A8/</guid>
+      <guid>https://mannuan.github.io/post/20190528191941/</guid>
       <description>名称 快捷键     上下移动行 Alt(option) + 上下键   删除行 Ctrl(command) + Shift() + K    持续更新中&amp;hellip;</description>
     </item>
     

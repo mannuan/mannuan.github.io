@@ -12,10 +12,10 @@
     
     <item>
       <title>原生js实现JSONP</title>
-      <link>https://mannuan.github.io/post/%E5%8E%9F%E7%94%9Fjs%E5%AE%9E%E7%8E%B0jsonp/</link>
+      <link>https://mannuan.github.io/post/20190629214157/</link>
       <pubDate>Sat, 29 Jun 2019 21:41:57 +0800</pubDate>
       
-      <guid>https://mannuan.github.io/post/%E5%8E%9F%E7%94%9Fjs%E5%AE%9E%E7%8E%B0jsonp/</guid>
+      <guid>https://mannuan.github.io/post/20190629214157/</guid>
       <description>介绍 JSONP是JSON with Padding(填充式JSON或参数式JSON)的简写，是一种非常常用的跨域请求方式。主要原理是利用了script 标签可以跨域请求的特性，由其 src属性发送请求到服务器，服务器返回JavaScript 代码，浏览器接受响应，然后就直接执行了，这和通过 script 标签引用外部文件的原理是一样的。
 JSONP由两部分组成：回调函数和数据，回调函数是当响应到来时应该在页面中调用的函数，回调函数的名字一般在请求中指定。当服务器响应时，服务器端就会把该函数和数据拼成字符串返回。
 JSONP 的请求过程  请求阶段：浏览器创建一个 script 标签，并给其src 赋值(类似 http://example.com/api/?callback=jsonpCallback）。 发送请求：当给script的src赋值时，浏览器就会发起一个请求。 数据响应：服务端将要返回的数据作为参数和函数名称拼接在一起(格式类似”jsonpCallback({name: &#39;abc&#39;})”)返回。当浏览器接收到了响应数据，由于发起请求的是 script，所以相当于直接调用 jsonpCallback 方法，并且传入了一个参数。  服务端交互示意图 server1代码(Nodejs实现) var Koa = require(&amp;#39;koa&amp;#39;); var Router = require(&amp;#39;koa-router&amp;#39;); var querystring = require(&amp;#39;querystring&amp;#39;); var app = new Koa(); var router = new Router(); //处理get请求 router.get(&amp;#39;/get&amp;#39;, async function(ctx){ var params = querystring.parse(ctx.request.url.split(&amp;#39;?&amp;#39;)[1]); var data = { message: &amp;#34;我是&amp;#34; + ctx.request.header.host + &amp;#34;，我收到了你的get请求！！！&amp;#34; } ctx.status=200; ctx.</description>

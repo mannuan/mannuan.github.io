@@ -12,10 +12,10 @@
     
     <item>
       <title>阿里云免费ssl证书申请</title>
-      <link>https://mannuan.github.io/post/%E9%98%BF%E9%87%8C%E4%BA%91%E5%85%8D%E8%B4%B9ssl%E8%AF%81%E4%B9%A6%E7%94%B3%E8%AF%B7/</link>
+      <link>https://mannuan.github.io/post/20190502140132/</link>
       <pubDate>Thu, 02 May 2019 14:01:32 +0800</pubDate>
       
-      <guid>https://mannuan.github.io/post/%E9%98%BF%E9%87%8C%E4%BA%91%E5%85%8D%E8%B4%B9ssl%E8%AF%81%E4%B9%A6%E7%94%B3%E8%AF%B7/</guid>
+      <guid>https://mannuan.github.io/post/20190502140132/</guid>
       <description> 第一步：在阿里云申请域名  登录阿里云， 在搜索框中输入&amp;rdquo;域名 控制台&amp;rdquo;， 进行域名的购买或则注册。   我强烈不推荐购买阿里云的二手域名，虽然价格很便宜，但是大多数域名都有问题，比如被注册局暂停解析等等
  第二步：在阿里云申请免费的ssl证书  同样在搜索框中输入&amp;rdquo;dns 控制台&amp;rdquo;， 在域名的列表里面可以看到你已经购买的域名， 然后在列表的每个item中点击“更多”，出现&amp;rdquo;ssl&amp;rdquo;证书的字样，点击进去。 选择免费版的ssl证书（这里只能单个子域名进行注册） 点击申请，跳到ssl证书列表页面， 点击验证，大概过5-6分钟，ssl证书就可以审核通过， 下载证书我推荐下载nginx版本的，nginx配置域名最方便，配置域名的教程可以参看我的https服务器搭建详细教程(ubuntu系统实测可行)这个教程  </description>
     </item>

@@ -12,10 +12,10 @@
     
     <item>
       <title>val()方法的选中功能</title>
-      <link>https://mannuan.github.io/post/val%E6%96%B9%E6%B3%95%E7%9A%84%E9%80%89%E4%B8%AD%E5%8A%9F%E8%83%BD/</link>
+      <link>https://mannuan.github.io/post/20190622092753/</link>
       <pubDate>Sat, 22 Jun 2019 09:27:53 +0800</pubDate>
       
-      <guid>https://mannuan.github.io/post/val%E6%96%B9%E6%B3%95%E7%9A%84%E9%80%89%E4%B8%AD%E5%8A%9F%E8%83%BD/</guid>
+      <guid>https://mannuan.github.io/post/20190622092753/</guid>
       <description>&amp;lt;select id=&amp;#34;single&amp;#34;&amp;gt; &amp;lt;option&amp;gt;选择1号&amp;lt;/option&amp;gt; &amp;lt;option&amp;gt;选择2号&amp;lt;/option&amp;gt; &amp;lt;option&amp;gt;选择3号&amp;lt;/option&amp;gt; &amp;lt;/select&amp;gt; &amp;lt;select id=&amp;#34;multiple&amp;#34; multiple=&amp;#34;multiple&amp;#34; style=&amp;#34;height:120px;&amp;#34;&amp;gt; &amp;lt;option selected=&amp;#34;selected&amp;#34;&amp;gt;选择1号&amp;lt;/option&amp;gt; &amp;lt;option&amp;gt;选择2号&amp;lt;/option&amp;gt; &amp;lt;option&amp;gt;选择3号&amp;lt;/option&amp;gt; &amp;lt;option&amp;gt;选择4号&amp;lt;/option&amp;gt; &amp;lt;option selected=&amp;#34;selected&amp;#34;&amp;gt;选择5号&amp;lt;/option&amp;gt; &amp;lt;/select&amp;gt; &amp;lt;input type=&amp;#34;checkbox&amp;#34; value=&amp;#34;check1&amp;#34;/&amp;gt;多选1 &amp;lt;input type=&amp;#34;checkbox&amp;#34; value=&amp;#34;check2&amp;#34;/&amp;gt;多选2 &amp;lt;input type=&amp;#34;checkbox&amp;#34; value=&amp;#34;check3&amp;#34;/&amp;gt;多选3 &amp;lt;input type=&amp;#34;checkbox&amp;#34; value=&amp;#34;check4&amp;#34;/&amp;gt;多选4 &amp;lt;input type=&amp;#34;radio&amp;#34; value=&amp;#34;radio1&amp;#34;/&amp;gt;单选1 &amp;lt;input type=&amp;#34;radio&amp;#34; value=&amp;#34;radio2&amp;#34;/&amp;gt;单选2 &amp;lt;input type=&amp;#34;radio&amp;#34; value=&amp;#34;radio3&amp;#34;/&amp;gt;单选3 该网页中的一些元素是默认选中的，可以通过val()方法来改变它们的选中项。如果要使第1个下拉框的第2项被选中，可以用以下jQuery代码实现：
 $(&amp;#34;#single&amp;#34;).val(&amp;#34;选择2号&amp;#34;);  如果使下拉框的第2项和第3项被选中，可以用以下jQuery代码实现:
 $(&amp;#34;#multiple&amp;#34;).val([&amp;#34;选择2号&amp;#34;, &amp;#34;选择3号&amp;#34;]);  按照上面类似的写法，下面的代码可以使多选框和单选框被选中，jQuery代码如下：

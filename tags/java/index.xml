@@ -12,10 +12,10 @@
     
     <item>
       <title>orcle jdk linux 安装教程</title>
-      <link>https://mannuan.github.io/post/orcle-jdk-linux-%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</link>
+      <link>https://mannuan.github.io/post/20190531102524/</link>
       <pubDate>Fri, 31 May 2019 10:25:24 +0800</pubDate>
       
-      <guid>https://mannuan.github.io/post/orcle-jdk-linux-%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</guid>
+      <guid>https://mannuan.github.io/post/20190531102524/</guid>
       <description> 将*.tar.gz解压（以jdk8.144为例）：
 tar -xzvf jdk-8u144-linux-x64.tar.gz  得到的文件夹为jdk1.8.0_144，将其移动到/usr/lib/jvm中： bash sudo mv jdk1.8.0_144 /usr/lib/jvm   设置环境变量：
 sudo gedit /etc/profile 打开文件，在结尾处输入：

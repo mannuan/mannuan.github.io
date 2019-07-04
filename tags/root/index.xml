@@ -12,10 +12,10 @@
     
     <item>
       <title>mongodb创建root和普通user</title>
-      <link>https://mannuan.github.io/post/mongodb%E5%88%9B%E5%BB%BAroot%E5%92%8C%E6%99%AE%E9%80%9Auser/</link>
+      <link>https://mannuan.github.io/post/20190212154741/</link>
       <pubDate>Tue, 12 Feb 2019 15:47:41 +0800</pubDate>
       
-      <guid>https://mannuan.github.io/post/mongodb%E5%88%9B%E5%BB%BAroot%E5%92%8C%E6%99%AE%E9%80%9Auser/</guid>
+      <guid>https://mannuan.github.io/post/20190212154741/</guid>
       <description>1、创建管理员，下面以用户test1为例：
 use admin db.createUser({user: &amp;#34;test1&amp;#34;, pwd: &amp;#34;test1&amp;#34;, roles: [{role: &amp;#34;root&amp;#34;, db: &amp;#34;admin&amp;#34;}]}) 2、创建test2db对应的test2用户:
 use test2db db.createUser({user: &amp;#34;test2&amp;#34;, pwd: &amp;#34;test2&amp;#34;, roles: [{role: &amp;#34;readWrite&amp;#34;, db: &amp;#34;test2db&amp;#34; }]})</description>

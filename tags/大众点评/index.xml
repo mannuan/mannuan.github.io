@@ -12,10 +12,10 @@
     
     <item>
       <title>大众点评评论反爬解决方案</title>
-      <link>https://mannuan.github.io/post/%E5%A4%A7%E4%BC%97%E7%82%B9%E8%AF%84%E8%AF%84%E8%AE%BA%E5%8F%8D%E7%88%AC%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</link>
+      <link>https://mannuan.github.io/post/20190605165530/</link>
       <pubDate>Wed, 05 Jun 2019 16:55:30 +0800</pubDate>
       
-      <guid>https://mannuan.github.io/post/%E5%A4%A7%E4%BC%97%E7%82%B9%E8%AF%84%E8%AF%84%E8%AE%BA%E5%8F%8D%E7%88%AC%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</guid>
+      <guid>https://mannuan.github.io/post/20190605165530/</guid>
       <description>  目前大众点评主要有两种反爬的机制：css反爬和字体反爬。
  css反爬的解决方案 具体详见反爬机制之css反爬详解
 字体反爬的解决方案 </description>

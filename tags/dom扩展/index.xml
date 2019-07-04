@@ -12,10 +12,10 @@
     
     <item>
       <title>DOM专有扩展</title>
-      <link>https://mannuan.github.io/post/dom%E4%B8%93%E6%9C%89%E6%89%A9%E5%B1%95/</link>
+      <link>https://mannuan.github.io/post/20190531153512/</link>
       <pubDate>Fri, 31 May 2019 15:35:12 +0800</pubDate>
       
-      <guid>https://mannuan.github.io/post/dom%E4%B8%93%E6%9C%89%E6%89%A9%E5%B1%95/</guid>
+      <guid>https://mannuan.github.io/post/20190531153512/</guid>
       <description>插入文本： innerText, outerText
 innerText  读取元素中包含的所有文本内容，只读取文本内容； 写入时会删除元素的所有节点，插入文本内容； 不同浏览器处理空白和换行的方式不一样； firefox不支持innerText，但支持textContent属性；   textContent与innerText的不同点在于：innerText会忽略行内的样式和脚本，textContent不会；
 最佳实践 ：从不包含行内样式和行内脚本的DOM中读取文本
@@ -24,10 +24,10 @@ innerText  读取元素中包含的所有文本内容，只读取文本内容；
     
     <item>
       <title>DOM扩展-元素遍历</title>
-      <link>https://mannuan.github.io/post/dom%E6%89%A9%E5%B1%95-%E5%85%83%E7%B4%A0%E9%81%8D%E5%8E%86/</link>
+      <link>https://mannuan.github.io/post/20190530192147/</link>
       <pubDate>Thu, 30 May 2019 19:21:47 +0800</pubDate>
       
-      <guid>https://mannuan.github.io/post/dom%E6%89%A9%E5%B1%95-%E5%85%83%E7%B4%A0%E9%81%8D%E5%8E%86/</guid>
+      <guid>https://mannuan.github.io/post/20190530192147/</guid>
       <description> 使用循环语句进行常规遍历的不方便性：  元素间的空格(空行)的对待方式不一致，除IE9-外的浏览器都视作文本节点，所以未使用新API之前遍历元素都需要检测节点的类型，跳开空格（空行）代表文本节点。
  W3C的Element Traversal规范新定义了一组属性：IE9+支持：  childElementCount: 子元素节点的个数； firstElementChild: 第一个子元素节点； lastElementChild: 最后一个子元素节点； previousElementSibling: 后一个元素节点  旧的写法： var i, len, child = element.firstChild; while(child != element.lastChild){ if(child.nodeType == 1){ // 检查是不是元素  processChild(child); } child = child.nextSubling; }  新API下的写法： var i, len, child = element.firstElementChild; while(child != element.lastElementChild){ processChild(child); child = child.nextElementSibling; } </description>
     </item>

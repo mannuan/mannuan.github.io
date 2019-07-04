@@ -12,10 +12,10 @@
     
     <item>
       <title>python with 打开多个文件</title>
-      <link>https://mannuan.github.io/post/python-with-%E6%89%93%E5%BC%80%E5%A4%9A%E4%B8%AA%E6%96%87%E4%BB%B6/</link>
+      <link>https://mannuan.github.io/post/20190605154442/</link>
       <pubDate>Wed, 05 Jun 2019 15:44:42 +0800</pubDate>
       
-      <guid>https://mannuan.github.io/post/python-with-%E6%89%93%E5%BC%80%E5%A4%9A%E4%B8%AA%E6%96%87%E4%BB%B6/</guid>
+      <guid>https://mannuan.github.io/post/20190605154442/</guid>
       <description>with open(&amp;#34;./example.html&amp;#34;, &amp;#34;r&amp;#34;) as f1, open(&amp;#34;./example.css&amp;#34;, &amp;#34;r&amp;#34;) as f2, open(&amp;#34;./example.svg&amp;#34;, &amp;#34;r&amp;#34;) as f3: html = f1.read() css = f2.read() svg = f3.</description>
     </item>
     

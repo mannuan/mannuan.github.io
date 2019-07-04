@@ -12,10 +12,10 @@
     
     <item>
       <title>function中的arguments转数组的标准方法</title>
-      <link>https://mannuan.github.io/post/function%E4%B8%AD%E7%9A%84arguments%E8%BD%AC%E6%95%B0%E7%BB%84%E7%9A%84%E6%A0%87%E5%87%86%E6%96%B9%E6%B3%95/</link>
+      <link>https://mannuan.github.io/post/20190528095304/</link>
       <pubDate>Tue, 28 May 2019 09:53:04 +0800</pubDate>
       
-      <guid>https://mannuan.github.io/post/function%E4%B8%AD%E7%9A%84arguments%E8%BD%AC%E6%95%B0%E7%BB%84%E7%9A%84%E6%A0%87%E5%87%86%E6%96%B9%E6%B3%95/</guid>
+      <guid>https://mannuan.github.io/post/20190528095304/</guid>
       <description>举例说明:
 function arr(){ console.log(arguments); // 输出：[Arguments] { &amp;#39;0&amp;#39;: 1, &amp;#39;1&amp;#39;: 2, &amp;#39;2&amp;#39;: 3 }  _array = Array.prototype.slice.apply(arguments); console.log(_array); // 输出：[ 1, 2, 3 ] } arr(1, 2, 3) </description>
     </item>

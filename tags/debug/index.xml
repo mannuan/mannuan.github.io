@@ -12,10 +12,10 @@
     
     <item>
       <title>JavaScript debugger 语句</title>
-      <link>https://mannuan.github.io/post/javascript-debugger-%E8%AF%AD%E5%8F%A5/</link>
+      <link>https://mannuan.github.io/post/20190625164126/</link>
       <pubDate>Tue, 25 Jun 2019 16:41:26 +0800</pubDate>
       
-      <guid>https://mannuan.github.io/post/javascript-debugger-%E8%AF%AD%E5%8F%A5/</guid>
+      <guid>https://mannuan.github.io/post/20190625164126/</guid>
       <description>实例 开启 debugger ，代码在执行到第三行前终止。
 var x = 15 * 5; debugger; document.getElementbyId(&amp;#34;demo&amp;#34;).innerHTML = x;  定义和用法 debugger 语句用于停止执行 JavaScript，并调用 (如果可用) 调试函数。
 使用 debugger 语句类似于在代码中设置断点。

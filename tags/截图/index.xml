@@ -12,10 +12,10 @@
     
     <item>
       <title>Mac截图的相关设置</title>
-      <link>https://mannuan.github.io/post/mac%E6%88%AA%E5%9B%BE%E7%9A%84%E7%9B%B8%E5%85%B3%E8%AE%BE%E7%BD%AE/</link>
+      <link>https://mannuan.github.io/post/20190701204246/</link>
       <pubDate>Mon, 01 Jul 2019 20:42:46 +0800</pubDate>
       
-      <guid>https://mannuan.github.io/post/mac%E6%88%AA%E5%9B%BE%E7%9A%84%E7%9B%B8%E5%85%B3%E8%AE%BE%E7%BD%AE/</guid>
+      <guid>https://mannuan.github.io/post/20190701204246/</guid>
       <description>选区域截图默认快捷键 Shift+command+4  默认保存目录 ~/Desktop  修改目录 defaults write com.apple.screencapture location &amp;#34;~/Pictures/ScreenShot&amp;#34; 截图默认后缀 png  修改后缀 defaults write com.apple.screencapture type jpg 删除默认时间后缀 defaults write com.apple.screencapture &amp;#34;include-date&amp;#34; 0 修改默认的文件名称 defaults write com.apple.screencapture name &amp;#34;screenshot&amp;#34; 参看配置 defaults read com.apple.screencapture 输出如下： { &amp;quot;last-messagetrace-stamp&amp;quot; = &amp;quot;583174121.285828&amp;quot;; &amp;quot;last-selection&amp;quot; = { Height = 529; Width = 1041; X = 507; Y = 262; }; &amp;quot;last-selection-display&amp;quot; = 0; location = &amp;quot;~/Pictures/ScreenShot&amp;quot;; name = screenshot; type = jpg; }  缺点分析 mac自带的截图工具，不能修改时间的格式，而且这种格式有空格，不利于作为文件名。虽然可以去除时间后缀，但是时间信息很重要。同时，即使没有时间后缀，生成的图片名中还是存在空格。鉴于上面复杂的问题，我权衡利弊之后果断放弃这个mac自带的截图工具。</description>
     </item>
     

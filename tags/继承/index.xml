@@ -12,10 +12,10 @@
     
     <item>
       <title>javascript继承的6种方式</title>
-      <link>https://mannuan.github.io/post/javascript%E7%BB%A7%E6%89%BF%E7%9A%846%E7%A7%8D%E6%96%B9%E5%BC%8F/</link>
+      <link>https://mannuan.github.io/post/20190624200748/</link>
       <pubDate>Mon, 24 Jun 2019 20:07:48 +0800</pubDate>
       
-      <guid>https://mannuan.github.io/post/javascript%E7%BB%A7%E6%89%BF%E7%9A%846%E7%A7%8D%E6%96%B9%E5%BC%8F/</guid>
+      <guid>https://mannuan.github.io/post/20190624200748/</guid>
       <description>第一种：原型链继承： function Animal(){ this.property=&amp;#34;都要呼吸&amp;#34;; } Animal.prototype.getProperty = new function(){ return this.property; } function Person(){ this.feature=&amp;#34;直立行走&amp;#34;; } Person.prototype = new Animal(); Person.prototype.getFeature = function(){ return this.feature; } var p1 = new Person(); console.log(p1.getProperty()); console.log(p1.getFeature());  第二种：借用构造函数继承: function Animal(){ this.property=&amp;#34;都要呼吸&amp;#34;; this.getProperty=function(){ return this.property; }; } function Person(){ Animal.call(this); this.feature=&amp;#34;直立行走&amp;#34;; } Person.prototype.getFeature = function(){ return this.feature; } var p1 = new Person(); console.log(p1.getProperty()); console.log(p1.getFeature());  第三种：组合继承:（最常用的继承模式） function Animal(){ this.property=&amp;#34;都要呼吸&amp;#34;; } Animal.prototype.getProperty = function(){ return this.</description>
     </item>
     

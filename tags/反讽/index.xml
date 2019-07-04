@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>反讽 on mannuan</title>
+    <link>https://mannuan.github.io/tags/%E5%8F%8D%E8%AE%BD/</link>
+    <description>Recent content in 反讽 on mannuan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 04 Jul 2019 16:20:10 +0800</lastBuildDate>
+    
+	<atom:link href="https://mannuan.github.io/tags/%E5%8F%8D%E8%AE%BD/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Representing Social Media Users for Sarcasm Detection论文翻译和解读</title>
+      <link>https://mannuan.github.io/post/20190704162010/</link>
+      <pubDate>Thu, 04 Jul 2019 16:20:10 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190704162010/</guid>
+      <description>Representing Social Media Users for Sarcasm Detection  用于讽刺检测的社交媒体用户的特征表示
+ 摘要 在上下文讽刺检测的背景下，两种表示作则特征的方式： * 使用贝叶斯的方式直接表示作者的讽刺倾向； * 密集向量嵌入可以学习到作者和文本之间的交互； * 使用reddit评论的SARC数据集，双向的rnn可以提高性能； *</description>
+    </item>
+    
+  </channel>
+</rss>

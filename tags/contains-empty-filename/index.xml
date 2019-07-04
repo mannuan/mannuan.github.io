@@ -12,10 +12,10 @@
     
     <item>
       <title>dpkg error: package `x&#39; contains empty filename，Sub-process /usr/bin/dpkg returned an error code (2)</title>
-      <link>https://mannuan.github.io/post/dpkg-error-package-x-contains-empty-filename/</link>
+      <link>https://mannuan.github.io/post/20190513111048/</link>
       <pubDate>Mon, 13 May 2019 11:10:48 +0800</pubDate>
       
-      <guid>https://mannuan.github.io/post/dpkg-error-package-x-contains-empty-filename/</guid>
+      <guid>https://mannuan.github.io/post/20190513111048/</guid>
       <description>后面的错误“Sub-process /usr/bin/dpkg returned an error code (2)”是由于前面的一个错误引起的
 因此，只需要解决前面的错误就行了
 解决这个错误其实很简单，只需要理解前面一个错误里面的&amp;rdquo;empty filename&amp;rdquo;就行了

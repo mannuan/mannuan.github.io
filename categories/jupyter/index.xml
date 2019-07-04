@@ -12,19 +12,19 @@
     
     <item>
       <title>jupyter_notebook_config.py的配置详解</title>
-      <link>https://mannuan.github.io/post/jupyter_notebook_config.py%E7%9A%84%E9%85%8D%E7%BD%AE%E8%AF%A6%E8%A7%A3/</link>
+      <link>https://mannuan.github.io/post/20190515155513/</link>
       <pubDate>Wed, 15 May 2019 15:55:13 +0800</pubDate>
       
-      <guid>https://mannuan.github.io/post/jupyter_notebook_config.py%E7%9A%84%E9%85%8D%E7%BD%AE%E8%AF%A6%E8%A7%A3/</guid>
+      <guid>https://mannuan.github.io/post/20190515155513/</guid>
       <description># Configuration file for jupyter-notebook. #------------------------------------------------------------------------------ # Application(SingletonConfigurable) configuration #------------------------------------------------------------------------------ ## This is an application. ## The date format used by logging formatters for %(asctime)s #c.Application.log_datefmt = &amp;#39;%Y-%m-%d %H:%M:%S&amp;#39; ## The Logging format template #c.Application.log_format = &amp;#39;[%(name)s]%(highlevel)s %(message)s&amp;#39; ## Set the log level by value or name. #c.Application.log_level = 30 #------------------------------------------------------------------------------ # JupyterApp(Application) configuration #------------------------------------------------------------------------------ ## Base class for Jupyter applications ## Answer yes to any prompts. #c.JupyterApp.answer_yes = False ## Full path of a config file.</description>
     </item>
     
     <item>
       <title>jupyter_notebook_config.py常用配置</title>
-      <link>https://mannuan.github.io/post/jupyter_notebook_config.py%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE/</link>
+      <link>https://mannuan.github.io/post/20190515154121/</link>
       <pubDate>Wed, 15 May 2019 15:41:21 +0800</pubDate>
       
-      <guid>https://mannuan.github.io/post/jupyter_notebook_config.py%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE/</guid>
+      <guid>https://mannuan.github.io/post/20190515154121/</guid>
       <description># -*- coding: utf-8 -*- # notebook服务会监听的IP地址，这个ip地址最好不要填任意的，否则不安全 c.NotebookApp.ip = &amp;#39;localhost&amp;#39; # 这条命令会与下面的一条命令hostnames冲突，如果这个设置为True,这下面这条命令不生效，反之，则生效 c.NotebookApp.allow_remote_access = True # 为本地主机取多个ip别名 c.NotebookApp.local_hostnames = [&amp;#39;localhost&amp;#39;] c.NotebookApp.open_browser = False c.NotebookApp.password = &amp;#34;密码&amp;#34; c.NotebookApp.port = 8888 c.NotebookApp.notebook_dir = &amp;#34;文件路径&amp;#34; 密码的生成详见jupyter如何设置密码
 如果，想要在其他主机上面访问 jupyter, 必须设置
 c.NotebookApp.allow_remote_access = True</description>
@@ -32,10 +32,10 @@ c.NotebookApp.allow_remote_access = True</description>
     
     <item>
       <title>jupyter 如何设置密码</title>
-      <link>https://mannuan.github.io/post/jupyter-%E5%A6%82%E4%BD%95%E8%AE%BE%E7%BD%AE%E5%AF%86%E7%A0%81/</link>
+      <link>https://mannuan.github.io/post/20190515153220/</link>
       <pubDate>Wed, 15 May 2019 15:32:20 +0800</pubDate>
       
-      <guid>https://mannuan.github.io/post/jupyter-%E5%A6%82%E4%BD%95%E8%AE%BE%E7%BD%AE%E5%AF%86%E7%A0%81/</guid>
+      <guid>https://mannuan.github.io/post/20190515153220/</guid>
       <description>打开python命令行，输入
 from notebook.auth import passwd passwd() 以密码&amp;rdquo;123&amp;rdquo;为例，输出结果得到如下
 &amp;#39;sha1:da00fa1e950a:0adb64c8359ef97932e5dde02d6167e140bac4e0&amp;#39; 然后把上面的sha写入到配置文件&amp;rdquo;jupyter_notebook_config.py&amp;rdquo;, 这个文件一般需要使用命令生成

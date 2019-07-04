@@ -12,19 +12,19 @@
     
     <item>
       <title>jupyter_notebook_config.py的配置详解</title>
-      <link>https://mannuan.github.io/post/jupyter_notebook_config.py%E7%9A%84%E9%85%8D%E7%BD%AE%E8%AF%A6%E8%A7%A3/</link>
+      <link>https://mannuan.github.io/post/20190515155513/</link>
       <pubDate>Wed, 15 May 2019 15:55:13 +0800</pubDate>
       
-      <guid>https://mannuan.github.io/post/jupyter_notebook_config.py%E7%9A%84%E9%85%8D%E7%BD%AE%E8%AF%A6%E8%A7%A3/</guid>
+      <guid>https://mannuan.github.io/post/20190515155513/</guid>
       <description># Configuration file for jupyter-notebook. #------------------------------------------------------------------------------ # Application(SingletonConfigurable) configuration #------------------------------------------------------------------------------ ## This is an application. ## The date format used by logging formatters for %(asctime)s #c.Application.log_datefmt = &amp;#39;%Y-%m-%d %H:%M:%S&amp;#39; ## The Logging format template #c.Application.log_format = &amp;#39;[%(name)s]%(highlevel)s %(message)s&amp;#39; ## Set the log level by value or name. #c.Application.log_level = 30 #------------------------------------------------------------------------------ # JupyterApp(Application) configuration #------------------------------------------------------------------------------ ## Base class for Jupyter applications ## Answer yes to any prompts. #c.JupyterApp.answer_yes = False ## Full path of a config file.</description>
     </item>
     
     <item>
       <title>mongodb多实例启动和开启用户验证</title>
-      <link>https://mannuan.github.io/post/mongodb%E5%A4%9A%E5%AE%9E%E4%BE%8B%E5%90%AF%E5%8A%A8%E5%92%8C%E5%BC%80%E5%90%AF%E7%94%A8%E6%88%B7%E9%AA%8C%E8%AF%81/</link>
+      <link>https://mannuan.github.io/post/20190212144306/</link>
       <pubDate>Tue, 12 Feb 2019 14:43:06 +0800</pubDate>
       
-      <guid>https://mannuan.github.io/post/mongodb%E5%A4%9A%E5%AE%9E%E4%BE%8B%E5%90%AF%E5%8A%A8%E5%92%8C%E5%BC%80%E5%90%AF%E7%94%A8%E6%88%B7%E9%AA%8C%E8%AF%81/</guid>
+      <guid>https://mannuan.github.io/post/20190212144306/</guid>
       <description>在这里，我不废话，直接给出mongodb配置文件模板
 # mongod.conf # for documentation of all options, see: # http://docs.mongodb.org/manual/reference/configuration-options/ # Where and how to store data. storage: dbPath: mongodb数据库的路径（自己可以随便取，只要不与默认的一样就行了） journal: enabled: true # engine: # mmapv1: # wiredTiger: # where to write logging data. systemLog: destination: file logAppend: true path: mongodb日志路径（自己可以随便取，只要不与默认的一样就行了） # network interfaces net: port: 端口0~65536(不常用的端口可以随便取，不可以和默认的一样) bindIp: 0.0.0.0 # how the process runs processManagement: # timeZoneInfo: /usr/share/zoneinfo fork: false #开启用户认证 security: authorization: enabled #operationProfiling: #replication: #sharding: ## Enterprise-Only Options: #auditLog: #snmp:  </description>
     </item>

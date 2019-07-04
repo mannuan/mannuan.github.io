@@ -12,10 +12,10 @@
     
     <item>
       <title>在UEFI模式下，linux误删EFI分区后，重新恢复引导</title>
-      <link>https://mannuan.github.io/post/%E5%9C%A8uefi%E6%A8%A1%E5%BC%8F%E4%B8%8Blinux%E8%AF%AF%E5%88%A0efi%E5%88%86%E5%8C%BA%E5%90%8E%E9%87%8D%E6%96%B0%E6%81%A2%E5%A4%8D%E5%BC%95%E5%AF%BC/</link>
+      <link>https://mannuan.github.io/post/20190611191355/</link>
       <pubDate>Tue, 11 Jun 2019 19:13:55 +0800</pubDate>
       
-      <guid>https://mannuan.github.io/post/%E5%9C%A8uefi%E6%A8%A1%E5%BC%8F%E4%B8%8Blinux%E8%AF%AF%E5%88%A0efi%E5%88%86%E5%8C%BA%E5%90%8E%E9%87%8D%E6%96%B0%E6%81%A2%E5%A4%8D%E5%BC%95%E5%AF%BC/</guid>
+      <guid>https://mannuan.github.io/post/20190611191355/</guid>
       <description>遇到上面情况，我们通常使用boot-repair修复引导。但是这时会弹出一个错误： GPT detected. Please create a BIOS-Boot partition
  遇到这个情况以后，我就疯狂百度资料，一直在找现成的解决方案，但是都不是没有解决问题的方案。这个期间我大概花了我半天的时间在检索资料，之后由于实在找不到资料。我只能冷静地分析这个错误，&amp;rdquo;Please create Bios-Boot partition&amp;rdquo;这个提示其实是提醒你创建一个用于引导的分区。由于是在UEFI模式下面，所以我们要创建一个格式为fat32 标识为boot, esp的分区（右键可以设置标签），如下图所示：
 创建好上面的分区以后，再使用boot-repair进行修复引导，就不会报错了😀😀😀😀😀</description>

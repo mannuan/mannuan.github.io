@@ -12,19 +12,19 @@
     
     <item>
       <title>anki保留字</title>
-      <link>https://mannuan.github.io/post/anki%E4%BF%9D%E7%95%99%E5%AD%97/</link>
+      <link>https://mannuan.github.io/post/20190619223131/</link>
       <pubDate>Wed, 19 Jun 2019 22:31:31 +0800</pubDate>
       
-      <guid>https://mannuan.github.io/post/anki%E4%BF%9D%E7%95%99%E5%AD%97/</guid>
+      <guid>https://mannuan.github.io/post/20190619223131/</guid>
       <description>   保留字 备注     FrontSide 正面，   type 打字   cloze 填空    </description>
     </item>
     
     <item>
       <title>anki最新开发文档（2.1）</title>
-      <link>https://mannuan.github.io/post/anki%E6%9C%80%E6%96%B0%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A32.1/</link>
+      <link>https://mannuan.github.io/post/20190619215021/</link>
       <pubDate>Wed, 19 Jun 2019 21:50:21 +0800</pubDate>
       
-      <guid>https://mannuan.github.io/post/anki%E6%9C%80%E6%96%B0%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A32.1/</guid>
+      <guid>https://mannuan.github.io/post/20190619215021/</guid>
       <description>注意：开发文档里面不重要的内容，本篇博客不进行翻译，依然英文显示
  基础 卡片（Cards） 卡片就是问题和答案对——即正反两面分别是问题和答案。Anki的卡片不是一张真正的卡片，它一直显示问题，回答完显示答案。举一个例子：
  问题：氧气的化学符号是什么？

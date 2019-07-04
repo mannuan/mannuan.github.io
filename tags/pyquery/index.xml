@@ -12,28 +12,28 @@
     
     <item>
       <title>pyquery获取文本节点（TextNode）</title>
-      <link>https://mannuan.github.io/post/pyquery%E8%8E%B7%E5%8F%96%E6%96%87%E6%9C%AC%E8%8A%82%E7%82%B9textnode/</link>
+      <link>https://mannuan.github.io/post/20190605114530/</link>
       <pubDate>Wed, 05 Jun 2019 11:45:30 +0800</pubDate>
       
-      <guid>https://mannuan.github.io/post/pyquery%E8%8E%B7%E5%8F%96%E6%96%87%E6%9C%AC%E8%8A%82%E7%82%B9textnode/</guid>
+      <guid>https://mannuan.github.io/post/20190605114530/</guid>
       <description>from pyquery import PyQuery as pq p = pq(字符串) for i in p.contents(): print(i)</description>
     </item>
     
     <item>
       <title>pyquery如何读取xml或html文件不乱码</title>
-      <link>https://mannuan.github.io/post/pyquery%E5%A6%82%E4%BD%95%E8%AF%BB%E5%8F%96xml%E6%88%96html%E6%96%87%E4%BB%B6%E4%B8%8D%E4%B9%B1%E7%A0%81/</link>
+      <link>https://mannuan.github.io/post/20190604142642/</link>
       <pubDate>Tue, 04 Jun 2019 14:26:42 +0800</pubDate>
       
-      <guid>https://mannuan.github.io/post/pyquery%E5%A6%82%E4%BD%95%E8%AF%BB%E5%8F%96xml%E6%88%96html%E6%96%87%E4%BB%B6%E4%B8%8D%E4%B9%B1%E7%A0%81/</guid>
+      <guid>https://mannuan.github.io/post/20190604142642/</guid>
       <description># -*- coding: utf-8 -*- from pyquery import PyQuery as pq with open(&amp;#39;文件路径&amp;#39;, &amp;#34;r&amp;#34;) as f: str = f.read().encode(&amp;#34;utf-8&amp;#34;) #设置&amp;#34;utf-8&amp;#34;编码，这一步很重要 p = pq(str)</description>
     </item>
     
     <item>
       <title>pyquery如何解析xml</title>
-      <link>https://mannuan.github.io/post/pyquery%E5%A6%82%E4%BD%95%E8%A7%A3%E6%9E%90xml/</link>
+      <link>https://mannuan.github.io/post/20190604140727/</link>
       <pubDate>Tue, 04 Jun 2019 14:07:27 +0800</pubDate>
       
-      <guid>https://mannuan.github.io/post/pyquery%E5%A6%82%E4%BD%95%E8%A7%A3%E6%9E%90xml/</guid>
+      <guid>https://mannuan.github.io/post/20190604140727/</guid>
       <description>之前遇到pyquery解析svg文件(xml格式)的时候发现无法获取节点，比如下面这个svg文件：
 &amp;lt;?xml version=&amp;#34;1.0&amp;#34; encoding=&amp;#34;UTF-8&amp;#34; standalone=&amp;#34;no&amp;#34;?&amp;gt; &amp;lt;!DOCTYPE svg PUBLIC &amp;#34;-//W3C//DTD SVG 1.1//EN&amp;#34; &amp;#34;http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd&amp;#34;&amp;gt; &amp;lt;svg xmlns=&amp;#34;http://www.w3.org/2000/svg&amp;#34; version=&amp;#34;1.1&amp;#34; xmlns:xlink=&amp;#34;http://www.w3.org/1999/xlink&amp;#34; width=&amp;#34;650px&amp;#34; height=&amp;#34;3030.0px&amp;#34;&amp;gt; &amp;lt;style&amp;gt;text {font-family:PingFangSC-Regular,Microsoft YaHei,&amp;#39;Hiragino Sans GB&amp;#39;,Helvetica;font-size:14px;fill:#282828;}&amp;lt;/style&amp;gt; &amp;lt;text x=&amp;#34;0&amp;#34; y=&amp;#34;35&amp;#34;&amp;gt;呜愉伸治译喊傲著逢循托从巨毒高翼阻聋巴垂级茧郎暑聚渣啦秘炊奋睁连撤宁畅搁刚轮蜂缺幕葵&amp;lt;/text&amp;gt; &amp;lt;text x=&amp;#34;0&amp;#34; y=&amp;#34;79&amp;#34;&amp;gt;搞陆林卵窝提格桑南隔选膛奸修担穴罐胖宅圆馒杏至鲁类痒宝拌让必油匀困双拢砖轧凑辜亦银牧&amp;lt;/text&amp;gt; &amp;lt;/svg&amp;gt; 我在用下面的python代码提取text节点的时候，发现无法提取，没有任何输出：
 from pyquery import PyQuery as pq with open(文件路径, &amp;#34;r&amp;#34;) as f: svg = f.read().encode(&amp;#34;utf-8&amp;#34;) p = pq(svg) for i in p(&amp;#34;text&amp;#34;).items(): print(i) 之后，我把pyquery的解析方式，强制设置为 paser=&amp;quot;html&amp;quot; 后，就行了：

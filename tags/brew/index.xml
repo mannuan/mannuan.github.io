@@ -12,10 +12,10 @@
     
     <item>
       <title>brew安装卡死原因</title>
-      <link>https://mannuan.github.io/post/brew%E5%AE%89%E8%A3%85%E5%8D%A1%E6%AD%BB%E5%8E%9F%E5%9B%A0/</link>
+      <link>https://mannuan.github.io/post/20180829101640/</link>
       <pubDate>Wed, 29 Aug 2018 10:16:40 +0800</pubDate>
       
-      <guid>https://mannuan.github.io/post/brew%E5%AE%89%E8%A3%85%E5%8D%A1%E6%AD%BB%E5%8E%9F%E5%9B%A0/</guid>
+      <guid>https://mannuan.github.io/post/20180829101640/</guid>
       <description>1.command line tools没有安装，如果执行在线安装的命令也卡死，请看我的上一篇博客的离线安装方法；</description>
     </item>
     

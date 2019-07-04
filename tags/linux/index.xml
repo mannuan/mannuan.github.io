@@ -12,19 +12,19 @@
     
     <item>
       <title>linux 和windows下使用ffmpeg将mkv转换为mp4</title>
-      <link>https://mannuan.github.io/post/linux-%E5%92%8Cwindows%E4%B8%8B%E4%BD%BF%E7%94%A8ffmpeg%E5%B0%86mkv%E8%BD%AC%E6%8D%A2%E4%B8%BAmp4/</link>
+      <link>https://mannuan.github.io/post/20190617145615/</link>
       <pubDate>Mon, 17 Jun 2019 14:56:15 +0800</pubDate>
       
-      <guid>https://mannuan.github.io/post/linux-%E5%92%8Cwindows%E4%B8%8B%E4%BD%BF%E7%94%A8ffmpeg%E5%B0%86mkv%E8%BD%AC%E6%8D%A2%E4%B8%BAmp4/</guid>
+      <guid>https://mannuan.github.io/post/20190617145615/</guid>
       <description>ffmpeg -i 名称.mkv -s hd720 -c:v libx264 -crf 23 -c:a aac -strict -2 名称.</description>
     </item>
     
     <item>
       <title>linux不需要重装系统就可以调整分区</title>
-      <link>https://mannuan.github.io/post/linux%E4%B8%8D%E9%9C%80%E8%A6%81%E9%87%8D%E8%A3%85%E7%B3%BB%E7%BB%9F%E5%B0%B1%E5%8F%AF%E4%BB%A5%E8%B0%83%E6%95%B4%E5%88%86%E5%8C%BA/</link>
+      <link>https://mannuan.github.io/post/20190610204627/</link>
       <pubDate>Mon, 10 Jun 2019 20:46:27 +0800</pubDate>
       
-      <guid>https://mannuan.github.io/post/linux%E4%B8%8D%E9%9C%80%E8%A6%81%E9%87%8D%E8%A3%85%E7%B3%BB%E7%BB%9F%E5%B0%B1%E5%8F%AF%E4%BB%A5%E8%B0%83%E6%95%B4%E5%88%86%E5%8C%BA/</guid>
+      <guid>https://mannuan.github.io/post/20190610204627/</guid>
       <description>介绍 Gparted是一个针对于linux分区调整的可视化工具。它是一个微型的linux操作系统封装了一些分区的命令，以一个iso格式的文件存在，选择gparted- live-*.iso这样的文件点击下载。
 刻录 下载完成之后，你需要准备一个刻录工具（比如软碟通）和一个8G以上的U盘。这个刻录的教程，百度一下就有很多。
 使用 刻录完成以后，你在开机</description>
@@ -32,49 +32,49 @@
     
     <item>
       <title>wkhtmltopdf：一个 Linux 中将网页转成 PDF 的智能工具</title>
-      <link>https://mannuan.github.io/post/wkhtmltopdf%E4%B8%80%E4%B8%AA-linux-%E4%B8%AD%E5%B0%86%E7%BD%91%E9%A1%B5%E8%BD%AC%E6%88%90-pdf-%E7%9A%84%E6%99%BA%E8%83%BD%E5%B7%A5%E5%85%B7/</link>
+      <link>https://mannuan.github.io/post/20190607174103/</link>
       <pubDate>Fri, 07 Jun 2019 17:41:03 +0800</pubDate>
       
-      <guid>https://mannuan.github.io/post/wkhtmltopdf%E4%B8%80%E4%B8%AA-linux-%E4%B8%AD%E5%B0%86%E7%BD%91%E9%A1%B5%E8%BD%AC%E6%88%90-pdf-%E7%9A%84%E6%99%BA%E8%83%BD%E5%B7%A5%E5%85%B7/</guid>
+      <guid>https://mannuan.github.io/post/20190607174103/</guid>
       <description>用法： wkhtmltopdf http://google.com google.pdf 下载（deb）： wkhtmlpdf
 开源代码代码： wkhtmlpdf.git</description>
     </item>
     
     <item>
       <title>jupyter_notebook_config.py 文件的生成命令</title>
-      <link>https://mannuan.github.io/post/jupyter_notebook_config.py-%E6%96%87%E4%BB%B6%E7%9A%84%E7%94%9F%E6%88%90%E5%91%BD%E4%BB%A4/</link>
+      <link>https://mannuan.github.io/post/20190515151225/</link>
       <pubDate>Wed, 15 May 2019 15:12:25 +0800</pubDate>
       
-      <guid>https://mannuan.github.io/post/jupyter_notebook_config.py-%E6%96%87%E4%BB%B6%E7%9A%84%E7%94%9F%E6%88%90%E5%91%BD%E4%BB%A4/</guid>
+      <guid>https://mannuan.github.io/post/20190515151225/</guid>
       <description>jupyter notebook --generate-config</description>
     </item>
     
     <item>
       <title>apt-get: error loading libgcc_s.so.1的解决方案</title>
-      <link>https://mannuan.github.io/post/apt-get-error-loading-libgcc_s.so.1%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</link>
+      <link>https://mannuan.github.io/post/20190513111449/</link>
       <pubDate>Mon, 13 May 2019 11:14:49 +0800</pubDate>
       
-      <guid>https://mannuan.github.io/post/apt-get-error-loading-libgcc_s.so.1%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</guid>
+      <guid>https://mannuan.github.io/post/20190513111449/</guid>
       <description>出现这个问题的主要原因是&amp;rdquo;/lib/x86_64-linux-gnu/&amp;ldquo;目录下缺少libgcc_s.so.1
 解决方案：从其他相同操作系统的主机上的&amp;rdquo;/lib/x86_64-linux-gnu/&amp;ldquo;目录，拷贝libgcc_s.so.1</description>
     </item>
     
     <item>
       <title>阿里云免费ssl证书申请</title>
-      <link>https://mannuan.github.io/post/%E9%98%BF%E9%87%8C%E4%BA%91%E5%85%8D%E8%B4%B9ssl%E8%AF%81%E4%B9%A6%E7%94%B3%E8%AF%B7/</link>
+      <link>https://mannuan.github.io/post/20190502140132/</link>
       <pubDate>Thu, 02 May 2019 14:01:32 +0800</pubDate>
       
-      <guid>https://mannuan.github.io/post/%E9%98%BF%E9%87%8C%E4%BA%91%E5%85%8D%E8%B4%B9ssl%E8%AF%81%E4%B9%A6%E7%94%B3%E8%AF%B7/</guid>
+      <guid>https://mannuan.github.io/post/20190502140132/</guid>
       <description> 第一步：在阿里云申请域名  登录阿里云， 在搜索框中输入&amp;rdquo;域名 控制台&amp;rdquo;， 进行域名的购买或则注册。   我强烈不推荐购买阿里云的二手域名，虽然价格很便宜，但是大多数域名都有问题，比如被注册局暂停解析等等
  第二步：在阿里云申请免费的ssl证书  同样在搜索框中输入&amp;rdquo;dns 控制台&amp;rdquo;， 在域名的列表里面可以看到你已经购买的域名， 然后在列表的每个item中点击“更多”，出现&amp;rdquo;ssl&amp;rdquo;证书的字样，点击进去。 选择免费版的ssl证书（这里只能单个子域名进行注册） 点击申请，跳到ssl证书列表页面， 点击验证，大概过5-6分钟，ssl证书就可以审核通过， 下载证书我推荐下载nginx版本的，nginx配置域名最方便，配置域名的教程可以参看我的https服务器搭建详细教程(ubuntu系统实测可行)这个教程  </description>
     </item>
     
     <item>
       <title>linux修改设备名</title>
-      <link>https://mannuan.github.io/post/linux%E4%BF%AE%E6%94%B9%E8%AE%BE%E5%A4%87%E5%90%8D/</link>
+      <link>https://mannuan.github.io/post/20190501213953/</link>
       <pubDate>Wed, 01 May 2019 21:39:53 +0800</pubDate>
       
-      <guid>https://mannuan.github.io/post/linux%E4%BF%AE%E6%94%B9%E8%AE%BE%E5%A4%87%E5%90%8D/</guid>
+      <guid>https://mannuan.github.io/post/20190501213953/</guid>
       <description>只要修改两个文件：
  /etc/hostname
  /etc/hosts

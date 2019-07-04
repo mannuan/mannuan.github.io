@@ -12,10 +12,10 @@
     
     <item>
       <title>关于Ajax的jQuery、Vue.js、原生js的各个版本的实现对比</title>
-      <link>https://mannuan.github.io/post/%E5%85%B3%E4%BA%8Eajax%E7%9A%84jqueryvue.js%E5%8E%9F%E7%94%9Fjs%E7%9A%84%E5%90%84%E4%B8%AA%E7%89%88%E6%9C%AC%E7%9A%84%E5%AE%9E%E7%8E%B0%E5%AF%B9%E6%AF%94/</link>
+      <link>https://mannuan.github.io/post/20190628203826/</link>
       <pubDate>Fri, 28 Jun 2019 20:38:26 +0800</pubDate>
       
-      <guid>https://mannuan.github.io/post/%E5%85%B3%E4%BA%8Eajax%E7%9A%84jqueryvue.js%E5%8E%9F%E7%94%9Fjs%E7%9A%84%E5%90%84%E4%B8%AA%E7%89%88%E6%9C%AC%E7%9A%84%E5%AE%9E%E7%8E%B0%E5%AF%B9%E6%AF%94/</guid>
+      <guid>https://mannuan.github.io/post/20190628203826/</guid>
       <description>目录
 前言
 1、原生js实现
@@ -29,19 +29,19 @@
     
     <item>
       <title>attr()和addClass()的区别</title>
-      <link>https://mannuan.github.io/post/attr%E5%92%8Caddclass%E7%9A%84%E5%8C%BA%E5%88%AB/</link>
+      <link>https://mannuan.github.io/post/20190622092813/</link>
       <pubDate>Sat, 22 Jun 2019 09:28:13 +0800</pubDate>
       
-      <guid>https://mannuan.github.io/post/attr%E5%92%8Caddclass%E7%9A%84%E5%8C%BA%E5%88%AB/</guid>
+      <guid>https://mannuan.github.io/post/20190622092813/</guid>
       <description>   方法 addClass() attr()     用途 追加样式 设置样式   对同一个网页元素操作 &amp;lt;p&amp;gt;test&amp;lt;/p&amp;gt;    第1次使用方法 $(&amp;quot;p&amp;quot;).addClass(&amp;quot;high&amp;quot;); $(&amp;quot;p&amp;quot;).attr(&amp;quot;class&amp;quot;, &amp;quot;high&amp;quot;);   第1次结果 &amp;lt;p class=&amp;quot;high&amp;quot;&amp;gt;test&amp;lt;/p&amp;gt;    再次使用方法 $(&amp;quot;p&amp;quot;).addClass(&amp;quot;another&amp;quot;); $(&amp;quot;p&amp;quot;).attr(&amp;quot;class&amp;quot;, &amp;quot;another&amp;quot;);   最终结果 &amp;lt;p class=&amp;quot;high another&amp;quot;&amp;gt;test&amp;lt;/p&amp;gt; &amp;lt;p class=&amp;quot;another&amp;quot;&amp;gt;test&amp;lt;/p&amp;gt;    </description>
     </item>
     
     <item>
       <title>val()方法的选中功能</title>
-      <link>https://mannuan.github.io/post/val%E6%96%B9%E6%B3%95%E7%9A%84%E9%80%89%E4%B8%AD%E5%8A%9F%E8%83%BD/</link>
+      <link>https://mannuan.github.io/post/20190622092753/</link>
       <pubDate>Sat, 22 Jun 2019 09:27:53 +0800</pubDate>
       
-      <guid>https://mannuan.github.io/post/val%E6%96%B9%E6%B3%95%E7%9A%84%E9%80%89%E4%B8%AD%E5%8A%9F%E8%83%BD/</guid>
+      <guid>https://mannuan.github.io/post/20190622092753/</guid>
       <description>&amp;lt;select id=&amp;#34;single&amp;#34;&amp;gt; &amp;lt;option&amp;gt;选择1号&amp;lt;/option&amp;gt; &amp;lt;option&amp;gt;选择2号&amp;lt;/option&amp;gt; &amp;lt;option&amp;gt;选择3号&amp;lt;/option&amp;gt; &amp;lt;/select&amp;gt; &amp;lt;select id=&amp;#34;multiple&amp;#34; multiple=&amp;#34;multiple&amp;#34; style=&amp;#34;height:120px;&amp;#34;&amp;gt; &amp;lt;option selected=&amp;#34;selected&amp;#34;&amp;gt;选择1号&amp;lt;/option&amp;gt; &amp;lt;option&amp;gt;选择2号&amp;lt;/option&amp;gt; &amp;lt;option&amp;gt;选择3号&amp;lt;/option&amp;gt; &amp;lt;option&amp;gt;选择4号&amp;lt;/option&amp;gt; &amp;lt;option selected=&amp;#34;selected&amp;#34;&amp;gt;选择5号&amp;lt;/option&amp;gt; &amp;lt;/select&amp;gt; &amp;lt;input type=&amp;#34;checkbox&amp;#34; value=&amp;#34;check1&amp;#34;/&amp;gt;多选1 &amp;lt;input type=&amp;#34;checkbox&amp;#34; value=&amp;#34;check2&amp;#34;/&amp;gt;多选2 &amp;lt;input type=&amp;#34;checkbox&amp;#34; value=&amp;#34;check3&amp;#34;/&amp;gt;多选3 &amp;lt;input type=&amp;#34;checkbox&amp;#34; value=&amp;#34;check4&amp;#34;/&amp;gt;多选4 &amp;lt;input type=&amp;#34;radio&amp;#34; value=&amp;#34;radio1&amp;#34;/&amp;gt;单选1 &amp;lt;input type=&amp;#34;radio&amp;#34; value=&amp;#34;radio2&amp;#34;/&amp;gt;单选2 &amp;lt;input type=&amp;#34;radio&amp;#34; value=&amp;#34;radio3&amp;#34;/&amp;gt;单选3 该网页中的一些元素是默认选中的，可以通过val()方法来改变它们的选中项。如果要使第1个下拉框的第2项被选中，可以用以下jQuery代码实现：
 $(&amp;#34;#single&amp;#34;).val(&amp;#34;选择2号&amp;#34;);  如果使下拉框的第2项和第3项被选中，可以用以下jQuery代码实现:
 $(&amp;#34;#multiple&amp;#34;).val([&amp;#34;选择2号&amp;#34;, &amp;#34;选择3号&amp;#34;]);  按照上面类似的写法，下面的代码可以使多选框和单选框被选中，jQuery代码如下：
@@ -50,10 +50,10 @@ $(&amp;#34;:checkbox&amp;#34;).val([&amp;#34;check2&amp;#34;, &amp;#34;check3&am
     
     <item>
       <title>parent()，parents()与closest()的区别</title>
-      <link>https://mannuan.github.io/post/parentparents%E4%B8%8Eclosest%E7%9A%84%E5%8C%BA%E5%88%AB/</link>
+      <link>https://mannuan.github.io/post/20190622092726/</link>
       <pubDate>Sat, 22 Jun 2019 09:27:26 +0800</pubDate>
       
-      <guid>https://mannuan.github.io/post/parentparents%E4%B8%8Eclosest%E7%9A%84%E5%8C%BA%E5%88%AB/</guid>
+      <guid>https://mannuan.github.io/post/20190622092726/</guid>
       <description>   方法 描述 示例     parent() 获得集合中每个匹配元素的父级元素 $(&#39;.item-1&#39;).parent().css(&#39;background-color&#39;,&#39;red&#39;); parent()方法从指定类型的直接父节点开始查找。parent()返回一个元素节点。   parents() 获得集合中每个匹配元素的祖先元素 $(&#39;.item-1&#39;).parents(&#39;ul&#39;).css(&#39;background-color&#39;, &#39;red&#39;);
 parents()方法查找同parent()方法类似，不同的一点在于，当它找到第一个父节点时并没有停止查找，而是继续查找，最后返回多个父节点。   closest() 从元素本身开始，逐级向上级元素匹配，并返回最先匹配的祖先元素 $(.item-1).closest(&amp;quot;ul&amp;quot;).css(&amp;quot;background-color&amp;quot;, &#39;red&#39;);
 closest()方法查找是从包含自身的节点找起，它同parents()方法类似，不同点在于它的只返回匹配的第一个节点。    </description>
@@ -61,10 +61,10 @@ closest()方法查找是从包含自身的节点找起，它同parents()方法�
     
     <item>
       <title>jQuery插入节点的方法</title>
-      <link>https://mannuan.github.io/post/jquery%E6%8F%92%E5%85%A5%E8%8A%82%E7%82%B9%E7%9A%84%E6%96%B9%E6%B3%95/</link>
+      <link>https://mannuan.github.io/post/20190621195930/</link>
       <pubDate>Fri, 21 Jun 2019 19:59:30 +0800</pubDate>
       
-      <guid>https://mannuan.github.io/post/jquery%E6%8F%92%E5%85%A5%E8%8A%82%E7%82%B9%E7%9A%84%E6%96%B9%E6%B3%95/</guid>
+      <guid>https://mannuan.github.io/post/20190621195930/</guid>
       <description>方法 描述 示例     append() 向每个匹配的元素内部追加内容 HTML代码: &amp;lt;p&amp;gt;我想说：&amp;lt;/p&amp;gt; jQuery代码: $(&amp;quot;p&amp;quot;).append(&amp;quot;&amp;lt;b&amp;gt;你好&amp;lt;/b&amp;gt;&amp;quot;); 结果: &amp;lt;p&amp;gt;我想说：&amp;lt;b&amp;gt;你好&amp;lt;/b&amp;gt;&amp;lt;/p&amp;gt;   appendTo() 将所有匹配的元素追加到指定元素中，实际上，使用该方法是颠倒了常规的$(A).append(B)的操作，即不是将B追加到A中，而是将A追加到B中 HTML代码：
 &amp;lt;p&amp;gt;我想说:&amp;lt;/p&amp;gt; jQuery代码:
 $(&amp;quot;&amp;lt;b&amp;gt;你好&amp;lt;/b&amp;gt;&amp;quot;).appendTo(&amp;quot;p&amp;quot;); 结果:
@@ -92,28 +92,28 @@ $(&amp;quot;&amp;lt;b&amp;gt;你好&amp;lt;/b&amp;gt;&amp;quot;).insertAfter(&am
     
     <item>
       <title>表单选择器</title>
-      <link>https://mannuan.github.io/post/%E8%A1%A8%E5%8D%95%E9%80%89%E6%8B%A9%E5%99%A8/</link>
+      <link>https://mannuan.github.io/post/20190621134332/</link>
       <pubDate>Fri, 21 Jun 2019 13:43:32 +0800</pubDate>
       
-      <guid>https://mannuan.github.io/post/%E8%A1%A8%E5%8D%95%E9%80%89%E6%8B%A9%E5%99%A8/</guid>
+      <guid>https://mannuan.github.io/post/20190621134332/</guid>
       <description>   选择器 描述 返回 示例     :input 选取所有的&amp;lt;input&amp;gt;、&amp;lt;textarea&amp;gt;、&amp;lt;select&amp;gt;和&amp;lt;button&amp;gt;元素 集合元素 $(&amp;quot;:input&amp;quot;)选取所有&amp;lt;input&amp;gt;、&amp;lt;textarea&amp;gt;、&amp;lt;select&amp;gt;和&amp;lt;button&amp;gt;元素   :text 选取所有的单行文本框 集合元素 $(&amp;quot;:text&amp;quot;)选取所有的单行文本框   :password 选取所有的密码框 集合元素 $(&amp;quot;:password&amp;quot;)选取所有的密码框   :radio 选取所有的单选框 集合元素 $(&amp;quot;:radio&amp;quot;)选取所有的单选框   :checkbox 选取所有的复选框 集合元素 $(&amp;quot;:checkbox&amp;quot;)选取所有的复选框   :submit 选取所有的提交按钮 集合元素 $(&amp;quot;:submit&amp;quot;)选取所有的提交按钮   :image 选取所有的图像按钮 集合元素 $(&amp;quot;:image&amp;quot;)选取所有的图像按钮   :reset 选取所有的重置按钮 集合元素 $(&amp;quot;:reset&amp;quot;)选取所有的重置按钮   :button 选取所有按钮 集合元素 $(&amp;quot;:button&amp;quot;)选取所有的按钮   :file 选取所有的上传域 集合元素 $(&amp;quot;:file&amp;quot;)选取所有的上传域   :hidden 选取所有不可见元素 集合元素 $(&amp;quot;:hidden&amp;quot;)选取所有不可见元素（已经在不可见过滤选择器中讲解过）    </description>
     </item>
     
     <item>
       <title>表单对象属性过滤选择器</title>
-      <link>https://mannuan.github.io/post/%E8%A1%A8%E5%8D%95%E5%AF%B9%E8%B1%A1%E5%B1%9E%E6%80%A7%E8%BF%87%E6%BB%A4%E9%80%89%E6%8B%A9%E5%99%A8/</link>
+      <link>https://mannuan.github.io/post/20190621112044/</link>
       <pubDate>Fri, 21 Jun 2019 11:20:44 +0800</pubDate>
       
-      <guid>https://mannuan.github.io/post/%E8%A1%A8%E5%8D%95%E5%AF%B9%E8%B1%A1%E5%B1%9E%E6%80%A7%E8%BF%87%E6%BB%A4%E9%80%89%E6%8B%A9%E5%99%A8/</guid>
+      <guid>https://mannuan.github.io/post/20190621112044/</guid>
       <description>   选择器 描述 返回 示例     :enabled 选取所有可用的元素 集合元素 $(&#39;#form1:enabled&#39;);选取id为&amp;rdquo;form1&amp;rdquo;的表单内的所有可用元素   :disabled 选取所有不可用的元素 集合元素 $(&amp;quot;#form2:disabled&amp;quot;)选取id为&amp;rdquo;form2&amp;rdquo;的表单内的所有不可用的元素   :checked 选取所有被选中的元素（单选框，复选框） 集合元素 $(&amp;quot;input:checked&amp;quot;)；选取所有被选中的&amp;lt;input&amp;gt;元素   :selected 选取所有被选中的选项元素（下拉列表） 集合元素 $(&amp;quot;select option:checked&amp;quot;);选取所有被选中的选项元素    </description>
     </item>
     
     <item>
       <title>子元素过滤选择器</title>
-      <link>https://mannuan.github.io/post/%E5%AD%90%E5%85%83%E7%B4%A0%E8%BF%87%E6%BB%A4%E9%80%89%E6%8B%A9%E5%99%A8/</link>
+      <link>https://mannuan.github.io/post/20190621111026/</link>
       <pubDate>Fri, 21 Jun 2019 11:10:26 +0800</pubDate>
       
-      <guid>https://mannuan.github.io/post/%E5%AD%90%E5%85%83%E7%B4%A0%E8%BF%87%E6%BB%A4%E9%80%89%E6%8B%A9%E5%99%A8/</guid>
+      <guid>https://mannuan.github.io/post/20190621111026/</guid>
       <description>   选择器 描述 返回 示例     :nth-child(index/even/odd/equation) 选取每个父元素下的第index个子元素或者奇偶元素（index从1算起） 集合元素 :eq(index)只匹配一个元素，而:nth-child将为每一个父元素匹配子元素，并且:nth-child(index)的index是从1开始的，而:eq(index)是从0算起的   :first-child 选取每个父元素的第一个子元素 集合元素 :first只返回单个元素，而:first-child选择符将为每个父元素匹配第一个子元素。
 例如$(&#39;ul li:first-child&#39;)；选取每个&amp;lt;ul&amp;gt;中第一个&amp;lt;li&amp;gt;元素   :last-child 选取每个父元素的最后子元素 集合元素 同样，:last只返回单个元素，而:last-child选择符将为每个父元素匹配最后一个子元素。
 例如$(&#39;ul li:last-child&#39;);选择每个&amp;lt;ul&amp;gt;中最后一个&amp;lt;li&amp;gt;元素   :only-child 如果某个元素是它父元素中唯一的子元素，那么将会被匹配。如果父元素中含有其他元素，则不会被匹配 集合元素 $(&#39;ul li:only-child&#39;)
@@ -122,46 +122,46 @@ $(&amp;quot;&amp;lt;b&amp;gt;你好&amp;lt;/b&amp;gt;&amp;quot;).insertAfter(&am
     
     <item>
       <title>属性过滤选择器</title>
-      <link>https://mannuan.github.io/post/%E5%B1%9E%E6%80%A7%E8%BF%87%E6%BB%A4%E9%80%89%E6%8B%A9%E5%99%A8/</link>
+      <link>https://mannuan.github.io/post/20190621104825/</link>
       <pubDate>Fri, 21 Jun 2019 10:48:25 +0800</pubDate>
       
-      <guid>https://mannuan.github.io/post/%E5%B1%9E%E6%80%A7%E8%BF%87%E6%BB%A4%E9%80%89%E6%8B%A9%E5%99%A8/</guid>
+      <guid>https://mannuan.github.io/post/20190621104825/</guid>
       <description>   选择器 描述 返回 示例     [attribute] 选取拥有此属性的元素 集合元素 $(‘div[id]’)选取拥有属性id的元素   [attribute=value] 选取属性的值为value的元素 集合元素 $(‘div[title=test]’)选取属性title为“test”的&amp;lt;div&amp;gt;元素   [attribute!=value] 选取属性的值不等于value的元素 集合元素 $(&#39;div[title!=test]&#39;)选取属性title不等于&amp;rdquo;test&amp;rdquo;的&amp;lt;div&amp;gt;元素（注意：没有属性title的&amp;lt;div&amp;gt;元素也会被选取）   [attribute^=value] 选取属性的值以value开始的元素 集合元素 $(&#39;div[title^=test]&#39;)选取属性title以“test”开始的&amp;lt;div&amp;gt;元素   [attribute$=value] 选取属性的值以value结束的元素 集合元素 $(&#39;div[title$=test]&#39;)选取属性title以“test”结束的&amp;lt;div&amp;gt;元素   [attribute*=value] 选取属性的值含有value的元素 集合元素 $(&#39;div[title*=test]&#39;)选取属性title含有&amp;rdquo;test&amp;rdquo;的&amp;lt;div&amp;gt;元素   `[attribute =value]` 选取属性等于给定字符串或以该字符串为前缀（该字符串后跟一个连字符“-”）的元素 集合元素   [attribute~=value] 选取属性用空格分隔的值中包含一个给定值的元素 集合元素 $(&#39;div[title~=&amp;quot;uk&amp;quot;]&#39;)选取属性title用空格分隔的值中包含字符uk的元素   [attribute1][attribute2]...[attributeN] 用属性选择器合并成一个复合属性选择器，满足多个条件。每选择一次，缩小一次范围。 集合元素 $(&#39;div[id][title$=&amp;quot;test&amp;quot;]&#39;)选取拥有属性id，并且属性title以“test”结束的&amp;lt;div&amp;gt;元素    </description>
     </item>
     
     <item>
       <title>可见性过滤选择器</title>
-      <link>https://mannuan.github.io/post/%E5%8F%AF%E8%A7%81%E6%80%A7%E8%BF%87%E6%BB%A4%E9%80%89%E6%8B%A9%E5%99%A8/</link>
+      <link>https://mannuan.github.io/post/20190621102607/</link>
       <pubDate>Fri, 21 Jun 2019 10:26:07 +0800</pubDate>
       
-      <guid>https://mannuan.github.io/post/%E5%8F%AF%E8%A7%81%E6%80%A7%E8%BF%87%E6%BB%A4%E9%80%89%E6%8B%A9%E5%99%A8/</guid>
+      <guid>https://mannuan.github.io/post/20190621102607/</guid>
       <description>   选择器 描述 返回 示例     :hidden 选取所有不可见的元素 集合元素 $(&amp;quot;:hidden&amp;quot;)选取所有不可见的元素。包括&amp;lt;input type=&amp;quot;hidden&amp;quot;/&amp;gt;，&amp;lt;div style=&amp;quot;display:none&amp;quot;&amp;gt;和&amp;lt;div style=&amp;quot;visibility:hidden;&amp;quot;&amp;gt;等元素。如果只想选取&amp;lt;input&amp;gt;元素，可以使用$(&amp;quot;input:hiddden&amp;quot;)   :visible 选取所有可见的元素 集合元素 $(&amp;quot;div:visible&amp;quot;)选取所有可见的&amp;lt;div&amp;gt;元素    </description>
     </item>
     
     <item>
       <title>内容过滤选择器</title>
-      <link>https://mannuan.github.io/post/%E5%86%85%E5%AE%B9%E8%BF%87%E6%BB%A4%E9%80%89%E6%8B%A9%E5%99%A8/</link>
+      <link>https://mannuan.github.io/post/20190621101710/</link>
       <pubDate>Fri, 21 Jun 2019 10:17:10 +0800</pubDate>
       
-      <guid>https://mannuan.github.io/post/%E5%86%85%E5%AE%B9%E8%BF%87%E6%BB%A4%E9%80%89%E6%8B%A9%E5%99%A8/</guid>
+      <guid>https://mannuan.github.io/post/20190621101710/</guid>
       <description>   选择器 描述 返回 示例     :contains(text) 选取含有文本内容为“text”的元素 集合元素 $(&#39;div:contains(&#39;我&#39;)&#39;)选取含有文本“我”的&amp;lt;div&amp;gt;元素   :empty 选取不包含子元素或者文本的空元素 集合元素 $(&#39;div:empty&#39;)选取不包含子元素（包括文本元素）的&amp;lt;div&amp;gt;空元素   :has(selector) 选取含有选择器所匹配的元素的元素 集合元素 $(&#39;div:has(p)&#39;)选取含有&amp;lt;p&amp;gt;元素的&amp;lt;div&amp;gt;元素   :parent 选取含有子元素或者文本的元素 集合元素 $(&#39;div:parent&#39;)选取拥有子元素（包括文本元素）的&amp;lt;div&amp;gt;元素    </description>
     </item>
     
     <item>
       <title>基本过滤选择器</title>
-      <link>https://mannuan.github.io/post/%E5%9F%BA%E6%9C%AC%E8%BF%87%E6%BB%A4%E9%80%89%E6%8B%A9%E5%99%A8/</link>
+      <link>https://mannuan.github.io/post/20190621100750/</link>
       <pubDate>Fri, 21 Jun 2019 10:07:50 +0800</pubDate>
       
-      <guid>https://mannuan.github.io/post/%E5%9F%BA%E6%9C%AC%E8%BF%87%E6%BB%A4%E9%80%89%E6%8B%A9%E5%99%A8/</guid>
+      <guid>https://mannuan.github.io/post/20190621100750/</guid>
       <description>   选择器 描述 返回 示例     :first 选取第一个元素 单个元素 $(&#39;div:first&#39;)选取所有&amp;lt;div&amp;gt;元素中第一个&amp;lt;div&amp;gt;元素   :last 选取最后一个元素 单个元素 $(&#39;div:last&#39;)选取所有元素最后一个`元素   :not(selector) 去除所有与给定选择器匹配的元素 集合元素 $(&#39;input:not(.myClass)&#39;)选取class不是myClass的&amp;lt;input&amp;gt;元素   :even 选取索引是偶数的所有元素，索引从0开始 集合元素 $(&#39;input:even&#39;)选取索引是偶数的&amp;lt;input&amp;gt;元素   :odd 选取索引是奇数的所有元素，索引从0开始 集合元素 $(&#39;input:odd&#39;)选取索引是奇数的&amp;lt;input&amp;gt;元素   :eq(index) 选取索引等于index的元素（index从0开始） 单个元素 $(&#39;input:eq(1)&#39;)选取索引等于1的元素   :gt(index) 选取索引大于index的元素(index从0开始) 集合元素 $(&#39;input:gt(1)&#39;)选取索引大于1的&amp;lt;input&amp;gt;元素（注：大于1，不包括1）   :lt(index) 选取索引小于index的元素(index从0开始) 集合元素 $(&#39;input:lt(1)&#39;)选取索引小于1的&amp;lt;input&amp;gt;元素（注：小于1，不包括1）   :header 选取所有的标题元素，例如h1，h2，h3等等 集合元素 $(&#39;:header&#39;)选取网页中所有的&amp;lt;h1&amp;gt;，&amp;lt;h2&amp;gt;，&amp;lt;h3&amp;gt;&amp;hellip;&amp;hellip;   :animated 选取当前正在执行动画的所有元素 集合元素 $(&#39;div:animated&#39;)选取正在执行动画的&amp;lt;div&amp;gt;元素   :focus 选取当前获取焦点的元素 集合元素 $(&#39;:focus&#39;)选取当前获取焦点的元素    </description>
     </item>
     
     <item>
       <title>层次选择器的4种选择器列表</title>
-      <link>https://mannuan.github.io/post/%E5%B1%82%E6%AC%A1%E9%80%89%E6%8B%A9%E5%99%A8%E7%9A%844%E7%A7%8D%E9%80%89%E6%8B%A9%E5%99%A8%E5%88%97%E8%A1%A8/</link>
+      <link>https://mannuan.github.io/post/20190621091652/</link>
       <pubDate>Fri, 21 Jun 2019 09:16:52 +0800</pubDate>
       
-      <guid>https://mannuan.github.io/post/%E5%B1%82%E6%AC%A1%E9%80%89%E6%8B%A9%E5%99%A8%E7%9A%844%E7%A7%8D%E9%80%89%E6%8B%A9%E5%99%A8%E5%88%97%E8%A1%A8/</guid>
+      <guid>https://mannuan.github.io/post/20190621091652/</guid>
       <description>   选择器 描述 返回 示例     $(&amp;quot;ancestor descendant&amp;quot;) 选取ancestor元素里的所有descendant（后代）元素 集合元素span $(&amp;quot;div span&amp;quot;)
 选取&amp;lt;div&amp;gt;里的所有的&amp;lt;span&amp;gt;元素   $(&amp;quot;parent &amp;gt; child&amp;quot;) 选取parent元素下的child（子）元素，与$(&amp;quot;ancestor descendant&amp;quot;)
 有区别，$(&amp;quot;ancestor descendant&amp;quot;)
@@ -173,19 +173,19 @@ $(&amp;quot;&amp;lt;b&amp;gt;你好&amp;lt;/b&amp;gt;&amp;quot;).insertAfter(&am
     
     <item>
       <title>jQuery基本选择器</title>
-      <link>https://mannuan.github.io/post/jquery%E5%9F%BA%E6%9C%AC%E9%80%89%E6%8B%A9%E5%99%A8/</link>
+      <link>https://mannuan.github.io/post/20190621090254/</link>
       <pubDate>Fri, 21 Jun 2019 09:02:54 +0800</pubDate>
       
-      <guid>https://mannuan.github.io/post/jquery%E5%9F%BA%E6%9C%AC%E9%80%89%E6%8B%A9%E5%99%A8/</guid>
+      <guid>https://mannuan.github.io/post/20190621090254/</guid>
       <description>   选择器 描述 返回 示例     #id 根据给定的id匹配一个元素 单个元素 $(&amp;quot;#test&amp;quot;)选取id为test的元素   .class 根据给定的类名匹配元素 集合元素 $(&amp;quot;.test&amp;quot;)选取所有class为test的元素   element 根据给定的元素名匹配元素 集合元素 $(&amp;quot;p&amp;quot;)选取所有的&amp;lt;p&amp;gt;元素   * 匹配所有元素 集合元素 $(&amp;quot;*&amp;quot;)选取所有的元素   selector1, selector2, &amp;hellip;., selectorN 将每一个选择器匹配到的元素合并后一起返回 集合元素 $(&amp;quot;div, span, p.myClass&amp;quot;)选取所有&amp;lt;div&amp;gt;,&amp;lt;span&amp;gt;和拥有class为myclass的&amp;lt;p&amp;gt;标签的一组元素    </description>
     </item>
     
     <item>
       <title>jquery要点</title>
-      <link>https://mannuan.github.io/post/jquery%E8%A6%81%E7%82%B9/</link>
+      <link>https://mannuan.github.io/post/20190619170644/</link>
       <pubDate>Wed, 19 Jun 2019 17:06:44 +0800</pubDate>
       
-      <guid>https://mannuan.github.io/post/jquery%E8%A6%81%E7%82%B9/</guid>
+      <guid>https://mannuan.github.io/post/20190619170644/</guid>
       <description> jQuery中最有特色的莫过于它的链式操作方式——即对发生在同一个jQuery对象上的一组动作，可以直接连写而无需重复获取对象。这一特点是jQuery的代码无比优雅。 百度CDN: https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js     window.onload与$(document).ready()的对比(p6) window.onload $(document).ready()     执行时机 必须等待网页中所有元素加载完毕后（包括元素的所有关联文件）完全加载到浏览器后才能执行——即js此时可以访问页面中的任何元素 网页中所有DOM结构绘制完毕后就执行，可能DOM元素关联的东西并没有加载完—即DOM完全就绪   多次使用 不能同时编写多个以下代码无法正确执行：
 window.onload = function(){
 alert(&amp;quot;test1&amp;quot;)

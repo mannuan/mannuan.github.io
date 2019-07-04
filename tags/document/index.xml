@@ -12,10 +12,10 @@
     
     <item>
       <title>Document类型、HTMLDocument类型和document对象的区别</title>
-      <link>https://mannuan.github.io/post/document%E7%B1%BB%E5%9E%8Bhtmldocument%E7%B1%BB%E5%9E%8B%E5%92%8Cdocument%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%8C%BA%E5%88%AB/</link>
+      <link>https://mannuan.github.io/post/20190528111913/</link>
       <pubDate>Tue, 28 May 2019 11:19:13 +0800</pubDate>
       
-      <guid>https://mannuan.github.io/post/document%E7%B1%BB%E5%9E%8Bhtmldocument%E7%B1%BB%E5%9E%8B%E5%92%8Cdocument%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%8C%BA%E5%88%AB/</guid>
+      <guid>https://mannuan.github.io/post/20190528111913/</guid>
       <description> Dcoment表示文档，这里的文档可以是HTML文档，也可以是XML文档，换句话说Document类型能表示HTML和XML等文档； HTMLDocument对象继承自Document对象，专用于表示HTML文档； document对象是HTMLDocument对象的一个实例，表示整个HTML页面，又叫做页面的根节点；  Document对象（根节点）的特征：
 &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html&amp;gt; &amp;lt;head&amp;gt;&amp;lt;/head&amp;gt; &amp;lt;body&amp;gt; &amp;lt;/body&amp;gt; &amp;lt;script&amp;gt; console.log(document.nodeType); console.log(document.nodeName); console.log(document.nodeValue); console.log(document.parentNode); console.log(document.ownerDocument); console.log(document.childNodes); // 其子节点可能是一个DocumentType(最多一个)、Element(最多一个)、ProcessingInstruction或Comment  &amp;lt;/script&amp;gt; &amp;lt;/html&amp;gt;</description>
     </item>

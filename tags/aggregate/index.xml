@@ -12,10 +12,10 @@
     
     <item>
       <title>对mongodb的aggregate管道用法的理解</title>
-      <link>https://mannuan.github.io/post/%E5%AF%B9mongodb%E7%9A%84aggregate%E7%AE%A1%E9%81%93%E7%94%A8%E6%B3%95%E7%9A%84%E7%90%86%E8%A7%A3/</link>
+      <link>https://mannuan.github.io/post/20180723195612/</link>
       <pubDate>Mon, 23 Jul 2018 19:56:12 +0800</pubDate>
       
-      <guid>https://mannuan.github.io/post/%E5%AF%B9mongodb%E7%9A%84aggregate%E7%AE%A1%E9%81%93%E7%94%A8%E6%B3%95%E7%9A%84%E7%90%86%E8%A7%A3/</guid>
+      <guid>https://mannuan.github.io/post/20180723195612/</guid>
       <description>最近看了一些关于mongodb的教程，感觉很费力，尤其涉及到了一些复杂的操作。比如很多贴上了大段数据来描述样例、或者翻译了大段官方文档的文字，这些都让我感觉疲劳。 下面我用自己写的一些话来描述我对mongodb聚合的理解：
  注： &amp;lt;&amp;gt;用来标识变量（即里面的内容可以替换成其他），可以按照&amp;lt;&amp;gt;里面的单词的含义来理解下面的代码。
  例子：假设你有一组数据，需要按照顺序做这些操作：筛选、分组、求和，你可以用如下代码实现：

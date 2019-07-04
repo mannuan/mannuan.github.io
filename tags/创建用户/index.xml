@@ -12,10 +12,10 @@
     
     <item>
       <title>mongodb创建root和普通user</title>
-      <link>https://mannuan.github.io/post/mongodb%E5%88%9B%E5%BB%BAroot%E5%92%8C%E6%99%AE%E9%80%9Auser/</link>
+      <link>https://mannuan.github.io/post/20190212154741/</link>
       <pubDate>Tue, 12 Feb 2019 15:47:41 +0800</pubDate>
       
-      <guid>https://mannuan.github.io/post/mongodb%E5%88%9B%E5%BB%BAroot%E5%92%8C%E6%99%AE%E9%80%9Auser/</guid>
+      <guid>https://mannuan.github.io/post/20190212154741/</guid>
       <description>1、创建管理员，下面以用户test1为例：
 use admin db.createUser({user: &amp;#34;test1&amp;#34;, pwd: &amp;#34;test1&amp;#34;, roles: [{role: &amp;#34;root&amp;#34;, db: &amp;#34;admin&amp;#34;}]}) 2、创建test2db对应的test2用户:
 use test2db db.createUser({user: &amp;#34;test2&amp;#34;, pwd: &amp;#34;test2&amp;#34;, roles: [{role: &amp;#34;readWrite&amp;#34;, db: &amp;#34;test2db&amp;#34; }]})</description>
@@ -23,10 +23,10 @@ use test2db db.createUser({user: &amp;#34;test2&amp;#34;, pwd: &amp;#34;test2&am
     
     <item>
       <title>linux创建用户并给用户sudo权限</title>
-      <link>https://mannuan.github.io/post/linux%E5%88%9B%E5%BB%BA%E7%94%A8%E6%88%B7%E5%B9%B6%E7%BB%99%E7%94%A8%E6%88%B7sudo%E6%9D%83%E9%99%90/</link>
+      <link>https://mannuan.github.io/post/20190211224353/</link>
       <pubDate>Mon, 11 Feb 2019 22:43:53 +0800</pubDate>
       
-      <guid>https://mannuan.github.io/post/linux%E5%88%9B%E5%BB%BA%E7%94%A8%E6%88%B7%E5%B9%B6%E7%BB%99%E7%94%A8%E6%88%B7sudo%E6%9D%83%E9%99%90/</guid>
+      <guid>https://mannuan.github.io/post/20190211224353/</guid>
       <description>这些年，我看了很多关于创建linux用户的博客。发现当中都是写了一大堆废话，都是复制粘贴的，而且介绍的一点都不全面，有些甚至直接是错误的。
 我在这里将按如下步骤来详细的描述创建用户的过程。以用户名test为例：
 1、

@@ -12,10 +12,10 @@
     
     <item>
       <title>linux修改设备名</title>
-      <link>https://mannuan.github.io/post/linux%E4%BF%AE%E6%94%B9%E8%AE%BE%E5%A4%87%E5%90%8D/</link>
+      <link>https://mannuan.github.io/post/20190501213953/</link>
       <pubDate>Wed, 01 May 2019 21:39:53 +0800</pubDate>
       
-      <guid>https://mannuan.github.io/post/linux%E4%BF%AE%E6%94%B9%E8%AE%BE%E5%A4%87%E5%90%8D/</guid>
+      <guid>https://mannuan.github.io/post/20190501213953/</guid>
       <description>只要修改两个文件：
  /etc/hostname
  /etc/hosts

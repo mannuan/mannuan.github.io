@@ -12,10 +12,10 @@
     
     <item>
       <title>百度搜索-url编码</title>
-      <link>https://mannuan.github.io/post/%E7%99%BE%E5%BA%A6%E6%90%9C%E7%B4%A2-url%E7%BC%96%E7%A0%81/</link>
+      <link>https://mannuan.github.io/post/20190530113844/</link>
       <pubDate>Thu, 30 May 2019 11:38:44 +0800</pubDate>
       
-      <guid>https://mannuan.github.io/post/%E7%99%BE%E5%BA%A6%E6%90%9C%E7%B4%A2-url%E7%BC%96%E7%A0%81/</guid>
+      <guid>https://mannuan.github.io/post/20190530113844/</guid>
       <description>  百度搜索编码的格式与国际上面其他搜索的格式有所不同，比如google的是UTF-8，但是百度使用的是GB2312编码。
  应用场景  在爬虫当中我们经常需要组装url来进行页面的爬虫，这个时候我们就需要把搜索的关键字编码为url的形式，下面我们以python3代码为例讲解url的编码和解码：  # -*- coding: utf-8 -*- from urllib.parse import quote, unquote key_word = &amp;#34;购车&amp;#34;; # url编码 key_word_quote = quote(key_word.encode(&amp;#34;GB2312&amp;#34;), &amp;#39;gbk&amp;#39;) print(key_word_quote) # url解码 print(unquote(key_word_quote, &amp;#39;gbk&amp;#39;))</description>
     </item>

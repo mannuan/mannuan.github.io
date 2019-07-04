@@ -12,10 +12,10 @@
     
     <item>
       <title>验证Promise是同步的</title>
-      <link>https://mannuan.github.io/post/%E9%AA%8C%E8%AF%81promise%E6%98%AF%E5%90%8C%E6%AD%A5%E7%9A%84/</link>
+      <link>https://mannuan.github.io/post/20190628220548/</link>
       <pubDate>Fri, 28 Jun 2019 22:05:48 +0800</pubDate>
       
-      <guid>https://mannuan.github.io/post/%E9%AA%8C%E8%AF%81promise%E6%98%AF%E5%90%8C%E6%AD%A5%E7%9A%84/</guid>
+      <guid>https://mannuan.github.io/post/20190628220548/</guid>
       <description>前言 Promise是ES6提出的解决异步编程导致陷入回调的地狱问题。
 例子1 console.log(1); var a=new Promise(function(resolve, reject){ console.log(2); resolve(); }); console.log(2); var b = new Promise(function(resolve, reject){ console.log(4); resolve(); }); console.log(5); a.then(function(){ console.log(6); }); b.then(function(){ console.log(7); });   顺序输出：1~7
  例子2 console.log(1); var a = new Promise(function(resolve, reject){ resolve(); console.log(2); }); a.then(function(){ console.log(6); }); console.log(3); var b = new Promise(function(resolve, reject){ resolve(); console.log(4); }); b.then(function(){ console.log(7); }); console.log(5);   顺序输出：1~7

@@ -12,10 +12,10 @@
     
     <item>
       <title>JavaScript客户端检测</title>
-      <link>https://mannuan.github.io/post/javascript%E5%AE%A2%E6%88%B7%E7%AB%AF%E6%A3%80%E6%B5%8B/</link>
+      <link>https://mannuan.github.io/post/20190601105750/</link>
       <pubDate>Sat, 01 Jun 2019 10:57:50 +0800</pubDate>
       
-      <guid>https://mannuan.github.io/post/javascript%E5%AE%A2%E6%88%B7%E7%AB%AF%E6%A3%80%E6%B5%8B/</guid>
+      <guid>https://mannuan.github.io/post/20190601105750/</guid>
       <description>应对各个厂商、各个版本的浏览器对特性支持度的差异，常采取的策略
  ”最小公分母“策略 客户端检测技术，突破和规避种种局限  不到万不得已不要使用客户端检测；先设计最通用的方案，然后使用特定于浏览器的技术增强该方案。
 常用的客户端检测技术包括：

@@ -12,10 +12,10 @@
     
     <item>
       <title>mac下pkg安装包卸载</title>
-      <link>https://mannuan.github.io/post/mac%E4%B8%8Bpkg%E5%AE%89%E8%A3%85%E5%8C%85%E5%8D%B8%E8%BD%BD/</link>
+      <link>https://mannuan.github.io/post/20190628101517/</link>
       <pubDate>Fri, 28 Jun 2019 10:15:17 +0800</pubDate>
       
-      <guid>https://mannuan.github.io/post/mac%E4%B8%8Bpkg%E5%AE%89%E8%A3%85%E5%8C%85%E5%8D%B8%E8%BD%BD/</guid>
+      <guid>https://mannuan.github.io/post/20190628101517/</guid>
       <description>Mac下的安装和删除都比windows更加简单清晰，这点在dmg方式下非常明显，但很多时候我们会使用pkg来进行安装，这样的安装想删除就有点麻烦了。
 比如，我安装了Golang这个pkg用于go语言的编译，安装后确实可以使用，但安装的是一个工具链，并不是一个应用软件。所以在Application目录下是没有内容的，你可以查到安装在/usr/local/go这个目录下，但是否所有的内容都安装在这个目录下呢？我删除这个pkg的目的是为了用源码直接编译出工具链来应用，如果还有其他一些配置文件遗漏，可能会导致后续配置的问题。
 经过一些搜索和学习，觉得有两个方法：

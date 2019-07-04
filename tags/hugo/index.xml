@@ -12,10 +12,10 @@
     
     <item>
       <title>Hugo博客搭建教程</title>
-      <link>https://mannuan.github.io/post/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/</link>
+      <link>https://mannuan.github.io/post/20190630211927/</link>
       <pubDate>Sun, 30 Jun 2019 21:19:27 +0800</pubDate>
       
-      <guid>https://mannuan.github.io/post/hugo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B/</guid>
+      <guid>https://mannuan.github.io/post/20190630211927/</guid>
       <description>Hugo介绍 一种基于 Go 语言的博客框架。
 Hugo安装(Mac) brew install hugo 创建博客  下面以我的github用户名manuan为例
  hugo new site mannuan.github.io 安装主题 themes.gohuo.io上面有很多主题可供选择，比如选择m10c

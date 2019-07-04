@@ -12,10 +12,10 @@
     
     <item>
       <title>js 相等和不相等操作符总结</title>
-      <link>https://mannuan.github.io/post/js-%E7%9B%B8%E7%AD%89%E5%92%8C%E4%B8%8D%E7%9B%B8%E7%AD%89%E6%93%8D%E4%BD%9C%E7%AC%A6%E6%80%BB%E7%BB%93/</link>
+      <link>https://mannuan.github.io/post/20190517165040/</link>
       <pubDate>Fri, 17 May 2019 16:50:40 +0800</pubDate>
       
-      <guid>https://mannuan.github.io/post/js-%E7%9B%B8%E7%AD%89%E5%92%8C%E4%B8%8D%E7%9B%B8%E7%AD%89%E6%93%8D%E4%BD%9C%E7%AC%A6%E6%80%BB%E7%BB%93/</guid>
+      <guid>https://mannuan.github.io/post/20190517165040/</guid>
       <description>操作符两边操作数先转换数据类型，然后再比较它们的相等性，具体的规则如下：
    操作符规则 操作符a的数据类型 操作符b的数据类型 == != 备注     Boolean转为Number — — — Boolean无条件转为Number类型   String转为Number Number — — —   Object转为a.valueOf() 除了Object之外的所有类型 — — —   null undefined true false null等于underfined   NaN — false true NaN不等于NaN   Object Object — — 如果a和b指向同一个对象，相等操作符返回true，否则返回false     上述表格归纳自javascript高级程序设计，[p51-p53]
  </description>

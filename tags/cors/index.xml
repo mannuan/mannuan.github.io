@@ -12,10 +12,10 @@
     
     <item>
       <title>测试Ajax的Nodejs服务端代码</title>
-      <link>https://mannuan.github.io/post/%E6%B5%8B%E8%AF%95ajax%E7%9A%84nodejs%E6%9C%8D%E5%8A%A1%E7%AB%AF%E4%BB%A3%E7%A0%81/</link>
+      <link>https://mannuan.github.io/post/20190628174910/</link>
       <pubDate>Fri, 28 Jun 2019 17:49:10 +0800</pubDate>
       
-      <guid>https://mannuan.github.io/post/%E6%B5%8B%E8%AF%95ajax%E7%9A%84nodejs%E6%9C%8D%E5%8A%A1%E7%AB%AF%E4%BB%A3%E7%A0%81/</guid>
+      <guid>https://mannuan.github.io/post/20190628174910/</guid>
       <description>前言  由于使用Ajax必须要有一个服务端来接收消息，为了方便我使用Nodejs来搭建服务端。同时，为了兼顾实践跨域的方法，我在这里搭建了两个服务端。其中，一个服务端用来响应Ajax请求，另外一个服务端用作加载页面。这样就产生了跨域的问题，我采用的是cors的解决方案，具体的实现，请看sever1的代码。
  前期准备工作  安装nodejs，可以参看我的这篇教程 选择koa2作为服务端 安装模块：koa，koa-router，koa2-cors，koa-bodyparser，koa-art-template，path  服务端交互示意图 文件路径示意图 server1.js var Koa = require(&amp;#39;koa&amp;#39;); var Router = require(&amp;#39;koa-router&amp;#39;); var cors = require(&amp;#39;koa2-cors&amp;#39;); var bodyParser = require(&amp;#39;koa-bodyparser&amp;#39;); var app = new Koa(); var router = new Router(); //下面的代码必须写在设置路由的前面 app.use(cors({ origin: function (ctx) { return &amp;#39;http://127.0.0.1:4000&amp;#39;; }, exposeHeaders: [&amp;#39;WWW-Authenticate&amp;#39;, &amp;#39;Server-Authorization&amp;#39;], maxAge: 5, credentials: true, allowMethods: [&amp;#39;GET&amp;#39;, &amp;#39;POST&amp;#39;, &amp;#39;DELETE&amp;#39;], allowHeaders: [&amp;#39;Content-Type&amp;#39;, &amp;#39;Authorization&amp;#39;, &amp;#39;Accept&amp;#39;], })); //配置post提交数据的中间件 app.use(bodyParser()); //处理get请求 router.get(&amp;#39;/get&amp;#39;, async function(ctx){ ctx.</description>
     </item>

@@ -5,22 +5,40 @@
     <link>https://mannuan.github.io/tags/</link>
     <description>Recent content in Tags on mannuan</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 04 Jul 2019 14:22:18 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 04 Jul 2019 16:20:10 +0800</lastBuildDate>
     
 	<atom:link href="https://mannuan.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>简历</title>
-      <link>https://mannuan.github.io/tags/%E7%AE%80%E5%8E%86/</link>
-      <pubDate>Thu, 04 Jul 2019 14:22:18 +0800</pubDate>
+      <title>反讽</title>
+      <link>https://mannuan.github.io/tags/%E5%8F%8D%E8%AE%BD/</link>
+      <pubDate>Thu, 04 Jul 2019 16:20:10 +0800</pubDate>
       
-      <guid>https://mannuan.github.io/tags/%E7%AE%80%E5%8E%86/</guid>
+      <guid>https://mannuan.github.io/tags/%E5%8F%8D%E8%AE%BD/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>mac</title>
+      <title>翻译</title>
+      <link>https://mannuan.github.io/tags/%E7%BF%BB%E8%AF%91/</link>
+      <pubDate>Thu, 04 Jul 2019 16:20:10 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/tags/%E7%BF%BB%E8%AF%91/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>解读</title>
+      <link>https://mannuan.github.io/tags/%E8%A7%A3%E8%AF%BB/</link>
+      <pubDate>Thu, 04 Jul 2019 16:20:10 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/tags/%E8%A7%A3%E8%AF%BB/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>MAC</title>
       <link>https://mannuan.github.io/tags/mac/</link>
       <pubDate>Mon, 01 Jul 2019 20:42:46 +0800</pubDate>
       
@@ -1465,6 +1483,15 @@
       <pubDate>Thu, 05 Jul 2018 20:30:00 +0600</pubDate>
       
       <guid>https://mannuan.github.io/tags/lunr.js/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>简历</title>
+      <link>https://mannuan.github.io/tags/%E7%AE%80%E5%8E%86/</link>
+      <pubDate>Wed, 04 Jul 2018 14:22:18 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/tags/%E7%AE%80%E5%8E%86/</guid>
       <description></description>
     </item>
     

@@ -12,10 +12,10 @@
     
     <item>
       <title>numpy softmax实现</title>
-      <link>https://mannuan.github.io/post/numpy-softmax%E5%AE%9E%E7%8E%B0/</link>
+      <link>https://mannuan.github.io/post/20190602184249/</link>
       <pubDate>Sun, 02 Jun 2019 18:42:49 +0800</pubDate>
       
-      <guid>https://mannuan.github.io/post/numpy-softmax%E5%AE%9E%E7%8E%B0/</guid>
+      <guid>https://mannuan.github.io/post/20190602184249/</guid>
       <description># -*- coding: utf-8 -*- import numpy as np def softmax(x): x_row_max = x.max(axis=-1) x_row_max = x_row_max.reshape(list(x.shape)[:-1]+[1]) x = x - x_row_max x_exp = np.exp(x) x_exp_row_sum = x_exp.sum(axis=-1).reshape(list(x.shape)[:-1]+[1]) softmax = x_exp / x_exp_row_sum return softmax if __name__ == &amp;#34;__main__&amp;#34;: m = np.random.randn(2, 2, 2) + 2 m = softmax(m) m = m.</description>
     </item>
     

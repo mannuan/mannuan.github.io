@@ -12,19 +12,19 @@
     
     <item>
       <title>linux 和windows下使用ffmpeg将mkv转换为mp4</title>
-      <link>https://mannuan.github.io/post/linux-%E5%92%8Cwindows%E4%B8%8B%E4%BD%BF%E7%94%A8ffmpeg%E5%B0%86mkv%E8%BD%AC%E6%8D%A2%E4%B8%BAmp4/</link>
+      <link>https://mannuan.github.io/post/20190617145615/</link>
       <pubDate>Mon, 17 Jun 2019 14:56:15 +0800</pubDate>
       
-      <guid>https://mannuan.github.io/post/linux-%E5%92%8Cwindows%E4%B8%8B%E4%BD%BF%E7%94%A8ffmpeg%E5%B0%86mkv%E8%BD%AC%E6%8D%A2%E4%B8%BAmp4/</guid>
+      <guid>https://mannuan.github.io/post/20190617145615/</guid>
       <description>ffmpeg -i 名称.mkv -s hd720 -c:v libx264 -crf 23 -c:a aac -strict -2 名称.</description>
     </item>
     
     <item>
       <title>在UEFI模式下，linux误删EFI分区后，重新恢复引导</title>
-      <link>https://mannuan.github.io/post/%E5%9C%A8uefi%E6%A8%A1%E5%BC%8F%E4%B8%8Blinux%E8%AF%AF%E5%88%A0efi%E5%88%86%E5%8C%BA%E5%90%8E%E9%87%8D%E6%96%B0%E6%81%A2%E5%A4%8D%E5%BC%95%E5%AF%BC/</link>
+      <link>https://mannuan.github.io/post/20190611191355/</link>
       <pubDate>Tue, 11 Jun 2019 19:13:55 +0800</pubDate>
       
-      <guid>https://mannuan.github.io/post/%E5%9C%A8uefi%E6%A8%A1%E5%BC%8F%E4%B8%8Blinux%E8%AF%AF%E5%88%A0efi%E5%88%86%E5%8C%BA%E5%90%8E%E9%87%8D%E6%96%B0%E6%81%A2%E5%A4%8D%E5%BC%95%E5%AF%BC/</guid>
+      <guid>https://mannuan.github.io/post/20190611191355/</guid>
       <description>遇到上面情况，我们通常使用boot-repair修复引导。但是这时会弹出一个错误： GPT detected. Please create a BIOS-Boot partition
  遇到这个情况以后，我就疯狂百度资料，一直在找现成的解决方案，但是都不是没有解决问题的方案。这个期间我大概花了我半天的时间在检索资料，之后由于实在找不到资料。我只能冷静地分析这个错误，&amp;rdquo;Please create Bios-Boot partition&amp;rdquo;这个提示其实是提醒你创建一个用于引导的分区。由于是在UEFI模式下面，所以我们要创建一个格式为fat32 标识为boot, esp的分区（右键可以设置标签），如下图所示：
 创建好上面的分区以后，再使用boot-repair进行修复引导，就不会报错了😀😀😀😀😀</description>
@@ -32,10 +32,10 @@
     
     <item>
       <title>linux不需要重装系统就可以调整分区</title>
-      <link>https://mannuan.github.io/post/linux%E4%B8%8D%E9%9C%80%E8%A6%81%E9%87%8D%E8%A3%85%E7%B3%BB%E7%BB%9F%E5%B0%B1%E5%8F%AF%E4%BB%A5%E8%B0%83%E6%95%B4%E5%88%86%E5%8C%BA/</link>
+      <link>https://mannuan.github.io/post/20190610204627/</link>
       <pubDate>Mon, 10 Jun 2019 20:46:27 +0800</pubDate>
       
-      <guid>https://mannuan.github.io/post/linux%E4%B8%8D%E9%9C%80%E8%A6%81%E9%87%8D%E8%A3%85%E7%B3%BB%E7%BB%9F%E5%B0%B1%E5%8F%AF%E4%BB%A5%E8%B0%83%E6%95%B4%E5%88%86%E5%8C%BA/</guid>
+      <guid>https://mannuan.github.io/post/20190610204627/</guid>
       <description>介绍 Gparted是一个针对于linux分区调整的可视化工具。它是一个微型的linux操作系统封装了一些分区的命令，以一个iso格式的文件存在，选择gparted- live-*.iso这样的文件点击下载。
 刻录 下载完成之后，你需要准备一个刻录工具（比如软碟通）和一个8G以上的U盘。这个刻录的教程，百度一下就有很多。
 使用 刻录完成以后，你在开机</description>
@@ -43,29 +43,29 @@
     
     <item>
       <title>linux实现内网穿透</title>
-      <link>https://mannuan.github.io/post/linux%E5%AE%9E%E7%8E%B0%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/</link>
+      <link>https://mannuan.github.io/post/20190602141130/</link>
       <pubDate>Sun, 02 Jun 2019 14:11:30 +0800</pubDate>
       
-      <guid>https://mannuan.github.io/post/linux%E5%AE%9E%E7%8E%B0%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/</guid>
+      <guid>https://mannuan.github.io/post/20190602141130/</guid>
       <description>穿透工具：frps
 进程管理工具：supervisor</description>
     </item>
     
     <item>
       <title>linux命令之nohup</title>
-      <link>https://mannuan.github.io/post/linux%E5%91%BD%E4%BB%A4%E4%B9%8Bnohup/</link>
+      <link>https://mannuan.github.io/post/20190602135144/</link>
       <pubDate>Sun, 02 Jun 2019 13:51:44 +0800</pubDate>
       
-      <guid>https://mannuan.github.io/post/linux%E5%91%BD%E4%BB%A4%E4%B9%8Bnohup/</guid>
+      <guid>https://mannuan.github.io/post/20190602135144/</guid>
       <description> 结合后台运行命令&amp;amp;使用  nohup command &amp;gt;&amp;gt; log_path 2&amp;gt;&amp;amp;1 &amp;amp;</description>
     </item>
     
     <item>
       <title>jupyter 如何设置密码</title>
-      <link>https://mannuan.github.io/post/jupyter-%E5%A6%82%E4%BD%95%E8%AE%BE%E7%BD%AE%E5%AF%86%E7%A0%81/</link>
+      <link>https://mannuan.github.io/post/20190515153220/</link>
       <pubDate>Wed, 15 May 2019 15:32:20 +0800</pubDate>
       
-      <guid>https://mannuan.github.io/post/jupyter-%E5%A6%82%E4%BD%95%E8%AE%BE%E7%BD%AE%E5%AF%86%E7%A0%81/</guid>
+      <guid>https://mannuan.github.io/post/20190515153220/</guid>
       <description>打开python命令行，输入
 from notebook.auth import passwd passwd() 以密码&amp;rdquo;123&amp;rdquo;为例，输出结果得到如下
 &amp;#39;sha1:da00fa1e950a:0adb64c8359ef97932e5dde02d6167e140bac4e0&amp;#39; 然后把上面的sha写入到配置文件&amp;rdquo;jupyter_notebook_config.py&amp;rdquo;, 这个文件一般需要使用命令生成
@@ -75,29 +75,29 @@ c.NotebookApp.password = &amp;#39;sha1:da00fa1e950a:0adb64c8359ef97932e5dde02d61
     
     <item>
       <title>jupyter_notebook_config.py 文件的生成命令</title>
-      <link>https://mannuan.github.io/post/jupyter_notebook_config.py-%E6%96%87%E4%BB%B6%E7%9A%84%E7%94%9F%E6%88%90%E5%91%BD%E4%BB%A4/</link>
+      <link>https://mannuan.github.io/post/20190515151225/</link>
       <pubDate>Wed, 15 May 2019 15:12:25 +0800</pubDate>
       
-      <guid>https://mannuan.github.io/post/jupyter_notebook_config.py-%E6%96%87%E4%BB%B6%E7%9A%84%E7%94%9F%E6%88%90%E5%91%BD%E4%BB%A4/</guid>
+      <guid>https://mannuan.github.io/post/20190515151225/</guid>
       <description>jupyter notebook --generate-config</description>
     </item>
     
     <item>
       <title>apt-get: error loading libgcc_s.so.1的解决方案</title>
-      <link>https://mannuan.github.io/post/apt-get-error-loading-libgcc_s.so.1%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</link>
+      <link>https://mannuan.github.io/post/20190513111449/</link>
       <pubDate>Mon, 13 May 2019 11:14:49 +0800</pubDate>
       
-      <guid>https://mannuan.github.io/post/apt-get-error-loading-libgcc_s.so.1%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</guid>
+      <guid>https://mannuan.github.io/post/20190513111449/</guid>
       <description>出现这个问题的主要原因是&amp;rdquo;/lib/x86_64-linux-gnu/&amp;ldquo;目录下缺少libgcc_s.so.1
 解决方案：从其他相同操作系统的主机上的&amp;rdquo;/lib/x86_64-linux-gnu/&amp;ldquo;目录，拷贝libgcc_s.so.1</description>
     </item>
     
     <item>
       <title>dpkg error: package `x&#39; contains empty filename，Sub-process /usr/bin/dpkg returned an error code (2)</title>
-      <link>https://mannuan.github.io/post/dpkg-error-package-x-contains-empty-filename/</link>
+      <link>https://mannuan.github.io/post/20190513111048/</link>
       <pubDate>Mon, 13 May 2019 11:10:48 +0800</pubDate>
       
-      <guid>https://mannuan.github.io/post/dpkg-error-package-x-contains-empty-filename/</guid>
+      <guid>https://mannuan.github.io/post/20190513111048/</guid>
       <description>后面的错误“Sub-process /usr/bin/dpkg returned an error code (2)”是由于前面的一个错误引起的
 因此，只需要解决前面的错误就行了
 解决这个错误其实很简单，只需要理解前面一个错误里面的&amp;rdquo;empty filename&amp;rdquo;就行了
@@ -107,30 +107,30 @@ c.NotebookApp.password = &amp;#39;sha1:da00fa1e950a:0adb64c8359ef97932e5dde02d61
     
     <item>
       <title>阿里云免费ssl证书申请</title>
-      <link>https://mannuan.github.io/post/%E9%98%BF%E9%87%8C%E4%BA%91%E5%85%8D%E8%B4%B9ssl%E8%AF%81%E4%B9%A6%E7%94%B3%E8%AF%B7/</link>
+      <link>https://mannuan.github.io/post/20190502140132/</link>
       <pubDate>Thu, 02 May 2019 14:01:32 +0800</pubDate>
       
-      <guid>https://mannuan.github.io/post/%E9%98%BF%E9%87%8C%E4%BA%91%E5%85%8D%E8%B4%B9ssl%E8%AF%81%E4%B9%A6%E7%94%B3%E8%AF%B7/</guid>
+      <guid>https://mannuan.github.io/post/20190502140132/</guid>
       <description> 第一步：在阿里云申请域名  登录阿里云， 在搜索框中输入&amp;rdquo;域名 控制台&amp;rdquo;， 进行域名的购买或则注册。   我强烈不推荐购买阿里云的二手域名，虽然价格很便宜，但是大多数域名都有问题，比如被注册局暂停解析等等
  第二步：在阿里云申请免费的ssl证书  同样在搜索框中输入&amp;rdquo;dns 控制台&amp;rdquo;， 在域名的列表里面可以看到你已经购买的域名， 然后在列表的每个item中点击“更多”，出现&amp;rdquo;ssl&amp;rdquo;证书的字样，点击进去。 选择免费版的ssl证书（这里只能单个子域名进行注册） 点击申请，跳到ssl证书列表页面， 点击验证，大概过5-6分钟，ssl证书就可以审核通过， 下载证书我推荐下载nginx版本的，nginx配置域名最方便，配置域名的教程可以参看我的https服务器搭建详细教程(ubuntu系统实测可行)这个教程  </description>
     </item>
     
     <item>
       <title>linux如何查看文件夹占用磁盘空间</title>
-      <link>https://mannuan.github.io/post/linux%E5%A6%82%E4%BD%95%E6%9F%A5%E7%9C%8B%E6%96%87%E4%BB%B6%E5%A4%B9%E5%8D%A0%E7%94%A8%E7%A3%81%E7%9B%98%E7%A9%BA%E9%97%B4/</link>
+      <link>https://mannuan.github.io/post/20190502134205/</link>
       <pubDate>Thu, 02 May 2019 13:42:05 +0800</pubDate>
       
-      <guid>https://mannuan.github.io/post/linux%E5%A6%82%E4%BD%95%E6%9F%A5%E7%9C%8B%E6%96%87%E4%BB%B6%E5%A4%B9%E5%8D%A0%E7%94%A8%E7%A3%81%E7%9B%98%E7%A9%BA%E9%97%B4/</guid>
+      <guid>https://mannuan.github.io/post/20190502134205/</guid>
       <description>du -h -d 1  查看当前目录下面所有文件夹所占的空间
  </description>
     </item>
     
     <item>
       <title>https服务器搭建详细教程(ubuntu系统实测可行)</title>
-      <link>https://mannuan.github.io/post/https%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8B-ubuntu%E7%B3%BB%E7%BB%9F%E5%AE%9E%E6%B5%8B%E5%8F%AF%E8%A1%8C/</link>
+      <link>https://mannuan.github.io/post/20190501225058/</link>
       <pubDate>Wed, 01 May 2019 22:50:58 +0800</pubDate>
       
-      <guid>https://mannuan.github.io/post/https%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%90%AD%E5%BB%BA%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8B-ubuntu%E7%B3%BB%E7%BB%9F%E5%AE%9E%E6%B5%8B%E5%8F%AF%E8%A1%8C/</guid>
+      <guid>https://mannuan.github.io/post/20190501225058/</guid>
       <description>第一步：把指定的域名绑定到服务器指定的端口 1、安装nginx sudo apt-get install nginx  查看nginx版本，确认安装成功
 nginx -v  安装完nginx以后，通过浏览器访问127.0.0.1，再次确认安装成功（访问127.0.0.1其实等价于访问127.0.0.1:80）  2、修改nginx配置文件 sudo vim /etc/nginx/nginx.conf  通过上面的命令打开文件以后，键盘按 “i” 键，进入编辑模式，然后找到类似下面的内容：   ssl的获取可以参看我的阿里云免费ssl证书申请
 http { #在这里填写你的配置  #下面省略若干行..... }  完整的配置是这样的（第一个server配置的是http服务，第二个server配置的https服务）：  http { server { listen 80; server_name 指定的域名; root html; index index.html index.htm; location / { proxy_pass http://127.0.0.1:指定的端口/; proxy_set_header X-Real-IP $remote_addr; proxy_set_header Host $host; proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for; proxy_http_version 1.1; proxy_set_header Upgrade $http_upgrade; proxy_set_header Connection &amp;#34;upgrade&amp;#34;; proxy_redirect off; } } server { listen 443; server_name 指定的域名; ssl on; root html; index index.</description>
@@ -138,10 +138,10 @@ http { #在这里填写你的配置  #下面省略若干行..... }  完整的配
     
     <item>
       <title>linux修改设备名</title>
-      <link>https://mannuan.github.io/post/linux%E4%BF%AE%E6%94%B9%E8%AE%BE%E5%A4%87%E5%90%8D/</link>
+      <link>https://mannuan.github.io/post/20190501213953/</link>
       <pubDate>Wed, 01 May 2019 21:39:53 +0800</pubDate>
       
-      <guid>https://mannuan.github.io/post/linux%E4%BF%AE%E6%94%B9%E8%AE%BE%E5%A4%87%E5%90%8D/</guid>
+      <guid>https://mannuan.github.io/post/20190501213953/</guid>
       <description>只要修改两个文件：
  /etc/hostname
  /etc/hosts
@@ -150,10 +150,10 @@ http { #在这里填写你的配置  #下面省略若干行..... }  完整的配
     
     <item>
       <title>linux创建用户并给用户sudo权限</title>
-      <link>https://mannuan.github.io/post/linux%E5%88%9B%E5%BB%BA%E7%94%A8%E6%88%B7%E5%B9%B6%E7%BB%99%E7%94%A8%E6%88%B7sudo%E6%9D%83%E9%99%90/</link>
+      <link>https://mannuan.github.io/post/20190211224353/</link>
       <pubDate>Mon, 11 Feb 2019 22:43:53 +0800</pubDate>
       
-      <guid>https://mannuan.github.io/post/linux%E5%88%9B%E5%BB%BA%E7%94%A8%E6%88%B7%E5%B9%B6%E7%BB%99%E7%94%A8%E6%88%B7sudo%E6%9D%83%E9%99%90/</guid>
+      <guid>https://mannuan.github.io/post/20190211224353/</guid>
       <description>这些年，我看了很多关于创建linux用户的博客。发现当中都是写了一大堆废话，都是复制粘贴的，而且介绍的一点都不全面，有些甚至直接是错误的。
 我在这里将按如下步骤来详细的描述创建用户的过程。以用户名test为例：
 1、
