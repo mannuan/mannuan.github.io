@@ -5,10 +5,28 @@
     <link>https://mannuan.github.io/tags/</link>
     <description>Recent content in Tags on mannuan</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 04 Jul 2019 16:20:10 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 04 Jul 2019 20:27:04 +0800</lastBuildDate>
     
 	<atom:link href="https://mannuan.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>datetime</title>
+      <link>https://mannuan.github.io/tags/datetime/</link>
+      <pubDate>Thu, 04 Jul 2019 20:27:04 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/tags/datetime/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>时间转字符串</title>
+      <link>https://mannuan.github.io/tags/%E6%97%B6%E9%97%B4%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2/</link>
+      <pubDate>Thu, 04 Jul 2019 20:27:04 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/tags/%E6%97%B6%E9%97%B4%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>反讽</title>

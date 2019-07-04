@@ -5,7 +5,7 @@
     <link>https://mannuan.github.io/</link>
     <description>Recent content in Home on mannuan</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 04 Jul 2019 16:20:10 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 04 Jul 2019 20:27:04 +0800</lastBuildDate>
     
 	<atom:link href="https://mannuan.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -30,6 +30,15 @@ Heading 3 Yet another, but centered! Excepteur sint occaecat cupidatat non proid
       <description>Mínimo is a Spanish word that roughly translate to Minimal.
 Minimo is a minimalist theme for Hugo.
 Minimo keeps the focus on your content and lets it shine!</description>
+    </item>
+    
+    <item>
+      <title>python中的如何把当前时间转换为字符串</title>
+      <link>https://mannuan.github.io/post/20190704202704/</link>
+      <pubDate>Thu, 04 Jul 2019 20:27:04 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190704202704/</guid>
+      <description>import datetime now_time_str = datetime.datetime.now().strftime(&amp;#34;%Y%m%d%H%M%S&amp;#34;) # 类似输出20190704213307</description>
     </item>
     
     <item>
@@ -2204,7 +2213,7 @@ id = &amp;#34;muniftanjim&amp;#34; [email] username = &amp;#34;muniftanjim&amp;#
       
       <guid>https://mannuan.github.io/docs/config-file/</guid>
       <description>This is the Minimo&amp;rsquo;s configuration file ( config.toml ) file of this site:
-baseURL = &amp;#34;http://mannuan.github.io&amp;#34; title = &amp;#34;mannuan&amp;#34; # for smart copyright line, leave this blank and check [params.copyright] copyright = &amp;#34;&amp;#34; theme = &amp;#34;minimo&amp;#34; disqusShortname = &amp;#34;&amp;#34; googleAnalytics = &amp;#34;&amp;#34; Paginate = 5 preserveTaxonomyNames = true enableRobotsTXT = true # generate robots.txt # Syntax Highlighting ( https://gohugo.io/content-management/syntax-highlighting/ ) pygmentsCodefences = true enableEmoji = true # Missing translations will default to this content language defaultContentLanguage = &amp;#34;en&amp;#34; [params.</description>
+baseURL = &amp;#34;http://mannuan.github.io&amp;#34; title = &amp;#34;mannuan&amp;#34; # for smart copyright line, leave this blank and check [params.copyright] copyright = &amp;#34;&amp;#34; theme = &amp;#34;minimo&amp;#34; disqusShortname = &amp;#34;&amp;#34; googleAnalytics = &amp;#34;&amp;#34; Paginate = 10 preserveTaxonomyNames = true enableRobotsTXT = true # generate robots.txt # Syntax Highlighting ( https://gohugo.io/content-management/syntax-highlighting/ ) pygmentsCodefences = true enableEmoji = true # Missing translations will default to this content language defaultContentLanguage = &amp;#34;en&amp;#34; [params.</description>
     </item>
     
     <item>

@@ -5,10 +5,19 @@
     <link>https://mannuan.github.io/authors/mannuan/</link>
     <description>Recent content on mannuan</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 04 Jul 2019 16:20:10 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 04 Jul 2019 20:27:04 +0800</lastBuildDate>
     
 	<atom:link href="https://mannuan.github.io/authors/mannuan/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>python中的如何把当前时间转换为字符串</title>
+      <link>https://mannuan.github.io/post/20190704202704/</link>
+      <pubDate>Thu, 04 Jul 2019 20:27:04 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190704202704/</guid>
+      <description>import datetime now_time_str = datetime.datetime.now().strftime(&amp;#34;%Y%m%d%H%M%S&amp;#34;) # 类似输出20190704213307</description>
+    </item>
     
     <item>
       <title>Representing Social Media Users for Sarcasm Detection论文翻译和解读</title>

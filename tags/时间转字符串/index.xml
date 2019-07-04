@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>时间转字符串 on mannuan</title>
+    <link>https://mannuan.github.io/tags/%E6%97%B6%E9%97%B4%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2/</link>
+    <description>Recent content in 时间转字符串 on mannuan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 04 Jul 2019 20:27:04 +0800</lastBuildDate>
+    
+	<atom:link href="https://mannuan.github.io/tags/%E6%97%B6%E9%97%B4%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>python中的如何把当前时间转换为字符串</title>
+      <link>https://mannuan.github.io/post/20190704202704/</link>
+      <pubDate>Thu, 04 Jul 2019 20:27:04 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190704202704/</guid>
+      <description>import datetime now_time_str = datetime.datetime.now().strftime(&amp;#34;%Y%m%d%H%M%S&amp;#34;) # 类似输出20190704213307</description>
+    </item>
+    
+  </channel>
+</rss>
