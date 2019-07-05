@@ -6,7 +6,7 @@
 beryllium demo # -*- coding: utf-8 -*- from beryllium import Beryllium import time from beryllium import FieldList, Field, FieldName, Page, ListCssSelector, Mongodb, NextPageCssSelectorSetup, PageFunc bery = Beryllium() bery.driver = bery.get_driver() bery.fast_get_page(&#34;https://www.baidu.com&#34;) time.sleep(1) bery.until_send_text_by_css_selector(css_selector=&#34;#kw&#34;, text=&#34;杭州&#34;) bery.until_send_enter_by_css_selector(css_selector=&#34;#kw&#34;) time.sleep(2) fieldlist_shop = FieldList( Field(field_name=FieldName.SHOP_NAME, css_selector=&#34;h3&#34;), ) page_shop = Page(name=&#34;shop_page&#34;, field_list=fieldlist_shop, list_css_selector=ListCssSelector(list_css_selector=&#34;#content_left &gt; div.result.c-container&#34;)) bery.until_click_no_next_page_by_css_selector( next_page_setup=NextPageCssSelectorSetup( page=page_shop, css_selector=&#34;#page &gt; a.n&#34;, main_page_func=PageFunc(func=bery.from_page_get_data_list, page=page_shop) ) ) 演示 '>
 <meta name='theme-color' content='#ffffff'>
 
-<meta property='og:title' content='一个基于selenium的快速编写爬虫脚本的爬虫库-beryllium • mannuan'>
+<meta property='og:title' content='一个基于selenium的快速编写爬虫脚本的爬虫框架-beryllium • mannuan'>
 <meta property='og:description' content=' 前言 之前在做智慧旅游的爬虫项目的时候，遇到了js动态加载网页内容的问题。导致必须适应selenium来解决问题，但是使用selenium太麻烦了。因此，开发了一个爬虫库，来快速编写爬虫脚本。
 beryllium demo # -*- coding: utf-8 -*- from beryllium import Beryllium import time from beryllium import FieldList, Field, FieldName, Page, ListCssSelector, Mongodb, NextPageCssSelectorSetup, PageFunc bery = Beryllium() bery.driver = bery.get_driver() bery.fast_get_page(&#34;https://www.baidu.com&#34;) time.sleep(1) bery.until_send_text_by_css_selector(css_selector=&#34;#kw&#34;, text=&#34;杭州&#34;) bery.until_send_enter_by_css_selector(css_selector=&#34;#kw&#34;) time.sleep(2) fieldlist_shop = FieldList( Field(field_name=FieldName.SHOP_NAME, css_selector=&#34;h3&#34;), ) page_shop = Page(name=&#34;shop_page&#34;, field_list=fieldlist_shop, list_css_selector=ListCssSelector(list_css_selector=&#34;#content_left &gt; div.result.c-container&#34;)) bery.until_click_no_next_page_by_css_selector( next_page_setup=NextPageCssSelectorSetup( page=page_shop, css_selector=&#34;#page &gt; a.n&#34;, main_page_func=PageFunc(func=bery.from_page_get_data_list, page=page_shop) ) ) 演示 '>
 <meta property='og:url' content='https://mannuan.github.io/post/20190705212259/'>
@@ -15,7 +15,7 @@ beryllium demo # -*- coding: utf-8 -*- from beryllium import Beryllium import ti
 
 <meta name="generator" content="Hugo 0.55.6" />
 
-  <title>一个基于selenium的快速编写爬虫脚本的爬虫库-beryllium • mannuan</title>
+  <title>一个基于selenium的快速编写爬虫脚本的爬虫框架-beryllium • mannuan</title>
   <link rel='canonical' href='https://mannuan.github.io/post/20190705212259/'>
   
   
@@ -326,7 +326,7 @@ beryllium demo # -*- coding: utf-8 -*- from beryllium import Beryllium import ti
       </li><li>
         <a href='/tags/val/' style='font-size:1em'>val</a>
       </li><li>
-        <a href='/tags/valueof/' style='font-size:1.0212765957446808em'>valueOf</a>
+        <a href='/tags/valueof/' style='font-size:1.0212765957446808em'>valueof</a>
       </li><li>
         <a href='/tags/vlan/' style='font-size:1.0212765957446808em'>VLAN</a>
       </li><li>
@@ -545,7 +545,7 @@ beryllium demo # -*- coding: utf-8 -*- from beryllium import Beryllium import ti
     <style>.widget-breadcrumbs li:after{content:'\2f '}</style>
   <section class='widget widget-breadcrumbs sep-after'>
     <nav id='breadcrumbs'>
-      <ol><li><a href='/'>Home</a></li><li><a href='/post/'>blogs</a></li><li><span>一个基于selenium的快速编写爬虫脚本的爬虫库-beryllium</span></li></ol>
+      <ol><li><a href='/'>Home</a></li><li><a href='/post/'>blogs</a></li><li><span>一个基于selenium的快速编写爬虫脚本的爬虫框架-beryllium</span></li></ol>
     </nav>
   </section></div>
       </div>
@@ -564,7 +564,7 @@ beryllium demo # -*- coding: utf-8 -*- from beryllium import Beryllium import ti
   <header class='header entry-header'>
   <div class='container sep-after'>
     <div class='header-info'>
-      <h1 class='title'>一个基于selenium的快速编写爬虫脚本的爬虫库-beryllium</h1>
+      <h1 class='title'>一个基于selenium的快速编写爬虫脚本的爬虫框架-beryllium</h1>
       
 
     </div>
