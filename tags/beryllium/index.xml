@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>beryllium on mannuan</title>
+    <link>https://mannuan.github.io/tags/beryllium/</link>
+    <description>Recent content in beryllium on mannuan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 05 Jul 2019 21:22:59 +0800</lastBuildDate>
+    
+	<atom:link href="https://mannuan.github.io/tags/beryllium/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>一个基于selenium的快速编写爬虫脚本的爬虫库-beryllium</title>
+      <link>https://mannuan.github.io/post/20190705212259/</link>
+      <pubDate>Fri, 05 Jul 2019 21:22:59 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190705212259/</guid>
+      <description> 前言 之前在做智慧旅游的爬虫项目的时候，遇到了js动态加载网页内容的问题。导致必须适应selenium来解决问题，但是使用selenium太麻烦了。因此，开发了一个爬虫库，来快速编写爬虫脚本。
+beryllium demo # -*- coding: utf-8 -*- from beryllium import Beryllium import time from beryllium import FieldList, Field, FieldName, Page, ListCssSelector, Mongodb, NextPageCssSelectorSetup, PageFunc bery = Beryllium() bery.driver = bery.get_driver() bery.fast_get_page(&amp;#34;https://www.baidu.com&amp;#34;) time.sleep(1) bery.until_send_text_by_css_selector(css_selector=&amp;#34;#kw&amp;#34;, text=&amp;#34;杭州&amp;#34;) bery.until_send_enter_by_css_selector(css_selector=&amp;#34;#kw&amp;#34;) time.sleep(2) fieldlist_shop = FieldList( Field(field_name=FieldName.SHOP_NAME, css_selector=&amp;#34;h3&amp;#34;), ) page_shop = Page(name=&amp;#34;shop_page&amp;#34;, field_list=fieldlist_shop, list_css_selector=ListCssSelector(list_css_selector=&amp;#34;#content_left &amp;gt; div.result.c-container&amp;#34;)) bery.until_click_no_next_page_by_css_selector( next_page_setup=NextPageCssSelectorSetup( page=page_shop, css_selector=&amp;#34;#page &amp;gt; a.n&amp;#34;, main_page_func=PageFunc(func=bery.from_page_get_data_list, page=page_shop) ) ) 演示 </description>
+    </item>
+    
+  </channel>
+</rss>

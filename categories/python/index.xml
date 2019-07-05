@@ -5,10 +5,41 @@
     <link>https://mannuan.github.io/categories/python/</link>
     <description>Recent content in python on mannuan</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 04 Jul 2019 20:27:04 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 05 Jul 2019 21:22:59 +0800</lastBuildDate>
     
 	<atom:link href="https://mannuan.github.io/categories/python/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>一个基于selenium的快速编写爬虫脚本的爬虫库-beryllium</title>
+      <link>https://mannuan.github.io/post/20190705212259/</link>
+      <pubDate>Fri, 05 Jul 2019 21:22:59 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190705212259/</guid>
+      <description> 前言 之前在做智慧旅游的爬虫项目的时候，遇到了js动态加载网页内容的问题。导致必须适应selenium来解决问题，但是使用selenium太麻烦了。因此，开发了一个爬虫库，来快速编写爬虫脚本。
+beryllium demo # -*- coding: utf-8 -*- from beryllium import Beryllium import time from beryllium import FieldList, Field, FieldName, Page, ListCssSelector, Mongodb, NextPageCssSelectorSetup, PageFunc bery = Beryllium() bery.driver = bery.get_driver() bery.fast_get_page(&amp;#34;https://www.baidu.com&amp;#34;) time.sleep(1) bery.until_send_text_by_css_selector(css_selector=&amp;#34;#kw&amp;#34;, text=&amp;#34;杭州&amp;#34;) bery.until_send_enter_by_css_selector(css_selector=&amp;#34;#kw&amp;#34;) time.sleep(2) fieldlist_shop = FieldList( Field(field_name=FieldName.SHOP_NAME, css_selector=&amp;#34;h3&amp;#34;), ) page_shop = Page(name=&amp;#34;shop_page&amp;#34;, field_list=fieldlist_shop, list_css_selector=ListCssSelector(list_css_selector=&amp;#34;#content_left &amp;gt; div.result.c-container&amp;#34;)) bery.until_click_no_next_page_by_css_selector( next_page_setup=NextPageCssSelectorSetup( page=page_shop, css_selector=&amp;#34;#page &amp;gt; a.n&amp;#34;, main_page_func=PageFunc(func=bery.from_page_get_data_list, page=page_shop) ) ) 演示 </description>
+    </item>
+    
+    <item>
+      <title>上传自己的python库到pip源</title>
+      <link>https://mannuan.github.io/post/20190705200528/</link>
+      <pubDate>Fri, 05 Jul 2019 20:05:28 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190705200528/</guid>
+      <description>前言 为了把项目分享给别人，我觉得还是放在pip上比较方便
+编写README.md文件 介绍自己的项目，以及如何使用
+编写setup.py文件 下面以我的配置文件为例：
+# -*- coding: utf-8 -*- import setuptools with open(&amp;#34;README.md&amp;#34;, &amp;#34;r&amp;#34;) as fh: long_description = fh.read() setuptools.setup( name=&amp;#34;beryllium&amp;#34;, version=&amp;#34;1.0.0&amp;#34;, author=&amp;#34;mannuan&amp;#34;, author_email=&amp;#34;1271990125@qq.com&amp;#34;, description=&amp;#34;A framework for spider over selenium&amp;#34;, long_description=long_description, long_description_content_type=&amp;#34;text/markdown&amp;#34;, url=&amp;#34;https://github.com/mannuan/beryllium&amp;#34;, packages=setuptools.find_packages(), classifiers=[ &amp;#34;Programming Language :: Python :: 3&amp;#34;, &amp;#34;License :: OSI Approved :: MIT License&amp;#34;, &amp;#34;Operating System :: OS Independent&amp;#34;, ], install_requires=[ &amp;#34;selenium&amp;gt;=3.14.0&amp;#34;, &amp;#34;PyVirtualDisplay&amp;gt;=0.2.1&amp;#34;, &amp;#34;pymongo&amp;gt;=3.7.1&amp;#34;, &amp;#34;PyMySQL&amp;gt;=0.9.2&amp;#34;, ], ) 安装setuptools pip install setuptools 安装twine pip install twine 打包项目 python setup.</description>
+    </item>
+    
+    <item>
+      <title>import error No Module named Setuptools</title>
+      <link>https://mannuan.github.io/post/20190705171744/</link>
+      <pubDate>Fri, 05 Jul 2019 17:17:45 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190705171744/</guid>
+      <description>pip install setuptools</description>
+    </item>
     
     <item>
       <title>python中的如何把当前时间转换为字符串</title>

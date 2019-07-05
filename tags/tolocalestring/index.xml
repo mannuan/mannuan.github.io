@@ -30,7 +30,7 @@
       <pubDate>Thu, 04 Jul 2019 20:53:05 +0800</pubDate>
       
       <guid>https://mannuan.github.io/post/20190704205305/</guid>
-      <description>concat() 合并数组 var a = [1, 2, 3]; var b = [2, 3, 4]; var c = a.concat(b); console.log(a); //[1,2,3] console.log(b); //[2,3,4] console.log(c); //[1, 2, 3, 2, 3, 4]  join() 把数组连接成为字符串，并用指定分隔符隔开 var a = [1, 2, 3]; console.log(a.join(&amp;#34;/&amp;#34;)); // 1/2/3   和python的语法不同，方向刚好是相反的，而且python要求合并的必须是字符串类型
+      <description>concat() 合并数组，返回合并后的数组 var a = [1, 2, 3]; var b = [2, 3, 4]; var c = a.concat(b); console.log(a); //[1,2,3] console.log(b); //[2,3,4] console.log(c); //[1, 2, 3, 2, 3, 4]  join() 把数组连接成为字符串，并用指定分隔符隔开 var a = [1, 2, 3]; console.log(a.join(&amp;#34;/&amp;#34;)); // 1/2/3   和python的语法不同，方向刚好是相反的，而且python要求合并的必须是字符串类型
  # -*- coding: utf-8 -*- a = [1, 2, 3] a = [str(i) for i in a] print(&amp;#34;/&amp;#34;.join(a)) pop() 取出并返回栈顶元素 var a = [1, 2, 3]; console.</description>
     </item>
     

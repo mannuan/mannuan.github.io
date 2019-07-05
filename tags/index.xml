@@ -5,17 +5,170 @@
     <link>https://mannuan.github.io/tags/</link>
     <description>Recent content in Tags on mannuan</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 04 Jul 2019 21:54:03 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 05 Jul 2019 21:22:59 +0800</lastBuildDate>
     
 	<atom:link href="https://mannuan.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>beryllium</title>
+      <link>https://mannuan.github.io/tags/beryllium/</link>
+      <pubDate>Fri, 05 Jul 2019 21:22:59 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/tags/beryllium/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>selenium</title>
+      <link>https://mannuan.github.io/tags/selenium/</link>
+      <pubDate>Fri, 05 Jul 2019 21:22:59 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/tags/selenium/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>pip</title>
+      <link>https://mannuan.github.io/tags/pip/</link>
+      <pubDate>Fri, 05 Jul 2019 20:05:28 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/tags/pip/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>setuptools</title>
+      <link>https://mannuan.github.io/tags/setuptools/</link>
+      <pubDate>Fri, 05 Jul 2019 20:05:28 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/tags/setuptools/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>twine</title>
+      <link>https://mannuan.github.io/tags/twine/</link>
+      <pubDate>Fri, 05 Jul 2019 20:05:28 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/tags/twine/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>import error</title>
+      <link>https://mannuan.github.io/tags/import-error/</link>
+      <pubDate>Fri, 05 Jul 2019 17:17:45 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/tags/import-error/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>javascript</title>
       <link>https://mannuan.github.io/tags/javascript/</link>
-      <pubDate>Thu, 04 Jul 2019 21:54:03 +0800</pubDate>
+      <pubDate>Fri, 05 Jul 2019 10:52:22 +0800</pubDate>
       
       <guid>https://mannuan.github.io/tags/javascript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>regex</title>
+      <link>https://mannuan.github.io/tags/regex/</link>
+      <pubDate>Fri, 05 Jul 2019 10:52:22 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/tags/regex/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>async</title>
+      <link>https://mannuan.github.io/tags/async/</link>
+      <pubDate>Fri, 05 Jul 2019 10:11:04 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/tags/async/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>defer</title>
+      <link>https://mannuan.github.io/tags/defer/</link>
+      <pubDate>Fri, 05 Jul 2019 10:11:04 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/tags/defer/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>domContentLoaded</title>
+      <link>https://mannuan.github.io/tags/domcontentloaded/</link>
+      <pubDate>Fri, 05 Jul 2019 10:11:04 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/tags/domcontentloaded/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sync</title>
+      <link>https://mannuan.github.io/tags/sync/</link>
+      <pubDate>Fri, 05 Jul 2019 10:11:04 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/tags/sync/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>同步</title>
+      <link>https://mannuan.github.io/tags/%E5%90%8C%E6%AD%A5/</link>
+      <pubDate>Fri, 05 Jul 2019 10:11:04 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/tags/%E5%90%8C%E6%AD%A5/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>异步</title>
+      <link>https://mannuan.github.io/tags/%E5%BC%82%E6%AD%A5/</link>
+      <pubDate>Fri, 05 Jul 2019 10:11:04 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/tags/%E5%BC%82%E6%AD%A5/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>首屏时间</title>
+      <link>https://mannuan.github.io/tags/%E9%A6%96%E5%B1%8F%E6%97%B6%E9%97%B4/</link>
+      <pubDate>Fri, 05 Jul 2019 09:55:53 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/tags/%E9%A6%96%E5%B1%8F%E6%97%B6%E9%97%B4/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>domContent</title>
+      <link>https://mannuan.github.io/tags/domcontent/</link>
+      <pubDate>Fri, 05 Jul 2019 08:42:43 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/tags/domcontent/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>jquery</title>
+      <link>https://mannuan.github.io/tags/jquery/</link>
+      <pubDate>Fri, 05 Jul 2019 08:42:43 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/tags/jquery/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>onload</title>
+      <link>https://mannuan.github.io/tags/onload/</link>
+      <pubDate>Fri, 05 Jul 2019 08:42:43 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/tags/onload/</guid>
       <description></description>
     </item>
     
@@ -38,7 +191,7 @@
     </item>
     
     <item>
-      <title>valueof</title>
+      <title>valueOf</title>
       <link>https://mannuan.github.io/tags/valueof/</link>
       <pubDate>Thu, 04 Jul 2019 21:54:03 +0800</pubDate>
       
@@ -97,6 +250,15 @@
       <pubDate>Thu, 04 Jul 2019 20:53:05 +0800</pubDate>
       
       <guid>https://mannuan.github.io/tags/shift/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>slice</title>
+      <link>https://mannuan.github.io/tags/slice/</link>
+      <pubDate>Thu, 04 Jul 2019 20:53:05 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/tags/slice/</guid>
       <description></description>
     </item>
     
@@ -367,15 +529,6 @@
       <pubDate>Fri, 28 Jun 2019 21:35:46 +0800</pubDate>
       
       <guid>https://mannuan.github.io/tags/ajax/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>jquery</title>
-      <link>https://mannuan.github.io/tags/jquery/</link>
-      <pubDate>Fri, 28 Jun 2019 20:38:26 +0800</pubDate>
-      
-      <guid>https://mannuan.github.io/tags/jquery/</guid>
       <description></description>
     </item>
     
@@ -1528,15 +1681,6 @@
       <pubDate>Tue, 31 Jul 2018 19:25:12 +0800</pubDate>
       
       <guid>https://mannuan.github.io/tags/%E7%AC%A6%E5%8F%B7/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>pip</title>
-      <link>https://mannuan.github.io/tags/pip/</link>
-      <pubDate>Thu, 26 Jul 2018 11:19:05 +0800</pubDate>
-      
-      <guid>https://mannuan.github.io/tags/pip/</guid>
       <description></description>
     </item>
     

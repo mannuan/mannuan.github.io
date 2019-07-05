@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>twine on mannuan</title>
+    <link>https://mannuan.github.io/tags/twine/</link>
+    <description>Recent content in twine on mannuan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 05 Jul 2019 20:05:28 +0800</lastBuildDate>
+    
+	<atom:link href="https://mannuan.github.io/tags/twine/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>上传自己的python库到pip源</title>
+      <link>https://mannuan.github.io/post/20190705200528/</link>
+      <pubDate>Fri, 05 Jul 2019 20:05:28 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190705200528/</guid>
+      <description>前言 为了把项目分享给别人，我觉得还是放在pip上比较方便
+编写README.md文件 介绍自己的项目，以及如何使用
+编写setup.py文件 下面以我的配置文件为例：
+# -*- coding: utf-8 -*- import setuptools with open(&amp;#34;README.md&amp;#34;, &amp;#34;r&amp;#34;) as fh: long_description = fh.read() setuptools.setup( name=&amp;#34;beryllium&amp;#34;, version=&amp;#34;1.0.0&amp;#34;, author=&amp;#34;mannuan&amp;#34;, author_email=&amp;#34;1271990125@qq.com&amp;#34;, description=&amp;#34;A framework for spider over selenium&amp;#34;, long_description=long_description, long_description_content_type=&amp;#34;text/markdown&amp;#34;, url=&amp;#34;https://github.com/mannuan/beryllium&amp;#34;, packages=setuptools.find_packages(), classifiers=[ &amp;#34;Programming Language :: Python :: 3&amp;#34;, &amp;#34;License :: OSI Approved :: MIT License&amp;#34;, &amp;#34;Operating System :: OS Independent&amp;#34;, ], install_requires=[ &amp;#34;selenium&amp;gt;=3.14.0&amp;#34;, &amp;#34;PyVirtualDisplay&amp;gt;=0.2.1&amp;#34;, &amp;#34;pymongo&amp;gt;=3.7.1&amp;#34;, &amp;#34;PyMySQL&amp;gt;=0.9.2&amp;#34;, ], ) 安装setuptools pip install setuptools 安装twine pip install twine 打包项目 python setup.</description>
+    </item>
+    
+  </channel>
+</rss>

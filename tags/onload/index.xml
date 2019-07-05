@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>onload on mannuan</title>
+    <link>https://mannuan.github.io/tags/onload/</link>
+    <description>Recent content in onload on mannuan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 05 Jul 2019 08:42:43 +0800</lastBuildDate>
+    
+	<atom:link href="https://mannuan.github.io/tags/onload/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>onload、domContentLoaded和$(document).ready(function)的区别</title>
+      <link>https://mannuan.github.io/post/20190705084243/</link>
+      <pubDate>Fri, 05 Jul 2019 08:42:43 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190705084243/</guid>
+      <description>为了更加直观的比较它们的加载顺序，我写了下面的网页
+onload、domContentLoaded和$(document).ready(function)加载顺序对比
+ 加载顺序 domContentLoaded &amp;gt; $(document).ready(function) &amp;gt; onload
+domContentLoaded mdn的解释： 当初始的 HTML 文档被完全加载和解析完成之后，DOMContentLoaded 事件被触发，而无需等待样式表、图像和子框架的完成加载。
+domContentLoaded的写法是：
+function DOMContentLoaded() { console.log(&amp;#39;我是onContentLoaded&amp;#39;); } document.addEventListener(&amp;#39;DOMContentLoaded&amp;#39;, DOMContentLoaded, false); // false表示在事件捕获阶段响应  $(document).ready(function) w3school的解释：当 DOM（文档对象模型） 已经加载，并且页面（包括图像）已经完全呈现时，会发生 ready 事件。
+ $(document).ready(function)实质上是使用了domContentLoaded方法，所以他的加载时间要早于onload
+ $(document).ready(function)等价于$(function)和$().ready(function)
+ 其中$().ready(function)不推荐使用
+ $(document).ready(function)可以编写多个，且输出多个结果
+onload mdn解释：The load event is fired when the whole page has loaded, including all dependent resources such as stylesheets images.
+onload有两种写法：
+window.addEventListener(&amp;#39;load&amp;#39;, (event) =&amp;gt; { console.log(&amp;#39;page is fully loaded&amp;#39;); }); window.</description>
+    </item>
+    
+  </channel>
+</rss>

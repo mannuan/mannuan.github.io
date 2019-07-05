@@ -5,10 +5,99 @@
     <link>https://mannuan.github.io/authors/mannuan/</link>
     <description>Recent content on mannuan</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 04 Jul 2019 21:54:03 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 05 Jul 2019 21:22:59 +0800</lastBuildDate>
     
 	<atom:link href="https://mannuan.github.io/authors/mannuan/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>一个基于selenium的快速编写爬虫脚本的爬虫库-beryllium</title>
+      <link>https://mannuan.github.io/post/20190705212259/</link>
+      <pubDate>Fri, 05 Jul 2019 21:22:59 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190705212259/</guid>
+      <description> 前言 之前在做智慧旅游的爬虫项目的时候，遇到了js动态加载网页内容的问题。导致必须适应selenium来解决问题，但是使用selenium太麻烦了。因此，开发了一个爬虫库，来快速编写爬虫脚本。
+beryllium demo # -*- coding: utf-8 -*- from beryllium import Beryllium import time from beryllium import FieldList, Field, FieldName, Page, ListCssSelector, Mongodb, NextPageCssSelectorSetup, PageFunc bery = Beryllium() bery.driver = bery.get_driver() bery.fast_get_page(&amp;#34;https://www.baidu.com&amp;#34;) time.sleep(1) bery.until_send_text_by_css_selector(css_selector=&amp;#34;#kw&amp;#34;, text=&amp;#34;杭州&amp;#34;) bery.until_send_enter_by_css_selector(css_selector=&amp;#34;#kw&amp;#34;) time.sleep(2) fieldlist_shop = FieldList( Field(field_name=FieldName.SHOP_NAME, css_selector=&amp;#34;h3&amp;#34;), ) page_shop = Page(name=&amp;#34;shop_page&amp;#34;, field_list=fieldlist_shop, list_css_selector=ListCssSelector(list_css_selector=&amp;#34;#content_left &amp;gt; div.result.c-container&amp;#34;)) bery.until_click_no_next_page_by_css_selector( next_page_setup=NextPageCssSelectorSetup( page=page_shop, css_selector=&amp;#34;#page &amp;gt; a.n&amp;#34;, main_page_func=PageFunc(func=bery.from_page_get_data_list, page=page_shop) ) ) 演示 </description>
+    </item>
+    
+    <item>
+      <title>上传自己的python库到pip源</title>
+      <link>https://mannuan.github.io/post/20190705200528/</link>
+      <pubDate>Fri, 05 Jul 2019 20:05:28 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190705200528/</guid>
+      <description>前言 为了把项目分享给别人，我觉得还是放在pip上比较方便
+编写README.md文件 介绍自己的项目，以及如何使用
+编写setup.py文件 下面以我的配置文件为例：
+# -*- coding: utf-8 -*- import setuptools with open(&amp;#34;README.md&amp;#34;, &amp;#34;r&amp;#34;) as fh: long_description = fh.read() setuptools.setup( name=&amp;#34;beryllium&amp;#34;, version=&amp;#34;1.0.0&amp;#34;, author=&amp;#34;mannuan&amp;#34;, author_email=&amp;#34;1271990125@qq.com&amp;#34;, description=&amp;#34;A framework for spider over selenium&amp;#34;, long_description=long_description, long_description_content_type=&amp;#34;text/markdown&amp;#34;, url=&amp;#34;https://github.com/mannuan/beryllium&amp;#34;, packages=setuptools.find_packages(), classifiers=[ &amp;#34;Programming Language :: Python :: 3&amp;#34;, &amp;#34;License :: OSI Approved :: MIT License&amp;#34;, &amp;#34;Operating System :: OS Independent&amp;#34;, ], install_requires=[ &amp;#34;selenium&amp;gt;=3.14.0&amp;#34;, &amp;#34;PyVirtualDisplay&amp;gt;=0.2.1&amp;#34;, &amp;#34;pymongo&amp;gt;=3.7.1&amp;#34;, &amp;#34;PyMySQL&amp;gt;=0.9.2&amp;#34;, ], ) 安装setuptools pip install setuptools 安装twine pip install twine 打包项目 python setup.</description>
+    </item>
+    
+    <item>
+      <title>import error No Module named Setuptools</title>
+      <link>https://mannuan.github.io/post/20190705171744/</link>
+      <pubDate>Fri, 05 Jul 2019 17:17:45 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190705171744/</guid>
+      <description>pip install setuptools</description>
+    </item>
+    
+    <item>
+      <title>兼容所有浏览器的清除前后空格的方法</title>
+      <link>https://mannuan.github.io/post/20190705105222/</link>
+      <pubDate>Fri, 05 Jul 2019 10:52:22 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190705105222/</guid>
+      <description>if(!String.prototype.trim){ String.prototype.trim = function(){ return this.replace(/^[\s]+/g, &amp;#39;&amp;#39;).replace(/[\s]+$/g, &amp;#39;&amp;#39;); } } </description>
+    </item>
+    
+    <item>
+      <title>异步脚本、延迟脚本与DOMContentLoaded的关系</title>
+      <link>https://mannuan.github.io/post/20190705101104/</link>
+      <pubDate>Fri, 05 Jul 2019 10:11:04 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190705101104/</guid>
+      <description>sync 如上图所示， HTML 文档被解析时如果遇见（同步）脚本，则停止解析，先去加载脚本，然后执行，执行结束后继续解析 HTML 文档。HTML文档解析完毕后触发DOMContentLoaded。
+async 分为两种情况：异步脚本先执行完，dom先解析完或dom和异步脚本同时完成
+异步脚本先执行完 HTML 还没有被解析完的时候，async脚本已经加载完了，那么 HTML 停止解析，去执行脚本，脚本执行完毕后触发DOMContentLoaded事件。
+dom先解析完或dom和异步脚本同时完成 HTML 解析完了之后，async脚本才加载完，然后再执行脚本，那么在HTML解析完毕、async脚本还没加载完的时候就触发DOMContentLoaded事件。
+总结 DomContentLoaded 事件只关注 HTML 是否被解析完，而不关注 async 和sync脚本。
+defer defer与上面的同步和异步脚本不同，defer执行脚本的阶段必须在dom解析完毕之后。它也分为两种情况：defer先加载完和dom先解析完
+defer先加载完 HTML还没解析完成时，defer脚本已经加载完毕，那么defer脚本将等待HTML解析完成后再执行。defer脚本执行完毕后触发DOMContentLoaded事件。
+dom先解析完 HTML解析完成时，defer脚本还没加载完毕，那么defer脚本继续加载，加载完成后直接执行，执行完毕后触发domContentLoaded事件。
+总结 如果在dom解析完成以后，defer脚本没有执行，在dom解析完成后，defer会率先被执行，会延迟domContentLoaded事件的触发。</description>
+    </item>
+    
+    <item>
+      <title>首屏时间与domContentLoaded触发时机的关系</title>
+      <link>https://mannuan.github.io/post/20190705095553/</link>
+      <pubDate>Fri, 05 Jul 2019 09:55:53 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190705095553/</guid>
+      <description>按照有无js和css，domContentLoaded的触发时机可以分为3类 没有js和css 只有css 有js和css 首屏时间 定义：计算这个网页从空白到出现内容所花费的时间
+这段时间其实就是HTML 文档加载和解析的时间。也就是DOMContentLoaded 事件触发之前所经历的时间。
+对于首屏时间而言，js放在HTML文档的开头和结尾处效果是一样的，而js放在结尾的目的并不是为了减少首屏时间，而是由于js经常需要操纵DOM，放在后面才更能保证找到DOM节点。</description>
+    </item>
+    
+    <item>
+      <title>onload、domContentLoaded和$(document).ready(function)的区别</title>
+      <link>https://mannuan.github.io/post/20190705084243/</link>
+      <pubDate>Fri, 05 Jul 2019 08:42:43 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190705084243/</guid>
+      <description>为了更加直观的比较它们的加载顺序，我写了下面的网页
+onload、domContentLoaded和$(document).ready(function)加载顺序对比
+ 加载顺序 domContentLoaded &amp;gt; $(document).ready(function) &amp;gt; onload
+domContentLoaded mdn的解释： 当初始的 HTML 文档被完全加载和解析完成之后，DOMContentLoaded 事件被触发，而无需等待样式表、图像和子框架的完成加载。
+domContentLoaded的写法是：
+function DOMContentLoaded() { console.log(&amp;#39;我是onContentLoaded&amp;#39;); } document.addEventListener(&amp;#39;DOMContentLoaded&amp;#39;, DOMContentLoaded, false); // false表示在事件捕获阶段响应  $(document).ready(function) w3school的解释：当 DOM（文档对象模型） 已经加载，并且页面（包括图像）已经完全呈现时，会发生 ready 事件。
+ $(document).ready(function)实质上是使用了domContentLoaded方法，所以他的加载时间要早于onload
+ $(document).ready(function)等价于$(function)和$().ready(function)
+ 其中$().ready(function)不推荐使用
+ $(document).ready(function)可以编写多个，且输出多个结果
+onload mdn解释：The load event is fired when the whole page has loaded, including all dependent resources such as stylesheets images.
+onload有两种写法：
+window.addEventListener(&amp;#39;load&amp;#39;, (event) =&amp;gt; { console.log(&amp;#39;page is fully loaded&amp;#39;); }); window.</description>
+    </item>
     
     <item>
       <title>toString()、toLocaleString()和valueOf()的区别</title>
@@ -30,7 +119,7 @@
       <pubDate>Thu, 04 Jul 2019 20:53:05 +0800</pubDate>
       
       <guid>https://mannuan.github.io/post/20190704205305/</guid>
-      <description>concat() 合并数组 var a = [1, 2, 3]; var b = [2, 3, 4]; var c = a.concat(b); console.log(a); //[1,2,3] console.log(b); //[2,3,4] console.log(c); //[1, 2, 3, 2, 3, 4]  join() 把数组连接成为字符串，并用指定分隔符隔开 var a = [1, 2, 3]; console.log(a.join(&amp;#34;/&amp;#34;)); // 1/2/3   和python的语法不同，方向刚好是相反的，而且python要求合并的必须是字符串类型
+      <description>concat() 合并数组，返回合并后的数组 var a = [1, 2, 3]; var b = [2, 3, 4]; var c = a.concat(b); console.log(a); //[1,2,3] console.log(b); //[2,3,4] console.log(c); //[1, 2, 3, 2, 3, 4]  join() 把数组连接成为字符串，并用指定分隔符隔开 var a = [1, 2, 3]; console.log(a.join(&amp;#34;/&amp;#34;)); // 1/2/3   和python的语法不同，方向刚好是相反的，而且python要求合并的必须是字符串类型
  # -*- coding: utf-8 -*- a = [1, 2, 3] a = [str(i) for i in a] print(&amp;#34;/&amp;#34;.join(a)) pop() 取出并返回栈顶元素 var a = [1, 2, 3]; console.</description>
     </item>
     
@@ -1941,25 +2030,11 @@ db.&amp;lt;collection_name&amp;gt;.aggregate([ {$match:key}, {$group:{_id:$&amp;
       <pubDate>Wed, 04 Jul 2018 14:22:18 +0800</pubDate>
       
       <guid>https://mannuan.github.io/post/20180704142218/</guid>
-      <description>Web前端程序员简历模板 本简历模板由国内首家互联网人才拍卖网站「 JobDeer.com 」提供。
-（括号里的是我们的顾问编写的说明，建议在简历书写完成后统一删除）
-先讲讲怎样才是一份好的技术简历 首先，一份好的简历不光说明事实，更通过FAB模式来增强其说服力。
- Feature：是什么 Advantage：比别人好在哪些地方 Benefit：如果雇佣你，招聘方会得到什么好处  其次，写简历和写议论文不同，过分的论证会显得自夸，反而容易引起反感，所以要点到为止。这里的技巧是，提供论据，把论点留给阅读简历的人自己去得出。放论据要具体，最基本的是要数字化，好的论据要让人印象深刻。
-举个例子，下边内容是虚构的：
-2006年，我参与了手机XX网发布系统WAPCMS的开发（这部分是大家都会写的）。作为核心程序员，我不但完成了网站界面、调度队列的开发工作，更提出了高效的组件级缓存系统，通过碎片化缓冲有效的提升了系统的渲染效率。（这部分是很多同学忘掉的，要写出你在这个项目中具体负责的部分，以及你贡献出来的价值。）在该系统上线后，Web前端性能从10QPS提升到200QPS，服务器由10台减少到3台（通过量化的数字来增强可信度）。2008年我升任WAPCMS项目负责人，带领一个3人小组支持着每天超过2亿的PV（这就是Benefit。你能带给前雇主的价值，也就是你能带给新雇主的价值。）。
-有同学问，如果我在项目里边没有那么显赫的成绩可以说怎么办？讲不出成绩时，就讲你的成长。因为学习能力也是每家公司都看中的东西。你可以写你在这个项目里边遇到了一个什么样的问题，别人怎么解决的，你怎么解决的，你的方案好在什么地方，最终这个方案的效果如何。
-具体、量化、有说服力，是技术简历特别需要注重的地方。
-（以上内容在写完简历后，对每一段进行评估，完成后再删除）
-联系方式  手机：13588796263 Email：wujunleiwang@gmail.com 微信号：13588796263  个人信息  吴俊磊/男/1994 本科/西南民族大学-网络工程专业 硕士/杭州电子科技大学-计算机科学与技术专业 技术博客：https://mannuan.github.io Github：http://github.com/mannuan 期望职位：Web前端初级程序员 期望城市：杭州  校园项目经历 （工作经历按逆序排列，最新的在最前边，按公司做一级分组，公司内按二级分组）
-ABC公司 （ 2012年9月 ~ 2014年9月 ） DEF项目 我在此项目负责了哪些工作，分别在哪些地方做得出色/和别人不一样/成长快，这个项目中，我最困难的问题是什么，我采取了什么措施，最后结果如何。这个项目中，我最自豪的技术细节是什么，为什么，实施前和实施后的数据对比如何，同事和领导对此的反应如何。
-GHI项目 我在此项目负责了哪些工作，分别在哪些地方做得出色/和别人不一样/成长快，这个项目中，我最困难的问题是什么，我采取了什么措施，最后结果如何。这个项目中，我最自豪的技术细节是什么，为什么，实施前和实施后的数据对比如何，同事和领导对此的反应如何。
-其他项目 （每个公司写2~3个核心项目就好了，如果你有非常大量的项目，那么按分类进行合并，每一类选一个典型写出来。其他的一笔带过即可。）
-JKL公司 （ 2010年3月 ~ 2012年8月 ） MNO项目 我在此项目负责了哪些工作，分别在哪些地方做得出色/和别人不一样/成长快，这个项目中，我最困难的问题是什么，我采取了什么措施，最后结果如何。这个项目中，我最自豪的技术细节是什么，为什么，实施前和实施后的数据对比如何，同事和领导对此的反应如何。
-PQR项目 我在此项目负责了哪些工作，分别在哪些地方做得出色/和别人不一样/成长快，这个项目中，我最困难的问题是什么，我采取了什么措施，最后结果如何。这个项目中，我最自豪的技术细节是什么，为什么，实施前和实施后的数据对比如何，同事和领导对此的反应如何。
-其他项目 （每个公司写2~3个核心项目就好了，如果你有非常大量的项目，那么按分类进行合并，每一类选一个典型写出来。其他的一笔带过即可。）
-开源项目和作品 （这一段用于放置工作以外的、可证明你的能力的材料）
-开源项目 （对于程序员来讲，没有什么比Show me the code能有说服力了）
- STU：项目的简要说明，Star和Fork数多的可以注明 WXYZ：项目的简要说明，Star和Fork数多的可以注明  技术文章 （挑选你写作或翻译的技术文章，好的文章可以从侧面证实你的表达和沟通能力，也帮助招聘方更了解你）</description>
+      <description>联系方式  手机：13588796263 Email：wujunleiwang@gmail.com 微信号：bubaizhansheng  个人信息   吴俊磊/男/1994 本科/西南民族大学-网络工程专业 硕士/杭州电子科技大学-计算机科学与技术专业 技术博客：https://mannuan.github.io Github：http://github.com/mannuan 期望职位：Web前端初级程序员 期望城市：杭州       校园项目经历 研究生期间 智慧旅游 (2018年3月~2018年8月) 我主要负责爬虫管理系统的搭建，包括写爬虫脚本和网站的搭建。在这个项目中，我遭遇了严格的反爬、网页动态加载和登录验证等难题。针对于网页动态加载的问题，我专门花费了两个月时间开发了一个beryllium的python库。为了解决反爬问题，我结合使用了ip代理池和爬虫策略。然后，我使用加载cookie的方式，躲避了登录验证。由于涉及到的爬虫方案比较复杂且不利于维护。我专门动手设计了一套爬虫管理系统，后台使用django，前端使用dataTable等框架实现。使用的是mongodb数据库，我使用了aggregate聚合的方式。该项目上线以后，基本上每天可以稳定地爬取几万条数据，在十几万条数据中，查询花费的时间基本不超过3秒。
+河长信息管理系统 (2017年10月~2018年3月) 在这个项目中，我不但完成了数据爬虫、数据接口开发工作，还针对不同的网站总结出了一套通用的爬虫脚本模板，有效的加快了开发的进度。同时，我为了避免被网站反爬，制定了一套爬虫策略。在该系统上线以后，每天都可以稳定地获取到最新的数据。
+本科阶段 基于LLDP协议捎带式服务质量采集机制(QoS over LLDP) (2016年3月~2017年3月) 这是一个软件定义网络领域的创新项目，我在这个项目中主要负责研究如何让LLDP协议的数据包来承载QoS信息，使得在不占用网络带宽的情况下，获取实时的网络QoS信息。为了实现这个方案，我使用了floodlight+vswitch的技术栈。其中，我在floodlight中创建了一个模块来修改LLDP数据包的结构，为QoS信息开辟了一段存储空间，然后，在vswitch中LLDP的解包阶段，把交换机自身的QoS信息填写到LLDP数据包中。这套解决方案关键的难点在于如何把QoS信息填写到数据包中，但是网上没有这方面的资料，为了解决这个难题我花费了两个月的时间来阅读vswitch的源代码。在8月份我的这个项目参加了第三届全国高校软件定义网络（SDN）应用创新开发大赛获得了二等奖。最后，我和我的导师通过这个项目发表了一篇sci-4区的论文—The Top-K QoS-aware Paths Discovery for Source Routing in SDN. 我对这篇论文的主要贡献就是提供实验数据。
+技能清单 以下均为我熟练使用的技能
+ Web开发：Node Web框架：django 前端框架：Vue 前端工具：webpack 数据库相关：MySQL/mongodb 版本管理、文档和自动化部署工具：Git  致谢 感谢您花时间阅读我的简历，期待能有机会和您共事。</description>
     </item>
     
   </channel>

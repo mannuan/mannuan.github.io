@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>domContentLoaded on mannuan</title>
+    <link>https://mannuan.github.io/tags/domcontentloaded/</link>
+    <description>Recent content in domContentLoaded on mannuan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 05 Jul 2019 10:11:04 +0800</lastBuildDate>
+    
+	<atom:link href="https://mannuan.github.io/tags/domcontentloaded/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>异步脚本、延迟脚本与DOMContentLoaded的关系</title>
+      <link>https://mannuan.github.io/post/20190705101104/</link>
+      <pubDate>Fri, 05 Jul 2019 10:11:04 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190705101104/</guid>
+      <description>sync 如上图所示， HTML 文档被解析时如果遇见（同步）脚本，则停止解析，先去加载脚本，然后执行，执行结束后继续解析 HTML 文档。HTML文档解析完毕后触发DOMContentLoaded。
+async 分为两种情况：异步脚本先执行完，dom先解析完或dom和异步脚本同时完成
+异步脚本先执行完 HTML 还没有被解析完的时候，async脚本已经加载完了，那么 HTML 停止解析，去执行脚本，脚本执行完毕后触发DOMContentLoaded事件。
+dom先解析完或dom和异步脚本同时完成 HTML 解析完了之后，async脚本才加载完，然后再执行脚本，那么在HTML解析完毕、async脚本还没加载完的时候就触发DOMContentLoaded事件。
+总结 DomContentLoaded 事件只关注 HTML 是否被解析完，而不关注 async 和sync脚本。
+defer defer与上面的同步和异步脚本不同，defer执行脚本的阶段必须在dom解析完毕之后。它也分为两种情况：defer先加载完和dom先解析完
+defer先加载完 HTML还没解析完成时，defer脚本已经加载完毕，那么defer脚本将等待HTML解析完成后再执行。defer脚本执行完毕后触发DOMContentLoaded事件。
+dom先解析完 HTML解析完成时，defer脚本还没加载完毕，那么defer脚本继续加载，加载完成后直接执行，执行完毕后触发domContentLoaded事件。
+总结 如果在dom解析完成以后，defer脚本没有执行，在dom解析完成后，defer会率先被执行，会延迟domContentLoaded事件的触发。</description>
+    </item>
+    
+    <item>
+      <title>首屏时间与domContentLoaded触发时机的关系</title>
+      <link>https://mannuan.github.io/post/20190705095553/</link>
+      <pubDate>Fri, 05 Jul 2019 09:55:53 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190705095553/</guid>
+      <description>按照有无js和css，domContentLoaded的触发时机可以分为3类 没有js和css 只有css 有js和css 首屏时间 定义：计算这个网页从空白到出现内容所花费的时间
+这段时间其实就是HTML 文档加载和解析的时间。也就是DOMContentLoaded 事件触发之前所经历的时间。
+对于首屏时间而言，js放在HTML文档的开头和结尾处效果是一样的，而js放在结尾的目的并不是为了减少首屏时间，而是由于js经常需要操纵DOM，放在后面才更能保证找到DOM节点。</description>
+    </item>
+    
+  </channel>
+</rss>
