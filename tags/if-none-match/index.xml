@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>if-none-match on mannuan</title>
+    <link>https://mannuan.github.io/tags/if-none-match/</link>
+    <description>Recent content in if-none-match on mannuan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 06 Jul 2019 14:12:07 +0800</lastBuildDate>
+    
+	<atom:link href="https://mannuan.github.io/tags/if-none-match/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>http缓存详解</title>
+      <link>https://mannuan.github.io/post/20190706141207/</link>
+      <pubDate>Sat, 06 Jul 2019 14:12:07 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190706141207/</guid>
+      <description>前言 http缓存主要针对如css,js,图片等更新频率不大的静态文件。
+http缓存字段的描述 根据请求和响应分为：
+Request Headers（浏览器端） if-modified-since
+请求头，缓存最新修改的时间，浏览器询问服务器，服务器会将它与last-modified进行比对
+if-none-match
+请求头，缓存标识，浏览器询问服务器询，服务器会将它与etag进行比对
+Response Headers（服务器端） cache-control
+控制http缓存的最高指令
+常用值有:
+1. no-store: 所有内容都不缓存
+2. noc-cache: 缓存，但是浏览器使用缓存前，都会请求服务器判断缓存是否是最新，过期的缓存就不使用
+3. max-age=x(单位秒)在缓存后的x秒内不发请求，是http1.1的属性，类似于expires，但优先级高于expires
+4. s-maxage=x(单位秒)代理服务器请求源站在缓存后的x秒内不发请求，只对CDN有效
+5. public 客户端和代理服务器（CDN）都可缓存
+6. private 只有客户端可以缓存
+last-modified
+响应头，缓存最新修改的时间，服务器返回给浏览器，优先级小于etag
+etag
+响应头，缓存标识，服务器返回给浏览器，优先级高于last-modified
+expires
+响应头，代表缓存过期时间，服务器返回，是http1.0的属性，优先级小于max-age
+使用http缓存的原因  客户端每次都要请求服务器，浪费流量;
+ 服务器每次都得提供查找，下载，请求用户基础如果较大，服务器存在较大压力;
+ 客户端每次请求完都要进行页面渲染，用户体验较差。
+  http缓存字段的关系 服务器和浏览器的对话  我将从服务器和浏览器的日常对话来阐述各个字段的起因和来由。
+为了简化，服务器称为S，浏览器称为C
+第一次对话(expires的由来)
+ C: S，S，我要一个a.css文件，快发给我!!! S: 烦死了，给你，在expires时间前别来烦我!!!  第二次对话(last-modified和if-modified-since的由来)
+C: S, S, 我的a.css文件到期了，你快给我发一个新的!!! S: 新的a.css? 它有修改过吗？ 你之前用的就是最新的吧? ... 呃😓我也不知道了，要不我们都记录一下时间吧？ 我用last-modified记录a.</description>
+    </item>
+    
+  </channel>
+</rss>

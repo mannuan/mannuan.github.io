@@ -3,7 +3,7 @@
   <meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
 <meta name='description' content='字符 描述     \ 将下一个字符标记为一个特殊字符、或一个原义字符、或一个向后引用、或一个八进制转义符。例如，“n”匹配字符“n”。“\n”匹配一个换行符。串行“\\”匹配“\”而“\(”则匹配“(”。   ^ 匹配输入字符串的开始位置。如果设置了RegExp对象的Multiline属性，^也匹配“\n”或“\r”之后的位置。   $ 匹配输入字符串的结束位置。如果设置了RegExp对象的Multiline属性，$也匹配“\n”或“\r”之前的位置。   * 匹配前面的子表达式零次或多次。例如，zo*能匹配“z”以及“zoo”。*等价于{0,}。   &#43; 匹配前面的子表达式一次或多次。例如，“zo&#43;”能匹配“zo”以及“zoo”，但不能匹配“z”。&#43;等价于{1,}。   ? 匹配前面的子表达式零次或一次。例如，“do(es)?”可以匹配“does”或“does”中的“do”。?等价于{0,1}。   {n} n是一个非负整数。匹配确定的n次。例如，“o{2}”不能匹配“Bob”中的“o”，但是能匹配“food”中的两个o。   {n,} n是一个非负整数。至少匹配n次。例如，“o{2,}”不能匹配“Bob”中的“o”，但能匹配“foooood”中的所有o。“o{1,}”等价于“o&#43;”。“o{0,}”则等价于“o*”。   {n,m} m和n均为非负整数，其中n&lt;=m。最少匹配n次且最多匹配m次。例如，“o{1,3}”将匹配“fooooood”中的前三个o。“o{0,1}”等价于“o?”。请注意在逗号和两个数之间不能有空格。   ? 当该字符紧跟在任何一个其他限制符（*,&#43;,?，{n}，{n,}，{n,m}）后面时，匹配模式是非贪婪的。非贪婪模式尽可能少的匹配所搜索的字符串，而默认的贪婪模式则尽可能多的匹配所搜索的字符串。例如，对于字符串“oooo”，“o&#43;?”将匹配单个“o”，而“o&#43;”将匹配所有“o”。   . 匹配除“\n”之外的任何单个字符。要匹配包括“\n”在内的任何字符，请使用像“`(.   (pattern) 匹配pattern并获取这一匹配。所获取的匹配可以从产生的Matches集合得到，在VBScript中使用SubMatches集合，在JScript中则使用$0…$9属性。要匹配圆括号字符，请使用“\(”或“\)”。   (?:pattern) 匹配pattern但不获取匹配结果，也就是说这是一个非获取匹配，不进行存储供以后使用。这在使用或字符“`(   (?=pattern) 正向肯定预查，在任何匹配pattern的字符串开始处匹配查找字符串。这是一个非获取匹配，也就是说，该匹配不需要获取供以后使用。例如，“`Windows(?=95   (?!pattern) 正向否定预查，在任何不匹配pattern的字符串开始处匹配查找字符串。这是一个非获取匹配，也就是说，该匹配不需要获取供以后使用。例如“`Windows(?!95   (?'>
-<meta name='theme-color' content='#ffffff'>
+<meta name='theme-color' content='#FFC000'>
 
 <meta property='og:title' content='正则表达式符号大全 • mannuan'>
 <meta property='og:description' content='字符 描述     \ 将下一个字符标记为一个特殊字符、或一个原义字符、或一个向后引用、或一个八进制转义符。例如，“n”匹配字符“n”。“\n”匹配一个换行符。串行“\\”匹配“\”而“\(”则匹配“(”。   ^ 匹配输入字符串的开始位置。如果设置了RegExp对象的Multiline属性，^也匹配“\n”或“\r”之后的位置。   $ 匹配输入字符串的结束位置。如果设置了RegExp对象的Multiline属性，$也匹配“\n”或“\r”之前的位置。   * 匹配前面的子表达式零次或多次。例如，zo*能匹配“z”以及“zoo”。*等价于{0,}。   &#43; 匹配前面的子表达式一次或多次。例如，“zo&#43;”能匹配“zo”以及“zoo”，但不能匹配“z”。&#43;等价于{1,}。   ? 匹配前面的子表达式零次或一次。例如，“do(es)?”可以匹配“does”或“does”中的“do”。?等价于{0,1}。   {n} n是一个非负整数。匹配确定的n次。例如，“o{2}”不能匹配“Bob”中的“o”，但是能匹配“food”中的两个o。   {n,} n是一个非负整数。至少匹配n次。例如，“o{2,}”不能匹配“Bob”中的“o”，但能匹配“foooood”中的所有o。“o{1,}”等价于“o&#43;”。“o{0,}”则等价于“o*”。   {n,m} m和n均为非负整数，其中n&lt;=m。最少匹配n次且最多匹配m次。例如，“o{1,3}”将匹配“fooooood”中的前三个o。“o{0,1}”等价于“o?”。请注意在逗号和两个数之间不能有空格。   ? 当该字符紧跟在任何一个其他限制符（*,&#43;,?，{n}，{n,}，{n,m}）后面时，匹配模式是非贪婪的。非贪婪模式尽可能少的匹配所搜索的字符串，而默认的贪婪模式则尽可能多的匹配所搜索的字符串。例如，对于字符串“oooo”，“o&#43;?”将匹配单个“o”，而“o&#43;”将匹配所有“o”。   . 匹配除“\n”之外的任何单个字符。要匹配包括“\n”在内的任何字符，请使用像“`(.   (pattern) 匹配pattern并获取这一匹配。所获取的匹配可以从产生的Matches集合得到，在VBScript中使用SubMatches集合，在JScript中则使用$0…$9属性。要匹配圆括号字符，请使用“\(”或“\)”。   (?:pattern) 匹配pattern但不获取匹配结果，也就是说这是一个非获取匹配，不进行存储供以后使用。这在使用或字符“`(   (?=pattern) 正向肯定预查，在任何匹配pattern的字符串开始处匹配查找字符串。这是一个非获取匹配，也就是说，该匹配不需要获取供以后使用。例如，“`Windows(?=95   (?!pattern) 正向否定预查，在任何不匹配pattern的字符串开始处匹配查找字符串。这是一个非获取匹配，也就是说，该匹配不需要获取供以后使用。例如“`Windows(?!95   (?'>
@@ -19,7 +19,7 @@
   
   <link rel='icon' href='/favicon.ico'>
 <link rel='stylesheet' href='/assets/css/main.6a060eb7.css'><link rel='stylesheet' href='/css/custom.css'><style>
-:root{--color-accent:#ffffff;}
+:root{--color-accent:#FFC000;}
 </style>
 
   
@@ -112,6 +112,8 @@
       </li><li>
         <a href='/tags/brew/' style='font-size:1em'>brew</a>
       </li><li>
+        <a href='/tags/cache-control/' style='font-size:1em'>cache-control</a>
+      </li><li>
         <a href='/tags/chroma/' style='font-size:1em'>chroma</a>
       </li><li>
         <a href='/tags/chrome/' style='font-size:1em'>Chrome</a>
@@ -156,6 +158,10 @@
       </li><li>
         <a href='/tags/dpkg-error/' style='font-size:1em'>dpkg error</a>
       </li><li>
+        <a href='/tags/etag/' style='font-size:1em'>etag</a>
+      </li><li>
+        <a href='/tags/expires/' style='font-size:1em'>expires</a>
+      </li><li>
         <a href='/tags/f1/' style='font-size:1em'>F1</a>
       </li><li>
         <a href='/tags/frps/' style='font-size:1em'>frps</a>
@@ -172,11 +178,23 @@
       </li><li>
         <a href='/tags/https/' style='font-size:1.0212765957446808em'>https</a>
       </li><li>
+        <a href='/tags/http%E7%BC%93%E5%AD%98/' style='font-size:1em'>http缓存</a>
+      </li><li>
         <a href='/tags/hugo/' style='font-size:1em'>Hugo</a>
       </li><li>
         <a href='/tags/i18n/' style='font-size:1em'>i18n</a>
       </li><li>
+        <a href='/tags/icmp/' style='font-size:1em'>ICMP</a>
+      </li><li>
+        <a href='/tags/if-modified-since/' style='font-size:1em'>if-modified-since</a>
+      </li><li>
+        <a href='/tags/if-none-match/' style='font-size:1em'>if-none-match</a>
+      </li><li>
         <a href='/tags/import-error/' style='font-size:1em'>import error</a>
+      </li><li>
+        <a href='/tags/indexof/' style='font-size:1em'>indexOf</a>
+      </li><li>
+        <a href='/tags/ip/' style='font-size:1em'>ip</a>
       </li><li>
         <a href='/tags/iterm2/' style='font-size:1.0425531914893618em'>iterm2</a>
       </li><li>
@@ -195,6 +213,8 @@
         <a href='/tags/katex/' style='font-size:1em'>katex</a>
       </li><li>
         <a href='/tags/koa/' style='font-size:1em'>koa</a>
+      </li><li>
+        <a href='/tags/last-modified/' style='font-size:1em'>last-modified</a>
       </li><li>
         <a href='/tags/linux/' style='font-size:1.127659574468085em'>linux</a>
       </li><li>
@@ -231,6 +251,8 @@
         <a href='/tags/pdf/' style='font-size:1em'>pdf</a>
       </li><li>
         <a href='/tags/pdf%E5%8E%8B%E7%BC%A9/' style='font-size:1em'>pdf压缩</a>
+      </li><li>
+        <a href='/tags/ping/' style='font-size:1em'>ping</a>
       </li><li>
         <a href='/tags/pip/' style='font-size:1.0212765957446808em'>pip</a>
       </li><li>
@@ -304,6 +326,8 @@
       </li><li>
         <a href='/tags/tostring/' style='font-size:1.0212765957446808em'>toString</a>
       </li><li>
+        <a href='/tags/traceroute/' style='font-size:1em'>traceroute</a>
+      </li><li>
         <a href='/tags/trackpad/' style='font-size:1em'>Trackpad</a>
       </li><li>
         <a href='/tags/translation/' style='font-size:1em'>translation</a>
@@ -324,13 +348,13 @@
       </li><li>
         <a href='/tags/val/' style='font-size:1em'>val</a>
       </li><li>
-        <a href='/tags/valueof/' style='font-size:1.0212765957446808em'>valueof</a>
+        <a href='/tags/valueof/' style='font-size:1.0212765957446808em'>valueOf</a>
       </li><li>
         <a href='/tags/vlan/' style='font-size:1.0212765957446808em'>VLAN</a>
       </li><li>
         <a href='/tags/vscode/' style='font-size:1.0212765957446808em'>vscode</a>
       </li><li>
-        <a href='/tags/vue/' style='font-size:1.0425531914893618em'>vue</a>
+        <a href='/tags/vue/' style='font-size:1.0212765957446808em'>vue</a>
       </li><li>
         <a href='/tags/webpack/' style='font-size:1em'>webpack</a>
       </li><li>

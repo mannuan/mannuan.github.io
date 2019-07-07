@@ -28,26 +28,6 @@
     </item>
     
     <item>
-      <title>关于Content-Type几种值的区别及用法</title>
-      <link>https://mannuan.github.io/post/20190626224453/</link>
-      <pubDate>Wed, 26 Jun 2019 22:44:53 +0800</pubDate>
-      
-      <guid>https://mannuan.github.io/post/20190626224453/</guid>
-      <description>1、Content-Type 的值类型：
-1.1 application/json：消息主体是序列化后的 JSON 字符串
-1.2 application/x-www-form-urlencoded：数据被编码为名称/值对。这是标准的编码格式
-1.3 multipart/form-data： 需要在表单中进行文件上传时，就需要使用该格式。常见的媒体格式是上传文件之时使用的
-1.4 text/plain：数据以纯文本形式(text/json/xml/html)进行编码，其中不含任何控件或格式字符。
-2、application/json 和 application/x-www-form-urlencoded的区别
-2.1 application/json：作用： 告诉服务器请求的主题内容是json格式的字符串，服务器端会对json字符串进行解析，好处： 前端人员不需要关心数据结构的复杂度，只要是标准的json格式就能提交成功。
-2.2 application/x-www-form- urlencoded：是Jquery的Ajax请求默认方式作用：在请求发送过程中会对数据进行序列化处理，以键值对形式？key1=value1&amp;amp;key2=value2的方式发送到服务器，好处： 所有浏览器都支持
-3、 application/x-www-form-urlencoded：信息数据被编码为名称/值对，这是标准且默认的编码格式
-3.1 当action为get时候，客户端把form数据转换成一个字串append到url后面，用&amp;rsquo;?&amp;lsquo;分割。
-3.2 当action为post时候，浏览器把form数据封装到http body中，然后发送到server。（可以取消post请求的预检请求）
-Vue中 content-type 设置</description>
-    </item>
-    
-    <item>
       <title>vue常见错误汇总</title>
       <link>https://mannuan.github.io/post/20190622103331/</link>
       <pubDate>Sat, 22 Jun 2019 10:33:31 +0800</pubDate>

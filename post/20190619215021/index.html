@@ -18,7 +18,7 @@ Anki有一个默认牌组；任何其他牌组都是分离自这个默认牌组�
 笔记和字段（Notes &amp; Fields） 当制作卡片的时候，我们通常希望一些信息可以通过多张卡片显示出来。比如，如果你学习法语，你学习”bonjour“的意思是”hello“,你可能希望创建一张卡片显示&rdquo;bonjour&rdquo;回答&rdquo;hello&rdquo;，然后另一张卡片问你”hello“回答&rdquo;bonjour&rdquo;。前面一张卡片让你辨别单词含义，后面一张卡片则让你把单词翻译成本国语言。
 当使用纸质卡片的时候，你唯一的选择是两次写出信息，每张卡片一次。一些计算机卡片程序通过翻转正反面，使用更加轻松。这种程序对纸质情况有改进，但是存在两个缺点：
  Because such programs don’t track your performance of recognition and production separately, cards will tend not to be shown to you at the optimum time, meaning you forget more than you’d like, or you study more than is necessary. Reversing the question and answer only works when you want exactly the same content on each side.'>
-<meta name='theme-color' content='#ffffff'>
+<meta name='theme-color' content='#FFC000'>
 
 <meta property='og:title' content='anki最新开发文档（2.1） • mannuan'>
 <meta property='og:description' content='注意：开发文档里面不重要的内容，本篇博客不进行翻译，依然英文显示
@@ -49,7 +49,7 @@ Anki有一个默认牌组；任何其他牌组都是分离自这个默认牌组�
   
   <link rel='icon' href='/favicon.ico'>
 <link rel='stylesheet' href='/assets/css/main.6a060eb7.css'><link rel='stylesheet' href='/css/custom.css'><style>
-:root{--color-accent:#ffffff;}
+:root{--color-accent:#FFC000;}
 </style>
 
   
@@ -142,6 +142,8 @@ Anki有一个默认牌组；任何其他牌组都是分离自这个默认牌组�
       </li><li>
         <a href='/tags/brew/' style='font-size:1em'>brew</a>
       </li><li>
+        <a href='/tags/cache-control/' style='font-size:1em'>cache-control</a>
+      </li><li>
         <a href='/tags/chroma/' style='font-size:1em'>chroma</a>
       </li><li>
         <a href='/tags/chrome/' style='font-size:1em'>Chrome</a>
@@ -186,6 +188,10 @@ Anki有一个默认牌组；任何其他牌组都是分离自这个默认牌组�
       </li><li>
         <a href='/tags/dpkg-error/' style='font-size:1em'>dpkg error</a>
       </li><li>
+        <a href='/tags/etag/' style='font-size:1em'>etag</a>
+      </li><li>
+        <a href='/tags/expires/' style='font-size:1em'>expires</a>
+      </li><li>
         <a href='/tags/f1/' style='font-size:1em'>F1</a>
       </li><li>
         <a href='/tags/frps/' style='font-size:1em'>frps</a>
@@ -202,11 +208,23 @@ Anki有一个默认牌组；任何其他牌组都是分离自这个默认牌组�
       </li><li>
         <a href='/tags/https/' style='font-size:1.0212765957446808em'>https</a>
       </li><li>
+        <a href='/tags/http%E7%BC%93%E5%AD%98/' style='font-size:1em'>http缓存</a>
+      </li><li>
         <a href='/tags/hugo/' style='font-size:1em'>Hugo</a>
       </li><li>
         <a href='/tags/i18n/' style='font-size:1em'>i18n</a>
       </li><li>
+        <a href='/tags/icmp/' style='font-size:1em'>ICMP</a>
+      </li><li>
+        <a href='/tags/if-modified-since/' style='font-size:1em'>if-modified-since</a>
+      </li><li>
+        <a href='/tags/if-none-match/' style='font-size:1em'>if-none-match</a>
+      </li><li>
         <a href='/tags/import-error/' style='font-size:1em'>import error</a>
+      </li><li>
+        <a href='/tags/indexof/' style='font-size:1em'>indexOf</a>
+      </li><li>
+        <a href='/tags/ip/' style='font-size:1em'>ip</a>
       </li><li>
         <a href='/tags/iterm2/' style='font-size:1.0425531914893618em'>iterm2</a>
       </li><li>
@@ -225,6 +243,8 @@ Anki有一个默认牌组；任何其他牌组都是分离自这个默认牌组�
         <a href='/tags/katex/' style='font-size:1em'>katex</a>
       </li><li>
         <a href='/tags/koa/' style='font-size:1em'>koa</a>
+      </li><li>
+        <a href='/tags/last-modified/' style='font-size:1em'>last-modified</a>
       </li><li>
         <a href='/tags/linux/' style='font-size:1.127659574468085em'>linux</a>
       </li><li>
@@ -261,6 +281,8 @@ Anki有一个默认牌组；任何其他牌组都是分离自这个默认牌组�
         <a href='/tags/pdf/' style='font-size:1em'>pdf</a>
       </li><li>
         <a href='/tags/pdf%E5%8E%8B%E7%BC%A9/' style='font-size:1em'>pdf压缩</a>
+      </li><li>
+        <a href='/tags/ping/' style='font-size:1em'>ping</a>
       </li><li>
         <a href='/tags/pip/' style='font-size:1.0212765957446808em'>pip</a>
       </li><li>
@@ -334,6 +356,8 @@ Anki有一个默认牌组；任何其他牌组都是分离自这个默认牌组�
       </li><li>
         <a href='/tags/tostring/' style='font-size:1.0212765957446808em'>toString</a>
       </li><li>
+        <a href='/tags/traceroute/' style='font-size:1em'>traceroute</a>
+      </li><li>
         <a href='/tags/trackpad/' style='font-size:1em'>Trackpad</a>
       </li><li>
         <a href='/tags/translation/' style='font-size:1em'>translation</a>
@@ -354,13 +378,13 @@ Anki有一个默认牌组；任何其他牌组都是分离自这个默认牌组�
       </li><li>
         <a href='/tags/val/' style='font-size:1em'>val</a>
       </li><li>
-        <a href='/tags/valueof/' style='font-size:1.0212765957446808em'>valueof</a>
+        <a href='/tags/valueof/' style='font-size:1.0212765957446808em'>valueOf</a>
       </li><li>
         <a href='/tags/vlan/' style='font-size:1.0212765957446808em'>VLAN</a>
       </li><li>
         <a href='/tags/vscode/' style='font-size:1.0212765957446808em'>vscode</a>
       </li><li>
-        <a href='/tags/vue/' style='font-size:1.0425531914893618em'>vue</a>
+        <a href='/tags/vue/' style='font-size:1.0212765957446808em'>vue</a>
       </li><li>
         <a href='/tags/webpack/' style='font-size:1em'>webpack</a>
       </li><li>

@@ -8,7 +8,7 @@
 其他现代浏览器支持一直冒泡到window对象；
 事件捕获  Netscape浏览器的事件流机制； 事件开始时由不具体的节点——文档中嵌套层次最上级的元素（可理解为最大的同心圆）最早接收，然后事件沿着DOM树向下传播，直到传播到最具体的节点； 现代浏览器都支持 事件捕获 模型； DOM2级 事件规范要求：从document对象开始传播；但一般的现代浏览器都从window对象开始捕获。  DOM事件流  ”DOM 2级事件“规定的事件包括三个阶段：事件捕获阶段、处于目标阶段和事件冒泡阶段； 实例：document&gt;html&gt;body&gt;div  在DOM事件流中，实际的目标(div)在捕获阶段不会接收到事件。这意味着在捕获阶段，事件从document到html再到body后就会停止。下一个阶段就是处于&rdquo;处于目标&rdquo;阶段，于是事件在div上发生，并 在事件处理中被看成冒泡阶段的一部分。然后，冒泡阶段发生，事件又传播到文档。
  ”DOM2级事件“规定：捕获阶段不涉及事件目标；但一般的现代浏览器都会在捕获阶段触发事件对象上的事件；导致的结果就是：有两个机会（捕获、冒泡）在目标对象上面操作事件； IE8- 不支持DOM事件流。  '>
-<meta name='theme-color' content='#ffffff'>
+<meta name='theme-color' content='#FFC000'>
 
 <meta property='og:title' content='javascript 事件流 • mannuan'>
 <meta property='og:description' content=' 事件流 描述的是从页面中 接收事件的顺序 。
@@ -29,7 +29,7 @@
   
   <link rel='icon' href='/favicon.ico'>
 <link rel='stylesheet' href='/assets/css/main.6a060eb7.css'><link rel='stylesheet' href='/css/custom.css'><style>
-:root{--color-accent:#ffffff;}
+:root{--color-accent:#FFC000;}
 </style>
 
   
@@ -122,6 +122,8 @@
       </li><li>
         <a href='/tags/brew/' style='font-size:1em'>brew</a>
       </li><li>
+        <a href='/tags/cache-control/' style='font-size:1em'>cache-control</a>
+      </li><li>
         <a href='/tags/chroma/' style='font-size:1em'>chroma</a>
       </li><li>
         <a href='/tags/chrome/' style='font-size:1em'>Chrome</a>
@@ -166,6 +168,10 @@
       </li><li>
         <a href='/tags/dpkg-error/' style='font-size:1em'>dpkg error</a>
       </li><li>
+        <a href='/tags/etag/' style='font-size:1em'>etag</a>
+      </li><li>
+        <a href='/tags/expires/' style='font-size:1em'>expires</a>
+      </li><li>
         <a href='/tags/f1/' style='font-size:1em'>F1</a>
       </li><li>
         <a href='/tags/frps/' style='font-size:1em'>frps</a>
@@ -182,11 +188,23 @@
       </li><li>
         <a href='/tags/https/' style='font-size:1.0212765957446808em'>https</a>
       </li><li>
+        <a href='/tags/http%E7%BC%93%E5%AD%98/' style='font-size:1em'>http缓存</a>
+      </li><li>
         <a href='/tags/hugo/' style='font-size:1em'>Hugo</a>
       </li><li>
         <a href='/tags/i18n/' style='font-size:1em'>i18n</a>
       </li><li>
+        <a href='/tags/icmp/' style='font-size:1em'>ICMP</a>
+      </li><li>
+        <a href='/tags/if-modified-since/' style='font-size:1em'>if-modified-since</a>
+      </li><li>
+        <a href='/tags/if-none-match/' style='font-size:1em'>if-none-match</a>
+      </li><li>
         <a href='/tags/import-error/' style='font-size:1em'>import error</a>
+      </li><li>
+        <a href='/tags/indexof/' style='font-size:1em'>indexOf</a>
+      </li><li>
+        <a href='/tags/ip/' style='font-size:1em'>ip</a>
       </li><li>
         <a href='/tags/iterm2/' style='font-size:1.0425531914893618em'>iterm2</a>
       </li><li>
@@ -205,6 +223,8 @@
         <a href='/tags/katex/' style='font-size:1em'>katex</a>
       </li><li>
         <a href='/tags/koa/' style='font-size:1em'>koa</a>
+      </li><li>
+        <a href='/tags/last-modified/' style='font-size:1em'>last-modified</a>
       </li><li>
         <a href='/tags/linux/' style='font-size:1.127659574468085em'>linux</a>
       </li><li>
@@ -241,6 +261,8 @@
         <a href='/tags/pdf/' style='font-size:1em'>pdf</a>
       </li><li>
         <a href='/tags/pdf%E5%8E%8B%E7%BC%A9/' style='font-size:1em'>pdf压缩</a>
+      </li><li>
+        <a href='/tags/ping/' style='font-size:1em'>ping</a>
       </li><li>
         <a href='/tags/pip/' style='font-size:1.0212765957446808em'>pip</a>
       </li><li>
@@ -314,6 +336,8 @@
       </li><li>
         <a href='/tags/tostring/' style='font-size:1.0212765957446808em'>toString</a>
       </li><li>
+        <a href='/tags/traceroute/' style='font-size:1em'>traceroute</a>
+      </li><li>
         <a href='/tags/trackpad/' style='font-size:1em'>Trackpad</a>
       </li><li>
         <a href='/tags/translation/' style='font-size:1em'>translation</a>
@@ -334,13 +358,13 @@
       </li><li>
         <a href='/tags/val/' style='font-size:1em'>val</a>
       </li><li>
-        <a href='/tags/valueof/' style='font-size:1.0212765957446808em'>valueof</a>
+        <a href='/tags/valueof/' style='font-size:1.0212765957446808em'>valueOf</a>
       </li><li>
         <a href='/tags/vlan/' style='font-size:1.0212765957446808em'>VLAN</a>
       </li><li>
         <a href='/tags/vscode/' style='font-size:1.0212765957446808em'>vscode</a>
       </li><li>
-        <a href='/tags/vue/' style='font-size:1.0425531914893618em'>vue</a>
+        <a href='/tags/vue/' style='font-size:1.0212765957446808em'>vue</a>
       </li><li>
         <a href='/tags/webpack/' style='font-size:1em'>webpack</a>
       </li><li>

@@ -11,7 +11,7 @@ Snippet怎么用
 &#34;html template&#34;: { &#34;prefix&#34;: &#34;ht&#34;, &#34;body&#34;: [ &#34;&lt;!DOCTYPE html&gt;&#34;, &#34;&lt;html lang=\&#34;en\&#34;&gt;&#34;, &#34;&lt;head&gt;&#34;, &#34; &lt;meta charset=\&#34;UTF-8\&#34;&gt;&#34;, &#34; &lt;title&gt;${1:$CURRENT_DATE}&lt;/title&gt;&#34;, &#34;&lt;/head&gt;&#34;, &#34;&lt;body&gt;&#34;, &#34; &lt;div class=\&#34;${2|container,wrapper|}\&#34;&gt;&#34;, &#34; ${3}&#34;, &#34; &lt;/div&gt;&#34;, &#34;&lt;/body&gt;&#34;, &#34;&lt;/html&gt;&#34;, ], &#34;description&#34;: &#34;create a html frame&#34; } 基础结构
  片段名字 prefix（前缀，输入的触发条件，比如上面例子中当我输入ht后，就能tab出来片段） body（主体部分，在里面根据语法定义自己需要的代码片段） description（说明，片段的具体描述）  基础语法
  每个逗号代表一整行的结束，双引号需要用转义字符  $number表示光标跳转的顺序，比如$1表示光标首次需要跳转的位置，相同序号的会在一起，另外$0表示最终光标位置 变量，在未赋值的情况下提供默认值，这里提供一些变量  TM_SELECTED_TEXT：当前选定的文本或空字符串； TM_CURRENT_LINE：当前行的内容； TM_CURRENT_WORD：光标所处单词或空字符串 TM_LINE_INDEX：行号（从零开始）； TM_LINE_NUMBER：行号（从一开始）； TM_FILENAME：当前文档的文件名； TM_FILENAME_BASE：当前文档的文件名（不含后缀名）； TM_DIRECTORY：当前文档所在目录； TM_FILEPATH：当前文档的完整文件路径； CLIPBOARD：当前剪贴板中内容。时间相关CURRENT_YEAR: 当前年份； CURRENT_YEAR_SHORT: 当前年份的后两位； CURRENT_MONTH: 格式化为两位数字的当前月份，如 02； CURRENT_MONTH_NAME: 当前月份的全称，如 July；CURRENT_MONTH_NAME_SHORT: 当前月份的简称，如 Jul； CURRENT_DATE: 当天月份第几天； CURRENT_DAY_NAME: 当天周几，如 Monday； CURRENT_DAY_NAME_SHORT: 当天周几的简称，如 Mon；CURRENT_HOUR: 当前小时（24小时制）； CURRENT_MINUTE: 当前分钟； CURRENT_SECOND: 当前秒数。'>
-<meta name='theme-color' content='#ffffff'>
+<meta name='theme-color' content='#FFC000'>
 
 <meta property='og:title' content='snippet,让你编码效率翻倍 • mannuan'>
 <meta property='og:description' content='为什么谈到Snippet
@@ -35,7 +35,7 @@ Snippet怎么用
   
   <link rel='icon' href='/favicon.ico'>
 <link rel='stylesheet' href='/assets/css/main.6a060eb7.css'><link rel='stylesheet' href='/css/custom.css'><style>
-:root{--color-accent:#ffffff;}
+:root{--color-accent:#FFC000;}
 </style>
 
   
@@ -128,6 +128,8 @@ Snippet怎么用
       </li><li>
         <a href='/tags/brew/' style='font-size:1em'>brew</a>
       </li><li>
+        <a href='/tags/cache-control/' style='font-size:1em'>cache-control</a>
+      </li><li>
         <a href='/tags/chroma/' style='font-size:1em'>chroma</a>
       </li><li>
         <a href='/tags/chrome/' style='font-size:1em'>Chrome</a>
@@ -172,6 +174,10 @@ Snippet怎么用
       </li><li>
         <a href='/tags/dpkg-error/' style='font-size:1em'>dpkg error</a>
       </li><li>
+        <a href='/tags/etag/' style='font-size:1em'>etag</a>
+      </li><li>
+        <a href='/tags/expires/' style='font-size:1em'>expires</a>
+      </li><li>
         <a href='/tags/f1/' style='font-size:1em'>F1</a>
       </li><li>
         <a href='/tags/frps/' style='font-size:1em'>frps</a>
@@ -188,11 +194,23 @@ Snippet怎么用
       </li><li>
         <a href='/tags/https/' style='font-size:1.0212765957446808em'>https</a>
       </li><li>
+        <a href='/tags/http%E7%BC%93%E5%AD%98/' style='font-size:1em'>http缓存</a>
+      </li><li>
         <a href='/tags/hugo/' style='font-size:1em'>Hugo</a>
       </li><li>
         <a href='/tags/i18n/' style='font-size:1em'>i18n</a>
       </li><li>
+        <a href='/tags/icmp/' style='font-size:1em'>ICMP</a>
+      </li><li>
+        <a href='/tags/if-modified-since/' style='font-size:1em'>if-modified-since</a>
+      </li><li>
+        <a href='/tags/if-none-match/' style='font-size:1em'>if-none-match</a>
+      </li><li>
         <a href='/tags/import-error/' style='font-size:1em'>import error</a>
+      </li><li>
+        <a href='/tags/indexof/' style='font-size:1em'>indexOf</a>
+      </li><li>
+        <a href='/tags/ip/' style='font-size:1em'>ip</a>
       </li><li>
         <a href='/tags/iterm2/' style='font-size:1.0425531914893618em'>iterm2</a>
       </li><li>
@@ -211,6 +229,8 @@ Snippet怎么用
         <a href='/tags/katex/' style='font-size:1em'>katex</a>
       </li><li>
         <a href='/tags/koa/' style='font-size:1em'>koa</a>
+      </li><li>
+        <a href='/tags/last-modified/' style='font-size:1em'>last-modified</a>
       </li><li>
         <a href='/tags/linux/' style='font-size:1.127659574468085em'>linux</a>
       </li><li>
@@ -247,6 +267,8 @@ Snippet怎么用
         <a href='/tags/pdf/' style='font-size:1em'>pdf</a>
       </li><li>
         <a href='/tags/pdf%E5%8E%8B%E7%BC%A9/' style='font-size:1em'>pdf压缩</a>
+      </li><li>
+        <a href='/tags/ping/' style='font-size:1em'>ping</a>
       </li><li>
         <a href='/tags/pip/' style='font-size:1.0212765957446808em'>pip</a>
       </li><li>
@@ -320,6 +342,8 @@ Snippet怎么用
       </li><li>
         <a href='/tags/tostring/' style='font-size:1.0212765957446808em'>toString</a>
       </li><li>
+        <a href='/tags/traceroute/' style='font-size:1em'>traceroute</a>
+      </li><li>
         <a href='/tags/trackpad/' style='font-size:1em'>Trackpad</a>
       </li><li>
         <a href='/tags/translation/' style='font-size:1em'>translation</a>
@@ -340,13 +364,13 @@ Snippet怎么用
       </li><li>
         <a href='/tags/val/' style='font-size:1em'>val</a>
       </li><li>
-        <a href='/tags/valueof/' style='font-size:1.0212765957446808em'>valueof</a>
+        <a href='/tags/valueof/' style='font-size:1.0212765957446808em'>valueOf</a>
       </li><li>
         <a href='/tags/vlan/' style='font-size:1.0212765957446808em'>VLAN</a>
       </li><li>
         <a href='/tags/vscode/' style='font-size:1.0212765957446808em'>vscode</a>
       </li><li>
-        <a href='/tags/vue/' style='font-size:1.0425531914893618em'>vue</a>
+        <a href='/tags/vue/' style='font-size:1.0212765957446808em'>vue</a>
       </li><li>
         <a href='/tags/webpack/' style='font-size:1em'>webpack</a>
       </li><li>

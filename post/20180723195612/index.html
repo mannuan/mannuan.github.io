@@ -15,7 +15,7 @@ db.&lt;collection_name&gt;.aggregate([ {$match:key}, {$group:{_id:$&lt;group_fil
   * 表示最后要显示的求和字段的名称，表示要求和的字段的名称,_id:null表示不分组，这里使用$group符号的原因是$sum必须在$group实现
  在求和之后数据的结构是这样的
  {_id:null,&lt;sum_name&gt;:&lt;sum_value&gt;}     从上面的例子，我们不难看出mongodb的聚合管道操作它允许分组、求和、筛选等等不同的操作依次进行，从代码里面使用了”[]“这个列表操作符，可以想像mongodb的聚合操作就像python的列表一样依次进行读取、操作，而且聚合操作允许重复多次进行的相同的操作。因此，我认为不管多复杂的操作只要分成一些基本操作，都可以用mongodb的聚合操作实现。'>
-<meta name='theme-color' content='#ffffff'>
+<meta name='theme-color' content='#FFC000'>
 
 <meta property='og:title' content='对mongodb的aggregate管道用法的理解 • mannuan'>
 <meta property='og:description' content='最近看了一些关于mongodb的教程，感觉很费力，尤其涉及到了一些复杂的操作。比如很多贴上了大段数据来描述样例、或者翻译了大段官方文档的文字，这些都让我感觉疲劳。 下面我用自己写的一些话来描述我对mongodb聚合的理解：
@@ -43,7 +43,7 @@ db.&lt;collection_name&gt;.aggregate([ {$match:key}, {$group:{_id:$&lt;group_fil
   
   <link rel='icon' href='/favicon.ico'>
 <link rel='stylesheet' href='/assets/css/main.6a060eb7.css'><link rel='stylesheet' href='/css/custom.css'><style>
-:root{--color-accent:#ffffff;}
+:root{--color-accent:#FFC000;}
 </style>
 
   
@@ -136,6 +136,8 @@ db.&lt;collection_name&gt;.aggregate([ {$match:key}, {$group:{_id:$&lt;group_fil
       </li><li>
         <a href='/tags/brew/' style='font-size:1em'>brew</a>
       </li><li>
+        <a href='/tags/cache-control/' style='font-size:1em'>cache-control</a>
+      </li><li>
         <a href='/tags/chroma/' style='font-size:1em'>chroma</a>
       </li><li>
         <a href='/tags/chrome/' style='font-size:1em'>Chrome</a>
@@ -180,6 +182,10 @@ db.&lt;collection_name&gt;.aggregate([ {$match:key}, {$group:{_id:$&lt;group_fil
       </li><li>
         <a href='/tags/dpkg-error/' style='font-size:1em'>dpkg error</a>
       </li><li>
+        <a href='/tags/etag/' style='font-size:1em'>etag</a>
+      </li><li>
+        <a href='/tags/expires/' style='font-size:1em'>expires</a>
+      </li><li>
         <a href='/tags/f1/' style='font-size:1em'>F1</a>
       </li><li>
         <a href='/tags/frps/' style='font-size:1em'>frps</a>
@@ -196,11 +202,23 @@ db.&lt;collection_name&gt;.aggregate([ {$match:key}, {$group:{_id:$&lt;group_fil
       </li><li>
         <a href='/tags/https/' style='font-size:1.0212765957446808em'>https</a>
       </li><li>
+        <a href='/tags/http%E7%BC%93%E5%AD%98/' style='font-size:1em'>http缓存</a>
+      </li><li>
         <a href='/tags/hugo/' style='font-size:1em'>Hugo</a>
       </li><li>
         <a href='/tags/i18n/' style='font-size:1em'>i18n</a>
       </li><li>
+        <a href='/tags/icmp/' style='font-size:1em'>ICMP</a>
+      </li><li>
+        <a href='/tags/if-modified-since/' style='font-size:1em'>if-modified-since</a>
+      </li><li>
+        <a href='/tags/if-none-match/' style='font-size:1em'>if-none-match</a>
+      </li><li>
         <a href='/tags/import-error/' style='font-size:1em'>import error</a>
+      </li><li>
+        <a href='/tags/indexof/' style='font-size:1em'>indexOf</a>
+      </li><li>
+        <a href='/tags/ip/' style='font-size:1em'>ip</a>
       </li><li>
         <a href='/tags/iterm2/' style='font-size:1.0425531914893618em'>iterm2</a>
       </li><li>
@@ -219,6 +237,8 @@ db.&lt;collection_name&gt;.aggregate([ {$match:key}, {$group:{_id:$&lt;group_fil
         <a href='/tags/katex/' style='font-size:1em'>katex</a>
       </li><li>
         <a href='/tags/koa/' style='font-size:1em'>koa</a>
+      </li><li>
+        <a href='/tags/last-modified/' style='font-size:1em'>last-modified</a>
       </li><li>
         <a href='/tags/linux/' style='font-size:1.127659574468085em'>linux</a>
       </li><li>
@@ -255,6 +275,8 @@ db.&lt;collection_name&gt;.aggregate([ {$match:key}, {$group:{_id:$&lt;group_fil
         <a href='/tags/pdf/' style='font-size:1em'>pdf</a>
       </li><li>
         <a href='/tags/pdf%E5%8E%8B%E7%BC%A9/' style='font-size:1em'>pdf压缩</a>
+      </li><li>
+        <a href='/tags/ping/' style='font-size:1em'>ping</a>
       </li><li>
         <a href='/tags/pip/' style='font-size:1.0212765957446808em'>pip</a>
       </li><li>
@@ -328,6 +350,8 @@ db.&lt;collection_name&gt;.aggregate([ {$match:key}, {$group:{_id:$&lt;group_fil
       </li><li>
         <a href='/tags/tostring/' style='font-size:1.0212765957446808em'>toString</a>
       </li><li>
+        <a href='/tags/traceroute/' style='font-size:1em'>traceroute</a>
+      </li><li>
         <a href='/tags/trackpad/' style='font-size:1em'>Trackpad</a>
       </li><li>
         <a href='/tags/translation/' style='font-size:1em'>translation</a>
@@ -348,13 +372,13 @@ db.&lt;collection_name&gt;.aggregate([ {$match:key}, {$group:{_id:$&lt;group_fil
       </li><li>
         <a href='/tags/val/' style='font-size:1em'>val</a>
       </li><li>
-        <a href='/tags/valueof/' style='font-size:1.0212765957446808em'>valueof</a>
+        <a href='/tags/valueof/' style='font-size:1.0212765957446808em'>valueOf</a>
       </li><li>
         <a href='/tags/vlan/' style='font-size:1.0212765957446808em'>VLAN</a>
       </li><li>
         <a href='/tags/vscode/' style='font-size:1.0212765957446808em'>vscode</a>
       </li><li>
-        <a href='/tags/vue/' style='font-size:1.0425531914893618em'>vue</a>
+        <a href='/tags/vue/' style='font-size:1.0212765957446808em'>vue</a>
       </li><li>
         <a href='/tags/webpack/' style='font-size:1em'>webpack</a>
       </li><li>

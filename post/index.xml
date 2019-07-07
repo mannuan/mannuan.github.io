@@ -5,10 +5,75 @@
     <link>https://mannuan.github.io/post/</link>
     <description>Recent content in Blog on mannuan</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 05 Jul 2019 21:22:59 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 07 Jul 2019 15:31:02 +0800</lastBuildDate>
     
 	<atom:link href="https://mannuan.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>ICMP协议是什么？ICMP协议的作用是什么？</title>
+      <link>https://mannuan.github.io/post/20190707153102/</link>
+      <pubDate>Sun, 07 Jul 2019 15:31:02 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190707153102/</guid>
+      <description>1、ICMP的定义 全称Internet Control Message Protocol，就是互联网控制报文协议。
+ 这里的关键词是”控制“，下面我将介绍它是如何控制的
+ 2、ICMP的由来 由于复杂的网络环境，数据包在网络中传输常常会发生各种问题。当遇到问题时，我们不想让数据包“死得不明不白”。为了知道产生问题的原因，我们需要构造一种新的数据包来传回消息。
+ 其实，上面提到这种情况和我们在电视上看到的古代作战很像，在开始作战之前，主帅都要派出“侦察兵”来检查敌方的兵力状况，以调整作战策略。
+ 3、ICMP的报文 ICMP它是一个3层网络协议，工作在网络层。由于数据包的传输是需要源地址和目的地址，所以被封装在IP中。它的数据包结构非常简单，因为一个“侦察兵”要“轻装上阵”，不能携带太多的包袱。
+3.1、报文结构  目前类型字段有8位，可以有256种类型，但是我们实际常用的只有3种，分别是0,3,8,具体会在下面提到
+ 3.2、报文分类  分为两类：查询和差错报文
+ 3.2.1、查询报文 分为两类：回显请求和回显应答报文。
+ 在这里代码字段，我们只用到了0，还有255个代码没有用，具体会在下面讲到
+ 3.2.1.1、 回显请求 类型字段为8，代码字段为0
+3.2.1.2、 回显应答 类型字段为0，代码字段为0
+3.2.1.3、 Ping应用 ping发的包就符合ICMP协议的格式，只不过它在自己的数据字段增加了自己的格式。比原生的ICMP多了两个字段，一个是标识符，用来标识ping发出去的“侦察兵”的具体的任务是什么，比如“查找水源”；另一个是序号，用来给每个侦察兵编号，比如，“1号查找水源的侦察兵”。在数据字段中，ping还会存放发生请求的时间，用来计算往返的时间。
+下图的ping的过程示意图 3.2.2、 差错报文 分为4种：终点不可达，源站抑制，时间超时和路由重定向
+3.2.2.1、 终点不可达 网络不可达(代码0)，主机不可达(代码1)，协议不可达(代码2)，端口不可达(代码3)，需要进行分片但设置了不分片位代码(代码4)
+3.2.2.2、 源站抑制 就是让源站放慢发送速度。小兵:报告主公，您粮草送的太多了吃不完。
+3.2.2.3、 时间超时 就是超过网络包的生存时间还是没到。小兵:报告主公，送粮草的人，自己把粮草吃完了，还没找到地方，已经饿死啦。
+3.2.2.4、 路由重定向 就是让下次发给另一个路由器。小兵:报告主公，上次送粮草的人本来只要走一站地铁，非得从五环绕，下次别这样了啊。
+差错报文的结构相对复杂一些。除了前面还是 IP，ICMP 的前 8 字节不变，后面则跟上出错的那个 IP 包 的IP 头和IP 正文的前 8 个字节。
+ 而且这类侦查兵特别恪尽职守，不但自己返回来报信，还把一部分遗物也带回来。
+* 侦察兵:报告主公，张将军已经战死沙场，这是张将军的印信和佩剑。</description>
+    </item>
+    
+    <item>
+      <title>http缓存详解</title>
+      <link>https://mannuan.github.io/post/20190706141207/</link>
+      <pubDate>Sat, 06 Jul 2019 14:12:07 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190706141207/</guid>
+      <description>前言 http缓存主要针对如css,js,图片等更新频率不大的静态文件。
+http缓存字段的描述 根据请求和响应分为：
+Request Headers（浏览器端） if-modified-since
+请求头，缓存最新修改的时间，浏览器询问服务器，服务器会将它与last-modified进行比对
+if-none-match
+请求头，缓存标识，浏览器询问服务器询，服务器会将它与etag进行比对
+Response Headers（服务器端） cache-control
+控制http缓存的最高指令
+常用值有:
+1. no-store: 所有内容都不缓存
+2. noc-cache: 缓存，但是浏览器使用缓存前，都会请求服务器判断缓存是否是最新，过期的缓存就不使用
+3. max-age=x(单位秒)在缓存后的x秒内不发请求，是http1.1的属性，类似于expires，但优先级高于expires
+4. s-maxage=x(单位秒)代理服务器请求源站在缓存后的x秒内不发请求，只对CDN有效
+5. public 客户端和代理服务器（CDN）都可缓存
+6. private 只有客户端可以缓存
+last-modified
+响应头，缓存最新修改的时间，服务器返回给浏览器，优先级小于etag
+etag
+响应头，缓存标识，服务器返回给浏览器，优先级高于last-modified
+expires
+响应头，代表缓存过期时间，服务器返回，是http1.0的属性，优先级小于max-age
+使用http缓存的原因  客户端每次都要请求服务器，浪费流量;
+ 服务器每次都得提供查找，下载，请求用户基础如果较大，服务器存在较大压力;
+ 客户端每次请求完都要进行页面渲染，用户体验较差。
+  http缓存字段的关系 服务器和浏览器的对话  我将从服务器和浏览器的日常对话来阐述各个字段的起因和来由。
+为了简化，服务器称为S，浏览器称为C
+第一次对话(expires的由来)
+ C: S，S，我要一个a.css文件，快发给我!!! S: 烦死了，给你，在expires时间前别来烦我!!!  第二次对话(last-modified和if-modified-since的由来)
+C: S, S, 我的a.css文件到期了，你快给我发一个新的!!! S: 新的a.css? 它有修改过吗？ 你之前用的就是最新的吧? ... 呃😓我也不知道了，要不我们都记录一下时间吧？ 我用last-modified记录a.</description>
+    </item>
     
     <item>
       <title>一个基于selenium的快速编写爬虫脚本的爬虫框架-beryllium</title>
@@ -455,7 +520,7 @@ sudo chown -R $USER /usr/local/lib/node_modules</description>
 1.4 text/plain：数据以纯文本形式(text/json/xml/html)进行编码，其中不含任何控件或格式字符。
 2、application/json 和 application/x-www-form-urlencoded的区别
 2.1 application/json：作用： 告诉服务器请求的主题内容是json格式的字符串，服务器端会对json字符串进行解析，好处： 前端人员不需要关心数据结构的复杂度，只要是标准的json格式就能提交成功。
-2.2 application/x-www-form- urlencoded：是Jquery的Ajax请求默认方式作用：在请求发送过程中会对数据进行序列化处理，以键值对形式？key1=value1&amp;amp;key2=value2的方式发送到服务器，好处： 所有浏览器都支持
+2.2 application/x-www-form-urlencoded：是Jquery的Ajax请求默认方式作用：在请求发送过程中会对数据进行序列化处理，以键值对形式？key1=value1&amp;amp;key2=value2的方式发送到服务器，好处：所有浏览器都支持
 3、 application/x-www-form-urlencoded：信息数据被编码为名称/值对，这是标准且默认的编码格式
 3.1 当action为get时候，客户端把form数据转换成一个字串append到url后面，用&amp;rsquo;?&amp;lsquo;分割。
 3.2 当action为post时候，浏览器把form数据封装到http body中，然后发送到server。（可以取消post请求的预检请求）

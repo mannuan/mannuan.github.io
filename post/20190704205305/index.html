@@ -4,14 +4,14 @@
 <meta name='viewport' content='width=device-width, initial-scale=1'>
 <meta name='description' content='concat() 合并数组，返回合并后的数组 var a = [1, 2, 3]; var b = [2, 3, 4]; var c = a.concat(b); console.log(a); //[1,2,3] console.log(b); //[2,3,4] console.log(c); //[1, 2, 3, 2, 3, 4]  join() 把数组连接成为字符串，并用指定分隔符隔开 var a = [1, 2, 3]; console.log(a.join(&#34;/&#34;)); // 1/2/3   和python的语法不同，方向刚好是相反的，而且python要求合并的必须是字符串类型
  # -*- coding: utf-8 -*- a = [1, 2, 3] a = [str(i) for i in a] print(&#34;/&#34;.join(a)) pop() 取出并返回栈顶元素 var a = [1, 2, 3]; console.'>
-<meta name='theme-color' content='#ffffff'>
+<meta name='theme-color' content='#FFC000'>
 
 <meta property='og:title' content='js数组类型的常用方法 • mannuan'>
 <meta property='og:description' content='concat() 合并数组，返回合并后的数组 var a = [1, 2, 3]; var b = [2, 3, 4]; var c = a.concat(b); console.log(a); //[1,2,3] console.log(b); //[2,3,4] console.log(c); //[1, 2, 3, 2, 3, 4]  join() 把数组连接成为字符串，并用指定分隔符隔开 var a = [1, 2, 3]; console.log(a.join(&#34;/&#34;)); // 1/2/3   和python的语法不同，方向刚好是相反的，而且python要求合并的必须是字符串类型
  # -*- coding: utf-8 -*- a = [1, 2, 3] a = [str(i) for i in a] print(&#34;/&#34;.join(a)) pop() 取出并返回栈顶元素 var a = [1, 2, 3]; console.'>
 <meta property='og:url' content='https://mannuan.github.io/post/20190704205305/'>
 <meta property='og:site_name' content='mannuan'>
-<meta property='og:type' content='article'><meta property='og:image' content='https://www.gravatar.com/avatar/8bacfd69855171c6f53247456732f68a?s=256'><meta property='article:section' content='post'><meta property='article:tag' content='javascript'><meta property='article:tag' content='数组'><meta property='article:tag' content='concat'><meta property='article:tag' content='join'><meta property='article:tag' content='pop'><meta property='article:tag' content='push'><meta property='article:tag' content='reverse'><meta property='article:tag' content='shift'><meta property='article:tag' content='slice'><meta property='article:tag' content='splice'><meta property='article:tag' content='sort'><meta property='article:tag' content='toString'><meta property='article:tag' content='toLocaleString'><meta property='article:tag' content='unshift'><meta property='article:tag' content='valueof'><meta property='article:published_time' content='2019-07-04T20:53:05&#43;08:00'/><meta property='article:modified_time' content='2019-07-04T20:53:05&#43;08:00'/><meta name='twitter:card' content='summary'>
+<meta property='og:type' content='article'><meta property='og:image' content='https://www.gravatar.com/avatar/8bacfd69855171c6f53247456732f68a?s=256'><meta property='article:section' content='post'><meta property='article:tag' content='javascript'><meta property='article:tag' content='数组'><meta property='article:tag' content='concat'><meta property='article:tag' content='join'><meta property='article:tag' content='pop'><meta property='article:tag' content='push'><meta property='article:tag' content='reverse'><meta property='article:tag' content='shift'><meta property='article:tag' content='slice'><meta property='article:tag' content='splice'><meta property='article:tag' content='sort'><meta property='article:tag' content='toString'><meta property='article:tag' content='toLocaleString'><meta property='article:tag' content='unshift'><meta property='article:tag' content='valueof'><meta property='article:tag' content='indexOf'><meta property='article:published_time' content='2019-07-04T20:53:05&#43;08:00'/><meta property='article:modified_time' content='2019-07-04T20:53:05&#43;08:00'/><meta name='twitter:card' content='summary'>
 
 <meta name="generator" content="Hugo 0.55.6" />
 
@@ -21,7 +21,7 @@
   
   <link rel='icon' href='/favicon.ico'>
 <link rel='stylesheet' href='/assets/css/main.6a060eb7.css'><link rel='stylesheet' href='/css/custom.css'><style>
-:root{--color-accent:#ffffff;}
+:root{--color-accent:#FFC000;}
 </style>
 
   
@@ -114,6 +114,8 @@
       </li><li>
         <a href='/tags/brew/' style='font-size:1em'>brew</a>
       </li><li>
+        <a href='/tags/cache-control/' style='font-size:1em'>cache-control</a>
+      </li><li>
         <a href='/tags/chroma/' style='font-size:1em'>chroma</a>
       </li><li>
         <a href='/tags/chrome/' style='font-size:1em'>Chrome</a>
@@ -158,6 +160,10 @@
       </li><li>
         <a href='/tags/dpkg-error/' style='font-size:1em'>dpkg error</a>
       </li><li>
+        <a href='/tags/etag/' style='font-size:1em'>etag</a>
+      </li><li>
+        <a href='/tags/expires/' style='font-size:1em'>expires</a>
+      </li><li>
         <a href='/tags/f1/' style='font-size:1em'>F1</a>
       </li><li>
         <a href='/tags/frps/' style='font-size:1em'>frps</a>
@@ -174,11 +180,23 @@
       </li><li>
         <a href='/tags/https/' style='font-size:1.0212765957446808em'>https</a>
       </li><li>
+        <a href='/tags/http%E7%BC%93%E5%AD%98/' style='font-size:1em'>http缓存</a>
+      </li><li>
         <a href='/tags/hugo/' style='font-size:1em'>Hugo</a>
       </li><li>
         <a href='/tags/i18n/' style='font-size:1em'>i18n</a>
       </li><li>
+        <a href='/tags/icmp/' style='font-size:1em'>ICMP</a>
+      </li><li>
+        <a href='/tags/if-modified-since/' style='font-size:1em'>if-modified-since</a>
+      </li><li>
+        <a href='/tags/if-none-match/' style='font-size:1em'>if-none-match</a>
+      </li><li>
         <a href='/tags/import-error/' style='font-size:1em'>import error</a>
+      </li><li>
+        <a href='/tags/indexof/' style='font-size:1em'>indexOf</a>
+      </li><li>
+        <a href='/tags/ip/' style='font-size:1em'>ip</a>
       </li><li>
         <a href='/tags/iterm2/' style='font-size:1.0425531914893618em'>iterm2</a>
       </li><li>
@@ -197,6 +215,8 @@
         <a href='/tags/katex/' style='font-size:1em'>katex</a>
       </li><li>
         <a href='/tags/koa/' style='font-size:1em'>koa</a>
+      </li><li>
+        <a href='/tags/last-modified/' style='font-size:1em'>last-modified</a>
       </li><li>
         <a href='/tags/linux/' style='font-size:1.127659574468085em'>linux</a>
       </li><li>
@@ -233,6 +253,8 @@
         <a href='/tags/pdf/' style='font-size:1em'>pdf</a>
       </li><li>
         <a href='/tags/pdf%E5%8E%8B%E7%BC%A9/' style='font-size:1em'>pdf压缩</a>
+      </li><li>
+        <a href='/tags/ping/' style='font-size:1em'>ping</a>
       </li><li>
         <a href='/tags/pip/' style='font-size:1.0212765957446808em'>pip</a>
       </li><li>
@@ -306,6 +328,8 @@
       </li><li>
         <a href='/tags/tostring/' style='font-size:1.0212765957446808em'>toString</a>
       </li><li>
+        <a href='/tags/traceroute/' style='font-size:1em'>traceroute</a>
+      </li><li>
         <a href='/tags/trackpad/' style='font-size:1em'>Trackpad</a>
       </li><li>
         <a href='/tags/translation/' style='font-size:1em'>translation</a>
@@ -326,13 +350,13 @@
       </li><li>
         <a href='/tags/val/' style='font-size:1em'>val</a>
       </li><li>
-        <a href='/tags/valueof/' style='font-size:1.0212765957446808em'>valueof</a>
+        <a href='/tags/valueof/' style='font-size:1.0212765957446808em'>valueOf</a>
       </li><li>
         <a href='/tags/vlan/' style='font-size:1.0212765957446808em'>VLAN</a>
       </li><li>
         <a href='/tags/vscode/' style='font-size:1.0212765957446808em'>vscode</a>
       </li><li>
-        <a href='/tags/vue/' style='font-size:1.0425531914893618em'>vue</a>
+        <a href='/tags/vue/' style='font-size:1.0212765957446808em'>vue</a>
       </li><li>
         <a href='/tags/webpack/' style='font-size:1em'>webpack</a>
       </li><li>
@@ -627,6 +651,7 @@
 <li><a href="#tosource-返回对象的源代码"><del>toSource() 返回对象的源代码</del></a></li>
 <li><a href="#tostring-将数组转化为字符串-返回字符串">toString() 将数组转化为字符串，返回字符串</a></li>
 <li><a href="#tolocalestring-将数组转化为本地字符串-返回字符串">toLocaleString() 将数组转化为本地字符串，返回字符串</a></li>
+<li><a href="#indexof-输入元素-有则返回元素下标-没有则返回-1">indexOf() 输入元素，有则返回元素下标，没有则返回-1</a></li>
 </ul>
 </nav>
 </details>
@@ -729,6 +754,11 @@ a <span style="color:#f92672">=</span> [str(i) <span style="color:#66d9ef">for</
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>];
 <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">a</span>.<span style="color:#a6e22e">toLocaleString</span>());
 </code></pre></div>
+<h1 id="indexof-输入元素-有则返回元素下标-没有则返回-1">indexOf() 输入元素，有则返回元素下标，没有则返回-1</h1>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">a</span> <span style="color:#f92672">=</span> [<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>];
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">a</span>.<span style="color:#a6e22e">indexOf</span>(<span style="color:#ae81ff">3</span>)); <span style="color:#75715e">// 2
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">a</span>.<span style="color:#a6e22e">indexOf</span>(<span style="color:#ae81ff">4</span>)); <span style="color:#75715e">// -1
+</span></code></pre></div>
 </div>
 
   
@@ -745,7 +775,7 @@ a <span style="color:#f92672">=</span> [str(i) <span style="color:#66d9ef">for</
   <line x1="7" y1="7" x2="7" y2="7"/>
   
 </svg>
-<span class='screen-reader-text'>Tags: </span><a class='tag' href='/tags/javascript/'>javascript</a>, <a class='tag' href='/tags/%E6%95%B0%E7%BB%84/'>数组</a>, <a class='tag' href='/tags/concat/'>concat</a>, <a class='tag' href='/tags/join/'>join</a>, <a class='tag' href='/tags/pop/'>pop</a>, <a class='tag' href='/tags/push/'>push</a>, <a class='tag' href='/tags/reverse/'>reverse</a>, <a class='tag' href='/tags/shift/'>shift</a>, <a class='tag' href='/tags/slice/'>slice</a>, <a class='tag' href='/tags/splice/'>splice</a>, <a class='tag' href='/tags/sort/'>sort</a>, <a class='tag' href='/tags/tostring/'>toString</a>, <a class='tag' href='/tags/tolocalestring/'>toLocaleString</a>, <a class='tag' href='/tags/unshift/'>unshift</a>, <a class='tag' href='/tags/valueof/'>valueof</a></div>
+<span class='screen-reader-text'>Tags: </span><a class='tag' href='/tags/javascript/'>javascript</a>, <a class='tag' href='/tags/%E6%95%B0%E7%BB%84/'>数组</a>, <a class='tag' href='/tags/concat/'>concat</a>, <a class='tag' href='/tags/join/'>join</a>, <a class='tag' href='/tags/pop/'>pop</a>, <a class='tag' href='/tags/push/'>push</a>, <a class='tag' href='/tags/reverse/'>reverse</a>, <a class='tag' href='/tags/shift/'>shift</a>, <a class='tag' href='/tags/slice/'>slice</a>, <a class='tag' href='/tags/splice/'>splice</a>, <a class='tag' href='/tags/sort/'>sort</a>, <a class='tag' href='/tags/tostring/'>toString</a>, <a class='tag' href='/tags/tolocalestring/'>toLocaleString</a>, <a class='tag' href='/tags/unshift/'>unshift</a>, <a class='tag' href='/tags/valueof/'>valueOf</a>, <a class='tag' href='/tags/indexof/'>indexOf</a></div>
 
   </div>
 </footer>

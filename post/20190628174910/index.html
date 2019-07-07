@@ -4,7 +4,7 @@
 <meta name='viewport' content='width=device-width, initial-scale=1'>
 <meta name='description' content='前言  由于使用Ajax必须要有一个服务端来接收消息，为了方便我使用Nodejs来搭建服务端。同时，为了兼顾实践跨域的方法，我在这里搭建了两个服务端。其中，一个服务端用来响应Ajax请求，另外一个服务端用作加载页面。这样就产生了跨域的问题，我采用的是cors的解决方案，具体的实现，请看sever1的代码。
  前期准备工作  安装nodejs，可以参看我的这篇教程 选择koa2作为服务端 安装模块：koa，koa-router，koa2-cors，koa-bodyparser，koa-art-template，path  服务端交互示意图 文件路径示意图 server1.js var Koa = require(&#39;koa&#39;); var Router = require(&#39;koa-router&#39;); var cors = require(&#39;koa2-cors&#39;); var bodyParser = require(&#39;koa-bodyparser&#39;); var app = new Koa(); var router = new Router(); //下面的代码必须写在设置路由的前面 app.use(cors({ origin: function (ctx) { return &#39;http://127.0.0.1:4000&#39;; }, exposeHeaders: [&#39;WWW-Authenticate&#39;, &#39;Server-Authorization&#39;], maxAge: 5, credentials: true, allowMethods: [&#39;GET&#39;, &#39;POST&#39;, &#39;DELETE&#39;], allowHeaders: [&#39;Content-Type&#39;, &#39;Authorization&#39;, &#39;Accept&#39;], })); //配置post提交数据的中间件 app.use(bodyParser()); //处理get请求 router.get(&#39;/get&#39;, async function(ctx){ ctx.'>
-<meta name='theme-color' content='#ffffff'>
+<meta name='theme-color' content='#FFC000'>
 
 <meta property='og:title' content='测试Ajax的Nodejs服务端代码 • mannuan'>
 <meta property='og:description' content='前言  由于使用Ajax必须要有一个服务端来接收消息，为了方便我使用Nodejs来搭建服务端。同时，为了兼顾实践跨域的方法，我在这里搭建了两个服务端。其中，一个服务端用来响应Ajax请求，另外一个服务端用作加载页面。这样就产生了跨域的问题，我采用的是cors的解决方案，具体的实现，请看sever1的代码。
@@ -21,7 +21,7 @@
   
   <link rel='icon' href='/favicon.ico'>
 <link rel='stylesheet' href='/assets/css/main.6a060eb7.css'><link rel='stylesheet' href='/css/custom.css'><style>
-:root{--color-accent:#ffffff;}
+:root{--color-accent:#FFC000;}
 </style>
 
   
@@ -114,6 +114,8 @@
       </li><li>
         <a href='/tags/brew/' style='font-size:1em'>brew</a>
       </li><li>
+        <a href='/tags/cache-control/' style='font-size:1em'>cache-control</a>
+      </li><li>
         <a href='/tags/chroma/' style='font-size:1em'>chroma</a>
       </li><li>
         <a href='/tags/chrome/' style='font-size:1em'>Chrome</a>
@@ -158,6 +160,10 @@
       </li><li>
         <a href='/tags/dpkg-error/' style='font-size:1em'>dpkg error</a>
       </li><li>
+        <a href='/tags/etag/' style='font-size:1em'>etag</a>
+      </li><li>
+        <a href='/tags/expires/' style='font-size:1em'>expires</a>
+      </li><li>
         <a href='/tags/f1/' style='font-size:1em'>F1</a>
       </li><li>
         <a href='/tags/frps/' style='font-size:1em'>frps</a>
@@ -174,11 +180,23 @@
       </li><li>
         <a href='/tags/https/' style='font-size:1.0212765957446808em'>https</a>
       </li><li>
+        <a href='/tags/http%E7%BC%93%E5%AD%98/' style='font-size:1em'>http缓存</a>
+      </li><li>
         <a href='/tags/hugo/' style='font-size:1em'>Hugo</a>
       </li><li>
         <a href='/tags/i18n/' style='font-size:1em'>i18n</a>
       </li><li>
+        <a href='/tags/icmp/' style='font-size:1em'>ICMP</a>
+      </li><li>
+        <a href='/tags/if-modified-since/' style='font-size:1em'>if-modified-since</a>
+      </li><li>
+        <a href='/tags/if-none-match/' style='font-size:1em'>if-none-match</a>
+      </li><li>
         <a href='/tags/import-error/' style='font-size:1em'>import error</a>
+      </li><li>
+        <a href='/tags/indexof/' style='font-size:1em'>indexOf</a>
+      </li><li>
+        <a href='/tags/ip/' style='font-size:1em'>ip</a>
       </li><li>
         <a href='/tags/iterm2/' style='font-size:1.0425531914893618em'>iterm2</a>
       </li><li>
@@ -197,6 +215,8 @@
         <a href='/tags/katex/' style='font-size:1em'>katex</a>
       </li><li>
         <a href='/tags/koa/' style='font-size:1em'>koa</a>
+      </li><li>
+        <a href='/tags/last-modified/' style='font-size:1em'>last-modified</a>
       </li><li>
         <a href='/tags/linux/' style='font-size:1.127659574468085em'>linux</a>
       </li><li>
@@ -233,6 +253,8 @@
         <a href='/tags/pdf/' style='font-size:1em'>pdf</a>
       </li><li>
         <a href='/tags/pdf%E5%8E%8B%E7%BC%A9/' style='font-size:1em'>pdf压缩</a>
+      </li><li>
+        <a href='/tags/ping/' style='font-size:1em'>ping</a>
       </li><li>
         <a href='/tags/pip/' style='font-size:1.0212765957446808em'>pip</a>
       </li><li>
@@ -306,6 +328,8 @@
       </li><li>
         <a href='/tags/tostring/' style='font-size:1.0212765957446808em'>toString</a>
       </li><li>
+        <a href='/tags/traceroute/' style='font-size:1em'>traceroute</a>
+      </li><li>
         <a href='/tags/trackpad/' style='font-size:1em'>Trackpad</a>
       </li><li>
         <a href='/tags/translation/' style='font-size:1em'>translation</a>
@@ -326,13 +350,13 @@
       </li><li>
         <a href='/tags/val/' style='font-size:1em'>val</a>
       </li><li>
-        <a href='/tags/valueof/' style='font-size:1.0212765957446808em'>valueof</a>
+        <a href='/tags/valueof/' style='font-size:1.0212765957446808em'>valueOf</a>
       </li><li>
         <a href='/tags/vlan/' style='font-size:1.0212765957446808em'>VLAN</a>
       </li><li>
         <a href='/tags/vscode/' style='font-size:1.0212765957446808em'>vscode</a>
       </li><li>
-        <a href='/tags/vue/' style='font-size:1.0425531914893618em'>vue</a>
+        <a href='/tags/vue/' style='font-size:1.0212765957446808em'>vue</a>
       </li><li>
         <a href='/tags/webpack/' style='font-size:1em'>webpack</a>
       </li><li>

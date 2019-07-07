@@ -14,23 +14,23 @@
     max-width: 12rem;
     max-height: 12rem;
     border-radius: 100%;
-    border: .5rem solid #fff;
+    /* border: .1rem solid #ff0000; */
 }
 
 /* 设置主题 */
-#sidebar {
+/* #sidebar {
     background: #d35050;
 }
 
 .sidebar .widget-about .title.site-title a {
     color: #ffffff;
-}
+} */
 
 /* #sidebar-menu > div > ul > li.item.has-children > button {
     background: #d35050;
 } */
 
-.title, h1, h2, h3, h4, h5, h6, a {
+/* .title, h1, h2, h3, h4, h5, h6, a {
     color: #ffffff;
 }
 
@@ -39,7 +39,7 @@ body {
     font-family: sans-serif;
     background: #212121;
     color: #a2a2a2;
-}
+} */
 
 /* 设置界面大小 */
 /* #sidebar {
@@ -49,3 +49,22 @@ body {
 .has-sidebar .main {
     margin-left: 345px;
 } */
+
+/* 设置字体高亮 */
+.burk {
+    background-color: red;
+    color: yellow;
+    display: inline-block;
+}
+
+.mark {
+    background-color: yellow;
+    color: red;
+    display: inline-block;
+}
+
+.girk {
+    background-color: lime;
+    color: red;
+    display: inline-block;
+}

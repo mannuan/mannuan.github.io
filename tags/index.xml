@@ -5,10 +5,109 @@
     <link>https://mannuan.github.io/tags/</link>
     <description>Recent content in Tags on mannuan</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 05 Jul 2019 21:22:59 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 07 Jul 2019 15:31:02 +0800</lastBuildDate>
     
 	<atom:link href="https://mannuan.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>ICMP</title>
+      <link>https://mannuan.github.io/tags/icmp/</link>
+      <pubDate>Sun, 07 Jul 2019 15:31:02 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/tags/icmp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ip</title>
+      <link>https://mannuan.github.io/tags/ip/</link>
+      <pubDate>Sun, 07 Jul 2019 15:31:02 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/tags/ip/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ping</title>
+      <link>https://mannuan.github.io/tags/ping/</link>
+      <pubDate>Sun, 07 Jul 2019 15:31:02 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/tags/ping/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>traceroute</title>
+      <link>https://mannuan.github.io/tags/traceroute/</link>
+      <pubDate>Sun, 07 Jul 2019 15:31:02 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/tags/traceroute/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cache-control</title>
+      <link>https://mannuan.github.io/tags/cache-control/</link>
+      <pubDate>Sat, 06 Jul 2019 14:12:07 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/tags/cache-control/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>etag</title>
+      <link>https://mannuan.github.io/tags/etag/</link>
+      <pubDate>Sat, 06 Jul 2019 14:12:07 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/tags/etag/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>expires</title>
+      <link>https://mannuan.github.io/tags/expires/</link>
+      <pubDate>Sat, 06 Jul 2019 14:12:07 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/tags/expires/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>http缓存</title>
+      <link>https://mannuan.github.io/tags/http%E7%BC%93%E5%AD%98/</link>
+      <pubDate>Sat, 06 Jul 2019 14:12:07 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/tags/http%E7%BC%93%E5%AD%98/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>if-modified-since</title>
+      <link>https://mannuan.github.io/tags/if-modified-since/</link>
+      <pubDate>Sat, 06 Jul 2019 14:12:07 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/tags/if-modified-since/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>if-none-match</title>
+      <link>https://mannuan.github.io/tags/if-none-match/</link>
+      <pubDate>Sat, 06 Jul 2019 14:12:07 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/tags/if-none-match/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>last-modified</title>
+      <link>https://mannuan.github.io/tags/last-modified/</link>
+      <pubDate>Sat, 06 Jul 2019 14:12:07 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/tags/last-modified/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>beryllium</title>
@@ -191,7 +290,7 @@
     </item>
     
     <item>
-      <title>valueof</title>
+      <title>valueOf</title>
       <link>https://mannuan.github.io/tags/valueof/</link>
       <pubDate>Thu, 04 Jul 2019 21:54:03 +0800</pubDate>
       
@@ -205,6 +304,15 @@
       <pubDate>Thu, 04 Jul 2019 20:53:05 +0800</pubDate>
       
       <guid>https://mannuan.github.io/tags/concat/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>indexOf</title>
+      <link>https://mannuan.github.io/tags/indexof/</link>
+      <pubDate>Thu, 04 Jul 2019 20:53:05 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/tags/indexof/</guid>
       <description></description>
     </item>
     

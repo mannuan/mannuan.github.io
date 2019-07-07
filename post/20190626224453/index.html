@@ -9,12 +9,12 @@
 1.4 text/plain：数据以纯文本形式(text/json/xml/html)进行编码，其中不含任何控件或格式字符。
 2、application/json 和 application/x-www-form-urlencoded的区别
 2.1 application/json：作用： 告诉服务器请求的主题内容是json格式的字符串，服务器端会对json字符串进行解析，好处： 前端人员不需要关心数据结构的复杂度，只要是标准的json格式就能提交成功。
-2.2 application/x-www-form- urlencoded：是Jquery的Ajax请求默认方式作用：在请求发送过程中会对数据进行序列化处理，以键值对形式？key1=value1&amp;key2=value2的方式发送到服务器，好处： 所有浏览器都支持
+2.2 application/x-www-form-urlencoded：是Jquery的Ajax请求默认方式作用：在请求发送过程中会对数据进行序列化处理，以键值对形式？key1=value1&amp;key2=value2的方式发送到服务器，好处：所有浏览器都支持
 3、 application/x-www-form-urlencoded：信息数据被编码为名称/值对，这是标准且默认的编码格式
 3.1 当action为get时候，客户端把form数据转换成一个字串append到url后面，用&rsquo;?&lsquo;分割。
 3.2 当action为post时候，浏览器把form数据封装到http body中，然后发送到server。（可以取消post请求的预检请求）
 Vue中 content-type 设置'>
-<meta name='theme-color' content='#ffffff'>
+<meta name='theme-color' content='#FFC000'>
 
 <meta property='og:title' content='关于Content-Type几种值的区别及用法 • mannuan'>
 <meta property='og:description' content='1、Content-Type 的值类型：
@@ -24,14 +24,14 @@ Vue中 content-type 设置'>
 1.4 text/plain：数据以纯文本形式(text/json/xml/html)进行编码，其中不含任何控件或格式字符。
 2、application/json 和 application/x-www-form-urlencoded的区别
 2.1 application/json：作用： 告诉服务器请求的主题内容是json格式的字符串，服务器端会对json字符串进行解析，好处： 前端人员不需要关心数据结构的复杂度，只要是标准的json格式就能提交成功。
-2.2 application/x-www-form- urlencoded：是Jquery的Ajax请求默认方式作用：在请求发送过程中会对数据进行序列化处理，以键值对形式？key1=value1&amp;key2=value2的方式发送到服务器，好处： 所有浏览器都支持
+2.2 application/x-www-form-urlencoded：是Jquery的Ajax请求默认方式作用：在请求发送过程中会对数据进行序列化处理，以键值对形式？key1=value1&amp;key2=value2的方式发送到服务器，好处：所有浏览器都支持
 3、 application/x-www-form-urlencoded：信息数据被编码为名称/值对，这是标准且默认的编码格式
 3.1 当action为get时候，客户端把form数据转换成一个字串append到url后面，用&rsquo;?&lsquo;分割。
 3.2 当action为post时候，浏览器把form数据封装到http body中，然后发送到server。（可以取消post请求的预检请求）
 Vue中 content-type 设置'>
 <meta property='og:url' content='https://mannuan.github.io/post/20190626224453/'>
 <meta property='og:site_name' content='mannuan'>
-<meta property='og:type' content='article'><meta property='og:image' content='https://www.gravatar.com/avatar/8bacfd69855171c6f53247456732f68a?s=256'><meta property='article:section' content='post'><meta property='article:tag' content='ajax'><meta property='article:tag' content='content-type'><meta property='article:tag' content='vue'><meta property='article:published_time' content='2019-06-26T22:44:53&#43;08:00'/><meta property='article:modified_time' content='2019-06-26T22:44:53&#43;08:00'/><meta name='twitter:card' content='summary'>
+<meta property='og:type' content='article'><meta property='og:image' content='https://www.gravatar.com/avatar/8bacfd69855171c6f53247456732f68a?s=256'><meta property='article:section' content='post'><meta property='article:tag' content='ajax'><meta property='article:tag' content='content-type'><meta property='article:published_time' content='2019-06-26T22:44:53&#43;08:00'/><meta property='article:modified_time' content='2019-06-26T22:44:53&#43;08:00'/><meta name='twitter:card' content='summary'>
 
 <meta name="generator" content="Hugo 0.55.6" />
 
@@ -41,7 +41,7 @@ Vue中 content-type 设置'>
   
   <link rel='icon' href='/favicon.ico'>
 <link rel='stylesheet' href='/assets/css/main.6a060eb7.css'><link rel='stylesheet' href='/css/custom.css'><style>
-:root{--color-accent:#ffffff;}
+:root{--color-accent:#FFC000;}
 </style>
 
   
@@ -134,6 +134,8 @@ Vue中 content-type 设置'>
       </li><li>
         <a href='/tags/brew/' style='font-size:1em'>brew</a>
       </li><li>
+        <a href='/tags/cache-control/' style='font-size:1em'>cache-control</a>
+      </li><li>
         <a href='/tags/chroma/' style='font-size:1em'>chroma</a>
       </li><li>
         <a href='/tags/chrome/' style='font-size:1em'>Chrome</a>
@@ -178,6 +180,10 @@ Vue中 content-type 设置'>
       </li><li>
         <a href='/tags/dpkg-error/' style='font-size:1em'>dpkg error</a>
       </li><li>
+        <a href='/tags/etag/' style='font-size:1em'>etag</a>
+      </li><li>
+        <a href='/tags/expires/' style='font-size:1em'>expires</a>
+      </li><li>
         <a href='/tags/f1/' style='font-size:1em'>F1</a>
       </li><li>
         <a href='/tags/frps/' style='font-size:1em'>frps</a>
@@ -194,11 +200,23 @@ Vue中 content-type 设置'>
       </li><li>
         <a href='/tags/https/' style='font-size:1.0212765957446808em'>https</a>
       </li><li>
+        <a href='/tags/http%E7%BC%93%E5%AD%98/' style='font-size:1em'>http缓存</a>
+      </li><li>
         <a href='/tags/hugo/' style='font-size:1em'>Hugo</a>
       </li><li>
         <a href='/tags/i18n/' style='font-size:1em'>i18n</a>
       </li><li>
+        <a href='/tags/icmp/' style='font-size:1em'>ICMP</a>
+      </li><li>
+        <a href='/tags/if-modified-since/' style='font-size:1em'>if-modified-since</a>
+      </li><li>
+        <a href='/tags/if-none-match/' style='font-size:1em'>if-none-match</a>
+      </li><li>
         <a href='/tags/import-error/' style='font-size:1em'>import error</a>
+      </li><li>
+        <a href='/tags/indexof/' style='font-size:1em'>indexOf</a>
+      </li><li>
+        <a href='/tags/ip/' style='font-size:1em'>ip</a>
       </li><li>
         <a href='/tags/iterm2/' style='font-size:1.0425531914893618em'>iterm2</a>
       </li><li>
@@ -217,6 +235,8 @@ Vue中 content-type 设置'>
         <a href='/tags/katex/' style='font-size:1em'>katex</a>
       </li><li>
         <a href='/tags/koa/' style='font-size:1em'>koa</a>
+      </li><li>
+        <a href='/tags/last-modified/' style='font-size:1em'>last-modified</a>
       </li><li>
         <a href='/tags/linux/' style='font-size:1.127659574468085em'>linux</a>
       </li><li>
@@ -253,6 +273,8 @@ Vue中 content-type 设置'>
         <a href='/tags/pdf/' style='font-size:1em'>pdf</a>
       </li><li>
         <a href='/tags/pdf%E5%8E%8B%E7%BC%A9/' style='font-size:1em'>pdf压缩</a>
+      </li><li>
+        <a href='/tags/ping/' style='font-size:1em'>ping</a>
       </li><li>
         <a href='/tags/pip/' style='font-size:1.0212765957446808em'>pip</a>
       </li><li>
@@ -326,6 +348,8 @@ Vue中 content-type 设置'>
       </li><li>
         <a href='/tags/tostring/' style='font-size:1.0212765957446808em'>toString</a>
       </li><li>
+        <a href='/tags/traceroute/' style='font-size:1em'>traceroute</a>
+      </li><li>
         <a href='/tags/trackpad/' style='font-size:1em'>Trackpad</a>
       </li><li>
         <a href='/tags/translation/' style='font-size:1em'>translation</a>
@@ -346,13 +370,13 @@ Vue中 content-type 设置'>
       </li><li>
         <a href='/tags/val/' style='font-size:1em'>val</a>
       </li><li>
-        <a href='/tags/valueof/' style='font-size:1.0212765957446808em'>valueof</a>
+        <a href='/tags/valueof/' style='font-size:1.0212765957446808em'>valueOf</a>
       </li><li>
         <a href='/tags/vlan/' style='font-size:1.0212765957446808em'>VLAN</a>
       </li><li>
         <a href='/tags/vscode/' style='font-size:1.0212765957446808em'>vscode</a>
       </li><li>
-        <a href='/tags/vue/' style='font-size:1.0425531914893618em'>vue</a>
+        <a href='/tags/vue/' style='font-size:1.0212765957446808em'>vue</a>
       </li><li>
         <a href='/tags/webpack/' style='font-size:1em'>webpack</a>
       </li><li>
@@ -644,9 +668,7 @@ One min read
 <p>2.1 application/json：作用： 告诉服务器请求的主题内容是json格式的字符串，服务器端会对json字符串进行解析，好处：
 前端人员不需要关心数据结构的复杂度，只要是标准的json格式就能提交成功。</p>
 
-<p>2.2 application/x-www-form-
-urlencoded：是Jquery的Ajax请求默认方式作用：在请求发送过程中会对数据进行序列化处理，以键值对形式？key1=value1&amp;key2=value2的方式发送到服务器，好处：
-所有浏览器都支持</p>
+<p>2.2 application/x-www-form-urlencoded：是Jquery的Ajax请求默认方式作用：在请求发送过程中会对数据进行序列化处理，以键值对形式？key1=value1&amp;key2=value2的方式发送到服务器，好处：所有浏览器都支持</p>
 
 <p>3、 application/x-www-form-urlencoded：信息数据被编码为名称/值对，这是标准且默认的编码格式</p>
 
@@ -674,7 +696,7 @@ urlencoded：是Jquery的Ajax请求默认方式作用：在请求发送过程中
   <line x1="7" y1="7" x2="7" y2="7"/>
   
 </svg>
-<span class='screen-reader-text'>Tags: </span><a class='tag' href='/tags/ajax/'>ajax</a>, <a class='tag' href='/tags/content-type/'>content-type</a>, <a class='tag' href='/tags/vue/'>vue</a></div>
+<span class='screen-reader-text'>Tags: </span><a class='tag' href='/tags/ajax/'>ajax</a>, <a class='tag' href='/tags/content-type/'>content-type</a></div>
 
   </div>
 </footer>

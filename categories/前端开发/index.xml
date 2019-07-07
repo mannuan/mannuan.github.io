@@ -5,10 +5,47 @@
     <link>https://mannuan.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/</link>
     <description>Recent content in 前端开发 on mannuan</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 05 Jul 2019 10:52:22 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 06 Jul 2019 14:12:07 +0800</lastBuildDate>
     
 	<atom:link href="https://mannuan.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>http缓存详解</title>
+      <link>https://mannuan.github.io/post/20190706141207/</link>
+      <pubDate>Sat, 06 Jul 2019 14:12:07 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190706141207/</guid>
+      <description>前言 http缓存主要针对如css,js,图片等更新频率不大的静态文件。
+http缓存字段的描述 根据请求和响应分为：
+Request Headers（浏览器端） if-modified-since
+请求头，缓存最新修改的时间，浏览器询问服务器，服务器会将它与last-modified进行比对
+if-none-match
+请求头，缓存标识，浏览器询问服务器询，服务器会将它与etag进行比对
+Response Headers（服务器端） cache-control
+控制http缓存的最高指令
+常用值有:
+1. no-store: 所有内容都不缓存
+2. noc-cache: 缓存，但是浏览器使用缓存前，都会请求服务器判断缓存是否是最新，过期的缓存就不使用
+3. max-age=x(单位秒)在缓存后的x秒内不发请求，是http1.1的属性，类似于expires，但优先级高于expires
+4. s-maxage=x(单位秒)代理服务器请求源站在缓存后的x秒内不发请求，只对CDN有效
+5. public 客户端和代理服务器（CDN）都可缓存
+6. private 只有客户端可以缓存
+last-modified
+响应头，缓存最新修改的时间，服务器返回给浏览器，优先级小于etag
+etag
+响应头，缓存标识，服务器返回给浏览器，优先级高于last-modified
+expires
+响应头，代表缓存过期时间，服务器返回，是http1.0的属性，优先级小于max-age
+使用http缓存的原因  客户端每次都要请求服务器，浪费流量;
+ 服务器每次都得提供查找，下载，请求用户基础如果较大，服务器存在较大压力;
+ 客户端每次请求完都要进行页面渲染，用户体验较差。
+  http缓存字段的关系 服务器和浏览器的对话  我将从服务器和浏览器的日常对话来阐述各个字段的起因和来由。
+为了简化，服务器称为S，浏览器称为C
+第一次对话(expires的由来)
+ C: S，S，我要一个a.css文件，快发给我!!! S: 烦死了，给你，在expires时间前别来烦我!!!  第二次对话(last-modified和if-modified-since的由来)
+C: S, S, 我的a.css文件到期了，你快给我发一个新的!!! S: 新的a.css? 它有修改过吗？ 你之前用的就是最新的吧? ... 呃😓我也不知道了，要不我们都记录一下时间吧？ 我用last-modified记录a.</description>
+    </item>
     
     <item>
       <title>兼容所有浏览器的清除前后空格的方法</title>
@@ -164,7 +201,7 @@ JSONP 的请求过程  请求阶段：浏览器创建一个 script 标签，并�
 1.4 text/plain：数据以纯文本形式(text/json/xml/html)进行编码，其中不含任何控件或格式字符。
 2、application/json 和 application/x-www-form-urlencoded的区别
 2.1 application/json：作用： 告诉服务器请求的主题内容是json格式的字符串，服务器端会对json字符串进行解析，好处： 前端人员不需要关心数据结构的复杂度，只要是标准的json格式就能提交成功。
-2.2 application/x-www-form- urlencoded：是Jquery的Ajax请求默认方式作用：在请求发送过程中会对数据进行序列化处理，以键值对形式？key1=value1&amp;amp;key2=value2的方式发送到服务器，好处： 所有浏览器都支持
+2.2 application/x-www-form-urlencoded：是Jquery的Ajax请求默认方式作用：在请求发送过程中会对数据进行序列化处理，以键值对形式？key1=value1&amp;amp;key2=value2的方式发送到服务器，好处：所有浏览器都支持
 3、 application/x-www-form-urlencoded：信息数据被编码为名称/值对，这是标准且默认的编码格式
 3.1 当action为get时候，客户端把form数据转换成一个字串append到url后面，用&amp;rsquo;?&amp;lsquo;分割。
 3.2 当action为post时候，浏览器把form数据封装到http body中，然后发送到server。（可以取消post请求的预检请求）

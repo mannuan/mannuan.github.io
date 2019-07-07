@@ -7,7 +7,7 @@
 本科阶段 基于LLDP协议捎带式服务质量采集机制(QoS over LLDP) (2016年3月~2017年3月) 这是一个软件定义网络领域的创新项目，我在这个项目中主要负责研究如何让LLDP协议的数据包来承载QoS信息，使得在不占用网络带宽的情况下，获取实时的网络QoS信息。为了实现这个方案，我使用了floodlight&#43;vswitch的技术栈。其中，我在floodlight中创建了一个模块来修改LLDP数据包的结构，为QoS信息开辟了一段存储空间，然后，在vswitch中LLDP的解包阶段，把交换机自身的QoS信息填写到LLDP数据包中。这套解决方案关键的难点在于如何把QoS信息填写到数据包中，但是网上没有这方面的资料，为了解决这个难题我花费了两个月的时间来阅读vswitch的源代码。在8月份我的这个项目参加了第三届全国高校软件定义网络（SDN）应用创新开发大赛获得了二等奖。最后，我和我的导师通过这个项目发表了一篇sci-4区的论文—The Top-K QoS-aware Paths Discovery for Source Routing in SDN. 我对这篇论文的主要贡献就是提供实验数据。
 技能清单 以下均为我熟练使用的技能
  Web开发：Node Web框架：django 前端框架：Vue 前端工具：webpack 数据库相关：MySQL/mongodb 版本管理、文档和自动化部署工具：Git  致谢 感谢您花时间阅读我的简历，期待能有机会和您共事。'>
-<meta name='theme-color' content='#ffffff'>
+<meta name='theme-color' content='#FFC000'>
 
 <meta property='og:title' content='个人简历 • mannuan'>
 <meta property='og:description' content='联系方式  手机：13588796263 Email：wujunleiwang@gmail.com 微信号：bubaizhansheng  个人信息   吴俊磊/男/1994 本科/西南民族大学-网络工程专业 硕士/杭州电子科技大学-计算机科学与技术专业 技术博客：https://mannuan.github.io Github：http://github.com/mannuan 期望职位：Web前端初级程序员 期望城市：杭州       校园项目经历 研究生期间 智慧旅游 (2018年3月~2018年8月) 我主要负责爬虫管理系统的搭建，包括写爬虫脚本和网站的搭建。在这个项目中，我遭遇了严格的反爬、网页动态加载和登录验证等难题。针对于网页动态加载的问题，我专门花费了两个月时间开发了一个beryllium的python库。为了解决反爬问题，我结合使用了ip代理池和爬虫策略。然后，我使用加载cookie的方式，躲避了登录验证。由于涉及到的爬虫方案比较复杂且不利于维护。我专门动手设计了一套爬虫管理系统，后台使用django，前端使用dataTable等框架实现。使用的是mongodb数据库，我使用了aggregate聚合的方式。该项目上线以后，基本上每天可以稳定地爬取几万条数据，在十几万条数据中，查询花费的时间基本不超过3秒。
@@ -27,7 +27,7 @@
   
   <link rel='icon' href='/favicon.ico'>
 <link rel='stylesheet' href='/assets/css/main.6a060eb7.css'><link rel='stylesheet' href='/css/custom.css'><style>
-:root{--color-accent:#ffffff;}
+:root{--color-accent:#FFC000;}
 </style>
 
   
@@ -120,6 +120,8 @@
       </li><li>
         <a href='/tags/brew/' style='font-size:1em'>brew</a>
       </li><li>
+        <a href='/tags/cache-control/' style='font-size:1em'>cache-control</a>
+      </li><li>
         <a href='/tags/chroma/' style='font-size:1em'>chroma</a>
       </li><li>
         <a href='/tags/chrome/' style='font-size:1em'>Chrome</a>
@@ -164,6 +166,10 @@
       </li><li>
         <a href='/tags/dpkg-error/' style='font-size:1em'>dpkg error</a>
       </li><li>
+        <a href='/tags/etag/' style='font-size:1em'>etag</a>
+      </li><li>
+        <a href='/tags/expires/' style='font-size:1em'>expires</a>
+      </li><li>
         <a href='/tags/f1/' style='font-size:1em'>F1</a>
       </li><li>
         <a href='/tags/frps/' style='font-size:1em'>frps</a>
@@ -180,11 +186,23 @@
       </li><li>
         <a href='/tags/https/' style='font-size:1.0212765957446808em'>https</a>
       </li><li>
+        <a href='/tags/http%E7%BC%93%E5%AD%98/' style='font-size:1em'>http缓存</a>
+      </li><li>
         <a href='/tags/hugo/' style='font-size:1em'>Hugo</a>
       </li><li>
         <a href='/tags/i18n/' style='font-size:1em'>i18n</a>
       </li><li>
+        <a href='/tags/icmp/' style='font-size:1em'>ICMP</a>
+      </li><li>
+        <a href='/tags/if-modified-since/' style='font-size:1em'>if-modified-since</a>
+      </li><li>
+        <a href='/tags/if-none-match/' style='font-size:1em'>if-none-match</a>
+      </li><li>
         <a href='/tags/import-error/' style='font-size:1em'>import error</a>
+      </li><li>
+        <a href='/tags/indexof/' style='font-size:1em'>indexOf</a>
+      </li><li>
+        <a href='/tags/ip/' style='font-size:1em'>ip</a>
       </li><li>
         <a href='/tags/iterm2/' style='font-size:1.0425531914893618em'>iterm2</a>
       </li><li>
@@ -203,6 +221,8 @@
         <a href='/tags/katex/' style='font-size:1em'>katex</a>
       </li><li>
         <a href='/tags/koa/' style='font-size:1em'>koa</a>
+      </li><li>
+        <a href='/tags/last-modified/' style='font-size:1em'>last-modified</a>
       </li><li>
         <a href='/tags/linux/' style='font-size:1.127659574468085em'>linux</a>
       </li><li>
@@ -239,6 +259,8 @@
         <a href='/tags/pdf/' style='font-size:1em'>pdf</a>
       </li><li>
         <a href='/tags/pdf%E5%8E%8B%E7%BC%A9/' style='font-size:1em'>pdf压缩</a>
+      </li><li>
+        <a href='/tags/ping/' style='font-size:1em'>ping</a>
       </li><li>
         <a href='/tags/pip/' style='font-size:1.0212765957446808em'>pip</a>
       </li><li>
@@ -312,6 +334,8 @@
       </li><li>
         <a href='/tags/tostring/' style='font-size:1.0212765957446808em'>toString</a>
       </li><li>
+        <a href='/tags/traceroute/' style='font-size:1em'>traceroute</a>
+      </li><li>
         <a href='/tags/trackpad/' style='font-size:1em'>Trackpad</a>
       </li><li>
         <a href='/tags/translation/' style='font-size:1em'>translation</a>
@@ -332,13 +356,13 @@
       </li><li>
         <a href='/tags/val/' style='font-size:1em'>val</a>
       </li><li>
-        <a href='/tags/valueof/' style='font-size:1.0212765957446808em'>valueof</a>
+        <a href='/tags/valueof/' style='font-size:1.0212765957446808em'>valueOf</a>
       </li><li>
         <a href='/tags/vlan/' style='font-size:1.0212765957446808em'>VLAN</a>
       </li><li>
         <a href='/tags/vscode/' style='font-size:1.0212765957446808em'>vscode</a>
       </li><li>
-        <a href='/tags/vue/' style='font-size:1.0425531914893618em'>vue</a>
+        <a href='/tags/vue/' style='font-size:1.0212765957446808em'>vue</a>
       </li><li>
         <a href='/tags/webpack/' style='font-size:1em'>webpack</a>
       </li><li>
