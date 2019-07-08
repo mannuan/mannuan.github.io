@@ -6,7 +6,7 @@
 数据表名：test
 搜索关键字：test
     作用 命令 例子     列出所有包含test的item {&quot;test&quot;: {&quot;$exists&quot;: true}} db.getCollection(&#39;test&#39;).find({&quot;test&quot;: {&quot;$exists&quot;: true}})   根据test进行排序 {&quot;test&quot;: 1或-1}，&rdquo;1&rdquo;表示升序，”-1“表示降序 db.getCollection(&#39;test&#39;).find().sort({&quot;test&quot;: -1})   列出所有符合正则表达式的item {&quot;test&quot;: {&quot;$regex&quot;: &quot;test&quot;}} db.getCollection(&#39;test&#39;).find({&quot;test&quot;: {&quot;$regex&quot;: &quot;test&quot;}})   限制列出的item的数量 数字 db.getCollection(&#39;test&#39;).find().limit(自定义数字)   列出所有符合字符串长度的item {&quot;$where&quot;: &quot;(this.test.length &gt; 自定义长度)&quot;} db.getCollection(&#39;test&#39;).find({&quot;$where&quot;: &quot;(this.test.length &gt; 自定义长度)&quot;})   统计item的数量 collection.count_documents({}) db.getCollection(&quot;test&quot;).count_documents({})    持续更新&hellip;'>
-<meta name='theme-color' content='#FFC000'>
+<meta name='theme-color' content='#FFFFFF'>
 
 <meta property='og:title' content='mongodb常用命令大全 • mannuan'>
 <meta property='og:description' content='关键字的名称：test
@@ -25,7 +25,7 @@
   
   <link rel='icon' href='/favicon.ico'>
 <link rel='stylesheet' href='/assets/css/main.6a060eb7.css'><link rel='stylesheet' href='/css/custom.css'><style>
-:root{--color-accent:#FFC000;}
+:root{--color-accent:#FFFFFF;}
 </style>
 
   
@@ -360,7 +360,7 @@
       </li><li>
         <a href='/tags/val/' style='font-size:1em'>val</a>
       </li><li>
-        <a href='/tags/valueof/' style='font-size:1.0212765957446808em'>valueof</a>
+        <a href='/tags/valueof/' style='font-size:1.0212765957446808em'>valueOf</a>
       </li><li>
         <a href='/tags/vlan/' style='font-size:1.0212765957446808em'>VLAN</a>
       </li><li>

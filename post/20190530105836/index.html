@@ -9,7 +9,7 @@
  传入不支持的选择符会抛出错误；
  能调用querySelector()的对象为：Document类型，Element类型，DocumentFragment类型。
   querySelectorAll()  Selector API Level 1; 接收一个CSS选择符（可复杂），返回所有匹配元素组成的NodeList实例或null; 传入不支持的选择符会抛出错误； 能调用querySelector()的对象为：Document类型，Element类型，DocumentFragment类型。  matchesSelector()  Selector API Level 2; 接收一个css选择器做参数，比较选择符与调用方法的元素是否匹配，返回布尔值； 各个浏览器支持性不同：IE9&#43;通过document.body.msMatchesSelector()支持该方法，Firefox3.6通过document.body.mozMatchesSelector()支持该方法，Safari5&#43;和Chrome通过document.body.webkitMatchesSelector()支持该方法。下面是一个包装的函数：  function matchesSelector(element, selector){ if(element.matchesSelector){ return element.matchesSelector(selector); }else if(element.msMatchesSelector){ return element.msMatchesSelector(selector); }else if(element.mozMatchesSelector){ return element.mozMatchesSelector(selector); }else if(element.webkitMatchesSelector){ return element.webkitMatchesSelector(selector); }else{ throw new Error(&#34;Not supported.&#34;); } } if(matchesSelector(document.body, &#34;body.page1&#34;)){ //执行操作 } '>
-<meta name='theme-color' content='#FFC000'>
+<meta name='theme-color' content='#FFFFFF'>
 
 <meta property='og:title' content='DOM扩展-选择符API • mannuan'>
 <meta property='og:description' content='  选择符API允许直接使用CSS选择器来选取页面元素，众多库推进了选择符API的标准化。
@@ -31,7 +31,7 @@
   
   <link rel='icon' href='/favicon.ico'>
 <link rel='stylesheet' href='/assets/css/main.6a060eb7.css'><link rel='stylesheet' href='/css/custom.css'><style>
-:root{--color-accent:#FFC000;}
+:root{--color-accent:#FFFFFF;}
 </style>
 
   
@@ -366,7 +366,7 @@
       </li><li>
         <a href='/tags/val/' style='font-size:1em'>val</a>
       </li><li>
-        <a href='/tags/valueof/' style='font-size:1.0212765957446808em'>valueof</a>
+        <a href='/tags/valueof/' style='font-size:1.0212765957446808em'>valueOf</a>
       </li><li>
         <a href='/tags/vlan/' style='font-size:1.0212765957446808em'>VLAN</a>
       </li><li>

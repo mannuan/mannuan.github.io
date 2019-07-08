@@ -8,7 +8,7 @@ function setColor(obj){ obj.color = &#34;red&#34;; } var picture = new Object();
 function setColor(obj){ obj.color = &#34;red&#34;; obj = new Object(); obj.color = &#34;blue&#34;; } var picture = new Object(); setColor(picture); console.log(picture.color); //&#34;red&#34;  我们发现，如果函数传入的是引用，那么在函数内部的修改picture的引用就会对象把指向color为”blue“的对象；但是根据输出的结果，很显然是错误；
  结论：因此，不管函数传入的是什么数据类型，都是按值传递的。
  '>
-<meta name='theme-color' content='#FFC000'>
+<meta name='theme-color' content='#FFFFFF'>
 
 <meta property='og:title' content='js Function 参数按值传递详解 • mannuan'>
 <meta property='og:description' content='  如果传入参数是基本数据类型，那么按值传递是很容易理解的； 如果传入参数是引用数据类型，那么会很容易陷入误区，错误地认为是引用传递；   错误例子一：
@@ -29,7 +29,7 @@ function setColor(obj){ obj.color = &#34;red&#34;; obj = new Object(); obj.color
   
   <link rel='icon' href='/favicon.ico'>
 <link rel='stylesheet' href='/assets/css/main.6a060eb7.css'><link rel='stylesheet' href='/css/custom.css'><style>
-:root{--color-accent:#FFC000;}
+:root{--color-accent:#FFFFFF;}
 </style>
 
   
@@ -364,7 +364,7 @@ function setColor(obj){ obj.color = &#34;red&#34;; obj = new Object(); obj.color
       </li><li>
         <a href='/tags/val/' style='font-size:1em'>val</a>
       </li><li>
-        <a href='/tags/valueof/' style='font-size:1.0212765957446808em'>valueof</a>
+        <a href='/tags/valueof/' style='font-size:1.0212765957446808em'>valueOf</a>
       </li><li>
         <a href='/tags/vlan/' style='font-size:1.0212765957446808em'>VLAN</a>
       </li><li>

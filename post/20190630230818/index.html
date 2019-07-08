@@ -8,7 +8,7 @@
 安装nginx sudo apt-get install nginx 修改nginx.cnf配置文件 vim /etc/nginx/nginx.conf 在nginx.conf的http{...}代码块中输入:
 server{ listen: 80; server_name: 127.0.0.1; location /autoproxy.pac { alias 绝对路径/autoproxy.pac; } } 重启nginx
 sudo nginx -s reload 把http://127.0.0.1/autoproxy.pac填写到系统设置-&gt;网络-&gt;代理设置-&gt;自动代理中'>
-<meta name='theme-color' content='#FFC000'>
+<meta name='theme-color' content='#FFFFFF'>
 
 <meta property='og:title' content='Chrome设置PAC模式无效的解决方案 • mannuan'>
 <meta property='og:description' content='发现问题 以Ubuntu系统为例，我们通过genpac生成autoproxy.pac文件，然后点击系统设置-&gt;网络-&gt;代理设置-&gt;自动，在输入框中输入file://绝对路径/autoproxy.pac。设置好以后，Chrome应当可以自动切换网络，但是Chrome无法访问google的搜索引擎，而火狐浏览器可以正常访问。
@@ -29,7 +29,7 @@ sudo nginx -s reload 把http://127.0.0.1/autoproxy.pac填写到系统设置-&gt;
   
   <link rel='icon' href='/favicon.ico'>
 <link rel='stylesheet' href='/assets/css/main.6a060eb7.css'><link rel='stylesheet' href='/css/custom.css'><style>
-:root{--color-accent:#FFC000;}
+:root{--color-accent:#FFFFFF;}
 </style>
 
   
@@ -364,7 +364,7 @@ sudo nginx -s reload 把http://127.0.0.1/autoproxy.pac填写到系统设置-&gt;
       </li><li>
         <a href='/tags/val/' style='font-size:1em'>val</a>
       </li><li>
-        <a href='/tags/valueof/' style='font-size:1.0212765957446808em'>valueof</a>
+        <a href='/tags/valueof/' style='font-size:1.0212765957446808em'>valueOf</a>
       </li><li>
         <a href='/tags/vlan/' style='font-size:1.0212765957446808em'>VLAN</a>
       </li><li>

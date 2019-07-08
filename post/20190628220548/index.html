@@ -6,7 +6,7 @@
 例子1 console.log(1); var a=new Promise(function(resolve, reject){ console.log(2); resolve(); }); console.log(2); var b = new Promise(function(resolve, reject){ console.log(4); resolve(); }); console.log(5); a.then(function(){ console.log(6); }); b.then(function(){ console.log(7); });   顺序输出：1~7
  例子2 console.log(1); var a = new Promise(function(resolve, reject){ resolve(); console.log(2); }); a.then(function(){ console.log(6); }); console.log(3); var b = new Promise(function(resolve, reject){ resolve(); console.log(4); }); b.then(function(){ console.log(7); }); console.log(5);   顺序输出：1~7
  结论 Promise本身是同步的，但.then和.catch方法是异步的'>
-<meta name='theme-color' content='#FFC000'>
+<meta name='theme-color' content='#FFFFFF'>
 
 <meta property='og:title' content='验证Promise是同步的 • mannuan'>
 <meta property='og:description' content='前言 Promise是ES6提出的解决异步编程导致陷入回调的地狱问题。
@@ -25,7 +25,7 @@
   
   <link rel='icon' href='/favicon.ico'>
 <link rel='stylesheet' href='/assets/css/main.6a060eb7.css'><link rel='stylesheet' href='/css/custom.css'><style>
-:root{--color-accent:#FFC000;}
+:root{--color-accent:#FFFFFF;}
 </style>
 
   
@@ -360,7 +360,7 @@
       </li><li>
         <a href='/tags/val/' style='font-size:1em'>val</a>
       </li><li>
-        <a href='/tags/valueof/' style='font-size:1.0212765957446808em'>valueof</a>
+        <a href='/tags/valueof/' style='font-size:1.0212765957446808em'>valueOf</a>
       </li><li>
         <a href='/tags/vlan/' style='font-size:1.0212765957446808em'>VLAN</a>
       </li><li>

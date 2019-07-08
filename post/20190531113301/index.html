@@ -5,7 +5,7 @@
 <meta name='description' content='处于安全等方面的考虑：
  通过innerHTML直接插入&lt;script&gt;元素在大多数浏览器中并不会执行其中的脚本； 通过innerHTML直接插入&lt;style&gt;在一些浏览器中无效。   在这些浏览器中，这两个元素被认为是”无作用域的元素“（不会在页面上显示的元素），如果通过innerHTML插入的字符串开头就是”无作用域的元素“，那么这些浏览器就会解决这个字符串前先删除该元素。解决的方法：在这些”无作用域的元素“前临时增加一个有作用域的元素，之后再将临时元素删除，同时为脚本元素设置defer特性。
   部分元素不支持innerHTML; 冷知识：firefox浏览器在XHTML文档中设置innerHTML是要求XHTML必须严格符合要求，否则，innerHTML将会静默地失败； 最佳实践：使用innerHTML插入代码片时，请通过特定的方法过滤掉script标签（可能引入恶意脚本）。  '>
-<meta name='theme-color' content='#FFC000'>
+<meta name='theme-color' content='#FFFFFF'>
 
 <meta property='og:title' content='HTML5之插入标记innerHTML • mannuan'>
 <meta property='og:description' content='处于安全等方面的考虑：
@@ -23,7 +23,7 @@
   
   <link rel='icon' href='/favicon.ico'>
 <link rel='stylesheet' href='/assets/css/main.6a060eb7.css'><link rel='stylesheet' href='/css/custom.css'><style>
-:root{--color-accent:#FFC000;}
+:root{--color-accent:#FFFFFF;}
 </style>
 
   
@@ -358,7 +358,7 @@
       </li><li>
         <a href='/tags/val/' style='font-size:1em'>val</a>
       </li><li>
-        <a href='/tags/valueof/' style='font-size:1.0212765957446808em'>valueof</a>
+        <a href='/tags/valueof/' style='font-size:1.0212765957446808em'>valueOf</a>
       </li><li>
         <a href='/tags/vlan/' style='font-size:1.0212765957446808em'>VLAN</a>
       </li><li>

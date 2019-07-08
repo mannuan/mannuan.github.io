@@ -6,7 +6,7 @@
  最佳实践：对节点进行操作时，最好使用nodeType检测节点的类型;
   nodeName和nodeValue 对于元素节点(nodeType === 1)，nodeName是元素标签名的大写，nodeValue的值始终是null;
 &lt;!DOCTYPE html&gt; &lt;html&gt; &lt;head&gt;&lt;/head&gt; &lt;body&gt; &lt;div id=&#34;ele&#34;&gt; some text &lt;/div&gt; &lt;/body&gt; &lt;script&gt; var ele = document.getElementById(&#34;ele&#34;); console.log(ele.nodeType === 1); // 输出：true  console.'>
-<meta name='theme-color' content='#FFC000'>
+<meta name='theme-color' content='#FFFFFF'>
 
 <meta property='og:title' content='DOM-Node基本类型 • mannuan'>
 <meta property='og:description' content='DOM1级定义了一个Node接口，该接口作为Node类型实现;  // 节点类型（nodeType）1~12 Node.ELEMENT_NODE; // 1 Node.ATTRIBUTE_NODE; // 2 Node.TEXT_NODE; // 3 Node.CDATA_SECTION_NODE; // 4 Node.ENTITY_REFERENCE_NODE; // 5 Node.ENTITY_NODE; // 6 Node.PROCESSING_INSTRUCTION_NODE; // 7 Node.COMMENT_NODE; // 8 Node.DOCUMENT_NODE; // 9 Node.DOCUMENT_TYPE_NODE; // 10 Node.DOCUMENT_FRAGMENT_NODE; // 11 Node.NOTATION_NODE; // 12   JavaScript中所有节点类型都继承自Node类型，所有的节点类型都共享相同的基本属性和方法；
@@ -25,7 +25,7 @@
   
   <link rel='icon' href='/favicon.ico'>
 <link rel='stylesheet' href='/assets/css/main.6a060eb7.css'><link rel='stylesheet' href='/css/custom.css'><style>
-:root{--color-accent:#FFC000;}
+:root{--color-accent:#FFFFFF;}
 </style>
 
   
@@ -360,7 +360,7 @@
       </li><li>
         <a href='/tags/val/' style='font-size:1em'>val</a>
       </li><li>
-        <a href='/tags/valueof/' style='font-size:1.0212765957446808em'>valueof</a>
+        <a href='/tags/valueof/' style='font-size:1.0212765957446808em'>valueOf</a>
       </li><li>
         <a href='/tags/vlan/' style='font-size:1.0212765957446808em'>VLAN</a>
       </li><li>

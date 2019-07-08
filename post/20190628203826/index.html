@@ -11,7 +11,7 @@
 总结
 前言  下面对于各个版本的Ajax代码，想要实际测试它们，可以把它命名为server2.html，然后放在当前目录views目录下面。具体的教程可以看测试Ajax的Nodejs服务端代码
  1、原生js实现 &lt;!DOCTYPE html&gt; &lt;html lang=&#34;zh&#34;&gt; &lt;head&gt; &lt;meta charset=&#34;UTF-8&#34;&gt; &lt;title&gt;原生js版本&lt;/title&gt; &lt;/head&gt; &lt;body&gt; &lt;div&gt;&lt;button&gt;点击我发送get请求&lt;/button&gt;&lt;/div&gt; &lt;div&gt;&lt;button&gt;点击我发送post请求&lt;/button&gt;&lt;/div&gt; &lt;/body&gt; &lt;script&gt; document.getElementsByTagName(&#39;button&#39;)[0].addEventListener(&#39;click&#39;, function () { ajax(&#39;get&#39;, &#39;http://127.0.0.1:3000/get&#39;, function (response) { alert(JSON.parse(response)[&#39;message&#39;]); }); }); document.getElementsByTagName(&#39;button&#39;)[1].addEventListener(&#39;click&#39;, function () { ajax(&#39;post&#39;, &#39;http://127.0.0.1:3000/post&#39;, function (response) { alert(JSON.parse(response)[&#39;message&#39;]); }, JSON.stringify({ name: &#34;post测试&#34; })); }); function ajax(method, url, callback, data, async) { data = data || null; async = async || true; var xhr = new window.'>
-<meta name='theme-color' content='#FFC000'>
+<meta name='theme-color' content='#FFFFFF'>
 
 <meta property='og:title' content='关于Ajax的jQuery、Vue.js、原生js的各个版本的实现对比 • mannuan'>
 <meta property='og:description' content='目录
@@ -35,7 +35,7 @@
   
   <link rel='icon' href='/favicon.ico'>
 <link rel='stylesheet' href='/assets/css/main.6a060eb7.css'><link rel='stylesheet' href='/css/custom.css'><style>
-:root{--color-accent:#FFC000;}
+:root{--color-accent:#FFFFFF;}
 </style>
 
   
@@ -370,7 +370,7 @@
       </li><li>
         <a href='/tags/val/' style='font-size:1em'>val</a>
       </li><li>
-        <a href='/tags/valueof/' style='font-size:1.0212765957446808em'>valueof</a>
+        <a href='/tags/valueof/' style='font-size:1.0212765957446808em'>valueOf</a>
       </li><li>
         <a href='/tags/vlan/' style='font-size:1.0212765957446808em'>VLAN</a>
       </li><li>

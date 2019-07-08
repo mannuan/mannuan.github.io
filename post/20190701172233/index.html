@@ -8,7 +8,7 @@
 实验原理 RIP(Routing Information Protocols，路由信息协议)是应用较早、使用较普遍的 IGP(Interior Gateway Protocol，内部网关协议)，适用于小型同类网络，是典型的距离矢量 (distance-vector)协议。 RIP 协议以跳数做为衡量路径开销的，RIP 协议里规定最大跳数为 15。 RIP 在构造路由表时会使用到 3 种计时器:更新计时器、无效计时器、刷新计时器。 它让每台路由器周期性地向每个相邻的邻居发送完整的路由表。路由表包括每个网络或子网 的信息，以及与之相关的度量值。
 实验拓扑 选择设备  路由器：2台Generic（从左边数第一个）  实验demo 实验十-RIP路由协议基本配置.pkt
 实验步骤 设置左边的路由器 no Router&gt;en Router#conf t Router(config)#inter se2/0 Router(config-if)#ip address 192.168.1.1 255.255.255.0 Router(config-if)#clock rate 64000 Router(config-if)#no shut Router(config-if)#inter loop0 Router(config-if)#ip address 172.16.1.1 255.255.255.0 Router(config-if)#inter loop1 Router(config-if)#ip address 172.16.2.1 255.255.255.0 Router(config-if)#router rip Router(config-router)#network 172.16.0.0 Router(config-router)#network 192.168.1.0 Router(config-router)#end Router#sh run  设置右边的路由器 no Router&gt;en Router#conf t Router(config)#inter se2/0 Router(config-if)#ip address 192.'>
-<meta name='theme-color' content='#FFC000'>
+<meta name='theme-color' content='#FFFFFF'>
 
 <meta property='og:title' content='实验十 RIP路由协议基本配置 • mannuan'>
 <meta property='og:description' content='实验平台 Cisco模拟器，Version：5.3.0.0088
@@ -29,7 +29,7 @@
   
   <link rel='icon' href='/favicon.ico'>
 <link rel='stylesheet' href='/assets/css/main.6a060eb7.css'><link rel='stylesheet' href='/css/custom.css'><style>
-:root{--color-accent:#FFC000;}
+:root{--color-accent:#FFFFFF;}
 </style>
 
   
@@ -364,7 +364,7 @@
       </li><li>
         <a href='/tags/val/' style='font-size:1em'>val</a>
       </li><li>
-        <a href='/tags/valueof/' style='font-size:1.0212765957446808em'>valueof</a>
+        <a href='/tags/valueof/' style='font-size:1.0212765957446808em'>valueOf</a>
       </li><li>
         <a href='/tags/vlan/' style='font-size:1.0212765957446808em'>VLAN</a>
       </li><li>

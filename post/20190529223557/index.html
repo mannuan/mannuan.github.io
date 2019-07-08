@@ -5,7 +5,7 @@
 <meta name='description' content=' Comment类型  nodeType为8，nodeName为#comment，nodeValue为注释内容； Comment类型拥有除splitText()之外的所有的属性和方法； 创建注释节点只需要传入注释内容即可  document.createComment(&#39;Hi&#39;);   一般浏览器不会识别位于后面的注释；
  在IE8中，注释节点被视作标签名为&rdquo;!&rdquo; 的元素，注释节点可以使用getElementsByTagName(&#39;!&#39;)取得；
   CDATASection类型  nodeType为4，nodeName为#cdata-section，nodeValue为CDATA区域的内容； CDATASection类型针对的是XML文档，表示的是CDATA区域，在HTML文档中会错误地把CDATA区域解析为Comment或Element； 针对XML文档，可以使用document.createCDATASection()来创建CDATASection类型对象，接收一个参数：CDATA区域的内容； CDATASection类型继承自Text类型，除了splitText()方法外所有的属性和方法都拥有；  DocumentType类型  nodeType为0；nodeName为#document，nodeValue为null； 不能动态的创建，只能有html文档规定； document.doctype.name(entities、notations这两个属性没有用)属性； 使用document.doctype访问DocumentType对象；  DocumentFragment类型  文档碎片； DocumentFragment节点类型在文档中没有对应标记，它是游离于文档之外的； DocumentFragment类型是一种轻量级的文档（类似完整的HTML文档），可以包含和控制节点，但不会像完整的文档那样占用额外的资源； nodeType为11;nodeName为#document-fragment；nodeValue为null；可以包含任意类型的子节点； DocumentFrgment类型一般作为一个节点仓库来使用，可以在里面保存将来可能添加到文档的节点，然后DocumentFragment整体插入到文档内； DocumentFragment类型继承了node类型的所有方法； 创建：document.createDocumentFragment(); 文档碎片可以通过appendChild(DoCFrag), insertBefore(DocFrag)来插入文档，此时文档碎片便成为了文档的一部分；  Attr类型  元素的特性在DOM中以Attr类型来表示； 特性就是存在于元素的attributes属性对象中的节点； 三个属性：name, value, specified; 创建特性节点：document.createAttribute(attrName); 新创建的特性节点需要添加到元素上，使用元素的setAttribute(attrName)方法； html &lt;!DOCTYPE html&gt; &lt;html&gt; &lt;body&gt; &lt;div id=&quot;123&quot; style=&quot;height: 20px;&quot;&gt;123&lt;/div&gt; &lt;/body&gt; &lt;script&gt; ele.setAttribute(&#39;align&#39;, &#39;left&#39;); &lt;/script&gt; &lt;/html&gt;  6. 不建议直接访问元素的特性节点（getAttributeNode()等），而使用getAttribute(), setAttribute(), removeAttribute()来访问和操作元素的特性。  '>
-<meta name='theme-color' content='#FFC000'>
+<meta name='theme-color' content='#FFFFFF'>
 
 <meta property='og:title' content='javascript的Comment、CDATASection、DocumentType、DocumentFragment、Attr类型 • mannuan'>
 <meta property='og:description' content=' Comment类型  nodeType为8，nodeName为#comment，nodeValue为注释内容； Comment类型拥有除splitText()之外的所有的属性和方法； 创建注释节点只需要传入注释内容即可  document.createComment(&#39;Hi&#39;);   一般浏览器不会识别位于后面的注释；
@@ -23,7 +23,7 @@
   
   <link rel='icon' href='/favicon.ico'>
 <link rel='stylesheet' href='/assets/css/main.6a060eb7.css'><link rel='stylesheet' href='/css/custom.css'><style>
-:root{--color-accent:#FFC000;}
+:root{--color-accent:#FFFFFF;}
 </style>
 
   
@@ -358,7 +358,7 @@
       </li><li>
         <a href='/tags/val/' style='font-size:1em'>val</a>
       </li><li>
-        <a href='/tags/valueof/' style='font-size:1.0212765957446808em'>valueof</a>
+        <a href='/tags/valueof/' style='font-size:1.0212765957446808em'>valueOf</a>
       </li><li>
         <a href='/tags/vlan/' style='font-size:1.0212765957446808em'>VLAN</a>
       </li><li>

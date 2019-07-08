@@ -7,7 +7,7 @@
 event对象在标准的现代浏览器中会作为参数传入到事件的事件处理函数。
 DOM中的事件对象 属性/方法 类型 读写 说明 bubbles Boolean 只读 表明事件是否支持冒泡 cancelable Boolean 只读 表明是否可以取消默认行为 currentTarget Element 只读 表明事件处理程序当前正在处理事件的那个元素 defaultPrevented Boolean 只读 为true表示已经调用了下面的preventDefault() detail Int 只读 与事件相关的细节信息 eventPhase Int 只读 触发事件处理程序的阶段：1表示捕获，2表示处于目标，3表示冒泡 preventDefault() Function —— 取消事件的默认行为，前提条件是cancelable属性为true stopImmediatePropagation() Function —— 取消事件的进一步捕获或冒泡，同时阻止任何（其他的）事件处理程序被调用 stopPropagation() Function —— 立即停止事件在DOM中的传播，取消进一步的时间捕获或冒泡，前提条件是：bubbles属性为true target Element 只读 事件的目标元素 trusted Boolean 只读 为true表示是浏览器生成的，为false表示是开发人员自定义的事件 type String 只读 被触发的事件类型 view AbstractView 只读 与事件相关的抽象视图，等于发生事件的window对象   在HTML事件处理程序时：变量event（固定）中保存着event对象，无需主动声明，也无需以参数形式传入：
  在DOM 0 级和DOM 2 级事件处理程序中，event对象会 以参数的形式传入事件处理函数 中；'>
-<meta name='theme-color' content='#FFC000'>
+<meta name='theme-color' content='#FFFFFF'>
 
 <meta property='og:title' content='JavaScript-事件对象 • mannuan'>
 <meta property='og:description' content='触发某个事件时会产生一个事件对象event，这个对象中包含着所有与事件有关的信息。
@@ -27,7 +27,7 @@ DOM中的事件对象 属性/方法 类型 读写 说明 bubbles Boolean 只读 
   
   <link rel='icon' href='/favicon.ico'>
 <link rel='stylesheet' href='/assets/css/main.6a060eb7.css'><link rel='stylesheet' href='/css/custom.css'><style>
-:root{--color-accent:#FFC000;}
+:root{--color-accent:#FFFFFF;}
 </style>
 
   
@@ -362,7 +362,7 @@ DOM中的事件对象 属性/方法 类型 读写 说明 bubbles Boolean 只读 
       </li><li>
         <a href='/tags/val/' style='font-size:1em'>val</a>
       </li><li>
-        <a href='/tags/valueof/' style='font-size:1.0212765957446808em'>valueof</a>
+        <a href='/tags/valueof/' style='font-size:1.0212765957446808em'>valueOf</a>
       </li><li>
         <a href='/tags/vlan/' style='font-size:1.0212765957446808em'>VLAN</a>
       </li><li>

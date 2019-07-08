@@ -4,7 +4,7 @@
 <meta name='viewport' content='width=device-width, initial-scale=1'>
 <meta name='description' content='文档的子节点  使用documentElement属性快捷访问页面的元素； 使用body属性可以快捷的访问页面的元素; doctype属性可在部分浏览器下访问文档的类型声明；各个浏览器对于文档声明的支持方式存在较大差异：IE8-:文档类型声明被解释为一个注释，当做comment节点，document.doctype返回值为null；大部分浏览器：文档类型声明作为文档的第一个子节点，是一个DocumentType节点，可以通过document.doctype, document.childNodes[0], document.firstChild访问  &lt;!DOCTYPE html&gt; &lt;html&gt; &lt;head&gt;&lt;/head&gt; &lt;body&gt; &lt;/body&gt; &lt;script&gt; console.log(document.doctype); // 输出: &lt;!DOCTYPE html&gt;  console.log(document.childNodes[0]); // 输出: &lt;!DOCTYPE html&gt;  console.log(document.firstChild); // 输出: &lt;!DOCTYPE html&gt; &lt;/script&gt; &lt;/html&gt;  各个浏览器对于元素外的注释的解析方式不同，比如  &lt;!--第一条注释--&gt; &lt;!DOCTYPE html&gt; &lt;html&gt; &lt;body&gt; &lt;/body&gt; &lt;script&gt; console.log(document.childNodes.length); // chrome输出: 3 &lt;/script&gt; &lt;/html&gt; &lt;!--第二条注释--&gt; 部分浏览器会为两个注释都建立注释节点，部分浏览器会忽略第二条，只为第一条创建注释节点，大部分浏览器现在回完全忽略第二条注释，比如这里的chrome。
 文档信息  title属性用于便捷读写title标签； URL属性只读，referrer属性只读； domain属性可读可写，但不能设置为当前URL中不包含的域，通过设置domain属性相同可实现框架间不同子域页面的JavaScript通信； document.domain只能往上级域名方向设置，设置为非上级域名会报错，不能设置为顶级域名; 使用document.domain实现跨父子域  查找元素  getElementById()的注意事项; getElementByTagName() 方法返回的是HTMLCollection对象；  &lt;!DOCTYPE html&gt; &lt;html&gt; &lt;body&gt; &lt;div&gt;123&lt;/div&gt; &lt;/body&gt; &lt;script&gt; console.'>
-<meta name='theme-color' content='#FFC000'>
+<meta name='theme-color' content='#FFFFFF'>
 
 <meta property='og:title' content='Document类型 • mannuan'>
 <meta property='og:description' content='文档的子节点  使用documentElement属性快捷访问页面的元素； 使用body属性可以快捷的访问页面的元素; doctype属性可在部分浏览器下访问文档的类型声明；各个浏览器对于文档声明的支持方式存在较大差异：IE8-:文档类型声明被解释为一个注释，当做comment节点，document.doctype返回值为null；大部分浏览器：文档类型声明作为文档的第一个子节点，是一个DocumentType节点，可以通过document.doctype, document.childNodes[0], document.firstChild访问  &lt;!DOCTYPE html&gt; &lt;html&gt; &lt;head&gt;&lt;/head&gt; &lt;body&gt; &lt;/body&gt; &lt;script&gt; console.log(document.doctype); // 输出: &lt;!DOCTYPE html&gt;  console.log(document.childNodes[0]); // 输出: &lt;!DOCTYPE html&gt;  console.log(document.firstChild); // 输出: &lt;!DOCTYPE html&gt; &lt;/script&gt; &lt;/html&gt;  各个浏览器对于元素外的注释的解析方式不同，比如  &lt;!--第一条注释--&gt; &lt;!DOCTYPE html&gt; &lt;html&gt; &lt;body&gt; &lt;/body&gt; &lt;script&gt; console.log(document.childNodes.length); // chrome输出: 3 &lt;/script&gt; &lt;/html&gt; &lt;!--第二条注释--&gt; 部分浏览器会为两个注释都建立注释节点，部分浏览器会忽略第二条，只为第一条创建注释节点，大部分浏览器现在回完全忽略第二条注释，比如这里的chrome。
@@ -21,7 +21,7 @@
   
   <link rel='icon' href='/favicon.ico'>
 <link rel='stylesheet' href='/assets/css/main.6a060eb7.css'><link rel='stylesheet' href='/css/custom.css'><style>
-:root{--color-accent:#FFC000;}
+:root{--color-accent:#FFFFFF;}
 </style>
 
   
@@ -356,7 +356,7 @@
       </li><li>
         <a href='/tags/val/' style='font-size:1em'>val</a>
       </li><li>
-        <a href='/tags/valueof/' style='font-size:1.0212765957446808em'>valueof</a>
+        <a href='/tags/valueof/' style='font-size:1.0212765957446808em'>valueOf</a>
       </li><li>
         <a href='/tags/vlan/' style='font-size:1.0212765957446808em'>VLAN</a>
       </li><li>

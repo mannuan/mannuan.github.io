@@ -7,7 +7,7 @@ tar -xzvf jdk-8u144-linux-x64.tar.gz  得到的文件夹为jdk1.8.0_144，将其
 sudo gedit /etc/profile 打开文件，在结尾处输入：
 export JAVA_HOME=/usr/lib/jvm/jdk1.8.0_144 export JRE_HOME=/usr/lib/jvm/jdk1.8.0_144/jre export CLASSPATH=.:$JAVA_HOME/lib:$JRE_HOME/lib:$CLASSPATH export PATH=$JAVA_HOME/bin:$JRE_HOME/bin:$PATH 生效配置文件：
   source /etc/profile  创建jdk软链接：  update-alternatives --install /usr/bin/java java /usr/lib/jvm/jdk1.8.0_144/bin/java 300 update-alternatives --install /usr/bin/javac javac /usr/lib/jvm/jdk1.8.0_144/bin/javac 300  设置默认jdk：  update-alternatives --config java  查看jdk版本，检查是否安装完成：  java -version'>
-<meta name='theme-color' content='#FFC000'>
+<meta name='theme-color' content='#FFFFFF'>
 
 <meta property='og:title' content='orcle jdk linux 安装教程 • mannuan'>
 <meta property='og:description' content=' 将*.tar.gz解压（以jdk8.144为例）：
@@ -27,7 +27,7 @@ export JAVA_HOME=/usr/lib/jvm/jdk1.8.0_144 export JRE_HOME=/usr/lib/jvm/jdk1.8.0
   
   <link rel='icon' href='/favicon.ico'>
 <link rel='stylesheet' href='/assets/css/main.6a060eb7.css'><link rel='stylesheet' href='/css/custom.css'><style>
-:root{--color-accent:#FFC000;}
+:root{--color-accent:#FFFFFF;}
 </style>
 
   
@@ -362,7 +362,7 @@ export JAVA_HOME=/usr/lib/jvm/jdk1.8.0_144 export JRE_HOME=/usr/lib/jvm/jdk1.8.0
       </li><li>
         <a href='/tags/val/' style='font-size:1em'>val</a>
       </li><li>
-        <a href='/tags/valueof/' style='font-size:1.0212765957446808em'>valueof</a>
+        <a href='/tags/valueof/' style='font-size:1.0212765957446808em'>valueOf</a>
       </li><li>
         <a href='/tags/vlan/' style='font-size:1.0212765957446808em'>VLAN</a>
       </li><li>

@@ -6,7 +6,7 @@
 innerText  读取元素中包含的所有文本内容，只读取文本内容； 写入时会删除元素的所有节点，插入文本内容； 不同浏览器处理空白和换行的方式不一样； firefox不支持innerText，但支持textContent属性；   textContent与innerText的不同点在于：innerText会忽略行内的样式和脚本，textContent不会；
 最佳实践 ：从不包含行内样式和行内脚本的DOM中读取文本
   使用innerText可以过滤标签，快捷地获得纯文本。  function getInnerText(element){ return (typeof element.textContent == &#39;string&#39;) ? element.textContent : element.innerText; } function setInnerText(element, text){ if(typeof element.textContent == &#39;string&#39;){ elemnt.textContent = text; }else{ element.innerText = text; } }  滚动相关  scrollIntoView()：对元素调用此方法可以使页面滚动到与元素顶部平齐； scrollIntoViewIfNeeded(alignCenter)：调用方法的元素不可见的情况下运行，接受一个参数：是否垂直居中，布尔值； scrollByLines(lineCount)：将元素内容滚动到指定的行高； scrollByPages(pageCount)：将元素内容滚动至指定的页面高度；  以上三个方法支持性都不是很好！'>
-<meta name='theme-color' content='#FFC000'>
+<meta name='theme-color' content='#FFFFFF'>
 
 <meta property='og:title' content='DOM专有扩展 • mannuan'>
 <meta property='og:description' content='插入文本： innerText, outerText
@@ -25,7 +25,7 @@ innerText  读取元素中包含的所有文本内容，只读取文本内容；
   
   <link rel='icon' href='/favicon.ico'>
 <link rel='stylesheet' href='/assets/css/main.6a060eb7.css'><link rel='stylesheet' href='/css/custom.css'><style>
-:root{--color-accent:#FFC000;}
+:root{--color-accent:#FFFFFF;}
 </style>
 
   
@@ -360,7 +360,7 @@ innerText  读取元素中包含的所有文本内容，只读取文本内容；
       </li><li>
         <a href='/tags/val/' style='font-size:1em'>val</a>
       </li><li>
-        <a href='/tags/valueof/' style='font-size:1.0212765957446808em'>valueof</a>
+        <a href='/tags/valueof/' style='font-size:1.0212765957446808em'>valueOf</a>
       </li><li>
         <a href='/tags/vlan/' style='font-size:1.0212765957446808em'>VLAN</a>
       </li><li>

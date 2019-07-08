@@ -3,7 +3,7 @@
   <meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
 <meta name='description' content='闭包的两个知识点：  变量搜索方向：在javascript中，函数可以创造函数作用域。在函数作用域里面可以看到外面的变量，而函数的外面无法访问到函数里面的变量。因此，在作用域里面的变量搜索方向是：自内向外。比如，下面这段代码就验证了这个搜索方向：  var a = 1; var func1 = function(){ var b = 2; var func2 = function(){ var c = 3; console.log(b); // 输出：2  console.log(a); // 输出：1  } func2(); console.log(c); // 输出：Uncaught ReferenceError: c is not defined }; func1();   变量的生存的周期：全局变量的生存周期是永久的，局部变量随着函数调用的结束而销毁。  // 例一 var func = function(){ var a = 1; // 退出函数后局部变量a将被销毁  console.log(a); }; func(); // 例二 var func = function(){ var a = 1; return function(){ a&#43;&#43;; console.'>
-<meta name='theme-color' content='#FFC000'>
+<meta name='theme-color' content='#FFFFFF'>
 
 <meta property='og:title' content='javascript闭包详解 • mannuan'>
 <meta property='og:description' content='闭包的两个知识点：  变量搜索方向：在javascript中，函数可以创造函数作用域。在函数作用域里面可以看到外面的变量，而函数的外面无法访问到函数里面的变量。因此，在作用域里面的变量搜索方向是：自内向外。比如，下面这段代码就验证了这个搜索方向：  var a = 1; var func1 = function(){ var b = 2; var func2 = function(){ var c = 3; console.log(b); // 输出：2  console.log(a); // 输出：1  } func2(); console.log(c); // 输出：Uncaught ReferenceError: c is not defined }; func1();   变量的生存的周期：全局变量的生存周期是永久的，局部变量随着函数调用的结束而销毁。  // 例一 var func = function(){ var a = 1; // 退出函数后局部变量a将被销毁  console.log(a); }; func(); // 例二 var func = function(){ var a = 1; return function(){ a&#43;&#43;; console.'>
@@ -19,7 +19,7 @@
   
   <link rel='icon' href='/favicon.ico'>
 <link rel='stylesheet' href='/assets/css/main.6a060eb7.css'><link rel='stylesheet' href='/css/custom.css'><style>
-:root{--color-accent:#FFC000;}
+:root{--color-accent:#FFFFFF;}
 </style>
 
   
@@ -354,7 +354,7 @@
       </li><li>
         <a href='/tags/val/' style='font-size:1em'>val</a>
       </li><li>
-        <a href='/tags/valueof/' style='font-size:1.0212765957446808em'>valueof</a>
+        <a href='/tags/valueof/' style='font-size:1.0212765957446808em'>valueOf</a>
       </li><li>
         <a href='/tags/vlan/' style='font-size:1.0212765957446808em'>VLAN</a>
       </li><li>

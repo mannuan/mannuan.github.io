@@ -5,7 +5,7 @@
 <meta name='description' content='原生实现
  function Person(name){ this.name = name; }; Person.prototype.getName = function(){ return this.name; } var a = new Person(&#39;sven&#39;); console.log(a.name); console.log(a.getName()); console.log(Object.getPrototypeOf(a) === Person.prototype);  代码实现
 function Person(name){ this.name = name; }; Person.prototype.getName = function(){ return this.name; } var objectFactory = function(){ var obj = new Object(), Constructor = [].shift.call(arguments); obj.__proto__ = Constructor.prototype; var ret = Constructor.apply(obj, arguments); return typeof ret === &#34;object&#34; ? ret: obj; } var a = objectFactory(Person, &#34;sven&#34;); console.'>
-<meta name='theme-color' content='#FFC000'>
+<meta name='theme-color' content='#FFFFFF'>
 
 <meta property='og:title' content='js通过代码来理解构造函数的实现过程 • mannuan'>
 <meta property='og:description' content='原生实现
@@ -23,7 +23,7 @@ function Person(name){ this.name = name; }; Person.prototype.getName = function(
   
   <link rel='icon' href='/favicon.ico'>
 <link rel='stylesheet' href='/assets/css/main.6a060eb7.css'><link rel='stylesheet' href='/css/custom.css'><style>
-:root{--color-accent:#FFC000;}
+:root{--color-accent:#FFFFFF;}
 </style>
 
   
@@ -358,7 +358,7 @@ function Person(name){ this.name = name; }; Person.prototype.getName = function(
       </li><li>
         <a href='/tags/val/' style='font-size:1em'>val</a>
       </li><li>
-        <a href='/tags/valueof/' style='font-size:1.0212765957446808em'>valueof</a>
+        <a href='/tags/valueof/' style='font-size:1.0212765957446808em'>valueOf</a>
       </li><li>
         <a href='/tags/vlan/' style='font-size:1.0212765957446808em'>VLAN</a>
       </li><li>

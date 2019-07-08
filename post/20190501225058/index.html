@@ -5,7 +5,7 @@
 <meta name='description' content='第一步：把指定的域名绑定到服务器指定的端口 1、安装nginx sudo apt-get install nginx  查看nginx版本，确认安装成功
 nginx -v  安装完nginx以后，通过浏览器访问127.0.0.1，再次确认安装成功（访问127.0.0.1其实等价于访问127.0.0.1:80）  2、修改nginx配置文件 sudo vim /etc/nginx/nginx.conf  通过上面的命令打开文件以后，键盘按 “i” 键，进入编辑模式，然后找到类似下面的内容：   ssl的获取可以参看我的阿里云免费ssl证书申请
 http { #在这里填写你的配置  #下面省略若干行..... }  完整的配置是这样的（第一个server配置的是http服务，第二个server配置的https服务）：  http { server { listen 80; server_name 指定的域名; root html; index index.html index.htm; location / { proxy_pass http://127.0.0.1:指定的端口/; proxy_set_header X-Real-IP $remote_addr; proxy_set_header Host $host; proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for; proxy_http_version 1.1; proxy_set_header Upgrade $http_upgrade; proxy_set_header Connection &#34;upgrade&#34;; proxy_redirect off; } } server { listen 443; server_name 指定的域名; ssl on; root html; index index.'>
-<meta name='theme-color' content='#FFC000'>
+<meta name='theme-color' content='#FFFFFF'>
 
 <meta property='og:title' content='https服务器搭建详细教程(ubuntu系统实测可行) • mannuan'>
 <meta property='og:description' content='第一步：把指定的域名绑定到服务器指定的端口 1、安装nginx sudo apt-get install nginx  查看nginx版本，确认安装成功
@@ -23,7 +23,7 @@ http { #在这里填写你的配置  #下面省略若干行..... }  完整的配
   
   <link rel='icon' href='/favicon.ico'>
 <link rel='stylesheet' href='/assets/css/main.6a060eb7.css'><link rel='stylesheet' href='/css/custom.css'><style>
-:root{--color-accent:#FFC000;}
+:root{--color-accent:#FFFFFF;}
 </style>
 
   
@@ -358,7 +358,7 @@ http { #在这里填写你的配置  #下面省略若干行..... }  完整的配
       </li><li>
         <a href='/tags/val/' style='font-size:1em'>val</a>
       </li><li>
-        <a href='/tags/valueof/' style='font-size:1.0212765957446808em'>valueof</a>
+        <a href='/tags/valueof/' style='font-size:1.0212765957446808em'>valueOf</a>
       </li><li>
         <a href='/tags/vlan/' style='font-size:1.0212765957446808em'>VLAN</a>
       </li><li>

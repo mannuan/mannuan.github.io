@@ -5,7 +5,7 @@
 <meta name='description' content='遇到上面情况，我们通常使用boot-repair修复引导。但是这时会弹出一个错误： GPT detected. Please create a BIOS-Boot partition
  遇到这个情况以后，我就疯狂百度资料，一直在找现成的解决方案，但是都不是没有解决问题的方案。这个期间我大概花了我半天的时间在检索资料，之后由于实在找不到资料。我只能冷静地分析这个错误，&rdquo;Please create Bios-Boot partition&rdquo;这个提示其实是提醒你创建一个用于引导的分区。由于是在UEFI模式下面，所以我们要创建一个格式为fat32 标识为boot, esp的分区（右键可以设置标签），如下图所示：
 创建好上面的分区以后，再使用boot-repair进行修复引导，就不会报错了😀😀😀😀😀'>
-<meta name='theme-color' content='#FFC000'>
+<meta name='theme-color' content='#FFFFFF'>
 
 <meta property='og:title' content='在UEFI模式下，linux误删EFI分区后，重新恢复引导 • mannuan'>
 <meta property='og:description' content='遇到上面情况，我们通常使用boot-repair修复引导。但是这时会弹出一个错误： GPT detected. Please create a BIOS-Boot partition
@@ -23,7 +23,7 @@
   
   <link rel='icon' href='/favicon.ico'>
 <link rel='stylesheet' href='/assets/css/main.6a060eb7.css'><link rel='stylesheet' href='/css/custom.css'><style>
-:root{--color-accent:#FFC000;}
+:root{--color-accent:#FFFFFF;}
 </style>
 
   
@@ -358,7 +358,7 @@
       </li><li>
         <a href='/tags/val/' style='font-size:1em'>val</a>
       </li><li>
-        <a href='/tags/valueof/' style='font-size:1.0212765957446808em'>valueof</a>
+        <a href='/tags/valueof/' style='font-size:1.0212765957446808em'>valueOf</a>
       </li><li>
         <a href='/tags/vlan/' style='font-size:1.0212765957446808em'>VLAN</a>
       </li><li>

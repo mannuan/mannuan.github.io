@@ -12,7 +12,7 @@
  怪癖是个别浏览器独有的，通常归类为bug；
  实例：IE8及更早版本中，如果某个实例属性与[[Enumerable]]标记为false的某个原型属性同名，那么属性无法被for-in循环遍历
   // 怪癖检测 var hasDontEnumQuirk = function(){ var o = {toString: function(){}}; for(var prop in o){ if(prop == &#39;toString&#39;){ return false; } } return true; }(); hasDontEnumQuirk;// false 说明浏览器没有这个怪癖  用户代理检测  通过检测用户代理字符串来确定实际使用的浏览器； 通常是在最后才选择这样的方法，或者想实现某些特定的功能才使用用户代理检测； 主要使用navigator.'>
-<meta name='theme-color' content='#FFC000'>
+<meta name='theme-color' content='#FFFFFF'>
 
 <meta property='og:title' content='JavaScript客户端检测 • mannuan'>
 <meta property='og:description' content='应对各个厂商、各个版本的浏览器对特性支持度的差异，常采取的策略
@@ -37,7 +37,7 @@
   
   <link rel='icon' href='/favicon.ico'>
 <link rel='stylesheet' href='/assets/css/main.6a060eb7.css'><link rel='stylesheet' href='/css/custom.css'><style>
-:root{--color-accent:#FFC000;}
+:root{--color-accent:#FFFFFF;}
 </style>
 
   
@@ -372,7 +372,7 @@
       </li><li>
         <a href='/tags/val/' style='font-size:1em'>val</a>
       </li><li>
-        <a href='/tags/valueof/' style='font-size:1.0212765957446808em'>valueof</a>
+        <a href='/tags/valueof/' style='font-size:1.0212765957446808em'>valueOf</a>
       </li><li>
         <a href='/tags/vlan/' style='font-size:1.0212765957446808em'>VLAN</a>
       </li><li>

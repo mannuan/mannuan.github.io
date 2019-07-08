@@ -3,7 +3,7 @@
   <meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
 <meta name='description' content='原生js ajax(&#39;get&#39;, &#39;http://127.0.0.1:3000/get&#39;, function(response){ alert(JSON.parse(response)[&#39;message&#39;]); }); ajax(&#39;post&#39;, &#39;http://127.0.0.1:3000/post&#39;, function (response) { alert(JSON.parse(response)[&#39;message&#39;]); }, JSON.stringify({name: &#34;post测试&#34;})); function ajax(method, url, callback, data, async){ var data=data || null; var async=async || true; var xhr = new window.XMLHttpRequest || ActiveXObject(&#39;Microsoft.XMLHTTP&#39;); xhr.open(method, url, async); xhr.setRequestHeader(&#39;content-type&#39;, &#39;application/json&#39;); xhr.send(data); console.log(&#34;发送的数据是：&#34;&#43;data); xhr.onreadystatechange = function(){ if(xhr.readyState === 4){ if(xhr.status &gt;=200&amp;&amp;xhr.status&lt;300||xhr.status==304){ console.log(&#34;完成请求，响应就绪&#34;); callback(this.responseText); } } } }  原生js-Promise ajax(&#39;get&#39;, &#39;http://127.0.0.1:3000/get&#39;).then(function (data) { alert(JSON.parse(data).message); }).catch(function (error) { alert(error); }); ajax(&#39;post&#39;, &#39;http://127.'>
-<meta name='theme-color' content='#FFC000'>
+<meta name='theme-color' content='#FFFFFF'>
 
 <meta property='og:title' content='原生js、jQuery和Vue.js的Ajax的详细对比 • mannuan'>
 <meta property='og:description' content='原生js ajax(&#39;get&#39;, &#39;http://127.0.0.1:3000/get&#39;, function(response){ alert(JSON.parse(response)[&#39;message&#39;]); }); ajax(&#39;post&#39;, &#39;http://127.0.0.1:3000/post&#39;, function (response) { alert(JSON.parse(response)[&#39;message&#39;]); }, JSON.stringify({name: &#34;post测试&#34;})); function ajax(method, url, callback, data, async){ var data=data || null; var async=async || true; var xhr = new window.XMLHttpRequest || ActiveXObject(&#39;Microsoft.XMLHTTP&#39;); xhr.open(method, url, async); xhr.setRequestHeader(&#39;content-type&#39;, &#39;application/json&#39;); xhr.send(data); console.log(&#34;发送的数据是：&#34;&#43;data); xhr.onreadystatechange = function(){ if(xhr.readyState === 4){ if(xhr.status &gt;=200&amp;&amp;xhr.status&lt;300||xhr.status==304){ console.log(&#34;完成请求，响应就绪&#34;); callback(this.responseText); } } } }  原生js-Promise ajax(&#39;get&#39;, &#39;http://127.0.0.1:3000/get&#39;).then(function (data) { alert(JSON.parse(data).message); }).catch(function (error) { alert(error); }); ajax(&#39;post&#39;, &#39;http://127.'>
@@ -19,7 +19,7 @@
   
   <link rel='icon' href='/favicon.ico'>
 <link rel='stylesheet' href='/assets/css/main.6a060eb7.css'><link rel='stylesheet' href='/css/custom.css'><style>
-:root{--color-accent:#FFC000;}
+:root{--color-accent:#FFFFFF;}
 </style>
 
   
@@ -354,7 +354,7 @@
       </li><li>
         <a href='/tags/val/' style='font-size:1em'>val</a>
       </li><li>
-        <a href='/tags/valueof/' style='font-size:1.0212765957446808em'>valueof</a>
+        <a href='/tags/valueof/' style='font-size:1.0212765957446808em'>valueOf</a>
       </li><li>
         <a href='/tags/vlan/' style='font-size:1.0212765957446808em'>VLAN</a>
       </li><li>

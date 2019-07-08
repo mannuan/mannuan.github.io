@@ -13,7 +13,7 @@ link的作用主要用来引入CSS和网页图标，指示告知搜索引擎，�
 (3)二者加载顺序影响 HTML加载过程：
 1) 加载HTML-DOM结构 2)CSS和JS 3)图片和多媒体 4)加载事件触发 link和@import都没有放置顺序的要求，但是不同的放置位置可能会造成效果显示的差异。对于link，无论放到哪个位置，都是一边加载数据，一边进行优化，视觉感受很好；而对于@import，放置到哪里，才从哪里开始加载CSS样式，即先加载数据，然后加载样式，如果网速不佳，可能会造成只有数据出来，而样式一点点加载的效果。并且在同一个页面中，调用两种方式，link永远比@import优先级高。
 在项目中使用的时候，一般在页面中调用方式为link，并且放在head标签中；使用@import除了在CSS文件中，在页面调用时，一般加载第三方的样式会使用到，并且需要放置在页面的底部，不会影响自己的网站。'>
-<meta name='theme-color' content='#FFC000'>
+<meta name='theme-color' content='#FFFFFF'>
 
 <meta property='og:title' content='CSS三种引入方式：内联、页级、外联 • mannuan'>
 <meta property='og:description' content='1.内联CSS 内联CSS也可称为行内CSS或者行级CSS，它直接在标签内部引入，显著的优点是十分的便捷、高效；但是同时也造成了不能够重用样式的缺点，如果代码行数到达一定长度不建议采用。通常内联CSS作为测试使用，可以查找代码中bug。
@@ -39,7 +39,7 @@ link的作用主要用来引入CSS和网页图标，指示告知搜索引擎，�
   
   <link rel='icon' href='/favicon.ico'>
 <link rel='stylesheet' href='/assets/css/main.6a060eb7.css'><link rel='stylesheet' href='/css/custom.css'><style>
-:root{--color-accent:#FFC000;}
+:root{--color-accent:#FFFFFF;}
 </style>
 
   
@@ -374,7 +374,7 @@ link的作用主要用来引入CSS和网页图标，指示告知搜索引擎，�
       </li><li>
         <a href='/tags/val/' style='font-size:1em'>val</a>
       </li><li>
-        <a href='/tags/valueof/' style='font-size:1.0212765957446808em'>valueof</a>
+        <a href='/tags/valueof/' style='font-size:1.0212765957446808em'>valueOf</a>
       </li><li>
         <a href='/tags/vlan/' style='font-size:1.0212765957446808em'>VLAN</a>
       </li><li>

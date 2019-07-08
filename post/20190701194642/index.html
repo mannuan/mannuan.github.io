@@ -8,7 +8,7 @@
 实验原理 IP ACL(IP 访问控制列表或IP访问列表)是实现对流经路由器或交换机的数据包根据一定的规则进行过滤，从而提高网络可管理性和安全性。 IP ACL分为两种:标准IP访问列表和扩展IP访问列表。 标准IP访问列表可以根据数据包的源IP地址定义规则，进行数据包的过滤。 扩展IP访问列表可以根据数据包的源IP、目的IP、源端口、目的端口、协议来定义规则，进行数据包的过滤。 IP ACL基于接口进行规则的应用，分为:入栈应用和出栈应用。 入栈应用是指由外部经该接口进行路由器的数据包进行过滤。 出栈应用是指路由器从该接口向外转发数据时进行数据包的过滤。 IP ACL 的配置有两种方式:按照编号的访问列表，按照命名的访问列表。 标准IP访问列表编号范围是1~99、1300~1999，扩展IP访问列表编号范围是100~199、2000~2699。
 实验拓扑 选择设备  路由器：2台Generic（从左边数第一个） 主机：3台Generic（从左边数第一个）  实验demo 实验十三-利用ip标准访问控制列表acl进行网络流量的控制.pkt
 实验步骤 设置左边的路由器 no Router&gt;en Router#conf t Router(config)#inter loop0 Router(config-if)#ip address 172.16.1.1 255.255.255.0 Router(config-if)#no shut Router(config-if)#inter loop1 Router(config-if)#ip address 172.16.2.1 255.255.255.0 Router(config-if)#no shut Router(config-if)#inter se2/0 Router(config-if)#clock rate 64000 Router(config-if)#ip address 172.16.3.1 255.255.255.0 Router(config-if)#no shut Router(config-if)#exit Router(config)#ip route 0.0.0.0 0.'>
-<meta name='theme-color' content='#FFC000'>
+<meta name='theme-color' content='#FFFFFF'>
 
 <meta property='og:title' content='实验十三 利用ip标准访问控制列表acl进行网络流量的控制 • mannuan'>
 <meta property='og:description' content='实验平台 Cisco模拟器，Version：5.3.0.0088
@@ -29,7 +29,7 @@
   
   <link rel='icon' href='/favicon.ico'>
 <link rel='stylesheet' href='/assets/css/main.6a060eb7.css'><link rel='stylesheet' href='/css/custom.css'><style>
-:root{--color-accent:#FFC000;}
+:root{--color-accent:#FFFFFF;}
 </style>
 
   
@@ -364,7 +364,7 @@
       </li><li>
         <a href='/tags/val/' style='font-size:1em'>val</a>
       </li><li>
-        <a href='/tags/valueof/' style='font-size:1.0212765957446808em'>valueof</a>
+        <a href='/tags/valueof/' style='font-size:1.0212765957446808em'>valueOf</a>
       </li><li>
         <a href='/tags/vlan/' style='font-size:1.0212765957446808em'>VLAN</a>
       </li><li>

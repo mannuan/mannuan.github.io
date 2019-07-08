@@ -5,7 +5,7 @@
 <meta name='description' content='Element节点是Element类型的实例； Element节点的nodeName与tagName属性元素的标签名的大写;nodeValue为null;  &lt;!DOCTYPE html&gt; &lt;html&gt; &lt;body&gt; &lt;div id=&#34;123&#34;&gt;123&lt;/div&gt; &lt;/body&gt; &lt;script&gt; var _div = document.getElementById(&#34;123&#34;); console.log(_div.nodeName); console.log(_div.tagName); console.log(_div.nodeValue); &lt;/script&gt; &lt;/html&gt;  最佳实践：在比较标签名与字符串时，最好先将标签名转为为全小写。  HTML元素  所有HTML元素都由HTMLElement类型表示，HTMLElement类型继承自Element类型并添加了一些属性和方法；   所有HTML元素都是由HTMLElement或者其子类型表示的，每个HTML元素都由与之关联的类型，如：HTMLAnchorElement, HTMLBodyElement, HTMLDivElement&hellip;, 这些类型都继承HTMLElement类型的属性和方法，也有着自己的扩展
   大部分HTML标签的原生特性作为Element节点对象的属性都可以直接通过&rdquo;.&ldquo;或&rdquo;[]&ldquo;操作符读写，但无法读写自定义的特性（见下面的取得特性一节）  &lt;!DOCTYPE html&gt; &lt;html&gt; &lt;body&gt; &lt;div id=&#34;123&#34;&gt;123&lt;/div&gt; &lt;/body&gt; &lt;script&gt; var _div = document.getElementById(&#34;123&#34;); console.log(_div.id); console.log(_div.className); console.log(_div.name); console.log(_div[&#34;id&#34;]); console.log(_div[&#34;className&#34;]); console.log(_div[&#34;name&#34;]); &lt;/script&gt; &lt;/html&gt;  class为ES的保留字，使用“.” 或&rdquo;[]&ldquo;访问元素类名需要使用className。  取得特性 getAttribute(), setAttribute(), removeAttribute()三个特性操作的方法：
  传递给getAttribute()的特性名字符串与实际的特性名相同，比如：要获取class的特性值，应该传入&rsquo;class&rsquo;,而不是&rsquo;className&rsquo;; 通过getAttribute()方法可以取得自定义特性； 最佳实践：根据HTML5的规范推荐，自定义特性应该加上data-前缀以便验证； getAttribute()方法与节点的访问方法&rdquo;.'>
-<meta name='theme-color' content='#FFC000'>
+<meta name='theme-color' content='#FFFFFF'>
 
 <meta property='og:title' content='javascript Element类型 • mannuan'>
 <meta property='og:description' content='Element节点是Element类型的实例； Element节点的nodeName与tagName属性元素的标签名的大写;nodeValue为null;  &lt;!DOCTYPE html&gt; &lt;html&gt; &lt;body&gt; &lt;div id=&#34;123&#34;&gt;123&lt;/div&gt; &lt;/body&gt; &lt;script&gt; var _div = document.getElementById(&#34;123&#34;); console.log(_div.nodeName); console.log(_div.tagName); console.log(_div.nodeValue); &lt;/script&gt; &lt;/html&gt;  最佳实践：在比较标签名与字符串时，最好先将标签名转为为全小写。  HTML元素  所有HTML元素都由HTMLElement类型表示，HTMLElement类型继承自Element类型并添加了一些属性和方法；   所有HTML元素都是由HTMLElement或者其子类型表示的，每个HTML元素都由与之关联的类型，如：HTMLAnchorElement, HTMLBodyElement, HTMLDivElement&hellip;, 这些类型都继承HTMLElement类型的属性和方法，也有着自己的扩展
@@ -23,7 +23,7 @@
   
   <link rel='icon' href='/favicon.ico'>
 <link rel='stylesheet' href='/assets/css/main.6a060eb7.css'><link rel='stylesheet' href='/css/custom.css'><style>
-:root{--color-accent:#FFC000;}
+:root{--color-accent:#FFFFFF;}
 </style>
 
   
@@ -358,7 +358,7 @@
       </li><li>
         <a href='/tags/val/' style='font-size:1em'>val</a>
       </li><li>
-        <a href='/tags/valueof/' style='font-size:1.0212765957446808em'>valueof</a>
+        <a href='/tags/valueof/' style='font-size:1.0212765957446808em'>valueOf</a>
       </li><li>
         <a href='/tags/vlan/' style='font-size:1.0212765957446808em'>VLAN</a>
       </li><li>

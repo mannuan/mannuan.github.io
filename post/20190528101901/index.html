@@ -4,7 +4,7 @@
 <meta name='viewport' content='width=device-width, initial-scale=1'>
 <meta name='description' content='举例说明：
 &lt;!DOCTYPE html&gt; &lt;html&gt; &lt;head&gt;&lt;/head&gt; &lt;body&gt; &lt;ul id=&#34;ul&#34;&gt; &lt;li&gt; 123 &lt;/li&gt; &lt;li&gt; 456 &lt;/li&gt; &lt;li&gt; 789 &lt;/li&gt; &lt;/ul&gt; &lt;/body&gt; &lt;script&gt; var _childNodes = document.getElementById(&#34;ul&#34;).childNodes; function convertToArray(nodes) { var array = null; try { array = Array.prototype.slice.call(nodes, 0); // 针对非IE浏览器  } catch (ex) { array = new Array(); for (var i = 0, len = nodes.length; i &lt; len; i&#43;&#43;) { array.push(nodes[i]); } } return array; } console.log(convertToArray(_childNodes)); &lt;/script&gt; &lt;/html&gt;'>
-<meta name='theme-color' content='#FFC000'>
+<meta name='theme-color' content='#FFFFFF'>
 
 <meta property='og:title' content='Javascript-DOM中NodeList对象转数组的通用方法 • mannuan'>
 <meta property='og:description' content='举例说明：
@@ -21,7 +21,7 @@
   
   <link rel='icon' href='/favicon.ico'>
 <link rel='stylesheet' href='/assets/css/main.6a060eb7.css'><link rel='stylesheet' href='/css/custom.css'><style>
-:root{--color-accent:#FFC000;}
+:root{--color-accent:#FFFFFF;}
 </style>
 
   
@@ -356,7 +356,7 @@
       </li><li>
         <a href='/tags/val/' style='font-size:1em'>val</a>
       </li><li>
-        <a href='/tags/valueof/' style='font-size:1.0212765957446808em'>valueof</a>
+        <a href='/tags/valueof/' style='font-size:1.0212765957446808em'>valueOf</a>
       </li><li>
         <a href='/tags/vlan/' style='font-size:1.0212765957446808em'>VLAN</a>
       </li><li>

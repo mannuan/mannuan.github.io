@@ -11,7 +11,7 @@ defer defer与上面的同步和异步脚本不同，defer执行脚本的阶段�
 defer先加载完 HTML还没解析完成时，defer脚本已经加载完毕，那么defer脚本将等待HTML解析完成后再执行。defer脚本执行完毕后触发DOMContentLoaded事件。
 dom先解析完 HTML解析完成时，defer脚本还没加载完毕，那么defer脚本继续加载，加载完成后直接执行，执行完毕后触发domContentLoaded事件。
 总结 如果在dom解析完成以后，defer脚本没有执行，在dom解析完成后，defer会率先被执行，会延迟domContentLoaded事件的触发。'>
-<meta name='theme-color' content='#FFC000'>
+<meta name='theme-color' content='#FFFFFF'>
 
 <meta property='og:title' content='异步脚本、延迟脚本与DOMContentLoaded的关系 • mannuan'>
 <meta property='og:description' content='sync 如上图所示， HTML 文档被解析时如果遇见（同步）脚本，则停止解析，先去加载脚本，然后执行，执行结束后继续解析 HTML 文档。HTML文档解析完毕后触发DOMContentLoaded。
@@ -35,7 +35,7 @@ dom先解析完 HTML解析完成时，defer脚本还没加载完毕，那么defe
   
   <link rel='icon' href='/favicon.ico'>
 <link rel='stylesheet' href='/assets/css/main.6a060eb7.css'><link rel='stylesheet' href='/css/custom.css'><style>
-:root{--color-accent:#FFC000;}
+:root{--color-accent:#FFFFFF;}
 </style>
 
   
@@ -370,7 +370,7 @@ dom先解析完 HTML解析完成时，defer脚本还没加载完毕，那么defe
       </li><li>
         <a href='/tags/val/' style='font-size:1em'>val</a>
       </li><li>
-        <a href='/tags/valueof/' style='font-size:1.0212765957446808em'>valueof</a>
+        <a href='/tags/valueof/' style='font-size:1.0212765957446808em'>valueOf</a>
       </li><li>
         <a href='/tags/vlan/' style='font-size:1.0212765957446808em'>VLAN</a>
       </li><li>

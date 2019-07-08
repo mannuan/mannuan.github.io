@@ -6,7 +6,7 @@
  动态脚本  通过修改DOM动态添加的脚本的两种模式：插入外部文件，插入JavaScript代码 插入外部文件  var script = document.createElement(&#39;script&#39;); script.src = &#39;client.js&#39;; document.body.appendChild(script);   封装为外部脚本插入函数  fucntion loadScript(url){ var script = document.createElement(&#39;script&#39;); script.src = url; document.body.appendChild(script); } loadScript(&#39;script.js&#39;);   插入行内代码：不兼容IE,它将&lt;script&gt;视为一个特殊的元素，不允许DOM访问其子节点： ```javascript
 var script = document.createElement(&lsquo;script&rsquo;); var textNode = document.createTextNode(&lsquo;function sayHi(){alert(\&lsquo;Hi!\&lsquo;)}&rsquo;); script.appendChild(textNode);  document.body.appendChild(script);
  3. 插入行内代码的兼容性解决方案：行内脚本插入封装函数 ```javascript function loadScript(code){ var script = document.createElement(&#39;script&#39;); try{ script.appendChild(document.createTextNode(code)); }catch(err){ script.text = code; } document.body.appendChild(script); } loadScript(&#39; function sayHi(){alert(&quot;Hi!'>
-<meta name='theme-color' content='#FFC000'>
+<meta name='theme-color' content='#FFFFFF'>
 
 <meta property='og:title' content='DOM操作技术 • mannuan'>
 <meta property='og:description' content='DOM操作最大的两个麻烦就是：操作效率问题、浏览器兼容问题
@@ -25,7 +25,7 @@ var script = document.createElement(&lsquo;script&rsquo;); var textNode = docume
   
   <link rel='icon' href='/favicon.ico'>
 <link rel='stylesheet' href='/assets/css/main.6a060eb7.css'><link rel='stylesheet' href='/css/custom.css'><style>
-:root{--color-accent:#FFC000;}
+:root{--color-accent:#FFFFFF;}
 </style>
 
   
@@ -360,7 +360,7 @@ var script = document.createElement(&lsquo;script&rsquo;); var textNode = docume
       </li><li>
         <a href='/tags/val/' style='font-size:1em'>val</a>
       </li><li>
-        <a href='/tags/valueof/' style='font-size:1.0212765957446808em'>valueof</a>
+        <a href='/tags/valueof/' style='font-size:1.0212765957446808em'>valueOf</a>
       </li><li>
         <a href='/tags/vlan/' style='font-size:1.0212765957446808em'>VLAN</a>
       </li><li>

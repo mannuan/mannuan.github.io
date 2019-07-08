@@ -3,7 +3,7 @@
   <meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
 <meta name='description' content='选区域截图默认快捷键 Shift&#43;command&#43;4  默认保存目录 ~/Desktop  修改目录 defaults write com.apple.screencapture location &#34;~/Pictures/ScreenShot&#34; 截图默认后缀 png  修改后缀 defaults write com.apple.screencapture type jpg 删除默认时间后缀 defaults write com.apple.screencapture &#34;include-date&#34; 0 修改默认的文件名称 defaults write com.apple.screencapture name &#34;screenshot&#34; 参看配置 defaults read com.apple.screencapture 输出如下： { &quot;last-messagetrace-stamp&quot; = &quot;583174121.285828&quot;; &quot;last-selection&quot; = { Height = 529; Width = 1041; X = 507; Y = 262; }; &quot;last-selection-display&quot; = 0; location = &quot;~/Pictures/ScreenShot&quot;; name = screenshot; type = jpg; }  缺点分析 mac自带的截图工具，不能修改时间的格式，而且这种格式有空格，不利于作为文件名。虽然可以去除时间后缀，但是时间信息很重要。同时，即使没有时间后缀，生成的图片名中还是存在空格。鉴于上面复杂的问题，我权衡利弊之后果断放弃这个mac自带的截图工具。'>
-<meta name='theme-color' content='#FFC000'>
+<meta name='theme-color' content='#FFFFFF'>
 
 <meta property='og:title' content='Mac截图的相关设置 • mannuan'>
 <meta property='og:description' content='选区域截图默认快捷键 Shift&#43;command&#43;4  默认保存目录 ~/Desktop  修改目录 defaults write com.apple.screencapture location &#34;~/Pictures/ScreenShot&#34; 截图默认后缀 png  修改后缀 defaults write com.apple.screencapture type jpg 删除默认时间后缀 defaults write com.apple.screencapture &#34;include-date&#34; 0 修改默认的文件名称 defaults write com.apple.screencapture name &#34;screenshot&#34; 参看配置 defaults read com.apple.screencapture 输出如下： { &quot;last-messagetrace-stamp&quot; = &quot;583174121.285828&quot;; &quot;last-selection&quot; = { Height = 529; Width = 1041; X = 507; Y = 262; }; &quot;last-selection-display&quot; = 0; location = &quot;~/Pictures/ScreenShot&quot;; name = screenshot; type = jpg; }  缺点分析 mac自带的截图工具，不能修改时间的格式，而且这种格式有空格，不利于作为文件名。虽然可以去除时间后缀，但是时间信息很重要。同时，即使没有时间后缀，生成的图片名中还是存在空格。鉴于上面复杂的问题，我权衡利弊之后果断放弃这个mac自带的截图工具。'>
@@ -19,7 +19,7 @@
   
   <link rel='icon' href='/favicon.ico'>
 <link rel='stylesheet' href='/assets/css/main.6a060eb7.css'><link rel='stylesheet' href='/css/custom.css'><style>
-:root{--color-accent:#FFC000;}
+:root{--color-accent:#FFFFFF;}
 </style>
 
   
@@ -354,7 +354,7 @@
       </li><li>
         <a href='/tags/val/' style='font-size:1em'>val</a>
       </li><li>
-        <a href='/tags/valueof/' style='font-size:1.0212765957446808em'>valueof</a>
+        <a href='/tags/valueof/' style='font-size:1.0212765957446808em'>valueOf</a>
       </li><li>
         <a href='/tags/vlan/' style='font-size:1.0212765957446808em'>VLAN</a>
       </li><li>

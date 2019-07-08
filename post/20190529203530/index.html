@@ -6,7 +6,7 @@
  默认情况下。每个包含内容的元素最多只能有一个文本节点，而且必须有内容存在；
  创建和修改文本节点时，字符串会经过HTML（或XML）编码转义，防止对原文档造成解析错误；
   div.firstChild.nodeValue = &#34;&lt;p&gt;Hello world!&lt;/p&gt;&#34;; // &#34;&amp;lt;p&amp;gt;Hello world!&amp;lt;/p&amp;gt;&#34;  创建文本节点  document.createTextNode(); 可以人为使一个元素包含多个文本节点，虽然多个文本节点的表现形式与单个节点的表现形式没什么两样；  &lt;!'>
-<meta name='theme-color' content='#FFC000'>
+<meta name='theme-color' content='#FFFFFF'>
 
 <meta property='og:title' content='javascript Text类型 • mannuan'>
 <meta property='og:description' content='nodeType为3, nodeName为#text; 不支持子节点； 可以包含转义的HTML字符； 文本节点的值可以通过nodeValue属性或data属性访问；  &lt;!DOCTYPE html&gt; &lt;html&gt; &lt;body&gt; &lt;div id=&#34;123&#34; style=&#34;height: 20px;&#34;&gt;123&lt;/div&gt; &lt;/body&gt; &lt;script&gt; var text = document.createTextNode(&#34;Hello world!&#34;); console.log(text.nodeType); // 输出：3  console.log(text.nodeName); // 输出：#text  console.log(text.nodeValue); // 输出：Hello world!  console.log(text.data); // 输出：Hello world!  console.log(text.nodeValue.length); // 输出：12  console.log(text.data.length); // 输出：12  &lt;/script&gt; &lt;/html&gt;  操作文本节点的方法
@@ -25,7 +25,7 @@
   
   <link rel='icon' href='/favicon.ico'>
 <link rel='stylesheet' href='/assets/css/main.6a060eb7.css'><link rel='stylesheet' href='/css/custom.css'><style>
-:root{--color-accent:#FFC000;}
+:root{--color-accent:#FFFFFF;}
 </style>
 
   
@@ -360,7 +360,7 @@
       </li><li>
         <a href='/tags/val/' style='font-size:1em'>val</a>
       </li><li>
-        <a href='/tags/valueof/' style='font-size:1.0212765957446808em'>valueof</a>
+        <a href='/tags/valueof/' style='font-size:1.0212765957446808em'>valueOf</a>
       </li><li>
         <a href='/tags/vlan/' style='font-size:1.0212765957446808em'>VLAN</a>
       </li><li>

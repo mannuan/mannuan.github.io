@@ -6,7 +6,7 @@
 &lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34; standalone=&#34;no&#34;?&gt; &lt;!DOCTYPE svg PUBLIC &#34;-//W3C//DTD SVG 1.1//EN&#34; &#34;http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd&#34;&gt; &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; version=&#34;1.1&#34; xmlns:xlink=&#34;http://www.w3.org/1999/xlink&#34; width=&#34;650px&#34; height=&#34;3030.0px&#34;&gt; &lt;style&gt;text {font-family:PingFangSC-Regular,Microsoft YaHei,&#39;Hiragino Sans GB&#39;,Helvetica;font-size:14px;fill:#282828;}&lt;/style&gt; &lt;text x=&#34;0&#34; y=&#34;35&#34;&gt;呜愉伸治译喊傲著逢循托从巨毒高翼阻聋巴垂级茧郎暑聚渣啦秘炊奋睁连撤宁畅搁刚轮蜂缺幕葵&lt;/text&gt; &lt;text x=&#34;0&#34; y=&#34;79&#34;&gt;搞陆林卵窝提格桑南隔选膛奸修担穴罐胖宅圆馒杏至鲁类痒宝拌让必油匀困双拢砖轧凑辜亦银牧&lt;/text&gt; &lt;/svg&gt; 我在用下面的python代码提取text节点的时候，发现无法提取，没有任何输出：
 from pyquery import PyQuery as pq with open(文件路径, &#34;r&#34;) as f: svg = f.read().encode(&#34;utf-8&#34;) p = pq(svg) for i in p(&#34;text&#34;).items(): print(i) 之后，我把pyquery的解析方式，强制设置为 paser=&quot;html&quot; 后，就行了：
 from pyquery import PyQuery as pq with open(文件路径, &#34;r&#34;) as f: svg = f.read().encode(&#34;utf-8&#34;) p = pq(svg, parser=&#34;html&#34;) for i in p(&#34;text&#34;).'>
-<meta name='theme-color' content='#FFC000'>
+<meta name='theme-color' content='#FFFFFF'>
 
 <meta property='og:title' content='pyquery如何解析xml • mannuan'>
 <meta property='og:description' content='之前遇到pyquery解析svg文件(xml格式)的时候发现无法获取节点，比如下面这个svg文件：
@@ -25,7 +25,7 @@ from pyquery import PyQuery as pq with open(文件路径, &#34;r&#34;) as f: svg
   
   <link rel='icon' href='/favicon.ico'>
 <link rel='stylesheet' href='/assets/css/main.6a060eb7.css'><link rel='stylesheet' href='/css/custom.css'><style>
-:root{--color-accent:#FFC000;}
+:root{--color-accent:#FFFFFF;}
 </style>
 
   
@@ -360,7 +360,7 @@ from pyquery import PyQuery as pq with open(文件路径, &#34;r&#34;) as f: svg
       </li><li>
         <a href='/tags/val/' style='font-size:1em'>val</a>
       </li><li>
-        <a href='/tags/valueof/' style='font-size:1.0212765957446808em'>valueof</a>
+        <a href='/tags/valueof/' style='font-size:1.0212765957446808em'>valueOf</a>
       </li><li>
         <a href='/tags/vlan/' style='font-size:1.0212765957446808em'>VLAN</a>
       </li><li>
