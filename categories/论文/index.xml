@@ -16,8 +16,13 @@
       <pubDate>Thu, 04 Jul 2019 16:20:10 +0800</pubDate>
       
       <guid>https://mannuan.github.io/post/20190704162010/</guid>
-      <description>Representing Social Media Users for Sarcasm Detection  用于讽刺检测的社交媒体用户的特征表示
- 摘要 在上下文讽刺检测的背景下，两种表示作则特征的方式： * 使用贝叶斯的方式直接表示作者的讽刺倾向； * 密集向量嵌入可以学习到作者和文本之间的交互； * 使用reddit评论的SARC数据集，双向的rnn可以提高性能； *</description>
+      <description> Representing Social Media Users for Sarcasm Detection  用于讽刺检测的社交媒体用户的特征表示
+ 摘要 在上下文讽刺检测的背景下，两种表示作则特征的方式：
+ 使用贝叶斯的方式直接表示作者的讽刺倾向；
+ 密集向量嵌入可以学习到作者和文本之间的交互；
+ 使用reddit评论的SARC数据集，双向的rnn可以提高性能；
+  贝叶斯的方法在同质的上下文中是足够的，密集的向量嵌入是有价值的 the Bayesian approach suffices in homogeneous contexts, whereas the added power of the dense embeddings proves valuable in more diverse ones. 
+  </description>
     </item>
     
   </channel>

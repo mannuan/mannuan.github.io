@@ -5,10 +5,55 @@
     <link>https://mannuan.github.io/tags/</link>
     <description>Recent content in Tags on mannuan</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 07 Jul 2019 15:31:02 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 08 Jul 2019 14:18:34 +0800</lastBuildDate>
     
 	<atom:link href="https://mannuan.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>TCP</title>
+      <link>https://mannuan.github.io/tags/tcp/</link>
+      <pubDate>Mon, 08 Jul 2019 14:18:34 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/tags/tcp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>UDP</title>
+      <link>https://mannuan.github.io/tags/udp/</link>
+      <pubDate>Mon, 08 Jul 2019 14:18:34 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/tags/udp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>html标签</title>
+      <link>https://mannuan.github.io/tags/html%E6%A0%87%E7%AD%BE/</link>
+      <pubDate>Mon, 08 Jul 2019 08:51:33 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/tags/html%E6%A0%87%E7%AD%BE/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>后序遍历</title>
+      <link>https://mannuan.github.io/tags/%E5%90%8E%E5%BA%8F%E9%81%8D%E5%8E%86/</link>
+      <pubDate>Sun, 07 Jul 2019 21:55:37 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/tags/%E5%90%8E%E5%BA%8F%E9%81%8D%E5%8E%86/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>web service规范</title>
+      <link>https://mannuan.github.io/tags/web-service%E8%A7%84%E8%8C%83/</link>
+      <pubDate>Sun, 07 Jul 2019 21:49:14 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/tags/web-service%E8%A7%84%E8%8C%83/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>ICMP</title>
@@ -290,7 +335,7 @@
     </item>
     
     <item>
-      <title>valueOf</title>
+      <title>valueof</title>
       <link>https://mannuan.github.io/tags/valueof/</link>
       <pubDate>Thu, 04 Jul 2019 21:54:03 +0800</pubDate>
       

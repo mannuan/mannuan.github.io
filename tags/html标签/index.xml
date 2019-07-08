@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>html标签 on mannuan</title>
+    <link>https://mannuan.github.io/tags/html%E6%A0%87%E7%AD%BE/</link>
+    <description>Recent content in html标签 on mannuan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 08 Jul 2019 08:51:33 +0800</lastBuildDate>
+    
+	<atom:link href="https://mannuan.github.io/tags/html%E6%A0%87%E7%AD%BE/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>HTML标签</title>
+      <link>https://mannuan.github.io/post/20190708085133/</link>
+      <pubDate>Mon, 08 Jul 2019 08:51:33 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190708085133/</guid>
+      <description>   功能标签组合     定义注释或音标  &amp;lt;ruby&amp;gt;&amp;lt;/ruby&amp;gt;     </description>
+    </item>
+    
+  </channel>
+</rss>

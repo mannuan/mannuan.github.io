@@ -18,19 +18,19 @@
 }
 
 /* 设置主题 */
-/* #sidebar {
+#sidebar {
     background: #d35050;
 }
 
 .sidebar .widget-about .title.site-title a {
     color: #ffffff;
-} */
+}
 
-/* #sidebar-menu > div > ul > li.item.has-children > button {
+#sidebar-menu > div > ul > li.item.has-children > button {
     background: #d35050;
-} */
+}
 
-/* .title, h1, h2, h3, h4, h5, h6, a {
+.title, h1, h2, h3, h4, h5, h6, a {
     color: #ffffff;
 }
 
@@ -39,7 +39,7 @@ body {
     font-family: sans-serif;
     background: #212121;
     color: #a2a2a2;
-} */
+}
 
 /* 设置界面大小 */
 /* #sidebar {
@@ -68,3 +68,6 @@ body {
     color: red;
     display: inline-block;
 }
+
+/* 表格样式 */
+

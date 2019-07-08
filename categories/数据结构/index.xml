@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>数据结构 on mannuan</title>
+    <link>https://mannuan.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</link>
+    <description>Recent content in 数据结构 on mannuan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 07 Jul 2019 21:55:37 +0800</lastBuildDate>
+    
+	<atom:link href="https://mannuan.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>后序遍历非递归算法</title>
+      <link>https://mannuan.github.io/post/20190707215537/</link>
+      <pubDate>Sun, 07 Jul 2019 21:55:37 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190707215537/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

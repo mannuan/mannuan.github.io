@@ -5,10 +5,46 @@
     <link>https://mannuan.github.io/post/</link>
     <description>Recent content in Blog on mannuan</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 07 Jul 2019 15:31:02 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 08 Jul 2019 14:18:34 +0800</lastBuildDate>
     
 	<atom:link href="https://mannuan.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>UDP和TCP协议</title>
+      <link>https://mannuan.github.io/post/20190708141834/</link>
+      <pubDate>Mon, 08 Jul 2019 14:18:34 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190708141834/</guid>
+      <description> 1、UDP 1.1、数据包格式   源端口号(16位) 目的端口号(16位)    UDP长度(16位) UDP校验和(16位)   数据    1.2、特点  沟通简单。不需要一肚子花花肠子(大量的数据结构、处理逻辑、包头字段)。前提是它相信网络世界是美好的，秉承性善论，相信网络通路默认就是很容易送达的，不容易被丢弃的。 轻信他人。它不会建立连接，虽然有端口号，但是监听在这个地方，谁都可以传给他数据，他也可以传给任何人数据，甚至可以同时传给多个人数据。 愣头青。做事不懂权变。不知道什么时候该坚持，什么时候该退让。它不会根据网络的情况进行发包的拥塞控制，无论网络丢包丢成啥样了，它该怎么发还怎么发。  1.3、使用场景  需要资源少，在网络情况比较好的内网，或者对于丢包不敏感的应用。这很好理解，就像如果你是领导，你会让你们组刚毕业的小朋友去做一些没有那么难的项目，打一些没有那么难的客户，或者做一些失败了也能忍受的实验性项目。 不需要一对一沟通，建立连接，而是可以广播的应用。咱们小时候人都很简单，大家在班级里面，谁成绩好，谁写作好，应该表扬谁惩罚谁，谁得几个小红花都是当着全班的面讲的，公平公正公开。长大了人心复杂了，薪水、奖金要背靠背，和员工一对一沟通。 需要处理速度快，时延低，可以容忍少数丢包，但是要求即便网络拥塞，也毫不退缩，一往无前的时候。记得曾国藩建立湘军的时候，专门招出生牛犊不怕虎的新兵，而不用那些“老油条”的八旗 兵，就是因为八旗兵经历的事情多，遇到敌军不敢舍死忘生。  </description>
+    </item>
+    
+    <item>
+      <title>HTML标签</title>
+      <link>https://mannuan.github.io/post/20190708085133/</link>
+      <pubDate>Mon, 08 Jul 2019 08:51:33 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190708085133/</guid>
+      <description>   功能标签组合     定义注释或音标  &amp;lt;ruby&amp;gt;&amp;lt;/ruby&amp;gt;     </description>
+    </item>
+    
+    <item>
+      <title>后序遍历非递归算法</title>
+      <link>https://mannuan.github.io/post/20190707215537/</link>
+      <pubDate>Sun, 07 Jul 2019 21:55:37 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190707215537/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Java规范中和与Web Service相关的规范有哪些？</title>
+      <link>https://mannuan.github.io/post/20190707214914/</link>
+      <pubDate>Sun, 07 Jul 2019 21:49:14 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190707214914/</guid>
+      <description> JAX-WS(JSR 224)：这个规范是早期的基于SOAP的Web Service规范JAX-RPC的替代版本，它并不提供向下兼容性，因为RPC样式的WSDL以及相关的API已经在Java EE5中被移除了。WS-MetaData是JAX-WS的依赖规范，提供了基于注解配置Web Service和SOAP消息的相关API。 JAXM(JSR 67)：定义了发送和接收消息所需的API,相当于Web Service的服务器端。 JAX-RS(JSR 311 &amp;amp; JSR 339 &amp;amp; JSR 370)：是Java针对REST（Representation State Transfer）架构风格制定的一套Web Service规范。REST是一种软件架构模式，是一种风格，它不像SOAP那样本身承载着一种消息协议， (两种风格的Web Service均采用了HTTP做传输协议，因为HTTP协议能穿越防火墙，Java的远程方法调用（RMI）等是重量级协议，通常不能穿越防火墙），因此可以将REST视为基于HTTP协议的软件架构。REST中最重要的两个概念是资源定位和资源操作，而HTTP协议恰好完整的提供了这两个点。HTTP协议中的URI可以完成资源定位，而GET、POST、OPTION、DELETE方法可以完成资源操作。因此REST完全依赖HTTP协议就可以完成Web Service，而不像SOAP协议那样只利用了HTTP的传输特性，定位和操作都是由SOAP协议自身完成的，也正是由于SOAP消息的存在使得基于SOAP的Web Service显得笨重而逐渐被淘汰。  </description>
+    </item>
     
     <item>
       <title>ICMP协议是什么？ICMP协议的作用是什么？</title>
@@ -203,8 +239,13 @@ window.addEventListener(&amp;#39;load&amp;#39;, (event) =&amp;gt; { console.log(
       <pubDate>Thu, 04 Jul 2019 16:20:10 +0800</pubDate>
       
       <guid>https://mannuan.github.io/post/20190704162010/</guid>
-      <description>Representing Social Media Users for Sarcasm Detection  用于讽刺检测的社交媒体用户的特征表示
- 摘要 在上下文讽刺检测的背景下，两种表示作则特征的方式： * 使用贝叶斯的方式直接表示作者的讽刺倾向； * 密集向量嵌入可以学习到作者和文本之间的交互； * 使用reddit评论的SARC数据集，双向的rnn可以提高性能； *</description>
+      <description> Representing Social Media Users for Sarcasm Detection  用于讽刺检测的社交媒体用户的特征表示
+ 摘要 在上下文讽刺检测的背景下，两种表示作则特征的方式：
+ 使用贝叶斯的方式直接表示作者的讽刺倾向；
+ 密集向量嵌入可以学习到作者和文本之间的交互；
+ 使用reddit评论的SARC数据集，双向的rnn可以提高性能；
+  贝叶斯的方法在同质的上下文中是足够的，密集的向量嵌入是有价值的 the Bayesian approach suffices in homogeneous contexts, whereas the added power of the dense embeddings proves valuable in more diverse ones. 
+  </description>
     </item>
     
     <item>
@@ -1205,7 +1246,7 @@ html文件（example.html）: &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html&amp;gt;
       <pubDate>Wed, 05 Jun 2019 21:23:04 +0800</pubDate>
       
       <guid>https://mannuan.github.io/post/20190605212304/</guid>
-      <description>   特殊符号 命名实体 十进制编码 特殊符号 命名实体 十进制编码 特殊符号 命名实体 十进制编码     Α &amp;Alpha; &amp;#913; Β &amp;Beta; &amp;#914; Γ &amp;Gamma; &amp;#915;   Δ &amp;Delta; &amp;#916; Ε &amp;Epsilon; &amp;#917; Ζ &amp;Zeta; &amp;#918;   Η &amp;Eta; &amp;#919; Θ &amp;Theta; &amp;#920; Ι &amp;Iota; &amp;#921;   Κ &amp;Kappa; &amp;#922; Λ &amp;Lambda; &amp;#923; Μ &amp;Mu; &amp;#924;   Ν &amp;Nu; &amp;#925; Ξ &amp;Xi; &amp;#926; Ο &amp;Omicron; &amp;#927;   Π &amp;Pi; &amp;#928; Ρ &amp;Rho; &amp;#929; Σ &amp;Sigma; &amp;#931;   Τ &amp;Tau; &amp;#932; Υ &amp;Upsilon; &amp;#933; Φ &amp;Phi; &amp;#934;   Χ &amp;Chi; &amp;#935; Ψ &amp;Psi; &amp;#936; Ω &amp;Omega; &amp;#937;   α &amp;alpha; &amp;#945; β &amp;beta; &amp;#946; γ &amp;gamma; &amp;#947;   δ &amp;delta; &amp;#948; ε &amp;epsilon; &amp;#949; ζ &amp;zeta; &amp;#950;   η &amp;eta; &amp;#951; θ &amp;theta; &amp;#952; ι &amp;iota; &amp;#953;   κ &amp;kappa; &amp;#954; λ &amp;lambda; &amp;#955; μ &amp;mu; &amp;#956;   ν &amp;nu; &amp;#957; ξ &amp;xi; &amp;#958; ο &amp;omicron; &amp;#959;   π &amp;pi; &amp;#960; ρ &amp;rho; &amp;#961; ς &amp;sigmaf; &amp;#962;   σ &amp;sigma; &amp;#963; τ &amp;tau; &amp;#964; υ &amp;upsilon; &amp;#965;   φ &amp;phi; &amp;#966; χ &amp;chi; &amp;#967; ψ &amp;psi; &amp;#968;   ω &amp;omega; &amp;#969; ϑ &amp;thetasym; &amp;#977; ϒ &amp;upsih; &amp;#978;   ϖ &amp;piv; &amp;#982; • &amp;bull; &amp;#8226; … &amp;hellip; &amp;#8230;   ′ &amp;prime; &amp;#8242; ″ &amp;Prime; &amp;#8243; ‾ &amp;oline; &amp;#8254;   ⁄ &amp;frasl; &amp;#8260; ℘ &amp;weierp; &amp;#8472; ℑ &amp;image; &amp;#8465;   ℜ &amp;real; &amp;#8476; ™ &amp;trade; &amp;#8482; ℵ &amp;alefsym; &amp;#8501;   ← &amp;larr; &amp;#8592; ↑ &amp;uarr; &amp;#8593; → &amp;rarr; &amp;#8594;   ↓ &amp;darr; &amp;#8595; ↔ &amp;harr; &amp;#8596; ↵ &amp;crarr; &amp;#8629;   ⇐ &amp;lArr; &amp;#8656; ⇑ &amp;uArr; &amp;#8657; ⇒ &amp;rArr; &amp;#8658;   ⇓ &amp;dArr; &amp;#8659; ⇔ &amp;hArr; &amp;#8660; ∀ &amp;forall; &amp;#8704;   ∂ &amp;part; &amp;#8706; ∃ &amp;exist; &amp;#8707; ∅ &amp;empty; &amp;#8709;   ∇ &amp;nabla; &amp;#8711; ∈ &amp;isin; &amp;#8712; ∉ &amp;notin; &amp;#8713;   ∋ &amp;ni; &amp;#8715; ∏ &amp;prod; &amp;#8719; ∑ &amp;sum; &amp;#8722;   − &amp;minus; &amp;#8722; ∗ &amp;lowast; &amp;#8727; √ &amp;radic; &amp;#8730;   ∝ &amp;prop; &amp;#8733; ∞ &amp;infin; &amp;#8734; ∠ &amp;ang; &amp;#8736;   ∧ &amp;and; &amp;#8869; ∨ &amp;or; &amp;#8870; ∩ &amp;cap; &amp;#8745;   ∪ &amp;cup; &amp;#8746; ∫ &amp;int; &amp;#8747; ∴ &amp;there4; &amp;#8756;   ∼ &amp;sim; &amp;#8764; ≅ &amp;cong; &amp;#8773; ≈ &amp;asymp; &amp;#8773;   ≠ &amp;ne; &amp;#8800; ≡ &amp;equiv; &amp;#8801; ≤ &amp;le; &amp;#8804;   ≥ &amp;ge; &amp;#8805; ⊂ &amp;sub; &amp;#8834; ⊃ &amp;sup; &amp;#8835;   ⊄ &amp;nsub; &amp;#8836; ⊆ &amp;sube; &amp;#8838; ⊇ &amp;supe; &amp;#8839;   ⊕ &amp;oplus; &amp;#8853; ⊗ &amp;otimes; &amp;#8855; ⊥ &amp;perp; &amp;#8869;   ⋅ &amp;sdot; &amp;#8901; ⌈ &amp;lceil; &amp;#8968; ⌉ &amp;rceil; &amp;#8969;   ⌊ &amp;lfloor; &amp;#8970; ⌋ &amp;rfloor; &amp;#8971; ◊ &amp;loz; &amp;#9674;   ♠ &amp;spades; &amp;#9824; ♣ &amp;clubs; &amp;#9827; ♥ &amp;hearts; &amp;#9829;   ♦ &amp;diams; &amp;#9830;  &amp;nbsp; &amp;#160; ¡ &amp;iexcl; &amp;#161;   ¢ &amp;cent; &amp;#162; £ &amp;pound; &amp;#163; ¤ &amp;curren; &amp;#164;   ¥ &amp;yen; &amp;#165; ¦ &amp;brvbar; &amp;#166; § &amp;sect; &amp;#167;   ¨ &amp;uml; &amp;#168; © &amp;copy; &amp;#169; ª &amp;ordf; &amp;#170;   « &amp;laquo; &amp;#171; ¬ &amp;not; &amp;#172; ­ &amp;shy; &amp;#173;   ® &amp;reg; &amp;#174; ¯ &amp;macr; &amp;#175; ° &amp;deg; &amp;#176;   ± &amp;plusmn; &amp;#177; ² &amp;sup2; &amp;#178; ³ &amp;sup3; &amp;#179;   ´ &amp;acute; &amp;#180; µ &amp;micro; &amp;amp;#181 &amp;ldquo; &amp;quot; &amp;#34;   &amp;lt; &amp;lt; &amp;#60; &amp;gt; &amp;gt; &amp;#62; &amp;lsquo;  &amp;#39;    </description>
+      <description>   特殊符号 命名实体 十进制编码 特殊符号 命名实体 十进制编码 特殊符号 命名实体 十进制编码     Α &amp;amp;Alpha; &amp;amp;#913; Β &amp;amp;Beta; &amp;amp;#914; Γ &amp;amp;Gamma; &amp;amp;#915;   Δ &amp;amp;Delta; &amp;amp;#916; Ε &amp;amp;Epsilon; &amp;amp;#917; Ζ &amp;amp;Zeta; &amp;amp;#918;   Η &amp;amp;Eta; &amp;amp;#919; Θ &amp;amp;Theta; &amp;amp;#920; Ι &amp;amp;Iota; &amp;amp;#921;   Κ &amp;amp;Kappa; &amp;amp;#922; Λ &amp;amp;Lambda; &amp;amp;#923; Μ &amp;amp;Mu; &amp;amp;#924;   Ν &amp;amp;Nu; &amp;amp;#925; Ξ &amp;amp;Xi; &amp;amp;#926; Ο &amp;amp;Omicron; &amp;amp;#927;   Π &amp;amp;Pi; &amp;amp;#928; Ρ &amp;amp;Rho; &amp;amp;#929; Σ &amp;amp;Sigma; &amp;amp;#931;   Τ &amp;amp;Tau; &amp;amp;#932; Υ &amp;amp;Upsilon; &amp;amp;#933; Φ &amp;amp;Phi; &amp;amp;#934;   Χ &amp;amp;Chi; &amp;amp;#935; Ψ &amp;amp;Psi; &amp;amp;#936; Ω &amp;amp;Omega; &amp;amp;#937;   α &amp;amp;alpha; &amp;amp;#945; β &amp;amp;beta; &amp;amp;#946; γ &amp;amp;gamma; &amp;amp;#947;   δ &amp;amp;delta; &amp;amp;#948; ε &amp;amp;epsilon; &amp;amp;#949; ζ &amp;amp;zeta; &amp;amp;#950;   η &amp;amp;eta; &amp;amp;#951; θ &amp;amp;theta; &amp;amp;#952; ι &amp;amp;iota; &amp;amp;#953;   κ &amp;amp;kappa; &amp;amp;#954; λ &amp;amp;lambda; &amp;amp;#955; μ &amp;amp;mu; &amp;amp;#956;   ν &amp;amp;nu; &amp;amp;#957; ξ &amp;amp;xi; &amp;amp;#958; ο &amp;amp;omicron; &amp;amp;#959;   π &amp;amp;pi; &amp;amp;#960; ρ &amp;amp;rho; &amp;amp;#961; ς &amp;amp;sigmaf; &amp;amp;#962;   σ &amp;amp;sigma; &amp;amp;#963; τ &amp;amp;tau; &amp;amp;#964; υ &amp;amp;upsilon; &amp;amp;#965;   φ &amp;amp;phi; &amp;amp;#966; χ &amp;amp;chi; &amp;amp;#967; ψ &amp;amp;psi; &amp;amp;#968;   ω &amp;amp;omega; &amp;amp;#969; ϑ &amp;amp;thetasym; &amp;amp;#977; ϒ &amp;amp;upsih; &amp;amp;#978;   ϖ &amp;amp;piv; &amp;amp;#982; • &amp;amp;bull; &amp;amp;#8226; … &amp;amp;hellip; &amp;amp;#8230;   ′ &amp;amp;prime; &amp;amp;#8242; ″ &amp;amp;Prime; &amp;amp;#8243; ‾ &amp;amp;oline; &amp;amp;#8254;   ⁄ &amp;amp;frasl; &amp;amp;#8260; ℘ &amp;amp;weierp; &amp;amp;#8472; ℑ &amp;amp;image; &amp;amp;#8465;   ℜ &amp;amp;real; &amp;amp;#8476; ™ &amp;amp;trade; &amp;amp;#8482; ℵ &amp;amp;alefsym; &amp;amp;#8501;   ← &amp;amp;larr; &amp;amp;#8592; ↑ &amp;amp;uarr; &amp;amp;#8593; → &amp;amp;rarr; &amp;amp;#8594;   ↓ &amp;amp;darr; &amp;amp;#8595; ↔ &amp;amp;harr; &amp;amp;#8596; ↵ &amp;amp;crarr; &amp;amp;#8629;   ⇐ &amp;amp;lArr; &amp;amp;#8656; ⇑ &amp;amp;uArr; &amp;amp;#8657; ⇒ &amp;amp;rArr; &amp;amp;#8658;   ⇓ &amp;amp;dArr; &amp;amp;#8659; ⇔ &amp;amp;hArr; &amp;amp;#8660; ∀ &amp;amp;forall; &amp;amp;#8704;   ∂ &amp;amp;part; &amp;amp;#8706; ∃ &amp;amp;exist; &amp;amp;#8707; ∅ &amp;amp;empty; &amp;amp;#8709;   ∇ &amp;amp;nabla; &amp;amp;#8711; ∈ &amp;amp;isin; &amp;amp;#8712; ∉ &amp;amp;notin; &amp;amp;#8713;   ∋ &amp;amp;ni; &amp;amp;#8715; ∏ &amp;amp;prod; &amp;amp;#8719; ∑ &amp;amp;sum; &amp;amp;#8722;   − &amp;amp;minus; &amp;amp;#8722; ∗ &amp;amp;lowast; &amp;amp;#8727; √ &amp;amp;radic; &amp;amp;#8730;   ∝ &amp;amp;prop; &amp;amp;#8733; ∞ &amp;amp;infin; &amp;amp;#8734; ∠ &amp;amp;ang; &amp;amp;#8736;   ∧ &amp;amp;and; &amp;amp;#8869; ∨ &amp;amp;or; &amp;amp;#8870; ∩ &amp;amp;cap; &amp;amp;#8745;   ∪ &amp;amp;cup; &amp;amp;#8746; ∫ &amp;amp;int; &amp;amp;#8747; ∴ &amp;amp;there4; &amp;amp;#8756;   ∼ &amp;amp;sim; &amp;amp;#8764; ≅ &amp;amp;cong; &amp;amp;#8773; ≈ &amp;amp;asymp; &amp;amp;#8773;   ≠ &amp;amp;ne; &amp;amp;#8800; ≡ &amp;amp;equiv; &amp;amp;#8801; ≤ &amp;amp;le; &amp;amp;#8804;   ≥ &amp;amp;ge; &amp;amp;#8805; ⊂ &amp;amp;sub; &amp;amp;#8834; ⊃ &amp;amp;sup; &amp;amp;#8835;   ⊄ &amp;amp;nsub; &amp;amp;#8836; ⊆ &amp;amp;sube; &amp;amp;#8838; ⊇ &amp;amp;supe; &amp;amp;#8839;   ⊕ &amp;amp;oplus; &amp;amp;#8853; ⊗ &amp;amp;otimes; &amp;amp;#8855; ⊥ &amp;amp;perp; &amp;amp;#8869;   ⋅ &amp;amp;sdot; &amp;amp;#8901; ⌈ &amp;amp;lceil; &amp;amp;#8968; ⌉ &amp;amp;rceil; &amp;amp;#8969;   ⌊ &amp;amp;lfloor; &amp;amp;#8970; ⌋ &amp;amp;rfloor; &amp;amp;#8971; ◊ &amp;amp;loz; &amp;amp;#9674;   ♠ &amp;amp;spades; &amp;amp;#9824; ♣ &amp;amp;clubs; &amp;amp;#9827; ♥ &amp;amp;hearts; &amp;amp;#9829;   ♦ &amp;amp;diams; &amp;amp;#9830;  &amp;amp;nbsp; &amp;amp;#160; ¡ &amp;amp;iexcl; &amp;amp;#161;   ¢ &amp;amp;cent; &amp;amp;#162; £ &amp;amp;pound; &amp;amp;#163; ¤ &amp;amp;curren; &amp;amp;#164;   ¥ &amp;amp;yen; &amp;amp;#165; ¦ &amp;amp;brvbar; &amp;amp;#166; § &amp;amp;sect; &amp;amp;#167;   ¨ &amp;amp;uml; &amp;amp;#168; © &amp;amp;copy; &amp;amp;#169; ª &amp;amp;ordf; &amp;amp;#170;   « &amp;amp;laquo; &amp;amp;#171; ¬ &amp;amp;not; &amp;amp;#172; ­ &amp;amp;shy; &amp;amp;#173;   ® &amp;amp;reg; &amp;amp;#174; ¯ &amp;amp;macr; &amp;amp;#175; ° &amp;amp;deg; &amp;amp;#176;   ± &amp;amp;plusmn; &amp;amp;#177; ² &amp;amp;sup2; &amp;amp;#178; ³ &amp;amp;sup3; &amp;amp;#179;   ´ &amp;amp;acute; &amp;amp;#180; µ &amp;amp;micro; `&amp;amp;#181 &amp;ldquo; &amp;amp;quot; &amp;amp;#34;   &amp;lt; &amp;amp;lt; &amp;amp;#60; &amp;gt; &amp;amp;gt; &amp;amp;#62; &amp;lsquo;  &amp;amp;#39;    </description>
     </item>
     
     <item>
@@ -2135,7 +2176,7 @@ db.&amp;lt;collection_name&amp;gt;.aggregate([ {$match:key}, {$group:{_id:$&amp;
       <pubDate>Wed, 04 Jul 2018 14:22:18 +0800</pubDate>
       
       <guid>https://mannuan.github.io/post/20180704142218/</guid>
-      <description>联系方式  手机：13588796263 Email：wujunleiwang@gmail.com 微信号：bubaizhansheng  个人信息   吴俊磊/男/1994 本科/西南民族大学-网络工程专业 硕士/杭州电子科技大学-计算机科学与技术专业 技术博客：https://mannuan.github.io Github：http://github.com/mannuan 期望职位：Web前端初级程序员 期望城市：杭州       校园项目经历 研究生期间 智慧旅游 (2018年3月~2018年8月) 我主要负责爬虫管理系统的搭建，包括写爬虫脚本和网站的搭建。在这个项目中，我遭遇了严格的反爬、网页动态加载和登录验证等难题。针对于网页动态加载的问题，我专门花费了两个月时间开发了一个beryllium的python库。为了解决反爬问题，我结合使用了ip代理池和爬虫策略。然后，我使用加载cookie的方式，躲避了登录验证。由于涉及到的爬虫方案比较复杂且不利于维护。我专门动手设计了一套爬虫管理系统，后台使用django，前端使用dataTable等框架实现。使用的是mongodb数据库，我使用了aggregate聚合的方式。该项目上线以后，基本上每天可以稳定地爬取几万条数据，在十几万条数据中，查询花费的时间基本不超过3秒。
+      <description>联系方式  手机：13588796263 Email：wujunleiwang@gmail.com 微信号：bubaizhansheng  个人信息   吴俊磊/男/1994 本科/西南民族大学/网络工程 硕士/杭州电子科技大学/计算机科学与技术 技术博客：https://mannuan.github.io Github：http://github.com/mannuan 期望职位：Web前端初级程序员 期望城市：杭州       校园项目经历 研究生期间 智慧旅游 (2018年3月~2018年8月) 我主要负责爬虫管理系统的搭建，包括爬虫脚本和网站的搭建。在这个项目中，我遭遇了严格的反爬、网页动态加载和登录验证等难题。针对于网页动态加载的问题，我选择使用selenium作为爬虫的引擎。由于专门花费了两个月时间开发了一个beryllium的python库。为了解决反爬问题，我结合使用了ip代理池和爬虫策略。然后，我使用加载cookie的方式，躲避了登录验证。由于涉及到的爬虫方案比较复杂且不利于维护。我专门动手设计了一套爬虫管理系统，后台使用django，前端使用dataTable等框架实现。使用的是mongodb数据库，我使用了aggregate聚合的方式。该项目上线以后，基本上每天可以稳定地爬取几万条数据，在十几万条数据中，查询花费的时间基本不超过3秒。
 河长信息管理系统 (2017年10月~2018年3月) 在这个项目中，我不但完成了数据爬虫、数据接口开发工作，还针对不同的网站总结出了一套通用的爬虫脚本模板，有效的加快了开发的进度。同时，我为了避免被网站反爬，制定了一套爬虫策略。在该系统上线以后，每天都可以稳定地获取到最新的数据。
 本科阶段 基于LLDP协议捎带式服务质量采集机制(QoS over LLDP) (2016年3月~2017年3月) 这是一个软件定义网络领域的创新项目，我在这个项目中主要负责研究如何让LLDP协议的数据包来承载QoS信息，使得在不占用网络带宽的情况下，获取实时的网络QoS信息。为了实现这个方案，我使用了floodlight+vswitch的技术栈。其中，我在floodlight中创建了一个模块来修改LLDP数据包的结构，为QoS信息开辟了一段存储空间，然后，在vswitch中LLDP的解包阶段，把交换机自身的QoS信息填写到LLDP数据包中。这套解决方案关键的难点在于如何把QoS信息填写到数据包中，但是网上没有这方面的资料，为了解决这个难题我花费了两个月的时间来阅读vswitch的源代码。在8月份我的这个项目参加了第三届全国高校软件定义网络（SDN）应用创新开发大赛获得了二等奖。最后，我和我的导师通过这个项目发表了一篇sci-4区的论文—The Top-K QoS-aware Paths Discovery for Source Routing in SDN. 我对这篇论文的主要贡献就是提供实验数据。
 技能清单 以下均为我熟练使用的技能

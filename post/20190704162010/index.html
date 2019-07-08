@@ -2,13 +2,23 @@
 <html lang='en'><head>
   <meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
-<meta name='description' content='Representing Social Media Users for Sarcasm Detection  用于讽刺检测的社交媒体用户的特征表示
- 摘要 在上下文讽刺检测的背景下，两种表示作则特征的方式： * 使用贝叶斯的方式直接表示作者的讽刺倾向； * 密集向量嵌入可以学习到作者和文本之间的交互； * 使用reddit评论的SARC数据集，双向的rnn可以提高性能； *'>
+<meta name='description' content=' Representing Social Media Users for Sarcasm Detection  用于讽刺检测的社交媒体用户的特征表示
+ 摘要 在上下文讽刺检测的背景下，两种表示作则特征的方式：
+ 使用贝叶斯的方式直接表示作者的讽刺倾向；
+ 密集向量嵌入可以学习到作者和文本之间的交互；
+ 使用reddit评论的SARC数据集，双向的rnn可以提高性能；
+  贝叶斯的方法在同质的上下文中是足够的，密集的向量嵌入是有价值的 the Bayesian approach suffices in homogeneous contexts, whereas the added power of the dense embeddings proves valuable in more diverse ones. 
+  '>
 <meta name='theme-color' content='#FFC000'>
 
 <meta property='og:title' content='Representing Social Media Users for Sarcasm Detection论文翻译和解读 • mannuan'>
-<meta property='og:description' content='Representing Social Media Users for Sarcasm Detection  用于讽刺检测的社交媒体用户的特征表示
- 摘要 在上下文讽刺检测的背景下，两种表示作则特征的方式： * 使用贝叶斯的方式直接表示作者的讽刺倾向； * 密集向量嵌入可以学习到作者和文本之间的交互； * 使用reddit评论的SARC数据集，双向的rnn可以提高性能； *'>
+<meta property='og:description' content=' Representing Social Media Users for Sarcasm Detection  用于讽刺检测的社交媒体用户的特征表示
+ 摘要 在上下文讽刺检测的背景下，两种表示作则特征的方式：
+ 使用贝叶斯的方式直接表示作者的讽刺倾向；
+ 密集向量嵌入可以学习到作者和文本之间的交互；
+ 使用reddit评论的SARC数据集，双向的rnn可以提高性能；
+  贝叶斯的方法在同质的上下文中是足够的，密集的向量嵌入是有价值的 the Bayesian approach suffices in homogeneous contexts, whereas the added power of the dense embeddings proves valuable in more diverse ones. 
+  '>
 <meta property='og:url' content='https://mannuan.github.io/post/20190704162010/'>
 <meta property='og:site_name' content='mannuan'>
 <meta property='og:type' content='article'><meta property='og:image' content='https://www.gravatar.com/avatar/8bacfd69855171c6f53247456732f68a?s=256'><meta property='article:section' content='post'><meta property='article:tag' content='翻译'><meta property='article:tag' content='反讽'><meta property='article:tag' content='解读'><meta property='article:published_time' content='2019-07-04T16:20:10&#43;08:00'/><meta property='article:modified_time' content='2019-07-04T16:20:10&#43;08:00'/><meta name='twitter:card' content='summary'>
@@ -178,6 +188,8 @@
       </li><li>
         <a href='/tags/html5/' style='font-size:1em'>html5</a>
       </li><li>
+        <a href='/tags/html%E6%A0%87%E7%AD%BE/' style='font-size:1em'>html标签</a>
+      </li><li>
         <a href='/tags/https/' style='font-size:1.0212765957446808em'>https</a>
       </li><li>
         <a href='/tags/http%E7%BC%93%E5%AD%98/' style='font-size:1em'>http缓存</a>
@@ -318,6 +330,8 @@
       </li><li>
         <a href='/tags/table%E6%A0%87%E7%AD%BE/' style='font-size:1em'>table标签</a>
       </li><li>
+        <a href='/tags/tcp/' style='font-size:1em'>TCP</a>
+      </li><li>
         <a href='/tags/text%E7%B1%BB%E5%9E%8B/' style='font-size:1em'>text类型</a>
       </li><li>
         <a href='/tags/this/' style='font-size:1em'>this</a>
@@ -338,6 +352,8 @@
       </li><li>
         <a href='/tags/ubuntu/' style='font-size:1em'>ubuntu</a>
       </li><li>
+        <a href='/tags/udp/' style='font-size:1em'>UDP</a>
+      </li><li>
         <a href='/tags/uefi/' style='font-size:1em'>uefi</a>
       </li><li>
         <a href='/tags/unidentified-developer/' style='font-size:1em'>unidentified developer</a>
@@ -350,13 +366,15 @@
       </li><li>
         <a href='/tags/val/' style='font-size:1em'>val</a>
       </li><li>
-        <a href='/tags/valueof/' style='font-size:1.0212765957446808em'>valueOf</a>
+        <a href='/tags/valueof/' style='font-size:1.0212765957446808em'>valueof</a>
       </li><li>
         <a href='/tags/vlan/' style='font-size:1.0212765957446808em'>VLAN</a>
       </li><li>
         <a href='/tags/vscode/' style='font-size:1.0212765957446808em'>vscode</a>
       </li><li>
         <a href='/tags/vue/' style='font-size:1.0212765957446808em'>vue</a>
+      </li><li>
+        <a href='/tags/web-service%E8%A7%84%E8%8C%83/' style='font-size:1em'>web service规范</a>
       </li><li>
         <a href='/tags/webpack/' style='font-size:1em'>webpack</a>
       </li><li>
@@ -401,6 +419,8 @@
         <a href='/tags/%E5%8F%AC%E5%9B%9E%E7%8E%87/' style='font-size:1em'>召回率</a>
       </li><li>
         <a href='/tags/%E5%90%8C%E6%AD%A5/' style='font-size:1em'>同步</a>
+      </li><li>
+        <a href='/tags/%E5%90%8E%E5%BA%8F%E9%81%8D%E5%8E%86/' style='font-size:1em'>后序遍历</a>
       </li><li>
         <a href='/tags/%E5%90%AC%E5%8A%9B/' style='font-size:1em'>听力</a>
       </li><li>
@@ -657,11 +677,17 @@ One min read
 
 <h2 id="摘要">摘要</h2>
 
-<p>在上下文讽刺检测的背景下，两种表示作则特征的方式：
-* 使用贝叶斯的方式直接表示作者的讽刺倾向；
-* 密集向量嵌入可以学习到作者和文本之间的交互；
-* 使用reddit评论的SARC数据集，双向的rnn可以提高性能；
-*</p>
+<p>在上下文讽刺检测的背景下，两种表示作则特征的方式：</p>
+
+<ul>
+<li>使用贝叶斯的方式直接表示作者的讽刺倾向；<br></li>
+<li>密集向量嵌入可以学习到作者和文本之间的交互；<br></li>
+<li>使用reddit评论的SARC数据集，双向的rnn可以提高性能；<br></li>
+<li><p><ruby>
+<rt style="font-size: 14px">贝叶斯的方法在同质的上下文中是足够的，密集的向量嵌入是有价值的</rt>
+the Bayesian approach suffices in homogeneous contexts, whereas the added power of the dense embeddings proves valuable in more diverse ones.
+<ruby></p></li>
+</ul>
 
 </div>
 
