@@ -5,23 +5,20 @@
     <link>https://mannuan.github.io/tags/node/</link>
     <description>Recent content in node on mannuan</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 28 Jun 2019 10:40:30 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 28 Jun 2019 15:25:12 +0800</lastBuildDate>
     
 	<atom:link href="https://mannuan.github.io/tags/node/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>npm WARN checkPermissions Missing write access to /usr/local/lib/node_modules</title>
-      <link>https://mannuan.github.io/post/20190628104030/</link>
-      <pubDate>Fri, 28 Jun 2019 10:40:30 +0800</pubDate>
+      <title>nodejs安装教程（完美避坑，适用于mac和linux）</title>
+      <link>https://mannuan.github.io/post/20190628152512/</link>
+      <pubDate>Fri, 28 Jun 2019 15:25:12 +0800</pubDate>
       
-      <guid>https://mannuan.github.io/post/20190628104030/</guid>
-      <description> 原因分析  详看错误提示：npm ERR! Error: EACCES: permission denied, access &amp;lsquo;/usr/local/lib/node_modules&amp;rsquo; 推测当前用户没有对&amp;rdquo;node_modules&amp;rdquo;的写入权限
- 验证推测 &amp;gt;&amp;gt; ls -lth /usr/local/lib/node_modules total 0 drwxr-xr-x 24 root wheel 768B May 29 05:21 npm  观看上面的结果推测成立
-解决方案 方案一（不推荐） 修改&amp;rdquo;node_modules&amp;rdquo;的权限，增加”写入“权限；
-sudo chmod 775 /usr/local/lib/node_modules  并不推荐这种方案，因为这个目录完全不会有root用户进行访问
- 方案二 （推荐） 改变&amp;rdquo;node_nodules&amp;rdquo;目录的拥有者
-sudo chown -R $USER /usr/local/lib/node_modules</description>
+      <guid>https://mannuan.github.io/post/20190628152512/</guid>
+      <description>安装nodejs mac端 brew install node 如果安装速度慢，可以到nodejs官网下载pkg安装包；
+linux端 sudo apt-get install nodejs 检查安装 node -v npm -v 修改node_modules目录权限 教程
+添加node_modules路径 教程</description>
     </item>
     
   </channel>

@@ -5,10 +5,43 @@
     <link>https://mannuan.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/</link>
     <description>Recent content in 前端开发 on mannuan</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 08 Jul 2019 14:18:34 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 10 Jul 2019 11:02:42 +0800</lastBuildDate>
     
 	<atom:link href="https://mannuan.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>javascript数组</title>
+      <link>https://mannuan.github.io/post/20190710110242/</link>
+      <pubDate>Wed, 10 Jul 2019 11:02:42 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190710110242/</guid>
+      <description>与 Java 、PHP 等语言不同，在 JavaScript 中，数组其实是一种特殊的对象。
+数组的创建与读写 以下两种方式都可创建数组：
+// 字面量方式,常用 var num = [1,5,6,10]; print(num.length); // 4  // 构造函数方式 var num = new Array(1,5,6,10); print(num.length); // 4  值得注意的是，JavaScript 中的数组数据可以是不同类型，它的语法相对宽松，例如可以指定不同类型数据var example = [1,&amp;quot;Mike&amp;quot;,true,null];另外，可以通过Array.isArray()来判断一个对象是否是数组，例如：
+var num = [1,5,6,10]; print(Array.isArray(num)); // true  如何读写数组呢？可以使用循环。
+var num = [1,5,6,10]; for (var i = 0; i &amp;lt; num.length; i++) { console.log(num[i]+&amp;#34; &amp;#34;); }  数组的深复制与浅复制 当我们把数组赋给另外一个数组，然后改变其中一个数组的值，另一数组也会随之改变，这就是数组的浅复制。而深复制指的就是不改变原来的数组而去创建一个新的数组，这种情况是经常使用的，为了不破坏原数组。下面的代码展示了这两种复制
+// 浅复制 var num = [1,2,3,4,5]; var newNum = num; num[0] = 10; console.</description>
+    </item>
+    
+    <item>
+      <title>HTML速查列表</title>
+      <link>https://mannuan.github.io/post/20190710104402/</link>
+      <pubDate>Wed, 10 Jul 2019 10:44:02 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190710104402/</guid>
+      <description>HTML 速查列表   HTML 速查列表. 你可以打印它，以备日常使用。
+ HTML 基本文档 &amp;lt;!DOCTYPEhtml&amp;gt;&amp;lt;html&amp;gt;&amp;lt;head&amp;gt;&amp;lt;title&amp;gt;文档标题&amp;lt;/title&amp;gt;&amp;lt;/head&amp;gt;&amp;lt;body&amp;gt;可见文本... &amp;lt;/body&amp;gt;&amp;lt;/html&amp;gt;    基本标签（Basic Tags） &amp;lt;h1&amp;gt;最大的标题&amp;lt;/h1&amp;gt;&amp;lt;h2&amp;gt;. . . &amp;lt;/h2&amp;gt;&amp;lt;h3&amp;gt;. . . &amp;lt;/h3&amp;gt;&amp;lt;h4&amp;gt;. . . &amp;lt;/h4&amp;gt;&amp;lt;h5&amp;gt;. . . &amp;lt;/h5&amp;gt;&amp;lt;h6&amp;gt;最小的标题&amp;lt;/h6&amp;gt;&amp;lt;p&amp;gt;这是一个段落。&amp;lt;/p&amp;gt;&amp;lt;br&amp;gt;（换行） &amp;lt;hr&amp;gt;（水平线） &amp;lt;!--这是注释 --&amp;gt;    文本格式化（Formatting） &amp;lt;b&amp;gt;粗体文本&amp;lt;/b&amp;gt;&amp;lt;code&amp;gt;计算机代码&amp;lt;/code&amp;gt;&amp;lt;em&amp;gt;强调文本&amp;lt;/em&amp;gt;&amp;lt;i&amp;gt;斜体文本&amp;lt;/i&amp;gt;&amp;lt;kbd&amp;gt;键盘输入&amp;lt;/kbd&amp;gt;&amp;lt;pre&amp;gt;预格式化文本&amp;lt;/pre&amp;gt;&amp;lt;small&amp;gt;更小的文本&amp;lt;/small&amp;gt;&amp;lt;strong&amp;gt;重要的文本&amp;lt;/strong&amp;gt;&amp;lt;abbr&amp;gt;（缩写） &amp;lt;address&amp;gt;（联系信息） &amp;lt;bdo&amp;gt;（文字方向） &amp;lt;blockquote&amp;gt;（从另一个源引用的部分） &amp;lt;cite&amp;gt;（工作的名称） &amp;lt;del&amp;gt;（删除的文本） &amp;lt;ins&amp;gt;（插入的文本） &amp;lt;sub&amp;gt;（下标文本） &amp;lt;sup&amp;gt;（上标文本）    链接（Links） 普通的链接：&amp;lt;ahref=&#34;http://www.example.com/&#34;&amp;gt;链接文本&amp;lt;/a&amp;gt;图像链接： &amp;lt;ahref=&#34;http://www.example.com/&#34;&amp;gt;&amp;lt;imgsrc=&#34;URL&#34;alt=&#34;替换文本&#34;&amp;gt;&amp;lt;/a&amp;gt;邮件链接： &amp;lt;ahref=&#34;mailto:webmaster@example.com&#34;&amp;gt;发送e-mail&amp;lt;/a&amp;gt;书签： &amp;lt;aid=&#34;tips&#34;&amp;gt;提示部分&amp;lt;/a&amp;gt;&amp;lt;ahref=&#34;#tips&#34;&amp;gt;跳到提示部分&amp;lt;/a&amp;gt;    图片（Images） &amp;lt;imgsrc=&#34;URL&#34;alt=&#34;替换文本&#34;height=&#34;42&#34;width=&#34;42&#34;&amp;gt;    样式/区块（Styles/Sections） &amp;lt;styletype=&#34;text/css&#34;&amp;gt; h1{color:red;}p{color:blue;} &amp;lt;/style&amp;gt;&amp;lt;div&amp;gt;文档中的块级元素&amp;lt;/div&amp;gt;&amp;lt;span&amp;gt;文档中的内联元素&amp;lt;/span&amp;gt;    无序列表 &amp;lt;ul&amp;gt;&amp;lt;li&amp;gt;项目&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;项目&amp;lt;/li&amp;gt;&amp;lt;/ul&amp;gt;    有序列表 &amp;lt;ol&amp;gt;&amp;lt;li&amp;gt;第一项&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;第二项&amp;lt;/li&amp;gt;&amp;lt;/ol&amp;gt;    定义列表 &amp;lt;dl&amp;gt;&amp;lt;dt&amp;gt;项目 1&amp;lt;/dt&amp;gt;&amp;lt;dd&amp;gt;描述项目 1&amp;lt;/dd&amp;gt;&amp;lt;dt&amp;gt;项目 2&amp;lt;/dt&amp;gt;&amp;lt;dd&amp;gt;描述项目 2&amp;lt;/dd&amp;gt;&amp;lt;/dl&amp;gt;    表格（Tables） &amp;lt;tableborder=&#34;</description>
+    </item>
+    
+    <item>
+      <title>HTML标签的全局属性</title>
+      <link>https://mannuan.github.io/post/20190710101926/</link>
+      <pubDate>Wed, 10 Jul 2019 10:19:27 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190710101926/</guid>
+      <description> span.new { float: right; color: #fff; background-color: #90b575; font-weight: 700; padding-left: 1px; padding-right: 1px; border: 1px solid #fff; outline: 1px solid #90b575; line-height: 16px; }    属性 描述   accesskey 设置访问元素的键盘快捷键。   class 规定元素的类名（classname）   contenteditableNew 规定是否可编辑元素的内容。   contextmenuNew 指定一个元素的上下文菜单。当用户右击该元素，出现上下文菜单   data-*New 用于存储页面的自定义数据   dir 设置元素中内容的文本方向。   draggableNew 指定某个元素是否可以拖动   dropzoneNew 指定是否将数据复制，移动，或链接，或删除   hiddenNew hidden 属性规定对元素进行隐藏。   id 规定元素的唯一 id   lang 设置元素中内容的语言代码。   spellcheckNew 检测元素是否拼写错误   style 规定元素的行内样式（inline style）   tabindex 设置元素的 Tab 键控制次序。   title 规定元素的额外信息（可在工具提示中显示）   translateNew 指定是否一个元素的值在页面载入时是否需要翻译    </description>
+    </item>
     
     <item>
       <title>UDP和TCP协议</title>
@@ -20,12 +53,13 @@
     </item>
     
     <item>
-      <title>HTML标签</title>
+      <title>常用的HTML标签整理</title>
       <link>https://mannuan.github.io/post/20190708085133/</link>
       <pubDate>Mon, 08 Jul 2019 08:51:33 +0800</pubDate>
       
       <guid>https://mannuan.github.io/post/20190708085133/</guid>
-      <description>   功能标签组合     定义注释或音标  &amp;lt;ruby&amp;gt;&amp;lt;/ruby&amp;gt;     </description>
+      <description>标签部分先后顺序，按照收录的先后顺序
+ ruby标签 用来注释中文注音或字符。</description>
     </item>
     
     <item>

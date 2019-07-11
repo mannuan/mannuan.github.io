@@ -5,10 +5,19 @@
     <link>https://mannuan.github.io/categories/linux/</link>
     <description>Recent content in linux on mannuan</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 17 Jun 2019 14:56:15 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 10 Jul 2019 15:39:11 +0800</lastBuildDate>
     
 	<atom:link href="https://mannuan.github.io/categories/linux/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>vim常用命令</title>
+      <link>https://mannuan.github.io/post/20190710153911/</link>
+      <pubDate>Wed, 10 Jul 2019 15:39:11 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190710153911/</guid>
+      <description>   功能 命令      打开快捷命令窗口      </description>
+    </item>
     
     <item>
       <title>linux 和windows下使用ffmpeg将mkv转换为mp4</title>
@@ -93,16 +102,16 @@ c.NotebookApp.password = &amp;#39;sha1:da00fa1e950a:0adb64c8359ef97932e5dde02d61
     </item>
     
     <item>
-      <title>dpkg error: package `x&#39; contains empty filename，Sub-process /usr/bin/dpkg returned an error code (2)</title>
+      <title>dpkg error package `x&#39; contains empty filename</title>
       <link>https://mannuan.github.io/post/20190513111048/</link>
       <pubDate>Mon, 13 May 2019 11:10:48 +0800</pubDate>
       
       <guid>https://mannuan.github.io/post/20190513111048/</guid>
-      <description>后面的错误“Sub-process /usr/bin/dpkg returned an error code (2)”是由于前面的一个错误引起的
+      <description>原因分析 后面的错误Sub-process /usr/bin/dpkg returned an error code (2)是由于前面的一个错误引起的
 因此，只需要解决前面的错误就行了
-解决这个错误其实很简单，只需要理解前面一个错误里面的&amp;rdquo;empty filename&amp;rdquo;就行了
+查找资料 解决这个错误其实很简单，只需要理解前面一个错误里面的empty filename就行了
 我看过很多教程，说只要删除/var/lib/dpkg/info/x.list就可以了，我试过，每次删除，之后这个目录下面都会重新生成x.list文件
-之后我找到解决方案，发现只要把x.list改为x.list.broke就可以了，之后就没有&amp;rdquo;empty filename的报错&amp;rdquo;</description>
+解决方案 之后我找到解决方案，发现只要把x.list改为x.list.broke就可以了，之后就没有empty filename的报错&amp;rdquo;</description>
     </item>
     
     <item>

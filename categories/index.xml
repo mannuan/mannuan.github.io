@@ -5,17 +5,80 @@
     <link>https://mannuan.github.io/categories/</link>
     <description>Recent content in Categories on mannuan</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 08 Jul 2019 14:18:34 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 11 Jul 2019 10:35:32 +0800</lastBuildDate>
     
 	<atom:link href="https://mannuan.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>vscode</title>
+      <link>https://mannuan.github.io/categories/vscode/</link>
+      <pubDate>Thu, 11 Jul 2019 10:35:32 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/categories/vscode/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>翻墙</title>
+      <link>https://mannuan.github.io/categories/%E7%BF%BB%E5%A2%99/</link>
+      <pubDate>Wed, 10 Jul 2019 22:15:01 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/categories/%E7%BF%BB%E5%A2%99/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>软件使用</title>
+      <link>https://mannuan.github.io/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/</link>
+      <pubDate>Wed, 10 Jul 2019 22:15:01 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>linux</title>
+      <link>https://mannuan.github.io/categories/linux/</link>
+      <pubDate>Wed, 10 Jul 2019 15:39:11 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/categories/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>编辑器</title>
+      <link>https://mannuan.github.io/categories/%E7%BC%96%E8%BE%91%E5%99%A8/</link>
+      <pubDate>Wed, 10 Jul 2019 15:39:11 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/categories/%E7%BC%96%E8%BE%91%E5%99%A8/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>前端开发</title>
       <link>https://mannuan.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/</link>
-      <pubDate>Mon, 08 Jul 2019 14:18:34 +0800</pubDate>
+      <pubDate>Wed, 10 Jul 2019 11:02:42 +0800</pubDate>
       
       <guid>https://mannuan.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>写作</title>
+      <link>https://mannuan.github.io/categories/%E5%86%99%E4%BD%9C/</link>
+      <pubDate>Tue, 09 Jul 2019 17:02:02 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/categories/%E5%86%99%E4%BD%9C/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>论文</title>
+      <link>https://mannuan.github.io/categories/%E8%AE%BA%E6%96%87/</link>
+      <pubDate>Tue, 09 Jul 2019 17:02:02 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/categories/%E8%AE%BA%E6%96%87/</guid>
       <description></description>
     </item>
     
@@ -56,38 +119,11 @@
     </item>
     
     <item>
-      <title>论文</title>
-      <link>https://mannuan.github.io/categories/%E8%AE%BA%E6%96%87/</link>
-      <pubDate>Thu, 04 Jul 2019 16:20:10 +0800</pubDate>
-      
-      <guid>https://mannuan.github.io/categories/%E8%AE%BA%E6%96%87/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>软件使用</title>
-      <link>https://mannuan.github.io/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/</link>
-      <pubDate>Mon, 01 Jul 2019 20:42:46 +0800</pubDate>
-      
-      <guid>https://mannuan.github.io/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>计算机网络</title>
       <link>https://mannuan.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</link>
       <pubDate>Mon, 01 Jul 2019 19:46:42 +0800</pubDate>
       
       <guid>https://mannuan.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>翻墙</title>
-      <link>https://mannuan.github.io/categories/%E7%BF%BB%E5%A2%99/</link>
-      <pubDate>Sun, 30 Jun 2019 23:08:18 +0800</pubDate>
-      
-      <guid>https://mannuan.github.io/categories/%E7%BF%BB%E5%A2%99/</guid>
       <description></description>
     </item>
     
@@ -142,15 +178,6 @@
       <pubDate>Wed, 19 Jun 2019 22:31:31 +0800</pubDate>
       
       <guid>https://mannuan.github.io/categories/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>linux</title>
-      <link>https://mannuan.github.io/categories/linux/</link>
-      <pubDate>Mon, 17 Jun 2019 14:56:15 +0800</pubDate>
-      
-      <guid>https://mannuan.github.io/categories/linux/</guid>
       <description></description>
     </item>
     

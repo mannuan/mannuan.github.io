@@ -5,10 +5,95 @@
     <link>https://mannuan.github.io/post/</link>
     <description>Recent content in Blog on mannuan</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 08 Jul 2019 14:18:34 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 11 Jul 2019 10:35:32 +0800</lastBuildDate>
     
 	<atom:link href="https://mannuan.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>vscode snippet html template</title>
+      <link>https://mannuan.github.io/post/20190711103532/</link>
+      <pubDate>Thu, 11 Jul 2019 10:35:32 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190711103532/</guid>
+      <description>{ &amp;#34;vue&amp;#34;: { &amp;#34;prefix&amp;#34;: &amp;#34;vue-tl&amp;#34;, &amp;#34;body&amp;#34;: [ &amp;#34;&amp;lt;!DOCTYPE html&amp;gt;&amp;#34;, &amp;#34;&amp;lt;html lang=\&amp;#34;zh\&amp;#34;&amp;gt;&amp;#34;, &amp;#34;&amp;lt;head&amp;gt;&amp;#34;, &amp;#34; &amp;lt;meta charset=\&amp;#34;UTF-8\&amp;#34;&amp;gt;&amp;#34;, &amp;#34; &amp;lt;title&amp;gt;${1:$CURRENT_DATE}&amp;lt;/title&amp;gt;&amp;#34;, &amp;#34; &amp;lt;style type=\&amp;#34;text/css\&amp;#34;&amp;gt;&amp;#34;, &amp;#34; &amp;lt;/style&amp;gt;&amp;#34;, &amp;#34; &amp;lt;script src=\&amp;#34;https://cdn.staticfile.org/vue/2.2.2/vue.min.js\&amp;#34;&amp;gt;&amp;lt;/script&amp;gt;&amp;#34;, &amp;#34; &amp;lt;script src=\&amp;#34;https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js\&amp;#34;&amp;gt;&amp;lt;/script&amp;gt;&amp;#34;, &amp;#34; &amp;lt;script src=\&amp;#34;https://server.lab421.top/前端开发/我自己的js库/wlib.js\&amp;#34;&amp;gt;&amp;lt;/script&amp;gt;&amp;#34;, &amp;#34;&amp;lt;/head&amp;gt;&amp;#34;, &amp;#34;&amp;lt;body&amp;gt;&amp;#34;, &amp;#34;&amp;lt;/body&amp;gt;&amp;#34;, &amp;#34;&amp;lt;script&amp;gt;&amp;#34;, &amp;#34;var data = {};&amp;#34;, &amp;#34;var vm = new Vue({&amp;#34;, &amp;#34; el: &amp;#39;#app&amp;#39;,&amp;#34;, &amp;#34; data: data,&amp;#34;, &amp;#34; methods: {}&amp;#34;, &amp;#34;});&amp;#34;, &amp;#34;&amp;lt;/script&amp;gt;&amp;#34;, &amp;#34;&amp;lt;/html&amp;gt;&amp;#34;, ], &amp;#34;description&amp;#34;: &amp;#34;create a html frame&amp;#34;, }, &amp;#34;basic&amp;#34;: { &amp;#34;prefix&amp;#34;: &amp;#34;basic-tl&amp;#34;, &amp;#34;body&amp;#34;: [ &amp;#34;&amp;lt;!DOCTYPE html&amp;gt;&amp;#34;, &amp;#34;&amp;lt;html lang=\&amp;#34;zh\&amp;#34;&amp;gt;&amp;#34;, &amp;#34;&amp;lt;head&amp;gt;&amp;#34;, &amp;#34; &amp;lt;meta charset=\&amp;#34;UTF-8\&amp;#34;&amp;gt;&amp;#34;, &amp;#34; &amp;lt;title&amp;gt;${1:$CURRENT_DATE}&amp;lt;/title&amp;gt;&amp;#34;, &amp;#34;&amp;lt;/head&amp;gt;&amp;#34;, &amp;#34;&amp;lt;body&amp;gt;&amp;#34;, &amp;#34;&amp;lt;/body&amp;gt;&amp;#34;, &amp;#34;&amp;lt;/html&amp;gt;&amp;#34;, ], &amp;#34;description&amp;#34;: &amp;#34;create a html frame&amp;#34;, } }</description>
+    </item>
+    
+    <item>
+      <title>vscode snippet markdown template</title>
+      <link>https://mannuan.github.io/post/20190711103224/</link>
+      <pubDate>Thu, 11 Jul 2019 10:32:24 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190711103224/</guid>
+      <description>{ &amp;#34;table&amp;#34;: { &amp;#34;prefix&amp;#34;: &amp;#34;html-table-tl&amp;#34;, &amp;#34;body&amp;#34;: [ &amp;#34;&amp;lt;table&amp;gt;&amp;#34;, &amp;#34;&amp;lt;thead&amp;gt;&amp;#34;, &amp;#34;&amp;lt;tr&amp;gt;&amp;#34;, &amp;#34;&amp;lt;td&amp;gt;&amp;lt;/td&amp;gt;&amp;#34;, &amp;#34;&amp;lt;/tr&amp;gt;&amp;#34;, &amp;#34;&amp;lt;/thead&amp;gt;&amp;#34;, &amp;#34;&amp;lt;tbody&amp;gt;&amp;#34;, &amp;#34;&amp;lt;tr&amp;gt;&amp;#34;, &amp;#34;&amp;lt;td&amp;gt;&amp;lt;/td&amp;gt;&amp;#34;, &amp;#34;&amp;lt;/tr&amp;gt;&amp;#34;, &amp;#34;&amp;lt;/tbody&amp;gt;&amp;#34;, &amp;#34;&amp;lt;/table&amp;gt;&amp;#34; ], &amp;#34;description&amp;#34;: &amp;#34;create a html frame&amp;#34;, } }</description>
+    </item>
+    
+    <item>
+      <title>linux使用shadowsocks-qt5实现自动代理</title>
+      <link>https://mannuan.github.io/post/20190710221501/</link>
+      <pubDate>Wed, 10 Jul 2019 22:15:01 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190710221501/</guid>
+      <description>以ubuntu为例
+ 下载shadowsocks-qt5 打开链接, 点击Shadowsocks-Qt5-xxx-x86_64.AppImage文件下载
+赋予执行权限 sudo chmod +x Shadowsocks-Qt5-xxx-x86_64.AppImage 打开shadowsocks-qt5的两种方式  直接点击 命令行输入  ./Shadowsocks-Qt5-xxx-x86_64.AppImage 生成autoproxy.pac文件  由于在国内生成autoproxy.pac的速度很慢，为了加快这一过程，我们先用shadowsocks配置一个全局代理
+ 配置全局代理 依次点击ubuntu的设置&amp;gt;系统设置&amp;gt;网络&amp;gt;网络代理&amp;gt;手动
+然后把除了socks主机的所有其他行的选项都清空，端口无法清空，可以设置为0
+最后，点击应用到整个系统
+autoproxy.pac文件生成 pip install genpac genpac --pac-proxy &amp;#34;SOCKS5 127.0.0.1:1080&amp;#34; --gfwlist-proxy=&amp;#34;SOCKS5 127.0.0.1:1080&amp;#34; --gfwlist-url=https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt --output=&amp;#34;autoproxy.pac&amp;#34; 配置系统代理 关键一步，把autoproxy.pac使用本地http协议访问
+再次回到网络代理界面，选择自动，在配置URL的框中输入http://127.0.0.1/autoproxy.pac</description>
+    </item>
+    
+    <item>
+      <title>vim常用命令</title>
+      <link>https://mannuan.github.io/post/20190710153911/</link>
+      <pubDate>Wed, 10 Jul 2019 15:39:11 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190710153911/</guid>
+      <description>   功能 命令      打开快捷命令窗口      </description>
+    </item>
+    
+    <item>
+      <title>javascript数组</title>
+      <link>https://mannuan.github.io/post/20190710110242/</link>
+      <pubDate>Wed, 10 Jul 2019 11:02:42 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190710110242/</guid>
+      <description>与 Java 、PHP 等语言不同，在 JavaScript 中，数组其实是一种特殊的对象。
+数组的创建与读写 以下两种方式都可创建数组：
+// 字面量方式,常用 var num = [1,5,6,10]; print(num.length); // 4  // 构造函数方式 var num = new Array(1,5,6,10); print(num.length); // 4  值得注意的是，JavaScript 中的数组数据可以是不同类型，它的语法相对宽松，例如可以指定不同类型数据var example = [1,&amp;quot;Mike&amp;quot;,true,null];另外，可以通过Array.isArray()来判断一个对象是否是数组，例如：
+var num = [1,5,6,10]; print(Array.isArray(num)); // true  如何读写数组呢？可以使用循环。
+var num = [1,5,6,10]; for (var i = 0; i &amp;lt; num.length; i++) { console.log(num[i]+&amp;#34; &amp;#34;); }  数组的深复制与浅复制 当我们把数组赋给另外一个数组，然后改变其中一个数组的值，另一数组也会随之改变，这就是数组的浅复制。而深复制指的就是不改变原来的数组而去创建一个新的数组，这种情况是经常使用的，为了不破坏原数组。下面的代码展示了这两种复制
+// 浅复制 var num = [1,2,3,4,5]; var newNum = num; num[0] = 10; console.</description>
+    </item>
+    
+    <item>
+      <title>HTML速查列表</title>
+      <link>https://mannuan.github.io/post/20190710104402/</link>
+      <pubDate>Wed, 10 Jul 2019 10:44:02 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190710104402/</guid>
+      <description>HTML 速查列表   HTML 速查列表. 你可以打印它，以备日常使用。
+ HTML 基本文档 &amp;lt;!DOCTYPEhtml&amp;gt;&amp;lt;html&amp;gt;&amp;lt;head&amp;gt;&amp;lt;title&amp;gt;文档标题&amp;lt;/title&amp;gt;&amp;lt;/head&amp;gt;&amp;lt;body&amp;gt;可见文本... &amp;lt;/body&amp;gt;&amp;lt;/html&amp;gt;    基本标签（Basic Tags） &amp;lt;h1&amp;gt;最大的标题&amp;lt;/h1&amp;gt;&amp;lt;h2&amp;gt;. . . &amp;lt;/h2&amp;gt;&amp;lt;h3&amp;gt;. . . &amp;lt;/h3&amp;gt;&amp;lt;h4&amp;gt;. . . &amp;lt;/h4&amp;gt;&amp;lt;h5&amp;gt;. . . &amp;lt;/h5&amp;gt;&amp;lt;h6&amp;gt;最小的标题&amp;lt;/h6&amp;gt;&amp;lt;p&amp;gt;这是一个段落。&amp;lt;/p&amp;gt;&amp;lt;br&amp;gt;（换行） &amp;lt;hr&amp;gt;（水平线） &amp;lt;!--这是注释 --&amp;gt;    文本格式化（Formatting） &amp;lt;b&amp;gt;粗体文本&amp;lt;/b&amp;gt;&amp;lt;code&amp;gt;计算机代码&amp;lt;/code&amp;gt;&amp;lt;em&amp;gt;强调文本&amp;lt;/em&amp;gt;&amp;lt;i&amp;gt;斜体文本&amp;lt;/i&amp;gt;&amp;lt;kbd&amp;gt;键盘输入&amp;lt;/kbd&amp;gt;&amp;lt;pre&amp;gt;预格式化文本&amp;lt;/pre&amp;gt;&amp;lt;small&amp;gt;更小的文本&amp;lt;/small&amp;gt;&amp;lt;strong&amp;gt;重要的文本&amp;lt;/strong&amp;gt;&amp;lt;abbr&amp;gt;（缩写） &amp;lt;address&amp;gt;（联系信息） &amp;lt;bdo&amp;gt;（文字方向） &amp;lt;blockquote&amp;gt;（从另一个源引用的部分） &amp;lt;cite&amp;gt;（工作的名称） &amp;lt;del&amp;gt;（删除的文本） &amp;lt;ins&amp;gt;（插入的文本） &amp;lt;sub&amp;gt;（下标文本） &amp;lt;sup&amp;gt;（上标文本）    链接（Links） 普通的链接：&amp;lt;ahref=&#34;http://www.example.com/&#34;&amp;gt;链接文本&amp;lt;/a&amp;gt;图像链接： &amp;lt;ahref=&#34;http://www.example.com/&#34;&amp;gt;&amp;lt;imgsrc=&#34;URL&#34;alt=&#34;替换文本&#34;&amp;gt;&amp;lt;/a&amp;gt;邮件链接： &amp;lt;ahref=&#34;mailto:webmaster@example.com&#34;&amp;gt;发送e-mail&amp;lt;/a&amp;gt;书签： &amp;lt;aid=&#34;tips&#34;&amp;gt;提示部分&amp;lt;/a&amp;gt;&amp;lt;ahref=&#34;#tips&#34;&amp;gt;跳到提示部分&amp;lt;/a&amp;gt;    图片（Images） &amp;lt;imgsrc=&#34;URL&#34;alt=&#34;替换文本&#34;height=&#34;42&#34;width=&#34;42&#34;&amp;gt;    样式/区块（Styles/Sections） &amp;lt;styletype=&#34;text/css&#34;&amp;gt; h1{color:red;}p{color:blue;} &amp;lt;/style&amp;gt;&amp;lt;div&amp;gt;文档中的块级元素&amp;lt;/div&amp;gt;&amp;lt;span&amp;gt;文档中的内联元素&amp;lt;/span&amp;gt;    无序列表 &amp;lt;ul&amp;gt;&amp;lt;li&amp;gt;项目&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;项目&amp;lt;/li&amp;gt;&amp;lt;/ul&amp;gt;    有序列表 &amp;lt;ol&amp;gt;&amp;lt;li&amp;gt;第一项&amp;lt;/li&amp;gt;&amp;lt;li&amp;gt;第二项&amp;lt;/li&amp;gt;&amp;lt;/ol&amp;gt;    定义列表 &amp;lt;dl&amp;gt;&amp;lt;dt&amp;gt;项目 1&amp;lt;/dt&amp;gt;&amp;lt;dd&amp;gt;描述项目 1&amp;lt;/dd&amp;gt;&amp;lt;dt&amp;gt;项目 2&amp;lt;/dt&amp;gt;&amp;lt;dd&amp;gt;描述项目 2&amp;lt;/dd&amp;gt;&amp;lt;/dl&amp;gt;    表格（Tables） &amp;lt;tableborder=&#34;</description>
+    </item>
+    
+    <item>
+      <title>HTML标签的全局属性</title>
+      <link>https://mannuan.github.io/post/20190710101926/</link>
+      <pubDate>Wed, 10 Jul 2019 10:19:27 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190710101926/</guid>
+      <description> span.new { float: right; color: #fff; background-color: #90b575; font-weight: 700; padding-left: 1px; padding-right: 1px; border: 1px solid #fff; outline: 1px solid #90b575; line-height: 16px; }    属性 描述   accesskey 设置访问元素的键盘快捷键。   class 规定元素的类名（classname）   contenteditableNew 规定是否可编辑元素的内容。   contextmenuNew 指定一个元素的上下文菜单。当用户右击该元素，出现上下文菜单   data-*New 用于存储页面的自定义数据   dir 设置元素中内容的文本方向。   draggableNew 指定某个元素是否可以拖动   dropzoneNew 指定是否将数据复制，移动，或链接，或删除   hiddenNew hidden 属性规定对元素进行隐藏。   id 规定元素的唯一 id   lang 设置元素中内容的语言代码。   spellcheckNew 检测元素是否拼写错误   style 规定元素的行内样式（inline style）   tabindex 设置元素的 Tab 键控制次序。   title 规定元素的额外信息（可在工具提示中显示）   translateNew 指定是否一个元素的值在页面载入时是否需要翻译    </description>
+    </item>
+    
+    <item>
+      <title>Latex常用设置</title>
+      <link>https://mannuan.github.io/post/20190709170202/</link>
+      <pubDate>Tue, 09 Jul 2019 17:02:02 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190709170202/</guid>
+      <description>bib文件点击跳转 在.tex文件开头加上\usepackage[backref]{hyperref}。</description>
+    </item>
     
     <item>
       <title>UDP和TCP协议</title>
@@ -20,12 +105,13 @@
     </item>
     
     <item>
-      <title>HTML标签</title>
+      <title>常用的HTML标签整理</title>
       <link>https://mannuan.github.io/post/20190708085133/</link>
       <pubDate>Mon, 08 Jul 2019 08:51:33 +0800</pubDate>
       
       <guid>https://mannuan.github.io/post/20190708085133/</guid>
-      <description>   功能标签组合     定义注释或音标  &amp;lt;ruby&amp;gt;&amp;lt;/ruby&amp;gt;     </description>
+      <description>标签部分先后顺序，按照收录的先后顺序
+ ruby标签 用来注释中文注音或字符。</description>
     </item>
     
     <item>
@@ -320,7 +406,7 @@ window.addEventListener(&amp;#39;load&amp;#39;, (event) =&amp;gt; { console.log(
       
       <guid>https://mannuan.github.io/post/20190701105039/</guid>
       <description>实验平台 Cisco模拟器，Version：5.3.0.0088
- 当前的实验无法在Version：6.0.0.0045上测试成功
+ 当前的实验无法在6.0.0.0045以上版本测试成功
  实验目的 利用三层交换机跨交换机实现VLAN间路由。
 需求分析 在二层交换机上划分VLAN配置Trunk实现不同VLAN的主机接入，在三层交换机上划分VLAN配置Trunk并配置SVI接口实现不同VLAN间路由。
 实验原理 在二层交换机上划分VLAN可实现不同VLAN的主机接入，而VLAN间的主机通信为不同网段间的通信，需要通过三层设备对数据进行路由转发才可以实现，通过在三层交换机上为各VLAN配置SVI接口，利用三层交换机的路由功能可以实现VLAN间的路由。
@@ -458,16 +544,16 @@ linux端 sudo apt-get install nodejs 检查安装 node -v npm -v 修改node_modu
     </item>
     
     <item>
-      <title>node require can&#39;t find module(mac或linux，不支持window)</title>
+      <title>node require can&#39;t find module(适用于mac或linux，不支持window)</title>
       <link>https://mannuan.github.io/post/20190628114044/</link>
       <pubDate>Fri, 28 Jun 2019 11:40:44 +0800</pubDate>
       
       <guid>https://mannuan.github.io/post/20190628114044/</guid>
-      <description> 前言  我已经正确的安装了node，并且我使用npm install -g 安装包没有出错，但是就是require(&amp;lsquo;安装包&amp;rsquo;)报错，我的安装在&amp;rsquo;/usr/local/lib/node_modules&amp;rsquo;下面
+      <description> 前言  我已经正确的安装了node，并且我使用npm install -g 安装包没有出错，但是就是在代码中导入包的时候使用require(&#39;安装包&#39;)报错，我的全局模块路径是在/usr/local/lib/node_modules下面
  原因分析 可能是node命令早不到npm的安装包的安装目录，于是我打印了node默认的模块目录：
-&amp;gt;&amp;gt;node &amp;gt;module.paths [ &#39;/Users/用户名/repl/node_modules&#39;, &#39;/Users/用户名/node_modules&#39;, &#39;/Users/node_modules&#39;, &#39;/node_modules&#39;, &#39;/Users/用户名/.node_modules&#39;, &#39;/Users/用户名/.node_libraries&#39;, &#39;/usr/local/lib/node&#39; ]  我发现，‘/usr/local/lib/node_modules’目录并没有包含在里面，于是我使用下面的命令
-&amp;gt;module.paths.push(&#39;/usr/local/lib/node_modules&#39;)  虽然这个命令生效了，但它是暂时性的。但我并不知道如何永久的把我的模块目录添加进去。 为了解决这个问题，我使用软链接的来解决这个问题
-解决方案 ln -sfn /usr/local/lib/node_modules /Users/用户名/node_modules  由于根据npm WARN checkPermissions Missing write access to /usr/local/lib/node_modules，node_module目录的拥有者是当前用户，所以没有必要使用sudo.
+node module.paths [ &amp;#39;/Users/用户名/repl/node_modules&amp;#39;, &amp;#39;/Users/用户名/node_modules&amp;#39;, &amp;#39;/Users/node_modules&amp;#39;, &amp;#39;/node_modules&amp;#39;, &amp;#39;/Users/用户名/.node_modules&amp;#39;, &amp;#39;/Users/用户名/.node_libraries&amp;#39;, &amp;#39;/usr/local/lib/node&amp;#39; ] 我发现，/usr/local/lib/node_modules目录并没有包含在里面，于是我使用下面的命令：
+module.paths.push(&amp;#39;/usr/local/lib/node_modules&amp;#39;) 虽然这个命令生效了，但它是暂时性的。但我并不知道如何永久的把我的模块目录添加进去。 为了解决这个问题，我使用软链接的来解决这个问题。
+解决方案 ln -sfn /usr/local/lib/node_modules /Users/$USER/node_modules  由于根据npm WARN checkPermissions Missing write access to /usr/local/lib/node_modules，node_module目录的拥有者是当前用户，所以没有必要使用sudo命令.
  </description>
     </item>
     
@@ -491,11 +577,11 @@ npm list -g 推测 我认为可能是没有卸载干净
       <pubDate>Fri, 28 Jun 2019 10:40:30 +0800</pubDate>
       
       <guid>https://mannuan.github.io/post/20190628104030/</guid>
-      <description> 原因分析  详看错误提示：npm ERR! Error: EACCES: permission denied, access &amp;lsquo;/usr/local/lib/node_modules&amp;rsquo; 推测当前用户没有对&amp;rdquo;node_modules&amp;rdquo;的写入权限
- 验证推测 &amp;gt;&amp;gt; ls -lth /usr/local/lib/node_modules total 0 drwxr-xr-x 24 root wheel 768B May 29 05:21 npm  观看上面的结果推测成立
-解决方案 方案一（不推荐） 修改&amp;rdquo;node_modules&amp;rdquo;的权限，增加”写入“权限；
+      <description> 原因分析  详看错误提示：npm ERR! Error: EACCES: permission denied, access /usr/local/lib/node_modules 推测当前用户没有对node_modules目录的写入权限
+ 验证推测 &amp;gt;&amp;gt; ls -lth /usr/local/lib/node_modules total 0 drwxr-xr-x 24 root wheel 768B May 29 05:21 npm 观看上面的结果推测成立
+解决方案 方案一（不推荐） 修改node_modules目录的权限，增加”写入“权限；
 sudo chmod 775 /usr/local/lib/node_modules  并不推荐这种方案，因为这个目录完全不会有root用户进行访问
- 方案二 （推荐） 改变&amp;rdquo;node_nodules&amp;rdquo;目录的拥有者
+ 方案二 （推荐） 改变node_nodules目录的拥有者
 sudo chown -R $USER /usr/local/lib/node_modules</description>
     </item>
     
@@ -716,20 +802,14 @@ closest()方法查找是从包含自身的节点找起，它同parents()方法�
     </item>
     
     <item>
-      <title>snippet,让你编码效率翻倍</title>
+      <title>snippet，让你编码效率翻倍</title>
       <link>https://mannuan.github.io/post/20190622092650/</link>
       <pubDate>Sat, 22 Jun 2019 09:26:50 +0800</pubDate>
       
       <guid>https://mannuan.github.io/post/20190622092650/</guid>
-      <description>为什么谈到Snippet
-今天下午在用vscode做小程序的时候，发现很不方便，因为商店里提供的代码片段极为有限，而且平时几乎每天都需要用到代码片段，所以就在思考他们是怎么做到给别人提供代码的，我可以自定义代码片段吗。然后查了下，果然，这在vscode里自带的（好像藏得有点深），是可以自定义的，然后在做完自己的任务后捣鼓了下，基本了解了snippet的语法，突然有种打开新世界大门的感觉。做个记录，上菜了
-如何打开snippet配置
-这里以vscode为例，其他编辑器大概也差不多。在vscode中快捷键「Ctrl + Shift + P」打开命令窗口，然后输入snippet,选择 [配置用户代码片段]，点击后，就可以愉快的进行片段的编写了
-Snippet怎么用
-先上一个Demo
-&amp;#34;html template&amp;#34;: { &amp;#34;prefix&amp;#34;: &amp;#34;ht&amp;#34;, &amp;#34;body&amp;#34;: [ &amp;#34;&amp;lt;!DOCTYPE html&amp;gt;&amp;#34;, &amp;#34;&amp;lt;html lang=\&amp;#34;en\&amp;#34;&amp;gt;&amp;#34;, &amp;#34;&amp;lt;head&amp;gt;&amp;#34;, &amp;#34; &amp;lt;meta charset=\&amp;#34;UTF-8\&amp;#34;&amp;gt;&amp;#34;, &amp;#34; &amp;lt;title&amp;gt;${1:$CURRENT_DATE}&amp;lt;/title&amp;gt;&amp;#34;, &amp;#34;&amp;lt;/head&amp;gt;&amp;#34;, &amp;#34;&amp;lt;body&amp;gt;&amp;#34;, &amp;#34; &amp;lt;div class=\&amp;#34;${2|container,wrapper|}\&amp;#34;&amp;gt;&amp;#34;, &amp;#34; ${3}&amp;#34;, &amp;#34; &amp;lt;/div&amp;gt;&amp;#34;, &amp;#34;&amp;lt;/body&amp;gt;&amp;#34;, &amp;#34;&amp;lt;/html&amp;gt;&amp;#34;, ], &amp;#34;description&amp;#34;: &amp;#34;create a html frame&amp;#34; } 基础结构
- 片段名字 prefix（前缀，输入的触发条件，比如上面例子中当我输入ht后，就能tab出来片段） body（主体部分，在里面根据语法定义自己需要的代码片段） description（说明，片段的具体描述）  基础语法
- 每个逗号代表一整行的结束，双引号需要用转义字符  $number表示光标跳转的顺序，比如$1表示光标首次需要跳转的位置，相同序号的会在一起，另外$0表示最终光标位置 变量，在未赋值的情况下提供默认值，这里提供一些变量  TM_SELECTED_TEXT：当前选定的文本或空字符串； TM_CURRENT_LINE：当前行的内容； TM_CURRENT_WORD：光标所处单词或空字符串 TM_LINE_INDEX：行号（从零开始）； TM_LINE_NUMBER：行号（从一开始）； TM_FILENAME：当前文档的文件名； TM_FILENAME_BASE：当前文档的文件名（不含后缀名）； TM_DIRECTORY：当前文档所在目录； TM_FILEPATH：当前文档的完整文件路径； CLIPBOARD：当前剪贴板中内容。时间相关CURRENT_YEAR: 当前年份； CURRENT_YEAR_SHORT: 当前年份的后两位； CURRENT_MONTH: 格式化为两位数字的当前月份，如 02； CURRENT_MONTH_NAME: 当前月份的全称，如 July；CURRENT_MONTH_NAME_SHORT: 当前月份的简称，如 Jul； CURRENT_DATE: 当天月份第几天； CURRENT_DAY_NAME: 当天周几，如 Monday； CURRENT_DAY_NAME_SHORT: 当天周几的简称，如 Mon；CURRENT_HOUR: 当前小时（24小时制）； CURRENT_MINUTE: 当前分钟； CURRENT_SECOND: 当前秒数。</description>
+      <description>如何打开snippet配置 这里以vscode为例，其他编辑器大概也差不多。在vscode中快捷键Ctrl + Shift + P打开命令窗口，然后输入snippet,选择配置用户代码片段，点击后，就可以愉快的进行片段的编写了。
+Snippet怎么用 先上一个Demo
+{ &amp;#34;vue&amp;#34;: { &amp;#34;prefix&amp;#34;: &amp;#34;vue-tl&amp;#34;, &amp;#34;body&amp;#34;: [ &amp;#34;&amp;lt;!DOCTYPE html&amp;gt;&amp;#34;, &amp;#34;&amp;lt;html lang=\&amp;#34;zh\&amp;#34;&amp;gt;&amp;#34;, &amp;#34;&amp;lt;head&amp;gt;&amp;#34;, &amp;#34; &amp;lt;meta charset=\&amp;#34;UTF-8\&amp;#34;&amp;gt;&amp;#34;, &amp;#34; &amp;lt;title&amp;gt;${1:$CURRENT_DATE}&amp;lt;/title&amp;gt;&amp;#34;, &amp;#34; &amp;lt;style type=\&amp;#34;text/css\&amp;#34;&amp;gt;&amp;#34;, &amp;#34; &amp;lt;/style&amp;gt;&amp;#34;, &amp;#34; &amp;lt;script src=\&amp;#34;https://cdn.staticfile.org/vue/2.2.2/vue.min.js\&amp;#34;&amp;gt;&amp;lt;/script&amp;gt;&amp;#34;, &amp;#34; &amp;lt;script src=\&amp;#34;https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js\&amp;#34;&amp;gt;&amp;lt;/script&amp;gt;&amp;#34;, &amp;#34; &amp;lt;script src=\&amp;#34;https://server.lab421.top/前端开发/我自己的js库/wlib.js\&amp;#34;&amp;gt;&amp;lt;/script&amp;gt;&amp;#34;, &amp;#34;&amp;lt;/head&amp;gt;&amp;#34;, &amp;#34;&amp;lt;body&amp;gt;&amp;#34;, &amp;#34;&amp;lt;/body&amp;gt;&amp;#34;, &amp;#34;&amp;lt;script&amp;gt;&amp;#34;, &amp;#34;var data = {};&amp;#34;, &amp;#34;var vm = new Vue({&amp;#34;, &amp;#34; el: &amp;#39;#app&amp;#39;,&amp;#34;, &amp;#34; data: data,&amp;#34;, &amp;#34; methods: {}&amp;#34;, &amp;#34;});&amp;#34;, &amp;#34;&amp;lt;/script&amp;gt;&amp;#34;, &amp;#34;&amp;lt;/html&amp;gt;&amp;#34;, ], &amp;#34;description&amp;#34;: &amp;#34;create a html frame&amp;#34;, }, &amp;#34;basic&amp;#34;: { &amp;#34;prefix&amp;#34;: &amp;#34;basic-tl&amp;#34;, &amp;#34;body&amp;#34;: [ &amp;#34;&amp;lt;!</description>
     </item>
     
     <item>
@@ -1970,16 +2050,16 @@ c.NotebookApp.password = &amp;#39;sha1:da00fa1e950a:0adb64c8359ef97932e5dde02d61
     </item>
     
     <item>
-      <title>dpkg error: package `x&#39; contains empty filename，Sub-process /usr/bin/dpkg returned an error code (2)</title>
+      <title>dpkg error package `x&#39; contains empty filename</title>
       <link>https://mannuan.github.io/post/20190513111048/</link>
       <pubDate>Mon, 13 May 2019 11:10:48 +0800</pubDate>
       
       <guid>https://mannuan.github.io/post/20190513111048/</guid>
-      <description>后面的错误“Sub-process /usr/bin/dpkg returned an error code (2)”是由于前面的一个错误引起的
+      <description>原因分析 后面的错误Sub-process /usr/bin/dpkg returned an error code (2)是由于前面的一个错误引起的
 因此，只需要解决前面的错误就行了
-解决这个错误其实很简单，只需要理解前面一个错误里面的&amp;rdquo;empty filename&amp;rdquo;就行了
+查找资料 解决这个错误其实很简单，只需要理解前面一个错误里面的empty filename就行了
 我看过很多教程，说只要删除/var/lib/dpkg/info/x.list就可以了，我试过，每次删除，之后这个目录下面都会重新生成x.list文件
-之后我找到解决方案，发现只要把x.list改为x.list.broke就可以了，之后就没有&amp;rdquo;empty filename的报错&amp;rdquo;</description>
+解决方案 之后我找到解决方案，发现只要把x.list改为x.list.broke就可以了，之后就没有empty filename的报错&amp;rdquo;</description>
     </item>
     
     <item>

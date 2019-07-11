@@ -5,10 +5,19 @@
     <link>https://mannuan.github.io/categories/%E8%AE%BA%E6%96%87/</link>
     <description>Recent content in 论文 on mannuan</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 04 Jul 2019 16:20:10 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 09 Jul 2019 17:02:02 +0800</lastBuildDate>
     
 	<atom:link href="https://mannuan.github.io/categories/%E8%AE%BA%E6%96%87/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Latex常用设置</title>
+      <link>https://mannuan.github.io/post/20190709170202/</link>
+      <pubDate>Tue, 09 Jul 2019 17:02:02 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190709170202/</guid>
+      <description>bib文件点击跳转 在.tex文件开头加上\usepackage[backref]{hyperref}。</description>
+    </item>
     
     <item>
       <title>Representing Social Media Users for Sarcasm Detection论文翻译和解读</title>

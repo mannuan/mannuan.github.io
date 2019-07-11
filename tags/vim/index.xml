@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>vim on mannuan</title>
+    <link>https://mannuan.github.io/tags/vim/</link>
+    <description>Recent content in vim on mannuan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 10 Jul 2019 15:39:11 +0800</lastBuildDate>
+    
+	<atom:link href="https://mannuan.github.io/tags/vim/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>vim常用命令</title>
+      <link>https://mannuan.github.io/post/20190710153911/</link>
+      <pubDate>Wed, 10 Jul 2019 15:39:11 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190710153911/</guid>
+      <description>   功能 命令      打开快捷命令窗口      </description>
+    </item>
+    
+  </channel>
+</rss>

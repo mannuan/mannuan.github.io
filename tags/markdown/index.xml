@@ -5,10 +5,19 @@
     <link>https://mannuan.github.io/tags/markdown/</link>
     <description>Recent content in markdown on mannuan</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 03 Jun 2019 14:35:36 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 11 Jul 2019 10:32:24 +0800</lastBuildDate>
     
 	<atom:link href="https://mannuan.github.io/tags/markdown/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>vscode snippet markdown template</title>
+      <link>https://mannuan.github.io/post/20190711103224/</link>
+      <pubDate>Thu, 11 Jul 2019 10:32:24 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190711103224/</guid>
+      <description>{ &amp;#34;table&amp;#34;: { &amp;#34;prefix&amp;#34;: &amp;#34;html-table-tl&amp;#34;, &amp;#34;body&amp;#34;: [ &amp;#34;&amp;lt;table&amp;gt;&amp;#34;, &amp;#34;&amp;lt;thead&amp;gt;&amp;#34;, &amp;#34;&amp;lt;tr&amp;gt;&amp;#34;, &amp;#34;&amp;lt;td&amp;gt;&amp;lt;/td&amp;gt;&amp;#34;, &amp;#34;&amp;lt;/tr&amp;gt;&amp;#34;, &amp;#34;&amp;lt;/thead&amp;gt;&amp;#34;, &amp;#34;&amp;lt;tbody&amp;gt;&amp;#34;, &amp;#34;&amp;lt;tr&amp;gt;&amp;#34;, &amp;#34;&amp;lt;td&amp;gt;&amp;lt;/td&amp;gt;&amp;#34;, &amp;#34;&amp;lt;/tr&amp;gt;&amp;#34;, &amp;#34;&amp;lt;/tbody&amp;gt;&amp;#34;, &amp;#34;&amp;lt;/table&amp;gt;&amp;#34; ], &amp;#34;description&amp;#34;: &amp;#34;create a html frame&amp;#34;, } }</description>
+    </item>
     
     <item>
       <title>markdown常用语法大全</title>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>snippet on mannuan</title>
+    <link>https://mannuan.github.io/tags/snippet/</link>
+    <description>Recent content in snippet on mannuan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 11 Jul 2019 10:35:32 +0800</lastBuildDate>
+    
+	<atom:link href="https://mannuan.github.io/tags/snippet/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>vscode snippet html template</title>
+      <link>https://mannuan.github.io/post/20190711103532/</link>
+      <pubDate>Thu, 11 Jul 2019 10:35:32 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190711103532/</guid>
+      <description>{ &amp;#34;vue&amp;#34;: { &amp;#34;prefix&amp;#34;: &amp;#34;vue-tl&amp;#34;, &amp;#34;body&amp;#34;: [ &amp;#34;&amp;lt;!DOCTYPE html&amp;gt;&amp;#34;, &amp;#34;&amp;lt;html lang=\&amp;#34;zh\&amp;#34;&amp;gt;&amp;#34;, &amp;#34;&amp;lt;head&amp;gt;&amp;#34;, &amp;#34; &amp;lt;meta charset=\&amp;#34;UTF-8\&amp;#34;&amp;gt;&amp;#34;, &amp;#34; &amp;lt;title&amp;gt;${1:$CURRENT_DATE}&amp;lt;/title&amp;gt;&amp;#34;, &amp;#34; &amp;lt;style type=\&amp;#34;text/css\&amp;#34;&amp;gt;&amp;#34;, &amp;#34; &amp;lt;/style&amp;gt;&amp;#34;, &amp;#34; &amp;lt;script src=\&amp;#34;https://cdn.staticfile.org/vue/2.2.2/vue.min.js\&amp;#34;&amp;gt;&amp;lt;/script&amp;gt;&amp;#34;, &amp;#34; &amp;lt;script src=\&amp;#34;https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js\&amp;#34;&amp;gt;&amp;lt;/script&amp;gt;&amp;#34;, &amp;#34; &amp;lt;script src=\&amp;#34;https://server.lab421.top/前端开发/我自己的js库/wlib.js\&amp;#34;&amp;gt;&amp;lt;/script&amp;gt;&amp;#34;, &amp;#34;&amp;lt;/head&amp;gt;&amp;#34;, &amp;#34;&amp;lt;body&amp;gt;&amp;#34;, &amp;#34;&amp;lt;/body&amp;gt;&amp;#34;, &amp;#34;&amp;lt;script&amp;gt;&amp;#34;, &amp;#34;var data = {};&amp;#34;, &amp;#34;var vm = new Vue({&amp;#34;, &amp;#34; el: &amp;#39;#app&amp;#39;,&amp;#34;, &amp;#34; data: data,&amp;#34;, &amp;#34; methods: {}&amp;#34;, &amp;#34;});&amp;#34;, &amp;#34;&amp;lt;/script&amp;gt;&amp;#34;, &amp;#34;&amp;lt;/html&amp;gt;&amp;#34;, ], &amp;#34;description&amp;#34;: &amp;#34;create a html frame&amp;#34;, }, &amp;#34;basic&amp;#34;: { &amp;#34;prefix&amp;#34;: &amp;#34;basic-tl&amp;#34;, &amp;#34;body&amp;#34;: [ &amp;#34;&amp;lt;!DOCTYPE html&amp;gt;&amp;#34;, &amp;#34;&amp;lt;html lang=\&amp;#34;zh\&amp;#34;&amp;gt;&amp;#34;, &amp;#34;&amp;lt;head&amp;gt;&amp;#34;, &amp;#34; &amp;lt;meta charset=\&amp;#34;UTF-8\&amp;#34;&amp;gt;&amp;#34;, &amp;#34; &amp;lt;title&amp;gt;${1:$CURRENT_DATE}&amp;lt;/title&amp;gt;&amp;#34;, &amp;#34;&amp;lt;/head&amp;gt;&amp;#34;, &amp;#34;&amp;lt;body&amp;gt;&amp;#34;, &amp;#34;&amp;lt;/body&amp;gt;&amp;#34;, &amp;#34;&amp;lt;/html&amp;gt;&amp;#34;, ], &amp;#34;description&amp;#34;: &amp;#34;create a html frame&amp;#34;, } }</description>
+    </item>
+    
+    <item>
+      <title>vscode snippet markdown template</title>
+      <link>https://mannuan.github.io/post/20190711103224/</link>
+      <pubDate>Thu, 11 Jul 2019 10:32:24 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190711103224/</guid>
+      <description>{ &amp;#34;table&amp;#34;: { &amp;#34;prefix&amp;#34;: &amp;#34;html-table-tl&amp;#34;, &amp;#34;body&amp;#34;: [ &amp;#34;&amp;lt;table&amp;gt;&amp;#34;, &amp;#34;&amp;lt;thead&amp;gt;&amp;#34;, &amp;#34;&amp;lt;tr&amp;gt;&amp;#34;, &amp;#34;&amp;lt;td&amp;gt;&amp;lt;/td&amp;gt;&amp;#34;, &amp;#34;&amp;lt;/tr&amp;gt;&amp;#34;, &amp;#34;&amp;lt;/thead&amp;gt;&amp;#34;, &amp;#34;&amp;lt;tbody&amp;gt;&amp;#34;, &amp;#34;&amp;lt;tr&amp;gt;&amp;#34;, &amp;#34;&amp;lt;td&amp;gt;&amp;lt;/td&amp;gt;&amp;#34;, &amp;#34;&amp;lt;/tr&amp;gt;&amp;#34;, &amp;#34;&amp;lt;/tbody&amp;gt;&amp;#34;, &amp;#34;&amp;lt;/table&amp;gt;&amp;#34; ], &amp;#34;description&amp;#34;: &amp;#34;create a html frame&amp;#34;, } }</description>
+    </item>
+    
+    <item>
+      <title>snippet，让你编码效率翻倍</title>
+      <link>https://mannuan.github.io/post/20190622092650/</link>
+      <pubDate>Sat, 22 Jun 2019 09:26:50 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190622092650/</guid>
+      <description>如何打开snippet配置 这里以vscode为例，其他编辑器大概也差不多。在vscode中快捷键Ctrl + Shift + P打开命令窗口，然后输入snippet,选择配置用户代码片段，点击后，就可以愉快的进行片段的编写了。
+Snippet怎么用 先上一个Demo
+{ &amp;#34;vue&amp;#34;: { &amp;#34;prefix&amp;#34;: &amp;#34;vue-tl&amp;#34;, &amp;#34;body&amp;#34;: [ &amp;#34;&amp;lt;!DOCTYPE html&amp;gt;&amp;#34;, &amp;#34;&amp;lt;html lang=\&amp;#34;zh\&amp;#34;&amp;gt;&amp;#34;, &amp;#34;&amp;lt;head&amp;gt;&amp;#34;, &amp;#34; &amp;lt;meta charset=\&amp;#34;UTF-8\&amp;#34;&amp;gt;&amp;#34;, &amp;#34; &amp;lt;title&amp;gt;${1:$CURRENT_DATE}&amp;lt;/title&amp;gt;&amp;#34;, &amp;#34; &amp;lt;style type=\&amp;#34;text/css\&amp;#34;&amp;gt;&amp;#34;, &amp;#34; &amp;lt;/style&amp;gt;&amp;#34;, &amp;#34; &amp;lt;script src=\&amp;#34;https://cdn.staticfile.org/vue/2.2.2/vue.min.js\&amp;#34;&amp;gt;&amp;lt;/script&amp;gt;&amp;#34;, &amp;#34; &amp;lt;script src=\&amp;#34;https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js\&amp;#34;&amp;gt;&amp;lt;/script&amp;gt;&amp;#34;, &amp;#34; &amp;lt;script src=\&amp;#34;https://server.lab421.top/前端开发/我自己的js库/wlib.js\&amp;#34;&amp;gt;&amp;lt;/script&amp;gt;&amp;#34;, &amp;#34;&amp;lt;/head&amp;gt;&amp;#34;, &amp;#34;&amp;lt;body&amp;gt;&amp;#34;, &amp;#34;&amp;lt;/body&amp;gt;&amp;#34;, &amp;#34;&amp;lt;script&amp;gt;&amp;#34;, &amp;#34;var data = {};&amp;#34;, &amp;#34;var vm = new Vue({&amp;#34;, &amp;#34; el: &amp;#39;#app&amp;#39;,&amp;#34;, &amp;#34; data: data,&amp;#34;, &amp;#34; methods: {}&amp;#34;, &amp;#34;});&amp;#34;, &amp;#34;&amp;lt;/script&amp;gt;&amp;#34;, &amp;#34;&amp;lt;/html&amp;gt;&amp;#34;, ], &amp;#34;description&amp;#34;: &amp;#34;create a html frame&amp;#34;, }, &amp;#34;basic&amp;#34;: { &amp;#34;prefix&amp;#34;: &amp;#34;basic-tl&amp;#34;, &amp;#34;body&amp;#34;: [ &amp;#34;&amp;lt;!</description>
+    </item>
+    
+  </channel>
+</rss>

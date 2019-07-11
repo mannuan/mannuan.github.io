@@ -5,10 +5,26 @@
     <link>https://mannuan.github.io/tags/ubuntu/</link>
     <description>Recent content in ubuntu on mannuan</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 01 May 2019 22:50:58 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 10 Jul 2019 22:15:01 +0800</lastBuildDate>
     
 	<atom:link href="https://mannuan.github.io/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>linux使用shadowsocks-qt5实现自动代理</title>
+      <link>https://mannuan.github.io/post/20190710221501/</link>
+      <pubDate>Wed, 10 Jul 2019 22:15:01 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190710221501/</guid>
+      <description>以ubuntu为例
+ 下载shadowsocks-qt5 打开链接, 点击Shadowsocks-Qt5-xxx-x86_64.AppImage文件下载
+赋予执行权限 sudo chmod +x Shadowsocks-Qt5-xxx-x86_64.AppImage 打开shadowsocks-qt5的两种方式  直接点击 命令行输入  ./Shadowsocks-Qt5-xxx-x86_64.AppImage 生成autoproxy.pac文件  由于在国内生成autoproxy.pac的速度很慢，为了加快这一过程，我们先用shadowsocks配置一个全局代理
+ 配置全局代理 依次点击ubuntu的设置&amp;gt;系统设置&amp;gt;网络&amp;gt;网络代理&amp;gt;手动
+然后把除了socks主机的所有其他行的选项都清空，端口无法清空，可以设置为0
+最后，点击应用到整个系统
+autoproxy.pac文件生成 pip install genpac genpac --pac-proxy &amp;#34;SOCKS5 127.0.0.1:1080&amp;#34; --gfwlist-proxy=&amp;#34;SOCKS5 127.0.0.1:1080&amp;#34; --gfwlist-url=https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt --output=&amp;#34;autoproxy.pac&amp;#34; 配置系统代理 关键一步，把autoproxy.pac使用本地http协议访问
+再次回到网络代理界面，选择自动，在配置URL的框中输入http://127.0.0.1/autoproxy.pac</description>
+    </item>
     
     <item>
       <title>https服务器搭建详细教程(ubuntu系统实测可行)</title>

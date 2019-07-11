@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>npm on mannuan</title>
+    <link>https://mannuan.github.io/tags/npm/</link>
+    <description>Recent content in npm on mannuan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 28 Jun 2019 15:25:12 +0800</lastBuildDate>
+    
+	<atom:link href="https://mannuan.github.io/tags/npm/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>nodejs安装教程（完美避坑，适用于mac和linux）</title>
+      <link>https://mannuan.github.io/post/20190628152512/</link>
+      <pubDate>Fri, 28 Jun 2019 15:25:12 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190628152512/</guid>
+      <description>安装nodejs mac端 brew install node 如果安装速度慢，可以到nodejs官网下载pkg安装包；
+linux端 sudo apt-get install nodejs 检查安装 node -v npm -v 修改node_modules目录权限 教程
+添加node_modules路径 教程</description>
+    </item>
+    
+    <item>
+      <title>node require can&#39;t find module(适用于mac或linux，不支持window)</title>
+      <link>https://mannuan.github.io/post/20190628114044/</link>
+      <pubDate>Fri, 28 Jun 2019 11:40:44 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190628114044/</guid>
+      <description> 前言  我已经正确的安装了node，并且我使用npm install -g 安装包没有出错，但是就是在代码中导入包的时候使用require(&#39;安装包&#39;)报错，我的全局模块路径是在/usr/local/lib/node_modules下面
+ 原因分析 可能是node命令早不到npm的安装包的安装目录，于是我打印了node默认的模块目录：
+node module.paths [ &amp;#39;/Users/用户名/repl/node_modules&amp;#39;, &amp;#39;/Users/用户名/node_modules&amp;#39;, &amp;#39;/Users/node_modules&amp;#39;, &amp;#39;/node_modules&amp;#39;, &amp;#39;/Users/用户名/.node_modules&amp;#39;, &amp;#39;/Users/用户名/.node_libraries&amp;#39;, &amp;#39;/usr/local/lib/node&amp;#39; ] 我发现，/usr/local/lib/node_modules目录并没有包含在里面，于是我使用下面的命令：
+module.paths.push(&amp;#39;/usr/local/lib/node_modules&amp;#39;) 虽然这个命令生效了，但它是暂时性的。但我并不知道如何永久的把我的模块目录添加进去。 为了解决这个问题，我使用软链接的来解决这个问题。
+解决方案 ln -sfn /usr/local/lib/node_modules /Users/$USER/node_modules  由于根据npm WARN checkPermissions Missing write access to /usr/local/lib/node_modules，node_module目录的拥有者是当前用户，所以没有必要使用sudo命令.
+ </description>
+    </item>
+    
+    <item>
+      <title>npm list -g出错</title>
+      <link>https://mannuan.github.io/post/20190628110638/</link>
+      <pubDate>Fri, 28 Jun 2019 11:06:38 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190628110638/</guid>
+      <description>前言  我是在重装node之后遇到这个问题的
+ 原因分析 当你已经安装node之后，它给你以下提示说明你已经安装好了：
+This package has installed: Node.js v10.16.0 to /usr/local/bin/node npm v6.9.0 to /usr/local/bin/npm Make sure that /usr/local/bin is in your $PATH.  但是，当你使用下面命令，报错了
+npm list -g 推测 我认为可能是没有卸载干净
+解决方案 我使用ls -a命令打印出了home目录下面的隐藏文件，发现了几个可以目录, &amp;quot;.npm&amp;quot;, &amp;quot;.npminstall_tarball&amp;quot;, &amp;quot;.node-gyp&amp;quot;。我把他们删除以后就不报错了
+结论 这些隐藏目录下面的配置文件的优先级比较高，导致出错</description>
+    </item>
+    
+    <item>
+      <title>npm WARN checkPermissions Missing write access to /usr/local/lib/node_modules</title>
+      <link>https://mannuan.github.io/post/20190628104030/</link>
+      <pubDate>Fri, 28 Jun 2019 10:40:30 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190628104030/</guid>
+      <description> 原因分析  详看错误提示：npm ERR! Error: EACCES: permission denied, access /usr/local/lib/node_modules 推测当前用户没有对node_modules目录的写入权限
+ 验证推测 &amp;gt;&amp;gt; ls -lth /usr/local/lib/node_modules total 0 drwxr-xr-x 24 root wheel 768B May 29 05:21 npm 观看上面的结果推测成立
+解决方案 方案一（不推荐） 修改node_modules目录的权限，增加”写入“权限；
+sudo chmod 775 /usr/local/lib/node_modules  并不推荐这种方案，因为这个目录完全不会有root用户进行访问
+ 方案二 （推荐） 改变node_nodules目录的拥有者
+sudo chown -R $USER /usr/local/lib/node_modules</description>
+    </item>
+    
+    <item>
+      <title>npm快速国内源</title>
+      <link>https://mannuan.github.io/post/20190610215220/</link>
+      <pubDate>Mon, 10 Jun 2019 21:52:20 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190610215220/</guid>
+      <description>淘宝镜像( cnpm ) - 淘宝NPM 镜像，用法和npm一模一样只是把npm改为cnpm</description>
+    </item>
+    
+  </channel>
+</rss>

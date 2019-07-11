@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>checkPermissions on mannuan</title>
+    <link>https://mannuan.github.io/tags/checkpermissions/</link>
+    <description>Recent content in checkPermissions on mannuan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 28 Jun 2019 10:40:30 +0800</lastBuildDate>
+    
+	<atom:link href="https://mannuan.github.io/tags/checkpermissions/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>npm WARN checkPermissions Missing write access to /usr/local/lib/node_modules</title>
+      <link>https://mannuan.github.io/post/20190628104030/</link>
+      <pubDate>Fri, 28 Jun 2019 10:40:30 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190628104030/</guid>
+      <description> 原因分析  详看错误提示：npm ERR! Error: EACCES: permission denied, access /usr/local/lib/node_modules 推测当前用户没有对node_modules目录的写入权限
+ 验证推测 &amp;gt;&amp;gt; ls -lth /usr/local/lib/node_modules total 0 drwxr-xr-x 24 root wheel 768B May 29 05:21 npm 观看上面的结果推测成立
+解决方案 方案一（不推荐） 修改node_modules目录的权限，增加”写入“权限；
+sudo chmod 775 /usr/local/lib/node_modules  并不推荐这种方案，因为这个目录完全不会有root用户进行访问
+ 方案二 （推荐） 改变node_nodules目录的拥有者
+sudo chown -R $USER /usr/local/lib/node_modules</description>
+    </item>
+    
+  </channel>
+</rss>

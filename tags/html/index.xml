@@ -5,10 +5,19 @@
     <link>https://mannuan.github.io/tags/html/</link>
     <description>Recent content in html on mannuan</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 05 Jun 2019 21:48:37 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 11 Jul 2019 10:35:32 +0800</lastBuildDate>
     
 	<atom:link href="https://mannuan.github.io/tags/html/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>vscode snippet html template</title>
+      <link>https://mannuan.github.io/post/20190711103532/</link>
+      <pubDate>Thu, 11 Jul 2019 10:35:32 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190711103532/</guid>
+      <description>{ &amp;#34;vue&amp;#34;: { &amp;#34;prefix&amp;#34;: &amp;#34;vue-tl&amp;#34;, &amp;#34;body&amp;#34;: [ &amp;#34;&amp;lt;!DOCTYPE html&amp;gt;&amp;#34;, &amp;#34;&amp;lt;html lang=\&amp;#34;zh\&amp;#34;&amp;gt;&amp;#34;, &amp;#34;&amp;lt;head&amp;gt;&amp;#34;, &amp;#34; &amp;lt;meta charset=\&amp;#34;UTF-8\&amp;#34;&amp;gt;&amp;#34;, &amp;#34; &amp;lt;title&amp;gt;${1:$CURRENT_DATE}&amp;lt;/title&amp;gt;&amp;#34;, &amp;#34; &amp;lt;style type=\&amp;#34;text/css\&amp;#34;&amp;gt;&amp;#34;, &amp;#34; &amp;lt;/style&amp;gt;&amp;#34;, &amp;#34; &amp;lt;script src=\&amp;#34;https://cdn.staticfile.org/vue/2.2.2/vue.min.js\&amp;#34;&amp;gt;&amp;lt;/script&amp;gt;&amp;#34;, &amp;#34; &amp;lt;script src=\&amp;#34;https://cdn.staticfile.org/jquery/3.4.1/jquery.min.js\&amp;#34;&amp;gt;&amp;lt;/script&amp;gt;&amp;#34;, &amp;#34; &amp;lt;script src=\&amp;#34;https://server.lab421.top/前端开发/我自己的js库/wlib.js\&amp;#34;&amp;gt;&amp;lt;/script&amp;gt;&amp;#34;, &amp;#34;&amp;lt;/head&amp;gt;&amp;#34;, &amp;#34;&amp;lt;body&amp;gt;&amp;#34;, &amp;#34;&amp;lt;/body&amp;gt;&amp;#34;, &amp;#34;&amp;lt;script&amp;gt;&amp;#34;, &amp;#34;var data = {};&amp;#34;, &amp;#34;var vm = new Vue({&amp;#34;, &amp;#34; el: &amp;#39;#app&amp;#39;,&amp;#34;, &amp;#34; data: data,&amp;#34;, &amp;#34; methods: {}&amp;#34;, &amp;#34;});&amp;#34;, &amp;#34;&amp;lt;/script&amp;gt;&amp;#34;, &amp;#34;&amp;lt;/html&amp;gt;&amp;#34;, ], &amp;#34;description&amp;#34;: &amp;#34;create a html frame&amp;#34;, }, &amp;#34;basic&amp;#34;: { &amp;#34;prefix&amp;#34;: &amp;#34;basic-tl&amp;#34;, &amp;#34;body&amp;#34;: [ &amp;#34;&amp;lt;!DOCTYPE html&amp;gt;&amp;#34;, &amp;#34;&amp;lt;html lang=\&amp;#34;zh\&amp;#34;&amp;gt;&amp;#34;, &amp;#34;&amp;lt;head&amp;gt;&amp;#34;, &amp;#34; &amp;lt;meta charset=\&amp;#34;UTF-8\&amp;#34;&amp;gt;&amp;#34;, &amp;#34; &amp;lt;title&amp;gt;${1:$CURRENT_DATE}&amp;lt;/title&amp;gt;&amp;#34;, &amp;#34;&amp;lt;/head&amp;gt;&amp;#34;, &amp;#34;&amp;lt;body&amp;gt;&amp;#34;, &amp;#34;&amp;lt;/body&amp;gt;&amp;#34;, &amp;#34;&amp;lt;/html&amp;gt;&amp;#34;, ], &amp;#34;description&amp;#34;: &amp;#34;create a html frame&amp;#34;, } }</description>
+    </item>
     
     <item>
       <title>html中文字体压缩工具</title>
