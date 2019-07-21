@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>计算属性和侦听器</title>
+    <script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+</head>
+<body>
+    <div id="app">
+        <!-- vue的计算属性 -->
+        <p>{{ msg }}</p>
+        <p>{{ reverseMsg }}</p>
+        <p>{{ now }}</p>
+        <!-- 计算属性的get和set -->
+        <p>{{ fullName }}</p>
+        <!-- 计算属性是一个特定的侦听器，但是有时需要一个更加通用的侦听器，可以使用watch -->
+
+    </div>
+</body>
+<script>
+    var data = {
+        msg: "赵兄托我办点事",
+        firstName: "Foo",
+        lastname: "Bar",
+    };
+    var vm = new Vue({
+        el: '#app',
+        data: data,
+        methods: {
+
+        },
+        computed: {
+            reverseMsg(){
+                return this.msg.split('').reverse().join("");
+                // javascript数组中的join默认使用逗号进行合并
+            },
+            now(){
+                return Date.now()
+            },
+            fullName: {
+                get(){
+                    return this.firstName + ' ' + this.lastname;
+                },
+                set(){
+                    var names = arguments[0].split(' ');
+                    this.firstName = names[0];
+                    this.lastname = names[names.length -1];
+                    // javascrit没有names[-1]这种写法
+                }
+            }
+        },
+        
+    });
+    vm.fullName = "吴 俊 磊"
+    // vm.$watch = 
+</script>
+</html>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>find on mannuan</title>
+    <link>https://mannuan.github.io/tags/find/</link>
+    <description>Recent content in find on mannuan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 02 Jun 2019 13:51:44 +0800</lastBuildDate>
+    
+	<atom:link href="https://mannuan.github.io/tags/find/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>linux常用命令</title>
+      <link>https://mannuan.github.io/post/20190602135144/</link>
+      <pubDate>Sun, 02 Jun 2019 13:51:44 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190602135144/</guid>
+      <description> nohup 结合后台运行命令&amp;amp;使用 nohup command &amp;gt;&amp;gt; log_path 2&amp;gt;&amp;amp;1 &amp;amp; lsof 查看端口运行的程序 lsof -i :port find 查找文件(以nginx为例) sudo find / -name nginx* tar 打包文件 tar -cvf 文件名.tar 要打包的目录</description>
+    </item>
+    
+  </channel>
+</rss>

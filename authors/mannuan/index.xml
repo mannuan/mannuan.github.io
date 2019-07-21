@@ -5,10 +5,138 @@
     <link>https://mannuan.github.io/authors/mannuan/</link>
     <description>Recent content on mannuan</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 11 Jul 2019 10:35:32 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 17 Jul 2019 22:02:31 +0800</lastBuildDate>
     
 	<atom:link href="https://mannuan.github.io/authors/mannuan/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>http协议</title>
+      <link>https://mannuan.github.io/post/20190717220231/</link>
+      <pubDate>Wed, 17 Jul 2019 22:02:31 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190717220231/</guid>
+      <description>前言 前端工程师打交道最多的就是浏览器，不管做什么都离不开浏览器，其中HTTP协议往往会被我们忽略，但其实资源缓存、CDN加载、页面性能优化等等都离不开对HTTP协议的了解。
+介绍 HTTP也叫作超文本传输协议，全称：Hyper Transfer Protocol。最初HTTP只能传输HTML文件，慢慢的现在可以传输文字、图像、视频和各种文件。 HTTP是无状态的：同一个客户端，连续发起多次请求，对HTTP服务器来说，都是新的请求，HTTP没办法知道来自一个客户端。
+消息结构 Header  分为request/response line和request/response header。
+  request/response line：包括请求的方法Method（GET/POST）、请求资源的路径path to resource和http协议的版本号。
+ request/response header：这边就是各种请求头了。
+  Body 响应体，一般是HTML文件。如果是get请求，是没有响应体的。
+HTTP请求方法 GET 请求获取Request-URI所标识的资源
+POST 在Request-URI所标识的资源后附加新的数据
+HEAD 请求获取由Request-URI所标识的资源的响应消息报头
+PUT 请求服务器存储一个资源，并用Request-URI作为其标识
+DELETE 请求服务器删除Request-URI所标识的资源
+TRACE 请求服务器回送收到的请求信息，主要用于测试或诊断
+CONNECT 保留将来使用
+OPTIONS 请求查询服务器的性能，或者查询与资源相关的选项和需求
+对于我们来说，常用的就是GET、和POST。再次声明，不用表单提交，get不存在跟post比较有安全性问题。
+HTTP状态码 1XX 提示信息 - 表示请求已被成功接收，继续处理。
+2XX 成功 - 表示请求已被成功接收，理解，接受
+3XX 重定向 - 要完成请求必须进行更进一步的处理
+4XX 客户端错误 - 请求有语法错误或请求无法实现
+5XX 服务器端错误 - 服务器未能实现合法的请求
+状态码很多，可以自行了解，我觉得有几个是必须知道的。
+HTTP通信过程：根据URL查询DNS、查找服务器、建立TCP连接、发送请求、服务器响应。 总结 对于HTTP，我觉得基础的要知道HTTP是无状态的、HTTP的消息结构、基本请求方法、基本状态码这四部分。</description>
+    </item>
+    
+    <item>
+      <title>冒泡、选择、插入排序</title>
+      <link>https://mannuan.github.io/post/20190717114226/</link>
+      <pubDate>Wed, 17 Jul 2019 11:42:26 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190717114226/</guid>
+      <description>/** * 冒泡，插入，选择排序 * * Author: nameczz */ // 冒泡排序 const bubbleSort = (arr) =&amp;gt; { if (arr.length &amp;lt;= 1) return for (let i = 0; i &amp;lt; arr.length; i++) { let hasChange = false for (let j = 0; j &amp;lt; arr.length - i - 1; j++) { if (arr[j] &amp;gt; arr[j + 1]) { const temp = arr[j] arr[j] = arr[j + 1] arr[j + 1] = temp hasChange = true } } // 如果false 说明所有元素已经到位  if (!</description>
+    </item>
+    
+    <item>
+      <title>CASCADE: Contextual Sarcasm Detection in Online Discussion Forums翻译和解读</title>
+      <link>https://mannuan.github.io/post/20190717110201/</link>
+      <pubDate>Wed, 17 Jul 2019 11:02:01 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190717110201/</guid>
+      <description>摘要  The literature in automated sarcasm detection has mainly focused on lexical-, syntactic- and semantic-level analysis of text. However, a sarcastic sentence can be expressed with contextual presumptions, background and commonsense knowledge. In this paper, we propose a ContextuAl SarCasm DEtector (CASCADE), which adopts a hybrid approach of both content- and context-driven modeling for sarcasm detection in online social media discussions. For the latter, CASCADE aims at extracting contextual information from the discourse of a discussion thread.</description>
+    </item>
+    
+    <item>
+      <title>单链表</title>
+      <link>https://mannuan.github.io/post/20190717084321/</link>
+      <pubDate>Wed, 17 Jul 2019 08:43:21 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190717084321/</guid>
+      <description>element next         /** * 1）单链表的插入、删除、查找操作； * 2）链表中存储的是int类型的数据； */ // 创建节点对象 class Node { constructor (element) { this.element = element this.next = null } } class LinkedList { constructor () { this.head = new Node(&amp;#39;head&amp;#39;) } // 根据value查找节点  findByValue (item) { let currentNode = this.head.next; while (currentNode !== null &amp;amp;&amp;amp; currentNode.element !== item) { currentNode = currentNode.next; } console.log(currentNode); return currentNode === null ?</description>
+    </item>
+    
+    <item>
+      <title>javascript内置对象Date的使用</title>
+      <link>https://mannuan.github.io/post/20190714155323/</link>
+      <pubDate>Sun, 14 Jul 2019 15:53:23 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190714155323/</guid>
+      <description> 格式化输出yyyy-mm-dd HH:MM:SS.msmsms function padbyZero(){ // 用零填充  var val = arguments[0]|0; var len = arguments[1]|2; var res = null; for(var i=1;i&amp;lt;len;i++){ res = val&amp;lt;Math.pow(10, i)?&amp;#39;0&amp;#39;+val:&amp;#39;&amp;#39;+val; } return res; } var d=new Date(); //获取年，getFullYear()返回4位的数字 var year=d.getFullYear(); //获取月，月份比较特殊，从0开始计数 var month=padbyZero(d.getMonth()+1); //获取日 var day=padbyZero(d.getDate()); var hour=padbyZero(d.getHours()); var minute=padbyZero(d.getMinutes()); var second=padbyZero(d.getSeconds()); var millisceond=padbyZero(d.getMilliseconds(), 3); formatStr = year+&amp;#39;-&amp;#39;+month+&amp;#39;-&amp;#39;+day+&amp;#39; &amp;#39;+hour+&amp;#39;:&amp;#39;+minute+&amp;#39;:&amp;#39;+second+&amp;#39;.&amp;#39;+millisceond; console.log(formatStr); </description>
+    </item>
+    
+    <item>
+      <title>chrome浏览器的调试技巧</title>
+      <link>https://mannuan.github.io/post/20190713135841/</link>
+      <pubDate>Sat, 13 Jul 2019 13:58:41 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190713135841/</guid>
+      <description> 设置调试的网速 设置network传输的文件图标 </description>
+    </item>
+    
+    <item>
+      <title>vscode常用插件</title>
+      <link>https://mannuan.github.io/post/20190713105721/</link>
+      <pubDate>Sat, 13 Jul 2019 10:57:21 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190713105721/</guid>
+      <description> 代码片段效率工具-snippet 查看教程snippet，让你编码效率翻倍
+微型的http服务器-Express  Hosts current worksapce with Express web server. - Compulim
+  在商店里面搜索express 安装完毕以后，快捷键Shift + command + P，输入Host Current Workspace with ... 点击，就可开启了一个http服务器 之后，在浏览器输入文件相对于vscode的绝对路径  &amp;gt; 快一点的方法就是对着文件右键，选择Copy Relative Path  最后，就可以看到你写的网页了  python代码自动补全 { &amp;#34;python.autoComplete.extraPaths&amp;#34;: [ &amp;#34;包的绝对路径， 通常名为site-packages&amp;#34;, &amp;#34;脚本的路径，比如pip,python等命令行脚本&amp;#34;, ], } 文件-&amp;gt;设置-&amp;gt;首选项，搜索python.jediEnabled,去掉前面的√， 使用Microsoft python analysis engine
+python代码静态检查工具-pylint pip install pylint yapf 默认设置
+{ &amp;#34;python.linting.enabled&amp;#34;: true, &amp;#34;python.linting.lintOnSave&amp;#34;: true, &amp;#34;python.linting.pylintEnabled&amp;#34;: true }</description>
+    </item>
+    
+    <item>
+      <title>vue学习笔记（第一部分）</title>
+      <link>https://mannuan.github.io/post/20190712145655/</link>
+      <pubDate>Fri, 12 Jul 2019 14:56:56 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190712145655/</guid>
+      <description>Vue.js 第一部分 课程介绍 前面5个部分：学习Vue的基本的语法和概念；打包工具Webpack，Gulp 后面5个部分：以项目驱动教学
+什么是Vue.js  Vue.js是目前最火的一个框架，React是最流行的一个框架（React除了开发网站，还可以开发手机App） Vue.js是前端的主流框架之一，和Angular.js、React.js一起，并称为前端三大主流框架! Vue.js是一套构建用户界面的框架，只关注视图层，它不仅易于上手，还便于与第三方库或既有项目整合。（Vue有配套的第三方类库，可以整合起来做大型项目的开发） 前端的主要工作？主要负责MVC中的V这一层；主要工作就是和界面打交道，来制作前端页面效果；  为什么要学习流行的框架  企业为了提高开发效率：在企业中，时间就是效率，效率就是金钱；
+ 企业中，使用框架，能够提高开发的效率；  提高开发效率的发展历程：原生JS-&amp;gt;Jquery之类的类库-&amp;gt;前端模板引擎-&amp;gt;和Angular.js/ Vue.js（能够帮助我们减少不必要的DOM操作；提高渲染效率；双向数据绑定的概念[通过框架提供的指令，我们前端程序员只需要关心数据的业务逻辑，不再关心DOM是如何渲染的了]）
+ 在Vue中，一个核心的概念，就是让用户不再操作DOM元素，解放了用户的双手，让程序员可以有更多的时间去关注业务逻辑；
+ 增强自己就业时候的竞争力
+ 人无我有，人有我优   框架和库的区别  框架：是一套完整的解决方案；对项目的侵入性较大，项目如果需要更换框架，则需要重新架构整个项目。
+ node中的express  库（插件）：提供某一个小功能，对项目的侵入性较小，如果某个库无法完成某些需求，可以很容易切换到其他库实现需求。
+ 1. 从Jquery切换到Zepto 2. 从EJS切换到art-template   Node（后端）中的MVC与前端中的MVVM之间的区别  MVC是后端的分层开发概念；
+ MVVM是前端视图层的概念，主要关注于视图层分离，也就是说：MVVM把前端的视图层，分为了三部分Model，View，VM ViewModel
+ 为什么有了MVC还要有MVVM
+  
+Vue.js 基本代码和MVVM之间的对应关系 Vue之 基本的代码结构和插值表达式、v-clock Vue基本的代码结构和插值表达式
+Vue指令之 v-text和v-html Vue指令之 v-bind的三种用法  直接使用指令v-bind 使用简化指令: 在绑定的时候，拼接绑定内容：:title=&amp;quot;btnTitle + &#39;，这是追加的内容&#39;&amp;quot;  Vue指令之v-on和跑马灯效果 v-clock，v-text, v-html, v-bind, v-on</description>
+    </item>
+    
+    <item>
+      <title>nginx安装和配置教程</title>
+      <link>https://mannuan.github.io/post/20190711153813/</link>
+      <pubDate>Thu, 11 Jul 2019 15:38:14 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190711153813/</guid>
+      <description> linux 安装nginx sudo apt-get install nginx 配置文件路径 /etc/nginx  mac 安装nginx brew install nginx 配置文件路径 /usr/local/etc/nginx/  </description>
+    </item>
+    
+    <item>
+      <title>brew国内镜像</title>
+      <link>https://mannuan.github.io/post/20190711144859/</link>
+      <pubDate>Thu, 11 Jul 2019 14:48:59 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190711144859/</guid>
+      <description>将brew改为国内镜像，主要分为两个步骤：修改brew.git和修改homebrew-core.git
+ 替换brew.git cd &amp;#34;$(brew --repo)&amp;#34; git remote set-url origin https://mirrors.ustc.edu.cn/brew.git 重置brew.git cd &amp;#34;$(brew --repo)&amp;#34; git remote set-url origin https://github.com/Homebrew/brew.git 替换homebrew-core.git cd &amp;#34;$(brew --repo)/Library/Taps/homebrew/homebrew-core&amp;#34; git remote set-url origin https://mirrors.ustc.edu.cn/homebrew-core.git 重置homebrew-core.git cd &amp;#34;$(brew --repo)/Library/Taps/homebrew/homebrew-core&amp;#34; git remote set-url origin https://github.</description>
+    </item>
     
     <item>
       <title>vscode snippet html template</title>
@@ -40,7 +168,7 @@
  配置全局代理 依次点击ubuntu的设置&amp;gt;系统设置&amp;gt;网络&amp;gt;网络代理&amp;gt;手动
 然后把除了socks主机的所有其他行的选项都清空，端口无法清空，可以设置为0
 最后，点击应用到整个系统
-autoproxy.pac文件生成 pip install genpac genpac --pac-proxy &amp;#34;SOCKS5 127.0.0.1:1080&amp;#34; --gfwlist-proxy=&amp;#34;SOCKS5 127.0.0.1:1080&amp;#34; --gfwlist-url=https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt --output=&amp;#34;autoproxy.pac&amp;#34; 配置系统代理 关键一步，把autoproxy.pac使用本地http协议访问
+autoproxy.pac文件生成 安装genpac pip install genpac 使用在线的gfwlist genpac --pac-proxy &amp;#34;SOCKS5 127.0.0.1:1080&amp;#34; --gfwlist-proxy=&amp;#34;SOCKS5 127.0.0.1:1080&amp;#34; --gfwlist-url=https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt --output=&amp;#34;autoproxy.pac&amp;#34; 使用离线的gfwlist genpac --pac-proxy &amp;#34;SOCKS5 127.0.0.1:1080&amp;#34; --gfwlist-proxy=&amp;#34;SOCKS5 127.0.0.1:1080&amp;#34; --gfwlist-local=你的路径/gfwlist.txt --output=&amp;#34;autoproxy.pac&amp;#34; 配置系统代理 关键一步，把autoproxy.pac使用本地http协议访问
 再次回到网络代理界面，选择自动，在配置URL的框中输入http://127.0.0.1/autoproxy.pac</description>
     </item>
     
@@ -111,7 +239,10 @@ var num = [1,5,6,10]; for (var i = 0; i &amp;lt; num.length; i++) { console.log(
       
       <guid>https://mannuan.github.io/post/20190708085133/</guid>
       <description>标签部分先后顺序，按照收录的先后顺序
- ruby标签 用来注释中文注音或字符。</description>
+ ruby标签 用来注释中文注音或字符。
+template标签 HTML内容模板（&amp;lt;template&amp;gt;）元素 是一种用于保存客户端内容机制，该内容在加载页面时不会呈现，但随后可以在运行时使用JavaScript实例化。
+将模板视为一个内容片段，存储在文档中供后续使用。虽然解析器在加载页面时确实会处理&amp;lt;template&amp;gt;元素的内容，但这样做只是为了确保这些内容有效；然而，元素的内容不会被呈现。
+一个例子</description>
     </item>
     
     <item>
@@ -325,13 +456,13 @@ window.addEventListener(&amp;#39;load&amp;#39;, (event) =&amp;gt; { console.log(
       <pubDate>Thu, 04 Jul 2019 16:20:10 +0800</pubDate>
       
       <guid>https://mannuan.github.io/post/20190704162010/</guid>
-      <description> Representing Social Media Users for Sarcasm Detection  用于讽刺检测的社交媒体用户的特征表示
- 摘要 在上下文讽刺检测的背景下，两种表示作则特征的方式：
+      <description>Representing Social Media Users for Sarcasm Detection  用于讽刺检测的社交媒体用户的特征表示
+ 摘要 在上下文讽刺检测的背景下，两种表示作者特征的方式：
  使用贝叶斯的方式直接表示作者的讽刺倾向；
  密集向量嵌入可以学习到作者和文本之间的交互；
  使用reddit评论的SARC数据集，双向的rnn可以提高性能；
   贝叶斯的方法在同质的上下文中是足够的，密集的向量嵌入是有价值的 the Bayesian approach suffices in homogeneous contexts, whereas the added power of the dense embeddings proves valuable in more diverse ones. 
-  </description>
+  介绍  Irony and sarcasm1 are extreme examples of context-dependence in language. Given only the text Great idea! or What a hardship!, we cannot resolve the speaker’s intentions unless we have in- sight into the circumstances of utterance – who is speaking, and to whom, and how the content relates to the preceding discourse (Clark, 1996).</description>
     </item>
     
     <item>
@@ -443,7 +574,7 @@ window.addEventListener(&amp;#39;load&amp;#39;, (event) =&amp;gt; { console.log(
 分析问题 出现上面问题的唯一可能就是Chrome设置有误，因此点击设置-&amp;gt;高级设置-&amp;gt;打开代理设置，打开的就是Ubuntu系统的网络设置。因此，我们可以判断自动代理模式设置失效，这里我们就要仔细分析为什么会失效？
 解决方案 出现上面问题的主要原因是：Chrome移除对file://和data:协议的支持，目前只能使用http://协议。因此，我们打算使用nginx实现对本地文件的http映射。
 安装nginx sudo apt-get install nginx 修改nginx.cnf配置文件 vim /etc/nginx/nginx.conf 在nginx.conf的http{...}代码块中输入:
-server{ listen: 80; server_name: 127.0.0.1; location /autoproxy.pac { alias 绝对路径/autoproxy.pac; } } 重启nginx
+server{ listen 80; #注意这里不用&amp;#34;:&amp;#34;隔开，listen后面没有冒号  server_name 127.0.0.1; #注意这里不用&amp;#34;:&amp;#34;隔开，server_name后面没有冒号  location /autoproxy.pac { alias 绝对路径/autoproxy.pac; } } 重启nginx
 sudo nginx -s reload 把http://127.0.0.1/autoproxy.pac填写到系统设置-&amp;gt;网络-&amp;gt;代理设置-&amp;gt;自动代理中</description>
     </item>
     
@@ -513,7 +644,11 @@ JSONP 的请求过程  请求阶段：浏览器创建一个 script 标签，并�
       
       <guid>https://mannuan.github.io/post/20190628152512/</guid>
       <description>安装nodejs mac端 brew install node 如果安装速度慢，可以到nodejs官网下载pkg安装包；
-linux端 sudo apt-get install nodejs 检查安装 node -v npm -v 修改node_modules目录权限 教程
+linux端 apt安装方式(不推荐，nodejs的版本太旧) sudo apt-get install nodejs 官网下载安装 nodejs官网下载node-vxx.xx.x-linux-x64.tar.xz安装包
+安装步骤  解压  unar node-vxx.xx.x-linux-x64.tar.xz   移动node-vxx.xx.x-linux-x64到/usr/local/下面   为了防止nodejs被篡改，保险起见放在根目录下面
+ sudo mv node-vxx.xx.x-linux-x64 /usr/local/  配置nodejs的环境变量  修改.zshrc或者.bashrc这两个配置文件，具体取决于你自己使用的是什么终端主题
+ 由于nodejs是普通用户级别的命令，不建议修改/etc/profile
+ export PATH=/usr/local/node-vxx.xx.x-linux-x64/bin:$PATH 检查安装 node -v npm -v 修改node_modules目录权限 教程
 添加node_modules路径 教程</description>
     </item>
     
@@ -1285,22 +1420,13 @@ html文件（example.html）: &amp;lt;!DOCTYPE html&amp;gt; &amp;lt;html&amp;gt;
     </item>
     
     <item>
-      <title>HTML字符编码</title>
-      <link>https://mannuan.github.io/post/20190605213437/</link>
-      <pubDate>Wed, 05 Jun 2019 21:34:37 +0800</pubDate>
-      
-      <guid>https://mannuan.github.io/post/20190605213437/</guid>
-      <description>HTML里可以用 &amp;amp;#字符编码; 表示一个字符，x表示编码值用十六进制表示&amp;#x672A; 表示字符编码为十六进制672A的字符 ，就是中文“未”字。
-更多编码详见HTML特殊字符编码对照表</description>
-    </item>
-    
-    <item>
       <title>HTML特殊字符编码对照表</title>
       <link>https://mannuan.github.io/post/20190605212304/</link>
       <pubDate>Wed, 05 Jun 2019 21:23:04 +0800</pubDate>
       
       <guid>https://mannuan.github.io/post/20190605212304/</guid>
-      <description>   特殊符号 命名实体 十进制编码 特殊符号 命名实体 十进制编码 特殊符号 命名实体 十进制编码     Α &amp;amp;Alpha; &amp;amp;#913; Β &amp;amp;Beta; &amp;amp;#914; Γ &amp;amp;Gamma; &amp;amp;#915;   Δ &amp;amp;Delta; &amp;amp;#916; Ε &amp;amp;Epsilon; &amp;amp;#917; Ζ &amp;amp;Zeta; &amp;amp;#918;   Η &amp;amp;Eta; &amp;amp;#919; Θ &amp;amp;Theta; &amp;amp;#920; Ι &amp;amp;Iota; &amp;amp;#921;   Κ &amp;amp;Kappa; &amp;amp;#922; Λ &amp;amp;Lambda; &amp;amp;#923; Μ &amp;amp;Mu; &amp;amp;#924;   Ν &amp;amp;Nu; &amp;amp;#925; Ξ &amp;amp;Xi; &amp;amp;#926; Ο &amp;amp;Omicron; &amp;amp;#927;   Π &amp;amp;Pi; &amp;amp;#928; Ρ &amp;amp;Rho; &amp;amp;#929; Σ &amp;amp;Sigma; &amp;amp;#931;   Τ &amp;amp;Tau; &amp;amp;#932; Υ &amp;amp;Upsilon; &amp;amp;#933; Φ &amp;amp;Phi; &amp;amp;#934;   Χ &amp;amp;Chi; &amp;amp;#935; Ψ &amp;amp;Psi; &amp;amp;#936; Ω &amp;amp;Omega; &amp;amp;#937;   α &amp;amp;alpha; &amp;amp;#945; β &amp;amp;beta; &amp;amp;#946; γ &amp;amp;gamma; &amp;amp;#947;   δ &amp;amp;delta; &amp;amp;#948; ε &amp;amp;epsilon; &amp;amp;#949; ζ &amp;amp;zeta; &amp;amp;#950;   η &amp;amp;eta; &amp;amp;#951; θ &amp;amp;theta; &amp;amp;#952; ι &amp;amp;iota; &amp;amp;#953;   κ &amp;amp;kappa; &amp;amp;#954; λ &amp;amp;lambda; &amp;amp;#955; μ &amp;amp;mu; &amp;amp;#956;   ν &amp;amp;nu; &amp;amp;#957; ξ &amp;amp;xi; &amp;amp;#958; ο &amp;amp;omicron; &amp;amp;#959;   π &amp;amp;pi; &amp;amp;#960; ρ &amp;amp;rho; &amp;amp;#961; ς &amp;amp;sigmaf; &amp;amp;#962;   σ &amp;amp;sigma; &amp;amp;#963; τ &amp;amp;tau; &amp;amp;#964; υ &amp;amp;upsilon; &amp;amp;#965;   φ &amp;amp;phi; &amp;amp;#966; χ &amp;amp;chi; &amp;amp;#967; ψ &amp;amp;psi; &amp;amp;#968;   ω &amp;amp;omega; &amp;amp;#969; ϑ &amp;amp;thetasym; &amp;amp;#977; ϒ &amp;amp;upsih; &amp;amp;#978;   ϖ &amp;amp;piv; &amp;amp;#982; • &amp;amp;bull; &amp;amp;#8226; … &amp;amp;hellip; &amp;amp;#8230;   ′ &amp;amp;prime; &amp;amp;#8242; ″ &amp;amp;Prime; &amp;amp;#8243; ‾ &amp;amp;oline; &amp;amp;#8254;   ⁄ &amp;amp;frasl; &amp;amp;#8260; ℘ &amp;amp;weierp; &amp;amp;#8472; ℑ &amp;amp;image; &amp;amp;#8465;   ℜ &amp;amp;real; &amp;amp;#8476; ™ &amp;amp;trade; &amp;amp;#8482; ℵ &amp;amp;alefsym; &amp;amp;#8501;   ← &amp;amp;larr; &amp;amp;#8592; ↑ &amp;amp;uarr; &amp;amp;#8593; → &amp;amp;rarr; &amp;amp;#8594;   ↓ &amp;amp;darr; &amp;amp;#8595; ↔ &amp;amp;harr; &amp;amp;#8596; ↵ &amp;amp;crarr; &amp;amp;#8629;   ⇐ &amp;amp;lArr; &amp;amp;#8656; ⇑ &amp;amp;uArr; &amp;amp;#8657; ⇒ &amp;amp;rArr; &amp;amp;#8658;   ⇓ &amp;amp;dArr; &amp;amp;#8659; ⇔ &amp;amp;hArr; &amp;amp;#8660; ∀ &amp;amp;forall; &amp;amp;#8704;   ∂ &amp;amp;part; &amp;amp;#8706; ∃ &amp;amp;exist; &amp;amp;#8707; ∅ &amp;amp;empty; &amp;amp;#8709;   ∇ &amp;amp;nabla; &amp;amp;#8711; ∈ &amp;amp;isin; &amp;amp;#8712; ∉ &amp;amp;notin; &amp;amp;#8713;   ∋ &amp;amp;ni; &amp;amp;#8715; ∏ &amp;amp;prod; &amp;amp;#8719; ∑ &amp;amp;sum; &amp;amp;#8722;   − &amp;amp;minus; &amp;amp;#8722; ∗ &amp;amp;lowast; &amp;amp;#8727; √ &amp;amp;radic; &amp;amp;#8730;   ∝ &amp;amp;prop; &amp;amp;#8733; ∞ &amp;amp;infin; &amp;amp;#8734; ∠ &amp;amp;ang; &amp;amp;#8736;   ∧ &amp;amp;and; &amp;amp;#8869; ∨ &amp;amp;or; &amp;amp;#8870; ∩ &amp;amp;cap; &amp;amp;#8745;   ∪ &amp;amp;cup; &amp;amp;#8746; ∫ &amp;amp;int; &amp;amp;#8747; ∴ &amp;amp;there4; &amp;amp;#8756;   ∼ &amp;amp;sim; &amp;amp;#8764; ≅ &amp;amp;cong; &amp;amp;#8773; ≈ &amp;amp;asymp; &amp;amp;#8773;   ≠ &amp;amp;ne; &amp;amp;#8800; ≡ &amp;amp;equiv; &amp;amp;#8801; ≤ &amp;amp;le; &amp;amp;#8804;   ≥ &amp;amp;ge; &amp;amp;#8805; ⊂ &amp;amp;sub; &amp;amp;#8834; ⊃ &amp;amp;sup; &amp;amp;#8835;   ⊄ &amp;amp;nsub; &amp;amp;#8836; ⊆ &amp;amp;sube; &amp;amp;#8838; ⊇ &amp;amp;supe; &amp;amp;#8839;   ⊕ &amp;amp;oplus; &amp;amp;#8853; ⊗ &amp;amp;otimes; &amp;amp;#8855; ⊥ &amp;amp;perp; &amp;amp;#8869;   ⋅ &amp;amp;sdot; &amp;amp;#8901; ⌈ &amp;amp;lceil; &amp;amp;#8968; ⌉ &amp;amp;rceil; &amp;amp;#8969;   ⌊ &amp;amp;lfloor; &amp;amp;#8970; ⌋ &amp;amp;rfloor; &amp;amp;#8971; ◊ &amp;amp;loz; &amp;amp;#9674;   ♠ &amp;amp;spades; &amp;amp;#9824; ♣ &amp;amp;clubs; &amp;amp;#9827; ♥ &amp;amp;hearts; &amp;amp;#9829;   ♦ &amp;amp;diams; &amp;amp;#9830;  &amp;amp;nbsp; &amp;amp;#160; ¡ &amp;amp;iexcl; &amp;amp;#161;   ¢ &amp;amp;cent; &amp;amp;#162; £ &amp;amp;pound; &amp;amp;#163; ¤ &amp;amp;curren; &amp;amp;#164;   ¥ &amp;amp;yen; &amp;amp;#165; ¦ &amp;amp;brvbar; &amp;amp;#166; § &amp;amp;sect; &amp;amp;#167;   ¨ &amp;amp;uml; &amp;amp;#168; © &amp;amp;copy; &amp;amp;#169; ª &amp;amp;ordf; &amp;amp;#170;   « &amp;amp;laquo; &amp;amp;#171; ¬ &amp;amp;not; &amp;amp;#172; ­ &amp;amp;shy; &amp;amp;#173;   ® &amp;amp;reg; &amp;amp;#174; ¯ &amp;amp;macr; &amp;amp;#175; ° &amp;amp;deg; &amp;amp;#176;   ± &amp;amp;plusmn; &amp;amp;#177; ² &amp;amp;sup2; &amp;amp;#178; ³ &amp;amp;sup3; &amp;amp;#179;   ´ &amp;amp;acute; &amp;amp;#180; µ &amp;amp;micro; `&amp;amp;#181 &amp;ldquo; &amp;amp;quot; &amp;amp;#34;   &amp;lt; &amp;amp;lt; &amp;amp;#60; &amp;gt; &amp;amp;gt; &amp;amp;#62; &amp;lsquo;  &amp;amp;#39;    </description>
+      <description> &amp;amp;开头的表示命名实体；&amp;amp;#开头的表示十进制的字符编码；&amp;amp;#x开头的表示十六进制的字符编码；
+    特殊符号 命名实体 十进制编码 特殊符号 命名实体 十进制编码 特殊符号 命名实体 十进制编码     Α &amp;amp;Alpha; &amp;amp;#913; Β &amp;amp;Beta; &amp;amp;#914; Γ &amp;amp;Gamma; &amp;amp;#915;   Δ &amp;amp;Delta; &amp;amp;#916; Ε &amp;amp;Epsilon; &amp;amp;#917; Ζ &amp;amp;Zeta; &amp;amp;#918;   Η &amp;amp;Eta; &amp;amp;#919; Θ &amp;amp;Theta; &amp;amp;#920; Ι &amp;amp;Iota; &amp;amp;#921;   Κ &amp;amp;Kappa; &amp;amp;#922; Λ &amp;amp;Lambda; &amp;amp;#923; Μ &amp;amp;Mu; &amp;amp;#924;   Ν &amp;amp;Nu; &amp;amp;#925; Ξ &amp;amp;Xi; &amp;amp;#926; Ο &amp;amp;Omicron; &amp;amp;#927;   Π &amp;amp;Pi; &amp;amp;#928; Ρ &amp;amp;Rho; &amp;amp;#929; Σ &amp;amp;Sigma; &amp;amp;#931;   Τ &amp;amp;Tau; &amp;amp;#932; Υ &amp;amp;Upsilon; &amp;amp;#933; Φ &amp;amp;Phi; &amp;amp;#934;   Χ &amp;amp;Chi; &amp;amp;#935; Ψ &amp;amp;Psi; &amp;amp;#936; Ω &amp;amp;Omega; &amp;amp;#937;   α &amp;amp;alpha; &amp;amp;#945; β &amp;amp;beta; &amp;amp;#946; γ &amp;amp;gamma; &amp;amp;#947;   δ &amp;amp;delta; &amp;amp;#948; ε &amp;amp;epsilon; &amp;amp;#949; ζ &amp;amp;zeta; &amp;amp;#950;   η &amp;amp;eta; &amp;amp;#951; θ &amp;amp;theta; &amp;amp;#952; ι &amp;amp;iota; &amp;amp;#953;   κ &amp;amp;kappa; &amp;amp;#954; λ &amp;amp;lambda; &amp;amp;#955; μ &amp;amp;mu; &amp;amp;#956;   ν &amp;amp;nu; &amp;amp;#957; ξ &amp;amp;xi; &amp;amp;#958; ο &amp;amp;omicron; &amp;amp;#959;   π &amp;amp;pi; &amp;amp;#960; ρ &amp;amp;rho; &amp;amp;#961; ς &amp;amp;sigmaf; &amp;amp;#962;   σ &amp;amp;sigma; &amp;amp;#963; τ &amp;amp;tau; &amp;amp;#964; υ &amp;amp;upsilon; &amp;amp;#965;   φ &amp;amp;phi; &amp;amp;#966; χ &amp;amp;chi; &amp;amp;#967; ψ &amp;amp;psi; &amp;amp;#968;   ω &amp;amp;omega; &amp;amp;#969; ϑ &amp;amp;thetasym; &amp;amp;#977; ϒ &amp;amp;upsih; &amp;amp;#978;   ϖ &amp;amp;piv; &amp;amp;#982; • &amp;amp;bull; &amp;amp;#8226; … &amp;amp;hellip; &amp;amp;#8230;   ′ &amp;amp;prime; &amp;amp;#8242; ″ &amp;amp;Prime; &amp;amp;#8243; ‾ &amp;amp;oline; &amp;amp;#8254;   ⁄ &amp;amp;frasl; &amp;amp;#8260; ℘ &amp;amp;weierp; &amp;amp;#8472; ℑ &amp;amp;image; &amp;amp;#8465;   ℜ &amp;amp;real; &amp;amp;#8476; ™ &amp;amp;trade; &amp;amp;#8482; ℵ &amp;amp;alefsym; &amp;amp;#8501;   ← &amp;amp;larr; &amp;amp;#8592; ↑ &amp;amp;uarr; &amp;amp;#8593; → &amp;amp;rarr; &amp;amp;#8594;   ↓ &amp;amp;darr; &amp;amp;#8595; ↔ &amp;amp;harr; &amp;amp;#8596; ↵ &amp;amp;crarr; &amp;amp;#8629;   ⇐ &amp;amp;lArr; &amp;amp;#8656; ⇑ &amp;amp;uArr; &amp;amp;#8657; ⇒ &amp;amp;rArr; &amp;amp;#8658;   ⇓ &amp;amp;dArr; &amp;amp;#8659; ⇔ &amp;amp;hArr; &amp;amp;#8660; ∀ &amp;amp;forall; &amp;amp;#8704;   ∂ &amp;amp;part; &amp;amp;#8706; ∃ &amp;amp;exist; &amp;amp;#8707; ∅ &amp;amp;empty; &amp;amp;#8709;   ∇ &amp;amp;nabla; &amp;amp;#8711; ∈ &amp;amp;isin; &amp;amp;#8712; ∉ &amp;amp;notin; &amp;amp;#8713;   ∋ &amp;amp;ni; &amp;amp;#8715; ∏ &amp;amp;prod; &amp;amp;#8719; ∑ &amp;amp;sum; &amp;amp;#8722;   − &amp;amp;minus; &amp;amp;#8722; ∗ &amp;amp;lowast; &amp;amp;#8727; √ &amp;amp;radic; &amp;amp;#8730;   ∝ &amp;amp;prop; &amp;amp;#8733; ∞ &amp;amp;infin; &amp;amp;#8734; ∠ &amp;amp;ang; &amp;amp;#8736;   ∧ &amp;amp;and; &amp;amp;#8869; ∨ &amp;amp;or; &amp;amp;#8870; ∩ &amp;amp;cap; &amp;amp;#8745;   ∪ &amp;amp;cup; &amp;amp;#8746; ∫ &amp;amp;int; &amp;amp;#8747; ∴ &amp;amp;there4; &amp;amp;#8756;   ∼ &amp;amp;sim; &amp;amp;#8764; ≅ &amp;amp;cong; &amp;amp;#8773; ≈ &amp;amp;asymp; &amp;amp;#8773;   ≠ &amp;amp;ne; &amp;amp;#8800; ≡ &amp;amp;equiv; &amp;amp;#8801; ≤ &amp;amp;le; &amp;amp;#8804;   ≥ &amp;amp;ge; &amp;amp;#8805; ⊂ &amp;amp;sub; &amp;amp;#8834; ⊃ &amp;amp;sup; &amp;amp;#8835;   ⊄ &amp;amp;nsub; &amp;amp;#8836; ⊆ &amp;amp;sube; &amp;amp;#8838; ⊇ &amp;amp;supe; &amp;amp;#8839;   ⊕ &amp;amp;oplus; &amp;amp;#8853; ⊗ &amp;amp;otimes; &amp;amp;#8855; ⊥ &amp;amp;perp; &amp;amp;#8869;   ⋅ &amp;amp;sdot; &amp;amp;#8901; ⌈ &amp;amp;lceil; &amp;amp;#8968; ⌉ &amp;amp;rceil; &amp;amp;#8969;   ⌊ &amp;amp;lfloor; &amp;amp;#8970; ⌋ &amp;amp;rfloor; &amp;amp;#8971; ◊ &amp;amp;loz; &amp;amp;#9674;   ♠ &amp;amp;spades; &amp;amp;#9824; ♣ &amp;amp;clubs; &amp;amp;#9827; ♥ &amp;amp;hearts; &amp;amp;#9829;   ♦ &amp;amp;diams; &amp;amp;#9830;  &amp;amp;nbsp; &amp;amp;#160; ¡ &amp;amp;iexcl; &amp;amp;#161;   ¢ &amp;amp;cent; &amp;amp;#162; £ &amp;amp;pound; &amp;amp;#163; ¤ &amp;amp;curren; &amp;amp;#164;   ¥ &amp;amp;yen; &amp;amp;#165; ¦ &amp;amp;brvbar; &amp;amp;#166; § &amp;amp;sect; &amp;amp;#167;   ¨ &amp;amp;uml; &amp;amp;#168; © &amp;amp;copy; &amp;amp;#169; ª &amp;amp;ordf; &amp;amp;#170;   « &amp;amp;laquo; &amp;amp;#171; ¬ &amp;amp;not; &amp;amp;#172; ­ &amp;amp;shy; &amp;amp;#173;   ® &amp;amp;reg; &amp;amp;#174; ¯ &amp;amp;macr; &amp;amp;#175; ° &amp;amp;deg; &amp;amp;#176;   ± &amp;amp;plusmn; &amp;amp;#177; ² &amp;amp;sup2; &amp;amp;#178; ³ &amp;amp;sup3; &amp;amp;#179;   ´ &amp;amp;acute; &amp;amp;#180; µ &amp;amp;micro; &amp;amp;#181; &amp;ldquo; &amp;amp;quot; &amp;amp;#34;   &amp;lt; &amp;amp;lt; &amp;amp;#60; &amp;gt; &amp;amp;gt; &amp;amp;#62; &amp;lsquo;  &amp;amp;#39;    </description>
     </item>
     
     <item>
@@ -1396,7 +1522,7 @@ javascript代码 function bubbleSort(){ var arr = arguments[0]; for(var end=arr.
       <pubDate>Mon, 03 Jun 2019 14:35:36 +0800</pubDate>
       
       <guid>https://mannuan.github.io/post/20190603143536/</guid>
-      <description>标记 作用 备注     文字 字体加粗    连续两个空格 换行    连续两个回车 或 在空行处输出连续两个&amp;lt;br/&amp;gt;&amp;lt;br/&amp;gt; 空行    &amp;amp;nbsp; 它叫不换行空格，全称是 No-Break Space，它是最常见和我们使用最多的空格，大多数的人可能只接触了&amp;amp;nbsp;，它是按下space键产生的空格。 在HTML中，如果你用空格键产生此空格，空格是不会累加的（只算1个）。要使用html实体表示才可累加，该空格占据宽度受字体影响明显而强烈。   &amp;amp;ensp; 它叫“半角空格”，全称是 En Space ，en是字体排印学的计量单位，为em宽度的一半。根据定义，它等同于字体度的一半（如16px字体中就是8px）。名义上是小写字母n的宽度。 此空格传承空格家族一贯的特性：透明的，此空格有个相当稳健的特性，就是其占据的宽度正好是1/2个中文宽度，而且基本上不受字体影响。   &amp;amp;emsp; 它叫“全角空格”，全称是 Em Space ，em是字体排印学的计量单位，相当于当前指定的点数。例如，1em在16px的字体中就是16px。 此空格也传承空格家族一贯的特性：透明的，此空格也有个相当稳健的特性，就是其占据的宽度正好是1个中文宽度，而且基本上不受字体影响。   &amp;amp;thinsp; 它叫“窄空格”，全称是 Thin Space    。我们不妨称之为“瘦弱空格”，就是该空格长得比较瘦弱，身体单薄，占据的宽度比较小。它是em之六分之一宽。     &amp;amp;zwnj; 它叫零宽不连字，全称是 Zero Width Non Joiner，简称“ZWNJ”，是一个不打印字符，放在电子文本的两个字符之间，抑制本来会发生的连字，而是以这两个字符原本的字形来绘制。 Unicode中的零宽不连字字符映射为“”（zero width non-joiner，U+200C），HTML字符值引用为：“‌”   !</description>
+      <description>标记 作用 备注     文字 字体加粗    连续两个空格 换行    连续两个回车 或 在空行处输出连续两个&amp;lt;br&amp;gt;&amp;lt;br&amp;gt; 空行    &amp;amp;nbsp; 它叫不换行空格，全称是 No-Break Space，它是最常见和我们使用最多的空格，大多数的人可能只接触了&amp;amp;nbsp;，它是按下space键产生的空格。 在HTML中，如果你用空格键产生此空格，空格是不会累加的（只算1个）。要使用html实体表示才可累加，该空格占据宽度受字体影响明显而强烈。   &amp;amp;ensp; 它叫“半角空格”，全称是 En Space ，en是字体排印学的计量单位，为em宽度的一半。根据定义，它等同于字体度的一半（如16px字体中就是8px）。名义上是小写字母n的宽度。 此空格传承空格家族一贯的特性：透明的，此空格有个相当稳健的特性，就是其占据的宽度正好是1/2个中文宽度，而且基本上不受字体影响。   &amp;amp;emsp; 它叫“全角空格”，全称是 Em Space ，em是字体排印学的计量单位，相当于当前指定的点数。例如，1em在16px的字体中就是16px。 此空格也传承空格家族一贯的特性：透明的，此空格也有个相当稳健的特性，就是其占据的宽度正好是1个中文宽度，而且基本上不受字体影响。   &amp;amp;thinsp; 它叫“窄空格”，全称是 Thin Space    。我们不妨称之为“瘦弱空格”，就是该空格长得比较瘦弱，身体单薄，占据的宽度比较小。它是em之六分之一宽。     &amp;amp;zwnj; 它叫零宽不连字，全称是 Zero Width Non Joiner，简称“ZWNJ”，是一个不打印字符，放在电子文本的两个字符之间，抑制本来会发生的连字，而是以这两个字符原本的字形来绘制。 Unicode中的零宽不连字字符映射为“”（zero width non-joiner，U+200C），HTML字符值引用为：“‌”   !</description>
     </item>
     
     <item>
@@ -1433,12 +1559,12 @@ $$Recall = \frac{TP}{TP+FN}$$</description>
     </item>
     
     <item>
-      <title>linux命令之nohup</title>
+      <title>linux常用命令</title>
       <link>https://mannuan.github.io/post/20190602135144/</link>
       <pubDate>Sun, 02 Jun 2019 13:51:44 +0800</pubDate>
       
       <guid>https://mannuan.github.io/post/20190602135144/</guid>
-      <description> 结合后台运行命令&amp;amp;使用  nohup command &amp;gt;&amp;gt; log_path 2&amp;gt;&amp;amp;1 &amp;amp;</description>
+      <description> nohup 结合后台运行命令&amp;amp;使用 nohup command &amp;gt;&amp;gt; log_path 2&amp;gt;&amp;amp;1 &amp;amp; lsof 查看端口运行的程序 lsof -i :port find 查找文件(以nginx为例) sudo find / -name nginx* tar 打包文件 tar -cvf 文件名.tar 要打包的目录</description>
     </item>
     
     <item>
@@ -1617,7 +1743,7 @@ HTML5的规范涉及面非常广，新增的DOM API只是其一部分。
       <description>关键字的名称：test
 数据表名：test
 搜索关键字：test
-    作用 命令 例子     列出所有包含test的item {&amp;quot;test&amp;quot;: {&amp;quot;$exists&amp;quot;: true}} db.getCollection(&#39;test&#39;).find({&amp;quot;test&amp;quot;: {&amp;quot;$exists&amp;quot;: true}})   根据test进行排序 {&amp;quot;test&amp;quot;: 1或-1}，&amp;rdquo;1&amp;rdquo;表示升序，”-1“表示降序 db.getCollection(&#39;test&#39;).find().sort({&amp;quot;test&amp;quot;: -1})   列出所有符合正则表达式的item {&amp;quot;test&amp;quot;: {&amp;quot;$regex&amp;quot;: &amp;quot;test&amp;quot;}} db.getCollection(&#39;test&#39;).find({&amp;quot;test&amp;quot;: {&amp;quot;$regex&amp;quot;: &amp;quot;test&amp;quot;}})   限制列出的item的数量 数字 db.getCollection(&#39;test&#39;).find().limit(自定义数字)   列出所有符合字符串长度的item {&amp;quot;$where&amp;quot;: &amp;quot;(this.test.length &amp;gt; 自定义长度)&amp;quot;} db.getCollection(&#39;test&#39;).find({&amp;quot;$where&amp;quot;: &amp;quot;(this.test.length &amp;gt; 自定义长度)&amp;quot;})   统计item的数量 collection.count_documents({}) db.getCollection(&amp;quot;test&amp;quot;).count_documents({})    持续更新&amp;hellip;</description>
+    作用 命令 例子     列出所有包含test的item {&amp;quot;test&amp;quot;: {&amp;quot;$exists&amp;quot;: true}} db.getCollection(&#39;test&#39;).find({&amp;quot;test&amp;quot;: {&amp;quot;$exists&amp;quot;: true}})   根据test进行排序 [(&amp;quot;test&amp;quot;: 1或-1)]，&amp;rdquo;1&amp;rdquo;表示升序，”-1“表示降序 db.getCollection(&#39;test&#39;).find().sort([(&amp;quot;test&amp;quot;, -1)])   列出所有符合正则表达式的item {&amp;quot;test&amp;quot;: {&amp;quot;$regex&amp;quot;: &amp;quot;test&amp;quot;}} db.getCollection(&#39;test&#39;).find({&amp;quot;test&amp;quot;: {&amp;quot;$regex&amp;quot;: &amp;quot;test&amp;quot;}})   限制列出的item的数量 数字 db.getCollection(&#39;test&#39;).find().limit(自定义数字)   列出所有符合字符串长度的item {&amp;quot;$where&amp;quot;: &amp;quot;(this.test.length &amp;gt; 自定义长度)&amp;quot;} db.getCollection(&#39;test&#39;).find({&amp;quot;$where&amp;quot;: &amp;quot;(this.test.length &amp;gt; 自定义长度)&amp;quot;})   统计item的数量 collection.count_documents({}) db.getCollection(&amp;quot;test&amp;quot;).count_documents({})    持续更新&amp;hellip;</description>
     </item>
     
     <item>
@@ -1755,7 +1881,7 @@ var script = document.createElement(&amp;lsquo;script&amp;rsquo;); var textNode 
       <pubDate>Tue, 28 May 2019 19:19:41 +0800</pubDate>
       
       <guid>https://mannuan.github.io/post/20190528191941/</guid>
-      <description>名称 快捷键     上下移动行 Alt(option) + 上下键   删除行 Ctrl(command) + Shift() + K    持续更新中&amp;hellip;</description>
+      <description>名称 快捷键     上下移动行 Alt(option) + 上下键   删除行 Ctrl(command) + Shift( \( \Uparrow \) ) + K    持续更新中&amp;hellip;</description>
     </item>
     
     <item>
@@ -1878,10 +2004,11 @@ var extent = function(){ this.value = 0; }; Extent.prototype.call = function(){ 
       <pubDate>Wed, 22 May 2019 15:27:59 +0800</pubDate>
       
       <guid>https://mannuan.github.io/post/20190522152759/</guid>
-      <description>this的指向分为4种：
- 作为对象的方法调用： var obj = { a: 1, getA: function(){ console.log(this == obj); console.log(this.a); } } obj.getA();   当函数作为对象的方法被调用时，this指向的是一个局部对象，即当前的这个对象；
- 作为普通函数调用： global.name = &amp;#39;globalName&amp;#39;; var getName = function(){ return this.name; }; console.log(getName()); // 输出: globalName  //或者 global.name = &amp;#39;globalName&amp;#39;; var myObject = { name: &amp;#34;sven&amp;#34;, getName: function(){ return this.name; } } var getName = myObject.getName; console.log(getName()); //globalName   当this在普通函数里面被用到时，this指向的是一个全局对象，在浏览器上是window，在nodejs上是global
- 构造函数调用： var MyClass = function(){ this.</description>
+      <description>ES5  this的指向分为4种：
+ 隐式的this指向  作为对象的方法调用，this指向的是当前对象
+ var obj = { a: 1, getA: function(){ console.log(this == obj); // true  console.log(this.a); // 1  } } obj.getA();  硬指定的this  作为普通函数调用，this指向的是全局对象
+ name = &amp;#39;globalName&amp;#39;; var getName = function(){ console.log(this == window); console.log(name); }; getName();  或者 将对象的方法加入全局对象中，会改变原本的this指向
+name = &amp;#39;globalName&amp;#39;; var myObject = { name: &amp;#34;sven&amp;#34;, getName: function(){ console.log(this == window); console.log(this.name); } } var getName = myObject.</description>
     </item>
     
     <item>
@@ -2230,11 +2357,7 @@ db.&amp;lt;collection_name&amp;gt;.aggregate([ {$match:key}, {$group:{_id:$&amp;
       <pubDate>Wed, 04 Jul 2018 14:22:18 +0800</pubDate>
       
       <guid>https://mannuan.github.io/post/20180704142218/</guid>
-      <description>联系方式  手机：13588796263 Email：wujunleiwang@gmail.com 微信号：bubaizhansheng  个人信息   吴俊磊/男/1994 本科/西南民族大学/网络工程 硕士/杭州电子科技大学/计算机科学与技术 技术博客：https://mannuan.github.io Github：http://github.com/mannuan 期望职位：Web前端初级程序员 期望城市：杭州       校园项目经历 研究生期间 智慧旅游 (2018年3月~2018年8月) 我主要负责爬虫管理系统的搭建，包括爬虫脚本和网站的搭建。在这个项目中，我遭遇了严格的反爬、网页动态加载和登录验证等难题。针对于网页动态加载的问题，我选择使用selenium作为爬虫的引擎。由于专门花费了两个月时间开发了一个beryllium的python库。为了解决反爬问题，我结合使用了ip代理池和爬虫策略。然后，我使用加载cookie的方式，躲避了登录验证。由于涉及到的爬虫方案比较复杂且不利于维护。我专门动手设计了一套爬虫管理系统，后台使用django，前端使用dataTable等框架实现。使用的是mongodb数据库，我使用了aggregate聚合的方式。该项目上线以后，基本上每天可以稳定地爬取几万条数据，在十几万条数据中，查询花费的时间基本不超过3秒。
-河长信息管理系统 (2017年10月~2018年3月) 在这个项目中，我不但完成了数据爬虫、数据接口开发工作，还针对不同的网站总结出了一套通用的爬虫脚本模板，有效的加快了开发的进度。同时，我为了避免被网站反爬，制定了一套爬虫策略。在该系统上线以后，每天都可以稳定地获取到最新的数据。
-本科阶段 基于LLDP协议捎带式服务质量采集机制(QoS over LLDP) (2016年3月~2017年3月) 这是一个软件定义网络领域的创新项目，我在这个项目中主要负责研究如何让LLDP协议的数据包来承载QoS信息，使得在不占用网络带宽的情况下，获取实时的网络QoS信息。为了实现这个方案，我使用了floodlight+vswitch的技术栈。其中，我在floodlight中创建了一个模块来修改LLDP数据包的结构，为QoS信息开辟了一段存储空间，然后，在vswitch中LLDP的解包阶段，把交换机自身的QoS信息填写到LLDP数据包中。这套解决方案关键的难点在于如何把QoS信息填写到数据包中，但是网上没有这方面的资料，为了解决这个难题我花费了两个月的时间来阅读vswitch的源代码。在8月份我的这个项目参加了第三届全国高校软件定义网络（SDN）应用创新开发大赛获得了二等奖。最后，我和我的导师通过这个项目发表了一篇sci-4区的论文—The Top-K QoS-aware Paths Discovery for Source Routing in SDN. 我对这篇论文的主要贡献就是提供实验数据。
-技能清单 以下均为我熟练使用的技能
- Web开发：Node Web框架：django 前端框架：Vue 前端工具：webpack 数据库相关：MySQL/mongodb 版本管理、文档和自动化部署工具：Git  致谢 感谢您花时间阅读我的简历，期待能有机会和您共事。</description>
+      <description>联系方式  手机：13588796263 Email：wujunleiwang@gmail.com 微信号：bubaizhansheng  个人信息   吴俊磊/男/1994 本科/西南民族大学/网络工程 硕士/杭州电子科技大学/计算机科学与技术 技术博客：https://mannuan.github.io Github：http://github.com/mannuan 期望职位：Web前端初级程序员 期望城市：杭州       校园项目经历 研究生期间 智慧旅游-爬虫管理系统 (2018年1月~2018年8月)  项目描述：对大众点评、携程和马蜂窝等旅游网站进行爬虫，并用页面展示数据； 项目职责：  对python库selenium进行封装，爬取动态网页； 使用ip代理和爬虫策略解决服务器403拒绝请求问题； 使用预先加载cookie的方式，解决登录验证问题； 总结爬虫的字体反爬和css反爬的解决方案； 使用mongodb存储数据，并使用aggregate查询数据； 使用基于nodejs的koa作为web后端开发框架，接收post和get请求； 使用vue和element-ui完成页面的布局，利用ajax进行数据解析显示和查询；  项目成果：  每天可以稳定的爬取几万条数据。在几十万条数据中，从数据的查询到页面完成数据加载花费的时间不超过3秒。   河长信息管理系统-爬虫脚本开发 (2017年10月~2018年1月)  项目描述：对万方数据、浙江省水利厅和百度百科等含有河流信息的网站进行爬虫； 项目职责：  使用pyspider作为爬虫框架，编写爬虫脚本； 使用正则表达式编写一套通用的爬虫脚本模板； 制定爬虫策略解决服务器403拒绝请求的问题；  项目成果：在该系统上线以后，每天都可以稳定地获取到最新的数据。  本科阶段 基于LLDP协议捎带式服务质量采集机制(2016年3月~2017年3月)  项目描述：这是一个软件定义网络的创新项目，目的是在占用少量的网络带宽的情况下，使用链路发现协议(LLDP)来传递网络的服务质量信息(QoS)。 项目职责：  在网络控制器Floodlight上创建一个修改LLDP数据包结构的模块； 修改虚拟网络交换机Vswitch的源代码，把网络QoS信息填写到LLDP数据包中； 使用网络仿真器Mininet，完成网络的一键式部署； 使用jquery和dataTable等javascript库完成页面布局，使用ajax异步加载网络的QoS信息；  项目成果：  在2016年的第三届全国高校软件定义网络（SDN）应用创新开发大赛中获得了二等奖。 发表了一篇sci 4区的论文-The Top-K QoS-aware Paths Discovery for Source Routing in SDN。我是这篇论文的第二作者，我对这篇论文的主要贡献就是提高实验数据。   技能清单 以下均为我熟练使用的技能</description>
     </item>
     
   </channel>

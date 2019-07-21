@@ -5,10 +5,23 @@
     <link>https://mannuan.github.io/tags/vscode/</link>
     <description>Recent content in vscode on mannuan</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 22 Jun 2019 09:26:50 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 13 Jul 2019 10:57:21 +0800</lastBuildDate>
     
 	<atom:link href="https://mannuan.github.io/tags/vscode/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>vscode常用插件</title>
+      <link>https://mannuan.github.io/post/20190713105721/</link>
+      <pubDate>Sat, 13 Jul 2019 10:57:21 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190713105721/</guid>
+      <description> 代码片段效率工具-snippet 查看教程snippet，让你编码效率翻倍
+微型的http服务器-Express  Hosts current worksapce with Express web server. - Compulim
+  在商店里面搜索express 安装完毕以后，快捷键Shift + command + P，输入Host Current Workspace with ... 点击，就可开启了一个http服务器 之后，在浏览器输入文件相对于vscode的绝对路径  &amp;gt; 快一点的方法就是对着文件右键，选择Copy Relative Path  最后，就可以看到你写的网页了  python代码自动补全 { &amp;#34;python.autoComplete.extraPaths&amp;#34;: [ &amp;#34;包的绝对路径， 通常名为site-packages&amp;#34;, &amp;#34;脚本的路径，比如pip,python等命令行脚本&amp;#34;, ], } 文件-&amp;gt;设置-&amp;gt;首选项，搜索python.jediEnabled,去掉前面的√， 使用Microsoft python analysis engine
+python代码静态检查工具-pylint pip install pylint yapf 默认设置
+{ &amp;#34;python.linting.enabled&amp;#34;: true, &amp;#34;python.linting.lintOnSave&amp;#34;: true, &amp;#34;python.linting.pylintEnabled&amp;#34;: true }</description>
+    </item>
     
     <item>
       <title>snippet，让你编码效率翻倍</title>
@@ -27,7 +40,7 @@ Snippet怎么用 先上一个Demo
       <pubDate>Tue, 28 May 2019 19:19:41 +0800</pubDate>
       
       <guid>https://mannuan.github.io/post/20190528191941/</guid>
-      <description>名称 快捷键     上下移动行 Alt(option) + 上下键   删除行 Ctrl(command) + Shift() + K    持续更新中&amp;hellip;</description>
+      <description>名称 快捷键     上下移动行 Alt(option) + 上下键   删除行 Ctrl(command) + Shift( \( \Uparrow \) ) + K    持续更新中&amp;hellip;</description>
     </item>
     
   </channel>

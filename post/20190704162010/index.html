@@ -2,23 +2,23 @@
 <html lang='en'><head>
   <meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
-<meta name='description' content=' Representing Social Media Users for Sarcasm Detection  用于讽刺检测的社交媒体用户的特征表示
- 摘要 在上下文讽刺检测的背景下，两种表示作则特征的方式：
+<meta name='description' content='Representing Social Media Users for Sarcasm Detection  用于讽刺检测的社交媒体用户的特征表示
+ 摘要 在上下文讽刺检测的背景下，两种表示作者特征的方式：
  使用贝叶斯的方式直接表示作者的讽刺倾向；
  密集向量嵌入可以学习到作者和文本之间的交互；
  使用reddit评论的SARC数据集，双向的rnn可以提高性能；
   贝叶斯的方法在同质的上下文中是足够的，密集的向量嵌入是有价值的 the Bayesian approach suffices in homogeneous contexts, whereas the added power of the dense embeddings proves valuable in more diverse ones. 
-  '>
+  介绍  Irony and sarcasm1 are extreme examples of context-dependence in language. Given only the text Great idea! or What a hardship!, we cannot resolve the speaker’s intentions unless we have in- sight into the circumstances of utterance – who is speaking, and to whom, and how the content relates to the preceding discourse (Clark, 1996).'>
 <meta name='theme-color' content='#FFFFFF'>
 
 <meta property='og:title' content='Representing Social Media Users for Sarcasm Detection论文翻译和解读 • mannuan'>
-<meta property='og:description' content=' Representing Social Media Users for Sarcasm Detection  用于讽刺检测的社交媒体用户的特征表示
- 摘要 在上下文讽刺检测的背景下，两种表示作则特征的方式：
+<meta property='og:description' content='Representing Social Media Users for Sarcasm Detection  用于讽刺检测的社交媒体用户的特征表示
+ 摘要 在上下文讽刺检测的背景下，两种表示作者特征的方式：
  使用贝叶斯的方式直接表示作者的讽刺倾向；
  密集向量嵌入可以学习到作者和文本之间的交互；
  使用reddit评论的SARC数据集，双向的rnn可以提高性能；
   贝叶斯的方法在同质的上下文中是足够的，密集的向量嵌入是有价值的 the Bayesian approach suffices in homogeneous contexts, whereas the added power of the dense embeddings proves valuable in more diverse ones. 
-  '>
+  介绍  Irony and sarcasm1 are extreme examples of context-dependence in language. Given only the text Great idea! or What a hardship!, we cannot resolve the speaker’s intentions unless we have in- sight into the circumstances of utterance – who is speaking, and to whom, and how the content relates to the preceding discourse (Clark, 1996).'>
 <meta property='og:url' content='https://mannuan.github.io/post/20190704162010/'>
 <meta property='og:site_name' content='mannuan'>
 <meta property='og:type' content='article'><meta property='og:image' content='https://www.gravatar.com/avatar/8bacfd69855171c6f53247456732f68a?s=256'><meta property='article:section' content='post'><meta property='article:tag' content='翻译'><meta property='article:tag' content='反讽'><meta property='article:tag' content='解读'><meta property='article:published_time' content='2019-07-04T16:20:10&#43;08:00'/><meta property='article:modified_time' content='2019-07-04T16:20:10&#43;08:00'/><meta name='twitter:card' content='summary'>
@@ -106,11 +106,11 @@
       </li><li>
         <a href='/tags/aggregate/' style='font-size:1em'>aggregate</a>
       </li><li>
-        <a href='/tags/ajax/' style='font-size:1.0625em'>ajax</a>
+        <a href='/tags/ajax/' style='font-size:1.06em'>ajax</a>
       </li><li>
         <a href='/tags/algolia/' style='font-size:1em'>algolia</a>
       </li><li>
-        <a href='/tags/anki/' style='font-size:1.0208333333333333em'>anki</a>
+        <a href='/tags/anki/' style='font-size:1.02em'>anki</a>
       </li><li>
         <a href='/tags/arguments%E8%BD%AC%E6%95%B0%E7%BB%84/' style='font-size:1em'>arguments转数组</a>
       </li><li>
@@ -122,7 +122,7 @@
       </li><li>
         <a href='/tags/beryllium/' style='font-size:1em'>beryllium</a>
       </li><li>
-        <a href='/tags/brew/' style='font-size:1em'>brew</a>
+        <a href='/tags/brew/' style='font-size:1.02em'>brew</a>
       </li><li>
         <a href='/tags/cache-control/' style='font-size:1em'>cache-control</a>
       </li><li>
@@ -130,9 +130,9 @@
       </li><li>
         <a href='/tags/chroma/' style='font-size:1em'>chroma</a>
       </li><li>
-        <a href='/tags/chrome/' style='font-size:1em'>Chrome</a>
+        <a href='/tags/chrome/' style='font-size:1.02em'>Chrome</a>
       </li><li>
-        <a href='/tags/cisco/' style='font-size:1.125em'>Cisco</a>
+        <a href='/tags/cisco/' style='font-size:1.12em'>Cisco</a>
       </li><li>
         <a href='/tags/cnpm/' style='font-size:1em'>cnpm</a>
       </li><li>
@@ -140,7 +140,7 @@
       </li><li>
         <a href='/tags/concat/' style='font-size:1em'>concat</a>
       </li><li>
-        <a href='/tags/config/' style='font-size:1.125em'>Configuration</a>
+        <a href='/tags/config/' style='font-size:1.12em'>Configuration</a>
       </li><li>
         <a href='/tags/contains-empty-filename/' style='font-size:1em'>contains empty filename</a>
       </li><li>
@@ -166,9 +166,9 @@
       </li><li>
         <a href='/tags/domcontent/' style='font-size:1em'>domContent</a>
       </li><li>
-        <a href='/tags/domcontentloaded/' style='font-size:1.0208333333333333em'>domContentLoaded</a>
+        <a href='/tags/domcontentloaded/' style='font-size:1.02em'>domContentLoaded</a>
       </li><li>
-        <a href='/tags/dom%E6%89%A9%E5%B1%95/' style='font-size:1.0208333333333333em'>DOM扩展</a>
+        <a href='/tags/dom%E6%89%A9%E5%B1%95/' style='font-size:1.02em'>DOM扩展</a>
       </li><li>
         <a href='/tags/dpkg-error/' style='font-size:1em'>dpkg error</a>
       </li><li>
@@ -178,23 +178,27 @@
       </li><li>
         <a href='/tags/f1/' style='font-size:1em'>F1</a>
       </li><li>
+        <a href='/tags/find/' style='font-size:1em'>find</a>
+      </li><li>
         <a href='/tags/frps/' style='font-size:1em'>frps</a>
       </li><li>
-        <a href='/tags/function/' style='font-size:1.0416666666666667em'>function</a>
+        <a href='/tags/function/' style='font-size:1.04em'>function</a>
       </li><li>
         <a href='/tags/fuse.js/' style='font-size:1em'>fuse.js</a>
       </li><li>
         <a href='/tags/genpac/' style='font-size:1em'>genpac</a>
       </li><li>
-        <a href='/tags/html/' style='font-size:1.1041666666666667em'>html</a>
+        <a href='/tags/html/' style='font-size:1.1em'>html</a>
       </li><li>
         <a href='/tags/html5/' style='font-size:1em'>html5</a>
       </li><li>
         <a href='/tags/html%E5%B8%B8%E7%94%A8/' style='font-size:1em'>html常用</a>
       </li><li>
-        <a href='/tags/html%E6%A0%87%E7%AD%BE/' style='font-size:1.0208333333333333em'>html标签</a>
+        <a href='/tags/html%E6%A0%87%E7%AD%BE/' style='font-size:1.02em'>html标签</a>
       </li><li>
-        <a href='/tags/https/' style='font-size:1.0208333333333333em'>https</a>
+        <a href='/tags/https/' style='font-size:1.02em'>https</a>
+      </li><li>
+        <a href='/tags/http%E5%8D%8F%E8%AE%AE/' style='font-size:1.02em'>http协议</a>
       </li><li>
         <a href='/tags/http%E7%BC%93%E5%AD%98/' style='font-size:1em'>http缓存</a>
       </li><li>
@@ -214,7 +218,7 @@
       </li><li>
         <a href='/tags/ip/' style='font-size:1em'>ip</a>
       </li><li>
-        <a href='/tags/iterm2/' style='font-size:1.0416666666666667em'>iterm2</a>
+        <a href='/tags/iterm2/' style='font-size:1.04em'>iterm2</a>
       </li><li>
         <a href='/tags/java/' style='font-size:1em'>java</a>
       </li><li>
@@ -222,11 +226,11 @@
       </li><li>
         <a href='/tags/join/' style='font-size:1em'>join</a>
       </li><li>
-        <a href='/tags/jquery/' style='font-size:1.3125em'>jquery</a>
+        <a href='/tags/jquery/' style='font-size:1.3em'>jquery</a>
       </li><li>
         <a href='/tags/jsonp/' style='font-size:1em'>jsonp</a>
       </li><li>
-        <a href='/tags/jupyter/' style='font-size:1.0625em'>jupyter</a>
+        <a href='/tags/jupyter/' style='font-size:1.06em'>jupyter</a>
       </li><li>
         <a href='/tags/katex/' style='font-size:1em'>katex</a>
       </li><li>
@@ -236,29 +240,35 @@
       </li><li>
         <a href='/tags/latex/' style='font-size:1em'>latex</a>
       </li><li>
-        <a href='/tags/linux/' style='font-size:1.125em'>linux</a>
+        <a href='/tags/linux/' style='font-size:1.12em'>linux</a>
+      </li><li>
+        <a href='/tags/lsof/' style='font-size:1em'>lsof</a>
       </li><li>
         <a href='/tags/lunr.js/' style='font-size:1em'>lunr.js</a>
       </li><li>
-        <a href='/tags/mac/' style='font-size:1.0416666666666667em'>MAC</a>
+        <a href='/tags/mac/' style='font-size:1.04em'>MAC</a>
       </li><li>
-        <a href='/tags/markdown/' style='font-size:1.0208333333333333em'>markdown</a>
+        <a href='/tags/markdown/' style='font-size:1.02em'>markdown</a>
       </li><li>
         <a href='/tags/menus/' style='font-size:1em'>menus</a>
       </li><li>
-        <a href='/tags/mongodb/' style='font-size:1.0416666666666667em'>mongodb</a>
+        <a href='/tags/mongodb/' style='font-size:1.04em'>mongodb</a>
       </li><li>
-        <a href='/tags/nat/' style='font-size:1.0208333333333333em'>NAT</a>
+        <a href='/tags/nat/' style='font-size:1.02em'>NAT</a>
       </li><li>
-        <a href='/tags/nginx/' style='font-size:1.0208333333333333em'>nginx</a>
+        <a href='/tags/nginx/' style='font-size:1.06em'>nginx</a>
+      </li><li>
+        <a href='/tags/nginx%E5%AE%89%E8%A3%85/' style='font-size:1em'>nginx安装</a>
+      </li><li>
+        <a href='/tags/nginx%E9%85%8D%E7%BD%AE/' style='font-size:1em'>nginx配置</a>
       </li><li>
         <a href='/tags/node/' style='font-size:1em'>node</a>
       </li><li>
-        <a href='/tags/nodejs/' style='font-size:1.0625em'>nodejs</a>
+        <a href='/tags/nodejs/' style='font-size:1.06em'>nodejs</a>
       </li><li>
         <a href='/tags/nohup/' style='font-size:1em'>nohup</a>
       </li><li>
-        <a href='/tags/npm/' style='font-size:1.0833333333333333em'>npm</a>
+        <a href='/tags/npm/' style='font-size:1.08em'>npm</a>
       </li><li>
         <a href='/tags/npm%E5%87%BA%E9%94%99/' style='font-size:1em'>npm出错</a>
       </li><li>
@@ -280,7 +290,7 @@
       </li><li>
         <a href='/tags/ping/' style='font-size:1em'>ping</a>
       </li><li>
-        <a href='/tags/pip/' style='font-size:1.0208333333333333em'>pip</a>
+        <a href='/tags/pip/' style='font-size:1.02em'>pip</a>
       </li><li>
         <a href='/tags/pkg/' style='font-size:1em'>pkg</a>
       </li><li>
@@ -292,11 +302,11 @@
       </li><li>
         <a href='/tags/pygments/' style='font-size:1em'>pygments</a>
       </li><li>
-        <a href='/tags/pyquery/' style='font-size:1.0416666666666667em'>pyquery</a>
+        <a href='/tags/pyquery/' style='font-size:1.04em'>pyquery</a>
       </li><li>
         <a href='/tags/pyspider/' style='font-size:1em'>pyspider</a>
       </li><li>
-        <a href='/tags/python/' style='font-size:1.0625em'>python</a>
+        <a href='/tags/python/' style='font-size:1.06em'>python</a>
       </li><li>
         <a href='/tags/python3/' style='font-size:1em'>python3</a>
       </li><li>
@@ -308,13 +318,13 @@
       </li><li>
         <a href='/tags/root/' style='font-size:1em'>root</a>
       </li><li>
-        <a href='/tags/search/' style='font-size:1.0625em'>search</a>
+        <a href='/tags/search/' style='font-size:1.06em'>search</a>
       </li><li>
         <a href='/tags/selenium/' style='font-size:1em'>selenium</a>
       </li><li>
-        <a href='/tags/setuptools/' style='font-size:1.0208333333333333em'>setuptools</a>
+        <a href='/tags/setuptools/' style='font-size:1.02em'>setuptools</a>
       </li><li>
-        <a href='/tags/shadowsocks/' style='font-size:1.0208333333333333em'>Shadowsocks</a>
+        <a href='/tags/shadowsocks/' style='font-size:1.02em'>Shadowsocks</a>
       </li><li>
         <a href='/tags/shadowsocks-qt5/' style='font-size:1em'>shadowsocks-qt5</a>
       </li><li>
@@ -326,7 +336,7 @@
       </li><li>
         <a href='/tags/smallpdf/' style='font-size:1em'>smallpdf</a>
       </li><li>
-        <a href='/tags/snippet/' style='font-size:1.0416666666666667em'>snippet</a>
+        <a href='/tags/snippet/' style='font-size:1.04em'>snippet</a>
       </li><li>
         <a href='/tags/softmax/' style='font-size:1em'>softmax</a>
       </li><li>
@@ -346,9 +356,11 @@
       </li><li>
         <a href='/tags/table%E6%A0%87%E7%AD%BE/' style='font-size:1em'>table标签</a>
       </li><li>
+        <a href='/tags/tar/' style='font-size:1em'>tar</a>
+      </li><li>
         <a href='/tags/tcp/' style='font-size:1em'>TCP</a>
       </li><li>
-        <a href='/tags/template/' style='font-size:1.0208333333333333em'>template</a>
+        <a href='/tags/template/' style='font-size:1.02em'>template</a>
       </li><li>
         <a href='/tags/text%E7%B1%BB%E5%9E%8B/' style='font-size:1em'>text类型</a>
       </li><li>
@@ -356,9 +368,9 @@
       </li><li>
         <a href='/tags/time-machine/' style='font-size:1em'>time machine</a>
       </li><li>
-        <a href='/tags/tolocalestring/' style='font-size:1.0208333333333333em'>toLocaleString</a>
+        <a href='/tags/tolocalestring/' style='font-size:1.02em'>toLocaleString</a>
       </li><li>
-        <a href='/tags/tostring/' style='font-size:1.0208333333333333em'>toString</a>
+        <a href='/tags/tostring/' style='font-size:1.02em'>toString</a>
       </li><li>
         <a href='/tags/traceroute/' style='font-size:1em'>traceroute</a>
       </li><li>
@@ -368,7 +380,7 @@
       </li><li>
         <a href='/tags/twine/' style='font-size:1em'>twine</a>
       </li><li>
-        <a href='/tags/ubuntu/' style='font-size:1.0208333333333333em'>ubuntu</a>
+        <a href='/tags/ubuntu/' style='font-size:1.02em'>ubuntu</a>
       </li><li>
         <a href='/tags/udp/' style='font-size:1em'>UDP</a>
       </li><li>
@@ -384,17 +396,17 @@
       </li><li>
         <a href='/tags/val/' style='font-size:1em'>val</a>
       </li><li>
-        <a href='/tags/valueof/' style='font-size:1.0208333333333333em'>valueOf</a>
+        <a href='/tags/valueof/' style='font-size:1.02em'>valueOf</a>
       </li><li>
         <a href='/tags/vim/' style='font-size:1em'>vim</a>
       </li><li>
         <a href='/tags/vim%E5%91%BD%E4%BB%A4/' style='font-size:1em'>vim命令</a>
       </li><li>
-        <a href='/tags/vlan/' style='font-size:1.0208333333333333em'>VLAN</a>
+        <a href='/tags/vlan/' style='font-size:1.02em'>VLAN</a>
       </li><li>
-        <a href='/tags/vscode/' style='font-size:1.0208333333333333em'>vscode</a>
+        <a href='/tags/vscode/' style='font-size:1.04em'>vscode</a>
       </li><li>
-        <a href='/tags/vue/' style='font-size:1.0208333333333333em'>vue</a>
+        <a href='/tags/vue/' style='font-size:1.04em'>vue</a>
       </li><li>
         <a href='/tags/web-service%E8%A7%84%E8%8C%83/' style='font-size:1em'>web service规范</a>
       </li><li>
@@ -408,7 +420,7 @@
       </li><li>
         <a href='/tags/write-access/' style='font-size:1em'>write access</a>
       </li><li>
-        <a href='/tags/xml/' style='font-size:1.0208333333333333em'>xml</a>
+        <a href='/tags/xml/' style='font-size:1.02em'>xml</a>
       </li><li>
         <a href='/tags/%E4%BA%A4%E6%8D%A2%E6%9C%BA/' style='font-size:1em'>交换机</a>
       </li><li>
@@ -418,17 +430,19 @@
       </li><li>
         <a href='/tags/%E5%85%83%E7%B4%A0%E9%81%8D%E5%8E%86/' style='font-size:1em'>元素遍历</a>
       </li><li>
-        <a href='/tags/%E5%85%AD%E7%BA%A7/' style='font-size:1.25em'>六级</a>
+        <a href='/tags/%E5%85%AD%E7%BA%A7/' style='font-size:1.24em'>六级</a>
       </li><li>
         <a href='/tags/%E5%86%92%E6%B3%A1/' style='font-size:1em'>冒泡</a>
       </li><li>
         <a href='/tags/%E5%87%86%E7%A1%AE%E7%8E%87/' style='font-size:1em'>准确率</a>
       </li><li>
-        <a href='/tags/%E5%88%86%E5%8C%BA/' style='font-size:1.0208333333333333em'>分区</a>
+        <a href='/tags/%E5%88%86%E5%8C%BA/' style='font-size:1.02em'>分区</a>
       </li><li>
-        <a href='/tags/%E5%88%9B%E5%BB%BA%E7%94%A8%E6%88%B7/' style='font-size:1.0208333333333333em'>创建用户</a>
+        <a href='/tags/%E5%88%9B%E5%BB%BA%E7%94%A8%E6%88%B7/' style='font-size:1.02em'>创建用户</a>
       </li><li>
         <a href='/tags/%E5%89%8D%E7%AB%AF/' style='font-size:1em'>前端</a>
+      </li><li>
+        <a href='/tags/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E6%A1%86%E6%9E%B6/' style='font-size:1em'>前端开发框架</a>
       </li><li>
         <a href='/tags/%E5%8D%95%E5%A4%8D%E6%95%B0/' style='font-size:1em'>单复数</a>
       </li><li>
@@ -436,9 +450,9 @@
       </li><li>
         <a href='/tags/%E5%8E%9F%E7%94%9Fjs/' style='font-size:1em'>原生js</a>
       </li><li>
-        <a href='/tags/%E5%8F%8D%E7%88%AC/' style='font-size:1.0208333333333333em'>反爬</a>
+        <a href='/tags/%E5%8F%8D%E7%88%AC/' style='font-size:1.02em'>反爬</a>
       </li><li>
-        <a href='/tags/%E5%8F%8D%E8%AE%BD/' style='font-size:1em'>反讽</a>
+        <a href='/tags/%E5%8F%8D%E8%AE%BD/' style='font-size:1.02em'>反讽</a>
       </li><li>
         <a href='/tags/%E5%8F%AC%E5%9B%9E%E7%8E%87/' style='font-size:1em'>召回率</a>
       </li><li>
@@ -448,9 +462,11 @@
       </li><li>
         <a href='/tags/%E5%90%AC%E5%8A%9B/' style='font-size:1em'>听力</a>
       </li><li>
-        <a href='/tags/%E5%9B%9B%E5%85%AD%E7%BA%A7/' style='font-size:1.0208333333333333em'>四六级</a>
+        <a href='/tags/%E5%9B%9B%E5%85%AD%E7%BA%A7/' style='font-size:1.02em'>四六级</a>
       </li><li>
-        <a href='/tags/%E5%9B%BD%E5%86%85%E9%95%9C%E5%83%8F/' style='font-size:1em'>国内镜像</a>
+        <a href='/tags/%E5%9B%BD%E5%86%85%E6%BA%90/' style='font-size:1em'>国内源</a>
+      </li><li>
+        <a href='/tags/%E5%9B%BD%E5%86%85%E9%95%9C%E5%83%8F/' style='font-size:1.02em'>国内镜像</a>
       </li><li>
         <a href='/tags/%E5%9F%9F%E5%90%8D/' style='font-size:1em'>域名</a>
       </li><li>
@@ -462,11 +478,13 @@
       </li><li>
         <a href='/tags/%E5%AD%97%E4%BD%93%E5%8F%8D%E7%88%AC/' style='font-size:1em'>字体反爬</a>
       </li><li>
-        <a href='/tags/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81/' style='font-size:1.0208333333333333em'>字符编码</a>
+        <a href='/tags/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81/' style='font-size:1.02em'>字符编码</a>
       </li><li>
         <a href='/tags/%E5%AE%A2%E6%88%B7%E7%AB%AF%E6%A3%80%E6%B5%8B/' style='font-size:1em'>客户端检测</a>
       </li><li>
         <a href='/tags/%E5%B1%9E%E6%80%A7/' style='font-size:1em'>属性</a>
+      </li><li>
+        <a href='/tags/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/' style='font-size:1em'>常用命令</a>
       </li><li>
         <a href='/tags/%E5%BC%82%E6%AD%A5/' style='font-size:1em'>异步</a>
       </li><li>
@@ -474,7 +492,7 @@
       </li><li>
         <a href='/tags/%E5%BD%A2%E8%BF%91/' style='font-size:1em'>形近</a>
       </li><li>
-        <a href='/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/' style='font-size:1.0416666666666667em'>快捷键</a>
+        <a href='/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/' style='font-size:1.04em'>快捷键</a>
       </li><li>
         <a href='/tags/%E6%88%AA%E5%9B%BE/' style='font-size:1em'>截图</a>
       </li><li>
@@ -482,9 +500,15 @@
       </li><li>
         <a href='/tags/%E6%8E%92%E5%BA%8F/' style='font-size:1em'>排序</a>
       </li><li>
+        <a href='/tags/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/' style='font-size:1em'>排序算法</a>
+      </li><li>
+        <a href='/tags/%E6%8F%92%E4%BB%B6/' style='font-size:1em'>插件</a>
+      </li><li>
         <a href='/tags/%E6%8F%92%E5%85%A5/' style='font-size:1em'>插入</a>
       </li><li>
-        <a href='/tags/%E6%95%B0%E7%BB%84/' style='font-size:1.0208333333333333em'>数组</a>
+        <a href='/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/' style='font-size:1.02em'>数据结构</a>
+      </li><li>
+        <a href='/tags/%E6%95%B0%E7%BB%84/' style='font-size:1.02em'>数组</a>
       </li><li>
         <a href='/tags/%E6%96%AD%E7%BD%91/' style='font-size:1em'>断网</a>
       </li><li>
@@ -506,7 +530,7 @@
       </li><li>
         <a href='/tags/%E6%B6%88%E6%9E%81/' style='font-size:1em'>消极</a>
       </li><li>
-        <a href='/tags/%E7%88%AC%E8%99%AB/' style='font-size:1.0208333333333333em'>爬虫</a>
+        <a href='/tags/%E7%88%AC%E8%99%AB/' style='font-size:1.02em'>爬虫</a>
       </li><li>
         <a href='/tags/%E7%94%A8%E6%88%B7%E9%AA%8C%E8%AF%81/' style='font-size:1em'>用户验证</a>
       </li><li>
@@ -522,21 +546,19 @@
       </li><li>
         <a href='/tags/%E7%BB%A7%E6%89%BF/' style='font-size:1em'>继承</a>
       </li><li>
-        <a href='/tags/%E7%BC%96%E7%A0%81/' style='font-size:1em'>编码</a>
-      </li><li>
         <a href='/tags/%E7%BC%96%E7%A8%8B%E6%95%88%E7%8E%87/' style='font-size:1em'>编程效率</a>
       </li><li>
-        <a href='/tags/%E7%BD%91%E7%BB%9C%E5%9C%B0%E5%9D%80%E6%98%A0%E5%B0%84/' style='font-size:1.0208333333333333em'>网络地址映射</a>
+        <a href='/tags/%E7%BD%91%E7%BB%9C%E5%9C%B0%E5%9D%80%E6%98%A0%E5%B0%84/' style='font-size:1.02em'>网络地址映射</a>
       </li><li>
-        <a href='/tags/%E7%BD%91%E7%BB%9C%E5%AE%9E%E9%AA%8C/' style='font-size:1.125em'>网络实验</a>
+        <a href='/tags/%E7%BD%91%E7%BB%9C%E5%AE%9E%E9%AA%8C/' style='font-size:1.12em'>网络实验</a>
       </li><li>
-        <a href='/tags/%E7%BF%BB%E8%AF%91/' style='font-size:1em'>翻译</a>
+        <a href='/tags/%E7%BF%BB%E8%AF%91/' style='font-size:1.02em'>翻译</a>
       </li><li>
-        <a href='/tags/%E8%8B%B1%E8%AF%AD/' style='font-size:1.0208333333333333em'>英语</a>
+        <a href='/tags/%E8%8B%B1%E8%AF%AD/' style='font-size:1.02em'>英语</a>
       </li><li>
         <a href='/tags/%E8%A7%86%E9%A2%91%E4%B8%8B%E8%BD%BD/' style='font-size:1em'>视频下载</a>
       </li><li>
-        <a href='/tags/%E8%A7%A3%E8%AF%BB/' style='font-size:1em'>解读</a>
+        <a href='/tags/%E8%A7%A3%E8%AF%BB/' style='font-size:1.02em'>解读</a>
       </li><li>
         <a href='/tags/%E8%AE%BE%E7%BD%AE/' style='font-size:1em'>设置</a>
       </li><li>
@@ -546,23 +568,25 @@
       </li><li>
         <a href='/tags/%E8%AF%8D%E6%80%A7/' style='font-size:1em'>词性</a>
       </li><li>
-        <a href='/tags/%E8%AF%8D%E6%B1%87/' style='font-size:1.125em'>词汇</a>
+        <a href='/tags/%E8%AF%8D%E6%B1%87/' style='font-size:1.12em'>词汇</a>
+      </li><li>
+        <a href='/tags/%E8%AF%AD%E6%B3%95/' style='font-size:1em'>语法</a>
       </li><li>
         <a href='/tags/%E8%B7%A8%E5%9F%9F/' style='font-size:1em'>跨域</a>
       </li><li>
-        <a href='/tags/%E8%B7%AF%E7%94%B1%E5%8D%8F%E8%AE%AE/' style='font-size:1.0416666666666667em'>路由协议</a>
+        <a href='/tags/%E8%B7%AF%E7%94%B1%E5%8D%8F%E8%AE%AE/' style='font-size:1.04em'>路由协议</a>
       </li><li>
         <a href='/tags/%E8%BF%90%E7%BB%B4/' style='font-size:1em'>运维</a>
       </li><li>
         <a href='/tags/%E8%BF%91%E4%B9%89%E8%AF%8D/' style='font-size:1em'>近义词</a>
       </li><li>
-        <a href='/tags/%E9%80%89%E6%8B%A9%E5%99%A8/' style='font-size:1.0833333333333333em'>选择器</a>
+        <a href='/tags/%E9%80%89%E6%8B%A9%E5%99%A8/' style='font-size:1.08em'>选择器</a>
       </li><li>
-        <a href='/tags/%E9%85%8D%E7%BD%AE/' style='font-size:1.0208333333333333em'>配置</a>
+        <a href='/tags/%E9%85%8D%E7%BD%AE/' style='font-size:1.02em'>配置</a>
       </li><li>
         <a href='/tags/%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/' style='font-size:1em'>配置文件</a>
       </li><li>
-        <a href='/tags/%E9%97%AD%E5%8C%85/' style='font-size:1.0416666666666667em'>闭包</a>
+        <a href='/tags/%E9%97%AD%E5%8C%85/' style='font-size:1.04em'>闭包</a>
       </li><li>
         <a href='/tags/%E9%98%85%E8%AF%BB%E6%8A%80%E5%B7%A7/' style='font-size:1em'>阅读技巧</a>
       </li><li>
@@ -667,7 +691,7 @@
   <polyline points="12 6 12 12 15 15"/>
   
 </svg>
-One min read
+12 mins read
 </span>
 
 
@@ -688,7 +712,17 @@ One min read
 <li><a href="#representing-social-media-users-for-sarcasm-detection">Representing Social Media Users for Sarcasm Detection</a>
 <ul>
 <li><a href="#摘要">摘要</a></li>
+<li><a href="#介绍">介绍</a></li>
+<li><a href="#先前的工作">先前的工作</a></li>
 </ul></li>
+<li><a href="#sarc数据集">SARC数据集</a>
+<ul>
+<li><a href="#模型">模型</a></li>
+</ul></li>
+<li><a href="#实验">实验</a></li>
+<li><a href="#结果和讨论">结果和讨论</a></li>
+<li><a href="#定量评估">定量评估</a></li>
+<li><a href="#定性比较">定性比较</a></li>
 </ul>
 </nav>
 </details>
@@ -705,7 +739,7 @@ One min read
 
 <h2 id="摘要">摘要</h2>
 
-<p>在上下文讽刺检测的背景下，两种表示作则特征的方式：</p>
+<p>在上下文讽刺检测的背景下，两种表示作者特征的方式：</p>
 
 <ul>
 <li>使用贝叶斯的方式直接表示作者的讽刺倾向；<br></li>
@@ -716,6 +750,281 @@ One min read
 the Bayesian approach suffices in homogeneous contexts, whereas the added power of the dense embeddings proves valuable in more diverse ones.
 <ruby></p></li>
 </ul>
+
+<h2 id="介绍">介绍</h2>
+
+<p><ruby>
+<rt style="font-size: 14px">
+Irony and sarcasm1 are extreme examples of context-dependence in language. Given only the text Great idea! or What a hardship!, we cannot resolve the speaker’s intentions unless we have in- sight into the circumstances of utterance – who is speaking, and to whom, and how the content relates to the preceding discourse (Clark, 1996).
+</rt>
+反讽和讽刺是语言中依赖语境的极端例子。 鉴于只有文字好主意！ 或者说有什么困难！我们无法解决说话者的意图，除非我们对话语的情况有所了解 - 谁说话，谁说话，以及内容如何与前面的话语相关（Clark，1996）。
+</ruby></p>
+
+<p><ruby>
+<rt style="font-size: 14px">
+While certain texts are biased in favor of sarcastic uses (Kreuz and Caucci, 2007; Wallace et al., 2014), the non-literal nature of this phenomenon ensures that there is an important role for pragmatic inference (Clark and Gerrig, 1984).
+</rt>
+虽然某些文本偏向于讽刺用法（Kreuz和Caucci，2007; Wallace等，2014），但这种现象的非字面性质确保了语用推理的重要作用（Clark和Gerrig，1984）。
+</ruby></p>
+
+<p><ruby>
+<rt style="font-size: 14px">
+The current paper is an in-depth study of one important aspect of the context dependence of sarcasm: the author. Our guiding hypotheses are that authors vary in their propensity for using sarcasm, that this propensity is influenced by more general facts about the context, and that authors have their own particular ways of indicating sarcasm.
+</rt>
+本文是对讽刺语境依赖的一个重要方面的深入研究：作者。 我们的指导假设是作者使用讽刺的倾向各不相同，这种倾向受到关于背景的更一般事实的影响，<i class="mark">并且作者有他们自己特定的表达讽刺的方式。</i>
+</ruby></p>
+
+<p><ruby>
+<rt style="font-size: 14px">
+These hypotheses are well supported by psycholinguis- tic research (Colston and Lee, 2004; Gibbs, 2000; Dress et al., 2008), but our ability to test them cated by arrows, dense connections by diamonds. The author embedding can be null (a text-only baseline), a prior reflecting the author’s propensity for sarcasm, or a learned embedding. There are potentially multiple layers between the initial example embedding and the output sigmoid layer.
+</rt>
+这些假设得到了心理语言学研究的很好支持（Colston和Lee，2004; Gibbs，2000; Dress等，2008），但我们大规模测试它们的能力直到最近才受到可用注释语料库的限制。 随着Self-Annotated Reddit Corpus（SARC）的发布，Khodak等人。 （2017）帮助解决了这个限制。 SARC规模庞大且多样化，其在评论和论坛中的用户分布使其特别适合于对作者及其与讽刺的关系进行建模。
+</ruby></p>
+
+<p><ruby>
+<rt style="font-size: 14px">
+</rt>
+我们的评论文本的核心模型是具有GRU单元的双向RNN。 为了模拟作者，我们提出了两种增强这些RNN表示的策略：<i class="mark">一种简单的贝叶斯方法，只捕获作者的原始讽刺倾向</i>，以及<i class="burk">一种密集的嵌入方法，允许作者和文本之间的复杂交互</i>（图1）。 我们发现，在SARC上，简单的贝叶斯方法确实非常好，特别是在更小，更集中的论坛中。
+</ruby></p>
+
+<p><ruby>
+<rt style="font-size: 14px">
+On the full SARC dataset, author embeddings are able to encode more kinds of variation and interaction with the text, and thus they achieve the highest predictive accuracy. These findings extend and reinforce the prior work on user-level modeling for sarcasm (Section 2), and they indicate that simple represen- tation methods are effective here.
+</rt>
+在完整的SARC数据集中，作者嵌入能够编码更多种类的变异和与文本的交互，因此它们实现了最高的预测准确性。 这些发现扩展并强化了先前关于讽刺的用户级建模的工作（第2节），并且它们表明简单的表示方法在这里是有效的。
+</ruby></p>
+
+<h2 id="先前的工作">先前的工作</h2>
+
+<p><ruby>
+<rt style="font-size: 14px">
+A substantial literature exists around sarcasm detection. Many of the prior studies focus on the analysis of Twitter posts, which lend themselves well to sarcasm detection with NLP methods because they are available in large quantities, they tend to correspond roughly to a single utterance, and users’ hashtags in tweets (e.g., #sarcasm, #not) can provide imperfect but useful labels. A central theme of this literature is that bringing in contextual features helps performance.
+</rt>
+关于讽刺检测存在大量文献。 许多以前的研究都集中在Twitter帖子的分析上，这些分析非常适合用NLP方法进行讽刺检测，因为它们可以大量使用，它们往往大致相当于一个单一的话语，而用户的话题标签也是如此（例如， #sarcasm，＃not）可以提供不完美但有用的标签。 <i class="mark">该文献的中心主题是引入上下文特征有助于提高性能。</i>
+</ruby></p>
+
+<p><ruby>
+<rt style="font-size: 14px">
+Gonza ́lez-Iba ́nez et al. (2011) trained classifiers using a combination of lexical and pragmatic features, including emoticons and whether the user was responding to another tweet (see also Felbo et al. 2017). Bamman and Smith (2015) extend this kind of analysis with additional information about the context. Of special interest here are their contextual features: the author’s historical sentiment, topics, and terms; the addressee; and features drawn from historical interactions between the author and addressee. The study finds most features to be useful, but a model trained on the tweet and author features alone achieved essentially the same performance (84.9% accuracy) as a model trained on all features (85.1%).
+</rt>
+Gonza lez-Iba nez等。 （2011）<i class="mark">使用词汇和实用特征（包括表情符号以及用户是否对另一条推文做出回应）的组合训练分类器</i>，（另见Felbo等人2017）。 Bamman和Smith（2015）利用有关背景的其他信息扩展了这种分析。 这里特别感兴趣的是他们的语境特征：作者的历史情感，主题和术语; 收件人; 以及作者和收件人之间历史互动的特征。 该研究发现大多数特征是有用的，但仅在推文和作者特征上训练的模型实现了与在所有特征上训练的模型（85.1％）基本相同的性能（84.9％准确度）。
+</ruby></p>
+
+<p><ruby>
+<rt style="font-size: 14px">
+In a similar vein, Rajadesingan et al. (2015) used a complex combination of features from users’ Twitter histories, including sentiment, grammar, and word choice, as inputs into their model, and report a ≈7% gain in classification accuracy upon adding these features to a baseline n-gram classifier.
+</rt>
+类似地，Rajadesingan等人。 （2015）使用来自用户的Twitter历史的复杂功能组合，包括情感，语法和单词选择，作为其模型的输入，并在将这些功能添加到基线n-gram时报告增加约7％的分类准确度。
+</ruby></p>
+
+<p><ruby>
+<rt style="font-size: 14px">
+Recent papers have also applied deep learning methods to detecting sarcastic tweets. Poria et al. (2016) use a combination convolutional–SVM architecture with auxiliary sentiment input features. The architecture of Zhang et al. (2016) includes an RNN, and uses contextual features as well as tweet text for inputs.
+</rt>
+最近的论文还采用深度学习方法来检测讽刺性推文。 Poria等。 （2016）使用具有辅助情感输入特征的组合卷积SVM架构。 张等人的建筑。 （2016）包括RNN，并使用上下文特征以及用于输入的推文文本。
+</ruby></p>
+
+<p><ruby>
+<rt style="font-size: 14px">
+Amir et al. (2016) extend the work of Bamman and Smith by generating author embeddings to reflect users’ word-usage patterns (but not sarcasm history) in a manner similar to the paragraph vectors introduced by Le and Mikolov (2014). With the inclusion of these embeddings, their convolu- tional neural network (CNN) achieves a 2% gain in accuracy over that of Bamman and Smith.
+</rt>
+Amir等。 （2016）通过生成作者嵌入来扩展Bamman和Smith的工作，以类似于Le和Mikolov（2014）<i class="mark">引入段落向量的方式反映用户的单词使用模式（但不是讽刺历史）</i>。 通过包含这些嵌入，他们的卷积神经网络（CNN）比Bamman和Smith的准确度提高了2％。
+</ruby></p>
+
+<p><ruby>
+<rt style="font-size: 14px">
+Ghosh and Veale (2017) present a combination CNN/LSTM (long short-term memory RNN) architecture that takes as inputs user affect inferred from recent tweets as well as the text of the tweet and that of the parent tweet. When a tweet was addressed to someone by name, the name of the addressee was included in the text representation of the tweet, providing a loose link between interlocutors (West et al., 2014) and a ≈1% gain in performance for some data sets.
+</rt>
+Ghosh和Veale（2017）提出了一种组合CNN / LSTM（长期短期记忆RNN）架构，该架构将用户影响作为输入从最近的推文以及推文的文本和父推文的推文中推断出来。 当推文通过名字发给某人时，收件人的姓名包含在推文的文本表示中，提供了对话者之间的松散联系（West et al。，2014）和某些数据的性能提升约1％集。
+</ruby></p>
+
+<p><ruby>
+<rt style="font-size: 14px">
+There has also been a small amount of previous work on Reddit data for sarcasm (Tay et al., 2018; Ghosh and Muresan, 2018). Wallace et al. (2014) explore a hand-labeled dataset of ≈3K Reddit comments from six subreddits. They report that, when human graders attempted to mark comments as sarcastic or not sarcastic, they needed additional context like subreddit norms and author history roughly 30% of the time, and that the comments which graders found ambiguous were largely the same as those on which a baseline bag-of-words classifier tended to make mistakes. In a follow-up study, Wallace et al. (2015) find that semantic cues for sarcasm differ by subreddit, and they show classifier accuracy gains when modeling subreddit-specific variation.
+</rt>
+还有一些关于讽刺的Reddit数据的先前工作（Tay等，2018; Ghosh和Muresan，2018）。 华莱士等人。 （2014）探索了来自六个subreddits的≈3KReddit评论的手工标记数据集。 他们报告说，当人类评分者试图将评论标记为讽刺或不讽刺时，他们需要额外的背景，如subreddit规范和作者历史大约30％的时间，并且评分者发现含糊不清的评论与那些评论大致相同。 基线词袋分类器往往会出错。 在一项后续研究中，Wallace等人。 （2015）发现讽刺的语义线索因subreddit而不同，并且在建模subreddit特定变体时显示分类器准确度增益。
+</ruby></p>
+
+<p><ruby>
+<rt style="font-size: 14px">
+The work that is closest to our own is that of Hazarika et al. (2018), who also experiment on the SARC dataset. Their model learns author, forum, and text embeddings, and they show that all three kinds of representation contribute positively to the overall performance. We take a much simpler approach to author embeddings and do not include forum embeddings, and we report comparable performance (Section 6). We take this as further indication of the value of author features for modeling sarcasm.
+</rt>
+与我们最接近的工作是Hazarika等人的工作。 （2018），他也在SARC数据集上进行实验。 他们的模型学习作者，论坛和文本嵌入，他们表明这三种表示对整体表现有积极贡献。 我们采用更简单的方法来创作嵌入并且不包括论坛嵌入，并且我们报告可比性能（第6节）。 我们将此作为进一步表明作者对讽刺建模的特征的价值。
+</ruby></p>
+
+<h1 id="sarc数据集">SARC数据集</h1>
+
+<p><ruby>
+<rt style="font-size: 14px">
+The Self-Annotated Reddit Corpus (SARC) was created by Khodak et al. (2017).2 It includes an unprecedented 533M comments. The corpus is self-annotated in the sense that a comment is considered sarcastic if its author marked it with the “/s” tag.
+</rt>
+自我注释的Reddit语料库（SARC）由Khodak等人创建。 （2017）.2它包括前所未有的533M评论。 语料库是自我注释的，因为如果评论作者用“/s”标签标记它，则评论被认为是讽刺性的。
+</ruby></p>
+
+<p><ruby>
+<rt style="font-size: 14px">
+As a result, the positive examples are essentially those which the authors considered ambiguous enough to explicitly tag as sarcastic, meaning that the prediction problem is actually to identify which comments are not only sarcastic but both sarcastic and not obviously so.
+</rt>
+因此，积极的例子基本上是那些作者认为含糊不清以明确标记为讽刺的例子，这意味着预测问题实际上是为了确定哪些评论不仅是讽刺性的，而且既讽刺又不明显。
+</ruby></p>
+
+<p><ruby>
+<rt style="font-size: 14px">
+The dataset is filtered in numerous ways, and has good precision (only ≈1% false positive rate) but poor recall (2% false negatives relative to 0.25% true positives, or ≈11% recall). To alleviate the issues caused by low recall, the dataset also includes a balanced sample, where comments are supplied in pairs, both responding to the same parent comment and with exactly one of the two tagged as sarcastic. All comments are accompanied with ancestor comments from the original conversation, author information, and a score as voted on by Reddit users.
+</rt>
+数据集以多种方式过滤，并且具有良好的精确度（仅约1％假阳性率）但回忆率较低（相对于0.25％真阳性，2％假阴性，或约11％回忆）。 为了缓解由低召回率引起的问题，数据集还包括一个平衡样本，其中评论是成对提供的，两者都响应同一个父评论，并且两个中只有一个被标记为讽刺。 所有评论都附有原始对话的祖先评论，作者信息以及Reddit用户投票的分数。
+</ruby></p>
+
+<p><ruby>
+<rt style="font-size: 14px">
+This dataset presents numerous advantages for sarcasm detection. For one, it is vastly larger than past sarcasm datasets, which enables the training of more sophisticated models. In addition, most work in sarcasm detection has focused on tweets, which are very short and tend to use abbreviated and atypical language. Reddit comments are not constrained by length and are therefore more representative of how people typically write. Finally, Reddit is organized into topically-defined communities known as subreddits, each of which has its own community norms and linguistic patterns. By making available large amounts of data from a number of subreddits, SARC facilitates the comparative analysis of subreddits, and more gener- ally provides a view into the differences between communities.
+</rt>
+该数据集为讽刺检测提供了许多优势。 首先，它比过去的讽刺数据集大得多，这使得能够训练更复杂的模型。 此外，大多数讽刺检测工作都集中在推文上，这些推文非常简短，往往使用缩写和非典型语言。 Reddit评论不受长度限制，因此更能代表人们通常的写作方式。 最后，Reddit被组织成被称subreddits的局部定义社区，每个社区都有自己的社区规范和语言模式。 通过从一些次级数据中提供大量数据，SARC促进了对次级域的比较分析，并且更一般地提供了对社区之间差异的看法。
+</ruby></p>
+
+<p><ruby>
+<rt style="font-size: 14px">
+Table 1 provides basic statistics on the entire corpus as well as the subreddits that we focus on in our experiments.
+</rt>
+表1提供了整个语料库的基本统计数据以及我们在实验中关注的子目标。
+</ruby></p>
+
+<h2 id="模型">模型</h2>
+
+<p><ruby>
+<rt style="font-size: 14px">
+Our baseline model is a bidirectional RNN with GRU cells (BiGRU; Cho et al. 2014). We tried variants with LSTM cells and did not observe a significant difference in performance. We therefore chose to use GRU cells as the model with fewer parameters.
+</rt>
+我们的基线模型是具有GRU单元的双向RNN（BiGRU; Cho等人，2014）。 我们尝试了使用LSTM单元的变体，并没有观察到性能的显着差异。因此，我们选择使用参数较少的GRU单元作为模型。
+</ruby></p>
+
+<p><ruby>
+<rt style="font-size: 14px">
+The inputs to the BiGRU model are users’ comments, which are split into words (and in the case of conjunctions, subwords) and punctuation marks and are converted to word vectors. The final states of the two directions of the BiGRU are concatenated with each other and run through either a single fully-connected linear layer or two fully-connected linear layers with a rectified linear unit in between. The output of the final linear layer is fed through a sigmoid function which outputs the estimated probability of sarcasm. This baseline does not take author information into account: for each comment, only the words of the comment are considered as inputs.
+</rt>
+BiGRU模型的<i class="mark">输入是用户的注释，它们被分成单词（在连词，子词的情况下）和标点符号，并被转换为单词向量</i>。 BiGRU的两个方向的最终状态彼此连接并且通过单个完全连接的线性层或两个完全连接的线性层，其间具有整流的线性单元。 最终线性层的输出通过S形函数馈送，该函数输出估计的讽刺概率。 <i class="burk">此基线不考虑作者信息：对于每个评论，只有评论的单词被视为输入。</i>
+</ruby></p>
+
+<p><ruby>
+<rt style="font-size: 14px">
+The Bayesian prior model extends the Bi-GRU with the sarcastic and non-sarcastic comment counts for authors seen in the training data, which serves as a prior for sarcasm frequency. This version of the model takes as inputs both a representation of the comment and the author representation xauthor ∈ Z2≥0 to estimate the probability of sarcasm. The model can be interpreted as computing a posterior probability of sarcasm given both the comment and the prior of previous sarcastic and non-sarcastic comment counts author modeling reduced to a Bernoulli prior. For previously unseen authors, xauthor is set to (0, 0).
+</rt>
+贝叶斯先验模型扩展了Bi-GRU，其中对于在训练数据中看到的作者的讽刺和非讽刺评论计数，其作为讽刺频率的先验。 该版本的模型将注释的表示和作者表示xauthor∈Z2≥0作为输入，以估计讽刺的概率。 考虑到先前的讽刺和非讽刺评论计数作者建模减少到伯努利先前的评论和先验，该模型可以被解释为计算讽刺的后验概率。 对于以前看不见的作者，xauthor设置为（0,0）。
+</ruby></p>
+
+<p><ruby>
+<rt style="font-size: 14px">
+The author embedding approach extends the baseline BiGRU in a more sophisticated way. Here, each author seen in the training data is associated with a randomly initialized embedding vector xauthor ∈ R15, which is then provided as an input to the model along with a representation of the words of the comment. A special randomly initialized vector xUNK is used for previously unseen authors. The author embeddings are updated during training, with the goal of learning more sophisticated individualized patterns of sarcasm than the Bayesian prior allows. We experimented with training the xUNK vector on infrequently-seen authors (fewer than 5 comments in the training set) instead of using a random vector, and found some suggestions of improved performance. However, as the differences in performance were not substantial enough to change the relative performance of the different models, we report the results for the simpler random-xUNK model.
+</rt>
+作者嵌入方法以更复杂的方式扩展了基线BiGRU。 这里，在训练数据中看到的每个作者与随机初始化的嵌入向量xauthor∈R15相关联，然后将其作为输入提供给模型以及评论的单词的表示。 一个特殊的随机初始化向量xUNK用于以前看不见的作者。 作者嵌入在训练期间更新，目的是学习比贝叶斯先验允许的更复杂的个性化讽刺模式。 我们尝试在不经常看到的作者上训练xUNK矢量（训练集中少于5条评论）而不是使用随机向量，并找到了一些改进性能的建议。 但是，由于性能差异不足以改变不同模型的相对性能，我们报告了更简单的random-xUNK模型的结果。
+</ruby></p>
+
+<h1 id="实验">实验</h1>
+
+<p><ruby>
+<rt style="font-size: 14px">
+We conducted three sets of experiments, one for each model, to evaluate the effectiveness of the different approaches to author modeling. Each set of experiments was conducted on five datasets: the balanced version of the entire corpus as well as the balanced and unbalanced versions of the r/politics and r/AskReddit subcorpora (Table 1).
+</rt>
+我们进行了三组实验，每个模型一组，以评估不同方法对作者建模的有效性。 每组实验都在五个数据集上进行：整个语料库的平衡版本以及r / politics和r / AskReddit子目录的平衡和非平衡版本（表1）。
+</ruby></p>
+
+<p><ruby>
+<rt style="font-size: 14px">
+In all cases, the raw comment data was tokenized into words and punctuation marks, with components of contractions treated as individual words. We mapped tokens to FastText embedding vectors which had been trained, using subword infomation, on Wikipedia 2017, the UMBC webbase corpus, and the statmt.org news dataset (Mikolov et al., 2018). While vectors existed for nearly 100% of tokens generated, exceptions were mapped to a randomly initialized UNK vector.
+</rt>
+在所有情况下，原始评论数据被标记为单词和标点符号，其中收缩的组成部分被视为单个单词。 我们使用子词信息，在Wikipedia 2017，UMBC webbase语料库和statmt.org新闻数据集（Mikolov等，2018）上将令牌映射到已经训练过的FastText嵌入向量。 虽然生成的标记几乎占100％，但异常被映射到随机初始化的UNK向量。
+</ruby></p>
+
+<p><ruby>
+<rt style="font-size: 14px">
+All models were trained with early stopping on a randomly partitioned holdout set of either 5% of the data for balanced subreddit corpora or 1% for the others. The performance of the model, as used for hyperparameter tuning, was evaluated against a second holdout set, generated in the same manner as the first holdout set but disjoint from both it and the portion of the data used for training.
+</rt>
+对于平衡的subreddit语料库中的5％数据的随机分区保持集，或者对于其他模型，1％的所有模型都进行了早期停止训练。 用于超参数调整的模型的性能是针对第二保持集来评估的，该第二保持集以与第一保持集相同的方式生成，但是与它和用于训练的数据部分不相交。
+</ruby></p>
+
+<p><ruby>
+<rt style="font-size: 14px">
+Hyperparameters were tuned to maximize model performance as evaluated in this manner, starting with a randomized search process and fine-tuned manually. The final evaluation was conducted against the test set, with a single randomly partitioned holdout set from the training data again used for early stopping. We applied dropout (Srivastava et al., 2014) during training before and between all linear layers. For additional regularization, we also applied an l2-norm penalty to the linear weights but not to the GRU weights.
+</rt>
+调整超参数以最大化模型性能，以这种方式评估，从随机搜索过程开始并手动微调。 最终评估是针对测试集进行的，其中来自训练数据的单个随机分区的保持集再次用于早期停止。 我们在所有线性层之前和之间的训练期间应用了辍学（Srivastava等，2014）。 对于额外的正则化，我们还对线性权重应用了l2范数惩罚，但没有对GRU权重应用。
+</ruby></p>
+
+<p><ruby>
+<rt style="font-size: 14px">
+We attempted other model variations, including multiple GRU layers and an attention mechanism for GRU outputs, but did not observe any gains in performance from the larger models.
+</rt>
+我们尝试了其他模型变体，包括多个GRU层和GRU输出的注意机制，但没有观察到较大模型的性能增益。
+</ruby></p>
+
+<h1 id="结果和讨论">结果和讨论</h1>
+
+<h1 id="定量评估">定量评估</h1>
+
+<p><ruby>
+<rt style="font-size: 14px">
+Table 2 reports the means of 10 runs to control for variation deriving from randomness in the optimization process (Reimers and Gurevych, 2017).
+</rt>
+表2报告了10次运行的方法，以控制优化过程中随机性的变化（Reimers和Gurevych，2017）。
+</ruby></p>
+
+<p><ruby>
+<rt style="font-size: 14px">
+</rt>
+</ruby></p>
+
+<p><ruby>
+<rt style="font-size: 14px">
+Where there is overlap between our experiments and those of Hazarika et al. (2018) (CASCADE), our model is highly competitive. We slightly under-perform on the full balanced dataset but come out ahead on r/politics. This is striking because our model makes use of much less information. First, unlike CASCADE, we do not have forum embeddings. Second, CASCADE author embeddings involve extensive feature engineering including “stylometric” and “personality” features. Our author embeddings, on the other hand, are either simple empirical estimates (Bayesian priors) or learned embeddings with random initializations, in both cases allowing simpler model specification and training, and more flexibility on the task for which they are used.
+</rt>
+我们的实验和Hazarika等人的实验之间存在重叠。 （2018）（CASCADE），我们的模型竞争激烈。 我们在完全平衡的数据集上略显不足，但在政治上领先一步。 这很引人注目，因为我们的模型使用的信息要少得多。 首先，与CASCADE不同，我们没有论坛嵌入。 其次，CASCADE作者嵌入涉及广泛的特征工程，包括“样式”和“个性”特征。 另一方面，我们的作者嵌入要么是简单的经验估计（贝叶斯先验），要么是随机初始化的学习嵌入，在这两种情况下都允许更简单的模型规范和训练，并且在使用它们的任务上具有更大的灵活性。
+</ruby></p>
+
+<p><ruby>
+<rt style="font-size: 14px">
+There is also evidence that the BiGRU yields better representations of texts than does Hazarika et al.’s CNN-based model. Our ‘No embed’ model is akin to their CASCADE with no contextual features, which achieves only 0.66 on the full balanced corpus and 0.70 on the r/politics balanced dataset. Both numbers are well behind our ‘No embed’. Unfortunately, we do not have space for a fuller study of the similarities and differences between our model and CASCADE.
+</rt>
+还有证据表明，与Hazarika等人的基于CNN的模型相比，BiGRU可以产生更好的文本表示。 我们的“无嵌入”模型类似于没有上下文特征的CASCADE，在完全平衡语料库上只有0.66，在r / politics平衡数据集上只有0.70。 这两个数字都远远落后于我们的&rsquo;No embed&rsquo;。 不幸的是，我们没有足够的空间来更全面地研究我们的模型和CASCADE之间的相似点和不同点。
+</ruby></p>
+
+<p><ruby>
+<rt style="font-size: 14px">
+Both of our methods for representing authors perform well. This is perhaps especially striking for the unbalanced experiments, where the percentage of sarcastic comments is tiny (Table 1). The two methods perform differently on individual forums than on the full dataset. For the r/politics and r/AskReddit communities, the Bayesian priors give the best results. The situation is reversed for the full dataset, where the high-dimensional embeddings outperform the Bayesian priors. This likely reflects two interacting factors. First, with smaller, more focused forums, it is harder to learn good author embeddings, so the simple prior is more reliable. Second, on the full dataset, there are more examples, and also more complex interactions between authors and their texts, so the added representational power of the embeddings proves justified.
+</rt>
+我们用于表示作者的两种方法都表现良好。 对于不平衡的实验而言，这可能尤其引人注目，其中讽刺评论的百分比很小（表1）。 这两种方法在各个论坛上的表现与在完整数据集上的表现不同。 对于r / politics和r / AskReddit社区，贝叶斯先验给出了最好的结果。 对于完整数据集，情况相反，其中高维嵌入优于贝叶斯先验。 这可能反映了两个相互作用的因素。 首先，对于更小，更集中的论坛，学习好作者嵌入更难，所以简单的先验更可靠。 其次，在完整的数据集上，有更多的例子，以及作者和他们的文本之间更复杂的交互，因此嵌入的附加表征能力证明是合理的。
+</ruby></p>
+
+<h1 id="定性比较">定性比较</h1>
+
+<p><ruby>
+<rt style="font-size: 14px">
+Table 3 provides example predictions from the different models. Each example is taken from the holdout set of a run in which all three models were trained on the same training set and evaluation was conducted on the same holdout set.
+</rt>
+表3提供了来自不同模型的示例预测。 每个示例取自跑步的保持集，其中所有三个模型都在相同的训练集上训练，并且在相同的保持集上进行评估。
+</ruby></p>
+
+<p><ruby>
+<rt style="font-size: 14px">
+</rt>
+对于讽刺和非讽刺的评论，作者建模可能有助于消除歧义。 例如，在示例1和示例2中，省略作者建模导致不正确的预测，但仅包括作者单独使用讽刺的频率足以将预测从不正确变为正确。
+</ruby></p>
+
+<p><ruby>
+<rt style="font-size: 14px">
+</rt>
+在例如示例3和4的情况下，贝叶斯先验不足，包括作者个性化讽刺模式的模型更强大。 也就是说，更复杂的嵌入模型可能会失败，如示例5所示，其中较简单的模型进行正确的预测，但事实并非如此。 这似乎发生在非讽刺的例子中，其中嵌入模型偶尔会强烈影响预测的讽刺概率。 显然，作者有更多个性化的讽刺模式而不是非讽刺模式。
+</ruby></p>
+
+<p><ruby>
+<rt style="font-size: 14px">
+</rt>
+根据贝叶斯和多维嵌入模型的相对表现来判断（表2），当有更多的训练数据可用时，多维模型比贝叶斯模型失去更多的分歧。 但是，如果没有，它就会过度拟合，以至于它对作者讽刺模式的预测不如贝叶斯方法有用。 这表明了未来的探索方向：最有用的模型可能是那些具有更多可用示例的作者的复杂性扩展，以及对于那些拥有更少示例的人来说缩小的模型。
+</ruby></p>
+
+<p><ruby>
+<rt style="font-size: 14px">
+</rt>
+本文评估了两种数据驱动的方法，用于模拟作者在讽刺检测中的作用。 两者都证明有效。 如Hazarika等人所示。 （2018），类似的技术可以扩展到上下文的其他方面。 虽然我们的实验不支持添加这些表示，但我们认为听众也依赖于它们，因此这里额外的计算建模工作可能会证明是富有成效的。
+</ruby></p>
 
 </div>
 

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>http协议 on mannuan</title>
+    <link>https://mannuan.github.io/tags/http%E5%8D%8F%E8%AE%AE/</link>
+    <description>Recent content in http协议 on mannuan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 17 Jul 2019 22:02:31 +0800</lastBuildDate>
+    
+	<atom:link href="https://mannuan.github.io/tags/http%E5%8D%8F%E8%AE%AE/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>http协议</title>
+      <link>https://mannuan.github.io/post/20190717220231/</link>
+      <pubDate>Wed, 17 Jul 2019 22:02:31 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190717220231/</guid>
+      <description>前言 前端工程师打交道最多的就是浏览器，不管做什么都离不开浏览器，其中HTTP协议往往会被我们忽略，但其实资源缓存、CDN加载、页面性能优化等等都离不开对HTTP协议的了解。
+介绍 HTTP也叫作超文本传输协议，全称：Hyper Transfer Protocol。最初HTTP只能传输HTML文件，慢慢的现在可以传输文字、图像、视频和各种文件。 HTTP是无状态的：同一个客户端，连续发起多次请求，对HTTP服务器来说，都是新的请求，HTTP没办法知道来自一个客户端。
+消息结构 Header  分为request/response line和request/response header。
+  request/response line：包括请求的方法Method（GET/POST）、请求资源的路径path to resource和http协议的版本号。
+ request/response header：这边就是各种请求头了。
+  Body 响应体，一般是HTML文件。如果是get请求，是没有响应体的。
+HTTP请求方法 GET 请求获取Request-URI所标识的资源
+POST 在Request-URI所标识的资源后附加新的数据
+HEAD 请求获取由Request-URI所标识的资源的响应消息报头
+PUT 请求服务器存储一个资源，并用Request-URI作为其标识
+DELETE 请求服务器删除Request-URI所标识的资源
+TRACE 请求服务器回送收到的请求信息，主要用于测试或诊断
+CONNECT 保留将来使用
+OPTIONS 请求查询服务器的性能，或者查询与资源相关的选项和需求
+对于我们来说，常用的就是GET、和POST。再次声明，不用表单提交，get不存在跟post比较有安全性问题。
+HTTP状态码 1XX 提示信息 - 表示请求已被成功接收，继续处理。
+2XX 成功 - 表示请求已被成功接收，理解，接受
+3XX 重定向 - 要完成请求必须进行更进一步的处理
+4XX 客户端错误 - 请求有语法错误或请求无法实现
+5XX 服务器端错误 - 服务器未能实现合法的请求
+状态码很多，可以自行了解，我觉得有几个是必须知道的。
+HTTP通信过程：根据URL查询DNS、查找服务器、建立TCP连接、发送请求、服务器响应。 总结 对于HTTP，我觉得基础的要知道HTTP是无状态的、HTTP的消息结构、基本请求方法、基本状态码这四部分。</description>
+    </item>
+    
+    <item>
+      <title>http缓存详解</title>
+      <link>https://mannuan.github.io/post/20190706141207/</link>
+      <pubDate>Sat, 06 Jul 2019 14:12:07 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190706141207/</guid>
+      <description>前言 http缓存主要针对如css,js,图片等更新频率不大的静态文件。
+http缓存字段的描述 根据请求和响应分为：
+Request Headers（浏览器端） if-modified-since
+请求头，缓存最新修改的时间，浏览器询问服务器，服务器会将它与last-modified进行比对
+if-none-match
+请求头，缓存标识，浏览器询问服务器询，服务器会将它与etag进行比对
+Response Headers（服务器端） cache-control
+控制http缓存的最高指令
+常用值有:
+1. no-store: 所有内容都不缓存
+2. noc-cache: 缓存，但是浏览器使用缓存前，都会请求服务器判断缓存是否是最新，过期的缓存就不使用
+3. max-age=x(单位秒)在缓存后的x秒内不发请求，是http1.1的属性，类似于expires，但优先级高于expires
+4. s-maxage=x(单位秒)代理服务器请求源站在缓存后的x秒内不发请求，只对CDN有效
+5. public 客户端和代理服务器（CDN）都可缓存
+6. private 只有客户端可以缓存
+last-modified
+响应头，缓存最新修改的时间，服务器返回给浏览器，优先级小于etag
+etag
+响应头，缓存标识，服务器返回给浏览器，优先级高于last-modified
+expires
+响应头，代表缓存过期时间，服务器返回，是http1.0的属性，优先级小于max-age
+使用http缓存的原因  客户端每次都要请求服务器，浪费流量;
+ 服务器每次都得提供查找，下载，请求用户基础如果较大，服务器存在较大压力;
+ 客户端每次请求完都要进行页面渲染，用户体验较差。
+  http缓存字段的关系 服务器和浏览器的对话  我将从服务器和浏览器的日常对话来阐述各个字段的起因和来由。
+为了简化，服务器称为S，浏览器称为C
+第一次对话(expires的由来)
+ C: S，S，我要一个a.css文件，快发给我!!! S: 烦死了，给你，在expires时间前别来烦我!!!  第二次对话(last-modified和if-modified-since的由来)
+C: S, S, 我的a.css文件到期了，你快给我发一个新的!!! S: 新的a.css? 它有修改过吗？ 你之前用的就是最新的吧? ... 呃😓我也不知道了，要不我们都记录一下时间吧？ 我用last-modified记录a.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -17,7 +17,11 @@
       
       <guid>https://mannuan.github.io/post/20190628152512/</guid>
       <description>安装nodejs mac端 brew install node 如果安装速度慢，可以到nodejs官网下载pkg安装包；
-linux端 sudo apt-get install nodejs 检查安装 node -v npm -v 修改node_modules目录权限 教程
+linux端 apt安装方式(不推荐，nodejs的版本太旧) sudo apt-get install nodejs 官网下载安装 nodejs官网下载node-vxx.xx.x-linux-x64.tar.xz安装包
+安装步骤  解压  unar node-vxx.xx.x-linux-x64.tar.xz   移动node-vxx.xx.x-linux-x64到/usr/local/下面   为了防止nodejs被篡改，保险起见放在根目录下面
+ sudo mv node-vxx.xx.x-linux-x64 /usr/local/  配置nodejs的环境变量  修改.zshrc或者.bashrc这两个配置文件，具体取决于你自己使用的是什么终端主题
+ 由于nodejs是普通用户级别的命令，不建议修改/etc/profile
+ export PATH=/usr/local/node-vxx.xx.x-linux-x64/bin:$PATH 检查安装 node -v npm -v 修改node_modules目录权限 教程
 添加node_modules路径 教程</description>
     </item>
     

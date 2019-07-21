@@ -5,10 +5,28 @@
     <link>https://mannuan.github.io/tags/javascript/</link>
     <description>Recent content in javascript on mannuan</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 10 Jul 2019 11:02:42 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 17 Jul 2019 08:43:21 +0800</lastBuildDate>
     
 	<atom:link href="https://mannuan.github.io/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>单链表</title>
+      <link>https://mannuan.github.io/post/20190717084321/</link>
+      <pubDate>Wed, 17 Jul 2019 08:43:21 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190717084321/</guid>
+      <description>element next         /** * 1）单链表的插入、删除、查找操作； * 2）链表中存储的是int类型的数据； */ // 创建节点对象 class Node { constructor (element) { this.element = element this.next = null } } class LinkedList { constructor () { this.head = new Node(&amp;#39;head&amp;#39;) } // 根据value查找节点  findByValue (item) { let currentNode = this.head.next; while (currentNode !== null &amp;amp;&amp;amp; currentNode.element !== item) { currentNode = currentNode.next; } console.log(currentNode); return currentNode === null ?</description>
+    </item>
+    
+    <item>
+      <title>javascript内置对象Date的使用</title>
+      <link>https://mannuan.github.io/post/20190714155323/</link>
+      <pubDate>Sun, 14 Jul 2019 15:53:23 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190714155323/</guid>
+      <description> 格式化输出yyyy-mm-dd HH:MM:SS.msmsms function padbyZero(){ // 用零填充  var val = arguments[0]|0; var len = arguments[1]|2; var res = null; for(var i=1;i&amp;lt;len;i++){ res = val&amp;lt;Math.pow(10, i)?&amp;#39;0&amp;#39;+val:&amp;#39;&amp;#39;+val; } return res; } var d=new Date(); //获取年，getFullYear()返回4位的数字 var year=d.getFullYear(); //获取月，月份比较特殊，从0开始计数 var month=padbyZero(d.getMonth()+1); //获取日 var day=padbyZero(d.getDate()); var hour=padbyZero(d.getHours()); var minute=padbyZero(d.getMinutes()); var second=padbyZero(d.getSeconds()); var millisceond=padbyZero(d.getMilliseconds(), 3); formatStr = year+&amp;#39;-&amp;#39;+month+&amp;#39;-&amp;#39;+day+&amp;#39; &amp;#39;+hour+&amp;#39;:&amp;#39;+minute+&amp;#39;:&amp;#39;+second+&amp;#39;.&amp;#39;+millisceond; console.log(formatStr); </description>
+    </item>
     
     <item>
       <title>javascript数组</title>
@@ -515,10 +533,11 @@ var extent = function(){ this.value = 0; }; Extent.prototype.call = function(){ 
       <pubDate>Wed, 22 May 2019 15:27:59 +0800</pubDate>
       
       <guid>https://mannuan.github.io/post/20190522152759/</guid>
-      <description>this的指向分为4种：
- 作为对象的方法调用： var obj = { a: 1, getA: function(){ console.log(this == obj); console.log(this.a); } } obj.getA();   当函数作为对象的方法被调用时，this指向的是一个局部对象，即当前的这个对象；
- 作为普通函数调用： global.name = &amp;#39;globalName&amp;#39;; var getName = function(){ return this.name; }; console.log(getName()); // 输出: globalName  //或者 global.name = &amp;#39;globalName&amp;#39;; var myObject = { name: &amp;#34;sven&amp;#34;, getName: function(){ return this.name; } } var getName = myObject.getName; console.log(getName()); //globalName   当this在普通函数里面被用到时，this指向的是一个全局对象，在浏览器上是window，在nodejs上是global
- 构造函数调用： var MyClass = function(){ this.</description>
+      <description>ES5  this的指向分为4种：
+ 隐式的this指向  作为对象的方法调用，this指向的是当前对象
+ var obj = { a: 1, getA: function(){ console.log(this == obj); // true  console.log(this.a); // 1  } } obj.getA();  硬指定的this  作为普通函数调用，this指向的是全局对象
+ name = &amp;#39;globalName&amp;#39;; var getName = function(){ console.log(this == window); console.log(name); }; getName();  或者 将对象的方法加入全局对象中，会改变原本的this指向
+name = &amp;#39;globalName&amp;#39;; var myObject = { name: &amp;#34;sven&amp;#34;, getName: function(){ console.log(this == window); console.log(this.name); } } var getName = myObject.</description>
     </item>
     
     <item>

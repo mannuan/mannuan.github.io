@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>模板语法</title>
+    <script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+</head>
+<body>
+    <div id="app">
+        <!-- vue插值的使用 -->
+        <div><span>{{ message }}</span></div>
+        
+        <!-- v-once 数据只会改变一次-->
+        <div><span v-once>{{ message }}</span></div>
+        
+        <div>
+            <input v-model="message">
+        </div>
+        <!-- 原始的html插入 -->
+        <div>
+            <span v-html="rawHtml">{{ rawHtml }}</span>
+        </div>
+
+        <!-- 属性绑定 -->
+        <div>
+            <p v-bind:style="pstyle">我很好</p>
+        </div>
+
+        <!-- 所有的数据绑定都支持javascript表达式 -->
+        <!-- 但是不支持语句，流控制也不生效 -->
+        <!-- 指令特性的值预期是单个javascript表达式 -->
+        <!-- 但是v-for是例外情况 -->
+        <!-- 对于v-on[attributeName]和v-bind[attributeName]中的attributeName可以是动态变化的 -->
+        <!-- 修饰符.prevent -->
+    </div>
+</body>
+<script>
+    var data = {
+        message: "你麻痹",
+        rawHtml: "</html><ul><li>123</li><li>123</li></ul>",
+        pstyle: "color: #ff0000",
+    };
+    var vm = new Vue({
+        el: '#app',
+        data: data,
+        methods: {
+
+        }
+    });
+</script>

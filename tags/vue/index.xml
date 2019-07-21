@@ -5,10 +5,31 @@
     <link>https://mannuan.github.io/tags/vue/</link>
     <description>Recent content in vue on mannuan</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 28 Jun 2019 20:38:26 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 12 Jul 2019 14:56:56 +0800</lastBuildDate>
     
 	<atom:link href="https://mannuan.github.io/tags/vue/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>vue学习笔记（第一部分）</title>
+      <link>https://mannuan.github.io/post/20190712145655/</link>
+      <pubDate>Fri, 12 Jul 2019 14:56:56 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190712145655/</guid>
+      <description>Vue.js 第一部分 课程介绍 前面5个部分：学习Vue的基本的语法和概念；打包工具Webpack，Gulp 后面5个部分：以项目驱动教学
+什么是Vue.js  Vue.js是目前最火的一个框架，React是最流行的一个框架（React除了开发网站，还可以开发手机App） Vue.js是前端的主流框架之一，和Angular.js、React.js一起，并称为前端三大主流框架! Vue.js是一套构建用户界面的框架，只关注视图层，它不仅易于上手，还便于与第三方库或既有项目整合。（Vue有配套的第三方类库，可以整合起来做大型项目的开发） 前端的主要工作？主要负责MVC中的V这一层；主要工作就是和界面打交道，来制作前端页面效果；  为什么要学习流行的框架  企业为了提高开发效率：在企业中，时间就是效率，效率就是金钱；
+ 企业中，使用框架，能够提高开发的效率；  提高开发效率的发展历程：原生JS-&amp;gt;Jquery之类的类库-&amp;gt;前端模板引擎-&amp;gt;和Angular.js/ Vue.js（能够帮助我们减少不必要的DOM操作；提高渲染效率；双向数据绑定的概念[通过框架提供的指令，我们前端程序员只需要关心数据的业务逻辑，不再关心DOM是如何渲染的了]）
+ 在Vue中，一个核心的概念，就是让用户不再操作DOM元素，解放了用户的双手，让程序员可以有更多的时间去关注业务逻辑；
+ 增强自己就业时候的竞争力
+ 人无我有，人有我优   框架和库的区别  框架：是一套完整的解决方案；对项目的侵入性较大，项目如果需要更换框架，则需要重新架构整个项目。
+ node中的express  库（插件）：提供某一个小功能，对项目的侵入性较小，如果某个库无法完成某些需求，可以很容易切换到其他库实现需求。
+ 1. 从Jquery切换到Zepto 2. 从EJS切换到art-template   Node（后端）中的MVC与前端中的MVVM之间的区别  MVC是后端的分层开发概念；
+ MVVM是前端视图层的概念，主要关注于视图层分离，也就是说：MVVM把前端的视图层，分为了三部分Model，View，VM ViewModel
+ 为什么有了MVC还要有MVVM
+  
+Vue.js 基本代码和MVVM之间的对应关系 Vue之 基本的代码结构和插值表达式、v-clock Vue基本的代码结构和插值表达式
+Vue指令之 v-text和v-html Vue指令之 v-bind的三种用法  直接使用指令v-bind 使用简化指令: 在绑定的时候，拼接绑定内容：:title=&amp;quot;btnTitle + &#39;，这是追加的内容&#39;&amp;quot;  Vue指令之v-on和跑马灯效果 v-clock，v-text, v-html, v-bind, v-on</description>
+    </item>
     
     <item>
       <title>关于Ajax的jQuery、Vue.js、原生js的各个版本的实现对比</title>

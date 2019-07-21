@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>数据结构 on mannuan</title>
+    <link>https://mannuan.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</link>
+    <description>Recent content in 数据结构 on mannuan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 17 Jul 2019 08:43:21 +0800</lastBuildDate>
+    
+	<atom:link href="https://mannuan.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>单链表</title>
+      <link>https://mannuan.github.io/post/20190717084321/</link>
+      <pubDate>Wed, 17 Jul 2019 08:43:21 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190717084321/</guid>
+      <description>element next         /** * 1）单链表的插入、删除、查找操作； * 2）链表中存储的是int类型的数据； */ // 创建节点对象 class Node { constructor (element) { this.element = element this.next = null } } class LinkedList { constructor () { this.head = new Node(&amp;#39;head&amp;#39;) } // 根据value查找节点  findByValue (item) { let currentNode = this.head.next; while (currentNode !== null &amp;amp;&amp;amp; currentNode.element !== item) { currentNode = currentNode.next; } console.log(currentNode); return currentNode === null ?</description>
+    </item>
+    
+    <item>
+      <title>javascript数组</title>
+      <link>https://mannuan.github.io/post/20190710110242/</link>
+      <pubDate>Wed, 10 Jul 2019 11:02:42 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190710110242/</guid>
+      <description>与 Java 、PHP 等语言不同，在 JavaScript 中，数组其实是一种特殊的对象。
+数组的创建与读写 以下两种方式都可创建数组：
+// 字面量方式,常用 var num = [1,5,6,10]; print(num.length); // 4  // 构造函数方式 var num = new Array(1,5,6,10); print(num.length); // 4  值得注意的是，JavaScript 中的数组数据可以是不同类型，它的语法相对宽松，例如可以指定不同类型数据var example = [1,&amp;quot;Mike&amp;quot;,true,null];另外，可以通过Array.isArray()来判断一个对象是否是数组，例如：
+var num = [1,5,6,10]; print(Array.isArray(num)); // true  如何读写数组呢？可以使用循环。
+var num = [1,5,6,10]; for (var i = 0; i &amp;lt; num.length; i++) { console.log(num[i]+&amp;#34; &amp;#34;); }  数组的深复制与浅复制 当我们把数组赋给另外一个数组，然后改变其中一个数组的值，另一数组也会随之改变，这就是数组的浅复制。而深复制指的就是不改变原来的数组而去创建一个新的数组，这种情况是经常使用的，为了不破坏原数组。下面的代码展示了这两种复制
+// 浅复制 var num = [1,2,3,4,5]; var newNum = num; num[0] = 10; console.</description>
+    </item>
+    
+  </channel>
+</rss>

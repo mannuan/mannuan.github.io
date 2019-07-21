@@ -5,10 +5,88 @@
     <link>https://mannuan.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/</link>
     <description>Recent content in 前端开发 on mannuan</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 10 Jul 2019 11:02:42 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 17 Jul 2019 22:02:31 +0800</lastBuildDate>
     
 	<atom:link href="https://mannuan.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>http协议</title>
+      <link>https://mannuan.github.io/post/20190717220231/</link>
+      <pubDate>Wed, 17 Jul 2019 22:02:31 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190717220231/</guid>
+      <description>前言 前端工程师打交道最多的就是浏览器，不管做什么都离不开浏览器，其中HTTP协议往往会被我们忽略，但其实资源缓存、CDN加载、页面性能优化等等都离不开对HTTP协议的了解。
+介绍 HTTP也叫作超文本传输协议，全称：Hyper Transfer Protocol。最初HTTP只能传输HTML文件，慢慢的现在可以传输文字、图像、视频和各种文件。 HTTP是无状态的：同一个客户端，连续发起多次请求，对HTTP服务器来说，都是新的请求，HTTP没办法知道来自一个客户端。
+消息结构 Header  分为request/response line和request/response header。
+  request/response line：包括请求的方法Method（GET/POST）、请求资源的路径path to resource和http协议的版本号。
+ request/response header：这边就是各种请求头了。
+  Body 响应体，一般是HTML文件。如果是get请求，是没有响应体的。
+HTTP请求方法 GET 请求获取Request-URI所标识的资源
+POST 在Request-URI所标识的资源后附加新的数据
+HEAD 请求获取由Request-URI所标识的资源的响应消息报头
+PUT 请求服务器存储一个资源，并用Request-URI作为其标识
+DELETE 请求服务器删除Request-URI所标识的资源
+TRACE 请求服务器回送收到的请求信息，主要用于测试或诊断
+CONNECT 保留将来使用
+OPTIONS 请求查询服务器的性能，或者查询与资源相关的选项和需求
+对于我们来说，常用的就是GET、和POST。再次声明，不用表单提交，get不存在跟post比较有安全性问题。
+HTTP状态码 1XX 提示信息 - 表示请求已被成功接收，继续处理。
+2XX 成功 - 表示请求已被成功接收，理解，接受
+3XX 重定向 - 要完成请求必须进行更进一步的处理
+4XX 客户端错误 - 请求有语法错误或请求无法实现
+5XX 服务器端错误 - 服务器未能实现合法的请求
+状态码很多，可以自行了解，我觉得有几个是必须知道的。
+HTTP通信过程：根据URL查询DNS、查找服务器、建立TCP连接、发送请求、服务器响应。 总结 对于HTTP，我觉得基础的要知道HTTP是无状态的、HTTP的消息结构、基本请求方法、基本状态码这四部分。</description>
+    </item>
+    
+    <item>
+      <title>冒泡、选择、插入排序</title>
+      <link>https://mannuan.github.io/post/20190717114226/</link>
+      <pubDate>Wed, 17 Jul 2019 11:42:26 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190717114226/</guid>
+      <description>/** * 冒泡，插入，选择排序 * * Author: nameczz */ // 冒泡排序 const bubbleSort = (arr) =&amp;gt; { if (arr.length &amp;lt;= 1) return for (let i = 0; i &amp;lt; arr.length; i++) { let hasChange = false for (let j = 0; j &amp;lt; arr.length - i - 1; j++) { if (arr[j] &amp;gt; arr[j + 1]) { const temp = arr[j] arr[j] = arr[j + 1] arr[j + 1] = temp hasChange = true } } // 如果false 说明所有元素已经到位  if (!</description>
+    </item>
+    
+    <item>
+      <title>单链表</title>
+      <link>https://mannuan.github.io/post/20190717084321/</link>
+      <pubDate>Wed, 17 Jul 2019 08:43:21 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190717084321/</guid>
+      <description>element next         /** * 1）单链表的插入、删除、查找操作； * 2）链表中存储的是int类型的数据； */ // 创建节点对象 class Node { constructor (element) { this.element = element this.next = null } } class LinkedList { constructor () { this.head = new Node(&amp;#39;head&amp;#39;) } // 根据value查找节点  findByValue (item) { let currentNode = this.head.next; while (currentNode !== null &amp;amp;&amp;amp; currentNode.element !== item) { currentNode = currentNode.next; } console.log(currentNode); return currentNode === null ?</description>
+    </item>
+    
+    <item>
+      <title>javascript内置对象Date的使用</title>
+      <link>https://mannuan.github.io/post/20190714155323/</link>
+      <pubDate>Sun, 14 Jul 2019 15:53:23 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190714155323/</guid>
+      <description> 格式化输出yyyy-mm-dd HH:MM:SS.msmsms function padbyZero(){ // 用零填充  var val = arguments[0]|0; var len = arguments[1]|2; var res = null; for(var i=1;i&amp;lt;len;i++){ res = val&amp;lt;Math.pow(10, i)?&amp;#39;0&amp;#39;+val:&amp;#39;&amp;#39;+val; } return res; } var d=new Date(); //获取年，getFullYear()返回4位的数字 var year=d.getFullYear(); //获取月，月份比较特殊，从0开始计数 var month=padbyZero(d.getMonth()+1); //获取日 var day=padbyZero(d.getDate()); var hour=padbyZero(d.getHours()); var minute=padbyZero(d.getMinutes()); var second=padbyZero(d.getSeconds()); var millisceond=padbyZero(d.getMilliseconds(), 3); formatStr = year+&amp;#39;-&amp;#39;+month+&amp;#39;-&amp;#39;+day+&amp;#39; &amp;#39;+hour+&amp;#39;:&amp;#39;+minute+&amp;#39;:&amp;#39;+second+&amp;#39;.&amp;#39;+millisceond; console.log(formatStr); </description>
+    </item>
+    
+    <item>
+      <title>vue学习笔记（第一部分）</title>
+      <link>https://mannuan.github.io/post/20190712145655/</link>
+      <pubDate>Fri, 12 Jul 2019 14:56:56 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190712145655/</guid>
+      <description>Vue.js 第一部分 课程介绍 前面5个部分：学习Vue的基本的语法和概念；打包工具Webpack，Gulp 后面5个部分：以项目驱动教学
+什么是Vue.js  Vue.js是目前最火的一个框架，React是最流行的一个框架（React除了开发网站，还可以开发手机App） Vue.js是前端的主流框架之一，和Angular.js、React.js一起，并称为前端三大主流框架! Vue.js是一套构建用户界面的框架，只关注视图层，它不仅易于上手，还便于与第三方库或既有项目整合。（Vue有配套的第三方类库，可以整合起来做大型项目的开发） 前端的主要工作？主要负责MVC中的V这一层；主要工作就是和界面打交道，来制作前端页面效果；  为什么要学习流行的框架  企业为了提高开发效率：在企业中，时间就是效率，效率就是金钱；
+ 企业中，使用框架，能够提高开发的效率；  提高开发效率的发展历程：原生JS-&amp;gt;Jquery之类的类库-&amp;gt;前端模板引擎-&amp;gt;和Angular.js/ Vue.js（能够帮助我们减少不必要的DOM操作；提高渲染效率；双向数据绑定的概念[通过框架提供的指令，我们前端程序员只需要关心数据的业务逻辑，不再关心DOM是如何渲染的了]）
+ 在Vue中，一个核心的概念，就是让用户不再操作DOM元素，解放了用户的双手，让程序员可以有更多的时间去关注业务逻辑；
+ 增强自己就业时候的竞争力
+ 人无我有，人有我优   框架和库的区别  框架：是一套完整的解决方案；对项目的侵入性较大，项目如果需要更换框架，则需要重新架构整个项目。
+ node中的express  库（插件）：提供某一个小功能，对项目的侵入性较小，如果某个库无法完成某些需求，可以很容易切换到其他库实现需求。
+ 1. 从Jquery切换到Zepto 2. 从EJS切换到art-template   Node（后端）中的MVC与前端中的MVVM之间的区别  MVC是后端的分层开发概念；
+ MVVM是前端视图层的概念，主要关注于视图层分离，也就是说：MVVM把前端的视图层，分为了三部分Model，View，VM ViewModel
+ 为什么有了MVC还要有MVVM
+  
+Vue.js 基本代码和MVVM之间的对应关系 Vue之 基本的代码结构和插值表达式、v-clock Vue基本的代码结构和插值表达式
+Vue指令之 v-text和v-html Vue指令之 v-bind的三种用法  直接使用指令v-bind 使用简化指令: 在绑定的时候，拼接绑定内容：:title=&amp;quot;btnTitle + &#39;，这是追加的内容&#39;&amp;quot;  Vue指令之v-on和跑马灯效果 v-clock，v-text, v-html, v-bind, v-on</description>
+    </item>
     
     <item>
       <title>javascript数组</title>
@@ -59,7 +137,10 @@ var num = [1,5,6,10]; for (var i = 0; i &amp;lt; num.length; i++) { console.log(
       
       <guid>https://mannuan.github.io/post/20190708085133/</guid>
       <description>标签部分先后顺序，按照收录的先后顺序
- ruby标签 用来注释中文注音或字符。</description>
+ ruby标签 用来注释中文注音或字符。
+template标签 HTML内容模板（&amp;lt;template&amp;gt;）元素 是一种用于保存客户端内容机制，该内容在加载页面时不会呈现，但随后可以在运行时使用JavaScript实例化。
+将模板视为一个内容片段，存储在文档中供后续使用。虽然解析器在加载页面时确实会处理&amp;lt;template&amp;gt;元素的内容，但这样做只是为了确保这些内容有效；然而，元素的内容不会被呈现。
+一个例子</description>
     </item>
     
     <item>
@@ -605,22 +686,13 @@ $().ready(function(){
     </item>
     
     <item>
-      <title>HTML字符编码</title>
-      <link>https://mannuan.github.io/post/20190605213437/</link>
-      <pubDate>Wed, 05 Jun 2019 21:34:37 +0800</pubDate>
-      
-      <guid>https://mannuan.github.io/post/20190605213437/</guid>
-      <description>HTML里可以用 &amp;amp;#字符编码; 表示一个字符，x表示编码值用十六进制表示&amp;#x672A; 表示字符编码为十六进制672A的字符 ，就是中文“未”字。
-更多编码详见HTML特殊字符编码对照表</description>
-    </item>
-    
-    <item>
       <title>HTML特殊字符编码对照表</title>
       <link>https://mannuan.github.io/post/20190605212304/</link>
       <pubDate>Wed, 05 Jun 2019 21:23:04 +0800</pubDate>
       
       <guid>https://mannuan.github.io/post/20190605212304/</guid>
-      <description>   特殊符号 命名实体 十进制编码 特殊符号 命名实体 十进制编码 特殊符号 命名实体 十进制编码     Α &amp;amp;Alpha; &amp;amp;#913; Β &amp;amp;Beta; &amp;amp;#914; Γ &amp;amp;Gamma; &amp;amp;#915;   Δ &amp;amp;Delta; &amp;amp;#916; Ε &amp;amp;Epsilon; &amp;amp;#917; Ζ &amp;amp;Zeta; &amp;amp;#918;   Η &amp;amp;Eta; &amp;amp;#919; Θ &amp;amp;Theta; &amp;amp;#920; Ι &amp;amp;Iota; &amp;amp;#921;   Κ &amp;amp;Kappa; &amp;amp;#922; Λ &amp;amp;Lambda; &amp;amp;#923; Μ &amp;amp;Mu; &amp;amp;#924;   Ν &amp;amp;Nu; &amp;amp;#925; Ξ &amp;amp;Xi; &amp;amp;#926; Ο &amp;amp;Omicron; &amp;amp;#927;   Π &amp;amp;Pi; &amp;amp;#928; Ρ &amp;amp;Rho; &amp;amp;#929; Σ &amp;amp;Sigma; &amp;amp;#931;   Τ &amp;amp;Tau; &amp;amp;#932; Υ &amp;amp;Upsilon; &amp;amp;#933; Φ &amp;amp;Phi; &amp;amp;#934;   Χ &amp;amp;Chi; &amp;amp;#935; Ψ &amp;amp;Psi; &amp;amp;#936; Ω &amp;amp;Omega; &amp;amp;#937;   α &amp;amp;alpha; &amp;amp;#945; β &amp;amp;beta; &amp;amp;#946; γ &amp;amp;gamma; &amp;amp;#947;   δ &amp;amp;delta; &amp;amp;#948; ε &amp;amp;epsilon; &amp;amp;#949; ζ &amp;amp;zeta; &amp;amp;#950;   η &amp;amp;eta; &amp;amp;#951; θ &amp;amp;theta; &amp;amp;#952; ι &amp;amp;iota; &amp;amp;#953;   κ &amp;amp;kappa; &amp;amp;#954; λ &amp;amp;lambda; &amp;amp;#955; μ &amp;amp;mu; &amp;amp;#956;   ν &amp;amp;nu; &amp;amp;#957; ξ &amp;amp;xi; &amp;amp;#958; ο &amp;amp;omicron; &amp;amp;#959;   π &amp;amp;pi; &amp;amp;#960; ρ &amp;amp;rho; &amp;amp;#961; ς &amp;amp;sigmaf; &amp;amp;#962;   σ &amp;amp;sigma; &amp;amp;#963; τ &amp;amp;tau; &amp;amp;#964; υ &amp;amp;upsilon; &amp;amp;#965;   φ &amp;amp;phi; &amp;amp;#966; χ &amp;amp;chi; &amp;amp;#967; ψ &amp;amp;psi; &amp;amp;#968;   ω &amp;amp;omega; &amp;amp;#969; ϑ &amp;amp;thetasym; &amp;amp;#977; ϒ &amp;amp;upsih; &amp;amp;#978;   ϖ &amp;amp;piv; &amp;amp;#982; • &amp;amp;bull; &amp;amp;#8226; … &amp;amp;hellip; &amp;amp;#8230;   ′ &amp;amp;prime; &amp;amp;#8242; ″ &amp;amp;Prime; &amp;amp;#8243; ‾ &amp;amp;oline; &amp;amp;#8254;   ⁄ &amp;amp;frasl; &amp;amp;#8260; ℘ &amp;amp;weierp; &amp;amp;#8472; ℑ &amp;amp;image; &amp;amp;#8465;   ℜ &amp;amp;real; &amp;amp;#8476; ™ &amp;amp;trade; &amp;amp;#8482; ℵ &amp;amp;alefsym; &amp;amp;#8501;   ← &amp;amp;larr; &amp;amp;#8592; ↑ &amp;amp;uarr; &amp;amp;#8593; → &amp;amp;rarr; &amp;amp;#8594;   ↓ &amp;amp;darr; &amp;amp;#8595; ↔ &amp;amp;harr; &amp;amp;#8596; ↵ &amp;amp;crarr; &amp;amp;#8629;   ⇐ &amp;amp;lArr; &amp;amp;#8656; ⇑ &amp;amp;uArr; &amp;amp;#8657; ⇒ &amp;amp;rArr; &amp;amp;#8658;   ⇓ &amp;amp;dArr; &amp;amp;#8659; ⇔ &amp;amp;hArr; &amp;amp;#8660; ∀ &amp;amp;forall; &amp;amp;#8704;   ∂ &amp;amp;part; &amp;amp;#8706; ∃ &amp;amp;exist; &amp;amp;#8707; ∅ &amp;amp;empty; &amp;amp;#8709;   ∇ &amp;amp;nabla; &amp;amp;#8711; ∈ &amp;amp;isin; &amp;amp;#8712; ∉ &amp;amp;notin; &amp;amp;#8713;   ∋ &amp;amp;ni; &amp;amp;#8715; ∏ &amp;amp;prod; &amp;amp;#8719; ∑ &amp;amp;sum; &amp;amp;#8722;   − &amp;amp;minus; &amp;amp;#8722; ∗ &amp;amp;lowast; &amp;amp;#8727; √ &amp;amp;radic; &amp;amp;#8730;   ∝ &amp;amp;prop; &amp;amp;#8733; ∞ &amp;amp;infin; &amp;amp;#8734; ∠ &amp;amp;ang; &amp;amp;#8736;   ∧ &amp;amp;and; &amp;amp;#8869; ∨ &amp;amp;or; &amp;amp;#8870; ∩ &amp;amp;cap; &amp;amp;#8745;   ∪ &amp;amp;cup; &amp;amp;#8746; ∫ &amp;amp;int; &amp;amp;#8747; ∴ &amp;amp;there4; &amp;amp;#8756;   ∼ &amp;amp;sim; &amp;amp;#8764; ≅ &amp;amp;cong; &amp;amp;#8773; ≈ &amp;amp;asymp; &amp;amp;#8773;   ≠ &amp;amp;ne; &amp;amp;#8800; ≡ &amp;amp;equiv; &amp;amp;#8801; ≤ &amp;amp;le; &amp;amp;#8804;   ≥ &amp;amp;ge; &amp;amp;#8805; ⊂ &amp;amp;sub; &amp;amp;#8834; ⊃ &amp;amp;sup; &amp;amp;#8835;   ⊄ &amp;amp;nsub; &amp;amp;#8836; ⊆ &amp;amp;sube; &amp;amp;#8838; ⊇ &amp;amp;supe; &amp;amp;#8839;   ⊕ &amp;amp;oplus; &amp;amp;#8853; ⊗ &amp;amp;otimes; &amp;amp;#8855; ⊥ &amp;amp;perp; &amp;amp;#8869;   ⋅ &amp;amp;sdot; &amp;amp;#8901; ⌈ &amp;amp;lceil; &amp;amp;#8968; ⌉ &amp;amp;rceil; &amp;amp;#8969;   ⌊ &amp;amp;lfloor; &amp;amp;#8970; ⌋ &amp;amp;rfloor; &amp;amp;#8971; ◊ &amp;amp;loz; &amp;amp;#9674;   ♠ &amp;amp;spades; &amp;amp;#9824; ♣ &amp;amp;clubs; &amp;amp;#9827; ♥ &amp;amp;hearts; &amp;amp;#9829;   ♦ &amp;amp;diams; &amp;amp;#9830;  &amp;amp;nbsp; &amp;amp;#160; ¡ &amp;amp;iexcl; &amp;amp;#161;   ¢ &amp;amp;cent; &amp;amp;#162; £ &amp;amp;pound; &amp;amp;#163; ¤ &amp;amp;curren; &amp;amp;#164;   ¥ &amp;amp;yen; &amp;amp;#165; ¦ &amp;amp;brvbar; &amp;amp;#166; § &amp;amp;sect; &amp;amp;#167;   ¨ &amp;amp;uml; &amp;amp;#168; © &amp;amp;copy; &amp;amp;#169; ª &amp;amp;ordf; &amp;amp;#170;   « &amp;amp;laquo; &amp;amp;#171; ¬ &amp;amp;not; &amp;amp;#172; ­ &amp;amp;shy; &amp;amp;#173;   ® &amp;amp;reg; &amp;amp;#174; ¯ &amp;amp;macr; &amp;amp;#175; ° &amp;amp;deg; &amp;amp;#176;   ± &amp;amp;plusmn; &amp;amp;#177; ² &amp;amp;sup2; &amp;amp;#178; ³ &amp;amp;sup3; &amp;amp;#179;   ´ &amp;amp;acute; &amp;amp;#180; µ &amp;amp;micro; `&amp;amp;#181 &amp;ldquo; &amp;amp;quot; &amp;amp;#34;   &amp;lt; &amp;amp;lt; &amp;amp;#60; &amp;gt; &amp;amp;gt; &amp;amp;#62; &amp;lsquo;  &amp;amp;#39;    </description>
+      <description> &amp;amp;开头的表示命名实体；&amp;amp;#开头的表示十进制的字符编码；&amp;amp;#x开头的表示十六进制的字符编码；
+    特殊符号 命名实体 十进制编码 特殊符号 命名实体 十进制编码 特殊符号 命名实体 十进制编码     Α &amp;amp;Alpha; &amp;amp;#913; Β &amp;amp;Beta; &amp;amp;#914; Γ &amp;amp;Gamma; &amp;amp;#915;   Δ &amp;amp;Delta; &amp;amp;#916; Ε &amp;amp;Epsilon; &amp;amp;#917; Ζ &amp;amp;Zeta; &amp;amp;#918;   Η &amp;amp;Eta; &amp;amp;#919; Θ &amp;amp;Theta; &amp;amp;#920; Ι &amp;amp;Iota; &amp;amp;#921;   Κ &amp;amp;Kappa; &amp;amp;#922; Λ &amp;amp;Lambda; &amp;amp;#923; Μ &amp;amp;Mu; &amp;amp;#924;   Ν &amp;amp;Nu; &amp;amp;#925; Ξ &amp;amp;Xi; &amp;amp;#926; Ο &amp;amp;Omicron; &amp;amp;#927;   Π &amp;amp;Pi; &amp;amp;#928; Ρ &amp;amp;Rho; &amp;amp;#929; Σ &amp;amp;Sigma; &amp;amp;#931;   Τ &amp;amp;Tau; &amp;amp;#932; Υ &amp;amp;Upsilon; &amp;amp;#933; Φ &amp;amp;Phi; &amp;amp;#934;   Χ &amp;amp;Chi; &amp;amp;#935; Ψ &amp;amp;Psi; &amp;amp;#936; Ω &amp;amp;Omega; &amp;amp;#937;   α &amp;amp;alpha; &amp;amp;#945; β &amp;amp;beta; &amp;amp;#946; γ &amp;amp;gamma; &amp;amp;#947;   δ &amp;amp;delta; &amp;amp;#948; ε &amp;amp;epsilon; &amp;amp;#949; ζ &amp;amp;zeta; &amp;amp;#950;   η &amp;amp;eta; &amp;amp;#951; θ &amp;amp;theta; &amp;amp;#952; ι &amp;amp;iota; &amp;amp;#953;   κ &amp;amp;kappa; &amp;amp;#954; λ &amp;amp;lambda; &amp;amp;#955; μ &amp;amp;mu; &amp;amp;#956;   ν &amp;amp;nu; &amp;amp;#957; ξ &amp;amp;xi; &amp;amp;#958; ο &amp;amp;omicron; &amp;amp;#959;   π &amp;amp;pi; &amp;amp;#960; ρ &amp;amp;rho; &amp;amp;#961; ς &amp;amp;sigmaf; &amp;amp;#962;   σ &amp;amp;sigma; &amp;amp;#963; τ &amp;amp;tau; &amp;amp;#964; υ &amp;amp;upsilon; &amp;amp;#965;   φ &amp;amp;phi; &amp;amp;#966; χ &amp;amp;chi; &amp;amp;#967; ψ &amp;amp;psi; &amp;amp;#968;   ω &amp;amp;omega; &amp;amp;#969; ϑ &amp;amp;thetasym; &amp;amp;#977; ϒ &amp;amp;upsih; &amp;amp;#978;   ϖ &amp;amp;piv; &amp;amp;#982; • &amp;amp;bull; &amp;amp;#8226; … &amp;amp;hellip; &amp;amp;#8230;   ′ &amp;amp;prime; &amp;amp;#8242; ″ &amp;amp;Prime; &amp;amp;#8243; ‾ &amp;amp;oline; &amp;amp;#8254;   ⁄ &amp;amp;frasl; &amp;amp;#8260; ℘ &amp;amp;weierp; &amp;amp;#8472; ℑ &amp;amp;image; &amp;amp;#8465;   ℜ &amp;amp;real; &amp;amp;#8476; ™ &amp;amp;trade; &amp;amp;#8482; ℵ &amp;amp;alefsym; &amp;amp;#8501;   ← &amp;amp;larr; &amp;amp;#8592; ↑ &amp;amp;uarr; &amp;amp;#8593; → &amp;amp;rarr; &amp;amp;#8594;   ↓ &amp;amp;darr; &amp;amp;#8595; ↔ &amp;amp;harr; &amp;amp;#8596; ↵ &amp;amp;crarr; &amp;amp;#8629;   ⇐ &amp;amp;lArr; &amp;amp;#8656; ⇑ &amp;amp;uArr; &amp;amp;#8657; ⇒ &amp;amp;rArr; &amp;amp;#8658;   ⇓ &amp;amp;dArr; &amp;amp;#8659; ⇔ &amp;amp;hArr; &amp;amp;#8660; ∀ &amp;amp;forall; &amp;amp;#8704;   ∂ &amp;amp;part; &amp;amp;#8706; ∃ &amp;amp;exist; &amp;amp;#8707; ∅ &amp;amp;empty; &amp;amp;#8709;   ∇ &amp;amp;nabla; &amp;amp;#8711; ∈ &amp;amp;isin; &amp;amp;#8712; ∉ &amp;amp;notin; &amp;amp;#8713;   ∋ &amp;amp;ni; &amp;amp;#8715; ∏ &amp;amp;prod; &amp;amp;#8719; ∑ &amp;amp;sum; &amp;amp;#8722;   − &amp;amp;minus; &amp;amp;#8722; ∗ &amp;amp;lowast; &amp;amp;#8727; √ &amp;amp;radic; &amp;amp;#8730;   ∝ &amp;amp;prop; &amp;amp;#8733; ∞ &amp;amp;infin; &amp;amp;#8734; ∠ &amp;amp;ang; &amp;amp;#8736;   ∧ &amp;amp;and; &amp;amp;#8869; ∨ &amp;amp;or; &amp;amp;#8870; ∩ &amp;amp;cap; &amp;amp;#8745;   ∪ &amp;amp;cup; &amp;amp;#8746; ∫ &amp;amp;int; &amp;amp;#8747; ∴ &amp;amp;there4; &amp;amp;#8756;   ∼ &amp;amp;sim; &amp;amp;#8764; ≅ &amp;amp;cong; &amp;amp;#8773; ≈ &amp;amp;asymp; &amp;amp;#8773;   ≠ &amp;amp;ne; &amp;amp;#8800; ≡ &amp;amp;equiv; &amp;amp;#8801; ≤ &amp;amp;le; &amp;amp;#8804;   ≥ &amp;amp;ge; &amp;amp;#8805; ⊂ &amp;amp;sub; &amp;amp;#8834; ⊃ &amp;amp;sup; &amp;amp;#8835;   ⊄ &amp;amp;nsub; &amp;amp;#8836; ⊆ &amp;amp;sube; &amp;amp;#8838; ⊇ &amp;amp;supe; &amp;amp;#8839;   ⊕ &amp;amp;oplus; &amp;amp;#8853; ⊗ &amp;amp;otimes; &amp;amp;#8855; ⊥ &amp;amp;perp; &amp;amp;#8869;   ⋅ &amp;amp;sdot; &amp;amp;#8901; ⌈ &amp;amp;lceil; &amp;amp;#8968; ⌉ &amp;amp;rceil; &amp;amp;#8969;   ⌊ &amp;amp;lfloor; &amp;amp;#8970; ⌋ &amp;amp;rfloor; &amp;amp;#8971; ◊ &amp;amp;loz; &amp;amp;#9674;   ♠ &amp;amp;spades; &amp;amp;#9824; ♣ &amp;amp;clubs; &amp;amp;#9827; ♥ &amp;amp;hearts; &amp;amp;#9829;   ♦ &amp;amp;diams; &amp;amp;#9830;  &amp;amp;nbsp; &amp;amp;#160; ¡ &amp;amp;iexcl; &amp;amp;#161;   ¢ &amp;amp;cent; &amp;amp;#162; £ &amp;amp;pound; &amp;amp;#163; ¤ &amp;amp;curren; &amp;amp;#164;   ¥ &amp;amp;yen; &amp;amp;#165; ¦ &amp;amp;brvbar; &amp;amp;#166; § &amp;amp;sect; &amp;amp;#167;   ¨ &amp;amp;uml; &amp;amp;#168; © &amp;amp;copy; &amp;amp;#169; ª &amp;amp;ordf; &amp;amp;#170;   « &amp;amp;laquo; &amp;amp;#171; ¬ &amp;amp;not; &amp;amp;#172; ­ &amp;amp;shy; &amp;amp;#173;   ® &amp;amp;reg; &amp;amp;#174; ¯ &amp;amp;macr; &amp;amp;#175; ° &amp;amp;deg; &amp;amp;#176;   ± &amp;amp;plusmn; &amp;amp;#177; ² &amp;amp;sup2; &amp;amp;#178; ³ &amp;amp;sup3; &amp;amp;#179;   ´ &amp;amp;acute; &amp;amp;#180; µ &amp;amp;micro; &amp;amp;#181; &amp;ldquo; &amp;amp;quot; &amp;amp;#34;   &amp;lt; &amp;amp;lt; &amp;amp;#60; &amp;gt; &amp;amp;gt; &amp;amp;#62; &amp;lsquo;  &amp;amp;#39;    </description>
     </item>
     
     <item>
@@ -996,10 +1068,11 @@ var extent = function(){ this.value = 0; }; Extent.prototype.call = function(){ 
       <pubDate>Wed, 22 May 2019 15:27:59 +0800</pubDate>
       
       <guid>https://mannuan.github.io/post/20190522152759/</guid>
-      <description>this的指向分为4种：
- 作为对象的方法调用： var obj = { a: 1, getA: function(){ console.log(this == obj); console.log(this.a); } } obj.getA();   当函数作为对象的方法被调用时，this指向的是一个局部对象，即当前的这个对象；
- 作为普通函数调用： global.name = &amp;#39;globalName&amp;#39;; var getName = function(){ return this.name; }; console.log(getName()); // 输出: globalName  //或者 global.name = &amp;#39;globalName&amp;#39;; var myObject = { name: &amp;#34;sven&amp;#34;, getName: function(){ return this.name; } } var getName = myObject.getName; console.log(getName()); //globalName   当this在普通函数里面被用到时，this指向的是一个全局对象，在浏览器上是window，在nodejs上是global
- 构造函数调用： var MyClass = function(){ this.</description>
+      <description>ES5  this的指向分为4种：
+ 隐式的this指向  作为对象的方法调用，this指向的是当前对象
+ var obj = { a: 1, getA: function(){ console.log(this == obj); // true  console.log(this.a); // 1  } } obj.getA();  硬指定的this  作为普通函数调用，this指向的是全局对象
+ name = &amp;#39;globalName&amp;#39;; var getName = function(){ console.log(this == window); console.log(name); }; getName();  或者 将对象的方法加入全局对象中，会改变原本的this指向
+name = &amp;#39;globalName&amp;#39;; var myObject = { name: &amp;#34;sven&amp;#34;, getName: function(){ console.log(this == window); console.log(this.name); } } var getName = myObject.</description>
     </item>
     
     <item>

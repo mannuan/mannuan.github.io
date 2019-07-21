@@ -5,10 +5,19 @@
     <link>https://mannuan.github.io/tags/nginx/</link>
     <description>Recent content in nginx on mannuan</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 10 Jul 2019 22:15:01 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 11 Jul 2019 15:38:14 +0800</lastBuildDate>
     
 	<atom:link href="https://mannuan.github.io/tags/nginx/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>nginx安装和配置教程</title>
+      <link>https://mannuan.github.io/post/20190711153813/</link>
+      <pubDate>Thu, 11 Jul 2019 15:38:14 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190711153813/</guid>
+      <description> linux 安装nginx sudo apt-get install nginx 配置文件路径 /etc/nginx  mac 安装nginx brew install nginx 配置文件路径 /usr/local/etc/nginx/  </description>
+    </item>
     
     <item>
       <title>linux使用shadowsocks-qt5实现自动代理</title>
@@ -22,7 +31,7 @@
  配置全局代理 依次点击ubuntu的设置&amp;gt;系统设置&amp;gt;网络&amp;gt;网络代理&amp;gt;手动
 然后把除了socks主机的所有其他行的选项都清空，端口无法清空，可以设置为0
 最后，点击应用到整个系统
-autoproxy.pac文件生成 pip install genpac genpac --pac-proxy &amp;#34;SOCKS5 127.0.0.1:1080&amp;#34; --gfwlist-proxy=&amp;#34;SOCKS5 127.0.0.1:1080&amp;#34; --gfwlist-url=https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt --output=&amp;#34;autoproxy.pac&amp;#34; 配置系统代理 关键一步，把autoproxy.pac使用本地http协议访问
+autoproxy.pac文件生成 安装genpac pip install genpac 使用在线的gfwlist genpac --pac-proxy &amp;#34;SOCKS5 127.0.0.1:1080&amp;#34; --gfwlist-proxy=&amp;#34;SOCKS5 127.0.0.1:1080&amp;#34; --gfwlist-url=https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt --output=&amp;#34;autoproxy.pac&amp;#34; 使用离线的gfwlist genpac --pac-proxy &amp;#34;SOCKS5 127.0.0.1:1080&amp;#34; --gfwlist-proxy=&amp;#34;SOCKS5 127.0.0.1:1080&amp;#34; --gfwlist-local=你的路径/gfwlist.txt --output=&amp;#34;autoproxy.pac&amp;#34; 配置系统代理 关键一步，把autoproxy.pac使用本地http协议访问
 再次回到网络代理界面，选择自动，在配置URL的框中输入http://127.0.0.1/autoproxy.pac</description>
     </item>
     
@@ -36,8 +45,19 @@ autoproxy.pac文件生成 pip install genpac genpac --pac-proxy &amp;#34;SOCKS5 
 分析问题 出现上面问题的唯一可能就是Chrome设置有误，因此点击设置-&amp;gt;高级设置-&amp;gt;打开代理设置，打开的就是Ubuntu系统的网络设置。因此，我们可以判断自动代理模式设置失效，这里我们就要仔细分析为什么会失效？
 解决方案 出现上面问题的主要原因是：Chrome移除对file://和data:协议的支持，目前只能使用http://协议。因此，我们打算使用nginx实现对本地文件的http映射。
 安装nginx sudo apt-get install nginx 修改nginx.cnf配置文件 vim /etc/nginx/nginx.conf 在nginx.conf的http{...}代码块中输入:
-server{ listen: 80; server_name: 127.0.0.1; location /autoproxy.pac { alias 绝对路径/autoproxy.pac; } } 重启nginx
+server{ listen 80; #注意这里不用&amp;#34;:&amp;#34;隔开，listen后面没有冒号  server_name 127.0.0.1; #注意这里不用&amp;#34;:&amp;#34;隔开，server_name后面没有冒号  location /autoproxy.pac { alias 绝对路径/autoproxy.pac; } } 重启nginx
 sudo nginx -s reload 把http://127.0.0.1/autoproxy.pac填写到系统设置-&amp;gt;网络-&amp;gt;代理设置-&amp;gt;自动代理中</description>
+    </item>
+    
+    <item>
+      <title>https服务器搭建详细教程(ubuntu系统实测可行)</title>
+      <link>https://mannuan.github.io/post/20190501225058/</link>
+      <pubDate>Wed, 01 May 2019 22:50:58 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190501225058/</guid>
+      <description>第一步：把指定的域名绑定到服务器指定的端口 1、安装nginx sudo apt-get install nginx  查看nginx版本，确认安装成功
+nginx -v  安装完nginx以后，通过浏览器访问127.0.0.1，再次确认安装成功（访问127.0.0.1其实等价于访问127.0.0.1:80）  2、修改nginx配置文件 sudo vim /etc/nginx/nginx.conf  通过上面的命令打开文件以后，键盘按 “i” 键，进入编辑模式，然后找到类似下面的内容：   ssl的获取可以参看我的阿里云免费ssl证书申请
+http { #在这里填写你的配置  #下面省略若干行..... }  完整的配置是这样的（第一个server配置的是http服务，第二个server配置的https服务）：  http { server { listen 80; server_name 指定的域名; root html; index index.html index.htm; location / { proxy_pass http://127.0.0.1:指定的端口/; proxy_set_header X-Real-IP $remote_addr; proxy_set_header Host $host; proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for; proxy_http_version 1.1; proxy_set_header Upgrade $http_upgrade; proxy_set_header Connection &amp;#34;upgrade&amp;#34;; proxy_redirect off; } } server { listen 443; server_name 指定的域名; ssl on; root html; index index.</description>
     </item>
     
   </channel>

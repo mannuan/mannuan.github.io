@@ -22,7 +22,7 @@
  配置全局代理 依次点击ubuntu的设置&amp;gt;系统设置&amp;gt;网络&amp;gt;网络代理&amp;gt;手动
 然后把除了socks主机的所有其他行的选项都清空，端口无法清空，可以设置为0
 最后，点击应用到整个系统
-autoproxy.pac文件生成 pip install genpac genpac --pac-proxy &amp;#34;SOCKS5 127.0.0.1:1080&amp;#34; --gfwlist-proxy=&amp;#34;SOCKS5 127.0.0.1:1080&amp;#34; --gfwlist-url=https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt --output=&amp;#34;autoproxy.pac&amp;#34; 配置系统代理 关键一步，把autoproxy.pac使用本地http协议访问
+autoproxy.pac文件生成 安装genpac pip install genpac 使用在线的gfwlist genpac --pac-proxy &amp;#34;SOCKS5 127.0.0.1:1080&amp;#34; --gfwlist-proxy=&amp;#34;SOCKS5 127.0.0.1:1080&amp;#34; --gfwlist-url=https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt --output=&amp;#34;autoproxy.pac&amp;#34; 使用离线的gfwlist genpac --pac-proxy &amp;#34;SOCKS5 127.0.0.1:1080&amp;#34; --gfwlist-proxy=&amp;#34;SOCKS5 127.0.0.1:1080&amp;#34; --gfwlist-local=你的路径/gfwlist.txt --output=&amp;#34;autoproxy.pac&amp;#34; 配置系统代理 关键一步，把autoproxy.pac使用本地http协议访问
 再次回到网络代理界面，选择自动，在配置URL的框中输入http://127.0.0.1/autoproxy.pac</description>
     </item>
     
@@ -36,7 +36,7 @@ autoproxy.pac文件生成 pip install genpac genpac --pac-proxy &amp;#34;SOCKS5 
 分析问题 出现上面问题的唯一可能就是Chrome设置有误，因此点击设置-&amp;gt;高级设置-&amp;gt;打开代理设置，打开的就是Ubuntu系统的网络设置。因此，我们可以判断自动代理模式设置失效，这里我们就要仔细分析为什么会失效？
 解决方案 出现上面问题的主要原因是：Chrome移除对file://和data:协议的支持，目前只能使用http://协议。因此，我们打算使用nginx实现对本地文件的http映射。
 安装nginx sudo apt-get install nginx 修改nginx.cnf配置文件 vim /etc/nginx/nginx.conf 在nginx.conf的http{...}代码块中输入:
-server{ listen: 80; server_name: 127.0.0.1; location /autoproxy.pac { alias 绝对路径/autoproxy.pac; } } 重启nginx
+server{ listen 80; #注意这里不用&amp;#34;:&amp;#34;隔开，listen后面没有冒号  server_name 127.0.0.1; #注意这里不用&amp;#34;:&amp;#34;隔开，server_name后面没有冒号  location /autoproxy.pac { alias 绝对路径/autoproxy.pac; } } 重启nginx
 sudo nginx -s reload 把http://127.0.0.1/autoproxy.pac填写到系统设置-&amp;gt;网络-&amp;gt;代理设置-&amp;gt;自动代理中</description>
     </item>
     
