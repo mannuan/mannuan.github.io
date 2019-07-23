@@ -5,10 +5,37 @@
     <link>https://mannuan.github.io/categories/</link>
     <description>Recent content in Categories on mannuan</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 17 Jul 2019 22:02:31 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 23 Jul 2019 20:45:49 +0800</lastBuildDate>
     
 	<atom:link href="https://mannuan.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>计算机基础</title>
+      <link>https://mannuan.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/</link>
+      <pubDate>Tue, 23 Jul 2019 20:45:49 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mac</title>
+      <link>https://mannuan.github.io/categories/mac/</link>
+      <pubDate>Tue, 23 Jul 2019 09:00:32 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/categories/mac/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>论文</title>
+      <link>https://mannuan.github.io/categories/%E8%AE%BA%E6%96%87/</link>
+      <pubDate>Mon, 22 Jul 2019 09:07:49 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/categories/%E8%AE%BA%E6%96%87/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>前端开发</title>
@@ -25,15 +52,6 @@
       <pubDate>Wed, 17 Jul 2019 11:42:26 +0800</pubDate>
       
       <guid>https://mannuan.github.io/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>论文</title>
-      <link>https://mannuan.github.io/categories/%E8%AE%BA%E6%96%87/</link>
-      <pubDate>Wed, 17 Jul 2019 11:02:01 +0800</pubDate>
-      
-      <guid>https://mannuan.github.io/categories/%E8%AE%BA%E6%96%87/</guid>
       <description></description>
     </item>
     
@@ -61,15 +79,6 @@
       <pubDate>Thu, 11 Jul 2019 15:38:14 +0800</pubDate>
       
       <guid>https://mannuan.github.io/categories/linux/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>mac</title>
-      <link>https://mannuan.github.io/categories/mac/</link>
-      <pubDate>Thu, 11 Jul 2019 15:38:14 +0800</pubDate>
-      
-      <guid>https://mannuan.github.io/categories/mac/</guid>
       <description></description>
     </item>
     

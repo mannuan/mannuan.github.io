@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>牛客 on mannuan</title>
+    <link>https://mannuan.github.io/tags/%E7%89%9B%E5%AE%A2/</link>
+    <description>Recent content in 牛客 on mannuan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 23 Jul 2018 11:34:09 +0800</lastBuildDate>
+    
+	<atom:link href="https://mannuan.github.io/tags/%E7%89%9B%E5%AE%A2/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>算法题编码如何躲坑</title>
+      <link>https://mannuan.github.io/post/20180723113409/</link>
+      <pubDate>Mon, 23 Jul 2018 11:34:09 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20180723113409/</guid>
+      <description>   错误的代码 正确代码 备注     break; break 在任何语言中break后面都没有&amp;rdquo;;&amp;rdquo;
+比如在牛客的在线js中会出现”数组越界的提示“   True和true
+False和false 正确区分大小写 js中小写
+python中大写    </description>
+    </item>
+    
+  </channel>
+</rss>

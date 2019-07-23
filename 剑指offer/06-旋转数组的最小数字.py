@@ -11,19 +11,46 @@
 """
 
 class Solution:
+    """
+    非递减数组包含两种情况：
+    1. 数组中的元素均匀变化
+    2. 数组中的元素递增
+    """
+    def minNumberInOrder(self, rotateArray, left, right):
+        minNum = rotateArray[left]
+        for i in rotateArray[left+1:right+1]:
+            if rotateArray[i] < minNum:
+                minNum = rotateArray[i]
+        return minNum
+
     def minNumberInRotateArray(self, rotateArray):
-        # write code here
-        left = 0
-        right = rotateArray.length - 1
-        while left < right:
-            if rotateArray[left] < rotateArray[right]:
-                return rotateArray[left]
-            mid = left + (right - left) / 2
-            if rotateArray[left] < rotateArray[mid]:
-                left = mid + 1
-            elif rotateArray[mid] < rotateArray[right]:
+        if not len(rotateArray):
+            return 0
+        left = 0 # 左指针
+        right = len(rotateArray) - 1 # 右指针
+        if rotateArray[left] < rotateArray[right]:
+            return rotateArray[left]
+        while True:
+            if right - left == 1:
+                mid = right
+                break
+            mid = left + (right - left) // 2
+            if rotateArray[left] == rotateArray[mid] and rotateArray[mid] == rotateArray[right]:
+                return self.minNumberInOrder(rotateArray, left, right)
+            if rotateArray[mid] >= rotateArray[left]:
+                left = mid
+            elif rotateArray[mid] <= rotateArray[right]:
                 right = mid
-            else:
-                left += 1
-        return rotateArray[left]
+        return rotateArray[mid]
+
+            
+if __name__ == "__main__":
+    s = Solution()
+    print(s.minNumberInRotateArray([1,0,1,1,1]))
+
+            
+
+
+
+        
         

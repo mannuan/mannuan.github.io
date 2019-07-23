@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html lang='en'><head>
+  <meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='description' content='摘要 该语料库有130万条讽刺性陈述 - 比之前的数据集多10倍 - 并且比非讽刺陈述的例子多几倍，允许在平衡和不平衡的标签系统中学习。每个语句都是自我注释的 - 具有讽刺意味的是作者，而不是独立的注释者 - 并提供用户，主题和对话上下文。
+介绍 讽刺检测在数据集中的例子很少、人类难以辨别和现有的数据集平衡的数据标签（数据标签大致相同）这些原因，所以检测讽刺很难。
+我们提供了一个用于具有不平衡和自注释标签的讽刺检测的语料库。因为Reddit的评论结构以及经常使用和标准化的讽刺注释。有超过100万个讽刺的例子，每个例子都提供了作者，主题和上下文信息。
+我们在第3节讨论了语料库结构和相关统计数据，在第4节手动评估我们语料库的噪声，第5节，我们为讽刺检测系统构建合适的基准，并检查这些子集上的简单基线方法和人类评估者的表现。
+相关工作 由于我们的主要贡献是语料库而不是讽刺检测方法。
+反讽数据集会有很大的区别，由于获取讽刺或非讽刺陈述的来源，手工标注的数量，和数据集平衡与否。Wallace et al.(2015) 等人使用不平衡的标签，它们不利用自我注释的标签并生成了大约10000各个手工标注的句子。推特的数据集也被用的很多，由于#sarcasm, #notsarcasm和#irony等主题提供了自注释。4.2节提到的，Twitter的缩写语言和其他属性使其变得不那么吸引人。虽然，Twitter是目前最大的原始数据来源并且之前都致力于不平衡的语料库。另外一个评论来源是IAC,这个语料库可以进一步通过人类或机器学习注释为讽刺，大概有产生了10000个带标签的陈述。
+语料库细节 Reddit数据集的结构和注释 reddit是一个社交媒体网站，用户通过帖子中的评论进行交流，每一个评论包含了嵌入式媒体，外部链接，和文字，这些发布在指定主题模块的帖子被称为subredddits;这些subreddits包含了搞笑，图片，科学。用户对提交和其他评论进行评论，从而产生了类似树的会话结构。我们把reddit树中的任何节点称为元素（即提交或评论）
+reddit用户采用了常用的讽刺注释方法，在讽刺语句的末尾标记&rsquo;/s&rsquo;;这个标记来源于&lt;sarcasm&gt;&lt;/sarcasm&gt;。和Twitter主题标签一样，使用这些标记作为讽刺的指标是嘈杂的，特别是很多用户不使用标记，不知道是不是讽刺，仅仅在讽刺意图不明显的地方使用它，我们在4.1节讨论这种噪音的程度。
+构造SARC 我们使用网络爬虫抓取数据，去除了噪音数据。对于每个评论，我们提供一个讽刺标签，作者，subreddit, 用户投票的评论分数，评论的日期，以及回到原始数据集所有评论的标识符。
+为了减少噪音，我们使用多个滤镜来消除噪音和无信息的评论。其中许多是标准的预处理步骤，例如排除URL和字符限制在ASCII中。为了处理Reddit数据，我们还排除了作为对话树中的讽刺评论后代的评论，因为在这种表达下，注释非常嘈杂，没有标记作者是否同意先前自己的讽刺表达的讽刺与否。
+我们的原始语料库包含了三个文件： 1. 一种CSV格式的数组，包含5.33亿条评论，其中约130万条是讽刺性的。此文件仅包含作者了解标准讽刺注释的注释；这取决于他们是否在评论发布的同一个月或之前使用过注释。添加此限制是为了减少由于作者为注释其讽刺而导致的漏报。每行还包含父注释。 2. 第二个是json格式的哈希表，包含讽刺评论的对话线程中的所有评论和帖子以及所有讽刺评论的兄弟姐妹。 3. csv格式的数组，每行包含一系列导致讽刺的评论，对该序列中的最后一个元素进行(讽刺和非讽刺)的响应。每个元素都作为前一个文件的键。
+这种原始语料库非常大，适用于大规模机器学习和统计分析，以及用于评估讽刺检测系统的较小基准任务。这些基准，无论是在平衡还是不平衡的情况下，都需要对语料库进行进一步的子采样，以及在稀疏信号面前处理噪声数据的方法。我们在5.1节评估了这样的方法，然后在输出上评估学习算法。
+语料库评估 评估我们的语料库有三个主要的衡量指标：（1）规模，（2）讽刺与非讽刺评论的比例，以及（3）误报率和漏报率。令人感兴趣的还有语料库中的文本质量以及其对其他NLP任务的适用性。因此，在本节中，我们评估原始语料库中的错误，并提供与用于构建讽刺数据集的其他语料库的比较。我们还讨论了我们方法的潜在局限性。
+手动评估 为了研究使用Reddit作为自我注释讽刺来源的嘈杂，我们估计了由我们的过滤引起的假阳性和假阴性的比例。 这是通过手动检查来自SARC标记为讽刺和500标记为非讽刺的500条评论的随机子集来完成的，并且可以完全访问评论的上下文。 如果“/ s”标签不是注释而是句子的一部分，并且如果评论作者明显对人类评估者讽刺，则评论被确定为误报。 该程序产生1.0％的假阳性率和2.0％的假阴性率。 虽然假阳性率是合理的，但假讽率与讽刺比例（0.25％）相比是显着的，表明讽刺的工作定义存在很大差异，并且需要能够处理不平衡设置中的噪声数据的方法。 在平衡设置中，这仍然是相当少量的噪音。
+与其他数据源进行比较 如前所述，Twitter在以前的语料库中是最常见的讽刺来源; 这可能是由于其主题标签提供的显式注释。 然而，使用Reddit作为讽刺评论的来源具有许多研究优势。 与不受长度约束且包含较少主题标签的Reddit注释不同，推文是用缩写英语编写的。 Hashtagged标记也经常被用作语句本身的一部分（例如“那是#sarcasm”），模糊了文本和注释之间的界限; 在Reddit上，“/ s”通常仅在用作注释时用作注释以外的其他东西（例如“你忘了/ s”）。 由于单个帖子的浅树结构及其注释，Reddit上的完整对话上下文也更容易提供。
+此外，从2014年7月的Twitter和Reddit数据的子样本中，我们确定Twitter作者中使用讽刺注释（＃sarcasm，＃sarcastic或#sarcastictweet）的百分比（.002％对.927％）要小得多。 我们假设Reddit用户需要更频繁地以更标准化的形式进行讽刺注释，因为它们主要是匿名的，因此不能依赖共享的上下文来传达讽刺。 最后，Reddit还受益于subreddits，它可以基于明确的主题分配实现特征化和数据探索。
+Internet Argument Corpus（IAC）也被用作讽刺评论的来源（Walker等，2012）。 语料库开发人员发现IAC中有12％的例子是讽刺性的，这对于讽刺检测来说比我们的更好。 由于Reddit数据由任意对话组成，而不仅仅是参数，因此即使考虑到假阴性，我们的讽刺百分比也要小得多也就不足为奇了; 此属性还使我们的数据集更加真实。 与Reddit和Twitter不同，IAC还需要手动注释讽刺。
+我们方法的局限性 我们收集自注释讽刺数据集的方法有一些值得注意的局限性。 尽管我们努力过滤嘈杂的“/s”标签，但仍存在没有简单规则可靠地消除不正确标签的情况。 我们描述了误报和漏报的困难： * 误报是由于存在“/ s”标记而将评论错误地标记为讽刺的情况。 这种情况仅在评论中出现“/ s”标签时出现，其含义与指示讽刺有所不同。 如前所述，如果用户不知道“/ s”符号，则更有可能发生这种可能性。 类似地，如果“/ s”用于指代其用作注释的约定，那么仅仅检测“/ s”字符串的简单方法也会失败。 最后，“/ s”可能还有其他含义：例如，在HTML中，&lt;s&gt; .'>
+<meta name='theme-color' content='#FFFFFF'>
+
+<meta property='og:title' content='A Large Self-Annotated Corpus for Sarcasm • mannuan'>
+<meta property='og:description' content='摘要 该语料库有130万条讽刺性陈述 - 比之前的数据集多10倍 - 并且比非讽刺陈述的例子多几倍，允许在平衡和不平衡的标签系统中学习。每个语句都是自我注释的 - 具有讽刺意味的是作者，而不是独立的注释者 - 并提供用户，主题和对话上下文。
+介绍 讽刺检测在数据集中的例子很少、人类难以辨别和现有的数据集平衡的数据标签（数据标签大致相同）这些原因，所以检测讽刺很难。
+我们提供了一个用于具有不平衡和自注释标签的讽刺检测的语料库。因为Reddit的评论结构以及经常使用和标准化的讽刺注释。有超过100万个讽刺的例子，每个例子都提供了作者，主题和上下文信息。
+我们在第3节讨论了语料库结构和相关统计数据，在第4节手动评估我们语料库的噪声，第5节，我们为讽刺检测系统构建合适的基准，并检查这些子集上的简单基线方法和人类评估者的表现。
+相关工作 由于我们的主要贡献是语料库而不是讽刺检测方法。
+反讽数据集会有很大的区别，由于获取讽刺或非讽刺陈述的来源，手工标注的数量，和数据集平衡与否。Wallace et al.(2015) 等人使用不平衡的标签，它们不利用自我注释的标签并生成了大约10000各个手工标注的句子。推特的数据集也被用的很多，由于#sarcasm, #notsarcasm和#irony等主题提供了自注释。4.2节提到的，Twitter的缩写语言和其他属性使其变得不那么吸引人。虽然，Twitter是目前最大的原始数据来源并且之前都致力于不平衡的语料库。另外一个评论来源是IAC,这个语料库可以进一步通过人类或机器学习注释为讽刺，大概有产生了10000个带标签的陈述。
+语料库细节 Reddit数据集的结构和注释 reddit是一个社交媒体网站，用户通过帖子中的评论进行交流，每一个评论包含了嵌入式媒体，外部链接，和文字，这些发布在指定主题模块的帖子被称为subredddits;这些subreddits包含了搞笑，图片，科学。用户对提交和其他评论进行评论，从而产生了类似树的会话结构。我们把reddit树中的任何节点称为元素（即提交或评论）
+reddit用户采用了常用的讽刺注释方法，在讽刺语句的末尾标记&rsquo;/s&rsquo;;这个标记来源于&lt;sarcasm&gt;&lt;/sarcasm&gt;。和Twitter主题标签一样，使用这些标记作为讽刺的指标是嘈杂的，特别是很多用户不使用标记，不知道是不是讽刺，仅仅在讽刺意图不明显的地方使用它，我们在4.1节讨论这种噪音的程度。
+构造SARC 我们使用网络爬虫抓取数据，去除了噪音数据。对于每个评论，我们提供一个讽刺标签，作者，subreddit, 用户投票的评论分数，评论的日期，以及回到原始数据集所有评论的标识符。
+为了减少噪音，我们使用多个滤镜来消除噪音和无信息的评论。其中许多是标准的预处理步骤，例如排除URL和字符限制在ASCII中。为了处理Reddit数据，我们还排除了作为对话树中的讽刺评论后代的评论，因为在这种表达下，注释非常嘈杂，没有标记作者是否同意先前自己的讽刺表达的讽刺与否。
+我们的原始语料库包含了三个文件： 1. 一种CSV格式的数组，包含5.33亿条评论，其中约130万条是讽刺性的。此文件仅包含作者了解标准讽刺注释的注释；这取决于他们是否在评论发布的同一个月或之前使用过注释。添加此限制是为了减少由于作者为注释其讽刺而导致的漏报。每行还包含父注释。 2. 第二个是json格式的哈希表，包含讽刺评论的对话线程中的所有评论和帖子以及所有讽刺评论的兄弟姐妹。 3. csv格式的数组，每行包含一系列导致讽刺的评论，对该序列中的最后一个元素进行(讽刺和非讽刺)的响应。每个元素都作为前一个文件的键。
+这种原始语料库非常大，适用于大规模机器学习和统计分析，以及用于评估讽刺检测系统的较小基准任务。这些基准，无论是在平衡还是不平衡的情况下，都需要对语料库进行进一步的子采样，以及在稀疏信号面前处理噪声数据的方法。我们在5.1节评估了这样的方法，然后在输出上评估学习算法。
+语料库评估 评估我们的语料库有三个主要的衡量指标：（1）规模，（2）讽刺与非讽刺评论的比例，以及（3）误报率和漏报率。令人感兴趣的还有语料库中的文本质量以及其对其他NLP任务的适用性。因此，在本节中，我们评估原始语料库中的错误，并提供与用于构建讽刺数据集的其他语料库的比较。我们还讨论了我们方法的潜在局限性。
+手动评估 为了研究使用Reddit作为自我注释讽刺来源的嘈杂，我们估计了由我们的过滤引起的假阳性和假阴性的比例。 这是通过手动检查来自SARC标记为讽刺和500标记为非讽刺的500条评论的随机子集来完成的，并且可以完全访问评论的上下文。 如果“/ s”标签不是注释而是句子的一部分，并且如果评论作者明显对人类评估者讽刺，则评论被确定为误报。 该程序产生1.0％的假阳性率和2.0％的假阴性率。 虽然假阳性率是合理的，但假讽率与讽刺比例（0.25％）相比是显着的，表明讽刺的工作定义存在很大差异，并且需要能够处理不平衡设置中的噪声数据的方法。 在平衡设置中，这仍然是相当少量的噪音。
+与其他数据源进行比较 如前所述，Twitter在以前的语料库中是最常见的讽刺来源; 这可能是由于其主题标签提供的显式注释。 然而，使用Reddit作为讽刺评论的来源具有许多研究优势。 与不受长度约束且包含较少主题标签的Reddit注释不同，推文是用缩写英语编写的。 Hashtagged标记也经常被用作语句本身的一部分（例如“那是#sarcasm”），模糊了文本和注释之间的界限; 在Reddit上，“/ s”通常仅在用作注释时用作注释以外的其他东西（例如“你忘了/ s”）。 由于单个帖子的浅树结构及其注释，Reddit上的完整对话上下文也更容易提供。
+此外，从2014年7月的Twitter和Reddit数据的子样本中，我们确定Twitter作者中使用讽刺注释（＃sarcasm，＃sarcastic或#sarcastictweet）的百分比（.002％对.927％）要小得多。 我们假设Reddit用户需要更频繁地以更标准化的形式进行讽刺注释，因为它们主要是匿名的，因此不能依赖共享的上下文来传达讽刺。 最后，Reddit还受益于subreddits，它可以基于明确的主题分配实现特征化和数据探索。
+Internet Argument Corpus（IAC）也被用作讽刺评论的来源（Walker等，2012）。 语料库开发人员发现IAC中有12％的例子是讽刺性的，这对于讽刺检测来说比我们的更好。 由于Reddit数据由任意对话组成，而不仅仅是参数，因此即使考虑到假阴性，我们的讽刺百分比也要小得多也就不足为奇了; 此属性还使我们的数据集更加真实。 与Reddit和Twitter不同，IAC还需要手动注释讽刺。
+我们方法的局限性 我们收集自注释讽刺数据集的方法有一些值得注意的局限性。 尽管我们努力过滤嘈杂的“/s”标签，但仍存在没有简单规则可靠地消除不正确标签的情况。 我们描述了误报和漏报的困难： * 误报是由于存在“/ s”标记而将评论错误地标记为讽刺的情况。 这种情况仅在评论中出现“/ s”标签时出现，其含义与指示讽刺有所不同。 如前所述，如果用户不知道“/ s”符号，则更有可能发生这种可能性。 类似地，如果“/ s”用于指代其用作注释的约定，那么仅仅检测“/ s”字符串的简单方法也会失败。 最后，“/ s”可能还有其他含义：例如，在HTML中，&lt;s&gt; .'>
+<meta property='og:url' content='https://mannuan.github.io/post/20190722090749/'>
+<meta property='og:site_name' content='mannuan'>
+<meta property='og:type' content='article'><meta property='og:image' content='https://www.gravatar.com/avatar/8bacfd69855171c6f53247456732f68a?s=256'><meta property='article:section' content='post'><meta property='article:tag' content='反讽'><meta property='article:tag' content='数据集'><meta property='article:tag' content='翻译'><meta property='article:published_time' content='2019-07-22T09:07:49&#43;08:00'/><meta property='article:modified_time' content='2019-07-22T09:07:49&#43;08:00'/><meta name='twitter:card' content='summary'>
+
+<meta name="generator" content="Hugo 0.55.6" />
+
+  <title>A Large Self-Annotated Corpus for Sarcasm • mannuan</title>
+  <link rel='canonical' href='https://mannuan.github.io/post/20190722090749/'>
+  
+  
+  <link rel='icon' href='/favicon.ico'>
+<link rel='stylesheet' href='/assets/css/main.6a060eb7.css'><link rel='stylesheet' href='/css/custom.css'><style>
+:root{--color-accent:#FFFFFF;}
+</style>
+
+  
+
+</head>
+<body class='page type-post has-sidebar'>
+
+  <div class='site'><div id='sidebar' class='sidebar'>
+  <a class='screen-reader-text' href='#main-menu'>Skip to Main Menu</a>
+
+  <div class='container'><section class='widget widget-about sep-after'>
+  <header>
+    
+    <div class='logo'>
+      <a href='/'>
+        <img src='/images/%e6%88%91%e7%9a%84%e5%a4%b4%e5%83%8f.jpeg'>
+      </a>
+    </div>
+    
+    <h2 class='title site-title '>
+      <a href='/'>
+      mannuan
+      </a>
+    </h2>
+    <div class='desc'>
+    Rome was not built in a day.
+    </div>
+  </header>
+
+</section>
+<section class='widget widget-search sep-after'>
+  <header>
+    <h4 class='title widget-title'>Search</h4>
+  </header>
+
+  <form action='/search' id='search-form' class='search-form'>
+    <label>
+      <span class='screen-reader-text'>Search</span>
+      <input id='search-term' class='search-term' type='search' name='q' placeholder='Search&hellip;'>
+    </label></form>
+
+</section>
+<section class='widget widget-sidebar_menu sep-after'><nav id='sidebar-menu' class='menu sidebar-menu' aria-label='Sidebar Menu'>
+    <div class='container'>
+      <ul><li class='item'>
+  <a href='/'>Home</a></li><li class='item'>
+  <a href='/post/'>blogs</a></li><li class='item has-children'>
+  <a href=''>网络实验</a><button class='sub-menu-toggler'>
+    <span class='screen-reader-text'>expand sub menu</span>
+    <span class='sign'></span>
+  </button>
+
+  <ul class='sub-menu'><li class='item'>
+  <a href='/post/20190701101121/'>实验九</a></li><li class='item'>
+  <a href='/post/20190701090625/'>实验八</a></li><li class='item'>
+  <a href='/post/20190701105039/'>实验六</a></li><li class='item'>
+  <a href='/post/20190701172233/'>实验十</a></li><li class='item'>
+  <a href='/post/20190701182805/'>实验十一</a></li><li class='item'>
+  <a href='/post/20190701194642/'>实验十三</a></li><li class='item'>
+  <a href='/post/20190701192111/'>实验十二</a></li></ul></li></ul>
+    </div>
+  </nav>
+
+</section><section class='widget widget-taxonomy_cloud sep-after'>
+  <header>
+    <h4 class='title widget-title'>Tags</h4>
+  </header>
+
+  <div class='container list-container'>
+  <ul class='list taxonomy-cloud'><li>
+        <a href='/tags/acl/' style='font-size:1em'>ACL</a>
+      </li><li>
+        <a href='/tags/aggregate/' style='font-size:1em'>aggregate</a>
+      </li><li>
+        <a href='/tags/ajax/' style='font-size:1.06em'>ajax</a>
+      </li><li>
+        <a href='/tags/algolia/' style='font-size:1em'>algolia</a>
+      </li><li>
+        <a href='/tags/anki/' style='font-size:1.02em'>anki</a>
+      </li><li>
+        <a href='/tags/arguments%E8%BD%AC%E6%95%B0%E7%BB%84/' style='font-size:1em'>arguments转数组</a>
+      </li><li>
+        <a href='/tags/array.prototype.push/' style='font-size:1em'>Array.prototype.push</a>
+      </li><li>
+        <a href='/tags/async/' style='font-size:1em'>async</a>
+      </li><li>
+        <a href='/tags/authors/' style='font-size:1em'>authors</a>
+      </li><li>
+        <a href='/tags/beryllium/' style='font-size:1em'>beryllium</a>
+      </li><li>
+        <a href='/tags/brew/' style='font-size:1.02em'>brew</a>
+      </li><li>
+        <a href='/tags/cache-control/' style='font-size:1em'>cache-control</a>
+      </li><li>
+        <a href='/tags/checkpermissions/' style='font-size:1em'>checkPermissions</a>
+      </li><li>
+        <a href='/tags/chroma/' style='font-size:1em'>chroma</a>
+      </li><li>
+        <a href='/tags/chrome/' style='font-size:1.02em'>Chrome</a>
+      </li><li>
+        <a href='/tags/cisco/' style='font-size:1.12em'>Cisco</a>
+      </li><li>
+        <a href='/tags/cnpm/' style='font-size:1em'>cnpm</a>
+      </li><li>
+        <a href='/tags/command-line-tools/' style='font-size:1em'>command-line-tools</a>
+      </li><li>
+        <a href='/tags/concat/' style='font-size:1em'>concat</a>
+      </li><li>
+        <a href='/tags/config/' style='font-size:1.12em'>Configuration</a>
+      </li><li>
+        <a href='/tags/contains-empty-filename/' style='font-size:1em'>contains empty filename</a>
+      </li><li>
+        <a href='/tags/content-type/' style='font-size:1em'>content-type</a>
+      </li><li>
+        <a href='/tags/cors/' style='font-size:1em'>cors</a>
+      </li><li>
+        <a href='/tags/css/' style='font-size:1em'>css</a>
+      </li><li>
+        <a href='/tags/css%E5%8F%8D%E7%88%AC/' style='font-size:1em'>css反爬</a>
+      </li><li>
+        <a href='/tags/datetime/' style='font-size:1em'>datetime</a>
+      </li><li>
+        <a href='/tags/debug/' style='font-size:1em'>debug</a>
+      </li><li>
+        <a href='/tags/defer/' style='font-size:1em'>defer</a>
+      </li><li>
+        <a href='/tags/document/' style='font-size:1em'>document</a>
+      </li><li>
+        <a href='/tags/document%E7%B1%BB%E5%9E%8B/' style='font-size:1em'>document类型</a>
+      </li><li>
+        <a href='/tags/dom/' style='font-size:1em'>dom</a>
+      </li><li>
+        <a href='/tags/domcontent/' style='font-size:1em'>domContent</a>
+      </li><li>
+        <a href='/tags/domcontentloaded/' style='font-size:1.02em'>domContentLoaded</a>
+      </li><li>
+        <a href='/tags/dom%E6%89%A9%E5%B1%95/' style='font-size:1.02em'>DOM扩展</a>
+      </li><li>
+        <a href='/tags/dpkg-error/' style='font-size:1em'>dpkg error</a>
+      </li><li>
+        <a href='/tags/etag/' style='font-size:1em'>etag</a>
+      </li><li>
+        <a href='/tags/expires/' style='font-size:1em'>expires</a>
+      </li><li>
+        <a href='/tags/f1/' style='font-size:1em'>F1</a>
+      </li><li>
+        <a href='/tags/find/' style='font-size:1em'>find</a>
+      </li><li>
+        <a href='/tags/frps/' style='font-size:1em'>frps</a>
+      </li><li>
+        <a href='/tags/function/' style='font-size:1.04em'>function</a>
+      </li><li>
+        <a href='/tags/fuse.js/' style='font-size:1em'>fuse.js</a>
+      </li><li>
+        <a href='/tags/genpac/' style='font-size:1em'>genpac</a>
+      </li><li>
+        <a href='/tags/html/' style='font-size:1.1em'>html</a>
+      </li><li>
+        <a href='/tags/html5/' style='font-size:1em'>html5</a>
+      </li><li>
+        <a href='/tags/html%E5%B8%B8%E7%94%A8/' style='font-size:1em'>html常用</a>
+      </li><li>
+        <a href='/tags/html%E6%A0%87%E7%AD%BE/' style='font-size:1.02em'>html标签</a>
+      </li><li>
+        <a href='/tags/https/' style='font-size:1.02em'>https</a>
+      </li><li>
+        <a href='/tags/http%E5%8D%8F%E8%AE%AE/' style='font-size:1.02em'>http协议</a>
+      </li><li>
+        <a href='/tags/http%E7%BC%93%E5%AD%98/' style='font-size:1em'>http缓存</a>
+      </li><li>
+        <a href='/tags/hugo/' style='font-size:1em'>Hugo</a>
+      </li><li>
+        <a href='/tags/i18n/' style='font-size:1em'>i18n</a>
+      </li><li>
+        <a href='/tags/icmp/' style='font-size:1em'>ICMP</a>
+      </li><li>
+        <a href='/tags/if-modified-since/' style='font-size:1em'>if-modified-since</a>
+      </li><li>
+        <a href='/tags/if-none-match/' style='font-size:1em'>if-none-match</a>
+      </li><li>
+        <a href='/tags/import-error/' style='font-size:1em'>import error</a>
+      </li><li>
+        <a href='/tags/indexof/' style='font-size:1em'>indexOf</a>
+      </li><li>
+        <a href='/tags/ip/' style='font-size:1em'>ip</a>
+      </li><li>
+        <a href='/tags/iterm2/' style='font-size:1.04em'>iterm2</a>
+      </li><li>
+        <a href='/tags/java/' style='font-size:1em'>java</a>
+      </li><li>
+        <a href='/tags/javascript/' style='font-size:2em'>javascript</a>
+      </li><li>
+        <a href='/tags/join/' style='font-size:1em'>join</a>
+      </li><li>
+        <a href='/tags/jquery/' style='font-size:1.3em'>jquery</a>
+      </li><li>
+        <a href='/tags/jsonp/' style='font-size:1em'>jsonp</a>
+      </li><li>
+        <a href='/tags/jupyter/' style='font-size:1.06em'>jupyter</a>
+      </li><li>
+        <a href='/tags/katex/' style='font-size:1em'>katex</a>
+      </li><li>
+        <a href='/tags/koa/' style='font-size:1em'>koa</a>
+      </li><li>
+        <a href='/tags/last-modified/' style='font-size:1em'>last-modified</a>
+      </li><li>
+        <a href='/tags/latex/' style='font-size:1em'>latex</a>
+      </li><li>
+        <a href='/tags/linux/' style='font-size:1.12em'>linux</a>
+      </li><li>
+        <a href='/tags/lsof/' style='font-size:1em'>lsof</a>
+      </li><li>
+        <a href='/tags/lunr.js/' style='font-size:1em'>lunr.js</a>
+      </li><li>
+        <a href='/tags/mac/' style='font-size:1.04em'>MAC</a>
+      </li><li>
+        <a href='/tags/markdown/' style='font-size:1.02em'>markdown</a>
+      </li><li>
+        <a href='/tags/menus/' style='font-size:1em'>menus</a>
+      </li><li>
+        <a href='/tags/mongodb/' style='font-size:1.04em'>mongodb</a>
+      </li><li>
+        <a href='/tags/nat/' style='font-size:1.02em'>NAT</a>
+      </li><li>
+        <a href='/tags/nginx/' style='font-size:1.06em'>nginx</a>
+      </li><li>
+        <a href='/tags/nginx%E5%AE%89%E8%A3%85/' style='font-size:1em'>nginx安装</a>
+      </li><li>
+        <a href='/tags/nginx%E9%85%8D%E7%BD%AE/' style='font-size:1em'>nginx配置</a>
+      </li><li>
+        <a href='/tags/node/' style='font-size:1em'>node</a>
+      </li><li>
+        <a href='/tags/nodejs/' style='font-size:1.06em'>nodejs</a>
+      </li><li>
+        <a href='/tags/nohup/' style='font-size:1em'>nohup</a>
+      </li><li>
+        <a href='/tags/npm/' style='font-size:1.08em'>npm</a>
+      </li><li>
+        <a href='/tags/npm%E5%87%BA%E9%94%99/' style='font-size:1em'>npm出错</a>
+      </li><li>
+        <a href='/tags/npm%E5%9B%BD%E5%86%85%E6%BA%90/' style='font-size:1em'>npm国内源</a>
+      </li><li>
+        <a href='/tags/numpy/' style='font-size:1em'>numpy</a>
+      </li><li>
+        <a href='/tags/ocr/' style='font-size:1em'>ocr</a>
+      </li><li>
+        <a href='/tags/og/' style='font-size:1em'>Opengraph</a>
+      </li><li>
+        <a href='/tags/onload/' style='font-size:1em'>onload</a>
+      </li><li>
+        <a href='/tags/ospf/' style='font-size:1em'>OSPF</a>
+      </li><li>
+        <a href='/tags/pac%E6%A8%A1%E5%BC%8F/' style='font-size:1em'>pac模式</a>
+      </li><li>
+        <a href='/tags/pdf/' style='font-size:1em'>pdf</a>
+      </li><li>
+        <a href='/tags/pdf%E5%8E%8B%E7%BC%A9/' style='font-size:1em'>pdf压缩</a>
+      </li><li>
+        <a href='/tags/ping/' style='font-size:1em'>ping</a>
+      </li><li>
+        <a href='/tags/pip/' style='font-size:1.02em'>pip</a>
+      </li><li>
+        <a href='/tags/pkg/' style='font-size:1em'>pkg</a>
+      </li><li>
+        <a href='/tags/pop/' style='font-size:1em'>pop</a>
+      </li><li>
+        <a href='/tags/promise/' style='font-size:1em'>promise</a>
+      </li><li>
+        <a href='/tags/push/' style='font-size:1em'>push</a>
+      </li><li>
+        <a href='/tags/pygments/' style='font-size:1em'>pygments</a>
+      </li><li>
+        <a href='/tags/pyquery/' style='font-size:1.04em'>pyquery</a>
+      </li><li>
+        <a href='/tags/pyspider/' style='font-size:1em'>pyspider</a>
+      </li><li>
+        <a href='/tags/python/' style='font-size:1.06em'>python</a>
+      </li><li>
+        <a href='/tags/python3/' style='font-size:1em'>python3</a>
+      </li><li>
+        <a href='/tags/regex/' style='font-size:1em'>regex</a>
+      </li><li>
+        <a href='/tags/reverse/' style='font-size:1em'>reverse</a>
+      </li><li>
+        <a href='/tags/rip/' style='font-size:1em'>RIP</a>
+      </li><li>
+        <a href='/tags/root/' style='font-size:1em'>root</a>
+      </li><li>
+        <a href='/tags/search/' style='font-size:1.06em'>search</a>
+      </li><li>
+        <a href='/tags/selenium/' style='font-size:1em'>selenium</a>
+      </li><li>
+        <a href='/tags/setuptools/' style='font-size:1.02em'>setuptools</a>
+      </li><li>
+        <a href='/tags/shadowsocks/' style='font-size:1.02em'>Shadowsocks</a>
+      </li><li>
+        <a href='/tags/shadowsocks-qt5/' style='font-size:1em'>shadowsocks-qt5</a>
+      </li><li>
+        <a href='/tags/shift/' style='font-size:1em'>shift</a>
+      </li><li>
+        <a href='/tags/shortcode/' style='font-size:1em'>shortcode</a>
+      </li><li>
+        <a href='/tags/slice/' style='font-size:1em'>slice</a>
+      </li><li>
+        <a href='/tags/smallpdf/' style='font-size:1em'>smallpdf</a>
+      </li><li>
+        <a href='/tags/snippet/' style='font-size:1.04em'>snippet</a>
+      </li><li>
+        <a href='/tags/softmax/' style='font-size:1em'>softmax</a>
+      </li><li>
+        <a href='/tags/sort/' style='font-size:1em'>sort</a>
+      </li><li>
+        <a href='/tags/splice/' style='font-size:1em'>splice</a>
+      </li><li>
+        <a href='/tags/ssl/' style='font-size:1em'>ssl</a>
+      </li><li>
+        <a href='/tags/sudo/' style='font-size:1em'>sudo</a>
+      </li><li>
+        <a href='/tags/supervisor/' style='font-size:1em'>supervisor</a>
+      </li><li>
+        <a href='/tags/svd/' style='font-size:1em'>SVD</a>
+      </li><li>
+        <a href='/tags/sync/' style='font-size:1em'>sync</a>
+      </li><li>
+        <a href='/tags/table%E6%A0%87%E7%AD%BE/' style='font-size:1em'>table标签</a>
+      </li><li>
+        <a href='/tags/tar/' style='font-size:1em'>tar</a>
+      </li><li>
+        <a href='/tags/tcp/' style='font-size:1em'>TCP</a>
+      </li><li>
+        <a href='/tags/template/' style='font-size:1.02em'>template</a>
+      </li><li>
+        <a href='/tags/text%E7%B1%BB%E5%9E%8B/' style='font-size:1em'>text类型</a>
+      </li><li>
+        <a href='/tags/this/' style='font-size:1em'>this</a>
+      </li><li>
+        <a href='/tags/time-machine/' style='font-size:1em'>time machine</a>
+      </li><li>
+        <a href='/tags/tolocalestring/' style='font-size:1.02em'>toLocaleString</a>
+      </li><li>
+        <a href='/tags/tostring/' style='font-size:1.02em'>toString</a>
+      </li><li>
+        <a href='/tags/traceroute/' style='font-size:1em'>traceroute</a>
+      </li><li>
+        <a href='/tags/trackpad/' style='font-size:1em'>Trackpad</a>
+      </li><li>
+        <a href='/tags/translation/' style='font-size:1em'>translation</a>
+      </li><li>
+        <a href='/tags/twine/' style='font-size:1em'>twine</a>
+      </li><li>
+        <a href='/tags/ubuntu/' style='font-size:1.02em'>ubuntu</a>
+      </li><li>
+        <a href='/tags/udp/' style='font-size:1em'>UDP</a>
+      </li><li>
+        <a href='/tags/uefi/' style='font-size:1em'>uefi</a>
+      </li><li>
+        <a href='/tags/unidentified-developer/' style='font-size:1em'>unidentified developer</a>
+      </li><li>
+        <a href='/tags/unshift/' style='font-size:1em'>unshift</a>
+      </li><li>
+        <a href='/tags/url%E7%BC%96%E7%A0%81%E5%92%8C%E8%A7%A3%E7%A0%81/' style='font-size:1em'>url编码和解码</a>
+      </li><li>
+        <a href='/tags/v8%E5%BC%95%E6%93%8E/' style='font-size:1em'>v8引擎</a>
+      </li><li>
+        <a href='/tags/val/' style='font-size:1em'>val</a>
+      </li><li>
+        <a href='/tags/valueof/' style='font-size:1.02em'>valueOf</a>
+      </li><li>
+        <a href='/tags/vim/' style='font-size:1em'>vim</a>
+      </li><li>
+        <a href='/tags/vim%E5%91%BD%E4%BB%A4/' style='font-size:1em'>vim命令</a>
+      </li><li>
+        <a href='/tags/vlan/' style='font-size:1.02em'>VLAN</a>
+      </li><li>
+        <a href='/tags/vscode/' style='font-size:1.04em'>vscode</a>
+      </li><li>
+        <a href='/tags/vue/' style='font-size:1.04em'>vue</a>
+      </li><li>
+        <a href='/tags/web-service%E8%A7%84%E8%8C%83/' style='font-size:1em'>web service规范</a>
+      </li><li>
+        <a href='/tags/webpack/' style='font-size:1em'>webpack</a>
+      </li><li>
+        <a href='/tags/webpack%E5%AE%89%E8%A3%85/' style='font-size:1em'>webpack安装</a>
+      </li><li>
+        <a href='/tags/web%E5%89%8D%E7%AB%AF%E6%80%A7%E8%83%BD/' style='font-size:1em'>web前端性能</a>
+      </li><li>
+        <a href='/tags/widgets/' style='font-size:1em'>widgets</a>
+      </li><li>
+        <a href='/tags/write-access/' style='font-size:1em'>write access</a>
+      </li><li>
+        <a href='/tags/xml/' style='font-size:1.02em'>xml</a>
+      </li><li>
+        <a href='/tags/%E4%BA%A4%E6%8D%A2%E6%9C%BA/' style='font-size:1em'>交换机</a>
+      </li><li>
+        <a href='/tags/%E4%BF%A1%E6%81%AF%E5%8C%B9%E9%85%8D/' style='font-size:1em'>信息匹配</a>
+      </li><li>
+        <a href='/tags/%E5%83%BB%E4%B9%89/' style='font-size:1em'>僻义</a>
+      </li><li>
+        <a href='/tags/%E5%85%83%E7%B4%A0%E9%81%8D%E5%8E%86/' style='font-size:1em'>元素遍历</a>
+      </li><li>
+        <a href='/tags/%E5%85%AD%E7%BA%A7/' style='font-size:1.24em'>六级</a>
+      </li><li>
+        <a href='/tags/%E5%86%92%E6%B3%A1/' style='font-size:1em'>冒泡</a>
+      </li><li>
+        <a href='/tags/%E5%87%86%E7%A1%AE%E7%8E%87/' style='font-size:1em'>准确率</a>
+      </li><li>
+        <a href='/tags/%E5%88%86%E5%8C%BA/' style='font-size:1.02em'>分区</a>
+      </li><li>
+        <a href='/tags/%E5%88%9B%E5%BB%BA%E7%94%A8%E6%88%B7/' style='font-size:1.02em'>创建用户</a>
+      </li><li>
+        <a href='/tags/%E5%89%8D%E7%AB%AF/' style='font-size:1em'>前端</a>
+      </li><li>
+        <a href='/tags/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E6%A1%86%E6%9E%B6/' style='font-size:1em'>前端开发框架</a>
+      </li><li>
+        <a href='/tags/%E5%89%91%E6%8C%87offer/' style='font-size:1em'>剑指offer</a>
+      </li><li>
+        <a href='/tags/%E5%8D%95%E5%A4%8D%E6%95%B0/' style='font-size:1em'>单复数</a>
+      </li><li>
+        <a href='/tags/%E5%8D%95%E8%87%82%E8%B7%AF%E7%94%B1/' style='font-size:1em'>单臂路由</a>
+      </li><li>
+        <a href='/tags/%E5%8E%9F%E7%94%9Fjs/' style='font-size:1em'>原生js</a>
+      </li><li>
+        <a href='/tags/%E5%8E%9F%E7%A0%81/' style='font-size:1em'>原码</a>
+      </li><li>
+        <a href='/tags/%E5%8F%8D%E7%88%AC/' style='font-size:1.02em'>反爬</a>
+      </li><li>
+        <a href='/tags/%E5%8F%8D%E7%A0%81/' style='font-size:1em'>反码</a>
+      </li><li>
+        <a href='/tags/%E5%8F%8D%E8%AE%BD/' style='font-size:1.04em'>反讽</a>
+      </li><li>
+        <a href='/tags/%E5%8F%AC%E5%9B%9E%E7%8E%87/' style='font-size:1em'>召回率</a>
+      </li><li>
+        <a href='/tags/%E5%90%8C%E6%AD%A5/' style='font-size:1em'>同步</a>
+      </li><li>
+        <a href='/tags/%E5%90%8E%E5%BA%8F%E9%81%8D%E5%8E%86/' style='font-size:1em'>后序遍历</a>
+      </li><li>
+        <a href='/tags/%E5%90%AC%E5%8A%9B/' style='font-size:1em'>听力</a>
+      </li><li>
+        <a href='/tags/%E5%9B%9B%E5%85%AD%E7%BA%A7/' style='font-size:1.02em'>四六级</a>
+      </li><li>
+        <a href='/tags/%E5%9B%BD%E5%86%85%E6%BA%90/' style='font-size:1em'>国内源</a>
+      </li><li>
+        <a href='/tags/%E5%9B%BD%E5%86%85%E9%95%9C%E5%83%8F/' style='font-size:1.02em'>国内镜像</a>
+      </li><li>
+        <a href='/tags/%E5%9F%9F%E5%90%8D/' style='font-size:1em'>域名</a>
+      </li><li>
+        <a href='/tags/%E5%A4%9A%E5%AE%9E%E4%BE%8B/' style='font-size:1em'>多实例</a>
+      </li><li>
+        <a href='/tags/%E5%A4%A7%E4%BC%97%E7%82%B9%E8%AF%84/' style='font-size:1em'>大众点评</a>
+      </li><li>
+        <a href='/tags/%E5%AD%90%E5%85%83%E7%B4%A0/' style='font-size:1em'>子元素</a>
+      </li><li>
+        <a href='/tags/%E5%AD%97%E4%BD%93%E5%8F%8D%E7%88%AC/' style='font-size:1em'>字体反爬</a>
+      </li><li>
+        <a href='/tags/%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81/' style='font-size:1.02em'>字符编码</a>
+      </li><li>
+        <a href='/tags/%E5%AE%A2%E6%88%B7%E7%AB%AF%E6%A3%80%E6%B5%8B/' style='font-size:1em'>客户端检测</a>
+      </li><li>
+        <a href='/tags/%E5%B1%9E%E6%80%A7/' style='font-size:1em'>属性</a>
+      </li><li>
+        <a href='/tags/%E5%B7%A5%E5%85%B7/' style='font-size:1em'>工具</a>
+      </li><li>
+        <a href='/tags/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/' style='font-size:1em'>常用命令</a>
+      </li><li>
+        <a href='/tags/%E5%BC%82%E6%AD%A5/' style='font-size:1em'>异步</a>
+      </li><li>
+        <a href='/tags/%E5%BC%95%E5%AF%BC/' style='font-size:1em'>引导</a>
+      </li><li>
+        <a href='/tags/%E5%BD%A2%E8%BF%91/' style='font-size:1em'>形近</a>
+      </li><li>
+        <a href='/tags/%E5%BF%AB%E6%8D%B7%E9%94%AE/' style='font-size:1.04em'>快捷键</a>
+      </li><li>
+        <a href='/tags/%E6%88%AA%E5%9B%BE/' style='font-size:1em'>截图</a>
+      </li><li>
+        <a href='/tags/%E6%89%93%E5%BC%80%E6%96%87%E4%BB%B6/' style='font-size:1em'>打开文件</a>
+      </li><li>
+        <a href='/tags/%E6%8E%92%E5%BA%8F/' style='font-size:1em'>排序</a>
+      </li><li>
+        <a href='/tags/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95/' style='font-size:1em'>排序算法</a>
+      </li><li>
+        <a href='/tags/%E6%8F%92%E4%BB%B6/' style='font-size:1em'>插件</a>
+      </li><li>
+        <a href='/tags/%E6%8F%92%E5%85%A5/' style='font-size:1em'>插入</a>
+      </li><li>
+        <a href='/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/' style='font-size:1.02em'>数据结构</a>
+      </li><li>
+        <a href='/tags/%E6%95%B0%E6%8D%AE%E9%9B%86/' style='font-size:1em'>数据集</a>
+      </li><li>
+        <a href='/tags/%E6%95%B0%E7%BB%84/' style='font-size:1.02em'>数组</a>
+      </li><li>
+        <a href='/tags/%E6%96%AD%E7%BD%91/' style='font-size:1em'>断网</a>
+      </li><li>
+        <a href='/tags/%E6%96%B9%E6%B3%95/' style='font-size:1em'>方法</a>
+      </li><li>
+        <a href='/tags/%E6%97%A0%E7%9B%91%E7%9D%A3/' style='font-size:1em'>无监督</a>
+      </li><li>
+        <a href='/tags/%E6%97%B6%E9%97%B4/' style='font-size:1em'>时间</a>
+      </li><li>
+        <a href='/tags/%E6%97%B6%E9%97%B4%E8%BD%AC%E5%AD%97%E7%AC%A6%E4%B8%B2/' style='font-size:1em'>时间转字符串</a>
+      </li><li>
+        <a href='/tags/%E6%99%AE%E9%80%9Auser/' style='font-size:1em'>普通user</a>
+      </li><li>
+        <a href='/tags/%E6%9B%BF%E6%8D%A2%E5%AD%97%E7%AC%A6/' style='font-size:1em'>替换字符</a>
+      </li><li>
+        <a href='/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8/' style='font-size:1em'>服务器</a>
+      </li><li>
+        <a href='/tags/%E6%B5%81%E9%87%8F%E6%8E%A7%E5%88%B6/' style='font-size:1em'>流量控制</a>
+      </li><li>
+        <a href='/tags/%E6%B6%88%E6%9E%81/' style='font-size:1em'>消极</a>
+      </li><li>
+        <a href='/tags/%E7%88%AC%E8%99%AB/' style='font-size:1.02em'>爬虫</a>
+      </li><li>
+        <a href='/tags/%E7%89%9B%E5%AE%A2/' style='font-size:1em'>牛客</a>
+      </li><li>
+        <a href='/tags/%E7%94%A8%E6%88%B7%E9%AA%8C%E8%AF%81/' style='font-size:1em'>用户验证</a>
+      </li><li>
+        <a href='/tags/%E7%9B%91%E7%9D%A3/' style='font-size:1em'>监督</a>
+      </li><li>
+        <a href='/tags/%E7%A0%94%E7%A9%B6%E6%96%B9%E5%90%91/' style='font-size:1em'>研究方向</a>
+      </li><li>
+        <a href='/tags/%E7%A7%91%E5%AD%A6%E4%B8%8A%E7%BD%91/' style='font-size:1em'>科学上网</a>
+      </li><li>
+        <a href='/tags/%E7%AC%A6%E5%8F%B7/' style='font-size:1em'>符号</a>
+      </li><li>
+        <a href='/tags/%E7%AE%80%E5%8E%86/' style='font-size:1em'>简历</a>
+      </li><li>
+        <a href='/tags/%E7%AE%97%E6%B3%95%E9%A2%98/' style='font-size:1em'>算法题</a>
+      </li><li>
+        <a href='/tags/%E7%B2%BE%E5%87%86%E7%8E%87/' style='font-size:1em'>精准率</a>
+      </li><li>
+        <a href='/tags/%E7%BB%A7%E6%89%BF/' style='font-size:1em'>继承</a>
+      </li><li>
+        <a href='/tags/%E7%BC%96%E7%A8%8B%E6%95%88%E7%8E%87/' style='font-size:1em'>编程效率</a>
+      </li><li>
+        <a href='/tags/%E7%BD%91%E7%BB%9C%E5%9C%B0%E5%9D%80%E6%98%A0%E5%B0%84/' style='font-size:1.02em'>网络地址映射</a>
+      </li><li>
+        <a href='/tags/%E7%BD%91%E7%BB%9C%E5%AE%9E%E9%AA%8C/' style='font-size:1.12em'>网络实验</a>
+      </li><li>
+        <a href='/tags/%E7%BF%BB%E8%AF%91/' style='font-size:1.04em'>翻译</a>
+      </li><li>
+        <a href='/tags/%E8%8B%B1%E8%AF%AD/' style='font-size:1.02em'>英语</a>
+      </li><li>
+        <a href='/tags/%E8%A1%A5%E7%A0%81/' style='font-size:1em'>补码</a>
+      </li><li>
+        <a href='/tags/%E8%A7%86%E9%A2%91%E4%B8%8B%E8%BD%BD/' style='font-size:1em'>视频下载</a>
+      </li><li>
+        <a href='/tags/%E8%A7%A3%E8%AF%BB/' style='font-size:1.02em'>解读</a>
+      </li><li>
+        <a href='/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/' style='font-size:1em'>计算机组成原理</a>
+      </li><li>
+        <a href='/tags/%E8%AE%BD%E5%88%BA/' style='font-size:1em'>讽刺</a>
+      </li><li>
+        <a href='/tags/%E8%AE%BE%E7%BD%AE/' style='font-size:1em'>设置</a>
+      </li><li>
+        <a href='/tags/%E8%AF%81%E4%B9%A6%E7%94%B3%E8%AF%B7/' style='font-size:1em'>证书申请</a>
+      </li><li>
+        <a href='/tags/%E8%AF%84%E8%AE%BA/' style='font-size:1em'>评论</a>
+      </li><li>
+        <a href='/tags/%E8%AF%8D%E6%80%A7/' style='font-size:1em'>词性</a>
+      </li><li>
+        <a href='/tags/%E8%AF%8D%E6%B1%87/' style='font-size:1.12em'>词汇</a>
+      </li><li>
+        <a href='/tags/%E8%AF%AD%E6%B3%95/' style='font-size:1em'>语法</a>
+      </li><li>
+        <a href='/tags/%E8%B7%A8%E5%9F%9F/' style='font-size:1em'>跨域</a>
+      </li><li>
+        <a href='/tags/%E8%B7%AF%E7%94%B1%E5%8D%8F%E8%AE%AE/' style='font-size:1.04em'>路由协议</a>
+      </li><li>
+        <a href='/tags/%E8%BF%90%E7%BB%B4/' style='font-size:1em'>运维</a>
+      </li><li>
+        <a href='/tags/%E8%BF%91%E4%B9%89%E8%AF%8D/' style='font-size:1em'>近义词</a>
+      </li><li>
+        <a href='/tags/%E9%80%89%E6%8B%A9%E5%99%A8/' style='font-size:1.08em'>选择器</a>
+      </li><li>
+        <a href='/tags/%E9%85%8D%E7%BD%AE/' style='font-size:1.02em'>配置</a>
+      </li><li>
+        <a href='/tags/%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6/' style='font-size:1em'>配置文件</a>
+      </li><li>
+        <a href='/tags/%E9%97%AD%E5%8C%85/' style='font-size:1.04em'>闭包</a>
+      </li><li>
+        <a href='/tags/%E9%98%85%E8%AF%BB%E6%8A%80%E5%B7%A7/' style='font-size:1em'>阅读技巧</a>
+      </li><li>
+        <a href='/tags/%E9%98%BF%E9%87%8C%E4%BA%91/' style='font-size:1em'>阿里云</a>
+      </li><li>
+        <a href='/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/' style='font-size:1em'>面向对象</a>
+      </li><li>
+        <a href='/tags/%E9%A6%96%E5%B1%8F%E6%97%B6%E9%97%B4/' style='font-size:1em'>首屏时间</a>
+      </li><li>
+        <a href='/tags/%E9%BB%98%E8%AE%A4%E7%BB%88%E7%AB%AF/' style='font-size:1em'>默认终端</a>
+      </li></ul>
+</div>
+
+
+</section>
+</div>
+
+  <div class='sidebar-overlay'></div>
+</div><div class='main'><nav id='main-menu' class='menu main-menu' aria-label='Main Menu'>
+  <div class='container'>
+    <a class='screen-reader-text' href='#content'>Skip to Content</a>
+
+<button id='sidebar-toggler' class='sidebar-toggler' aria-controls='sidebar'>
+  <span class='screen-reader-text'>Toggle Sidebar</span>
+  <span class='open'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="3" y1="12" x2="21" y2="12" />
+  <line x1="3" y1="6" x2="21" y2="6" />
+  <line x1="3" y1="18" x2="21" y2="18" />
+  
+</svg>
+</span>
+  <span class='close'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="18" y1="6" x2="6" y2="18" />
+  <line x1="6" y1="6" x2="18" y2="18" />
+  
+</svg>
+</span>
+</button>
+    <ul><li class='item'>
+        <a href='/'>Home</a>
+      </li><li class='item'>
+        <a href='/post/'>blogs</a>
+      </li><li class='item'>
+        <a href='https://github.com/mannuan'>Repo</a>
+      </li></ul>
+  </div>
+</nav><div class='header-widgets'>
+        <div class='container'>
+    
+    <style>.widget-breadcrumbs li:after{content:'\2f '}</style>
+  <section class='widget widget-breadcrumbs sep-after'>
+    <nav id='breadcrumbs'>
+      <ol><li><a href='/'>Home</a></li><li><a href='/post/'>blogs</a></li><li><span>A Large Self-Annotated Corpus for Sarcasm</span></li></ol>
+    </nav>
+  </section></div>
+      </div>
+
+      <header id='header' class='header site-header'>
+        <div class='container sep-after'>
+          <div class='header-info'><p class='site-title title'>mannuan</p><p class='desc site-desc'>Rome was not built in a day.</p>
+          </div>
+        </div>
+      </header>
+
+      <main id='content'>
+
+
+<article lang='en' class='entry'>
+  <header class='header entry-header'>
+  <div class='container sep-after'>
+    <div class='header-info'>
+      <h1 class='title'>A Large Self-Annotated Corpus for Sarcasm</h1>
+      
+
+    </div>
+    <div class='entry-meta'>
+  <span class='posted-on'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+  <line x1="16" y1="2" x2="16" y2="6"/>
+  <line x1="8" y1="2" x2="8" y2="6"/>
+  <line x1="3" y1="10" x2="21" y2="10"/>
+  
+</svg>
+<span class='screen-reader-text'>Posted on </span>
+  <time class='entry-date' datetime='2019-07-22T09:07:49&#43;08:00'>2019, Jul 22</time>
+</span>
+
+  <span class='byline'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M21,21V20c0-2.76-4-5-9-5s-9,2.24-9,5v1"/>
+  <path d="M16,6.37A4,4,0,1,1,12.63,3,4,4,0,0,1,16,6.37Z"/>
+  
+</svg>
+<span class='screen-reader-text'> by </span><a href='/authors/mannuan'>mannuan</a></span>
+  
+<span class='reading-time'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <circle cx="12" cy="12" r="10"/>
+  <polyline points="12 6 12 12 15 15"/>
+  
+</svg>
+One min read
+</span>
+
+
+</div>
+
+
+  </div>
+</header>
+
+  
+  
+<details class='container entry-toc'>
+  <summary class='title'>
+    <span>Table of Contents</span>
+  </summary>
+  <nav id="TableOfContents">
+<ul>
+<li><a href="#摘要">摘要</a></li>
+<li><a href="#介绍">介绍</a></li>
+<li><a href="#相关工作">相关工作</a></li>
+<li><a href="#语料库细节">语料库细节</a>
+<ul>
+<li><a href="#reddit数据集的结构和注释">Reddit数据集的结构和注释</a></li>
+<li><a href="#构造sarc">构造SARC</a></li>
+</ul></li>
+<li><a href="#语料库评估">语料库评估</a>
+<ul>
+<li><a href="#手动评估">手动评估</a></li>
+<li><a href="#与其他数据源进行比较">与其他数据源进行比较</a></li>
+<li><a href="#我们方法的局限性">我们方法的局限性</a></li>
+</ul></li>
+<li><a href="#讽刺检测的基准">讽刺检测的基准</a>
+<ul>
+<li><a href="#评估任务">评估任务</a>
+<ul>
+<li><a href="#平衡的标签">平衡的标签</a></li>
+<li><a href="#政治">政治</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#方法">方法</a>
+<ul>
+<li><a href="#bag-of-n-grams">Bag-of-n-Grams</a></li>
+<li><a href="#句子嵌入">句子嵌入</a></li>
+<li><a href="#手工">手工</a></li>
+<li><a href="#随机">随机</a></li>
+</ul></li>
+<li><a href="#结果">结果</a>
+<ul>
+<li><a href="#基准线">基准线</a></li>
+<li><a href="#手工-1">手工</a></li>
+</ul></li>
+<li><a href="#结论">结论</a></li>
+</ul>
+</nav>
+</details>
+
+
+  <div class='container entry-content'>
+  
+
+<h1 id="摘要">摘要</h1>
+
+<p>该语料库有130万条讽刺性陈述 - 比之前的数据集多10倍 - 并且比非讽刺陈述的例子多几倍，允许在平衡和不平衡的标签系统中学习。每个语句都是自我注释的 - 具有讽刺意味的是作者，而不是独立的注释者 - 并提供用户，主题和对话上下文。</p>
+
+<h1 id="介绍">介绍</h1>
+
+<p>讽刺检测在数据集中的例子很少、人类难以辨别和现有的数据集平衡的数据标签（数据标签大致相同）这些原因，所以检测讽刺很难。</p>
+
+<p>我们提供了一个用于具有不平衡和自注释标签的讽刺检测的<a href="http://nlp.cs.princeton.edu/SARC/" target="_blank">语料库</a>。因为Reddit的评论结构以及经常使用和标准化的讽刺注释。有超过100万个讽刺的例子，每个例子都提供了作者，主题和上下文信息。</p>
+
+<p>我们在第3节讨论了语料库结构和相关统计数据，在第4节手动评估我们语料库的噪声，第5节，我们为讽刺检测系统构建合适的基准，并检查这些子集上的简单基线方法和人类评估者的表现。</p>
+
+<h1 id="相关工作">相关工作</h1>
+
+<p>由于我们的主要贡献是语料库而不是讽刺检测方法。</p>
+
+<p>反讽数据集会有很大的区别，由于获取讽刺或非讽刺陈述的来源，手工标注的数量，和数据集平衡与否。Wallace et al.(2015) 等人使用不平衡的标签，它们不利用自我注释的标签并生成了大约10000各个手工标注的句子。推特的数据集也被用的很多，由于#sarcasm, #notsarcasm和#irony等主题提供了自注释。4.2节提到的，Twitter的缩写语言和其他属性使其变得不那么吸引人。虽然，Twitter是目前最大的原始数据来源并且之前都致力于不平衡的语料库。另外一个评论来源是IAC,这个语料库可以进一步通过人类或机器学习注释为讽刺，大概有产生了10000个带标签的陈述。</p>
+
+<h1 id="语料库细节">语料库细节</h1>
+
+<h2 id="reddit数据集的结构和注释">Reddit数据集的结构和注释</h2>
+
+<p>reddit是一个社交媒体网站，用户通过帖子中的评论进行交流，每一个评论包含了嵌入式媒体，外部链接，和文字，这些发布在指定主题模块的帖子被称为subredddits;这些subreddits包含了搞笑，图片，科学。用户对提交和其他评论进行评论，从而产生了类似树的会话结构。我们把reddit树中的任何节点称为元素（即提交或评论）</p>
+
+<p>reddit用户采用了常用的讽刺注释方法，在讽刺语句的末尾标记&rsquo;/s&rsquo;;这个标记来源于<code>&lt;sarcasm&gt;&lt;/sarcasm&gt;</code>。和Twitter主题标签一样，使用这些标记作为讽刺的指标是嘈杂的，特别是很多用户不使用标记，不知道是不是讽刺，仅仅在讽刺意图不明显的地方使用它，我们在4.1节讨论这种噪音的程度。</p>
+
+<h2 id="构造sarc">构造SARC</h2>
+
+<p>我们使用网络爬虫抓取数据，去除了噪音数据。对于每个评论，我们提供一个讽刺标签，作者，subreddit, 用户投票的评论分数，评论的日期，以及回到原始数据集所有评论的标识符。</p>
+
+<p>为了减少噪音，我们使用多个滤镜来消除噪音和无信息的评论。其中许多是标准的预处理步骤，例如排除URL和字符限制在ASCII中。为了处理Reddit数据，我们还排除了作为对话树中的讽刺评论后代的评论，因为在这种表达下，注释非常嘈杂，没有标记作者是否同意先前自己的讽刺表达的讽刺与否。</p>
+
+<p>我们的原始语料库包含了三个文件：
+1. 一种CSV格式的数组，包含5.33亿条评论，其中约130万条是讽刺性的。此文件仅包含作者了解标准讽刺注释的注释；这取决于他们是否在评论发布的同一个月或之前使用过注释。添加此限制是为了减少由于作者为注释其讽刺而导致的漏报。每行还包含父注释。
+2. 第二个是json格式的哈希表，包含讽刺评论的对话线程中的所有评论和帖子以及所有讽刺评论的兄弟姐妹。
+3. csv格式的数组，每行包含一系列导致讽刺的评论，对该序列中的最后一个元素进行(讽刺和非讽刺)的响应。每个元素都作为前一个文件的键。</p>
+
+<p>这种原始语料库非常大，适用于大规模机器学习和统计分析，以及用于评估讽刺检测系统的较小基准任务。这些基准，无论是在平衡还是不平衡的情况下，都需要对语料库进行进一步的子采样，以及在稀疏信号面前处理噪声数据的方法。我们在5.1节评估了这样的方法，然后在输出上评估学习算法。</p>
+
+<h1 id="语料库评估">语料库评估</h1>
+
+<p>评估我们的语料库有三个主要的衡量指标：（1）规模，（2）讽刺与非讽刺评论的比例，以及（3）误报率和漏报率。令人感兴趣的还有语料库中的文本质量以及其对其他NLP任务的适用性。因此，在本节中，我们评估原始语料库中的错误，并提供与用于构建讽刺数据集的其他语料库的比较。我们还讨论了我们方法的潜在局限性。</p>
+
+<h2 id="手动评估">手动评估</h2>
+
+<p>为了研究使用Reddit作为自我注释讽刺来源的嘈杂，我们估计了由我们的过滤引起的假阳性和假阴性的比例。 这是通过手动检查来自SARC标记为讽刺和500标记为非讽刺的500条评论的随机子集来完成的，并且可以完全访问评论的上下文。 如果“/ s”标签不是注释而是句子的一部分，并且如果评论作者明显对人类评估者讽刺，则评论被确定为误报。 该程序产生1.0％的假阳性率和2.0％的假阴性率。 虽然假阳性率是合理的，但假讽率与讽刺比例（0.25％）相比是显着的，表明讽刺的工作定义存在很大差异，并且需要能够处理不平衡设置中的噪声数据的方法。 在平衡设置中，这仍然是相当少量的噪音。</p>
+
+<h2 id="与其他数据源进行比较">与其他数据源进行比较</h2>
+
+<p>如前所述，Twitter在以前的语料库中是最常见的讽刺来源; 这可能是由于其主题标签提供的显式注释。 然而，使用Reddit作为讽刺评论的来源具有许多研究优势。 与不受长度约束且包含较少主题标签的Reddit注释不同，推文是用缩写英语编写的。 Hashtagged标记也经常被用作语句本身的一部分（例如“那是#sarcasm”），模糊了文本和注释之间的界限; 在Reddit上，“/ s”通常仅在用作注释时用作注释以外的其他东西（例如“你忘了/ s”）。 由于单个帖子的浅树结构及其注释，Reddit上的完整对话上下文也更容易提供。</p>
+
+<p>此外，从2014年7月的Twitter和Reddit数据的子样本中，我们确定Twitter作者中使用讽刺注释（＃sarcasm，＃sarcastic或#sarcastictweet）的百分比（.002％对.927％）要小得多。 我们假设Reddit用户需要更频繁地以更标准化的形式进行讽刺注释，因为它们主要是匿名的，因此不能依赖共享的上下文来传达讽刺。 最后，Reddit还受益于subreddits，它可以基于明确的主题分配实现特征化和数据探索。</p>
+
+<p>Internet Argument Corpus（IAC）也被用作讽刺评论的来源（Walker等，2012）。 语料库开发人员发现IAC中有12％的例子是讽刺性的，这对于讽刺检测来说比我们的更好。 由于Reddit数据由任意对话组成，而不仅仅是参数，因此即使考虑到假阴性，我们的讽刺百分比也要小得多也就不足为奇了; 此属性还使我们的数据集更加真实。 与Reddit和Twitter不同，IAC还需要手动注释讽刺。</p>
+
+<h2 id="我们方法的局限性">我们方法的局限性</h2>
+
+<p>我们收集自注释讽刺数据集的方法有一些值得注意的局限性。 尽管我们努力过滤嘈杂的“/s”标签，但仍存在没有简单规则可靠地消除不正确标签的情况。 我们描述了误报和漏报的困难：
+* <strong>误报</strong>是由于存在“/ s”标记而将评论错误地标记为讽刺的情况。 这种情况仅在评论中出现“/ s”标签时出现，其含义与指示讽刺有所不同。 如前所述，如果用户不知道“/ s”符号，则更有可能发生这种可能性。 类似地，如果“/ s”用于指代其用作注释的约定，那么仅仅检测“/ s”字符串的简单方法也会失败。 最后，“/ s”可能还有其他含义：例如，在HTML中，<code>&lt;s&gt; ... &lt;/s&gt;</code>表示删除。 因此，例如，专注于网络编程讨论的子编辑可能包括“/ s”以不同含义使用的实例。
+为了解决第一个问题，我们通过确保他们之前使用过“/ s”来限制用户了解讽刺符号。 此过滤器有助于确保用户了解“/ s”的语义用法。 对于第二种情况，我们只保留评论末尾带有“/ s”的评论。 我们检查的所有以“/ s”结尾的注释都使用注释来表示讽刺。 第三种情况相当于解决词义消歧，我们没有找到一种简单的方法来减少这种形式的噪音。 然而，通过限制已知不具有“/ s”（例如，政治）的替代意义的子编辑，可以降低这种形式的感觉不匹配的可能性。</p>
+
+<ul>
+<li><strong>假阴性</strong>是评论是讽刺性的，但没有用“/ s”注释的情况。 假阴性比假阳性更难检测，因为没有讽刺注释的评论部分比做出的部分要大得多。 有两种主要方式可能出现假阴性：用户不知道“/ s”约定，或者用户认为他们对讽刺的使用明显足以保证不包括标签。 值得注意的是，这种信念取决于用户正在进行通信的社区，用户正在与之通信的用户（他们经常与之争吵的另一个用户，或陌生人），以及先前对该线程的评论。 如前所述，讽刺性的评论经常会产生一系列随后的评论，这些评论都是讽刺性的，但缺乏“/ s”符号。 简而言之，上下文对于确定讽刺性评论是否显而易见至关重要。
+我们的第一个过滤器解决了第一个问题。 第二个问题很难解决，仍然是我们方法的局限。 我们通过在线程中丢弃讽刺评论的子评论来避免讽刺评论链的特定情况。</li>
+</ul>
+
+<p>我们所有的过滤器都通过手动评估第4.1节中描述的误报率和误报率进行验证，这在实施过滤器后得到了显着改善。 我们的手动评估方法有一个中心限制：虽然我们为人类注释者提供本地背景，但如果区分评论的讽刺意图的能力依赖于评论者的评论历史或相关新闻的知识，那么人类注释者可能 表现不佳。 我们试图通过使用投票方案来解决这个问题，该投票方案要求几个人同意关于其背景的评论是否是讽刺性的。</p>
+
+<h1 id="讽刺检测的基准">讽刺检测的基准</h1>
+
+<p>我们语料库的直接应用是用于训练和评估讽刺检测系统。 因此，我们使用第3节中描述的原始语料库来构建几个有用的基准，用于将语句分类为讽刺或非讽刺。 所有基准测试都提供了完整的会话线程，其中包括学习算法的目标语句以及注释元数据。 根据他们的规范，我们考虑一些无上下文的基线方法，仅依赖于简单特征的线性分类。 重现我们的结果的代码在<a href="https://github.com/NLPrinceton/SARC中提供。" target="_blank">https://github.com/NLPrinceton/SARC中提供。</a></p>
+
+<h2 id="评估任务">评估任务</h2>
+
+<p>在最一般的情况下，我们使用提供的原始文件来构建系统的数据点以学习以下任务：给定一个帖子和一系列注释，确定对序列中最后一个注释的响应中的哪些注释是讽刺性的。 因此，每个数据点由一个会话线程和一系列响应和讽刺标签组成。 此任务的表现以平均精确度，召回率和F1分数来衡量。
+在构建这个子类之前，我们首先考虑所有非完整句子而不是2到50个令牌之间的注释，以便在评估中提供更清晰的评论。 尽管响应仍然主要是非讽刺的，但是这里的讽刺评论的比例要大得多，因为每个数据点必须对应于至少发生一个讽刺注释的线程。 总共我们构建了844万个序列，其中讽刺反应的平均比例为28.1％。</p>
+
+<h3 id="平衡的标签">平衡的标签</h3>
+
+<p>我们通过从评论序列的每组响应中仅采用一个讽刺和一个非讽刺的响应来构建平衡的学习任务。 然后，任务变为选择共享上下文的两个语句中的哪一个是讽刺性的，其中性能通过准确度来衡量。
+虽然只有至少有一个讽刺反应的帖子是有用的，但它也会增加假阴性率，因为评论需要讽刺性反应时经常会得到其他讽刺性陈述，这些陈述内容与标记的讽刺回应相似，但本身可能没有标注。 因此，为了在选择非讽刺陈述时减少这个问题，我们使用常用爬行GloVe嵌入单词的归一化总和来强调所有陈述，并仅从那些与讽刺陈述具有相似性≤0.95的非讽刺陈述中挑选（Pennington et al., 2014）。</p>
+
+<h3 id="政治">政治</h3>
+
+<p>检测讽刺的难度不仅取决于理解先前陈述的背景的需要，而且取决于理解所讨论主题的背景信息。 甚至人类也会挣扎于从不熟悉的主题中汲取的讽刺性评论，例如，晦涩的爱好或艺术形式。 因此，我们还在仅从政治子评级中提取的评论上测试人和机器的表现，这是一个所有评估者都有足够背景信息的主题。 该子样本包含17000个序列，讽刺响应的平均比例为23.2％</p>
+
+<h1 id="方法">方法</h1>
+
+<p>对于平衡标签的情况，上述任务的简单，无背景基线方法是对两个响应进行特征化，并训练逻辑回归分类器以区分讽刺和非讽刺响应。类。 在测试集上，我们选择具有被标记为讽刺的概率最高的响应作为讽刺性的响应。 我们将我们测试的两个数据集分成80％ -  20％在训练测试子集之间，并在表2中报告以下三种方法的结果。</p>
+
+<h2 id="bag-of-n-grams">Bag-of-n-Grams</h2>
+
+<p>Bag-of-n-Grams表示包括使用文档的n-gram计数作为向量中的要素。 我们测试了两种变体，Bag-of-Words和Bag-of-Bigrams。 对于包含所有subreddits的子样本，我们仅使用在训练评论中至少出现5次的那些特征。 我们考虑包括其他评论功能，例如评论长度和分数，但实证结果和这些特征的分布（见图3和图4）表明它们不是特别提供信息。 更复杂的特征化，例如（Wallace等，2014）提出的名词短语和特征交互指标，留待未来的工作。</p>
+
+<h2 id="句子嵌入">句子嵌入</h2>
+
+<p>给定一个文档，采用其单词嵌入的元素总和提供了一个简单的低维文档表示。 这种构建单词序列特征的特定技术先前已经被研究并建立为多个受监督的NLP预测任务的强基线（Arora等，2017）。 我们使用在亚马逊产品语料库上训练的1600维GloVe表示，由于情感和讽刺之间的语义接近而使用它代替共同爬行（McAuley等，2015）。</p>
+
+<h2 id="手工">手工</h2>
+
+<p>通过给5个人类评估者100个样本并要求他们执行与算法相同的任务来测量人类讽刺检测性能：确定两个陈述中的哪一个是讽刺性的。 我们提供了完整语料库5以及政治子评估6的评估链接。 提供了完整的背景，最终的人类分类器被视为所有5名评估员的多数投票。</p>
+
+<h2 id="随机">随机</h2>
+
+<p>我们使用一个简单的基线，其中所有响应都以固定概率随机且独立地标记为讽刺。 选择该概率作为训练集中讽刺的响应的平均分数。</p>
+
+<h1 id="结果">结果</h1>
+
+<h2 id="基准线">基准线</h2>
+
+<p>表2中的基线表现相当好，并且比随机基线好得多，但它们都不匹配任何数据集上的人类表现。 机器学习方法有明显的改进空间，首先是使用提供的上下文来做出更好的讽刺决策。 如表2所示，Bag-of-Word和Bag-of-Bigram表示比句子嵌入表现更好; 但是，在未来的方法中结合上下文可能需要分布式表示。</p>
+
+<h2 id="手工-1">手工</h2>
+
+<p>正如预期的那样，与基线方法相比，人类评估员在多数和平均水平上表现得更好。 注释者之间存在显着但不完美的一致性：在主要数据集上，Fleiss kappa评分（Fleiss，1971）为0.5，表明中等一致，而在政治子样本上则为0.67，表明达成了实质性协议。 有趣的是，虽然从所有次级数据中抽取的序列的平均人类表现平均比政治子样本更差，但在人类中获得多数投票导致前者的表现更好。 这种性能提升表明，虽然个人可能没有足够的上下文来讨论Reddit的所有讨论主题，但总体上有足够的信息可以做得很好，甚至超过政治等知名话题的表现。</p>
+
+<h1 id="结论">结论</h1>
+
+<p>我们引入了一个基于自带注释的Reddit注释的大型讽刺数据集。 原始数据和评估子样本都是免费提供的，前者有超过100万个讽刺句子，比任何现有数据集都大。 我们评估简单机器学习方法的基线性能，并将其与人类表现进行比较。 我们希望该数据集的未来用户能够改进这些基准并找到利用我们提供的大量自注释信息的新方法。</p>
+
+</div>
+
+  
+<footer class='entry-footer'>
+  <div class='container sep-before'><div class='categories'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M22,19a2,2,0,0,1-2,2H4a2,2,0,0,1-2-2V5A2,2,0,0,1,4,3H9l2,3h9a2,2,0,0,1,2,2Z"/>
+  
+</svg>
+<span class='screen-reader-text'>Categories: </span><a class='category' href='/categories/%E8%AE%BA%E6%96%87/'>论文</a></div>
+<div class='tags'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M20.59,13.41l-7.17,7.17a2,2,0,0,1-2.83,0L2,12V2H12l8.59,8.59A2,2,0,0,1,20.59,13.41Z"/>
+  <line x1="7" y1="7" x2="7" y2="7"/>
+  
+</svg>
+<span class='screen-reader-text'>Tags: </span><a class='tag' href='/tags/%E5%8F%8D%E8%AE%BD/'>反讽</a>, <a class='tag' href='/tags/%E6%95%B0%E6%8D%AE%E9%9B%86/'>数据集</a>, <a class='tag' href='/tags/%E7%BF%BB%E8%AF%91/'>翻译</a></div>
+
+  </div>
+</footer>
+
+
+</article>
+
+<nav class='entry-nav'>
+  <div class='container'><div class='prev-entry sep-before'>
+      <a href='/post/20190722084636/'>
+        <span aria-hidden='true'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="20" y1="12" x2="4" y2="12"/>
+  <polyline points="10 18 4 12 10 6"/>
+  
+</svg>
+ Previous</span>
+        <span class='screen-reader-text'>Previous post: </span>反讽论文的研究反向</a>
+    </div><div class='next-entry sep-before'>
+      <a href='/post/20190723090032/'>
+        <span class='screen-reader-text'>Next post: </span>MAC下OCR识别文字的软件<span aria-hidden='true'>Next <svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="4" y1="12" x2="20" y2="12"/>
+  <polyline points="14 6 20 12 14 18"/>
+  
+</svg>
+</span>
+      </a>
+    </div></div>
+</nav>
+
+
+
+
+      </main>
+
+      <footer id='footer' class='footer'>
+        <div class='container sep-before'><section class='widget widget-social_menu sep-after'><nav aria-label='Social Menu'>
+    <ul><li>
+        <a href='https://github.com/mannuan' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Github account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='mailto:mannuandeyangguang@163.com' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Contact via Email</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+  <polyline points="22,6 12,13 2,6"/>
+  
+</svg>
+</a>
+      </li></ul>
+  </nav>
+</section><div class='copyright'>
+  <p> &copy; 2019 mannuan </p>
+</div>
+
+        </div>
+      </footer>
+
+    </div>
+  </div><script>window.__assets_js_src="/assets/js/"</script>
+
+<script src='/assets/js/main.67d669ac.js'></script><script src='/js/custom.js'></script>
+
+</body>
+
+</html>
+

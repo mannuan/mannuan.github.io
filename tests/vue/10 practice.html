@@ -30,7 +30,7 @@
         <!-- 单个根元素 -->
     <!-- </div> -->
     <!-- 监听子组件事件 -->
-    <div id="blog-posts-events-demo">
+    <!-- <div id="blog-posts-events-demo"> -->
         <!-- <div :style="{ fontSize: postFontSize + 'em' }">
             <blog-post
                 v-for="post in posts"
@@ -44,11 +44,20 @@
         <!-- <input v-model="searchText"><label>{{ searchText }}</label> -->
 
         <!-- 等价于 -->
-        <input
+        <!-- <input
             v-bind:value="searchText"
             v-on:input="searchText = $event.target.value">
-        <label>{{ searchText }}</label>
-    </div>
+        <label>{{ searchText }}</label> -->
+
+        <!-- <custom-input v-model="searchText"></custom-input> -->
+    <!-- </div> -->
+
+    <!-- 通过插槽分发内容 -->
+    <!-- <div id="app">
+        <alert-box>
+            Something bad happened.
+        </alert-box>
+    </div> -->
 </body>
 <script>
     // Vue.component('button-counter', {
@@ -76,34 +85,57 @@
 
     // 监听子组件事件
     // 使用事件抛出一个值
-    Vue.component('blog-post', {
-        props: ['post'],
-        template: `
-        <div class="blog-post">
-            <h3>{{ post.title }}</h3>
-            <button v-on:click="$emit('enlarge-text', 0.1)">
-                Enlarge text
-            </button>
-            <div v-html="post.content"></div>
-        </div>
-        `
-    });
-    new Vue({
-        el: '#blog-posts-events-demo',
-        data: {
-            posts: [
-                { id: 1, title: 'My journey with Vue' },
-                { id: 2, title: 'Blogging with Vue' },
-                { id: 3, title: 'Why Vue is so fun' },
-            ],
-            postFontSize: 1,
-            searchText: '搜索文本',
-        },
-        methods: {
-            onEnlargeText(enlargeAmount){
-                this.postFontSize += enlargeAmount;
-            },
-        }
-    });
+    // Vue.component('blog-post', {
+    //     props: ['post'],
+    //     template: `
+    //     <div class="blog-post">
+    //         <h3>{{ post.title }}</h3>
+    //         <button v-on:click="$emit('enlarge-text', 0.1)">
+    //             Enlarge text
+    //         </button>
+    //         <div v-html="post.content"></div>
+    //     </div>
+    //     `
+    // });
+    // Vue.component('custom-input', {
+    //     props: ['value'],
+    //     template: `
+    //     <input
+    //         v-bind:value="value"
+    //         v-on:input="$emit('input', $event.target.value)">
+    //     `
+    // });
+    // new Vue({
+    //     el: '#blog-posts-events-demo',
+    //     data: {
+    //         posts: [
+    //             { id: 1, title: 'My journey with Vue' },
+    //             { id: 2, title: 'Blogging with Vue' },
+    //             { id: 3, title: 'Why Vue is so fun' },
+    //         ],
+    //         postFontSize: 1,
+    //         searchText: '搜索文本',
+    //     },
+    //     methods: {
+    //         onEnlargeText(enlargeAmount){
+    //             this.postFontSize += enlargeAmount;
+    //         },
+    //     }
+    // });
+
+    // 通过插槽分发内容
+    // Vue.component('alert-box', {
+    //     template: `
+    //     <div class="demo-alert-box">
+    //         <strong>Error!</strong>
+    //         <slot></slot>
+    //     </div>
+    //     `
+    // });
+    // new Vue({
+    //     el: '#app',
+    // });
+
+    
 </script>
 </html>

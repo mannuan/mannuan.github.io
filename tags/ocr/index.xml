@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ocr on mannuan</title>
+    <link>https://mannuan.github.io/tags/ocr/</link>
+    <description>Recent content in ocr on mannuan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 23 Jul 2019 09:00:32 +0800</lastBuildDate>
+    
+	<atom:link href="https://mannuan.github.io/tags/ocr/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>MAC下OCR识别文字的软件</title>
+      <link>https://mannuan.github.io/post/20190723090032/</link>
+      <pubDate>Tue, 23 Jul 2019 09:00:32 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190723090032/</guid>
+      <description>iText - OCR &amp;amp; Translator</description>
+    </item>
+    
+  </channel>
+</rss>

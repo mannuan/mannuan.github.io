@@ -28,5 +28,29 @@
       <description></description>
     </item>
     
+    <item>
+      <title>算法题编码如何躲坑</title>
+      <link>https://mannuan.github.io/post/20180723113409/</link>
+      <pubDate>Mon, 23 Jul 2018 11:34:09 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20180723113409/</guid>
+      <description>   错误的代码 正确代码 备注     break; break 在任何语言中break后面都没有&amp;rdquo;;&amp;rdquo;
+比如在牛客的在线js中会出现”数组越界的提示“   True和true
+False和false 正确区分大小写 js中小写
+python中大写    </description>
+    </item>
+    
+    <item>
+      <title>算法题读题注意点</title>
+      <link>https://mannuan.github.io/post/20180723093847/</link>
+      <pubDate>Mon, 23 Jul 2018 09:38:47 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20180723093847/</guid>
+      <description> 算法题尤其要注意细节
+    描述 解读 备注     非减排序的数组 包含了两种情况：
+1. 递增
+2.数字保持不变 剑指offer-06-翻转的数组   若干个 表示\(\geq 0\) 剑指offer-06-翻转的数组    </description>
+    </item>
+    
   </channel>
 </rss>
