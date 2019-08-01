@@ -16,7 +16,7 @@
       <pubDate>Thu, 01 Aug 2019 09:09:20 +0800</pubDate>
       
       <guid>https://mannuan.github.io/post/20190801090920/</guid>
-      <description> 设置中文环境  刚开始的时候vscode默认是英文环境 \(\uparrow\)  </description>
+      <description> 设置中文环境  刚开始的时候vscode默认是英文环境 \(\Uparrow\) + command + P 输入configure language 点击zh-cn  </description>
     </item>
     
   </channel>
