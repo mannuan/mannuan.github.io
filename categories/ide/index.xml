@@ -5,10 +5,19 @@
     <link>https://mannuan.github.io/categories/ide/</link>
     <description>Recent content in ide on mannuan</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 13 Jul 2019 10:57:21 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 01 Aug 2019 09:09:20 +0800</lastBuildDate>
     
 	<atom:link href="https://mannuan.github.io/categories/ide/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>vscode常用设置</title>
+      <link>https://mannuan.github.io/post/20190801090920/</link>
+      <pubDate>Thu, 01 Aug 2019 09:09:20 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190801090920/</guid>
+      <description> 设置中文环境  刚开始的时候vscode默认是英文环境 \(\uparrow\)  </description>
+    </item>
     
     <item>
       <title>vscode常用插件</title>

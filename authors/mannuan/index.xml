@@ -5,10 +5,30 @@
     <link>https://mannuan.github.io/authors/mannuan/</link>
     <description>Recent content on mannuan</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 23 Jul 2019 20:45:49 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 01 Aug 2019 09:09:20 +0800</lastBuildDate>
     
 	<atom:link href="https://mannuan.github.io/authors/mannuan/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>vscode常用设置</title>
+      <link>https://mannuan.github.io/post/20190801090920/</link>
+      <pubDate>Thu, 01 Aug 2019 09:09:20 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190801090920/</guid>
+      <description> 设置中文环境  刚开始的时候vscode默认是英文环境 \(\uparrow\)  </description>
+    </item>
+    
+    <item>
+      <title>二叉树的知识点整理</title>
+      <link>https://mannuan.github.io/post/20190726162722/</link>
+      <pubDate>Fri, 26 Jul 2019 16:27:22 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190726162722/</guid>
+      <description> 二叉排序树  又称为二叉排序树，或二叉搜索树
+ 如果它的左子树不为空，那么左子树上所有的结点值都小于它的根结点的值；如果它的右子树不为空，那么右子树上所有的结点值都大于它的根节点的值。
+二叉树的前序遍历 </description>
+    </item>
     
     <item>
       <title>原码，反码和补码</title>
@@ -84,9 +104,7 @@ Internet Argument Corpus（IAC）也被用作讽刺评论的来源（Walker等�
       <description>前言 前端工程师打交道最多的就是浏览器，不管做什么都离不开浏览器，其中HTTP协议往往会被我们忽略，但其实资源缓存、CDN加载、页面性能优化等等都离不开对HTTP协议的了解。
 介绍 HTTP也叫作超文本传输协议，全称：Hyper Transfer Protocol。最初HTTP只能传输HTML文件，慢慢的现在可以传输文字、图像、视频和各种文件。 HTTP是无状态的：同一个客户端，连续发起多次请求，对HTTP服务器来说，都是新的请求，HTTP没办法知道来自一个客户端。
 消息结构 Header  分为request/response line和request/response header。
-  request/response line：包括请求的方法Method（GET/POST）、请求资源的路径path to resource和http协议的版本号。
- request/response header：这边就是各种请求头了。
-  Body 响应体，一般是HTML文件。如果是get请求，是没有响应体的。
+  request/response line：包括请求的方法Method（GET/POST）、请求资源的路径path to resource和http协议的版本号。 request/response header：这边就是各种请求头了。  Body 响应体，一般是HTML文件。如果是get请求，是没有响应体的。
 HTTP请求方法 GET 请求获取Request-URI所标识的资源
 POST 在Request-URI所标识的资源后附加新的数据
 HEAD 请求获取由Request-URI所标识的资源的响应消息报头
@@ -294,7 +312,7 @@ var num = [1,5,6,10]; for (var i = 0; i &amp;lt; num.length; i++) { console.log(
       <pubDate>Mon, 08 Jul 2019 14:18:34 +0800</pubDate>
       
       <guid>https://mannuan.github.io/post/20190708141834/</guid>
-      <description> 1、UDP 1.1、数据包格式   源端口号(16位) 目的端口号(16位)    UDP长度(16位) UDP校验和(16位)   数据    1.2、特点  沟通简单。不需要一肚子花花肠子(大量的数据结构、处理逻辑、包头字段)。前提是它相信网络世界是美好的，秉承性善论，相信网络通路默认就是很容易送达的，不容易被丢弃的。 轻信他人。它不会建立连接，虽然有端口号，但是监听在这个地方，谁都可以传给他数据，他也可以传给任何人数据，甚至可以同时传给多个人数据。 愣头青。做事不懂权变。不知道什么时候该坚持，什么时候该退让。它不会根据网络的情况进行发包的拥塞控制，无论网络丢包丢成啥样了，它该怎么发还怎么发。  1.3、使用场景  需要资源少，在网络情况比较好的内网，或者对于丢包不敏感的应用。这很好理解，就像如果你是领导，你会让你们组刚毕业的小朋友去做一些没有那么难的项目，打一些没有那么难的客户，或者做一些失败了也能忍受的实验性项目。 不需要一对一沟通，建立连接，而是可以广播的应用。咱们小时候人都很简单，大家在班级里面，谁成绩好，谁写作好，应该表扬谁惩罚谁，谁得几个小红花都是当着全班的面讲的，公平公正公开。长大了人心复杂了，薪水、奖金要背靠背，和员工一对一沟通。 需要处理速度快，时延低，可以容忍少数丢包，但是要求即便网络拥塞，也毫不退缩，一往无前的时候。记得曾国藩建立湘军的时候，专门招出生牛犊不怕虎的新兵，而不用那些“老油条”的八旗 兵，就是因为八旗兵经历的事情多，遇到敌军不敢舍死忘生。  </description>
+      <description>1、UDP 1.1、数据包格式   源端口号(16位) 目的端口号(16位)    UDP长度(16位) UDP校验和(16位)   数据    1.2、特点  沟通简单。不需要一肚子花花肠子(大量的数据结构、处理逻辑、包头字段)。前提是它相信网络世界是美好的，秉承性善论，相信网络通路默认就是很容易送达的，不容易被丢弃的。 轻信他人。它不会建立连接，虽然有端口号，但是监听在这个地方，谁都可以传给他数据，他也可以传给任何人数据，甚至可以同时传给多个人数据。 愣头青。做事不懂权变。不知道什么时候该坚持，什么时候该退让。它不会根据网络的情况进行发包的拥塞控制，无论网络丢包丢成啥样了，它该怎么发还怎么发。  1.3、使用场景  需要资源少，在网络情况比较好的内网，或者对于丢包不敏感的应用。这很好理解，就像如果你是领导，你会让你们组刚毕业的小朋友去做一些没有那么难的项目，打一些没有那么难的客户，或者做一些失败了也能忍受的实验性项目。 不需要一对一沟通，建立连接，而是可以广播的应用。咱们小时候人都很简单，大家在班级里面，谁成绩好，谁写作好，应该表扬谁惩罚谁，谁得几个小红花都是当着全班的面讲的，公平公正公开。长大了人心复杂了，薪水、奖金要背靠背，和员工一对一沟通。 需要处理速度快，时延低，可以容忍少数丢包，但是要求即便网络拥塞，也毫不退缩，一往无前的时候。记得曾国藩建立湘军的时候，专门招出生牛犊不怕虎的新兵，而不用那些“老油条”的八旗 兵，就是因为八旗兵经历的事情多，遇到敌军不敢舍死忘生。  TCP三次握手 握手过程   SYN(Synchronize sequence numbers): TCP首部中的同步序号标志 ACK(Acknowledgement): 确认字符      时间段 客户端 服务端   活动 状态 活动 状态       CLOSED  CLOSED     CLOSED  LISTEN    &amp;rarr;   第一次握手 主动发起连接SYN SYN-SENT 收到发起的连接 SYN-RCVD   &amp;larr;  第二次握手 收到SYN和ACK SYN_SENT 返回SYN并ACK客户端的SYN SYN_RCVD    &amp;rarr;   第三次握手 发送ACK的ACK ESTABLISHED 收到客户端的ACK ESTABLISHED    为什么不是两次握手？  A为客户端，B为服务端</description>
     </item>
     
     <item>
@@ -1578,7 +1596,7 @@ from pyquery import PyQuery as pq with open(文件路径, &amp;#34;r&amp;#34;) a
       
       <guid>https://mannuan.github.io/post/20190603215721/</guid>
       <description> 冒泡排序 算法流程 假设存在一个长度为N的数组，按照从左至右的顺序升序排列。首先，通过N-1次数
-javascript代码 function bubbleSort(){ var arr = arguments[0]; for(var end=arr.length-1; end&amp;gt;0; end--){ for(var i=0; i&amp;lt;end; i++){ if(arr[i] &amp;gt; arr[end]){ var tmp = arr[i]; arr[i] = arr[end]; arr[end] = tmp; } } } } function randomNum(max=100, start=33){ return Math.floor(Math.random() * max + start) } var arr = []; var length = randomNum(30, 1); for(var i=0; i&amp;lt;length; i++){ // 创建随机数组  arr.push(randomNum()); } console.log(arr); bubbleSort(arr); console.log(arr);  选择排序 </description>
+javascript代码 function bubbleSort(){ var arr = arguments[0]; for(var end=arr.length-1; end&amp;gt;0; end--){ for(var i=0; i&amp;lt;end; i++){ if(arr[i] &amp;gt; arr[end]){ var tmp = arr[i]; arr[i] = arr[end]; arr[end] = tmp; } } } } function randomNum(max=100, start=33){ return Math.floor(Math.random() * max + start); } var arr = []; var length = randomNum(30, 1); for(var i=0; i&amp;lt;length; i++){ // 创建随机数组  arr.push(randomNum()); } console.log(arr); bubbleSort(arr); console.log(arr);  选择排序 </description>
     </item>
     
     <item>
@@ -1808,7 +1826,9 @@ HTML5的规范涉及面非常广，新增的DOM API只是其一部分。
       <description>关键字的名称：test
 数据表名：test
 搜索关键字：test
-    作用 命令 例子     列出所有包含test的item {&amp;quot;test&amp;quot;: {&amp;quot;$exists&amp;quot;: true}} db.getCollection(&#39;test&#39;).find({&amp;quot;test&amp;quot;: {&amp;quot;$exists&amp;quot;: true}})   根据test进行排序 [(&amp;quot;test&amp;quot;: 1或-1)]，&amp;rdquo;1&amp;rdquo;表示升序，”-1“表示降序 db.getCollection(&#39;test&#39;).find().sort([(&amp;quot;test&amp;quot;, -1)])   列出所有符合正则表达式的item {&amp;quot;test&amp;quot;: {&amp;quot;$regex&amp;quot;: &amp;quot;test&amp;quot;}} db.getCollection(&#39;test&#39;).find({&amp;quot;test&amp;quot;: {&amp;quot;$regex&amp;quot;: &amp;quot;test&amp;quot;}})   限制列出的item的数量 数字 db.getCollection(&#39;test&#39;).find().limit(自定义数字)   列出所有符合字符串长度的item {&amp;quot;$where&amp;quot;: &amp;quot;(this.test.length &amp;gt; 自定义长度)&amp;quot;} db.getCollection(&#39;test&#39;).find({&amp;quot;$where&amp;quot;: &amp;quot;(this.test.length &amp;gt; 自定义长度)&amp;quot;})   统计item的数量 collection.count_documents({}) db.getCollection(&amp;quot;test&amp;quot;).count_documents({})    持续更新&amp;hellip;</description>
+    作用 命令 例子     列出所有包含test的item {&amp;quot;test&amp;quot;: {&amp;quot;$exists&amp;quot;: true}} db.getCollection(&#39;test&#39;).find({&amp;quot;test&amp;quot;: {&amp;quot;$exists&amp;quot;: true}})   根据test进行排序 新版本：[(&amp;quot;test&amp;quot;, 1或-1)]
+老版本：{&amp;quot;test&amp;quot;:1或-1}
+，&amp;rdquo;1&amp;rdquo;表示升序，”-1“表示降序 db.getCollection(&#39;test&#39;).find().sort([(&amp;quot;test&amp;quot;, -1)])   列出所有符合正则表达式的item {&amp;quot;test&amp;quot;: {&amp;quot;$regex&amp;quot;: &amp;quot;test&amp;quot;}} db.getCollection(&#39;test&#39;).find({&amp;quot;test&amp;quot;: {&amp;quot;$regex&amp;quot;: &amp;quot;test&amp;quot;}})   限制列出的item的数量 数字 db.getCollection(&#39;test&#39;).find().limit(自定义数字)   列出所有符合字符串长度的item {&amp;quot;$where&amp;quot;: &amp;quot;(this.test.length &amp;gt; 自定义长度)&amp;quot;} db.getCollection(&#39;test&#39;).find({&amp;quot;$where&amp;quot;: &amp;quot;(this.test.length &amp;gt; 自定义长度)&amp;quot;})   统计item的数量 collection.count_documents({}) db.getCollection(&amp;quot;test&amp;quot;).count_documents({})    持续更新&amp;hellip;</description>
     </item>
     
     <item>
@@ -2427,7 +2447,9 @@ python中大写    </description>
       <description> 算法题尤其要注意细节
     描述 解读 备注     非减排序的数组 包含了两种情况：
 1. 递增
-2.数字保持不变 剑指offer-06-翻转的数组   若干个 表示\(\geq 0\) 剑指offer-06-翻转的数组    </description>
+2.数字保持不变 剑指offer-06-翻转的数组   若干个 表示\(\geq 0\) 剑指offer-06-翻转的数组   计算机浮点数之间的误差在-0.0000001和0.0000001之间，两个数相等 计算机浮点数存在误差    高效的算法基本上最多使用两个指针     链表问题的关键点：
+1.确定头节点；
+2.保存上一个指针的状态；     循环问题的解决思路 找到前后不变的状态作为终止条件    具有很多标志位的问题 必须找到不变的规律(终止条件)    做二叉树类型的题目 必用递归 因为二叉树太复杂了，一般在面试的时候不用非递归实现    </description>
     </item>
     
     <item>

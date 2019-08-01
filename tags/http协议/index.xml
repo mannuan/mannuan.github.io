@@ -19,9 +19,7 @@
       <description>前言 前端工程师打交道最多的就是浏览器，不管做什么都离不开浏览器，其中HTTP协议往往会被我们忽略，但其实资源缓存、CDN加载、页面性能优化等等都离不开对HTTP协议的了解。
 介绍 HTTP也叫作超文本传输协议，全称：Hyper Transfer Protocol。最初HTTP只能传输HTML文件，慢慢的现在可以传输文字、图像、视频和各种文件。 HTTP是无状态的：同一个客户端，连续发起多次请求，对HTTP服务器来说，都是新的请求，HTTP没办法知道来自一个客户端。
 消息结构 Header  分为request/response line和request/response header。
-  request/response line：包括请求的方法Method（GET/POST）、请求资源的路径path to resource和http协议的版本号。
- request/response header：这边就是各种请求头了。
-  Body 响应体，一般是HTML文件。如果是get请求，是没有响应体的。
+  request/response line：包括请求的方法Method（GET/POST）、请求资源的路径path to resource和http协议的版本号。 request/response header：这边就是各种请求头了。  Body 响应体，一般是HTML文件。如果是get请求，是没有响应体的。
 HTTP请求方法 GET 请求获取Request-URI所标识的资源
 POST 在Request-URI所标识的资源后附加新的数据
 HEAD 请求获取由Request-URI所标识的资源的响应消息报头

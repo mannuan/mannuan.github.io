@@ -17,7 +17,7 @@
       
       <guid>https://mannuan.github.io/post/20190603215721/</guid>
       <description> 冒泡排序 算法流程 假设存在一个长度为N的数组，按照从左至右的顺序升序排列。首先，通过N-1次数
-javascript代码 function bubbleSort(){ var arr = arguments[0]; for(var end=arr.length-1; end&amp;gt;0; end--){ for(var i=0; i&amp;lt;end; i++){ if(arr[i] &amp;gt; arr[end]){ var tmp = arr[i]; arr[i] = arr[end]; arr[end] = tmp; } } } } function randomNum(max=100, start=33){ return Math.floor(Math.random() * max + start) } var arr = []; var length = randomNum(30, 1); for(var i=0; i&amp;lt;length; i++){ // 创建随机数组  arr.push(randomNum()); } console.log(arr); bubbleSort(arr); console.log(arr);  选择排序 </description>
+javascript代码 function bubbleSort(){ var arr = arguments[0]; for(var end=arr.length-1; end&amp;gt;0; end--){ for(var i=0; i&amp;lt;end; i++){ if(arr[i] &amp;gt; arr[end]){ var tmp = arr[i]; arr[i] = arr[end]; arr[end] = tmp; } } } } function randomNum(max=100, start=33){ return Math.floor(Math.random() * max + start); } var arr = []; var length = randomNum(30, 1); for(var i=0; i&amp;lt;length; i++){ // 创建随机数组  arr.push(randomNum()); } console.log(arr); bubbleSort(arr); console.log(arr);  选择排序 </description>
     </item>
     
   </channel>

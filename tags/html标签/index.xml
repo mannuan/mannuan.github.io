@@ -19,18 +19,5 @@
       <description> span.new { float: right; color: #fff; background-color: #90b575; font-weight: 700; padding-left: 1px; padding-right: 1px; border: 1px solid #fff; outline: 1px solid #90b575; line-height: 16px; }    属性 描述   accesskey 设置访问元素的键盘快捷键。   class 规定元素的类名（classname）   contenteditableNew 规定是否可编辑元素的内容。   contextmenuNew 指定一个元素的上下文菜单。当用户右击该元素，出现上下文菜单   data-*New 用于存储页面的自定义数据   dir 设置元素中内容的文本方向。   draggableNew 指定某个元素是否可以拖动   dropzoneNew 指定是否将数据复制，移动，或链接，或删除   hiddenNew hidden 属性规定对元素进行隐藏。   id 规定元素的唯一 id   lang 设置元素中内容的语言代码。   spellcheckNew 检测元素是否拼写错误   style 规定元素的行内样式（inline style）   tabindex 设置元素的 Tab 键控制次序。   title 规定元素的额外信息（可在工具提示中显示）   translateNew 指定是否一个元素的值在页面载入时是否需要翻译    </description>
     </item>
     
-    <item>
-      <title>常用的HTML标签整理</title>
-      <link>https://mannuan.github.io/post/20190708085133/</link>
-      <pubDate>Mon, 08 Jul 2019 08:51:33 +0800</pubDate>
-      
-      <guid>https://mannuan.github.io/post/20190708085133/</guid>
-      <description>标签部分先后顺序，按照收录的先后顺序
- ruby标签 用来注释中文注音或字符。
-template标签 HTML内容模板（&amp;lt;template&amp;gt;）元素 是一种用于保存客户端内容机制，该内容在加载页面时不会呈现，但随后可以在运行时使用JavaScript实例化。
-将模板视为一个内容片段，存储在文档中供后续使用。虽然解析器在加载页面时确实会处理&amp;lt;template&amp;gt;元素的内容，但这样做只是为了确保这些内容有效；然而，元素的内容不会被呈现。
-一个例子</description>
-    </item>
-    
   </channel>
 </rss>
