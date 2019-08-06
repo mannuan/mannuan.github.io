@@ -182,20 +182,14 @@
   </url>
   
   <url>
+    <loc>https://mannuan.github.io/tags/%E4%B8%8B%E6%8B%89%E8%8F%9C%E5%8D%95/</loc>
+    <lastmod>2019-08-04T21:06:14+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://mannuan.github.io/post/20190804210614/</loc>
     <lastmod>2019-08-04T21:06:14+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://mannuan.github.io/tags/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/</loc>
-    <lastmod>2019-08-04T21:06:14+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://mannuan.github.io/categories/%E5%B8%83%E5%B1%80%E9%A2%98/</loc>
-    <lastmod>2019-08-04T21:06:14+08:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -207,6 +201,12 @@
   <url>
     <loc>https://mannuan.github.io/tags/%E7%BD%91%E6%98%93%E7%AC%94%E8%AF%95/</loc>
     <lastmod>2019-08-04T21:06:14+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mannuan.github.io/tags/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/</loc>
+    <lastmod>2019-08-04T15:55:23+08:00</lastmod>
     <priority>0</priority>
   </url>
   

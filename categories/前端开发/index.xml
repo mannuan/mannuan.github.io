@@ -53,7 +53,7 @@
       <pubDate>Tue, 06 Aug 2019 14:06:27 +0800</pubDate>
       
       <guid>https://mannuan.github.io/post/20190806140626/</guid>
-      <description>链接</description>
+      <description> 参考资料  链接 链接  </description>
     </item>
     
     <item>
@@ -63,6 +63,16 @@
       
       <guid>https://mannuan.github.io/post/20190806140147/</guid>
       <description>链接</description>
+    </item>
+    
+    <item>
+      <title>下拉菜单</title>
+      <link>https://mannuan.github.io/post/20190804210614/</link>
+      <pubDate>Sun, 04 Aug 2019 21:06:14 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190804210614/</guid>
+      <description>题目描述 如下图所示，请实现如下功能，当鼠标移到黑底客户服务区块后，出来白底卡片内容，鼠标移出后，卡片内容消失，并且当鼠标在白色部分上移动时白色框不能消失。
+纯css的解决方案 链接</description>
     </item>
     
     <item>
