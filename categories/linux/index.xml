@@ -5,10 +5,28 @@
     <link>https://mannuan.github.io/categories/linux/</link>
     <description>Recent content in linux on mannuan</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 11 Jul 2019 15:38:14 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 04 Aug 2019 15:48:08 +0800</lastBuildDate>
     
 	<atom:link href="https://mannuan.github.io/categories/linux/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>linux和mac下图片压缩工具</title>
+      <link>https://mannuan.github.io/post/20190804154807/</link>
+      <pubDate>Sun, 04 Aug 2019 15:48:08 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190804154807/</guid>
+      <description>有损压缩(jpegoptim) mac brew install jpegoptim linux sudo apt-get install jpegoptim 使用举例 jpegoptim -m80 old/test.jpg --dest new #-m 后的 80 代表压缩品质 改变图片尺寸(optipng) 暂未使用，期待后续更新&amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>Ubuntu16.04安装CUDA10</title>
+      <link>https://mannuan.github.io/post/20190803215930/</link>
+      <pubDate>Sat, 03 Aug 2019 21:59:30 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190803215930/</guid>
+      <description>sudo apt-get install gnupg-curl wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64/cuda-repo-ubuntu1604_10.0.130-1_amd64.deb sudo dpkg -i cuda-repo-ubuntu1604_10.0.130-1_amd64.deb sudo apt-key adv --fetch-keys https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64/7fa2af80.pub sudo apt-get update wget http://developer.download.nvidia.com/compute/machine-learning/repos/ubuntu1604/x86_64/nvidia-machine-learning-repo-ubuntu1604_1.0.0-1_amd64.deb sudo apt install ./nvidia-machine-learning-repo-ubuntu1604_1.0.0-1_amd64.deb sudo apt-get update sudo mkdir /usr/lib/nvidia sudo apt-get install --no-install-recommends nvidia-410 sudo apt-get install --no-install-recommends cuda-10-0 libcudnn7=7.4.1.5-1+cuda10.0 libcudnn7-dev=7.4.1.5-1+cuda10.0 sudo apt-get update sudo apt-get install nvinfer-runtime-trt-repo-ubuntu1604-5.0.2-ga-cuda10.0 sudo apt-get update sudo apt-get install -y --no-install-recommends libnvinfer5=5.0.2-1+cuda10.0 sudo apt-get install -y --no-install-recommends libnvinfer-dev=5.0.2-1+cuda10.0 cudnn离线地址 链接</description>
+    </item>
     
     <item>
       <title>nginx安装和配置教程</title>

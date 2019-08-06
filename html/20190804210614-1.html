@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>纯css实现下拉菜单</title>
+    <style>
+        .nav-menu {
+            position: relative;
+            display: inline-block;
+        }
+        .nav-head {
+            background-color: black;
+            color: white;
+            /* 4个值代表：上 右 下 左 */
+            /* 3个值代表：上 左右 下 */
+            /* 2个值代表：上下 左右 */
+            /* 1个值代表：上下左右 */
+            padding: 10px 20px; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .triangle-down {
+            width: 0px;
+            height: 0px;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-top: 5px solid white;
+        }
+        .nav-menu:hover .nav-head{
+            border-top: 2px solid black;
+        }
+        /* 使用css hover伪类来改变其他元素的属性 */
+        .nav-menu:hover .triangle-down {
+            width: 0px;
+            height: 0px;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-bottom: 5px solid red;
+        }
+        .nav-menu:hover .nav-head{
+            background-color: white;
+            color: red;
+        }
+        .nav-item {
+            display: none;
+            /* 这一步是关键 */
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 120px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            padding: 10px 20px;
+        }
+        .nav-menu:hover .nav-item{
+            display: block;
+        }
+        .nav-item a {
+            display: block;
+        }
+        i {
+            font-style: normal;
+            font-weight: 500;
+        }
+        .icon {
+            background: url(/images/icon1-832edc2b58.png) no-repeat;
+            display: inline-block;
+        }
+        .icon-contact {
+            width: 14px;
+            height: 14px;
+            background-position: -5px -290px;
+            background-position-x: -5px;
+            background-position-y: -290px;
+        }
+        .icon-help {
+            width: 14px;
+            height: 14px;
+            background-position: -5px -324px;
+            vertical-align: middle;
+        }
+        .icon-prp {
+            background: url(/images/ba93f103-e5c3-4184-9800-930c25486e4d_52_52.png) no-repeat;
+            background-size: 100% 100%;
+            display: inline-block;
+            width: 14px;
+            height: 14px;
+        }
+        .icon-rule {
+            width: 14px;
+            height: 14px;
+            background-position: -5px -351px;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav-menu">
+        <div class="nav-head">
+            <span>客户服务</span>
+            <span class="triangle-down"></span>
+        </div>
+        <div class="nav-item">
+            <a><i class="icon icon-contact"></i>联系客服</a>
+            <a><i class="icon icon-help"></i>帮助中心</a>
+            <a><i class="icon-prp"></i>知识产权保护</a>
+            <a><i class="icon icon-rule"></i>规则中心</a>
+        </div>
+    </div>
+</body>
+</html>

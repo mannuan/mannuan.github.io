@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>列表渲染</title>
+    <script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+</head>
+<body>
+    <div id="app">
+        <!-- 用v-for把一个数组对应为一组元素 -->
+        <!-- <ul>
+            <li v-for="item in items">
+                {{ item.message }}
+            </li>
+        </ul> -->
+
+        <!-- v-for还支持第二个可选参数，即当前项的索引 -->
+        <!-- <ul>
+            <li v-for="(item, index) in items">
+                {{ index }} - {{ item.message}}
+            </li>
+        </ul> -->
+
+        <!-- of 可以替代in -->
+        <!-- <ul>
+            <li v-for="(item, index) of items">
+                {{ index }} - {{ item.message}}
+            </li>
+        </ul> -->
+
+        <!-- 使用v-for来遍历对象属性 -->
+        <!-- <ul>
+            <li v-for="value in object">
+                {{ value }}
+            </li>
+        </ul> -->
+
+        <!-- v-for 可以提供第二个参数为property名称（也就是键名） -->
+        <!-- <div v-for="(value, name) in object">
+            {{ name }}: {{ value }}
+        </div> -->
+
+        <!-- v-for 还有第三个参数作为索引 -->
+        <!-- <div v-for="(value, name, index) in object">
+            {{index}}. {{ name }}: {{ value }}
+        </div> -->
+
+        <!-- 维护状态 -->
+        <!-- <div v-for="(item, index) in items" v-bind:key="item.id">
+            {{ index }}: {{ item.message }}
+        </div> -->
+
+        <!-- 使用计算属性来显示过滤之后的结果 -->
+        <!-- <li v-for="n in evenNumbers">{{ n }}</li> -->
+
+        <!-- 在计算属性不可以使用的情况下，可以使用普通的方法来过滤 -->
+        <!-- <li v-for="n in even(numbers)">{{ n }}</li> -->
+
+        <!-- 在v-for里使用值范围 -->
+        <!-- <div>
+            <span v-for="n in 10">{{ n }}</span>
+        </div> -->
+
+        <!-- 在template上使用v-for -->
+        <!-- <ul>
+            <template v-for="item in items">
+                <li>{{ item.message }}</li>
+                <li class="divider" role="presentation"></li>
+            </template>
+        </ul> -->
+
+        <!-- 在组件上使用v-for -->
+        <div>
+            <form v-on:submit.prevent="addNewTodo">
+                <label for="new-todo">Add a todo</label>
+                <input 
+                    v-model="newTodoText"
+                    id="new-todo"
+                    placeholer="E.g. Feed the cast"
+                    >
+                <button>Add</button>
+            </form>
+            <ul>
+                <li 
+                    is="todo-item" 
+                    v-for="(todo, index) in todos"
+                    v-bind:key="todo.id"
+                    v-bind:title="todo.title"
+                    v-on:remove="todos.splice(index, 1)"></li>
+            </ul>
+        </div>
+    </div>
+</body>
+<script>
+    Vue.component('todo-item', {
+        template: '<li>\
+            {{title}}\
+            <button v-on:click="$emit(\'remove\')">Remove</button>\
+            </li>',
+        props: ['title'],
+    });
+    var data = {
+        items: [
+            { message: 'Foo' , id: 1},
+            { message: 'Bar' , id: 2}
+        ],
+        object: {
+            shopname: "产管",
+            rate: "0.4",
+            address: "街道",
+        },
+        numbers: [1, 2, 3, 4, 5],
+        newTodoText: '',
+        todos: [
+            {
+                id: 1,
+                title: 'Do the dishes',
+            },
+            {
+                id: 2,
+                title: 'Take out the trash',
+            },
+            {
+                id: 3,
+                title: 'Mow the lawn',
+            }
+        ],
+        nextTodoId: 4,
+    };
+    var vm = new Vue({
+        el: '#app',
+        data: data,
+        methods:{
+            even: function(numbers){
+                return numbers.filter(function (number){
+                    return number % 2 === 0;
+                });
+            },
+            addNewTodo: function(){
+                this.todos.push({
+                    id: this.nextTodoId++,
+                    title: this.newTodoText,
+                });
+                this.newTodoText = '';
+            }
+        },
+        // 使用计算属性来显示过滤之后的结果
+        computed: {
+            evenNumbers: function(){
+                return this.numbers.filter(function (number){
+                    return number % 2 === 0;
+                });
+            }
+        }
+    });
+
+    // 替换数组
+    // vm.items = vm.items.filter(function (item) {
+    //     return item.message.match(/Foo/);
+    // })
+
+    // set vue修改数组
+    // Vue.set(vm.items, 2, {message: 'andy', id: 3});
+
+    // splice
+    // vm.items.splice(0, 1, {message: 'bob', id: 4});
+
+    // $set
+    // vm.$set(vm.items, 2, {message: 'andy', id: 3});
+
+    // 修改数组的长度
+    // vm.items.splice(1);
+
+    // 对象变更Vue.set
+    // Vue.set(vm.object, 'shopname', '改你妹');
+
+    // 对象变更vm.$set
+    // vm.$set(vm.object, 'shopname', '该你妈');
+
+    // vm.object = Object.assign({}, vm.object, {shopname: 123, id: 123});
+
+</script>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>表单输入绑定</title>
+    <script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+</head>
+<body>
+    <div id="app">
+        <!-- 文本 -->
+        <!-- <input v-model="message" placeholder="edit me">
+        <p>Message is: {{ message }}</p> -->
+
+        <!-- 多行文本 -->
+        <!-- <span>Multiline message is:</span>
+        <p style="white-space: pre-line;">{{ message }}</p>
+        <br>
+        <textarea v-model="message" placeholder="add multiple lines">
+        </textarea> -->
+
+        <!-- 复选框 -->
+        <!-- 单个复选框，绑定到布尔值 -->
+        <!-- <input type="checkbox" id="checkbox" v-model="checked">
+        <label for="checkbox">{{ checked }}</label> -->
+
+        <!-- 多个复选框，绑定到同一个数组 -->
+        <!-- <input type="checkbox" id="jack" value="jack" v-model="checkedNames">
+        <label for="jack">Jack</label>
+        <input type="checkbox" id="john" value="john" v-model="checkedNames">
+        <label for="john">John</label>
+        <input type="checkbox" id="mike" value="Mike" v-model="checkedNames">
+        <label for="mike">Mike</label>
+        <br>
+        <span>Checked names: {{ checkedNames }}</span> -->
+
+        <!-- 单选按钮 -->
+        <!-- <input type="radio" id="one" value="One" v-model="picked">
+        <label for="one">One</label>
+        <br>
+        <input type="radio" id="two" value="Two" v-model="picked">
+        <label for="two">Two</label>
+        <br>
+        <span>Picked: {{ picked }}</span> -->
+
+        <!-- 选择框 -->
+        <!-- 单选时 -->
+        <!-- <select v-model="selected">
+            <option disabled value="">请选择</option>
+            <option>A</option>
+            <option>B</option>
+            <option>C</option>
+        </select>
+        <span>Selected: {{ selected }}</span> -->
+
+        <!-- 多选时（绑定到一个数组） -->
+        <!-- <select v-model="selected" multiple style="width: 50px;">
+            <option>A</option>
+            <option>B</option>
+            <option>C</option>
+        </select>
+        <br>
+        <span>Selected: {{ selected }}</span> -->
+
+        <!-- 用v-for渲染的动态选项 -->
+        <!-- <select v-model="selected">
+            <option v-for="option in options" v-bind:value="option.value">
+                {{ option.text }}
+            </option>
+        </select>
+        <span>Selected: {{ selected }}</span> -->
+
+        <!-- 值绑定 -->
+        <!-- 当选中时，picked为字符串a -->
+        <!-- <input type="radio" v-model="picked" value="a"> -->
+
+        <!-- toggle为true或false -->
+        <!-- <input type="checkbox" v-model="toggle"> -->
+
+        <!-- 当选中第一个选项时，selected为字符串abc -->
+        <!-- <select v-model="selected">
+            <option value="abc">ABC</option>
+        </select> -->
+
+        <!-- 复选框 -->
+        <!-- <input 
+            type="checkbox"
+            v-model="toggle"
+            true-value="yes"
+            false-value="no"> -->
+        
+        <!-- 单选按钮 -->
+        <!-- <input type="radio" v-model="pick" v-bind:value="a"> -->
+
+        <!-- 选择框的选项 内联对象字面量 -->
+        <!-- <select v-model="selected">
+            <option v-bind:value="{ number: 123 }">123</option>
+        </select> -->
+
+        <!-- 修饰符 -->
+        <!-- .lazy -->
+        <!-- 在change时而非input时更新 -->
+        <!-- <input v-model.lazy="msg"> -->
+
+        <!-- .number -->
+        <!-- <input v-model.number="age" type="number"> -->
+
+        <!-- .trim -->
+        <!-- <input v-model.trim="msg"> -->
+
+        
+    </div>
+</body>
+<script>
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            message: '请输入...',
+            checked: true,
+            checkedNames: [],
+            picked: 'false',
+            selected: 'A',
+            options: [
+                {text: 'One', value: 'A'},
+                {text: 'Two', value: 'B'},
+                {text: 'Three', value: 'C'},
+            ]
+        },
+        methods: {
+
+        }
+    });
+    vm.toggle === 'yes';
+    vm.toggle === 'no';
+    vm.pick === vm.a;
+    typeof vm.selected // => 'object'
+    vm.selected.number // => 123
+</script>
+</html>

@@ -5,10 +5,289 @@
     <link>https://mannuan.github.io/tags/</link>
     <description>Recent content in Tags on mannuan</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 01 Aug 2019 09:09:20 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 06 Aug 2019 14:35:09 +0800</lastBuildDate>
     
 	<atom:link href="https://mannuan.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>block</title>
+      <link>https://mannuan.github.io/tags/block/</link>
+      <pubDate>Tue, 06 Aug 2019 14:35:09 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/tags/block/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>inline</title>
+      <link>https://mannuan.github.io/tags/inline/</link>
+      <pubDate>Tue, 06 Aug 2019 14:35:09 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/tags/inline/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>块级元素</title>
+      <link>https://mannuan.github.io/tags/%E5%9D%97%E7%BA%A7%E5%85%83%E7%B4%A0/</link>
+      <pubDate>Tue, 06 Aug 2019 14:35:09 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/tags/%E5%9D%97%E7%BA%A7%E5%85%83%E7%B4%A0/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>行内元素</title>
+      <link>https://mannuan.github.io/tags/%E8%A1%8C%E5%86%85%E5%85%83%E7%B4%A0/</link>
+      <pubDate>Tue, 06 Aug 2019 14:35:09 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/tags/%E8%A1%8C%E5%86%85%E5%85%83%E7%B4%A0/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>box-shadow</title>
+      <link>https://mannuan.github.io/tags/box-shadow/</link>
+      <pubDate>Tue, 06 Aug 2019 14:32:55 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/tags/box-shadow/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>css</title>
+      <link>https://mannuan.github.io/tags/css/</link>
+      <pubDate>Tue, 06 Aug 2019 14:32:55 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/tags/css/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>知识点总结</title>
+      <link>https://mannuan.github.io/tags/%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/</link>
+      <pubDate>Tue, 06 Aug 2019 14:20:17 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/tags/%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>absolute</title>
+      <link>https://mannuan.github.io/tags/absolute/</link>
+      <pubDate>Tue, 06 Aug 2019 14:10:30 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/tags/absolute/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>fixed</title>
+      <link>https://mannuan.github.io/tags/fixed/</link>
+      <pubDate>Tue, 06 Aug 2019 14:10:30 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/tags/fixed/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>position</title>
+      <link>https://mannuan.github.io/tags/position/</link>
+      <pubDate>Tue, 06 Aug 2019 14:10:30 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/tags/position/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>relative</title>
+      <link>https://mannuan.github.io/tags/relative/</link>
+      <pubDate>Tue, 06 Aug 2019 14:10:30 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/tags/relative/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>static</title>
+      <link>https://mannuan.github.io/tags/static/</link>
+      <pubDate>Tue, 06 Aug 2019 14:10:30 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/tags/static/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>flex布局</title>
+      <link>https://mannuan.github.io/tags/flex%E5%B8%83%E5%B1%80/</link>
+      <pubDate>Tue, 06 Aug 2019 14:06:27 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/tags/flex%E5%B8%83%E5%B1%80/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>display</title>
+      <link>https://mannuan.github.io/tags/display/</link>
+      <pubDate>Tue, 06 Aug 2019 14:01:48 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/tags/display/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>inline-block</title>
+      <link>https://mannuan.github.io/tags/inline-block/</link>
+      <pubDate>Tue, 06 Aug 2019 14:01:48 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/tags/inline-block/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>none</title>
+      <link>https://mannuan.github.io/tags/none/</link>
+      <pubDate>Tue, 06 Aug 2019 14:01:48 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/tags/none/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>前端开发</title>
+      <link>https://mannuan.github.io/tags/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/</link>
+      <pubDate>Sun, 04 Aug 2019 21:06:14 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/tags/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>简答题</title>
+      <link>https://mannuan.github.io/tags/%E7%AE%80%E7%AD%94%E9%A2%98/</link>
+      <pubDate>Sun, 04 Aug 2019 21:06:14 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/tags/%E7%AE%80%E7%AD%94%E9%A2%98/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>网易笔试</title>
+      <link>https://mannuan.github.io/tags/%E7%BD%91%E6%98%93%E7%AC%94%E8%AF%95/</link>
+      <pubDate>Sun, 04 Aug 2019 21:06:14 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/tags/%E7%BD%91%E6%98%93%E7%AC%94%E8%AF%95/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>jpegoptim</title>
+      <link>https://mannuan.github.io/tags/jpegoptim/</link>
+      <pubDate>Sun, 04 Aug 2019 15:48:08 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/tags/jpegoptim/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>optipng</title>
+      <link>https://mannuan.github.io/tags/optipng/</link>
+      <pubDate>Sun, 04 Aug 2019 15:48:08 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/tags/optipng/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>图片压缩</title>
+      <link>https://mannuan.github.io/tags/%E5%9B%BE%E7%89%87%E5%8E%8B%E7%BC%A9/</link>
+      <pubDate>Sun, 04 Aug 2019 15:48:08 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/tags/%E5%9B%BE%E7%89%87%E5%8E%8B%E7%BC%A9/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>cuda10</title>
+      <link>https://mannuan.github.io/tags/cuda10/</link>
+      <pubDate>Sat, 03 Aug 2019 21:59:30 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/tags/cuda10/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ubuntu16.04</title>
+      <link>https://mannuan.github.io/tags/ubuntu16.04/</link>
+      <pubDate>Sat, 03 Aug 2019 21:59:30 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/tags/ubuntu16.04/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>shadowsocks</title>
+      <link>https://mannuan.github.io/tags/shadowsocks/</link>
+      <pubDate>Sat, 03 Aug 2019 21:49:03 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/tags/shadowsocks/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sslocal</title>
+      <link>https://mannuan.github.io/tags/sslocal/</link>
+      <pubDate>Sat, 03 Aug 2019 21:49:03 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/tags/sslocal/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>bash</title>
+      <link>https://mannuan.github.io/tags/bash/</link>
+      <pubDate>Thu, 01 Aug 2019 14:02:43 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/tags/bash/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>linux</title>
+      <link>https://mannuan.github.io/tags/linux/</link>
+      <pubDate>Thu, 01 Aug 2019 14:02:43 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mac</title>
+      <link>https://mannuan.github.io/tags/mac/</link>
+      <pubDate>Thu, 01 Aug 2019 14:02:43 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/tags/mac/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>rm</title>
+      <link>https://mannuan.github.io/tags/rm/</link>
+      <pubDate>Thu, 01 Aug 2019 14:02:43 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/tags/rm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>复制屏幕</title>
+      <link>https://mannuan.github.io/tags/%E5%A4%8D%E5%88%B6%E5%B1%8F%E5%B9%95/</link>
+      <pubDate>Thu, 01 Aug 2019 09:52:17 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/tags/%E5%A4%8D%E5%88%B6%E5%B1%8F%E5%B9%95/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>vscode</title>
@@ -304,15 +583,6 @@
       <pubDate>Thu, 11 Jul 2019 10:32:24 +0800</pubDate>
       
       <guid>https://mannuan.github.io/tags/markdown/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Shadowsocks</title>
-      <link>https://mannuan.github.io/tags/shadowsocks/</link>
-      <pubDate>Wed, 10 Jul 2019 22:15:01 +0800</pubDate>
-      
-      <guid>https://mannuan.github.io/tags/shadowsocks/</guid>
       <description></description>
     </item>
     
@@ -848,15 +1118,6 @@
     </item>
     
     <item>
-      <title>MAC</title>
-      <link>https://mannuan.github.io/tags/mac/</link>
-      <pubDate>Mon, 01 Jul 2019 20:42:46 +0800</pubDate>
-      
-      <guid>https://mannuan.github.io/tags/mac/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>截图</title>
       <link>https://mannuan.github.io/tags/%E6%88%AA%E5%9B%BE/</link>
       <pubDate>Mon, 01 Jul 2019 20:42:46 +0800</pubDate>
@@ -1199,15 +1460,6 @@
     </item>
     
     <item>
-      <title>css</title>
-      <link>https://mannuan.github.io/tags/css/</link>
-      <pubDate>Sat, 22 Jun 2019 15:13:59 +0800</pubDate>
-      
-      <guid>https://mannuan.github.io/tags/css/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>val</title>
       <link>https://mannuan.github.io/tags/val/</link>
       <pubDate>Sat, 22 Jun 2019 09:27:53 +0800</pubDate>
@@ -1276,15 +1528,6 @@
       <pubDate>Wed, 19 Jun 2019 22:31:31 +0800</pubDate>
       
       <guid>https://mannuan.github.io/tags/anki/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>linux</title>
-      <link>https://mannuan.github.io/tags/linux/</link>
-      <pubDate>Mon, 17 Jun 2019 14:56:15 +0800</pubDate>
-      
-      <guid>https://mannuan.github.io/tags/linux/</guid>
       <description></description>
     </item>
     

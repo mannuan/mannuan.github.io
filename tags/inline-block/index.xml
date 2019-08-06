@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>inline-block on mannuan</title>
+    <link>https://mannuan.github.io/tags/inline-block/</link>
+    <description>Recent content in inline-block on mannuan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 06 Aug 2019 14:01:48 +0800</lastBuildDate>
+    
+	<atom:link href="https://mannuan.github.io/tags/inline-block/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>如何理解Display：None，Block，Inline，Inline-Block</title>
+      <link>https://mannuan.github.io/post/20190806140147/</link>
+      <pubDate>Tue, 06 Aug 2019 14:01:48 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190806140147/</guid>
+      <description>链接</description>
+    </item>
+    
+  </channel>
+</rss>

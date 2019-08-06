@@ -5,10 +5,131 @@
     <link>https://mannuan.github.io/post/</link>
     <description>Recent content in Blog on mannuan</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 01 Aug 2019 09:09:20 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 06 Aug 2019 14:35:09 +0800</lastBuildDate>
     
 	<atom:link href="https://mannuan.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>行内元素和块级元素有哪些？</title>
+      <link>https://mannuan.github.io/post/20190806143509/</link>
+      <pubDate>Tue, 06 Aug 2019 14:35:09 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190806143509/</guid>
+      <description>块元素(block element)  address - 地址 blockquote - 块引用 center - 举中对齐块 dir - 目录列表 div - 常用块级容易，也是css layout的主要标签 dl - 定义列表 fieldset - form控制组 form - 交互表单 h1 - 大标题 h2 - 副标题 h3 - 3级标题 h4 - 4级标题 h5 - 5级标题 h6 - 6级标题 hr - 水平分隔线 isindex - input prompt menu - 菜单列表 noframes - frames可选内容，（对于不支持frame的浏览器显示此区块内容 noscript - 可选脚本内容（对于不支持script的浏览器显示此内容） ol - 排序表单 p - 段落 pre - 格式化文本 table - 表格 ul - 非排序列表  内联元素(inline element)  a - 锚点 abbr - 缩写 acronym - 首字 b - 粗体(不推荐) bdo - bidi override big - 大字体 br - 换行 cite - 引用 code - 计算机代码(在引用源码的时候需要) dfn - 定义字段 em - 强调 font - 字体设定(不推荐) i - 斜体 img - 图片 input - 输入框 kbd - 定义键盘文本 label - 表格标签 q - 短引用 s - 中划线(不推荐) samp - 定义范例计算机代码 select - 项目选择 small - 小字体文本 span - 常用内联容器，定义文本内区块 strike - 中划线 strong - 粗体强调 sub - 下标 sup - 上标 textarea - 多行文本输入框 tt - 电传文本 u - 下划线 var - 定义变量  可变元素  可变元素为根据上下文语境决定该元素为块元素或者内联元素。</description>
+    </item>
+    
+    <item>
+      <title>box-shadow</title>
+      <link>https://mannuan.github.io/post/20190806143255/</link>
+      <pubDate>Tue, 06 Aug 2019 14:32:55 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190806143255/</guid>
+      <description>链接</description>
+    </item>
+    
+    <item>
+      <title>前端面试总结</title>
+      <link>https://mannuan.github.io/post/20190806142017/</link>
+      <pubDate>Tue, 06 Aug 2019 14:20:17 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190806142017/</guid>
+      <description> 2018年  链接  </description>
+    </item>
+    
+    <item>
+      <title>CSS-position:static/relative/absolute/fixed定位</title>
+      <link>https://mannuan.github.io/post/20190806141030/</link>
+      <pubDate>Tue, 06 Aug 2019 14:10:30 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190806141030/</guid>
+      <description> 链接
+关于position:absolute的几篇文章  链接1 链接2 链接3  </description>
+    </item>
+    
+    <item>
+      <title> flex 布局</title>
+      <link>https://mannuan.github.io/post/20190806140626/</link>
+      <pubDate>Tue, 06 Aug 2019 14:06:27 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190806140626/</guid>
+      <description>链接</description>
+    </item>
+    
+    <item>
+      <title>如何理解Display：None，Block，Inline，Inline-Block</title>
+      <link>https://mannuan.github.io/post/20190806140147/</link>
+      <pubDate>Tue, 06 Aug 2019 14:01:48 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190806140147/</guid>
+      <description>链接</description>
+    </item>
+    
+    <item>
+      <title>下拉菜单</title>
+      <link>https://mannuan.github.io/post/20190804210614/</link>
+      <pubDate>Sun, 04 Aug 2019 21:06:14 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190804210614/</guid>
+      <description>题目描述 如下图所示，请实现如下功能，当鼠标移到黑底客户服务区块后，出来白底卡片内容，鼠标移出后，卡片内容消失，并且当鼠标在白色部分上移动时白色框不能消失。
+纯css的解决方案 链接</description>
+    </item>
+    
+    <item>
+      <title>数组去重</title>
+      <link>https://mannuan.github.io/post/20190804155523/</link>
+      <pubDate>Sun, 04 Aug 2019 15:55:23 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190804155523/</guid>
+      <description>题目描述 设计一个uniquity函数，可以根据用户自定义的重复判定规则进行数组元素去重，举个例子：
+//情况一: let arr0 = [1,1,1,0,5,6]; uniqueify(arr0); //输出：[1,0,5,6]  //情况二: let arr1 = [ {id: 1, name: &amp;#34;xx&amp;#34;}, {id: 1, name: &amp;#34;xx&amp;#34;}, {id: 2, name: &amp;#34;xx&amp;#34;}, {id: 1, name: &amp;#34;xx&amp;#34;}, {id: 1, name: &amp;#34;xx&amp;#34;}, ]; uniqueify(arr1, a=&amp;gt;a.id); //假如这里的去重规则依据为id //输出 [ {id: 1, name: &amp;#34;xx&amp;#34;}, {id: 2, name: &amp;#34;xx&amp;#34;}, ]; //情况三  let arr2 = [ {name: &amp;#39;xx&amp;#39;, sex: &amp;#39;male&amp;#39;}, {name: &amp;#39;xx&amp;#39;, sex: &amp;#39;female&amp;#39;}, {name: &amp;#39;xx&amp;#39;, sex: &amp;#39;male&amp;#39;}, {name: &amp;#39;aa&amp;#39;, sex: &amp;#39;male&amp;#39;}, {name: &amp;#39;aa&amp;#39;, sex: &amp;#39;male&amp;#39;}, ] uniqueify(arr2, a=&amp;gt;(a.</description>
+    </item>
+    
+    <item>
+      <title>linux和mac下图片压缩工具</title>
+      <link>https://mannuan.github.io/post/20190804154807/</link>
+      <pubDate>Sun, 04 Aug 2019 15:48:08 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190804154807/</guid>
+      <description>有损压缩(jpegoptim) mac brew install jpegoptim linux sudo apt-get install jpegoptim 使用举例 jpegoptim -m80 old/test.jpg --dest new #-m 后的 80 代表压缩品质 改变图片尺寸(optipng) 暂未使用，期待后续更新&amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>Ubuntu16.04安装CUDA10</title>
+      <link>https://mannuan.github.io/post/20190803215930/</link>
+      <pubDate>Sat, 03 Aug 2019 21:59:30 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190803215930/</guid>
+      <description>sudo apt-get install gnupg-curl wget https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64/cuda-repo-ubuntu1604_10.0.130-1_amd64.deb sudo dpkg -i cuda-repo-ubuntu1604_10.0.130-1_amd64.deb sudo apt-key adv --fetch-keys https://developer.download.nvidia.com/compute/cuda/repos/ubuntu1604/x86_64/7fa2af80.pub sudo apt-get update wget http://developer.download.nvidia.com/compute/machine-learning/repos/ubuntu1604/x86_64/nvidia-machine-learning-repo-ubuntu1604_1.0.0-1_amd64.deb sudo apt install ./nvidia-machine-learning-repo-ubuntu1604_1.0.0-1_amd64.deb sudo apt-get update sudo mkdir /usr/lib/nvidia sudo apt-get install --no-install-recommends nvidia-410 sudo apt-get install --no-install-recommends cuda-10-0 libcudnn7=7.4.1.5-1+cuda10.0 libcudnn7-dev=7.4.1.5-1+cuda10.0 sudo apt-get update sudo apt-get install nvinfer-runtime-trt-repo-ubuntu1604-5.0.2-ga-cuda10.0 sudo apt-get update sudo apt-get install -y --no-install-recommends libnvinfer5=5.0.2-1+cuda10.0 sudo apt-get install -y --no-install-recommends libnvinfer-dev=5.0.2-1+cuda10.0 cudnn离线地址 链接</description>
+    </item>
+    
+    <item>
+      <title>shadowsocks的sslocal的使用</title>
+      <link>https://mannuan.github.io/post/20190803214903/</link>
+      <pubDate>Sat, 03 Aug 2019 21:49:03 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190803214903/</guid>
+      <description>安装python-shadowsocks pip install shadowsocks 配置文件(config.json) { &amp;#34;server&amp;#34;:&amp;#34;ip&amp;#34;, &amp;#34;server_port&amp;#34;:&amp;#34;port&amp;#34;, &amp;#34;local_address&amp;#34;: &amp;#34;127.0.0.1&amp;#34;, &amp;#34;local_port&amp;#34;:1080, &amp;#34;password&amp;#34;:&amp;#34;password&amp;#34;, &amp;#34;timeout&amp;#34;:300, &amp;#34;method&amp;#34;:&amp;#34;aes-256-cfb&amp;#34;, &amp;#34;fast_open&amp;#34;: false, &amp;#34;workers&amp;#34;: 1 } 运行 sslocal -c /etc/shadowsocks/config.json 启动报错  undefined symbol EVP_CIPHER_CTX_cleanup
+ 打开openssl.py文件 vim python路径/dist-packages/shadowsocks/crypto/openssl.py 修改 把文件中的cleanup改为reset</description>
+    </item>
+    
+    <item>
+      <title>安全的rm</title>
+      <link>https://mannuan.github.io/post/20190801140243/</link>
+      <pubDate>Thu, 01 Aug 2019 14:02:43 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190801140243/</guid>
+      <description>安全的删除工具shell-safe-rm</description>
+    </item>
+    
+    <item>
+      <title>mac复制屏幕</title>
+      <link>https://mannuan.github.io/post/20190801095217/</link>
+      <pubDate>Thu, 01 Aug 2019 09:52:17 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190801095217/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>vscode常用设置</title>
@@ -16,7 +137,17 @@
       <pubDate>Thu, 01 Aug 2019 09:09:20 +0800</pubDate>
       
       <guid>https://mannuan.github.io/post/20190801090920/</guid>
-      <description> 设置中文环境  刚开始的时候vscode默认是英文环境 \(\Uparrow\) + command + P 输入configure language 点击zh-cn  </description>
+      <description> 设置中文环境  刚开始的时候vscode默认是英文环境 \(\Uparrow\) + command + P 输入configure language 点击zh-cn  打开新的文件会覆盖旧的窗口  这是因为你单击文件名的缘故，这个是“预览模式”，所以再单击其他文件时，会覆盖当前打开的文件。
+ 如果你要每次都打开新tab，那就双击文件名好了。这个逻辑和sublime是一样的。
+预览模式是现在各类编辑器的默认功能，如果你实在不喜欢，可以关掉的，看下面： 给你配置settings.json里加一条：
+{ ... &amp;#34;workbench.editor.enablePreview&amp;#34;: false ... } settings.json，snippets和locale.json的所在的文件目录 在~/Library/Application Support/Code/User/下面 &amp;gt; 这样以后遇到vscode发生崩溃的情况，就可以先备份一下配置文件，然后在重装vscode
+code-runner默认在终端中运行代码  在code窗口无法运行 在setting.json中配置
+ { ... &amp;#34;code-runner.runInTerminal&amp;#34;: true, ... } 取消conda自动激活环境  由于code窗口只读不可以编辑，所以无法做到系统输入，改变了一下code-runner的运行方法，使用终端来接收输入。但是又遇到每次运行代码都自动激活conda，这使得对于外部输入的代码运行变得很麻烦必须运行两次代码
+ 为了取消这个自动激活，我们可以在settings.json文件中输入：
+{ ... &amp;#34;python.terminal.activateEnvironment&amp;#34;: false, ... } 至于，这个全局的修改方法就是在终端输入：
+conda config --set auto_activate_base false 快速打开文件  直接在vscode中打开
+ 在终端中输入
+open 文件路径</description>
     </item>
     
     <item>
@@ -174,11 +305,12 @@ HTTP通信过程：根据URL查询DNS、查找服务器、建立TCP连接、发�
       <pubDate>Sat, 13 Jul 2019 10:57:21 +0800</pubDate>
       
       <guid>https://mannuan.github.io/post/20190713105721/</guid>
-      <description> 代码片段效率工具-snippet 查看教程snippet，让你编码效率翻倍
+      <description>代码片段效率工具-snippet 查看教程snippet，让你编码效率翻倍
 微型的http服务器-Express  Hosts current worksapce with Express web server. - Compulim
   在商店里面搜索express 安装完毕以后，快捷键Shift + command + P，输入Host Current Workspace with ... 点击，就可开启了一个http服务器 之后，在浏览器输入文件相对于vscode的绝对路径  &amp;gt; 快一点的方法就是对着文件右键，选择Copy Relative Path  最后，就可以看到你写的网页了  python代码自动补全 { &amp;#34;python.autoComplete.extraPaths&amp;#34;: [ &amp;#34;包的绝对路径， 通常名为site-packages&amp;#34;, &amp;#34;脚本的路径，比如pip,python等命令行脚本&amp;#34;, ], } 文件-&amp;gt;设置-&amp;gt;首选项，搜索python.jediEnabled,去掉前面的√， 使用Microsoft python analysis engine
 python代码静态检查工具-pylint pip install pylint yapf 默认设置
-{ &amp;#34;python.linting.enabled&amp;#34;: true, &amp;#34;python.linting.lintOnSave&amp;#34;: true, &amp;#34;python.linting.pylintEnabled&amp;#34;: true }</description>
+{ &amp;#34;python.linting.enabled&amp;#34;: true, &amp;#34;python.linting.lintOnSave&amp;#34;: true, &amp;#34;python.linting.pylintEnabled&amp;#34;: true } java环境安装（针对于acm）  前提已经配置好了jdk环境变量, 没有必要安装maven
+ 需要安装的插件有:</description>
     </item>
     
     <item>
@@ -1987,12 +2119,12 @@ var script = document.createElement(&amp;lsquo;script&amp;rsquo;); var textNode 
     </item>
     
     <item>
-      <title>vs code快捷键大全</title>
+      <title>vscode快捷键大全</title>
       <link>https://mannuan.github.io/post/20190528191941/</link>
       <pubDate>Tue, 28 May 2019 19:19:41 +0800</pubDate>
       
       <guid>https://mannuan.github.io/post/20190528191941/</guid>
-      <description>名称 快捷键     上下移动行 Alt(option) + 上下键   删除行 Ctrl(command) + Shift( \( \Uparrow \) ) + K    持续更新中&amp;hellip;</description>
+      <description>名称 快捷键     上下移动行 Alt(option) + 上下键   删除行 \( \Uparrow \) + command + K   打开输出窗口 \( \Uparrow \) + command + U    持续更新中&amp;hellip;</description>
     </item>
     
     <item>

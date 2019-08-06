@@ -5,10 +5,19 @@
     <link>https://mannuan.github.io/tags/linux/</link>
     <description>Recent content in linux on mannuan</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 17 Jun 2019 14:56:15 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 01 Aug 2019 14:02:43 +0800</lastBuildDate>
     
 	<atom:link href="https://mannuan.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>安全的rm</title>
+      <link>https://mannuan.github.io/post/20190801140243/</link>
+      <pubDate>Thu, 01 Aug 2019 14:02:43 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190801140243/</guid>
+      <description>安全的删除工具shell-safe-rm</description>
+    </item>
     
     <item>
       <title>linux 和windows下使用ffmpeg将mkv转换为mp4</title>

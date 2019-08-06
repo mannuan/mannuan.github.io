@@ -16,7 +16,17 @@
       <pubDate>Thu, 01 Aug 2019 09:09:20 +0800</pubDate>
       
       <guid>https://mannuan.github.io/post/20190801090920/</guid>
-      <description> 设置中文环境  刚开始的时候vscode默认是英文环境 \(\Uparrow\) + command + P 输入configure language 点击zh-cn  </description>
+      <description> 设置中文环境  刚开始的时候vscode默认是英文环境 \(\Uparrow\) + command + P 输入configure language 点击zh-cn  打开新的文件会覆盖旧的窗口  这是因为你单击文件名的缘故，这个是“预览模式”，所以再单击其他文件时，会覆盖当前打开的文件。
+ 如果你要每次都打开新tab，那就双击文件名好了。这个逻辑和sublime是一样的。
+预览模式是现在各类编辑器的默认功能，如果你实在不喜欢，可以关掉的，看下面： 给你配置settings.json里加一条：
+{ ... &amp;#34;workbench.editor.enablePreview&amp;#34;: false ... } settings.json，snippets和locale.json的所在的文件目录 在~/Library/Application Support/Code/User/下面 &amp;gt; 这样以后遇到vscode发生崩溃的情况，就可以先备份一下配置文件，然后在重装vscode
+code-runner默认在终端中运行代码  在code窗口无法运行 在setting.json中配置
+ { ... &amp;#34;code-runner.runInTerminal&amp;#34;: true, ... } 取消conda自动激活环境  由于code窗口只读不可以编辑，所以无法做到系统输入，改变了一下code-runner的运行方法，使用终端来接收输入。但是又遇到每次运行代码都自动激活conda，这使得对于外部输入的代码运行变得很麻烦必须运行两次代码
+ 为了取消这个自动激活，我们可以在settings.json文件中输入：
+{ ... &amp;#34;python.terminal.activateEnvironment&amp;#34;: false, ... } 至于，这个全局的修改方法就是在终端输入：
+conda config --set auto_activate_base false 快速打开文件  直接在vscode中打开
+ 在终端中输入
+open 文件路径</description>
     </item>
     
     <item>
@@ -25,11 +35,12 @@
       <pubDate>Sat, 13 Jul 2019 10:57:21 +0800</pubDate>
       
       <guid>https://mannuan.github.io/post/20190713105721/</guid>
-      <description> 代码片段效率工具-snippet 查看教程snippet，让你编码效率翻倍
+      <description>代码片段效率工具-snippet 查看教程snippet，让你编码效率翻倍
 微型的http服务器-Express  Hosts current worksapce with Express web server. - Compulim
   在商店里面搜索express 安装完毕以后，快捷键Shift + command + P，输入Host Current Workspace with ... 点击，就可开启了一个http服务器 之后，在浏览器输入文件相对于vscode的绝对路径  &amp;gt; 快一点的方法就是对着文件右键，选择Copy Relative Path  最后，就可以看到你写的网页了  python代码自动补全 { &amp;#34;python.autoComplete.extraPaths&amp;#34;: [ &amp;#34;包的绝对路径， 通常名为site-packages&amp;#34;, &amp;#34;脚本的路径，比如pip,python等命令行脚本&amp;#34;, ], } 文件-&amp;gt;设置-&amp;gt;首选项，搜索python.jediEnabled,去掉前面的√， 使用Microsoft python analysis engine
 python代码静态检查工具-pylint pip install pylint yapf 默认设置
-{ &amp;#34;python.linting.enabled&amp;#34;: true, &amp;#34;python.linting.lintOnSave&amp;#34;: true, &amp;#34;python.linting.pylintEnabled&amp;#34;: true }</description>
+{ &amp;#34;python.linting.enabled&amp;#34;: true, &amp;#34;python.linting.lintOnSave&amp;#34;: true, &amp;#34;python.linting.pylintEnabled&amp;#34;: true } java环境安装（针对于acm）  前提已经配置好了jdk环境变量, 没有必要安装maven
+ 需要安装的插件有:</description>
     </item>
     
     <item>
@@ -44,12 +55,12 @@ Snippet怎么用 先上一个Demo
     </item>
     
     <item>
-      <title>vs code快捷键大全</title>
+      <title>vscode快捷键大全</title>
       <link>https://mannuan.github.io/post/20190528191941/</link>
       <pubDate>Tue, 28 May 2019 19:19:41 +0800</pubDate>
       
       <guid>https://mannuan.github.io/post/20190528191941/</guid>
-      <description>名称 快捷键     上下移动行 Alt(option) + 上下键   删除行 Ctrl(command) + Shift( \( \Uparrow \) ) + K    持续更新中&amp;hellip;</description>
+      <description>名称 快捷键     上下移动行 Alt(option) + 上下键   删除行 \( \Uparrow \) + command + K   打开输出窗口 \( \Uparrow \) + command + U    持续更新中&amp;hellip;</description>
     </item>
     
   </channel>

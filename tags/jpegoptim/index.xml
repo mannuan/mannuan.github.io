@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>jpegoptim on mannuan</title>
+    <link>https://mannuan.github.io/tags/jpegoptim/</link>
+    <description>Recent content in jpegoptim on mannuan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 04 Aug 2019 15:48:08 +0800</lastBuildDate>
+    
+	<atom:link href="https://mannuan.github.io/tags/jpegoptim/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>linux和mac下图片压缩工具</title>
+      <link>https://mannuan.github.io/post/20190804154807/</link>
+      <pubDate>Sun, 04 Aug 2019 15:48:08 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190804154807/</guid>
+      <description>有损压缩(jpegoptim) mac brew install jpegoptim linux sudo apt-get install jpegoptim 使用举例 jpegoptim -m80 old/test.jpg --dest new #-m 后的 80 代表压缩品质 改变图片尺寸(optipng) 暂未使用，期待后续更新&amp;hellip;</description>
+    </item>
+    
+  </channel>
+</rss>

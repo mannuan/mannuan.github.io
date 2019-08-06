@@ -5,10 +5,73 @@
     <link>https://mannuan.github.io/categories/</link>
     <description>Recent content in Categories on mannuan</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 01 Aug 2019 09:09:20 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 06 Aug 2019 14:35:09 +0800</lastBuildDate>
     
 	<atom:link href="https://mannuan.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>前端开发</title>
+      <link>https://mannuan.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/</link>
+      <pubDate>Tue, 06 Aug 2019 14:35:09 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>布局题</title>
+      <link>https://mannuan.github.io/categories/%E5%B8%83%E5%B1%80%E9%A2%98/</link>
+      <pubDate>Sun, 04 Aug 2019 21:06:14 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/categories/%E5%B8%83%E5%B1%80%E9%A2%98/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>编程题</title>
+      <link>https://mannuan.github.io/categories/%E7%BC%96%E7%A8%8B%E9%A2%98/</link>
+      <pubDate>Sun, 04 Aug 2019 15:55:23 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/categories/%E7%BC%96%E7%A8%8B%E9%A2%98/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>linux</title>
+      <link>https://mannuan.github.io/categories/linux/</link>
+      <pubDate>Sun, 04 Aug 2019 15:48:08 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/categories/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mac</title>
+      <link>https://mannuan.github.io/categories/mac/</link>
+      <pubDate>Sun, 04 Aug 2019 15:48:08 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/categories/mac/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>翻墙</title>
+      <link>https://mannuan.github.io/categories/%E7%BF%BB%E5%A2%99/</link>
+      <pubDate>Sat, 03 Aug 2019 21:49:03 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/categories/%E7%BF%BB%E5%A2%99/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>shell</title>
+      <link>https://mannuan.github.io/categories/shell/</link>
+      <pubDate>Thu, 01 Aug 2019 14:02:43 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/categories/shell/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>ide</title>
@@ -38,29 +101,11 @@
     </item>
     
     <item>
-      <title>mac</title>
-      <link>https://mannuan.github.io/categories/mac/</link>
-      <pubDate>Tue, 23 Jul 2019 09:00:32 +0800</pubDate>
-      
-      <guid>https://mannuan.github.io/categories/mac/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>论文</title>
       <link>https://mannuan.github.io/categories/%E8%AE%BA%E6%96%87/</link>
       <pubDate>Mon, 22 Jul 2019 09:07:49 +0800</pubDate>
       
       <guid>https://mannuan.github.io/categories/%E8%AE%BA%E6%96%87/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>前端开发</title>
-      <link>https://mannuan.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/</link>
-      <pubDate>Wed, 17 Jul 2019 22:02:31 +0800</pubDate>
-      
-      <guid>https://mannuan.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/</guid>
       <description></description>
     </item>
     
@@ -74,29 +119,11 @@
     </item>
     
     <item>
-      <title>linux</title>
-      <link>https://mannuan.github.io/categories/linux/</link>
-      <pubDate>Thu, 11 Jul 2019 15:38:14 +0800</pubDate>
-      
-      <guid>https://mannuan.github.io/categories/linux/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>vscode</title>
       <link>https://mannuan.github.io/categories/vscode/</link>
       <pubDate>Thu, 11 Jul 2019 10:35:32 +0800</pubDate>
       
       <guid>https://mannuan.github.io/categories/vscode/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>翻墙</title>
-      <link>https://mannuan.github.io/categories/%E7%BF%BB%E5%A2%99/</link>
-      <pubDate>Wed, 10 Jul 2019 22:15:01 +0800</pubDate>
-      
-      <guid>https://mannuan.github.io/categories/%E7%BF%BB%E5%A2%99/</guid>
       <description></description>
     </item>
     

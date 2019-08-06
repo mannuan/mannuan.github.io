@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>雪碧图</title>
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.0.js">
+  </script>
+  <style>
+    ::-webkit-scrollbar  
+    {  
+      width: 10px;    
+      background-color: #fff;  
+    }  
+
+    /*定义滚动条轨道 内阴影+圆角*/  
+    ::-webkit-scrollbar-track {  
+      -webkit-box-shadow: inset 0 0 6px rba(0,0,0,0.3);  
+      border-radius: 10px;  
+      background-color: lightgray;  
+    }  
+
+    /*定义滑块 内阴影+圆角*/  
+    ::-webkit-scrollbar-thumb {  
+      border-radius: 10px;  
+      -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);  
+      background-color: #cccccc;  
+    }  
+    .sprites_box{
+      margin-top: 50px;
+      height: 520px;
+    }
+    .img_box{
+      float: left;
+      width: 412px;
+      height: 500px;
+      overflow: auto;
+      border: 1px solid #cccccc;
+    }
+    .imgs{
+      padding: 5px;
+      width: 400px;
+      height: 400px;
+      box-sizing: border-box;
+    }
+    .img{
+      float: left;
+      margin: 5px 0 0 5px;
+    }
+    .imgs::after{
+      content: '';
+      clear: both;
+      width: 0;
+      height: 0;
+    }
+    .sprites{
+      float: left;
+      width: 412px;
+      height: 500px;
+      margin: 0 20px;
+      overflow: auto;
+      border: 1px solid #cccccc;
+    }
+    #canvas{
+      background-color: transparent;
+    }
+    .css_sprites{
+      float: left;
+      width: 400px;
+      height: 500px;
+      overflow: auto;
+      border: 1px solid #cccccc;
+    }
+    .sprites_box::after{
+      content: '';
+      clear: both;
+      width: 0;
+      height: 0;
+    }
+    .operate_box{
+      height: 40px;
+    }
+    .selectImg{
+      position: relative;
+      display: inline-block;
+      width: 72px;
+      height: 30px;
+      line-height: 30px;
+      text-align: center;
+      font-size: 12px;
+      border: 1px solid #cccccc;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .selectImgInput{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 72px;
+      height: 30px;
+      opacity: 0;
+      font-size: 12px;
+      border-radius: 4px;
+    }
+    .product{
+      display: inline-block;
+      width: 72px;
+      height: 30px;
+      line-height: 30px;
+      text-align: center;
+      font-size: 12px;
+      border: 1px solid #cccccc;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .download{
+      display: inline-block;
+      width: 72px;
+      height: 30px;
+      line-height: 30px;
+      text-align: center;
+      font-size: 12px;
+      border: 1px solid #cccccc;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <div class="sprites_box">
+      <div class="img_box">
+        <div class="imgs">
+
+        </div>
+      </div>
+      <div class="sprites">
+        <canvas id="canvas"></canvas>
+      </div>
+      <div class="css_sprites">
+  
+      </div>
+    </div>
+    <div class="operate_box">
+      <div class="selectImg">
+        <span>上传图片</span>
+        <input class="selectImgInput" type="file" value="上传图片" multiple>
+      </div>
+      <div class="product">生成雪碧图</div>
+      <div class="download">下载雪碧图</div>
+    </div>
+  </div>
+  <script  type="text/javascript">
+  $(document).ready(function(){
+    // 上传预览图片
+    $(".selectImgInput").change(function(e) {
+      for(let i=0;i<e.target.files.length;i++) {
+        let file = e.target.files.item(i);
+        //允许文件MIME类型 也可以在input标签中指定accept属性
+        //console.log(/^image\/.*$/i.test(file.type));
+        if(!(/^image\/.*$/i.test(file.type))) {
+          continue;      //不是图片 就跳出这一次循环
+        }
+        //实例化FileReader API
+        var freader = new FileReader();
+        let img = document.createElement('img');
+        freader.readAsDataURL(file);
+        freader.onload=function(e) {
+          // var img = '<img src="'+e.target.result+'" class="img" alt="'+file.name.split(".")[0]+ '" />';
+          img.src = e.target.result
+          img.alt = file.name.split(".")[0]
+          img.className = 'img'
+          $(".imgs").append(img);
+        }
+        freader.onloadend = function(e) {
+          if($('.imgs').eq(0).height() < img.offsetTop + img.height) {
+            $('.imgs').eq(0).height(img.offsetTop + img.height)
+          }
+        }
+      }
+    })
+
+    // 生成雪碧图
+    $(".product").click(function() {
+      var drawW = $('.imgs')[0].offsetLeft;;
+      var drawH = $('.imgs')[0].offsetTop;
+      var canvas = document.getElementById("canvas")
+      var ctx = canvas.getContext('2d')
+      console.log($('.imgs').eq(0).height())
+      var width = canvas.width = 400;
+      var height = canvas.height = $('.imgs').eq(0).height() + 10;
+      ctx.fillStyle = 'transparent';
+      ctx.fillRect(0,0,width,height);
+      var len = $('.img').length;
+      var sccStyle = `
+.sprites{
+  display: inline-block;
+  backGround: url(./sprites.png);
+}
+`;
+      for(let i=0;i<len;i++) {
+        var img = $('.img')[i]
+        // console.log(img)
+        var x = $('.img')[i].offsetLeft - drawW;
+        var y = $('.img')[i].offsetTop - drawH;
+        ctx.drawImage(img,0,0, img.width, img.height, x, y, img.width, img.height);
+        var className = img.alt
+        sccStyle += `
+.sp_${className}{
+  width: ${img.width}px;
+  heihgt: ${img.height}px;
+  background-position: ${x}px ${y}px;
+}
+`
+      }
+      html = `
+<pre>
+${sccStyle}
+</pre>
+`
+      $(".css_sprites").html(html)
+    })
+
+    // 下载雪碧图
+    $('.download').click(function(e) {
+      var canvas = document.getElementById("canvas")
+      var MIME_TYPE = "image/png";
+      var imgURL = canvas.toDataURL(MIME_TYPE);
+
+      var dlLink = document.createElement('a')
+      dlLink.download = 'sprites';
+      dlLink.href = imgURL;
+      dlLink.dataset.downloadurl = [MIME_TYPE, dlLink.download, dlLink.href].join(':');
+
+      document.body.appendChild(dlLink);
+      dlLink.click();
+      document.body.removeChild(dlLink);
+    })
+  })
+  </script>
+</body>
+</html>

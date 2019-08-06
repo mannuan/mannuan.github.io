@@ -1,14 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>MAC on mannuan</title>
+    <title>mac on mannuan</title>
     <link>https://mannuan.github.io/tags/mac/</link>
-    <description>Recent content in MAC on mannuan</description>
+    <description>Recent content in mac on mannuan</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 01 Jul 2019 20:42:46 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 01 Aug 2019 14:02:43 +0800</lastBuildDate>
     
 	<atom:link href="https://mannuan.github.io/tags/mac/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>安全的rm</title>
+      <link>https://mannuan.github.io/post/20190801140243/</link>
+      <pubDate>Thu, 01 Aug 2019 14:02:43 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190801140243/</guid>
+      <description>安全的删除工具shell-safe-rm</description>
+    </item>
     
     <item>
       <title>Mac截图的相关设置</title>

@@ -10,7 +10,6 @@
 
 class Solution:
     def jumpFloor(self, number):
-        # write code here
         if number == 0:
             return number
         f = 1

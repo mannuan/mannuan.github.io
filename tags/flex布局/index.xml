@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>flex布局 on mannuan</title>
+    <link>https://mannuan.github.io/tags/flex%E5%B8%83%E5%B1%80/</link>
+    <description>Recent content in flex布局 on mannuan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 06 Aug 2019 14:06:27 +0800</lastBuildDate>
+    
+	<atom:link href="https://mannuan.github.io/tags/flex%E5%B8%83%E5%B1%80/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title> flex 布局</title>
+      <link>https://mannuan.github.io/post/20190806140626/</link>
+      <pubDate>Tue, 06 Aug 2019 14:06:27 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190806140626/</guid>
+      <description>链接</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>fixed on mannuan</title>
+    <link>https://mannuan.github.io/tags/fixed/</link>
+    <description>Recent content in fixed on mannuan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 06 Aug 2019 14:10:30 +0800</lastBuildDate>
+    
+	<atom:link href="https://mannuan.github.io/tags/fixed/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>CSS-position:static/relative/absolute/fixed定位</title>
+      <link>https://mannuan.github.io/post/20190806141030/</link>
+      <pubDate>Tue, 06 Aug 2019 14:10:30 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190806141030/</guid>
+      <description> 链接
+关于position:absolute的几篇文章  链接1 链接2 链接3  </description>
+    </item>
+    
+  </channel>
+</rss>

@@ -16,7 +16,17 @@
       <pubDate>Thu, 01 Aug 2019 09:09:20 +0800</pubDate>
       
       <guid>https://mannuan.github.io/post/20190801090920/</guid>
-      <description> 设置中文环境  刚开始的时候vscode默认是英文环境 \(\Uparrow\) + command + P 输入configure language 点击zh-cn  </description>
+      <description> 设置中文环境  刚开始的时候vscode默认是英文环境 \(\Uparrow\) + command + P 输入configure language 点击zh-cn  打开新的文件会覆盖旧的窗口  这是因为你单击文件名的缘故，这个是“预览模式”，所以再单击其他文件时，会覆盖当前打开的文件。
+ 如果你要每次都打开新tab，那就双击文件名好了。这个逻辑和sublime是一样的。
+预览模式是现在各类编辑器的默认功能，如果你实在不喜欢，可以关掉的，看下面： 给你配置settings.json里加一条：
+{ ... &amp;#34;workbench.editor.enablePreview&amp;#34;: false ... } settings.json，snippets和locale.json的所在的文件目录 在~/Library/Application Support/Code/User/下面 &amp;gt; 这样以后遇到vscode发生崩溃的情况，就可以先备份一下配置文件，然后在重装vscode
+code-runner默认在终端中运行代码  在code窗口无法运行 在setting.json中配置
+ { ... &amp;#34;code-runner.runInTerminal&amp;#34;: true, ... } 取消conda自动激活环境  由于code窗口只读不可以编辑，所以无法做到系统输入，改变了一下code-runner的运行方法，使用终端来接收输入。但是又遇到每次运行代码都自动激活conda，这使得对于外部输入的代码运行变得很麻烦必须运行两次代码
+ 为了取消这个自动激活，我们可以在settings.json文件中输入：
+{ ... &amp;#34;python.terminal.activateEnvironment&amp;#34;: false, ... } 至于，这个全局的修改方法就是在终端输入：
+conda config --set auto_activate_base false 快速打开文件  直接在vscode中打开
+ 在终端中输入
+open 文件路径</description>
     </item>
     
   </channel>
