@@ -5,10 +5,108 @@
     <link>https://mannuan.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/</link>
     <description>Recent content in 前端开发 on mannuan</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 06 Aug 2019 14:35:09 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 09 Aug 2019 21:45:41 +0800</lastBuildDate>
     
 	<atom:link href="https://mannuan.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>知识点汇总</title>
+      <link>https://mannuan.github.io/post/20190809214541/</link>
+      <pubDate>Fri, 09 Aug 2019 21:45:41 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190809214541/</guid>
+      <description> 前言 网易面试注重对基本知识的考察。主要从css和js两方面着手。给大家的告诫就是凡是简历上面的东西，最好掌握的很熟悉。
+CSS部分  两列布局，一列自适应，这篇文章解释的很好链接  扩展：三列布局链接链接    JS部分  js基本数据类型，null和undefined的关系 原型，原型链，参考文章链接链接2 跨域链接 jquery链接链接   网络部分  tcp  扩展：什么是tcp连接链接 扩展: tcp的连接复用链接   算法部分  排序算法，链接  快速排序，链接    </description>
+    </item>
+    
+    <item>
+      <title>less与sass的区别</title>
+      <link>https://mannuan.github.io/post/20190808155312/</link>
+      <pubDate>Thu, 08 Aug 2019 15:53:12 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190808155312/</guid>
+      <description>参考链接 链接</description>
+    </item>
+    
+    <item>
+      <title>vue从入门到精通</title>
+      <link>https://mannuan.github.io/post/20190808140332/</link>
+      <pubDate>Thu, 08 Aug 2019 14:03:32 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190808140332/</guid>
+      <description>创建项目 安装vue-cli3.x cnpm install -g @vue/cli 创建项目 vue create xxx Please pick a preset: ? Please pick a preset: firstpractice (vue-router, vuex, dart-sass, eslint) default (babel, eslint) ❯ Manually select features  选择最后一项
+Check the features needed for your project: ? Please pick a preset: Manually select features ? Check the features needed for your project: ◯ Babel ◯ TypeScript ◯ Progressive Web App (PWA) Support ◉ Router ◉ Vuex ◉ CSS Pre-processors ❯◉ Linter / Formatter ◯ Unit Testing ◯ E2E Testing  选择上面实心圆的几项</description>
+    </item>
+    
+    <item>
+      <title>基于网络过程的前端知识框架</title>
+      <link>https://mannuan.github.io/post/20190808112742/</link>
+      <pubDate>Thu, 08 Aug 2019 11:27:42 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190808112742/</guid>
+      <description> 浏览器输入url 检查http缓存 http缓存没有过期 http缓存已经过期 </description>
+    </item>
+    
+    <item>
+      <title>npm的常用命令</title>
+      <link>https://mannuan.github.io/post/20190808100721/</link>
+      <pubDate>Thu, 08 Aug 2019 10:07:21 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190808100721/</guid>
+      <description> 自动往package.json文件中添加dependencies npm install xxx --save 自动往package.json文件中添加devDependencies npm install xxx --save-dev</description>
+    </item>
+    
+    <item>
+      <title>从浏览器地址栏输入url到显示页面的步骤(以HTTP为例)</title>
+      <link>https://mannuan.github.io/post/20190807110958/</link>
+      <pubDate>Wed, 07 Aug 2019 11:09:59 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190807110958/</guid>
+      <description>在浏览器地址栏输入URL 浏览器查看缓存，如果请求资源在缓存中并且新鲜，跳转到转码步骤  如果资源未缓存，发起新请求 如果已缓存，检验是否足够新鲜，足够新鲜直接提供给客户端，否则与服务器进行验证。 检验新鲜通常有两个HTTP头进行控制Expires和Cache-Control：  HTTP1.0提供Expires，值为一个绝对时间表示缓存新鲜日期 HTTP1.1增加了Cache-Control: max-age=,值为以秒为单位的最大新鲜时间   浏览器解析URL获取协议，主机，端口，path 浏览器组装一个HTTP（GET）请求报文 浏览器获取主机ip地址，过程如下：  浏览器缓存 本机缓存 hosts文件 路由器缓存 ISP DNS缓存 DNS递归查询（可能存在负载均衡导致每次IP不一样）  打开一个socket与目标IP地址，端口建立TCP链接，三次握手如下：  客户端发送一个TCP的SYN=1，Seq=X的包到服务器端口 服务器发回SYN=1， ACK=X+1， Seq=Y的响应包 客户端发送ACK=Y+1， Seq=Z  TCP链接建立后发送HTTP请求 服务器接受请求并解析，将请求转发到服务程序，如虚拟主机使用HTTP Host头部判断请求的服务程序 服务器检查HTTP请求头是否包含缓存验证信息如果验证缓存新鲜，返回304等对应状态码 处理程序读取完整请求并准备HTTP响应，可能需要查询数据库等操作 服务器将响应报文通过TCP连接发送回浏览器 浏览器接收HTTP响应，然后根据情况选择关闭TCP连接或者保留重用，关闭TCP连接的四次握手如下：  主动方发送Fin=1， Ack=Z， Seq= X报文 被动方发送ACK=X+1， Seq=Z报文 被动方发送Fin=1， ACK=X， Seq=Y报文 主动方发送ACK=Y， Seq=X报文  浏览器检查响应状态吗：是否为1XX，3XX， 4XX， 5XX，这些情况处理与2XX不同 如果资源可缓存，进行缓存 对响应进行解码（例如gzip压缩） 根据资源类型决定如何处理（假设资源为HTML文档） 解析HTML文档，构件DOM树，下载资源，构造CSSOM树，执行js脚本，这些操作没有严格的先后顺序，以下分别解释 构建DOM树：  Tokenizing：根据HTML规范将字符流解析为标记 Lexing：词法分析将标记转换为对象并定义属性和规则 DOM construction：根据HTML标记关系将对象组成DOM树  解析过程中遇到图片、样式表、js文件，启动下载 构建CSSOM树：  Tokenizing：字符流转换为标记流 Node：根据标记创建节点 CSSOM：节点创建CSSOM树  根据DOM树和CSSOM树构建渲染树:  从DOM树的根节点遍历所有可见节点，不可见节点包括：1）script,meta这样本身不可见的标签。2)被css隐藏的节点，如display: none 对每一个可见节点，找到恰当的CSSOM规则并应用 发布可视节点的内容和计算样式  js解析如下：  浏览器创建Document对象并解析HTML，将解析到的元素和文本节点添加到文档中，此时document.</description>
+    </item>
+    
+    <item>
+      <title>智慧旅游</title>
+      <link>https://mannuan.github.io/post/20190807092523/</link>
+      <pubDate>Wed, 07 Aug 2019 09:25:23 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190807092523/</guid>
+      <description> 前端项目架构  public/
+ favicon.ico index.html  src/
+ api/ assets/ base/ common/ components/ config/ directive/ filters/ mock/ router/ store/ styles/ utils/ views/ App.vue main.js permission.js  babel.config.js
+ package-lock.json
+ package.json
+ vue.config.js
+  </description>
+    </item>
+    
+    <item>
+      <title>vue要点总结</title>
+      <link>https://mannuan.github.io/post/20190806194820/</link>
+      <pubDate>Tue, 06 Aug 2019 19:48:20 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190806194820/</guid>
+      <description> 参考资料  链接 链接  </description>
+    </item>
+    
+    <item>
+      <title>前端知识点总结</title>
+      <link>https://mannuan.github.io/post/20190806190120/</link>
+      <pubDate>Tue, 06 Aug 2019 19:01:20 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190806190120/</guid>
+      <description> 链接 链接 链接   </description>
+    </item>
+    
+    <item>
+      <title>瀑布流的Vue实践</title>
+      <link>https://mannuan.github.io/post/20190806164157/</link>
+      <pubDate>Tue, 06 Aug 2019 16:41:57 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190806164157/</guid>
+      <description>参考资料 链接</description>
+    </item>
     
     <item>
       <title>行内元素和块级元素有哪些？</title>
@@ -25,7 +123,7 @@
       <pubDate>Tue, 06 Aug 2019 14:32:55 +0800</pubDate>
       
       <guid>https://mannuan.github.io/post/20190806143255/</guid>
-      <description>链接</description>
+      <description> 参考资料  链接  </description>
     </item>
     
     <item>
@@ -34,7 +132,7 @@
       <pubDate>Tue, 06 Aug 2019 14:20:17 +0800</pubDate>
       
       <guid>https://mannuan.github.io/post/20190806142017/</guid>
-      <description> 2018年  链接  </description>
+      <description> 2019年  链接  2018年  链接 链接 链接  </description>
     </item>
     
     <item>
@@ -43,8 +141,7 @@
       <pubDate>Tue, 06 Aug 2019 14:10:30 +0800</pubDate>
       
       <guid>https://mannuan.github.io/post/20190806141030/</guid>
-      <description> 链接
-关于position:absolute的几篇文章  链接1 链接2 链接3  </description>
+      <description> 参考资料  链接  关于position:absolute的几篇文章  链接1 链接2 链接3  </description>
     </item>
     
     <item>
@@ -62,7 +159,7 @@
       <pubDate>Tue, 06 Aug 2019 14:01:48 +0800</pubDate>
       
       <guid>https://mannuan.github.io/post/20190806140147/</guid>
-      <description>链接</description>
+      <description> 参考资料  链接  </description>
     </item>
     
     <item>
@@ -73,6 +170,16 @@
       <guid>https://mannuan.github.io/post/20190804210614/</guid>
       <description>题目描述 如下图所示，请实现如下功能，当鼠标移到黑底客户服务区块后，出来白底卡片内容，鼠标移出后，卡片内容消失，并且当鼠标在白色部分上移动时白色框不能消失。
 纯css的解决方案 链接</description>
+    </item>
+    
+    <item>
+      <title>数组去重</title>
+      <link>https://mannuan.github.io/post/20190804155523/</link>
+      <pubDate>Sun, 04 Aug 2019 15:55:23 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190804155523/</guid>
+      <description>题目描述 设计一个uniquity函数，可以根据用户自定义的重复判定规则进行数组元素去重，举个例子：
+//情况一: let arr0 = [1,1,1,0,5,6]; uniqueify(arr0); //输出：[1,0,5,6]  //情况二: let arr1 = [ {id: 1, name: &amp;#34;xx&amp;#34;}, {id: 1, name: &amp;#34;xx&amp;#34;}, {id: 2, name: &amp;#34;xx&amp;#34;}, {id: 1, name: &amp;#34;xx&amp;#34;}, {id: 1, name: &amp;#34;xx&amp;#34;}, ]; uniqueify(arr1, a=&amp;gt;a.id); //假如这里的去重规则依据为id //输出 [ {id: 1, name: &amp;#34;xx&amp;#34;}, {id: 2, name: &amp;#34;xx&amp;#34;}, ]; //情况三  let arr2 = [ {name: &amp;#39;xx&amp;#39;, sex: &amp;#39;male&amp;#39;}, {name: &amp;#39;xx&amp;#39;, sex: &amp;#39;female&amp;#39;}, {name: &amp;#39;xx&amp;#39;, sex: &amp;#39;male&amp;#39;}, {name: &amp;#39;aa&amp;#39;, sex: &amp;#39;male&amp;#39;}, {name: &amp;#39;aa&amp;#39;, sex: &amp;#39;male&amp;#39;}, ] uniqueify(arr2, a=&amp;gt;(a.</description>
     </item>
     
     <item>
@@ -240,7 +347,7 @@ Response Headers（服务器端） cache-control
 控制http缓存的最高指令
 常用值有:
 1. no-store: 所有内容都不缓存
-2. noc-cache: 缓存，但是浏览器使用缓存前，都会请求服务器判断缓存是否是最新，过期的缓存就不使用
+2. no-cache: 缓存，但是浏览器使用缓存前，都会请求服务器判断缓存是否是最新，过期的缓存就不使用
 3. max-age=x(单位秒)在缓存后的x秒内不发请求，是http1.1的属性，类似于expires，但优先级高于expires
 4. s-maxage=x(单位秒)代理服务器请求源站在缓存后的x秒内不发请求，只对CDN有效
 5. public 客户端和代理服务器（CDN）都可缓存
@@ -1223,6 +1330,15 @@ Object | 复杂 | &amp;ldquo;object&amp;rdquo; | 按引用访问 | |</descriptio
       <description>操作符两边操作数先转换数据类型，然后再比较它们的相等性，具体的规则如下：
    操作符规则 操作符a的数据类型 操作符b的数据类型 == != 备注     Boolean转为Number — — — Boolean无条件转为Number类型   String转为Number Number — — —   Object转为a.valueOf() 除了Object之外的所有类型 — — —   null undefined true false null等于underfined   NaN — false true NaN不等于NaN   Object Object — — 如果a和b指向同一个对象，相等操作符返回true，否则返回false     上述表格归纳自javascript高级程序设计，[p51-p53]
  </description>
+    </item>
+    
+    <item>
+      <title>详解面向对象、构造函数、原型与原型链</title>
+      <link>https://mannuan.github.io/post/20190806190331/</link>
+      <pubDate>Mon, 06 Aug 2018 19:03:31 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190806190331/</guid>
+      <description> 参考资料  链接 链接  </description>
     </item>
     
   </channel>

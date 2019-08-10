@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>瀑布流 on mannuan</title>
+    <link>https://mannuan.github.io/tags/%E7%80%91%E5%B8%83%E6%B5%81/</link>
+    <description>Recent content in 瀑布流 on mannuan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 06 Aug 2019 16:41:57 +0800</lastBuildDate>
+    
+	<atom:link href="https://mannuan.github.io/tags/%E7%80%91%E5%B8%83%E6%B5%81/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>瀑布流的Vue实践</title>
+      <link>https://mannuan.github.io/post/20190806164157/</link>
+      <pubDate>Tue, 06 Aug 2019 16:41:57 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190806164157/</guid>
+      <description>参考资料 链接</description>
+    </item>
+    
+  </channel>
+</rss>

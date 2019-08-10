@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>笔试编程题 on mannuan</title>
+    <link>https://mannuan.github.io/tags/%E7%AC%94%E8%AF%95%E7%BC%96%E7%A8%8B%E9%A2%98/</link>
+    <description>Recent content in 笔试编程题 on mannuan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 10 Aug 2019 23:23:51 +0800</lastBuildDate>
+    
+	<atom:link href="https://mannuan.github.io/tags/%E7%AC%94%E8%AF%95%E7%BC%96%E7%A8%8B%E9%A2%98/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>20190810232351</title>
+      <link>https://mannuan.github.io/post/20190810232351/</link>
+      <pubDate>Sat, 10 Aug 2019 23:23:51 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190810232351/</guid>
+      <description> 题目描述 小易在维护数据的时候遇到一个需求，具体来说小易有一系列数据，这些数据了构成一个长度为n的数字序列，接下来小易会在这个序列上进行q次操作。
+每次操作有一个查询的数字x，小易需要将序列数据中所有大于等于x的数字都减一并输出在本次操作中有多少个数字被减一了。
+小易犯了难，希望你能帮帮他。
+输入描述 第一行n,q, 表示数字个数和操作个数
+接下来一行n个数表示初始的数字
+接下来q行，每行一个数，表示指定的数字x。
+\(1 \leq n, q \leq 20000, 1 \leq a_i, x \leq n\)
+输出描述 对于每个询问，输出一个数字表示答案
+示例 1  输入输出示例仅供调试，后台判题数据一般不包含示例
+ 输入 4 3
+1 2 3 4
+4
+3
+1
+输出 1
+2
+4
+代码待更新 </description>
+    </item>
+    
+    <item>
+      <title>20190810231142</title>
+      <link>https://mannuan.github.io/post/20190810231142/</link>
+      <pubDate>Sat, 10 Aug 2019 23:11:43 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190810231142/</guid>
+      <description>题目描述 小易给你一个包含n个数字的数组\(a_1, a_2, \dots, a_3\)。你可以对这个数组执行任意次以下
+交换操作：
+对于数组中的两个下标i,j(\(1 \leq i, j \leq n\))，如果\(a_i + a_j\)为奇数，就可以交换\(a_i\)和\(a_j\)
+现在允许你使用操作次数不限，小易希望你能求出在所有能通过若干次操作可以得到的数组中，字典序最小的一个是什么。
+输入描述： 第一行一个整数n;
+第二行n个整数\(a_1, a_2, \dots, a_n\), 表示数组，每两个数字之间用一个空格分隔。
+输入保证\(1 \leq n \leq 10^5; 1 \leq a_i \leq 10^9\)。
+输出描述： n个整数，每两个整数之间用一个空格分隔，表示得到的字典序最小的数组。
+示例1  输入输出示例仅供调试，后台判题数据一般不包含示例
+ 输入 4
+7 3 5 1
+输出 7 3 5 1
+示例2  输入输出示例仅供调试，后台判题数据一般不包含示例
+ 输入 10
+53941 38641 31525 75864 29026 12199 83522 58200 64784 80987
+输出 12199 29026 31525 38641 53941 58200 64784 75864 80987 83522</description>
+    </item>
+    
+    <item>
+      <title>连续子序列</title>
+      <link>https://mannuan.github.io/post/20190810230504/</link>
+      <pubDate>Sat, 10 Aug 2019 23:05:04 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190810230504/</guid>
+      <description> 题目描述 小易给定了一个长度为 n 的数字序列，对于每一个 1≤k≤n，小易希望能求解出所有长度为的连续子序列的最大值中的最小值
+输入描述 第一行数字n
+接下来一行是一个长度为n的数字序列
+\(1 \leq n \leq 100000, 0 \leq a_i \leq 10^9\)
+输出描述： 一行n个数字，第i个数字表示k=i时的答案
+示例 1  输入输出示例仅供调试，后台判题数据一般不包含示例
+ 输入 6
+1 3 2 4 6 5
+输出 1 3 3 4 6 8
+代码待更新 </description>
+    </item>
+    
+    <item>
+      <title>辗转相除法</title>
+      <link>https://mannuan.github.io/post/20190810225614/</link>
+      <pubDate>Sat, 10 Aug 2019 22:56:14 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190810225614/</guid>
+      <description> 题目描述 小易学习了转相除法之后，就开始实践这个算法在求解最大公约数上。牛牛给小易出了一道不同寻常的求解最大公约数：求解a和b的最大公约数，但是a和b的范围特别大。 小易遇到了因难，向聪明的你寻求帮助，希望你能帮帮他。
+输入描述： 第一行数字 a，第二行数字 b
+\(1 \leq a \leq 10^{10^5}, 1 \leq b &amp;lt; 10^{18}\)
+输出描述 一行一个数字表示答案
+示例 1  输入输出示例仅供调试，后台判题数据一般不包含示例
+ 输入 6
+4
+输出 2
+示例 2  输入输出示例仅供调试，后台判题数据一般不包含示例
+ 输入 7951346523609888
+6998915114363550
+输出 1013754
+代码待更新 </description>
+    </item>
+    
+    <item>
+      <title>旋转字符串</title>
+      <link>https://mannuan.github.io/post/20190810224801/</link>
+      <pubDate>Sat, 10 Aug 2019 22:48:01 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190810224801/</guid>
+      <description>题目描述 给字符串定义一个“旋转“的操作，比如字符串AbcD旋转一次变成bcDA。继续旋转则依次变成cDAb、DAbc、Abcd。 给定两个字符串“源和目标”请判断“源“在旋转一定次数后，是否可以包含“目标
+输入描述 三组长度非空字符串，一共6行，奇数行为“源“字符串，偶数行为“目标”字符串
+输出描述 每组字符串是否可以旋转包含。包含返回 1, 不包含返回 0
+示例1  输入输出示例仅供调试，后台判题数据一般不包含示例
+ 输入 AABCD
+CDAA
+AABCD
+ABCD
+AABCD
+CFS
+输出 110
+代码待添加</description>
+    </item>
+    
+    <item>
+      <title>强迫症卖家</title>
+      <link>https://mannuan.github.io/post/20190810221953/</link>
+      <pubDate>Sat, 10 Aug 2019 22:19:53 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190810221953/</guid>
+      <description>时间限制： C/C++语言 1秒；其他语言 2秒
+内存限制： C/C++语言 32768K；其他语言 65536K 64bit IO Format %lld
+题目描述 小明是个有强迫症的卖家，他手头有10000台设备，他想以他的幸运数D元（D是个浮点数）每台的价格批量卖一些出去，他不在乎能卖出去多少台，只在乎卖出去的每台均价最接近D元，而且他只收整数数额的钱。请你编程计算他应该每次卖出去的台数N，一共售价M。
+输入描述 输入一个浮点数D(0 &amp;lt;D &amp;lt;10），精确到小数点后14位，表示小明钟情的价格。
+输出描述 输出两个正整数M, N，以空格分割 如果有多种方案均价一样，输出台数最小的那个。
+示例1  输入输出示例仅供调试，后台判题数据一般不包含示例
+ 输入 0.50000000000000
+输出 1 2
+示例2  输入输出示例仅供调试，后台判题数据一般不包含示例
+ 输入 3.14159265358979
+输出 355 113
+代码待添加</description>
+    </item>
+    
+    <item>
+      <title>特殊的测试</title>
+      <link>https://mannuan.github.io/post/20190810215703/</link>
+      <pubDate>Sat, 10 Aug 2019 21:57:03 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190810215703/</guid>
+      <description>时间限制： C/C++语言 1000MS；其他语言 3000MS
+内存限制： C/C++语言 131072KB；其他语言 655360KB
+题目描述： 小C在做一种特殊的服务器负载测试，对于一个请求队列中的请求，每一个请求都有一个负荷值，为了保证服务器稳定，请求队列中的请求负荷必须按照先递增后递减的规律(仅递增，仅递减也可以)，比如[ 1，2，8，4，3 ]，[ 1，3，5 ]和[ 10 ]这些是满足规律的，还有一些不满足的，比如[ 1，2，2，1 ]，[ 2，1，2 ]和[ 10，10 ]。现在给你一个请求队列，你可以对请求的负荷值进行增加，要求你调整队列中请求的负荷值，使数组满足条件。最后输出使队列满足条件最小的增加总和。
+输入 输入有两行，
+第一行是 N (1≤n≤5000) ，代表请求队列中的请求数量。
+第二行有 N个数字 a1,a2…an (1≤ai≤10^9)。Ai是第i个请求的负荷值。
+输出 输出这个最小增加总和
+样例输入 5 1 4 3 2 5
+样例输出 6
+提示 样例解释，此时合法队列为[1,4,5,6,5]，最小增加和为6
+此题代码只通过27%，期待更新正确的代码  import java.util.Scanner; public class Test02{ public static void main(String[] args) { Scanner scanner = new Scanner(System.in); int n = scanner.nextInt(); int[] arr = new int[n]; int max = 0; for(int i=0;i&amp;lt;n;i++){ arr[i] = scanner.</description>
+    </item>
+    
+    <item>
+      <title>月光宝盒的密码</title>
+      <link>https://mannuan.github.io/post/20190810215316/</link>
+      <pubDate>Sat, 10 Aug 2019 21:53:16 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190810215316/</guid>
+      <description>时间限制： C/C++语言 1000MS；其他语言 3000MS
+内存限制： C/C++语言 131072KB；其他语言 655360KB
+题目描述： 小希偶然得到了传说中的月光宝盒,然而打开月光宝盒需要一串密码。虽然小希并不知道密码具体是什么，但是月光宝盒的说明书上有着一个长度为 n (2 &amp;lt;= N &amp;lt;= 50000)的序列 a (-10^9 &amp;lt;= a[i] &amp;lt;= 10^9)的范围内。下面写着一段话：密码是这个序列的最长的严格上升子序列的长度(严格上升子序列是指，子序列的元素是严格递增的，例如: [5,1,6,2,4]的最长严格上升子序列为[1,2,4])，请你帮小希找到这个密码。
+输入 第1行： 1个数N，N为序列的长度(2&amp;lt;=N&amp;lt;=50000)
+第2到 N+1行： 每行1个数，对应序列的元素(-10^9 &amp;lt;= a[i] &amp;lt;= 10^9)
+输出 一个正整数表示严格最长上升子序列的长度
+样例输入 8 5 1 6 8 2 4 5 10
+样例输出 5
+import java.util.Scanner; public class Test{ public static void main(String[] args) { Scanner scanner = new Scanner(System.in); int N = scanner.nextInt(); int[] arr = new int[N]; int[] seqs = new int[N]; for(int i=0; i&amp;lt;arr.</description>
+    </item>
+    
+    <item>
+      <title>若若的三角形</title>
+      <link>https://mannuan.github.io/post/20190810214645/</link>
+      <pubDate>Sat, 10 Aug 2019 21:46:46 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190810214645/</guid>
+      <description>时间限制： C/C++语言 1000MS；其他语言 3000MS
+内存限制： C/C++语言 131072KB；其他语言 655360KB
+题目描述： 若若有一个格子数为n*m的网格，现在若若想知道3个点都在格点上能形成的三角形有多少个（三点不能共线）
+输入 一行两个数n和m
+n,m&amp;lt;=1800
+输出 三角形个数
+样例输入 2 2
+样例输出 76
+# include&amp;lt;stdio.h&amp;gt; # include&amp;lt;iostream&amp;gt; # include&amp;lt;string.h&amp;gt; # include&amp;lt;algorithm&amp;gt; using namespace std; int gcd(int a,int b){ if(b==0){ return a; } return gcd(b, a%b); } long long Com(int n, int r){ if(n&amp;lt;r) return 0; if(n-r&amp;lt;r) r = n-r; int i,j; long long ret = 1; for(i=0,j=1;i&amp;lt;r;i++){ ret*=(n-i); for(;j&amp;lt;=r&amp;amp;&amp;amp;ret%j==0;j++){ ret /= j; } } return ret; } int main(){ int n,m; while(scanf(&amp;#34;%d%d&amp;#34;, &amp;amp;n, &amp;amp;m)!</description>
+    </item>
+    
+    <item>
+      <title>计算绝对值</title>
+      <link>https://mannuan.github.io/post/20190810214234/</link>
+      <pubDate>Sat, 10 Aug 2019 21:42:34 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190810214234/</guid>
+      <description> 时间限制： C/C++语言 1000MS；其他语言 3000MS
+内存限制： C/C++语言 131072KB；其他语言 655360KB
+题目描述： 给出n个正整数，要求找出相邻两个数字中差的绝对值最小的一对数字，如果有差的绝对值相同的，则输出最前面的一对数。 2&amp;lt;n&amp;lt;=100，正整数都在10^16范围内
+输入 输入包含2行，第一行为n，第二行是n个用空格分隔的正整数。
+输出 输出包含一行两个正整数，要求按照原来的顺序输出
+样例输入 9 1 3 4 7 2 6 5 12 32
+样例输出 3 4
+# -*- coding: utf-8 -*- import sys n = int(sys.stdin.readline().strip()) arr = [int(i) for i in sys.stdin.readline().strip().split()][:n] min_cha = abs(arr[0]-arr[1]) min_tup = (arr[0], arr[1]) for i in range(1, len(arr)): tmp = abs(arr[i-1]-arr[i]) if tmp &amp;lt; min_cha: min_cha = tmp min_tup = (arr[i-1], arr[i]) print(min_tup[0], min_tup[1])</description>
+    </item>
+    
+  </channel>
+</rss>

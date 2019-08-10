@@ -1,3 +1,29 @@
-function getRandomArbitrary(min, max) {
-  return Math.random() * (max - min) + min; 
-}
+# 适用于基本有序
+def sortMerge(arr):
+    _sort_between(arr, 0, len(arr)-1)
+def _sort_between(arr, low, high):
+    stack = [(low, high)]
+    while stack:
+        low, high = stack.pop()
+        mid = low + (high - low) // 2
+        _sort(arr, low, mid, high)
+        if low < mid:
+            stack.append((low, mid))
+        if mid+1 < high:
+            stack.append((mid+1, high))
+def _sort(arr, low, mid, high):
+    i = low # 前面数组的指针
+    j = mid+1 # 后面数组的指针
+    tmp = [] # 用于存放两个数组中的最小值
+    while i <= mid and j <= high: # 使用循环把两个数组中的最小值都放到tmp中
+        if arr[i] < arr[j]:
+            tmp.append(arr[i])
+            i += 1
+        else:
+            tmp.append(arr[j])
+            j += 1
+    if i > mid: # 前面的数组走完了全程，那么后面的数组没有走完
+        tmp += arr[j:high+1]
+    else: # 后面的数组走完全程,那么前面的数组没有走完全程
+        tmp += arr[i:mid+1]
+    arr[low:high+1] = tmp

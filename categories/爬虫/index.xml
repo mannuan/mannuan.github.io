@@ -5,10 +5,28 @@
     <link>https://mannuan.github.io/categories/%E7%88%AC%E8%99%AB/</link>
     <description>Recent content in 爬虫 on mannuan</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 05 Jul 2019 21:22:59 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 06 Aug 2019 22:15:52 +0800</lastBuildDate>
     
 	<atom:link href="https://mannuan.github.io/categories/%E7%88%AC%E8%99%AB/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>pyspider实现原理详解</title>
+      <link>https://mannuan.github.io/post/20190806221552/</link>
+      <pubDate>Tue, 06 Aug 2019 22:15:52 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190806221552/</guid>
+      <description> 介绍 </description>
+    </item>
+    
+    <item>
+      <title>爬虫面试知识点总结</title>
+      <link>https://mannuan.github.io/post/20190806215803/</link>
+      <pubDate>Tue, 06 Aug 2019 21:58:03 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190806215803/</guid>
+      <description> 参考资料  链接  </description>
+    </item>
     
     <item>
       <title>一个基于selenium的快速编写爬虫脚本的爬虫框架-beryllium</title>

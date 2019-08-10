@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>前端知识框架 on mannuan</title>
+    <link>https://mannuan.github.io/tags/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E6%A1%86%E6%9E%B6/</link>
+    <description>Recent content in 前端知识框架 on mannuan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 08 Aug 2019 11:27:42 +0800</lastBuildDate>
+    
+	<atom:link href="https://mannuan.github.io/tags/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E6%A1%86%E6%9E%B6/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>基于网络过程的前端知识框架</title>
+      <link>https://mannuan.github.io/post/20190808112742/</link>
+      <pubDate>Thu, 08 Aug 2019 11:27:42 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190808112742/</guid>
+      <description> 浏览器输入url 检查http缓存 http缓存没有过期 http缓存已经过期 </description>
+    </item>
+    
+  </channel>
+</rss>

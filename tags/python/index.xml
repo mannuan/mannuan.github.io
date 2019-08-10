@@ -5,10 +5,28 @@
     <link>https://mannuan.github.io/tags/python/</link>
     <description>Recent content in python on mannuan</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 05 Jun 2019 15:44:42 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 06 Aug 2019 21:58:03 +0800</lastBuildDate>
     
 	<atom:link href="https://mannuan.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>爬虫面试知识点总结</title>
+      <link>https://mannuan.github.io/post/20190806215803/</link>
+      <pubDate>Tue, 06 Aug 2019 21:58:03 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190806215803/</guid>
+      <description> 参考资料  链接  </description>
+    </item>
+    
+    <item>
+      <title>python面试要点</title>
+      <link>https://mannuan.github.io/post/20190806192314/</link>
+      <pubDate>Tue, 06 Aug 2019 19:23:14 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190806192314/</guid>
+      <description> 参考资料  链接 链接  </description>
+    </item>
     
     <item>
       <title>python with 打开多个文件</title>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>面试 on mannuan</title>
+    <link>https://mannuan.github.io/tags/%E9%9D%A2%E8%AF%95/</link>
+    <description>Recent content in 面试 on mannuan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 09 Aug 2019 21:45:41 +0800</lastBuildDate>
+    
+	<atom:link href="https://mannuan.github.io/tags/%E9%9D%A2%E8%AF%95/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>知识点汇总</title>
+      <link>https://mannuan.github.io/post/20190809214541/</link>
+      <pubDate>Fri, 09 Aug 2019 21:45:41 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190809214541/</guid>
+      <description> 前言 网易面试注重对基本知识的考察。主要从css和js两方面着手。给大家的告诫就是凡是简历上面的东西，最好掌握的很熟悉。
+CSS部分  两列布局，一列自适应，这篇文章解释的很好链接  扩展：三列布局链接链接    JS部分  js基本数据类型，null和undefined的关系 原型，原型链，参考文章链接链接2 跨域链接 jquery链接链接   网络部分  tcp  扩展：什么是tcp连接链接 扩展: tcp的连接复用链接   算法部分  排序算法，链接  快速排序，链接    </description>
+    </item>
+    
+    <item>
+      <title>前端面试总结</title>
+      <link>https://mannuan.github.io/post/20190806142017/</link>
+      <pubDate>Tue, 06 Aug 2019 14:20:17 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190806142017/</guid>
+      <description> 2019年  链接  2018年  链接 链接 链接  </description>
+    </item>
+    
+  </channel>
+</rss>

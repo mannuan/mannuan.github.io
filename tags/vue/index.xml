@@ -5,10 +5,53 @@
     <link>https://mannuan.github.io/tags/vue/</link>
     <description>Recent content in vue on mannuan</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 12 Jul 2019 14:56:56 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 08 Aug 2019 14:03:32 +0800</lastBuildDate>
     
 	<atom:link href="https://mannuan.github.io/tags/vue/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>vue从入门到精通</title>
+      <link>https://mannuan.github.io/post/20190808140332/</link>
+      <pubDate>Thu, 08 Aug 2019 14:03:32 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190808140332/</guid>
+      <description>创建项目 安装vue-cli3.x cnpm install -g @vue/cli 创建项目 vue create xxx Please pick a preset: ? Please pick a preset: firstpractice (vue-router, vuex, dart-sass, eslint) default (babel, eslint) ❯ Manually select features  选择最后一项
+Check the features needed for your project: ? Please pick a preset: Manually select features ? Check the features needed for your project: ◯ Babel ◯ TypeScript ◯ Progressive Web App (PWA) Support ◉ Router ◉ Vuex ◉ CSS Pre-processors ❯◉ Linter / Formatter ◯ Unit Testing ◯ E2E Testing  选择上面实心圆的几项</description>
+    </item>
+    
+    <item>
+      <title>智慧旅游</title>
+      <link>https://mannuan.github.io/post/20190807092523/</link>
+      <pubDate>Wed, 07 Aug 2019 09:25:23 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190807092523/</guid>
+      <description> 前端项目架构  public/
+ favicon.ico index.html  src/
+ api/ assets/ base/ common/ components/ config/ directive/ filters/ mock/ router/ store/ styles/ utils/ views/ App.vue main.js permission.js  babel.config.js
+ package-lock.json
+ package.json
+ vue.config.js
+  </description>
+    </item>
+    
+    <item>
+      <title>vue要点总结</title>
+      <link>https://mannuan.github.io/post/20190806194820/</link>
+      <pubDate>Tue, 06 Aug 2019 19:48:20 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190806194820/</guid>
+      <description> 参考资料  链接 链接  </description>
+    </item>
+    
+    <item>
+      <title>瀑布流的Vue实践</title>
+      <link>https://mannuan.github.io/post/20190806164157/</link>
+      <pubDate>Tue, 06 Aug 2019 16:41:57 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190806164157/</guid>
+      <description>参考资料 链接</description>
+    </item>
     
     <item>
       <title>vue学习笔记（第一部分）</title>

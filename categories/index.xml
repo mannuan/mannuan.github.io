@@ -5,26 +5,53 @@
     <link>https://mannuan.github.io/categories/</link>
     <description>Recent content in Categories on mannuan</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 06 Aug 2019 14:35:09 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 10 Aug 2019 23:23:51 +0800</lastBuildDate>
     
 	<atom:link href="https://mannuan.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>算法题</title>
+      <link>https://mannuan.github.io/categories/%E7%AE%97%E6%B3%95%E9%A2%98/</link>
+      <pubDate>Sat, 10 Aug 2019 23:23:51 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/categories/%E7%AE%97%E6%B3%95%E9%A2%98/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>前端开发</title>
       <link>https://mannuan.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/</link>
-      <pubDate>Tue, 06 Aug 2019 14:35:09 +0800</pubDate>
+      <pubDate>Fri, 09 Aug 2019 21:45:41 +0800</pubDate>
       
       <guid>https://mannuan.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>编程题</title>
-      <link>https://mannuan.github.io/categories/%E7%BC%96%E7%A8%8B%E9%A2%98/</link>
-      <pubDate>Sun, 04 Aug 2019 15:55:23 +0800</pubDate>
+      <title>论文</title>
+      <link>https://mannuan.github.io/categories/%E8%AE%BA%E6%96%87/</link>
+      <pubDate>Wed, 07 Aug 2019 22:13:47 +0800</pubDate>
       
-      <guid>https://mannuan.github.io/categories/%E7%BC%96%E7%A8%8B%E9%A2%98/</guid>
+      <guid>https://mannuan.github.io/categories/%E8%AE%BA%E6%96%87/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>爬虫</title>
+      <link>https://mannuan.github.io/categories/%E7%88%AC%E8%99%AB/</link>
+      <pubDate>Tue, 06 Aug 2019 22:15:52 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/categories/%E7%88%AC%E8%99%AB/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>https://mannuan.github.io/categories/python/</link>
+      <pubDate>Tue, 06 Aug 2019 19:23:14 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/categories/python/</guid>
       <description></description>
     </item>
     
@@ -92,15 +119,6 @@
     </item>
     
     <item>
-      <title>论文</title>
-      <link>https://mannuan.github.io/categories/%E8%AE%BA%E6%96%87/</link>
-      <pubDate>Mon, 22 Jul 2019 09:07:49 +0800</pubDate>
-      
-      <guid>https://mannuan.github.io/categories/%E8%AE%BA%E6%96%87/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>调试</title>
       <link>https://mannuan.github.io/categories/%E8%B0%83%E8%AF%95/</link>
       <pubDate>Sat, 13 Jul 2019 13:58:41 +0800</pubDate>
@@ -151,24 +169,6 @@
       <pubDate>Mon, 08 Jul 2019 14:18:34 +0800</pubDate>
       
       <guid>https://mannuan.github.io/categories/%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>python</title>
-      <link>https://mannuan.github.io/categories/python/</link>
-      <pubDate>Fri, 05 Jul 2019 21:22:59 +0800</pubDate>
-      
-      <guid>https://mannuan.github.io/categories/python/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>爬虫</title>
-      <link>https://mannuan.github.io/categories/%E7%88%AC%E8%99%AB/</link>
-      <pubDate>Fri, 05 Jul 2019 21:22:59 +0800</pubDate>
-      
-      <guid>https://mannuan.github.io/categories/%E7%88%AC%E8%99%AB/</guid>
       <description></description>
     </item>
     

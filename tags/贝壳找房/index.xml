@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>贝壳找房 on mannuan</title>
+    <link>https://mannuan.github.io/tags/%E8%B4%9D%E5%A3%B3%E6%89%BE%E6%88%BF/</link>
+    <description>Recent content in 贝壳找房 on mannuan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 10 Aug 2019 21:57:03 +0800</lastBuildDate>
+    
+	<atom:link href="https://mannuan.github.io/tags/%E8%B4%9D%E5%A3%B3%E6%89%BE%E6%88%BF/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>特殊的测试</title>
+      <link>https://mannuan.github.io/post/20190810215703/</link>
+      <pubDate>Sat, 10 Aug 2019 21:57:03 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190810215703/</guid>
+      <description>时间限制： C/C++语言 1000MS；其他语言 3000MS
+内存限制： C/C++语言 131072KB；其他语言 655360KB
+题目描述： 小C在做一种特殊的服务器负载测试，对于一个请求队列中的请求，每一个请求都有一个负荷值，为了保证服务器稳定，请求队列中的请求负荷必须按照先递增后递减的规律(仅递增，仅递减也可以)，比如[ 1，2，8，4，3 ]，[ 1，3，5 ]和[ 10 ]这些是满足规律的，还有一些不满足的，比如[ 1，2，2，1 ]，[ 2，1，2 ]和[ 10，10 ]。现在给你一个请求队列，你可以对请求的负荷值进行增加，要求你调整队列中请求的负荷值，使数组满足条件。最后输出使队列满足条件最小的增加总和。
+输入 输入有两行，
+第一行是 N (1≤n≤5000) ，代表请求队列中的请求数量。
+第二行有 N个数字 a1,a2…an (1≤ai≤10^9)。Ai是第i个请求的负荷值。
+输出 输出这个最小增加总和
+样例输入 5 1 4 3 2 5
+样例输出 6
+提示 样例解释，此时合法队列为[1,4,5,6,5]，最小增加和为6
+此题代码只通过27%，期待更新正确的代码  import java.util.Scanner; public class Test02{ public static void main(String[] args) { Scanner scanner = new Scanner(System.in); int n = scanner.nextInt(); int[] arr = new int[n]; int max = 0; for(int i=0;i&amp;lt;n;i++){ arr[i] = scanner.</description>
+    </item>
+    
+    <item>
+      <title>月光宝盒的密码</title>
+      <link>https://mannuan.github.io/post/20190810215316/</link>
+      <pubDate>Sat, 10 Aug 2019 21:53:16 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190810215316/</guid>
+      <description>时间限制： C/C++语言 1000MS；其他语言 3000MS
+内存限制： C/C++语言 131072KB；其他语言 655360KB
+题目描述： 小希偶然得到了传说中的月光宝盒,然而打开月光宝盒需要一串密码。虽然小希并不知道密码具体是什么，但是月光宝盒的说明书上有着一个长度为 n (2 &amp;lt;= N &amp;lt;= 50000)的序列 a (-10^9 &amp;lt;= a[i] &amp;lt;= 10^9)的范围内。下面写着一段话：密码是这个序列的最长的严格上升子序列的长度(严格上升子序列是指，子序列的元素是严格递增的，例如: [5,1,6,2,4]的最长严格上升子序列为[1,2,4])，请你帮小希找到这个密码。
+输入 第1行： 1个数N，N为序列的长度(2&amp;lt;=N&amp;lt;=50000)
+第2到 N+1行： 每行1个数，对应序列的元素(-10^9 &amp;lt;= a[i] &amp;lt;= 10^9)
+输出 一个正整数表示严格最长上升子序列的长度
+样例输入 8 5 1 6 8 2 4 5 10
+样例输出 5
+import java.util.Scanner; public class Test{ public static void main(String[] args) { Scanner scanner = new Scanner(System.in); int N = scanner.nextInt(); int[] arr = new int[N]; int[] seqs = new int[N]; for(int i=0; i&amp;lt;arr.</description>
+    </item>
+    
+    <item>
+      <title>若若的三角形</title>
+      <link>https://mannuan.github.io/post/20190810214645/</link>
+      <pubDate>Sat, 10 Aug 2019 21:46:46 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190810214645/</guid>
+      <description>时间限制： C/C++语言 1000MS；其他语言 3000MS
+内存限制： C/C++语言 131072KB；其他语言 655360KB
+题目描述： 若若有一个格子数为n*m的网格，现在若若想知道3个点都在格点上能形成的三角形有多少个（三点不能共线）
+输入 一行两个数n和m
+n,m&amp;lt;=1800
+输出 三角形个数
+样例输入 2 2
+样例输出 76
+# include&amp;lt;stdio.h&amp;gt; # include&amp;lt;iostream&amp;gt; # include&amp;lt;string.h&amp;gt; # include&amp;lt;algorithm&amp;gt; using namespace std; int gcd(int a,int b){ if(b==0){ return a; } return gcd(b, a%b); } long long Com(int n, int r){ if(n&amp;lt;r) return 0; if(n-r&amp;lt;r) r = n-r; int i,j; long long ret = 1; for(i=0,j=1;i&amp;lt;r;i++){ ret*=(n-i); for(;j&amp;lt;=r&amp;amp;&amp;amp;ret%j==0;j++){ ret /= j; } } return ret; } int main(){ int n,m; while(scanf(&amp;#34;%d%d&amp;#34;, &amp;amp;n, &amp;amp;m)!</description>
+    </item>
+    
+    <item>
+      <title>计算绝对值</title>
+      <link>https://mannuan.github.io/post/20190810214234/</link>
+      <pubDate>Sat, 10 Aug 2019 21:42:34 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190810214234/</guid>
+      <description> 时间限制： C/C++语言 1000MS；其他语言 3000MS
+内存限制： C/C++语言 131072KB；其他语言 655360KB
+题目描述： 给出n个正整数，要求找出相邻两个数字中差的绝对值最小的一对数字，如果有差的绝对值相同的，则输出最前面的一对数。 2&amp;lt;n&amp;lt;=100，正整数都在10^16范围内
+输入 输入包含2行，第一行为n，第二行是n个用空格分隔的正整数。
+输出 输出包含一行两个正整数，要求按照原来的顺序输出
+样例输入 9 1 3 4 7 2 6 5 12 32
+样例输出 3 4
+# -*- coding: utf-8 -*- import sys n = int(sys.stdin.readline().strip()) arr = [int(i) for i in sys.stdin.readline().strip().split()][:n] min_cha = abs(arr[0]-arr[1]) min_tup = (arr[0], arr[1]) for i in range(1, len(arr)): tmp = abs(arr[i-1]-arr[i]) if tmp &amp;lt; min_cha: min_cha = tmp min_tup = (arr[i-1], arr[i]) print(min_tup[0], min_tup[1])</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -5,7 +5,7 @@
     <link>https://mannuan.github.io/</link>
     <description>Recent content in Home on mannuan</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 06 Aug 2019 14:35:09 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 10 Aug 2019 23:23:51 +0800</lastBuildDate>
     
 	<atom:link href="https://mannuan.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -33,6 +33,338 @@ Minimo keeps the focus on your content and lets it shine!</description>
     </item>
     
     <item>
+      <title>20190810232351</title>
+      <link>https://mannuan.github.io/post/20190810232351/</link>
+      <pubDate>Sat, 10 Aug 2019 23:23:51 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190810232351/</guid>
+      <description> 题目描述 小易在维护数据的时候遇到一个需求，具体来说小易有一系列数据，这些数据了构成一个长度为n的数字序列，接下来小易会在这个序列上进行q次操作。
+每次操作有一个查询的数字x，小易需要将序列数据中所有大于等于x的数字都减一并输出在本次操作中有多少个数字被减一了。
+小易犯了难，希望你能帮帮他。
+输入描述 第一行n,q, 表示数字个数和操作个数
+接下来一行n个数表示初始的数字
+接下来q行，每行一个数，表示指定的数字x。
+\(1 \leq n, q \leq 20000, 1 \leq a_i, x \leq n\)
+输出描述 对于每个询问，输出一个数字表示答案
+示例 1  输入输出示例仅供调试，后台判题数据一般不包含示例
+ 输入 4 3
+1 2 3 4
+4
+3
+1
+输出 1
+2
+4
+代码待更新 </description>
+    </item>
+    
+    <item>
+      <title>20190810231142</title>
+      <link>https://mannuan.github.io/post/20190810231142/</link>
+      <pubDate>Sat, 10 Aug 2019 23:11:43 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190810231142/</guid>
+      <description>题目描述 小易给你一个包含n个数字的数组\(a_1, a_2, \dots, a_3\)。你可以对这个数组执行任意次以下
+交换操作：
+对于数组中的两个下标i,j(\(1 \leq i, j \leq n\))，如果\(a_i + a_j\)为奇数，就可以交换\(a_i\)和\(a_j\)
+现在允许你使用操作次数不限，小易希望你能求出在所有能通过若干次操作可以得到的数组中，字典序最小的一个是什么。
+输入描述： 第一行一个整数n;
+第二行n个整数\(a_1, a_2, \dots, a_n\), 表示数组，每两个数字之间用一个空格分隔。
+输入保证\(1 \leq n \leq 10^5; 1 \leq a_i \leq 10^9\)。
+输出描述： n个整数，每两个整数之间用一个空格分隔，表示得到的字典序最小的数组。
+示例1  输入输出示例仅供调试，后台判题数据一般不包含示例
+ 输入 4
+7 3 5 1
+输出 7 3 5 1
+示例2  输入输出示例仅供调试，后台判题数据一般不包含示例
+ 输入 10
+53941 38641 31525 75864 29026 12199 83522 58200 64784 80987
+输出 12199 29026 31525 38641 53941 58200 64784 75864 80987 83522</description>
+    </item>
+    
+    <item>
+      <title>连续子序列</title>
+      <link>https://mannuan.github.io/post/20190810230504/</link>
+      <pubDate>Sat, 10 Aug 2019 23:05:04 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190810230504/</guid>
+      <description> 题目描述 小易给定了一个长度为 n 的数字序列，对于每一个 1≤k≤n，小易希望能求解出所有长度为的连续子序列的最大值中的最小值
+输入描述 第一行数字n
+接下来一行是一个长度为n的数字序列
+\(1 \leq n \leq 100000, 0 \leq a_i \leq 10^9\)
+输出描述： 一行n个数字，第i个数字表示k=i时的答案
+示例 1  输入输出示例仅供调试，后台判题数据一般不包含示例
+ 输入 6
+1 3 2 4 6 5
+输出 1 3 3 4 6 8
+代码待更新 </description>
+    </item>
+    
+    <item>
+      <title>辗转相除法</title>
+      <link>https://mannuan.github.io/post/20190810225614/</link>
+      <pubDate>Sat, 10 Aug 2019 22:56:14 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190810225614/</guid>
+      <description> 题目描述 小易学习了转相除法之后，就开始实践这个算法在求解最大公约数上。牛牛给小易出了一道不同寻常的求解最大公约数：求解a和b的最大公约数，但是a和b的范围特别大。 小易遇到了因难，向聪明的你寻求帮助，希望你能帮帮他。
+输入描述： 第一行数字 a，第二行数字 b
+\(1 \leq a \leq 10^{10^5}, 1 \leq b &amp;lt; 10^{18}\)
+输出描述 一行一个数字表示答案
+示例 1  输入输出示例仅供调试，后台判题数据一般不包含示例
+ 输入 6
+4
+输出 2
+示例 2  输入输出示例仅供调试，后台判题数据一般不包含示例
+ 输入 7951346523609888
+6998915114363550
+输出 1013754
+代码待更新 </description>
+    </item>
+    
+    <item>
+      <title>旋转字符串</title>
+      <link>https://mannuan.github.io/post/20190810224801/</link>
+      <pubDate>Sat, 10 Aug 2019 22:48:01 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190810224801/</guid>
+      <description>题目描述 给字符串定义一个“旋转“的操作，比如字符串AbcD旋转一次变成bcDA。继续旋转则依次变成cDAb、DAbc、Abcd。 给定两个字符串“源和目标”请判断“源“在旋转一定次数后，是否可以包含“目标
+输入描述 三组长度非空字符串，一共6行，奇数行为“源“字符串，偶数行为“目标”字符串
+输出描述 每组字符串是否可以旋转包含。包含返回 1, 不包含返回 0
+示例1  输入输出示例仅供调试，后台判题数据一般不包含示例
+ 输入 AABCD
+CDAA
+AABCD
+ABCD
+AABCD
+CFS
+输出 110
+代码待添加</description>
+    </item>
+    
+    <item>
+      <title>强迫症卖家</title>
+      <link>https://mannuan.github.io/post/20190810221953/</link>
+      <pubDate>Sat, 10 Aug 2019 22:19:53 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190810221953/</guid>
+      <description>时间限制： C/C++语言 1秒；其他语言 2秒
+内存限制： C/C++语言 32768K；其他语言 65536K 64bit IO Format %lld
+题目描述 小明是个有强迫症的卖家，他手头有10000台设备，他想以他的幸运数D元（D是个浮点数）每台的价格批量卖一些出去，他不在乎能卖出去多少台，只在乎卖出去的每台均价最接近D元，而且他只收整数数额的钱。请你编程计算他应该每次卖出去的台数N，一共售价M。
+输入描述 输入一个浮点数D(0 &amp;lt;D &amp;lt;10），精确到小数点后14位，表示小明钟情的价格。
+输出描述 输出两个正整数M, N，以空格分割 如果有多种方案均价一样，输出台数最小的那个。
+示例1  输入输出示例仅供调试，后台判题数据一般不包含示例
+ 输入 0.50000000000000
+输出 1 2
+示例2  输入输出示例仅供调试，后台判题数据一般不包含示例
+ 输入 3.14159265358979
+输出 355 113
+代码待添加</description>
+    </item>
+    
+    <item>
+      <title>特殊的测试</title>
+      <link>https://mannuan.github.io/post/20190810215703/</link>
+      <pubDate>Sat, 10 Aug 2019 21:57:03 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190810215703/</guid>
+      <description>时间限制： C/C++语言 1000MS；其他语言 3000MS
+内存限制： C/C++语言 131072KB；其他语言 655360KB
+题目描述： 小C在做一种特殊的服务器负载测试，对于一个请求队列中的请求，每一个请求都有一个负荷值，为了保证服务器稳定，请求队列中的请求负荷必须按照先递增后递减的规律(仅递增，仅递减也可以)，比如[ 1，2，8，4，3 ]，[ 1，3，5 ]和[ 10 ]这些是满足规律的，还有一些不满足的，比如[ 1，2，2，1 ]，[ 2，1，2 ]和[ 10，10 ]。现在给你一个请求队列，你可以对请求的负荷值进行增加，要求你调整队列中请求的负荷值，使数组满足条件。最后输出使队列满足条件最小的增加总和。
+输入 输入有两行，
+第一行是 N (1≤n≤5000) ，代表请求队列中的请求数量。
+第二行有 N个数字 a1,a2…an (1≤ai≤10^9)。Ai是第i个请求的负荷值。
+输出 输出这个最小增加总和
+样例输入 5 1 4 3 2 5
+样例输出 6
+提示 样例解释，此时合法队列为[1,4,5,6,5]，最小增加和为6
+此题代码只通过27%，期待更新正确的代码  import java.util.Scanner; public class Test02{ public static void main(String[] args) { Scanner scanner = new Scanner(System.in); int n = scanner.nextInt(); int[] arr = new int[n]; int max = 0; for(int i=0;i&amp;lt;n;i++){ arr[i] = scanner.</description>
+    </item>
+    
+    <item>
+      <title>月光宝盒的密码</title>
+      <link>https://mannuan.github.io/post/20190810215316/</link>
+      <pubDate>Sat, 10 Aug 2019 21:53:16 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190810215316/</guid>
+      <description>时间限制： C/C++语言 1000MS；其他语言 3000MS
+内存限制： C/C++语言 131072KB；其他语言 655360KB
+题目描述： 小希偶然得到了传说中的月光宝盒,然而打开月光宝盒需要一串密码。虽然小希并不知道密码具体是什么，但是月光宝盒的说明书上有着一个长度为 n (2 &amp;lt;= N &amp;lt;= 50000)的序列 a (-10^9 &amp;lt;= a[i] &amp;lt;= 10^9)的范围内。下面写着一段话：密码是这个序列的最长的严格上升子序列的长度(严格上升子序列是指，子序列的元素是严格递增的，例如: [5,1,6,2,4]的最长严格上升子序列为[1,2,4])，请你帮小希找到这个密码。
+输入 第1行： 1个数N，N为序列的长度(2&amp;lt;=N&amp;lt;=50000)
+第2到 N+1行： 每行1个数，对应序列的元素(-10^9 &amp;lt;= a[i] &amp;lt;= 10^9)
+输出 一个正整数表示严格最长上升子序列的长度
+样例输入 8 5 1 6 8 2 4 5 10
+样例输出 5
+import java.util.Scanner; public class Test{ public static void main(String[] args) { Scanner scanner = new Scanner(System.in); int N = scanner.nextInt(); int[] arr = new int[N]; int[] seqs = new int[N]; for(int i=0; i&amp;lt;arr.</description>
+    </item>
+    
+    <item>
+      <title>若若的三角形</title>
+      <link>https://mannuan.github.io/post/20190810214645/</link>
+      <pubDate>Sat, 10 Aug 2019 21:46:46 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190810214645/</guid>
+      <description>时间限制： C/C++语言 1000MS；其他语言 3000MS
+内存限制： C/C++语言 131072KB；其他语言 655360KB
+题目描述： 若若有一个格子数为n*m的网格，现在若若想知道3个点都在格点上能形成的三角形有多少个（三点不能共线）
+输入 一行两个数n和m
+n,m&amp;lt;=1800
+输出 三角形个数
+样例输入 2 2
+样例输出 76
+# include&amp;lt;stdio.h&amp;gt; # include&amp;lt;iostream&amp;gt; # include&amp;lt;string.h&amp;gt; # include&amp;lt;algorithm&amp;gt; using namespace std; int gcd(int a,int b){ if(b==0){ return a; } return gcd(b, a%b); } long long Com(int n, int r){ if(n&amp;lt;r) return 0; if(n-r&amp;lt;r) r = n-r; int i,j; long long ret = 1; for(i=0,j=1;i&amp;lt;r;i++){ ret*=(n-i); for(;j&amp;lt;=r&amp;amp;&amp;amp;ret%j==0;j++){ ret /= j; } } return ret; } int main(){ int n,m; while(scanf(&amp;#34;%d%d&amp;#34;, &amp;amp;n, &amp;amp;m)!</description>
+    </item>
+    
+    <item>
+      <title>计算绝对值</title>
+      <link>https://mannuan.github.io/post/20190810214234/</link>
+      <pubDate>Sat, 10 Aug 2019 21:42:34 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190810214234/</guid>
+      <description> 时间限制： C/C++语言 1000MS；其他语言 3000MS
+内存限制： C/C++语言 131072KB；其他语言 655360KB
+题目描述： 给出n个正整数，要求找出相邻两个数字中差的绝对值最小的一对数字，如果有差的绝对值相同的，则输出最前面的一对数。 2&amp;lt;n&amp;lt;=100，正整数都在10^16范围内
+输入 输入包含2行，第一行为n，第二行是n个用空格分隔的正整数。
+输出 输出包含一行两个正整数，要求按照原来的顺序输出
+样例输入 9 1 3 4 7 2 6 5 12 32
+样例输出 3 4
+# -*- coding: utf-8 -*- import sys n = int(sys.stdin.readline().strip()) arr = [int(i) for i in sys.stdin.readline().strip().split()][:n] min_cha = abs(arr[0]-arr[1]) min_tup = (arr[0], arr[1]) for i in range(1, len(arr)): tmp = abs(arr[i-1]-arr[i]) if tmp &amp;lt; min_cha: min_cha = tmp min_tup = (arr[i-1], arr[i]) print(min_tup[0], min_tup[1])</description>
+    </item>
+    
+    <item>
+      <title>知识点汇总</title>
+      <link>https://mannuan.github.io/post/20190809214541/</link>
+      <pubDate>Fri, 09 Aug 2019 21:45:41 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190809214541/</guid>
+      <description> 前言 网易面试注重对基本知识的考察。主要从css和js两方面着手。给大家的告诫就是凡是简历上面的东西，最好掌握的很熟悉。
+CSS部分  两列布局，一列自适应，这篇文章解释的很好链接  扩展：三列布局链接链接    JS部分  js基本数据类型，null和undefined的关系 原型，原型链，参考文章链接链接2 跨域链接 jquery链接链接   网络部分  tcp  扩展：什么是tcp连接链接 扩展: tcp的连接复用链接   算法部分  排序算法，链接  快速排序，链接    </description>
+    </item>
+    
+    <item>
+      <title>less与sass的区别</title>
+      <link>https://mannuan.github.io/post/20190808155312/</link>
+      <pubDate>Thu, 08 Aug 2019 15:53:12 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190808155312/</guid>
+      <description>参考链接 链接</description>
+    </item>
+    
+    <item>
+      <title>vue从入门到精通</title>
+      <link>https://mannuan.github.io/post/20190808140332/</link>
+      <pubDate>Thu, 08 Aug 2019 14:03:32 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190808140332/</guid>
+      <description>创建项目 安装vue-cli3.x cnpm install -g @vue/cli 创建项目 vue create xxx Please pick a preset: ? Please pick a preset: firstpractice (vue-router, vuex, dart-sass, eslint) default (babel, eslint) ❯ Manually select features  选择最后一项
+Check the features needed for your project: ? Please pick a preset: Manually select features ? Check the features needed for your project: ◯ Babel ◯ TypeScript ◯ Progressive Web App (PWA) Support ◉ Router ◉ Vuex ◉ CSS Pre-processors ❯◉ Linter / Formatter ◯ Unit Testing ◯ E2E Testing  选择上面实心圆的几项</description>
+    </item>
+    
+    <item>
+      <title>基于网络过程的前端知识框架</title>
+      <link>https://mannuan.github.io/post/20190808112742/</link>
+      <pubDate>Thu, 08 Aug 2019 11:27:42 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190808112742/</guid>
+      <description> 浏览器输入url 检查http缓存 http缓存没有过期 http缓存已经过期 </description>
+    </item>
+    
+    <item>
+      <title>npm的常用命令</title>
+      <link>https://mannuan.github.io/post/20190808100721/</link>
+      <pubDate>Thu, 08 Aug 2019 10:07:21 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190808100721/</guid>
+      <description> 自动往package.json文件中添加dependencies npm install xxx --save 自动往package.json文件中添加devDependencies npm install xxx --save-dev</description>
+    </item>
+    
+    <item>
+      <title>基于情感以及各种规则的反讽检测</title>
+      <link>https://mannuan.github.io/post/20190807221347/</link>
+      <pubDate>Wed, 07 Aug 2019 22:13:47 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190807221347/</guid>
+      <description>摘要 随着网络的快速发展，越来越多的网络社交平台产生。人们普遍通过社交网络来发泄直接对这个社会的不满，其中reddit是国外一个重要的社交平台。在网站中如果是讽刺的文字会用#sarcasm来标注，其中反讽是一个分析人类情感的很重要的一个平台。分析反讽的评论对公众的态度有很太的提升。以前，一般通过上下文来获取的一句话的反讽倾向，或者，提升句子语义的提取来获取反讽的评判依据。我认为之前的研究对于一个反讽的判别器来说太过于片面，没有整体地把握住反讽的评判标准。我认为应该同时考虑以上的两个方面，并且我认为反讽的检测还与情感的变化相关。上下文的反讽主要由于语境的不协调的引起的，因此我认为，可以与正面情感和负面活动的单词的数量、正面情感和负面活动的词对的长度有关。我通过几组实验验证了我的假设，实验表明我的模型优越于最先进的模型。</description>
+    </item>
+    
+    <item>
+      <title>从浏览器地址栏输入url到显示页面的步骤(以HTTP为例)</title>
+      <link>https://mannuan.github.io/post/20190807110958/</link>
+      <pubDate>Wed, 07 Aug 2019 11:09:59 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190807110958/</guid>
+      <description>在浏览器地址栏输入URL 浏览器查看缓存，如果请求资源在缓存中并且新鲜，跳转到转码步骤  如果资源未缓存，发起新请求 如果已缓存，检验是否足够新鲜，足够新鲜直接提供给客户端，否则与服务器进行验证。 检验新鲜通常有两个HTTP头进行控制Expires和Cache-Control：  HTTP1.0提供Expires，值为一个绝对时间表示缓存新鲜日期 HTTP1.1增加了Cache-Control: max-age=,值为以秒为单位的最大新鲜时间   浏览器解析URL获取协议，主机，端口，path 浏览器组装一个HTTP（GET）请求报文 浏览器获取主机ip地址，过程如下：  浏览器缓存 本机缓存 hosts文件 路由器缓存 ISP DNS缓存 DNS递归查询（可能存在负载均衡导致每次IP不一样）  打开一个socket与目标IP地址，端口建立TCP链接，三次握手如下：  客户端发送一个TCP的SYN=1，Seq=X的包到服务器端口 服务器发回SYN=1， ACK=X+1， Seq=Y的响应包 客户端发送ACK=Y+1， Seq=Z  TCP链接建立后发送HTTP请求 服务器接受请求并解析，将请求转发到服务程序，如虚拟主机使用HTTP Host头部判断请求的服务程序 服务器检查HTTP请求头是否包含缓存验证信息如果验证缓存新鲜，返回304等对应状态码 处理程序读取完整请求并准备HTTP响应，可能需要查询数据库等操作 服务器将响应报文通过TCP连接发送回浏览器 浏览器接收HTTP响应，然后根据情况选择关闭TCP连接或者保留重用，关闭TCP连接的四次握手如下：  主动方发送Fin=1， Ack=Z， Seq= X报文 被动方发送ACK=X+1， Seq=Z报文 被动方发送Fin=1， ACK=X， Seq=Y报文 主动方发送ACK=Y， Seq=X报文  浏览器检查响应状态吗：是否为1XX，3XX， 4XX， 5XX，这些情况处理与2XX不同 如果资源可缓存，进行缓存 对响应进行解码（例如gzip压缩） 根据资源类型决定如何处理（假设资源为HTML文档） 解析HTML文档，构件DOM树，下载资源，构造CSSOM树，执行js脚本，这些操作没有严格的先后顺序，以下分别解释 构建DOM树：  Tokenizing：根据HTML规范将字符流解析为标记 Lexing：词法分析将标记转换为对象并定义属性和规则 DOM construction：根据HTML标记关系将对象组成DOM树  解析过程中遇到图片、样式表、js文件，启动下载 构建CSSOM树：  Tokenizing：字符流转换为标记流 Node：根据标记创建节点 CSSOM：节点创建CSSOM树  根据DOM树和CSSOM树构建渲染树:  从DOM树的根节点遍历所有可见节点，不可见节点包括：1）script,meta这样本身不可见的标签。2)被css隐藏的节点，如display: none 对每一个可见节点，找到恰当的CSSOM规则并应用 发布可视节点的内容和计算样式  js解析如下：  浏览器创建Document对象并解析HTML，将解析到的元素和文本节点添加到文档中，此时document.</description>
+    </item>
+    
+    <item>
+      <title>智慧旅游</title>
+      <link>https://mannuan.github.io/post/20190807092523/</link>
+      <pubDate>Wed, 07 Aug 2019 09:25:23 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190807092523/</guid>
+      <description> 前端项目架构  public/
+ favicon.ico index.html  src/
+ api/ assets/ base/ common/ components/ config/ directive/ filters/ mock/ router/ store/ styles/ utils/ views/ App.vue main.js permission.js  babel.config.js
+ package-lock.json
+ package.json
+ vue.config.js
+  </description>
+    </item>
+    
+    <item>
+      <title>pyspider实现原理详解</title>
+      <link>https://mannuan.github.io/post/20190806221552/</link>
+      <pubDate>Tue, 06 Aug 2019 22:15:52 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190806221552/</guid>
+      <description> 介绍 </description>
+    </item>
+    
+    <item>
+      <title>爬虫面试知识点总结</title>
+      <link>https://mannuan.github.io/post/20190806215803/</link>
+      <pubDate>Tue, 06 Aug 2019 21:58:03 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190806215803/</guid>
+      <description> 参考资料  链接  </description>
+    </item>
+    
+    <item>
+      <title>vue要点总结</title>
+      <link>https://mannuan.github.io/post/20190806194820/</link>
+      <pubDate>Tue, 06 Aug 2019 19:48:20 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190806194820/</guid>
+      <description> 参考资料  链接 链接  </description>
+    </item>
+    
+    <item>
+      <title>python面试要点</title>
+      <link>https://mannuan.github.io/post/20190806192314/</link>
+      <pubDate>Tue, 06 Aug 2019 19:23:14 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190806192314/</guid>
+      <description> 参考资料  链接 链接  </description>
+    </item>
+    
+    <item>
+      <title>前端知识点总结</title>
+      <link>https://mannuan.github.io/post/20190806190120/</link>
+      <pubDate>Tue, 06 Aug 2019 19:01:20 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190806190120/</guid>
+      <description> 链接 链接 链接   </description>
+    </item>
+    
+    <item>
+      <title>瀑布流的Vue实践</title>
+      <link>https://mannuan.github.io/post/20190806164157/</link>
+      <pubDate>Tue, 06 Aug 2019 16:41:57 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190806164157/</guid>
+      <description>参考资料 链接</description>
+    </item>
+    
+    <item>
       <title>行内元素和块级元素有哪些？</title>
       <link>https://mannuan.github.io/post/20190806143509/</link>
       <pubDate>Tue, 06 Aug 2019 14:35:09 +0800</pubDate>
@@ -47,7 +379,7 @@ Minimo keeps the focus on your content and lets it shine!</description>
       <pubDate>Tue, 06 Aug 2019 14:32:55 +0800</pubDate>
       
       <guid>https://mannuan.github.io/post/20190806143255/</guid>
-      <description>链接</description>
+      <description> 参考资料  链接  </description>
     </item>
     
     <item>
@@ -56,7 +388,7 @@ Minimo keeps the focus on your content and lets it shine!</description>
       <pubDate>Tue, 06 Aug 2019 14:20:17 +0800</pubDate>
       
       <guid>https://mannuan.github.io/post/20190806142017/</guid>
-      <description> 2018年  链接  </description>
+      <description> 2019年  链接  2018年  链接 链接 链接  </description>
     </item>
     
     <item>
@@ -65,8 +397,7 @@ Minimo keeps the focus on your content and lets it shine!</description>
       <pubDate>Tue, 06 Aug 2019 14:10:30 +0800</pubDate>
       
       <guid>https://mannuan.github.io/post/20190806141030/</guid>
-      <description> 链接
-关于position:absolute的几篇文章  链接1 链接2 链接3  </description>
+      <description> 参考资料  链接  关于position:absolute的几篇文章  链接1 链接2 链接3  </description>
     </item>
     
     <item>
@@ -84,7 +415,7 @@ Minimo keeps the focus on your content and lets it shine!</description>
       <pubDate>Tue, 06 Aug 2019 14:01:48 +0800</pubDate>
       
       <guid>https://mannuan.github.io/post/20190806140147/</guid>
-      <description>链接</description>
+      <description> 参考资料  链接  </description>
     </item>
     
     <item>
@@ -544,7 +875,7 @@ Response Headers（服务器端） cache-control
 控制http缓存的最高指令
 常用值有:
 1. no-store: 所有内容都不缓存
-2. noc-cache: 缓存，但是浏览器使用缓存前，都会请求服务器判断缓存是否是最新，过期的缓存就不使用
+2. no-cache: 缓存，但是浏览器使用缓存前，都会请求服务器判断缓存是否是最新，过期的缓存就不使用
 3. max-age=x(单位秒)在缓存后的x秒内不发请求，是http1.1的属性，类似于expires，但优先级高于expires
 4. s-maxage=x(单位秒)代理服务器请求源站在缓存后的x秒内不发请求，只对CDN有效
 5. public 客户端和代理服务器（CDN）都可缓存
@@ -2574,6 +2905,15 @@ sudo su 首先，你要重新登录一下，然后输入上面这个命令，密
 For mathematics blocks you can use either $$&amp;hellip;$$ or \\[&amp;hellip;\\] as delimiters.
 Here&amp;rsquo;s an example Markdown content:
 When \\( a \ne 0 \\), there are two solutions to $$ ax^2 + bx + c = 0 $$ and they are: \\[ x = {-b \pm \sqrt{b^2-4ac} \over 2a} \\] Output:</description>
+    </item>
+    
+    <item>
+      <title>详解面向对象、构造函数、原型与原型链</title>
+      <link>https://mannuan.github.io/post/20190806190331/</link>
+      <pubDate>Mon, 06 Aug 2018 19:03:31 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190806190331/</guid>
+      <description> 参考资料  链接 链接  </description>
     </item>
     
     <item>

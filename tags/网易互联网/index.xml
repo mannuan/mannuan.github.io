@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>网易互联网 on mannuan</title>
+    <link>https://mannuan.github.io/tags/%E7%BD%91%E6%98%93%E4%BA%92%E8%81%94%E7%BD%91/</link>
+    <description>Recent content in 网易互联网 on mannuan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 10 Aug 2019 23:23:51 +0800</lastBuildDate>
+    
+	<atom:link href="https://mannuan.github.io/tags/%E7%BD%91%E6%98%93%E4%BA%92%E8%81%94%E7%BD%91/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>20190810232351</title>
+      <link>https://mannuan.github.io/post/20190810232351/</link>
+      <pubDate>Sat, 10 Aug 2019 23:23:51 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190810232351/</guid>
+      <description> 题目描述 小易在维护数据的时候遇到一个需求，具体来说小易有一系列数据，这些数据了构成一个长度为n的数字序列，接下来小易会在这个序列上进行q次操作。
+每次操作有一个查询的数字x，小易需要将序列数据中所有大于等于x的数字都减一并输出在本次操作中有多少个数字被减一了。
+小易犯了难，希望你能帮帮他。
+输入描述 第一行n,q, 表示数字个数和操作个数
+接下来一行n个数表示初始的数字
+接下来q行，每行一个数，表示指定的数字x。
+\(1 \leq n, q \leq 20000, 1 \leq a_i, x \leq n\)
+输出描述 对于每个询问，输出一个数字表示答案
+示例 1  输入输出示例仅供调试，后台判题数据一般不包含示例
+ 输入 4 3
+1 2 3 4
+4
+3
+1
+输出 1
+2
+4
+代码待更新 </description>
+    </item>
+    
+    <item>
+      <title>20190810231142</title>
+      <link>https://mannuan.github.io/post/20190810231142/</link>
+      <pubDate>Sat, 10 Aug 2019 23:11:43 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190810231142/</guid>
+      <description>题目描述 小易给你一个包含n个数字的数组\(a_1, a_2, \dots, a_3\)。你可以对这个数组执行任意次以下
+交换操作：
+对于数组中的两个下标i,j(\(1 \leq i, j \leq n\))，如果\(a_i + a_j\)为奇数，就可以交换\(a_i\)和\(a_j\)
+现在允许你使用操作次数不限，小易希望你能求出在所有能通过若干次操作可以得到的数组中，字典序最小的一个是什么。
+输入描述： 第一行一个整数n;
+第二行n个整数\(a_1, a_2, \dots, a_n\), 表示数组，每两个数字之间用一个空格分隔。
+输入保证\(1 \leq n \leq 10^5; 1 \leq a_i \leq 10^9\)。
+输出描述： n个整数，每两个整数之间用一个空格分隔，表示得到的字典序最小的数组。
+示例1  输入输出示例仅供调试，后台判题数据一般不包含示例
+ 输入 4
+7 3 5 1
+输出 7 3 5 1
+示例2  输入输出示例仅供调试，后台判题数据一般不包含示例
+ 输入 10
+53941 38641 31525 75864 29026 12199 83522 58200 64784 80987
+输出 12199 29026 31525 38641 53941 58200 64784 75864 80987 83522</description>
+    </item>
+    
+    <item>
+      <title>连续子序列</title>
+      <link>https://mannuan.github.io/post/20190810230504/</link>
+      <pubDate>Sat, 10 Aug 2019 23:05:04 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190810230504/</guid>
+      <description> 题目描述 小易给定了一个长度为 n 的数字序列，对于每一个 1≤k≤n，小易希望能求解出所有长度为的连续子序列的最大值中的最小值
+输入描述 第一行数字n
+接下来一行是一个长度为n的数字序列
+\(1 \leq n \leq 100000, 0 \leq a_i \leq 10^9\)
+输出描述： 一行n个数字，第i个数字表示k=i时的答案
+示例 1  输入输出示例仅供调试，后台判题数据一般不包含示例
+ 输入 6
+1 3 2 4 6 5
+输出 1 3 3 4 6 8
+代码待更新 </description>
+    </item>
+    
+    <item>
+      <title>辗转相除法</title>
+      <link>https://mannuan.github.io/post/20190810225614/</link>
+      <pubDate>Sat, 10 Aug 2019 22:56:14 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190810225614/</guid>
+      <description> 题目描述 小易学习了转相除法之后，就开始实践这个算法在求解最大公约数上。牛牛给小易出了一道不同寻常的求解最大公约数：求解a和b的最大公约数，但是a和b的范围特别大。 小易遇到了因难，向聪明的你寻求帮助，希望你能帮帮他。
+输入描述： 第一行数字 a，第二行数字 b
+\(1 \leq a \leq 10^{10^5}, 1 \leq b &amp;lt; 10^{18}\)
+输出描述 一行一个数字表示答案
+示例 1  输入输出示例仅供调试，后台判题数据一般不包含示例
+ 输入 6
+4
+输出 2
+示例 2  输入输出示例仅供调试，后台判题数据一般不包含示例
+ 输入 7951346523609888
+6998915114363550
+输出 1013754
+代码待更新 </description>
+    </item>
+    
+    <item>
+      <title>下拉菜单</title>
+      <link>https://mannuan.github.io/post/20190804210614/</link>
+      <pubDate>Sun, 04 Aug 2019 21:06:14 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190804210614/</guid>
+      <description>题目描述 如下图所示，请实现如下功能，当鼠标移到黑底客户服务区块后，出来白底卡片内容，鼠标移出后，卡片内容消失，并且当鼠标在白色部分上移动时白色框不能消失。
+纯css的解决方案 链接</description>
+    </item>
+    
+    <item>
+      <title>数组去重</title>
+      <link>https://mannuan.github.io/post/20190804155523/</link>
+      <pubDate>Sun, 04 Aug 2019 15:55:23 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190804155523/</guid>
+      <description>题目描述 设计一个uniquity函数，可以根据用户自定义的重复判定规则进行数组元素去重，举个例子：
+//情况一: let arr0 = [1,1,1,0,5,6]; uniqueify(arr0); //输出：[1,0,5,6]  //情况二: let arr1 = [ {id: 1, name: &amp;#34;xx&amp;#34;}, {id: 1, name: &amp;#34;xx&amp;#34;}, {id: 2, name: &amp;#34;xx&amp;#34;}, {id: 1, name: &amp;#34;xx&amp;#34;}, {id: 1, name: &amp;#34;xx&amp;#34;}, ]; uniqueify(arr1, a=&amp;gt;a.id); //假如这里的去重规则依据为id //输出 [ {id: 1, name: &amp;#34;xx&amp;#34;}, {id: 2, name: &amp;#34;xx&amp;#34;}, ]; //情况三  let arr2 = [ {name: &amp;#39;xx&amp;#39;, sex: &amp;#39;male&amp;#39;}, {name: &amp;#39;xx&amp;#39;, sex: &amp;#39;female&amp;#39;}, {name: &amp;#39;xx&amp;#39;, sex: &amp;#39;male&amp;#39;}, {name: &amp;#39;aa&amp;#39;, sex: &amp;#39;male&amp;#39;}, {name: &amp;#39;aa&amp;#39;, sex: &amp;#39;male&amp;#39;}, ] uniqueify(arr2, a=&amp;gt;(a.</description>
+    </item>
+    
+  </channel>
+</rss>

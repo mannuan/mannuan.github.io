@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>缓存 on mannuan</title>
+    <link>https://mannuan.github.io/tags/%E7%BC%93%E5%AD%98/</link>
+    <description>Recent content in 缓存 on mannuan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 07 Aug 2019 11:09:59 +0800</lastBuildDate>
+    
+	<atom:link href="https://mannuan.github.io/tags/%E7%BC%93%E5%AD%98/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>从浏览器地址栏输入url到显示页面的步骤(以HTTP为例)</title>
+      <link>https://mannuan.github.io/post/20190807110958/</link>
+      <pubDate>Wed, 07 Aug 2019 11:09:59 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190807110958/</guid>
+      <description>在浏览器地址栏输入URL 浏览器查看缓存，如果请求资源在缓存中并且新鲜，跳转到转码步骤  如果资源未缓存，发起新请求 如果已缓存，检验是否足够新鲜，足够新鲜直接提供给客户端，否则与服务器进行验证。 检验新鲜通常有两个HTTP头进行控制Expires和Cache-Control：  HTTP1.0提供Expires，值为一个绝对时间表示缓存新鲜日期 HTTP1.1增加了Cache-Control: max-age=,值为以秒为单位的最大新鲜时间   浏览器解析URL获取协议，主机，端口，path 浏览器组装一个HTTP（GET）请求报文 浏览器获取主机ip地址，过程如下：  浏览器缓存 本机缓存 hosts文件 路由器缓存 ISP DNS缓存 DNS递归查询（可能存在负载均衡导致每次IP不一样）  打开一个socket与目标IP地址，端口建立TCP链接，三次握手如下：  客户端发送一个TCP的SYN=1，Seq=X的包到服务器端口 服务器发回SYN=1， ACK=X+1， Seq=Y的响应包 客户端发送ACK=Y+1， Seq=Z  TCP链接建立后发送HTTP请求 服务器接受请求并解析，将请求转发到服务程序，如虚拟主机使用HTTP Host头部判断请求的服务程序 服务器检查HTTP请求头是否包含缓存验证信息如果验证缓存新鲜，返回304等对应状态码 处理程序读取完整请求并准备HTTP响应，可能需要查询数据库等操作 服务器将响应报文通过TCP连接发送回浏览器 浏览器接收HTTP响应，然后根据情况选择关闭TCP连接或者保留重用，关闭TCP连接的四次握手如下：  主动方发送Fin=1， Ack=Z， Seq= X报文 被动方发送ACK=X+1， Seq=Z报文 被动方发送Fin=1， ACK=X， Seq=Y报文 主动方发送ACK=Y， Seq=X报文  浏览器检查响应状态吗：是否为1XX，3XX， 4XX， 5XX，这些情况处理与2XX不同 如果资源可缓存，进行缓存 对响应进行解码（例如gzip压缩） 根据资源类型决定如何处理（假设资源为HTML文档） 解析HTML文档，构件DOM树，下载资源，构造CSSOM树，执行js脚本，这些操作没有严格的先后顺序，以下分别解释 构建DOM树：  Tokenizing：根据HTML规范将字符流解析为标记 Lexing：词法分析将标记转换为对象并定义属性和规则 DOM construction：根据HTML标记关系将对象组成DOM树  解析过程中遇到图片、样式表、js文件，启动下载 构建CSSOM树：  Tokenizing：字符流转换为标记流 Node：根据标记创建节点 CSSOM：节点创建CSSOM树  根据DOM树和CSSOM树构建渲染树:  从DOM树的根节点遍历所有可见节点，不可见节点包括：1）script,meta这样本身不可见的标签。2)被css隐藏的节点，如display: none 对每一个可见节点，找到恰当的CSSOM规则并应用 发布可视节点的内容和计算样式  js解析如下：  浏览器创建Document对象并解析HTML，将解析到的元素和文本节点添加到文档中，此时document.</description>
+    </item>
+    
+  </channel>
+</rss>
