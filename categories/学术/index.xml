@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>学术 on mannuan</title>
+    <link>https://mannuan.github.io/categories/%E5%AD%A6%E6%9C%AF/</link>
+    <description>Recent content in 学术 on mannuan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 13 Aug 2017 22:59:29 +0800</lastBuildDate>
+    
+	<atom:link href="https://mannuan.github.io/categories/%E5%AD%A6%E6%9C%AF/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>学术</title>
+      <link>https://mannuan.github.io/post/academic/</link>
+      <pubDate>Sun, 13 Aug 2017 22:59:29 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/academic/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
