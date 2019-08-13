@@ -37,5 +37,59 @@
       <description> 2019年  链接  2018年  链接 链接 链接  </description>
     </item>
     
+    <item>
+      <title>后端开发</title>
+      <link>https://mannuan.github.io/post/backend/</link>
+      <pubDate>Sun, 13 Aug 2017 22:37:40 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/backend/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>操作系统</title>
+      <link>https://mannuan.github.io/post/operating-system/</link>
+      <pubDate>Sun, 13 Aug 2017 22:34:18 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/operating-system/</guid>
+      <description> linux </description>
+    </item>
+    
+    <item>
+      <title>数据库</title>
+      <link>https://mannuan.github.io/post/database/</link>
+      <pubDate>Sun, 13 Aug 2017 22:29:11 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/database/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>前端开发</title>
+      <link>https://mannuan.github.io/post/frontend/</link>
+      <pubDate>Sun, 13 Aug 2017 22:23:54 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/frontend/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>算法</title>
+      <link>https://mannuan.github.io/post/algorithm/</link>
+      <pubDate>Sun, 13 Aug 2017 22:19:08 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/algorithm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>网络协议</title>
+      <link>https://mannuan.github.io/post/network-protocol/</link>
+      <pubDate>Sun, 13 Aug 2017 22:14:24 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/network-protocol/</guid>
+      <description> http协议 </description>
+    </item>
+    
   </channel>
 </rss>

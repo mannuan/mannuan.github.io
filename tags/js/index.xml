@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>js on mannuan</title>
+    <link>https://mannuan.github.io/tags/js/</link>
+    <description>Recent content in js on mannuan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 13 Aug 2019 21:51:19 +0800</lastBuildDate>
+    
+	<atom:link href="https://mannuan.github.io/tags/js/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>把矩形往右边移动</title>
+      <link>https://mannuan.github.io/post/20190813215119/</link>
+      <pubDate>Tue, 13 Aug 2019 21:51:19 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190813215119/</guid>
+      <description> 纯css实现 </description>
+    </item>
+    
+  </channel>
+</rss>

@@ -5,7 +5,7 @@
     <link>https://mannuan.github.io/</link>
     <description>Recent content in Home on mannuan</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 13 Aug 2019 19:15:00 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 13 Aug 2019 21:51:19 +0800</lastBuildDate>
     
 	<atom:link href="https://mannuan.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -30,6 +30,15 @@ Heading 3 Yet another, but centered! Excepteur sint occaecat cupidatat non proid
       <description>Mínimo is a Spanish word that roughly translate to Minimal.
 Minimo is a minimalist theme for Hugo.
 Minimo keeps the focus on your content and lets it shine!</description>
+    </item>
+    
+    <item>
+      <title>把矩形往右边移动</title>
+      <link>https://mannuan.github.io/post/20190813215119/</link>
+      <pubDate>Tue, 13 Aug 2019 21:51:19 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190813215119/</guid>
+      <description> 纯css实现 </description>
     </item>
     
     <item>
@@ -3278,6 +3287,60 @@ After you&amp;rsquo;re done with that, it&amp;rsquo;s time for installing Minimo
 Installing Minimo There are two different ways you can install Minimo:
  As clone As submodule  The second method is recommended.
 Install Minimo as clone With this method, you will simply clone it. And a copy of Minimo&amp;rsquo;s repository will be stored with the rest of you site.</description>
+    </item>
+    
+    <item>
+      <title>后端开发</title>
+      <link>https://mannuan.github.io/post/backend/</link>
+      <pubDate>Sun, 13 Aug 2017 22:37:40 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/backend/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>操作系统</title>
+      <link>https://mannuan.github.io/post/operating-system/</link>
+      <pubDate>Sun, 13 Aug 2017 22:34:18 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/operating-system/</guid>
+      <description> linux </description>
+    </item>
+    
+    <item>
+      <title>数据库</title>
+      <link>https://mannuan.github.io/post/database/</link>
+      <pubDate>Sun, 13 Aug 2017 22:29:11 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/database/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>前端开发</title>
+      <link>https://mannuan.github.io/post/frontend/</link>
+      <pubDate>Sun, 13 Aug 2017 22:23:54 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/frontend/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>算法</title>
+      <link>https://mannuan.github.io/post/algorithm/</link>
+      <pubDate>Sun, 13 Aug 2017 22:19:08 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/algorithm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>网络协议</title>
+      <link>https://mannuan.github.io/post/network-protocol/</link>
+      <pubDate>Sun, 13 Aug 2017 22:14:24 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/network-protocol/</guid>
+      <description> http协议 </description>
     </item>
     
     <item>

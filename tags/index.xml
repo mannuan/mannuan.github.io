@@ -5,10 +5,28 @@
     <link>https://mannuan.github.io/tags/</link>
     <description>Recent content in Tags on mannuan</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 13 Aug 2019 19:15:00 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 13 Aug 2019 21:51:19 +0800</lastBuildDate>
     
 	<atom:link href="https://mannuan.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>css</title>
+      <link>https://mannuan.github.io/tags/css/</link>
+      <pubDate>Tue, 13 Aug 2019 21:51:19 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/tags/css/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>js</title>
+      <link>https://mannuan.github.io/tags/js/</link>
+      <pubDate>Tue, 13 Aug 2019 21:51:19 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/tags/js/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>网易严选</title>
@@ -277,15 +295,6 @@
       <pubDate>Tue, 06 Aug 2019 14:32:55 +0800</pubDate>
       
       <guid>https://mannuan.github.io/tags/box-shadow/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>css</title>
-      <link>https://mannuan.github.io/tags/css/</link>
-      <pubDate>Tue, 06 Aug 2019 14:32:55 +0800</pubDate>
-      
-      <guid>https://mannuan.github.io/tags/css/</guid>
       <description></description>
     </item>
     
