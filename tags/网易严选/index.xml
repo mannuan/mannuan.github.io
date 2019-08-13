@@ -16,7 +16,7 @@
       <pubDate>Tue, 13 Aug 2019 19:15:00 +0800</pubDate>
       
       <guid>https://mannuan.github.io/post/20190813191500/</guid>
-      <description>面试过程  首先是一个自我介绍， 然后，上来就是说我前端项目做的比较多（但我没做过多少，我每个项目的前端工作，我都用一行字介绍了一下） 面试官首先问我最早什么时候开始接触前端 然后问了我，原生实现ajax 我项目上就写前端布局用了vue和element-ui就疯狂地问我
+      <description>面试过程  首先是一个自我介绍， 然后，上来就是说我前端项目做的比较多（但我没做过多少，我每个项目的前端工作，我都用一行字介绍了一下） 面试官首先问我最早什么时候开始接触前端 首先问了我，原生实现ajax 然后问了我一个关于promise的题目  这道题目由于当时比较紧张，没答上来，现在一想挺简单的，挺可惜的   console.log(1); const promise = new Promise((resolve, reject) =&amp;gt; { console.log(3); resolve(4); }) promise.then(console.log); console.log(2);   我项目上就写前端布局用了vue和element-ui就疯狂地问我
  面试官了问了知不知道vue中自定义指令，我直接说不知道。 问我element-ui中用了哪些组件，我说了el-header,el-footer,el-main 还问有没有使用element-ui中的table组件 我说之前我的项目用的不是vue和element-ui中的table，我说我用的是其他的库中的table组件  然后就问了我原生的table
  面试问我如何合并行，rowspan 如何合并原生table中的边框 这个我回答把border设置为0 但其实是这个：border-collapse:collapse;  如何让一个矩形往右边移动
  我说用css中的transform实现，然后具体怎么写，我说不知道 面试官问我js如何实现上面的这个效果 我直接说不知道  然后面试官让实现每个一秒钟减1的功能，输入是hh:mm:ss的格式
