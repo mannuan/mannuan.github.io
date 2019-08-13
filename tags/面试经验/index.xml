@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>面试经验 on mannuan</title>
+    <link>https://mannuan.github.io/tags/%E9%9D%A2%E8%AF%95%E7%BB%8F%E9%AA%8C/</link>
+    <description>Recent content in 面试经验 on mannuan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 13 Aug 2019 19:15:00 +0800</lastBuildDate>
+    
+	<atom:link href="https://mannuan.github.io/tags/%E9%9D%A2%E8%AF%95%E7%BB%8F%E9%AA%8C/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>网易严选面试总结</title>
+      <link>https://mannuan.github.io/post/20190813191500/</link>
+      <pubDate>Tue, 13 Aug 2019 19:15:00 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190813191500/</guid>
+      <description> 首先是一个自我介绍， 然后，上来就是说我前端项目做的比较多（但我没做过多少） 面试官首先问我最早什么时候开始接触前端 然后问了我，原生实现ajax 我项目上就写前端布局用了vue和element-ui就疯狂地问我
+ 面试官了问了知不知道vue中的一个[?]（这个我说不知道，我忘记了这个问题，等我想起来再写上吧） 问我element-ui中用了哪些组件，我说了el-header,el-footer,el-main 还问有没有使用element-ui中的table组件 我说之前我的项目用的不是vue和element-ui中的table，我说我用的是其他的库中的table组件  然后就问了我原生的table
+ 面试问我如何合并行，rowspan 如何合并原生table中的边框 这个我回答把border设置为0 但其实是这个：border-collapse:collapse;  如何让一个矩形往右边移动
+ 我说用css中的transform实现，然后具体怎么写，我说不知道 面试官问我js如何实现上面的这个效果 我直接说不知道  然后面试官让实现每个一秒钟减1的功能，输入是hh:mm:ss的格式
+ 看到这个我一脸懵逼，我知道使用setInterval(),其他的具体就不知道了 主要是让我使用在线的ide,然后还让我运行代码，我很不适应  之后面试官发现我项目的中心在爬虫上面，
+ 然后问了如何实现自动登录
+ 我说先使用selenium模拟登录一遍，然后暂停几分钟， 手动登录，获取cookie 然后之后直接登录就行了  最后，面试官说我的前端比较欠缺，然后就结束面试了
+  </description>
+    </item>
+    
+    <item>
+      <title>网易面试总结</title>
+      <link>https://mannuan.github.io/post/20190813190824/</link>
+      <pubDate>Tue, 13 Aug 2019 19:08:24 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190813190824/</guid>
+      <description> 基本数据类型有哪些 null和undefined的区别 number和Boolean之间的类型转换 ==和===的区别 数组的常用方法，简单介绍 遍历数组的方法有哪些（forEach，长度遍历，in，for in, for of）es6对数组的访问有哪些 如果一个数组形如[1,,,,3,4,5,,,,]只会输出有值的那几项的下标 一个数组只对其中大于0的数据进行相乘，结果保留五位小数的方法有哪些（filter，reduce，toFixed，） toFixed的返回值是那种类型 object的遍历方式 迭代器的属性有哪些，迭代器的使用方法 对象有迭代器属性么 for in 和object.keys的区别 如何判断对象是否为空的方法 对象的存储器属性，常用的场景有哪些 作用域的规则 作用域函数的实例问答 js的事件循环介绍一下 正则中的符号 捕获组，问题提取url中的查询，将其包装为对象 异步的几种方式 promise 和生成器，await的区别 多个请求一起发送，全部响应之后在执行下一步操作 catch和finally的区别 http的请求报文的组成 常见的http首部有哪些 cookies的应用场景 cookie不同的网站可以访问其他网站的cookie么（淘宝可以访问网易的cookies么） 有哪些字段可以用来做浏览器的缓存 原生ajax的调用 css的选择器 伪类和伪元素举例 选择器的优先级 css的标准盒模型，width的计算 css定位机制有哪些 子元素全为float，父元素高度，如何正常计算父元素的高度 建立bfc的集中方式 一列定长一列自适应的实现方式 vue，webpack，typeScript了解  </description>
+    </item>
+    
+  </channel>
+</rss>

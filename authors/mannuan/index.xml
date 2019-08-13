@@ -5,10 +5,56 @@
     <link>https://mannuan.github.io/authors/mannuan/</link>
     <description>Recent content on mannuan</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 10 Aug 2019 23:23:51 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 13 Aug 2019 19:15:00 +0800</lastBuildDate>
     
 	<atom:link href="https://mannuan.github.io/authors/mannuan/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>网易严选面试总结</title>
+      <link>https://mannuan.github.io/post/20190813191500/</link>
+      <pubDate>Tue, 13 Aug 2019 19:15:00 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190813191500/</guid>
+      <description> 首先是一个自我介绍， 然后，上来就是说我前端项目做的比较多（但我没做过多少） 面试官首先问我最早什么时候开始接触前端 然后问了我，原生实现ajax 我项目上就写前端布局用了vue和element-ui就疯狂地问我
+ 面试官了问了知不知道vue中的一个[?]（这个我说不知道，我忘记了这个问题，等我想起来再写上吧） 问我element-ui中用了哪些组件，我说了el-header,el-footer,el-main 还问有没有使用element-ui中的table组件 我说之前我的项目用的不是vue和element-ui中的table，我说我用的是其他的库中的table组件  然后就问了我原生的table
+ 面试问我如何合并行，rowspan 如何合并原生table中的边框 这个我回答把border设置为0 但其实是这个：border-collapse:collapse;  如何让一个矩形往右边移动
+ 我说用css中的transform实现，然后具体怎么写，我说不知道 面试官问我js如何实现上面的这个效果 我直接说不知道  然后面试官让实现每个一秒钟减1的功能，输入是hh:mm:ss的格式
+ 看到这个我一脸懵逼，我知道使用setInterval(),其他的具体就不知道了 主要是让我使用在线的ide,然后还让我运行代码，我很不适应  之后面试官发现我项目的中心在爬虫上面，
+ 然后问了如何实现自动登录
+ 我说先使用selenium模拟登录一遍，然后暂停几分钟， 手动登录，获取cookie 然后之后直接登录就行了  最后，面试官说我的前端比较欠缺，然后就结束面试了
+  </description>
+    </item>
+    
+    <item>
+      <title>网易面试总结</title>
+      <link>https://mannuan.github.io/post/20190813190824/</link>
+      <pubDate>Tue, 13 Aug 2019 19:08:24 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190813190824/</guid>
+      <description> 基本数据类型有哪些 null和undefined的区别 number和Boolean之间的类型转换 ==和===的区别 数组的常用方法，简单介绍 遍历数组的方法有哪些（forEach，长度遍历，in，for in, for of）es6对数组的访问有哪些 如果一个数组形如[1,,,,3,4,5,,,,]只会输出有值的那几项的下标 一个数组只对其中大于0的数据进行相乘，结果保留五位小数的方法有哪些（filter，reduce，toFixed，） toFixed的返回值是那种类型 object的遍历方式 迭代器的属性有哪些，迭代器的使用方法 对象有迭代器属性么 for in 和object.keys的区别 如何判断对象是否为空的方法 对象的存储器属性，常用的场景有哪些 作用域的规则 作用域函数的实例问答 js的事件循环介绍一下 正则中的符号 捕获组，问题提取url中的查询，将其包装为对象 异步的几种方式 promise 和生成器，await的区别 多个请求一起发送，全部响应之后在执行下一步操作 catch和finally的区别 http的请求报文的组成 常见的http首部有哪些 cookies的应用场景 cookie不同的网站可以访问其他网站的cookie么（淘宝可以访问网易的cookies么） 有哪些字段可以用来做浏览器的缓存 原生ajax的调用 css的选择器 伪类和伪元素举例 选择器的优先级 css的标准盒模型，width的计算 css定位机制有哪些 子元素全为float，父元素高度，如何正常计算父元素的高度 建立bfc的集中方式 一列定长一列自适应的实现方式 vue，webpack，typeScript了解  </description>
+    </item>
+    
+    <item>
+      <title>20190811163816</title>
+      <link>https://mannuan.github.io/post/20190811163816/</link>
+      <pubDate>Sun, 11 Aug 2019 16:38:16 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190811163816/</guid>
+      <description>题目描述: 小A很喜欢字母N，他认为连续的N串是他的幸运串。 有一天小A看到了一个全部由大写字母组成的字符串， 他被允许改变最多2个大写字母（也允许不改变或则只改变1个大写字母）， 使得字符串中所包含的最长的连续的N串的长度最长，你能帮助他吗？
+输入描述: 输入的第一行是一个正整数T(0数据范围: 20%的数据中，字符串长度不超过100;
+70%的数据中，字符串长度不超过1000;
+100%的数据中，字符串长度不超过50000。
+输出描述: 对于每一组测试样例，输出一个整数，表示操作后包含的最长的连续N串的长度
+示例1: 输入: 3
+NNTN
+NNNNGGNNNN
+NGNNNNGNNNNNNNNSNNNN
+输出: 4
+10
+18
+import java.util.*; public class Test02 { private static int findLargeSeq2(char[] arr) { int max_len = 0; int curr_max_len = 0; int max_low = 0; int max_high = 0; for(int i=0;i&amp;lt;arr.length;i++){ if(&amp;#34;N&amp;#34;.equals(arr[i]+&amp;#34;&amp;#34;)){ curr_max_len ++; }else{ if(max_len &amp;lt; curr_max_len){ max_len = curr_max_len; max_low = i-max_len; max_high = max_low+max_len-1; } curr_max_len = 0; } } int not_N_count = 0; int i=0; for(i=max_high+1;i&amp;lt;arr.</description>
+    </item>
     
     <item>
       <title>20190810232351</title>
@@ -66,7 +112,7 @@
       <pubDate>Sat, 10 Aug 2019 23:05:04 +0800</pubDate>
       
       <guid>https://mannuan.github.io/post/20190810230504/</guid>
-      <description> 题目描述 小易给定了一个长度为 n 的数字序列，对于每一个 1≤k≤n，小易希望能求解出所有长度为的连续子序列的最大值中的最小值
+      <description> 题目描述 小易给定了一个长度为n的数字序列，对于每一个\(1 \leq k \leq n\)，小易希望能求解出所有长度为的连续子序列的最大值中的最小值
 输入描述 第一行数字n
 接下来一行是一个长度为n的数字序列
 \(1 \leq n \leq 100000, 0 \leq a_i \leq 10^9\)
@@ -74,7 +120,7 @@
 示例 1  输入输出示例仅供调试，后台判题数据一般不包含示例
  输入 6
 1 3 2 4 6 5
-输出 1 3 3 4 6 8
+输出 1 3 3 4 6 6
 代码待更新 </description>
     </item>
     
@@ -214,8 +260,10 @@ n,m&amp;lt;=1800
       <pubDate>Fri, 09 Aug 2019 21:45:41 +0800</pubDate>
       
       <guid>https://mannuan.github.io/post/20190809214541/</guid>
-      <description> 前言 网易面试注重对基本知识的考察。主要从css和js两方面着手。给大家的告诫就是凡是简历上面的东西，最好掌握的很熟悉。
-CSS部分  两列布局，一列自适应，这篇文章解释的很好链接  扩展：三列布局链接链接    JS部分  js基本数据类型，null和undefined的关系 原型，原型链，参考文章链接链接2 跨域链接 jquery链接链接   网络部分  tcp  扩展：什么是tcp连接链接 扩展: tcp的连接复用链接   算法部分  排序算法，链接  快速排序，链接    </description>
+      <description>前言 网易面试注重对基本知识的考察。主要从css和js两方面着手。给大家的告诫就是凡是简历上面的东西，最好掌握的很熟悉。
+面试自我介绍 面试官你好，我叫吴俊磊，我是杭州电子科技大学，计算机学院的研究生。 我熟悉html、css和js的使用，了解过jquery和vue前端开发框架。 我最近做的项目是智慧旅游的爬虫管理系统。我的任务是负责爬虫和呈现数据。我使用的技术栈是selenium+vue 以上就是我的自我介绍，谢谢！
+向面试官提问 你们部门使用的是什么技术栈？
+CSS部分  两列布局，一列自适应，这篇文章解释的很好链接  扩展：三列布局链接链接   css选择器  元素选择器 id选择器 class选择器 通配选择器 关系选择器 后代选择器 子选择器 相邻选择器 兄弟选择器 属性选择器 E[att] 选择具有att属性的E元素 E[att=&amp;ldquo;val&amp;rdquo;] 选择具有att属性且属性值等于val的E元素 E[att~=&amp;ldquo;val&amp;rdquo;] 选择具有att属性且属性值其中一个等于val的E元素（包含只有一个值且该值等于val的情况） E[att|=&amp;ldquo;val&amp;rdquo;] 选择具有att属性且属性值为以val开头并用连接符-分隔的字符串的E元素，如果属性值仅为val，也将被选择 E[att^=&amp;ldquo;val&amp;rdquo;] 选择具有att属性且属性值为以val开头的字符串的E元素 E[att$=&amp;ldquo;val&amp;rdquo;] 选择具有att属性且属性值为以val结尾的字符串的E元素 E[att*=&amp;ldquo;val&amp;rdquo;] 选择具有att属性且属性值为包含val的字符串的E元素 伪类选择器 E:link 设置超链接a在未被访问前的样式 E:visited 设置超链接a在其链接地址已被访问过时的样式 伪对象选择器   JS部分  数据类型：6种  基本数据类型：5种 复杂数据类型：1种 ES6新增了Symbol，不需要new  数据类型判断  typeof返回值 typeof() 括号可以省略吗，操作符可以省略， 一元运算符优先级很高 对象进行判断 对数组进行判断  var a = []; Array.</description>
     </item>
     
     <item>

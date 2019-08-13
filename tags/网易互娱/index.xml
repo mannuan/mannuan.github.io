@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>网易互娱 on mannuan</title>
+    <link>https://mannuan.github.io/tags/%E7%BD%91%E6%98%93%E4%BA%92%E5%A8%B1/</link>
+    <description>Recent content in 网易互娱 on mannuan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 11 Aug 2019 16:38:16 +0800</lastBuildDate>
+    
+	<atom:link href="https://mannuan.github.io/tags/%E7%BD%91%E6%98%93%E4%BA%92%E5%A8%B1/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>20190811163816</title>
+      <link>https://mannuan.github.io/post/20190811163816/</link>
+      <pubDate>Sun, 11 Aug 2019 16:38:16 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190811163816/</guid>
+      <description>题目描述: 小A很喜欢字母N，他认为连续的N串是他的幸运串。 有一天小A看到了一个全部由大写字母组成的字符串， 他被允许改变最多2个大写字母（也允许不改变或则只改变1个大写字母）， 使得字符串中所包含的最长的连续的N串的长度最长，你能帮助他吗？
+输入描述: 输入的第一行是一个正整数T(0数据范围: 20%的数据中，字符串长度不超过100;
+70%的数据中，字符串长度不超过1000;
+100%的数据中，字符串长度不超过50000。
+输出描述: 对于每一组测试样例，输出一个整数，表示操作后包含的最长的连续N串的长度
+示例1: 输入: 3
+NNTN
+NNNNGGNNNN
+NGNNNNGNNNNNNNNSNNNN
+输出: 4
+10
+18
+import java.util.*; public class Test02 { private static int findLargeSeq2(char[] arr) { int max_len = 0; int curr_max_len = 0; int max_low = 0; int max_high = 0; for(int i=0;i&amp;lt;arr.length;i++){ if(&amp;#34;N&amp;#34;.equals(arr[i]+&amp;#34;&amp;#34;)){ curr_max_len ++; }else{ if(max_len &amp;lt; curr_max_len){ max_len = curr_max_len; max_low = i-max_len; max_high = max_low+max_len-1; } curr_max_len = 0; } } int not_N_count = 0; int i=0; for(i=max_high+1;i&amp;lt;arr.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -5,30 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>未命名</title>
-    <style>
-.parent{
-	display: flex;
-}
-.left{
-	margin-right: 20px;
-}
-.right{
-	flex: 1;
-}
-.left p{width: 200px;}
-
-    </style>
+    <script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
 </head>
 <body>
-        <div class="parent">
-                <div class="left">
-                    <p>left</p>
-                </div>
-                <div class="right">
-                    <p>right</p>
-                    <p>right</p>
-                </div>
-            </div>
-              
+    <div id="app">
+        <input type="text" id="in_txt">
+        <h3 id="h3_txt"></h3>
+    </div>
 </body>
+<script>
+    var obj = {};
+    Object.defineProperty(obj, '_val', {
+        get: function(){
+            console.log("get");
+            return 
+        },
+        set: function(val){
+            document.getElementById('h3_txt').innerHTML = val;
+        }
+    });
+    document.addEventListener("keyup", function(e){
+        // console.log(e.target.value);
+        obj._val = e.target.value;
+    });
+</script>
 </html>

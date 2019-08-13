@@ -5,17 +5,44 @@
     <link>https://mannuan.github.io/tags/</link>
     <description>Recent content in Tags on mannuan</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 10 Aug 2019 23:23:51 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 13 Aug 2019 19:15:00 +0800</lastBuildDate>
     
 	<atom:link href="https://mannuan.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>网易严选</title>
+      <link>https://mannuan.github.io/tags/%E7%BD%91%E6%98%93%E4%B8%A5%E9%80%89/</link>
+      <pubDate>Tue, 13 Aug 2019 19:15:00 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/tags/%E7%BD%91%E6%98%93%E4%B8%A5%E9%80%89/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>面试经验</title>
+      <link>https://mannuan.github.io/tags/%E9%9D%A2%E8%AF%95%E7%BB%8F%E9%AA%8C/</link>
+      <pubDate>Tue, 13 Aug 2019 19:15:00 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/tags/%E9%9D%A2%E8%AF%95%E7%BB%8F%E9%AA%8C/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>笔试编程题</title>
       <link>https://mannuan.github.io/tags/%E7%AC%94%E8%AF%95%E7%BC%96%E7%A8%8B%E9%A2%98/</link>
-      <pubDate>Sat, 10 Aug 2019 23:23:51 +0800</pubDate>
+      <pubDate>Sun, 11 Aug 2019 16:38:16 +0800</pubDate>
       
       <guid>https://mannuan.github.io/tags/%E7%AC%94%E8%AF%95%E7%BC%96%E7%A8%8B%E9%A2%98/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>网易互娱</title>
+      <link>https://mannuan.github.io/tags/%E7%BD%91%E6%98%93%E4%BA%92%E5%A8%B1/</link>
+      <pubDate>Sun, 11 Aug 2019 16:38:16 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/tags/%E7%BD%91%E6%98%93%E4%BA%92%E5%A8%B1/</guid>
       <description></description>
     </item>
     
@@ -1154,7 +1181,7 @@
     </item>
     
     <item>
-      <title>valueOf</title>
+      <title>valueof</title>
       <link>https://mannuan.github.io/tags/valueof/</link>
       <pubDate>Thu, 04 Jul 2019 21:54:03 +0800</pubDate>
       
