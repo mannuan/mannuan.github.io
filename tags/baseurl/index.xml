@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>baseUrl on mannuan</title>
+    <link>https://mannuan.github.io/tags/baseurl/</link>
+    <description>Recent content in baseUrl on mannuan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 14 Aug 2019 14:20:03 +0800</lastBuildDate>
+    
+	<atom:link href="https://mannuan.github.io/tags/baseurl/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>vue开发环境和生产环境自动切换baseUrl</title>
+      <link>https://mannuan.github.io/post/20190814142003/</link>
+      <pubDate>Wed, 14 Aug 2019 14:20:03 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190814142003/</guid>
+      <description>新建一个vue.config.js文件，填写下面的代码
+const devBaseUrl = &amp;#34;/&amp;#34;; const proBaseUrl = &amp;#34;/knowledge-summary/frontend/dist/&amp;#34;; let baseUrl; process.env.NODE_ENV === &amp;#34;development&amp;#34; ? (baseUrl = devBaseUrl) : (baseUrl = proBaseUrl); module.exports = { baseUrl: baseUrl }; </description>
+    </item>
+    
+  </channel>
+</rss>

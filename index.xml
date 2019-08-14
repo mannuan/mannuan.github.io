@@ -5,7 +5,7 @@
     <link>https://mannuan.github.io/</link>
     <description>Recent content in Home on mannuan</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 14 Aug 2019 09:53:03 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 14 Aug 2019 14:20:03 +0800</lastBuildDate>
     
 	<atom:link href="https://mannuan.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -33,13 +33,22 @@ Minimo keeps the focus on your content and lets it shine!</description>
     </item>
     
     <item>
-      <title>面试知识点总结</title>
+      <title>vue开发环境和生产环境自动切换baseUrl</title>
+      <link>https://mannuan.github.io/post/20190814142003/</link>
+      <pubDate>Wed, 14 Aug 2019 14:20:03 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190814142003/</guid>
+      <description>新建一个vue.config.js文件，填写下面的代码
+const devBaseUrl = &amp;#34;/&amp;#34;; const proBaseUrl = &amp;#34;/knowledge-summary/frontend/dist/&amp;#34;; let baseUrl; process.env.NODE_ENV === &amp;#34;development&amp;#34; ? (baseUrl = devBaseUrl) : (baseUrl = proBaseUrl); module.exports = { baseUrl: baseUrl }; </description>
+    </item>
+    
+    <item>
+      <title>面试知识点</title>
       <link>https://mannuan.github.io/post/20190814095303/</link>
       <pubDate>Wed, 14 Aug 2019 09:53:03 +0800</pubDate>
       
       <guid>https://mannuan.github.io/post/20190814095303/</guid>
-      <description> 前端开发 html,javascript,css基础知识总结
-vue jQuery 算法 排序算法 网络协议 后端开发 python 数据库 mongodb mysql 操作系统 </description>
+      <description>面试知识点 html,javascript,css基础知识总结</description>
     </item>
     
     <item>

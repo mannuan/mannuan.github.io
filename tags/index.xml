@@ -5,10 +5,37 @@
     <link>https://mannuan.github.io/tags/</link>
     <description>Recent content in Tags on mannuan</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 14 Aug 2019 09:53:03 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 14 Aug 2019 14:20:03 +0800</lastBuildDate>
     
 	<atom:link href="https://mannuan.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>baseUrl</title>
+      <link>https://mannuan.github.io/tags/baseurl/</link>
+      <pubDate>Wed, 14 Aug 2019 14:20:03 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/tags/baseurl/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>vue</title>
+      <link>https://mannuan.github.io/tags/vue/</link>
+      <pubDate>Wed, 14 Aug 2019 14:20:03 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/tags/vue/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>知识点</title>
+      <link>https://mannuan.github.io/tags/%E7%9F%A5%E8%AF%86%E7%82%B9/</link>
+      <pubDate>Wed, 14 Aug 2019 09:53:03 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/tags/%E7%9F%A5%E8%AF%86%E7%82%B9/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>面试</title>
@@ -128,15 +155,6 @@
     </item>
     
     <item>
-      <title>vue</title>
-      <link>https://mannuan.github.io/tags/vue/</link>
-      <pubDate>Thu, 08 Aug 2019 14:03:32 +0800</pubDate>
-      
-      <guid>https://mannuan.github.io/tags/vue/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>前端知识框架</title>
       <link>https://mannuan.github.io/tags/%E5%89%8D%E7%AB%AF%E7%9F%A5%E8%AF%86%E6%A1%86%E6%9E%B6/</link>
       <pubDate>Thu, 08 Aug 2019 11:27:42 +0800</pubDate>
@@ -214,15 +232,6 @@
       <pubDate>Tue, 06 Aug 2019 21:58:03 +0800</pubDate>
       
       <guid>https://mannuan.github.io/tags/%E7%88%AC%E8%99%AB/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>知识点</title>
-      <link>https://mannuan.github.io/tags/%E7%9F%A5%E8%AF%86%E7%82%B9/</link>
-      <pubDate>Tue, 06 Aug 2019 21:58:03 +0800</pubDate>
-      
-      <guid>https://mannuan.github.io/tags/%E7%9F%A5%E8%AF%86%E7%82%B9/</guid>
       <description></description>
     </item>
     
