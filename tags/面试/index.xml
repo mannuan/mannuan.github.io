@@ -5,10 +5,19 @@
     <link>https://mannuan.github.io/tags/%E9%9D%A2%E8%AF%95/</link>
     <description>Recent content in 面试 on mannuan</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 09 Aug 2019 21:45:41 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 14 Aug 2019 09:53:03 +0800</lastBuildDate>
     
 	<atom:link href="https://mannuan.github.io/tags/%E9%9D%A2%E8%AF%95/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>面试知识点总结</title>
+      <link>https://mannuan.github.io/post/20190814095303/</link>
+      <pubDate>Wed, 14 Aug 2019 09:53:03 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190814095303/</guid>
+      <description> 前端开发 javascript css vue jQuery 算法 排序算法 网络协议 后端开发 python 数据库 mongodb mysql 操作系统 </description>
+    </item>
     
     <item>
       <title>知识点汇总</title>

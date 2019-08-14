@@ -20,14 +20,5 @@
 javascript代码 function bubbleSort(){ var arr = arguments[0]; for(var end=arr.length-1; end&amp;gt;0; end--){ for(var i=0; i&amp;lt;end; i++){ if(arr[i] &amp;gt; arr[end]){ var tmp = arr[i]; arr[i] = arr[end]; arr[end] = tmp; } } } } function randomNum(max=100, start=33){ return Math.floor(Math.random() * max + start); } var arr = []; var length = randomNum(30, 1); for(var i=0; i&amp;lt;length; i++){ // 创建随机数组  arr.push(randomNum()); } console.log(arr); bubbleSort(arr); console.log(arr);  选择排序 </description>
     </item>
     
-    <item>
-      <title>算法</title>
-      <link>https://mannuan.github.io/post/algorithm/</link>
-      <pubDate>Sun, 13 Aug 2017 22:19:08 +0800</pubDate>
-      
-      <guid>https://mannuan.github.io/post/algorithm/</guid>
-      <description></description>
-    </item>
-    
   </channel>
 </rss>

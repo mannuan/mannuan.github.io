@@ -5,10 +5,19 @@
     <link>https://mannuan.github.io/post/</link>
     <description>Recent content in Blog on mannuan</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 13 Aug 2019 21:51:19 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 14 Aug 2019 09:53:03 +0800</lastBuildDate>
     
 	<atom:link href="https://mannuan.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>面试知识点总结</title>
+      <link>https://mannuan.github.io/post/20190814095303/</link>
+      <pubDate>Wed, 14 Aug 2019 09:53:03 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190814095303/</guid>
+      <description> 前端开发 javascript css vue jQuery 算法 排序算法 网络协议 后端开发 python 数据库 mongodb mysql 操作系统 </description>
+    </item>
     
     <item>
       <title>把矩形往右边移动</title>
@@ -3025,69 +3034,6 @@ python中大写    </description>
       
       <guid>https://mannuan.github.io/post/20180704142218/</guid>
       <description>联系方式  手机：13588796263 Email：wujunleiwang@gmail.com 微信号：bubaizhansheng  个人信息   吴俊磊/男/1994 本科/西南民族大学/网络工程 硕士/杭州电子科技大学/计算机科学与技术 技术博客：https://mannuan.github.io Github：http://github.com/mannuan 期望职位：Web前端初级程序员 期望城市：杭州       校园项目经历 研究生期间 智慧旅游-爬虫管理系统 (2018年1月~2018年8月)  项目描述：对大众点评、携程和马蜂窝等旅游网站进行爬虫，并用页面展示数据； 项目职责：  对python库selenium进行封装，爬取动态网页； 使用ip代理和爬虫策略解决服务器403拒绝请求问题； 使用预先加载cookie的方式，解决登录验证问题； 总结爬虫的字体反爬和css反爬的解决方案； 使用mongodb存储数据，并使用aggregate查询数据； 使用基于nodejs的koa作为web后端开发框架，接收post和get请求； 使用vue和element-ui完成页面的布局，利用ajax进行数据解析显示和查询；  项目成果：  每天可以稳定的爬取几万条数据。在几十万条数据中，从数据的查询到页面完成数据加载花费的时间不超过3秒。   河长信息管理系统-爬虫脚本开发 (2017年10月~2018年1月)  项目描述：对万方数据、浙江省水利厅和百度百科等含有河流信息的网站进行爬虫； 项目职责：  使用pyspider作为爬虫框架，编写爬虫脚本； 使用正则表达式编写一套通用的爬虫脚本模板； 制定爬虫策略解决服务器403拒绝请求的问题；  项目成果：在该系统上线以后，每天都可以稳定地获取到最新的数据。  本科阶段 基于LLDP协议捎带式服务质量采集机制(2016年3月~2017年3月)  项目描述：这是一个软件定义网络的创新项目，目的是在占用少量的网络带宽的情况下，使用链路发现协议(LLDP)来传递网络的服务质量信息(QoS)。 项目职责：  在网络控制器Floodlight上创建一个修改LLDP数据包结构的模块； 修改虚拟网络交换机Vswitch的源代码，把网络QoS信息填写到LLDP数据包中； 使用网络仿真器Mininet，完成网络的一键式部署； 使用jquery和dataTable等javascript库完成页面布局，使用ajax异步加载网络的QoS信息；  项目成果：  在2016年的第三届全国高校软件定义网络（SDN）应用创新开发大赛中获得了二等奖。 发表了一篇sci 4区的论文-The Top-K QoS-aware Paths Discovery for Source Routing in SDN。我是这篇论文的第二作者，我对这篇论文的主要贡献就是提高实验数据。   技能清单 以下均为我熟练使用的技能</description>
-    </item>
-    
-    <item>
-      <title>学术</title>
-      <link>https://mannuan.github.io/post/academic/</link>
-      <pubDate>Sun, 13 Aug 2017 22:59:29 +0800</pubDate>
-      
-      <guid>https://mannuan.github.io/post/academic/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>后端开发</title>
-      <link>https://mannuan.github.io/post/backend/</link>
-      <pubDate>Sun, 13 Aug 2017 22:37:40 +0800</pubDate>
-      
-      <guid>https://mannuan.github.io/post/backend/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>操作系统</title>
-      <link>https://mannuan.github.io/post/operating-system/</link>
-      <pubDate>Sun, 13 Aug 2017 22:34:18 +0800</pubDate>
-      
-      <guid>https://mannuan.github.io/post/operating-system/</guid>
-      <description> linux </description>
-    </item>
-    
-    <item>
-      <title>数据库</title>
-      <link>https://mannuan.github.io/post/database/</link>
-      <pubDate>Sun, 13 Aug 2017 22:29:11 +0800</pubDate>
-      
-      <guid>https://mannuan.github.io/post/database/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>前端开发</title>
-      <link>https://mannuan.github.io/post/frontend/</link>
-      <pubDate>Sun, 13 Aug 2017 22:23:54 +0800</pubDate>
-      
-      <guid>https://mannuan.github.io/post/frontend/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>算法</title>
-      <link>https://mannuan.github.io/post/algorithm/</link>
-      <pubDate>Sun, 13 Aug 2017 22:19:08 +0800</pubDate>
-      
-      <guid>https://mannuan.github.io/post/algorithm/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>网络协议</title>
-      <link>https://mannuan.github.io/post/network-protocol/</link>
-      <pubDate>Sun, 13 Aug 2017 22:14:24 +0800</pubDate>
-      
-      <guid>https://mannuan.github.io/post/network-protocol/</guid>
-      <description> http协议 </description>
     </item>
     
   </channel>
