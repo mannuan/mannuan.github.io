@@ -43,15 +43,6 @@ const devBaseUrl = &amp;#34;/&amp;#34;; const proBaseUrl = &amp;#34;/knowledge-s
     </item>
     
     <item>
-      <title>面试知识点</title>
-      <link>https://mannuan.github.io/post/20190814095303/</link>
-      <pubDate>Wed, 14 Aug 2019 09:53:03 +0800</pubDate>
-      
-      <guid>https://mannuan.github.io/post/20190814095303/</guid>
-      <description>面试知识点 html,javascript,css基础知识总结</description>
-    </item>
-    
-    <item>
       <title>把矩形往右边移动</title>
       <link>https://mannuan.github.io/post/20190813215119/</link>
       <pubDate>Tue, 13 Aug 2019 21:51:19 +0800</pubDate>

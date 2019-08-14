@@ -73,29 +73,6 @@
   </url>
   
   <url>
-    <loc>https://mannuan.github.io/tags/%E7%9F%A5%E8%AF%86%E7%82%B9/</loc>
-    <lastmod>2019-08-14T09:53:03+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://mannuan.github.io/categories/%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93/</loc>
-    <lastmod>2019-08-14T09:53:03+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://mannuan.github.io/tags/%E9%9D%A2%E8%AF%95/</loc>
-    <lastmod>2019-08-14T09:53:03+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://mannuan.github.io/post/20190814095303/</loc>
-    <lastmod>2019-08-14T09:53:03+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://mannuan.github.io/tags/css/</loc>
     <lastmod>2019-08-13T21:51:19+08:00</lastmod>
     <priority>0</priority>
@@ -237,6 +214,12 @@
   </url>
   
   <url>
+    <loc>https://mannuan.github.io/tags/%E9%9D%A2%E8%AF%95/</loc>
+    <lastmod>2019-08-09T21:45:41+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://mannuan.github.io/tags/less/</loc>
     <lastmod>2019-08-08T15:53:12+08:00</lastmod>
     <priority>0</priority>
@@ -357,6 +340,12 @@
   <url>
     <loc>https://mannuan.github.io/post/20190806215803/</loc>
     <lastmod>2019-08-06T21:58:03+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mannuan.github.io/tags/%E7%9F%A5%E8%AF%86%E7%82%B9/</loc>
+    <lastmod>2019-08-06T21:58:03+08:00</lastmod>
+    <priority>0</priority>
   </url>
   
   <url>
@@ -2649,13 +2638,13 @@
   </url>
   
   <url>
-    <loc>https://mannuan.github.io/categories/mongodb/</loc>
+    <loc>https://mannuan.github.io/tags/mongodb/</loc>
     <lastmod>2019-05-30T16:16:20+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://mannuan.github.io/tags/mongodb/</loc>
+    <loc>https://mannuan.github.io/categories/mongodb/</loc>
     <lastmod>2019-05-30T16:16:20+08:00</lastmod>
     <priority>0</priority>
   </url>
@@ -2946,13 +2935,13 @@
   </url>
   
   <url>
-    <loc>https://mannuan.github.io/categories/jupyter/</loc>
+    <loc>https://mannuan.github.io/tags/jupyter/</loc>
     <lastmod>2019-05-15T15:55:13+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://mannuan.github.io/tags/jupyter/</loc>
+    <loc>https://mannuan.github.io/categories/jupyter/</loc>
     <lastmod>2019-05-15T15:55:13+08:00</lastmod>
     <priority>0</priority>
   </url>
