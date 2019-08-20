@@ -5,7 +5,7 @@
     @click.prevent="toggle"
   >
     <slot>
-      <button type="button" class="burger-button" title="Menu">
+      <button type="button" class="burger-button" title="Menu" style="outline:none;">
         <span class="hidden">Toggle menu</span>
         <span class="burger-bar burger-bar--1"></span>
         <span class="burger-bar burger-bar--2"></span>
