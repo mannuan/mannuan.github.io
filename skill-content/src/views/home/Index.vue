@@ -15,7 +15,7 @@
         <contentTree
           :contents="contents2"
           :default_expand_all="true"
-          :accordion="flase"
+          :accordion="false"
         >
         </contentTree>
       </el-aside>

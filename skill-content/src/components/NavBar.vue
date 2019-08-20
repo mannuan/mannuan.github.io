@@ -7,6 +7,11 @@
   >
     <burger class="nav-menu-burger" :is_burger_active="is_burger_active">
     </burger>
+    <a class="logo" href="/" style="cursor: pointer;outline:none;">
+      <img
+      src="/favicon.ico"
+      style="float: left; margin-left: 35px; margin-top: 10px; width: 40px;height: 40px;">
+    </a>
     <el-submenu
       v-for="cont in contents.filter(cont => cont['contents'].length)"
       v-bind:key="cont['index']"
@@ -73,7 +78,9 @@ export default {
 @media screen and (max-width: 900px)
   .nav-menu-burger
     visibility visible
-@media screen and (max-width: 900px)
   .nav-menu-item
     display none
+  .logo
+    position absolute
+    right 45%
 </style>
