@@ -2,32 +2,20 @@
 <html lang='en'><head>
   <meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
-<meta name='description' content='| 数据类型 | typeof | 访问方式 | 包含关系 | 大小关系
-&mdash;|&mdash;|&mdash;|&mdash;|&mdash;|&mdash;
-Undefined | 基本 | &ldquo;undefined&rdquo; | 按值访问 | Undefined是null的一个子集 | Undefined=null
-null(首字母小写) | &ldquo;object&rdquo; | null包含Undefined | null=Underfined
-Boolean | &ldquo;boolean&rdquo; | |
-Number | &ldquo;number&rdquo; | |
-String(不是引用类型) | &ldquo;string&rdquo; | |
-Object | 复杂 | &ldquo;object&rdquo; | 按引用访问 | |'>
+<meta name='description' content='基本数据类型  Number Boolean String null undefined  复杂数据类型 Object Array 待更新&hellip;
+Date 待更新&hellip;'>
 <meta name='theme-color' content='#FFFFFF'>
 
-<meta property='og:title' content='js 的6个数据类型 • mannuan'>
-<meta property='og:description' content='| 数据类型 | typeof | 访问方式 | 包含关系 | 大小关系
-&mdash;|&mdash;|&mdash;|&mdash;|&mdash;|&mdash;
-Undefined | 基本 | &ldquo;undefined&rdquo; | 按值访问 | Undefined是null的一个子集 | Undefined=null
-null(首字母小写) | &ldquo;object&rdquo; | null包含Undefined | null=Underfined
-Boolean | &ldquo;boolean&rdquo; | |
-Number | &ldquo;number&rdquo; | |
-String(不是引用类型) | &ldquo;string&rdquo; | |
-Object | 复杂 | &ldquo;object&rdquo; | 按引用访问 | |'>
+<meta property='og:title' content='javascript的数据类型 • mannuan'>
+<meta property='og:description' content='基本数据类型  Number Boolean String null undefined  复杂数据类型 Object Array 待更新&hellip;
+Date 待更新&hellip;'>
 <meta property='og:url' content='https://mannuan.github.io/post/20190520102008/'>
 <meta property='og:site_name' content='mannuan'>
 <meta property='og:type' content='article'><meta property='og:image' content='https://www.gravatar.com/avatar/8bacfd69855171c6f53247456732f68a?s=256'><meta property='article:section' content='post'><meta property='article:tag' content='javascript'><meta property='article:published_time' content='2019-05-20T10:20:08&#43;08:00'/><meta property='article:modified_time' content='2019-05-20T10:20:08&#43;08:00'/><meta name='twitter:card' content='summary'>
 
 <meta name="generator" content="Hugo 0.55.6" />
 
-  <title>js 的6个数据类型 • mannuan</title>
+  <title>javascript的数据类型 • mannuan</title>
   <link rel='canonical' href='https://mannuan.github.io/post/20190520102008/'>
   
   
@@ -80,7 +68,8 @@ Object | 复杂 | &ldquo;object&rdquo; | 按引用访问 | |'>
     <div class='container'>
       <ul><li class='item'>
   <a href='https://github.com/mannuan'>Github</a></li><li class='item'>
-  <a href='/knowledge-architecture/dist/'>知识架构</a></li><li class='item has-children'>
+  <a href='/html/contents.html'>contents</a></li><li class='item'>
+  <a href='/skill-content/dist/'>skills</a></li><li class='item has-children'>
   <a href=''>网络实验</a><button class='sub-menu-toggler'>
     <span class='screen-reader-text'>expand sub menu</span>
     <span class='sign'></span>
@@ -231,7 +220,7 @@ Object | 复杂 | &ldquo;object&rdquo; | 按引用访问 | |'>
     <style>.widget-breadcrumbs li:after{content:'\2f '}</style>
   <section class='widget widget-breadcrumbs sep-after'>
     <nav id='breadcrumbs'>
-      <ol><li><a href='/'>Home</a></li><li><a href='/post/'>blogs</a></li><li><span>js 的6个数据类型</span></li></ol>
+      <ol><li><a href='/'>Home</a></li><li><a href='/post/'>blogs</a></li><li><span>javascript的数据类型</span></li></ol>
     </nav>
   </section></div>
       </div>
@@ -250,7 +239,7 @@ Object | 复杂 | &ldquo;object&rdquo; | 按引用访问 | |'>
   <header class='header entry-header'>
   <div class='container sep-after'>
     <div class='header-info'>
-      <h1 class='title'>js 的6个数据类型</h1>
+      <h1 class='title'>javascript的数据类型</h1>
       
 
     </div>
@@ -293,16 +282,50 @@ One min read
 
   
   
+<details class='container entry-toc'>
+  <summary class='title'>
+    <span>Table of Contents</span>
+  </summary>
+  <nav id="TableOfContents">
+<ul>
+<li><a href="#基本数据类型">基本数据类型</a></li>
+<li><a href="#复杂数据类型">复杂数据类型</a>
+<ul>
+<li><a href="#object">Object</a>
+<ul>
+<li><a href="#array">Array</a></li>
+<li><a href="#date">Date</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+</details>
+
 
   <div class='container entry-content'>
-  <p>| 数据类型 | typeof | 访问方式 | 包含关系 | 大小关系<br />
-&mdash;|&mdash;|&mdash;|&mdash;|&mdash;|&mdash;<br />
-Undefined | 基本 | &ldquo;undefined&rdquo; | 按值访问 | Undefined是null的一个子集 | Undefined=null<br />
-null(首字母小写) | &ldquo;object&rdquo; | null包含Undefined | null=Underfined<br />
-Boolean | &ldquo;boolean&rdquo; |  |<br />
-Number | &ldquo;number&rdquo; |  |<br />
-String(不是引用类型) | &ldquo;string&rdquo; |  |<br />
-Object | 复杂 | &ldquo;object&rdquo; | 按引用访问 |  |</p>
+  
+
+<h1 id="基本数据类型">基本数据类型</h1>
+
+<ul>
+<li>Number</li>
+<li>Boolean</li>
+<li>String</li>
+<li>null</li>
+<li>undefined</li>
+</ul>
+
+<h1 id="复杂数据类型">复杂数据类型</h1>
+
+<h2 id="object">Object</h2>
+
+<h3 id="array">Array</h3>
+
+<p>待更新&hellip;</p>
+
+<h3 id="date">Date</h3>
+
+<p>待更新&hellip;</p>
 
 </div>
 

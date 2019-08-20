@@ -72,7 +72,8 @@ CSS部分  两列布局，一列自适应，这篇文章解释的很好链接  �
     <div class='container'>
       <ul><li class='item'>
   <a href='https://github.com/mannuan'>Github</a></li><li class='item'>
-  <a href='/knowledge-architecture/dist/'>知识架构</a></li><li class='item has-children'>
+  <a href='/html/contents.html'>contents</a></li><li class='item'>
+  <a href='/skill-content/dist/'>skills</a></li><li class='item has-children'>
   <a href=''>网络实验</a><button class='sub-menu-toggler'>
     <span class='screen-reader-text'>expand sub menu</span>
     <span class='sign'></span>
@@ -944,6 +945,7 @@ CSS部分  两列布局，一列自适应，这篇文章解释的很好链接  �
 <li>db.CollectionName.drop()</li>
 <li>ObjectID</li>
 <li>组成部分: 4个字节时间戳、3字节客户端ID、2字节客户进程ID、三个字节的增量计数器</li>
+<li>objectId的前4个字节时间戳，记录了文档创建的时间；接下来3个字节代表了所在主机的唯一标识符，确定了不同主机间产生不同的objectId；后2个字节的进程id，决定了在同一台机器下，不同mongodb进程产生不同的objectId；最后通过3个字节的自增计数器，确保同一秒内产生objectId的唯一性。ObjectId的这个主键生成策略，很好地解决了在分布式环境下高并发情况主键唯一性问题，值得学习借鉴。</li>
 <li>find({&ldquo;key&rdquo;:&ldquo;value&rdquo;}).pretty()</li>
 <li>update({&ldquo;key&rdquo;:&ldquo;value&rdquo;}, {&lsquo;$set&rsquo;: {&ldquo;key&rdquo;:&ldquo;value&rdquo;}})</li>
 <li>remove({&ldquo;key&rdquo;:&ldquo;value&rdquo;})</li>

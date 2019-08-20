@@ -2736,19 +2736,13 @@ function setColor(obj){ obj.color = &amp;#34;red&amp;#34;; obj = new Object(); o
     </item>
     
     <item>
-      <title>js 的6个数据类型</title>
+      <title>javascript的数据类型</title>
       <link>https://mannuan.github.io/post/20190520102008/</link>
       <pubDate>Mon, 20 May 2019 10:20:08 +0800</pubDate>
       
       <guid>https://mannuan.github.io/post/20190520102008/</guid>
-      <description>| 数据类型 | typeof | 访问方式 | 包含关系 | 大小关系
-&amp;mdash;|&amp;mdash;|&amp;mdash;|&amp;mdash;|&amp;mdash;|&amp;mdash;
-Undefined | 基本 | &amp;ldquo;undefined&amp;rdquo; | 按值访问 | Undefined是null的一个子集 | Undefined=null
-null(首字母小写) | &amp;ldquo;object&amp;rdquo; | null包含Undefined | null=Underfined
-Boolean | &amp;ldquo;boolean&amp;rdquo; | |
-Number | &amp;ldquo;number&amp;rdquo; | |
-String(不是引用类型) | &amp;ldquo;string&amp;rdquo; | |
-Object | 复杂 | &amp;ldquo;object&amp;rdquo; | 按引用访问 | |</description>
+      <description>基本数据类型  Number Boolean String null undefined  复杂数据类型 Object Array 待更新&amp;hellip;
+Date 待更新&amp;hellip;</description>
     </item>
     
     <item>
