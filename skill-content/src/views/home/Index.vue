@@ -22,7 +22,7 @@
       <el-main
         width="100%"
         height="100%"
-        style="padding: 0px; padding-left: 20px;"
+        style="padding: 0px;"
       >
         <iframe
           :src="blog_url"
