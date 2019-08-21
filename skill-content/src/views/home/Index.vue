@@ -22,12 +22,11 @@
       <el-main
         width="100%"
         height="100%"
-        style="padding: 0px;"
+        style="padding: 0px; overflow:hidden;"
       >
         <iframe
           :src="blog_url"
           style="height: 100%; width: 100%; border-width: 0px;"
-          ref="blog_iframe"
         >
         </iframe>
       </el-main>

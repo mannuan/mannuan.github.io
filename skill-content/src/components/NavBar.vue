@@ -9,8 +9,9 @@
     </burger>
     <a class="logo" href="/" style="cursor: pointer;outline:none;">
       <img
-      src="/favicon.ico"
-      style="float: left; margin-left: 35px; margin-top: 10px; width: 40px;height: 40px;">
+        src="/favicon.ico"
+        style="float: left; margin-left: 35px; margin-top: 10px; width: 40px;height: 40px;"
+      />
     </a>
     <el-submenu
       v-for="cont in contents.filter(cont => cont['contents'].length)"
@@ -35,6 +36,12 @@
     >
       {{ cont["title"] }}
     </el-menu-item>
+    <el-menu-item
+      index="blog"
+      class="nav-menu-blog"
+    >
+      博客
+    </el-menu-item>
   </el-menu>
 </template>
 
@@ -49,7 +56,11 @@ export default {
   },
   methods: {
     handleSelect(key) {
-      this.$store.commit("setNavigationSelectedIndex", key);
+      if(key == "blog"){
+        location.href = "/?mode=blog";
+      } else {
+        this.$store.commit("setNavigationSelectedIndex", key);
+      }
     }
   },
   props: {
@@ -83,4 +94,9 @@ export default {
   .logo
     position absolute
     right 45%
+.nav-menu-blog
+  float right
+  color RoyalBlue
+  font-size 18px
+  font-family: "Gill Sans", sans-serif;
 </style>
