@@ -2,7 +2,7 @@
 from pyquery import PyQuery as pq
 import json
 htmlname = "/Users/wujunlei/VscodeProjects/我的github技术博客/blog_markdown/static/html/contents.html"
-jsonname = "/Users/wujunlei/VscodeProjects/我的github技术博客/blog_markdown/static/skill-content/src/assets/data/contents.json"
+jsonname = "/Users/wujunlei/VscodeProjects/我的github技术博客/blog_markdown/static/skill-content/public/contents.json"
 p = pq(filename=htmlname, parser="html")
 contents = [{"contents": []}]
 children = [i for i in p('body').children() if i.tag == "ul"][0]

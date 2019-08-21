@@ -48,12 +48,19 @@ import navBar from "@/components/NavBar";
 import sideBar from "@/components/SideBar";
 import contentTree from "@/components/ContentTree";
 // 导入目录数据
-import contents from "@/assets/data/contents.json";
+// import contents from "@/assets/data/contents.json";
+import request from "@/plugins/axios.js";
 
 export default {
   name: "home",
   created() {
-    this.$store.commit("setContents", contents[0]["contents"]);
+    request({
+      url: "/contents.json",
+      method: "get"
+    }).then(res => {
+      let contents = res.data;
+      this.$store.commit("setContents", contents[0]["contents"]);
+    });
   },
   mounted() {
     document.title = this.$route.meta.title;
