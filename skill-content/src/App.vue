@@ -10,6 +10,5 @@ body, html, #app
   padding 0
   height 100%
   width 100%
-  overflow hidden
   min-width 270px
 </style>
