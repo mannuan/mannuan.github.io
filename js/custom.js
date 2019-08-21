@@ -47,7 +47,7 @@ if(JSON.stringify(args) !== "{}"){
         document.getElementById("footer").outerHTML = "";
     }
 } else {
-    if (location.href.split("/").length <= 3){
+    if (location.href.split("/").filter(item => item).length <= 2){
         // 如何访问主页"/"则重定向到skills的页面
         location.href = "/skill-content/dist/";
     }
