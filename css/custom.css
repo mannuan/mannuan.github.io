@@ -54,19 +54,19 @@ body {
 .burk {
     background-color: red;
     color: yellow;
-    display: inline-block;
+    display: inline;
 }
 
 .mark {
     background-color: yellow;
     color: red;
-    display: inline-block;
+    display: inline;
 }
 
 .girk {
     background-color: lime;
     color: red;
-    display: inline-block;
+    display: inline;
 }
 
 /* 表格样式 */

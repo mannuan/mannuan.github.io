@@ -1,29 +1,42 @@
+import java.util.HashSet;
 import java.util.Scanner;
-public class Test{
-    public static int lenLongestSubstr(String s){
-        int[] hash = new int[256];
-        int max = 0;
-        int i=0,j=0,count=0;
-        while(i<s.length()&&j<s.length()){
-            char ch = s.charAt(j);
-            if(hash[ch]==0){
-                hash[ch] =1;
-                j++;
-                max=(j-i)>max?(j-i):max;
-            }else{
-                char c = s.charAt(i);
-                hash[c] =0;
-                i++;
-            }
-            count++;
-        }
-        return max;
-    }
+
+public class Test {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        String line = scanner.nextLine();
-        // scanner.close();
-        // String s = "abcabcbb";
-        System.out.println(lenLongestSubstr(line));
+        Scanner scan = new Scanner(System.in);
+        String sendName = scan.nextLine();
+        int num = Integer.valueOf(scan.nextLine());
+        String[] groupNames = new String[num];
+        HashSet[] group = new HashSet[num];
+        for(int i = 0; i < num; i++){
+            groupNames[i] = scan.nextLine();
+            String[] names = groupNames[i].split(",");
+            group[i] = new HashSet<String>();
+            for (String name : names) {
+                group[i].add(name);
+            }
+        }
+
+        HashSet<String> res = new HashSet<>();
+        res.add(sendName);
+        for (int k = 1; k <=2; k ++){
+            for (int i = 0; i < num; i++){
+                boolean isCur = false;
+                for (String name : res) {
+                    if(group[i].contains(name)){
+                        isCur = true;
+                        break;
+                    }
+                }
+
+                if(isCur){
+                    res.addAll(group[i]);
+                }
+            }
+        }
+
+        System.out.println(res.size());
+
+
     }
 }

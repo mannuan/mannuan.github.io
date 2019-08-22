@@ -8,7 +8,8 @@ const home = {
     default_blog_id: "20180731192512", // 缺省的博客的id
     blog_id: "20180731192512", // 博客的id
     blog_section: "", // 博客的节
-    default_blog_url: "/html/skill-content-404.html" // 默认的博客页面
+    default_blog_url: "/html/skill-content-404.html", // 默认的博客页面
+    iframe_instance: {} // iframe的句柄
   },
   getters: {
     blog_url: state => {
@@ -82,6 +83,9 @@ const home = {
     setBlog: (state, blog) => {
       state.blog_id = blog["id"];
       state.blog_section = blog["section"];
+    },
+    setIframeInstance: (state, iframe_instance) => {
+      state.iframe_instance = iframe_instance;
     }
   }
 };

@@ -9,7 +9,12 @@ import {
   Aside,
   Main,
   Tree,
-  Input
+  Input,
+  Dropdown,
+  DropdownMenu,
+  DropdownItem,
+  Table,
+  TableColumn
 } from "element-ui";
 
 Vue.prototype.$ELEMENT = { size: "small", zIndex: 3000 };
@@ -23,3 +28,8 @@ Vue.use(Aside);
 Vue.use(Main);
 Vue.use(Tree);
 Vue.use(Input);
+Vue.use(Dropdown);
+Vue.use(DropdownMenu);
+Vue.use(DropdownItem);
+Vue.use(Table);
+Vue.use(TableColumn);

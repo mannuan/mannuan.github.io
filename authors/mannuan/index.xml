@@ -5,10 +5,48 @@
     <link>https://mannuan.github.io/authors/mannuan/</link>
     <description>Recent content on mannuan</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 14 Aug 2019 14:20:03 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 22 Aug 2019 10:59:14 +0800</lastBuildDate>
     
 	<atom:link href="https://mannuan.github.io/authors/mannuan/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>网络协议</title>
+      <link>https://mannuan.github.io/post/20190822105913/</link>
+      <pubDate>Thu, 22 Aug 2019 10:59:14 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190822105913/</guid>
+      <description>计算机网络 概述 网络的网络 网络把主机连接起来，而互联网是把多种不同的网络连接起来，因此互联网是网络的网络。
+ISP HTTP 基础概念 URI URI 包含 URL 和 URN。 请求和响应报文 请求报文 响应报文 HTTP方法 客户端发送的 请求报文 第一行为请求行，包含了方法字段。
+GET 获取网络资源
+当前网络请求中，绝大部分使用的是 GET 方法。
+HEAD 获取报文首部
+和 GET 方法类似，但是不返回报文实体主体部分。 主要用于确认 URL 的有效性以及资源更新的日期时间等。
+POST 向服务器发送数据
+POST 主要用来传输数据，而 GET 主要用来获取资源。
+PUT 上传文件
+由于自身不带验证机制，任何人都可以上传文件，因此存在安全性问题，一般不使用该方法。
+PUT /new.html HTTP/1.1 Host: example.com Content-type: text/html Content-length: 16 &amp;lt;p&amp;gt;New File&amp;lt;/p&amp;gt;  PATCH 对资源进行部分修改
+PUT 也可以用于修改资源，但是只能完全替代原始资源，PATCH 允许部分修改。
+PATCH /file.txt HTTP/1.1 Host: www.example.com Content-Type: application/example If-Match: &amp;quot;e0023aa4e&amp;quot; Content-Length: 100 [description of changes]  DELETE 删除文件</description>
+    </item>
+    
+    <item>
+      <title>报文转义</title>
+      <link>https://mannuan.github.io/post/20190821212336/</link>
+      <pubDate>Wed, 21 Aug 2019 21:23:36 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190821212336/</guid>
+      <description>题目描述 说明: 实现报文转义功能, 报文中如里出现0x0A，转义成为2个字节0x12 0x34, 如果出现0x0B，转义成为2个字节0xAB OXCD。 其他报文字节保持不变
+输入描述：  输入的报文为16进制，输入报文长度不超过127，输入的报文第一个字节为报文长度，第一个字节（报文长度）算正式报文的一部分，但是不参与转义 输入的报文每个字节用空格隔开
+输出描述： 输出为转义后的报文，转义后的报文长度也不超过255，输出到的报文第一个字节算正式报文的一部分，为转义后的报文长度
+ 输出的报文内容都为大写的16进制，输出报文为16进制，前不带0x前缀
+ 输出的报文每个字节用空格隔开
+  示例1 输入 8 1 2 3 4 5 6 A
+输出 9 1 2 3 4 5 6 12 34
+说明 输入报文 8 1 2 3 4 5 6 A 解释：8 为报文长度 输出报文 9 1 2 3 4 5 6 12 34 解释: 9为报文长度， 12 34为输入报文中A 转义后的报文
+实现代码 # -*- coding: utf-8 -*- import sys line = sys.</description>
+    </item>
     
     <item>
       <title>vue开发环境和生产环境自动切换baseUrl</title>

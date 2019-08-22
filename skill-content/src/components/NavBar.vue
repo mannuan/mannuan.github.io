@@ -7,7 +7,11 @@
   >
     <burger class="nav-menu-burger" :is_burger_active="is_burger_active">
     </burger>
-    <a class="logo" href="/skill-content/dist/" style="cursor: pointer;outline:none;">
+    <a
+      class="logo"
+      href="/skill-content/dist/"
+      style="cursor: pointer;outline:none;"
+    >
       <img
         src="/favicon.ico"
         style="float: left; margin-left: 35px; margin-top: 10px; width: 40px;height: 40px;"
@@ -36,10 +40,7 @@
     >
       {{ cont["title"] }}
     </el-menu-item>
-    <el-menu-item
-      index="blog"
-      class="nav-menu-blog"
-    >
+    <el-menu-item index="blog" class="nav-menu-blog">
       博客
     </el-menu-item>
   </el-menu>
@@ -56,7 +57,7 @@ export default {
   },
   methods: {
     handleSelect(key) {
-      if(key == "blog"){
+      if (key == "blog") {
         location.href = "/?mode=blog";
       } else {
         this.$store.commit("setNavigationSelectedIndex", key);
@@ -66,7 +67,7 @@ export default {
   props: {
     contents: {
       type: Array,
-      default: []
+      default: () => []
     },
     active_index: {
       type: String,

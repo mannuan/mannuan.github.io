@@ -24,12 +24,12 @@ let args = getQueryStringArgs(location.href);
 if(JSON.stringify(args) !== "{}"){
     if(args["mode"] === "skill-content"){
         document.getElementsByTagName("html")[0].style="width: 100%; height: 100%;";
-        document.getElementsByTagName("body")[0].style="width: 100%; height: 100%;padding: 20px;";
-        document.querySelector("body > div").style="width: 100%; height: 100%;";
+        document.getElementsByTagName("body")[0].style="width: 100%; height: 100%;";
+        document.querySelector("body > div").style="width: 100%;";
         document.getElementById("sidebar").outerHTML = "";
         document.querySelector("body > div > div.main").style="margin-left: 10px; width: 100%; height: 100%;padding: 0px;margin: 0px;";
-        document.getElementById("content").style="width: 100%; height: 100%;margin: 0px; padding: 0px;";
-        document.getElementsByTagName("article")[0].style="width: 100%; height: 100%;";
+        document.getElementById("content").style="width: 100%; height: 100%;margin: 0px; padding: 0px;display: flex; justify-content: center;";
+        document.getElementsByTagName("article")[0].style="width: 100%; height: 100%;max-width: 1024px;padding: 60px;";
         document.getElementsByTagName("header")[0].style="width: 100%;";
         document.querySelector("#content > article > header > div").style="width: auto; max-width: 100%;display: flex; align-items: center;justify-content: center;flex-direction: column;";
         document.querySelector("#content > article > header > div > div.header-info").style="text-align: center;";
@@ -52,3 +52,11 @@ if(JSON.stringify(args) !== "{}"){
         location.href = "/skill-content/dist/";
     }
 }
+
+window.parent.postMessage({
+    cmd: 'returnHeight',
+    params: {
+        success: true,
+        data: document.body.scrollHeight + 'px'
+    }
+}, '*');

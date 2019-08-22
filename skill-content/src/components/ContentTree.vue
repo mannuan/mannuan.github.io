@@ -42,9 +42,12 @@ export default {
       );
     },
     handleNodeClick(data) {
+      // 这里使用toLowerCase()的原因是，锁定章节默认使用小写字母
       let blog_obj = {};
-      blog_obj["id"] = data["blog_id"] ? data["blog_id"] : "";
-      blog_obj["section"] = data["blog_section"] ? data["blog_section"] : "";
+      blog_obj["id"] = data["blog_id"] ? data["blog_id"].toLowerCase() : "";
+      blog_obj["section"] = data["blog_section"]
+        ? data["blog_section"].toLowerCase()
+        : "";
       this.$store.commit("setBlog", blog_obj);
     }
   },
@@ -60,7 +63,7 @@ export default {
   props: {
     contents: {
       type: Array,
-      default: []
+      default: () => []
     },
     default_expand_all: {
       type: Boolean,

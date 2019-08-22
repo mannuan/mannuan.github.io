@@ -5,10 +5,27 @@
     <link>https://mannuan.github.io/tags/%E7%AC%94%E8%AF%95%E7%BC%96%E7%A8%8B%E9%A2%98/</link>
     <description>Recent content in 笔试编程题 on mannuan</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 11 Aug 2019 16:38:16 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 21 Aug 2019 21:23:36 +0800</lastBuildDate>
     
 	<atom:link href="https://mannuan.github.io/tags/%E7%AC%94%E8%AF%95%E7%BC%96%E7%A8%8B%E9%A2%98/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>报文转义</title>
+      <link>https://mannuan.github.io/post/20190821212336/</link>
+      <pubDate>Wed, 21 Aug 2019 21:23:36 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190821212336/</guid>
+      <description>题目描述 说明: 实现报文转义功能, 报文中如里出现0x0A，转义成为2个字节0x12 0x34, 如果出现0x0B，转义成为2个字节0xAB OXCD。 其他报文字节保持不变
+输入描述：  输入的报文为16进制，输入报文长度不超过127，输入的报文第一个字节为报文长度，第一个字节（报文长度）算正式报文的一部分，但是不参与转义 输入的报文每个字节用空格隔开
+输出描述： 输出为转义后的报文，转义后的报文长度也不超过255，输出到的报文第一个字节算正式报文的一部分，为转义后的报文长度
+ 输出的报文内容都为大写的16进制，输出报文为16进制，前不带0x前缀
+ 输出的报文每个字节用空格隔开
+  示例1 输入 8 1 2 3 4 5 6 A
+输出 9 1 2 3 4 5 6 12 34
+说明 输入报文 8 1 2 3 4 5 6 A 解释：8 为报文长度 输出报文 9 1 2 3 4 5 6 12 34 解释: 9为报文长度， 12 34为输入报文中A 转义后的报文
+实现代码 # -*- coding: utf-8 -*- import sys line = sys.</description>
+    </item>
     
     <item>
       <title>20190811163816</title>
