@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Socket on mannuan</title>
+    <link>https://mannuan.github.io/tags/socket/</link>
+    <description>Recent content in Socket on mannuan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 23 Aug 2019 17:11:22 +0800</lastBuildDate>
+    
+	<atom:link href="https://mannuan.github.io/tags/socket/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Socket</title>
+      <link>https://mannuan.github.io/post/20190823171122/</link>
+      <pubDate>Fri, 23 Aug 2019 17:11:22 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190823171122/</guid>
+      <description> Socket </description>
+    </item>
+    
+  </channel>
+</rss>

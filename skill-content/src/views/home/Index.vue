@@ -102,14 +102,17 @@ export default {
       method: "get"
     }).then(res => {
       let contents = res.data;
-      this.$store.commit("setContents", contents[0]["contents"]);
+      this.$store.commit("setContents", contents);
     });
+    // 监听整个网页的messge消息
+    window.addEventListener("message", this.handleMessage);
   },
   methods: {
     handleMessage(event) {
       const data = event.data;
       switch (data.cmd) {
         case "returnHeight":
+          console.log("returnHeight");
           if (data.params.success) {
             this.$store.state.home.iframe_instance.height = data.params.data;
           }
@@ -118,8 +121,6 @@ export default {
   },
   mounted() {
     document.title = this.$route.meta.title;
-    // 监听整个网页的messge消息
-    window.addEventListener("message", this.handleMessage);
     // iframe在挂载之前才创建好, 把iframe句柄存放在store中
     this.$store.commit("setIframeInstance", this.$refs.iframe);
   }

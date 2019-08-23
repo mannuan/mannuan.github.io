@@ -14,7 +14,8 @@ import {
   DropdownMenu,
   DropdownItem,
   Table,
-  TableColumn
+  TableColumn,
+  Backtop
 } from "element-ui";
 
 Vue.prototype.$ELEMENT = { size: "small", zIndex: 3000 };
@@ -33,3 +34,4 @@ Vue.use(DropdownMenu);
 Vue.use(DropdownItem);
 Vue.use(Table);
 Vue.use(TableColumn);
+Vue.use(Backtop);

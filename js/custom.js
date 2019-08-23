@@ -29,7 +29,7 @@ if(JSON.stringify(args) !== "{}"){
         document.getElementById("sidebar").outerHTML = "";
         document.querySelector("body > div > div.main").style="margin-left: 10px; width: 100%; height: 100%;padding: 0px;margin: 0px;";
         document.getElementById("content").style="width: 100%; height: 100%;margin: 0px; padding: 0px;display: flex; justify-content: center;";
-        document.getElementsByTagName("article")[0].style="width: 100%; height: 100%;max-width: 1024px;padding: 60px;";
+        document.getElementsByTagName("article")[0].style="width: 100%; height: 100%;max-width: 1024px;padding: 10px 20px 40px 20px;";
         document.getElementsByTagName("header")[0].style="width: 100%;";
         document.querySelector("#content > article > header > div").style="width: auto; max-width: 100%;display: flex; align-items: center;justify-content: center;flex-direction: column;";
         document.querySelector("#content > article > header > div > div.header-info").style="text-align: center;";

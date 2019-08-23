@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang='en'><head>
+  <meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='description' content='参考链接
+具体应用 连接管理 短连接与长连接 当浏览器访问一个包含多张图片的 HTML 页面时，除了请求访问的 HTML 页面资源，还会请求图片资源。如果每进行一次 HTTP 通信就要新建一个 TCP 连接，那么开销会很大。
+长连接只需要建立一次 TCP 连接就能进行多次 HTTP 通信。
+ 从 HTTP/1.1 开始默认是长连接的，如果要断开连接，需要由客户端或者服务器端提出断开，使用 Connection : close； 在 HTTP/1.1 之前默认是短连接的，如果需要使用长连接，则使用 Connection : Keep-Alive。  流水线 默认情况下，HTTP 请求是按顺序发出的，下一个请求只有在当前请求收到响应之后才会被发出。由于受到网络延迟和带宽的限制，在下一个请求被发送到服务器之前，可能需要等待很长时间。
+流水线是在同一条长连接上连续发出请求，而不用等待响应返回，这样可以减少延迟。
+Cookie HTTP 协议是无状态的，主要是为了让 HTTP 协议尽可能简单，使得它能够处理大量事务。HTTP/1.1 引入 Cookie 来保存状态信息。
+Cookie 是服务器发送到用户浏览器并保存在本地的一小块数据，它会在浏览器之后向同一服务器再次发起请求时被携带上，用于告知服务端两个请求是否来自同一浏览器。由于之后每次请求都会需要携带 Cookie 数据，因此会带来额外的性能开销（尤其是在移动环境下）。
+Cookie 曾一度用于客户端数据的存储，因为当时并没有其它合适的存储办法而作为唯一的存储手段，但现在随着现代浏览器开始支持各种各样的存储方式，Cookie 渐渐被淘汰。新的浏览器 API 已经允许开发者直接将数据存储到本地，如使用 Web storage API（本地存储和会话存储）或 IndexedDB。
+用途  会话状态管理（如用户登录状态、购物车、游戏分数或其它需要记录的信息） 个性化设置（如用户自定义设置、主题等） 浏览器行为跟踪（如跟踪分析用户行为等）  创建过程 服务器发送的响应报文包含 Set-Cookie 首部字段，客户端得到响应报文后把 Cookie 内容保存到浏览器中。'>
+<meta name='theme-color' content='#FFFFFF'>
+
+<meta property='og:title' content='具体应用 • mannuan'>
+<meta property='og:description' content='参考链接
+具体应用 连接管理 短连接与长连接 当浏览器访问一个包含多张图片的 HTML 页面时，除了请求访问的 HTML 页面资源，还会请求图片资源。如果每进行一次 HTTP 通信就要新建一个 TCP 连接，那么开销会很大。
+长连接只需要建立一次 TCP 连接就能进行多次 HTTP 通信。
+ 从 HTTP/1.1 开始默认是长连接的，如果要断开连接，需要由客户端或者服务器端提出断开，使用 Connection : close； 在 HTTP/1.1 之前默认是短连接的，如果需要使用长连接，则使用 Connection : Keep-Alive。  流水线 默认情况下，HTTP 请求是按顺序发出的，下一个请求只有在当前请求收到响应之后才会被发出。由于受到网络延迟和带宽的限制，在下一个请求被发送到服务器之前，可能需要等待很长时间。
+流水线是在同一条长连接上连续发出请求，而不用等待响应返回，这样可以减少延迟。
+Cookie HTTP 协议是无状态的，主要是为了让 HTTP 协议尽可能简单，使得它能够处理大量事务。HTTP/1.1 引入 Cookie 来保存状态信息。
+Cookie 是服务器发送到用户浏览器并保存在本地的一小块数据，它会在浏览器之后向同一服务器再次发起请求时被携带上，用于告知服务端两个请求是否来自同一浏览器。由于之后每次请求都会需要携带 Cookie 数据，因此会带来额外的性能开销（尤其是在移动环境下）。
+Cookie 曾一度用于客户端数据的存储，因为当时并没有其它合适的存储办法而作为唯一的存储手段，但现在随着现代浏览器开始支持各种各样的存储方式，Cookie 渐渐被淘汰。新的浏览器 API 已经允许开发者直接将数据存储到本地，如使用 Web storage API（本地存储和会话存储）或 IndexedDB。
+用途  会话状态管理（如用户登录状态、购物车、游戏分数或其它需要记录的信息） 个性化设置（如用户自定义设置、主题等） 浏览器行为跟踪（如跟踪分析用户行为等）  创建过程 服务器发送的响应报文包含 Set-Cookie 首部字段，客户端得到响应报文后把 Cookie 内容保存到浏览器中。'>
+<meta property='og:url' content='https://mannuan.github.io/post/20190823191245/'>
+<meta property='og:site_name' content='mannuan'>
+<meta property='og:type' content='article'><meta property='og:image' content='https://www.gravatar.com/avatar/8bacfd69855171c6f53247456732f68a?s=256'><meta property='article:section' content='post'><meta property='article:tag' content='HTTP'><meta property='article:published_time' content='2019-08-23T19:12:46&#43;08:00'/><meta property='article:modified_time' content='2019-08-23T19:12:46&#43;08:00'/><meta name='twitter:card' content='summary'>
+
+<meta name="generator" content="Hugo 0.55.6" />
+
+  <title>具体应用 • mannuan</title>
+  <link rel='canonical' href='https://mannuan.github.io/post/20190823191245/'>
+  
+  
+  <link rel='icon' href='/favicon.ico'>
+<link rel='stylesheet' href='/assets/css/main.6a060eb7.css'><link rel='stylesheet' href='/css/custom.css'><style>
+:root{--color-accent:#FFFFFF;}
+</style>
+
+  
+
+</head>
+<body class='page type-post has-sidebar'>
+
+  <div class='site'><div id='sidebar' class='sidebar'>
+  <a class='screen-reader-text' href='#main-menu'>Skip to Main Menu</a>
+
+  <div class='container'><section class='widget widget-about sep-after'>
+  <header>
+    
+    <div class='logo'>
+      <a href='/'>
+        <img src='/images/%e6%88%91%e7%9a%84%e5%a4%b4%e5%83%8f.jpeg'>
+      </a>
+    </div>
+    
+    <h2 class='title site-title '>
+      <a href='/'>
+      mannuan
+      </a>
+    </h2>
+    <div class='desc'>
+    Rome was not built in a day.
+    </div>
+  </header>
+
+</section>
+<section class='widget widget-search sep-after'>
+  <header>
+    <h4 class='title widget-title'>Search</h4>
+  </header>
+
+  <form action='/search' id='search-form' class='search-form'>
+    <label>
+      <span class='screen-reader-text'>Search</span>
+      <input id='search-term' class='search-term' type='search' name='q' placeholder='Search&hellip;'>
+    </label></form>
+
+</section>
+<section class='widget widget-sidebar_menu sep-after'><nav id='sidebar-menu' class='menu sidebar-menu' aria-label='Sidebar Menu'>
+    <div class='container'>
+      <ul><li class='item'>
+  <a href='https://github.com/mannuan'>Github</a></li><li class='item'>
+  <a href='/skill-content/dist/'>skills</a></li><li class='item has-children'>
+  <a href=''>网络实验</a><button class='sub-menu-toggler'>
+    <span class='screen-reader-text'>expand sub menu</span>
+    <span class='sign'></span>
+  </button>
+
+  <ul class='sub-menu'><li class='item'>
+  <a href='/post/20190701101121/'>实验九</a></li><li class='item'>
+  <a href='/post/20190701090625/'>实验八</a></li><li class='item'>
+  <a href='/post/20190701105039/'>实验六</a></li><li class='item'>
+  <a href='/post/20190701172233/'>实验十</a></li><li class='item'>
+  <a href='/post/20190701182805/'>实验十一</a></li><li class='item'>
+  <a href='/post/20190701194642/'>实验十三</a></li><li class='item'>
+  <a href='/post/20190701192111/'>实验十二</a></li></ul></li><li class='item has-children'>
+  <a href=''>面经</a><button class='sub-menu-toggler'>
+    <span class='screen-reader-text'>expand sub menu</span>
+    <span class='sign'></span>
+  </button>
+
+  <ul class='sub-menu'><li class='item'>
+  <a href='/post/20190813191500/'>网易严选1</a></li><li class='item'>
+  <a href='/post/20190813190824/'>网易严选2</a></li></ul></li></ul>
+    </div>
+  </nav>
+
+</section><section class='widget widget-taxonomy_cloud sep-after'>
+  <header>
+    <h4 class='title widget-title'>Categories</h4>
+  </header>
+
+  <div class='container list-container'>
+  <ul class='list taxonomy-cloud'><li>
+        <a href='/categories/features/' style='font-size:1.1391304347826088em'>features</a>
+      </li><li>
+        <a href='/categories/ide/' style='font-size:1.0260869565217392em'>ide</a>
+      </li><li>
+        <a href='/categories/jupyter/' style='font-size:1.017391304347826em'>jupyter</a>
+      </li><li>
+        <a href='/categories/linux/' style='font-size:1.1478260869565218em'>linux</a>
+      </li><li>
+        <a href='/categories/mac/' style='font-size:1.1478260869565218em'>mac</a>
+      </li><li>
+        <a href='/categories/mongodb/' style='font-size:1.0347826086956522em'>mongodb</a>
+      </li><li>
+        <a href='/categories/others/' style='font-size:1em'>others</a>
+      </li><li>
+        <a href='/categories/pip/' style='font-size:1em'>pip</a>
+      </li><li>
+        <a href='/categories/python/' style='font-size:1.0521739130434782em'>python</a>
+      </li><li>
+        <a href='/categories/shell/' style='font-size:1em'>shell</a>
+      </li><li>
+        <a href='/categories/tutorial/' style='font-size:1.008695652173913em'>Tutorial</a>
+      </li><li>
+        <a href='/categories/vscode/' style='font-size:1.008695652173913em'>vscode</a>
+      </li><li>
+        <a href='/categories/%E4%BD%9C%E8%80%85/' style='font-size:1em'>作者</a>
+      </li><li>
+        <a href='/categories/%E5%86%99%E4%BD%9C/' style='font-size:1.008695652173913em'>写作</a>
+      </li><li>
+        <a href='/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/' style='font-size:2em'>前端开发</a>
+      </li><li>
+        <a href='/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/' style='font-size:1em'>博客搭建</a>
+      </li><li>
+        <a href='/categories/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/' style='font-size:1.008695652173913em'>学习方法</a>
+      </li><li>
+        <a href='/categories/%E5%B7%A5%E5%85%B7/' style='font-size:1.017391304347826em'>工具</a>
+      </li><li>
+        <a href='/categories/%E6%95%B0%E5%AD%A6/' style='font-size:1em'>数学</a>
+      </li><li>
+        <a href='/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/' style='font-size:1.0347826086956522em'>数据结构</a>
+      </li><li>
+        <a href='/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/' style='font-size:1.017391304347826em'>机器学习</a>
+      </li><li>
+        <a href='/categories/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/' style='font-size:1em'>正则表达式</a>
+      </li><li>
+        <a href='/categories/%E7%88%AC%E8%99%AB/' style='font-size:1.0956521739130434em'>爬虫</a>
+      </li><li>
+        <a href='/categories/%E7%AE%97%E6%B3%95/' style='font-size:1em'>算法</a>
+      </li><li>
+        <a href='/categories/%E7%AE%97%E6%B3%95%E9%A2%98/' style='font-size:1.0956521739130434em'>算法题</a>
+      </li><li>
+        <a href='/categories/%E7%B3%BB%E7%BB%9F/' style='font-size:1.017391304347826em'>系统</a>
+      </li><li>
+        <a href='/categories/%E7%BC%96%E7%A0%81%E8%BD%AC%E6%8D%A2/' style='font-size:1em'>编码转换</a>
+      </li><li>
+        <a href='/categories/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/' style='font-size:1em'>编程开发</a>
+      </li><li>
+        <a href='/categories/%E7%BC%96%E8%BE%91%E5%99%A8/' style='font-size:1em'>编辑器</a>
+      </li><li>
+        <a href='/categories/%E7%BD%91%E7%BB%9C/' style='font-size:1em'>网络</a>
+      </li><li>
+        <a href='/categories/%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/' style='font-size:1.1043478260869566em'>网络协议</a>
+      </li><li>
+        <a href='/categories/%E7%BF%BB%E5%A2%99/' style='font-size:1.017391304347826em'>翻墙</a>
+      </li><li>
+        <a href='/categories/%E8%8B%B1%E8%AF%AD/' style='font-size:1.1304347826086956em'>英语</a>
+      </li><li>
+        <a href='/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/' style='font-size:1em'>计算机基础</a>
+      </li><li>
+        <a href='/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/' style='font-size:1.0521739130434782em'>计算机网络</a>
+      </li><li>
+        <a href='/categories/%E8%AE%BA%E6%96%87/' style='font-size:1.0434782608695652em'>论文</a>
+      </li><li>
+        <a href='/categories/%E8%B0%83%E8%AF%95/' style='font-size:1em'>调试</a>
+      </li><li>
+        <a href='/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/' style='font-size:1.017391304347826em'>软件使用</a>
+      </li></ul>
+</div>
+
+
+</section>
+</div>
+
+  <div class='sidebar-overlay'></div>
+</div><div class='main'><nav id='main-menu' class='menu main-menu' aria-label='Main Menu'>
+  <div class='container'>
+    <a class='screen-reader-text' href='#content'>Skip to Content</a>
+
+<button id='sidebar-toggler' class='sidebar-toggler' aria-controls='sidebar'>
+  <span class='screen-reader-text'>Toggle Sidebar</span>
+  <span class='open'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="3" y1="12" x2="21" y2="12" />
+  <line x1="3" y1="6" x2="21" y2="6" />
+  <line x1="3" y1="18" x2="21" y2="18" />
+  
+</svg>
+</span>
+  <span class='close'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="18" y1="6" x2="6" y2="18" />
+  <line x1="6" y1="6" x2="18" y2="18" />
+  
+</svg>
+</span>
+</button>
+    <ul><li class='item'>
+        <a href='/'>Home</a>
+      </li><li class='item'>
+        <a href='/post/'>blogs</a>
+      </li><li class='item'>
+        <a href='/skill-content/dist/'>skills</a>
+      </li><li class='item'>
+        <a href='/tags/'>tags</a>
+      </li></ul>
+  </div>
+</nav><div class='header-widgets'>
+        <div class='container'>
+    
+    <style>.widget-breadcrumbs li:after{content:'\2f '}</style>
+  <section class='widget widget-breadcrumbs sep-after'>
+    <nav id='breadcrumbs'>
+      <ol><li><a href='/'>Home</a></li><li><a href='/post/'>blogs</a></li><li><span>具体应用</span></li></ol>
+    </nav>
+  </section></div>
+      </div>
+
+      <header id='header' class='header site-header'>
+        <div class='container sep-after'>
+          <div class='header-info'><p class='site-title title'>mannuan</p><p class='desc site-desc'>Rome was not built in a day.</p>
+          </div>
+        </div>
+      </header>
+
+      <main id='content'>
+
+
+<article lang='en' class='entry'>
+  <header class='header entry-header'>
+  <div class='container sep-after'>
+    <div class='header-info'>
+      <h1 class='title'>具体应用</h1>
+      
+
+    </div>
+    <div class='entry-meta'>
+  <span class='posted-on'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+  <line x1="16" y1="2" x2="16" y2="6"/>
+  <line x1="8" y1="2" x2="8" y2="6"/>
+  <line x1="3" y1="10" x2="21" y2="10"/>
+  
+</svg>
+<span class='screen-reader-text'>Posted on </span>
+  <time class='entry-date' datetime='2019-08-23T19:12:46&#43;08:00'>2019, Aug 23</time>
+</span>
+
+  <span class='byline'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M21,21V20c0-2.76-4-5-9-5s-9,2.24-9,5v1"/>
+  <path d="M16,6.37A4,4,0,1,1,12.63,3,4,4,0,0,1,16,6.37Z"/>
+  
+</svg>
+<span class='screen-reader-text'> by </span><a href='/authors/mannuan'>mannuan</a></span>
+  
+<span class='reading-time'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <circle cx="12" cy="12" r="10"/>
+  <polyline points="12 6 12 12 15 15"/>
+  
+</svg>
+2 mins read
+</span>
+
+
+</div>
+
+
+  </div>
+</header>
+
+  
+  
+<details class='container entry-toc'>
+  <summary class='title'>
+    <span>Table of Contents</span>
+  </summary>
+  <nav id="TableOfContents">
+<ul>
+<li><a href="#具体应用">具体应用</a>
+<ul>
+<li><a href="#连接管理">连接管理</a>
+<ul>
+<li><a href="#短连接与长连接">短连接与长连接</a></li>
+<li><a href="#流水线">流水线</a></li>
+</ul></li>
+<li><a href="#cookie">Cookie</a>
+<ul>
+<li><a href="#用途">用途</a></li>
+<li><a href="#创建过程">创建过程</a></li>
+<li><a href="#分类">分类</a></li>
+<li><a href="#作用域">作用域</a></li>
+<li><a href="#javascript">JavaScript</a></li>
+<li><a href="#httponly">HttpOnly</a></li>
+<li><a href="#secure">Secure</a></li>
+<li><a href="#session">Session</a></li>
+<li><a href="#浏览器禁用cookie">浏览器禁用Cookie</a></li>
+<li><a href="#cookie与session选择">Cookie与Session选择</a></li>
+</ul></li>
+<li><a href="#缓存">缓存</a>
+<ul>
+<li><a href="#优点">优点</a></li>
+<li><a href="#实现方法">实现方法</a></li>
+<li><a href="#cache-control">Cache-Control</a>
+<ul>
+<li><a href="#禁止进行缓存">禁止进行缓存</a></li>
+<li><a href="#强制确认缓存">强制确认缓存</a></li>
+<li><a href="#私有缓存和公共缓存">私有缓存和公共缓存</a></li>
+<li><a href="#缓存过期机制">缓存过期机制</a></li>
+</ul></li>
+<li><a href="#缓存验证">缓存验证</a></li>
+</ul></li>
+<li><a href="#内容协商">内容协商</a>
+<ul>
+<li><a href="#类型">类型</a>
+<ul>
+<li><a href="#服务端驱动型">服务端驱动型</a></li>
+<li><a href="#代理驱动型">代理驱动型</a></li>
+</ul></li>
+<li><a href="#vary">Vary</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+</details>
+
+
+  <div class='container entry-content'>
+  
+
+<p><a href="https://github.com/CyC2018/CS-Notes/blob/master/notes/HTTP.md" target="_blank">参考链接</a></p>
+
+<h1 id="具体应用">具体应用</h1>
+
+<h2 id="连接管理">连接管理</h2>
+
+<p><img src="/images/HTTP1_x_Connections.png"></p>
+
+<h3 id="短连接与长连接">短连接与长连接</h3>
+
+<p>当浏览器访问一个包含多张图片的 HTML 页面时，除了请求访问的 HTML 页面资源，还会请求图片资源。如果每进行一次 HTTP 通信就要新建一个 TCP 连接，那么开销会很大。<br>
+长连接只需要建立一次 TCP 连接就能进行多次 HTTP 通信。<br></p>
+
+<ul>
+<li>从 HTTP/1.1 开始默认是长连接的，如果要断开连接，需要由客户端或者服务器端提出断开，使用 <code>Connection : close；</code></li>
+<li>在 HTTP/1.1 之前默认是短连接的，如果需要使用长连接，则使用 <code>Connection : Keep-Alive</code>。</li>
+</ul>
+
+<h3 id="流水线">流水线</h3>
+
+<p>默认情况下，HTTP 请求是按顺序发出的，下一个请求只有在当前请求收到响应之后才会被发出。由于受到网络延迟和带宽的限制，在下一个请求被发送到服务器之前，可能需要等待很长时间。<br>
+流水线是在同一条长连接上连续发出请求，而不用等待响应返回，这样可以减少延迟。</p>
+
+<h2 id="cookie">Cookie</h2>
+
+<p>HTTP 协议是无状态的，主要是为了让 HTTP 协议尽可能简单，使得它能够处理大量事务。HTTP/1.1 引入 Cookie 来保存状态信息。<br>
+Cookie 是服务器发送到用户浏览器并保存在本地的一小块数据，它会在浏览器之后向同一服务器再次发起请求时被携带上，用于告知服务端两个请求是否来自同一浏览器。由于之后每次请求都会需要携带 Cookie 数据，因此会带来额外的性能开销（尤其是在移动环境下）。<br>
+Cookie 曾一度用于客户端数据的存储，因为当时并没有其它合适的存储办法而作为唯一的存储手段，但现在随着现代浏览器开始支持各种各样的存储方式，Cookie 渐渐被淘汰。新的浏览器 API 已经允许开发者直接将数据存储到本地，如使用 Web storage API（本地存储和会话存储）或 IndexedDB。<br></p>
+
+<h3 id="用途">用途</h3>
+
+<ul>
+<li>会话状态管理（如用户登录状态、购物车、游戏分数或其它需要记录的信息）</li>
+<li>个性化设置（如用户自定义设置、主题等）</li>
+<li>浏览器行为跟踪（如跟踪分析用户行为等）</li>
+</ul>
+
+<h3 id="创建过程">创建过程</h3>
+
+<p>服务器发送的响应报文包含 Set-Cookie 首部字段，客户端得到响应报文后把 Cookie 内容保存到浏览器中。</p>
+
+<pre><code>HTTP/1.0 200 OK
+Content-type: text/html
+Set-Cookie: yummy_cookie=choco
+Set-Cookie: tasty_cookie=strawberry
+
+[page content]
+</code></pre>
+
+<p>客户端之后对同一个服务器发送请求时，会从浏览器中取出 Cookie 信息并通过 Cookie 请求首部字段发送给服务器。</p>
+
+<pre><code>GET /sample_page.html HTTP/1.1
+Host: www.example.org
+Cookie: yummy_cookie=choco; tasty_cookie=strawberry
+</code></pre>
+
+<h3 id="分类">分类</h3>
+
+<ul>
+<li>会话期 Cookie：浏览器关闭之后它会被自动删除，也就是说它仅在会话期内有效。</li>
+
+<li><p>持久性 Cookie：指定过期时间（Expires）或有效期（max-age）之后就成为了持久性的 Cookie。</p>
+
+<pre><code>Set-Cookie: id=a3fWa; Expires=Wed, 21 Oct 2015 07:28:00 GMT;
+</code></pre></li>
+</ul>
+
+<h3 id="作用域">作用域</h3>
+
+<p>Domain 标识指定了哪些主机可以接受 Cookie。如果不指定，默认为当前文档的主机（不包含子域名）。如果指定了 Domain，则一般包含子域名。例如，如果设置 Domain=mozilla.org，则 Cookie 也包含在子域名中（如 developer.mozilla.org）。<br>
+Path 标识指定了主机下的哪些路径可以接受 Cookie（该 URL 路径必须存在于请求 URL 中）。以字符 %x2F (&ldquo;/&rdquo;) 作为路径分隔符，子路径也会被匹配。例如，设置 Path=/docs，则以下地址都会匹配：<br>
++ /docs
++ /docs/Web/
++ /docs/Web/HTTP</p>
+
+<h3 id="javascript">JavaScript</h3>
+
+<p>浏览器通过<code>document.cookie</code>属性可创建新的 Cookie，也可通过该属性访问非 HttpOnly 标记的 Cookie。</p>
+
+<pre><code>document.cookie = &quot;yummy_cookie=choco&quot;;
+document.cookie = &quot;tasty_cookie=strawberry&quot;;
+console.log(document.cookie);
+</code></pre>
+
+<h3 id="httponly">HttpOnly</h3>
+
+<p>标记为 HttpOnly 的 Cookie 不能被 JavaScript 脚本调用。跨站脚本攻击 (XSS) 常常使用 JavaScript 的 document.cookie API 窃取用户的 Cookie 信息，因此使用 HttpOnly 标记可以在一定程度上避免 XSS 攻击。</p>
+
+<pre><code>Set-Cookie: id=a3fWa; Expires=Wed, 21 Oct 2015 07:28:00 GMT; Secure; HttpOnly
+</code></pre>
+
+<h3 id="secure">Secure</h3>
+
+<p>标记为 Secure 的 Cookie 只能通过被 HTTPS 协议加密过的请求发送给服务端。但即便设置了 Secure 标记，敏感信息也不应该通过 Cookie 传输，因为 Cookie 有其固有的不安全性，Secure 标记也无法提供确实的安全保障。</p>
+
+<h3 id="session">Session</h3>
+
+<p>除了可以将用户信息通过 Cookie 存储在用户浏览器中，也可以利用 Session 存储在服务器端，存储在服务器端的信息更加安全。<br>
+Session 可以存储在服务器上的文件、数据库或者内存中。也可以将 Session 存储在 Redis 这种内存型数据库中，效率会更高。<br>
+使用 Session 维护用户登录状态的过程如下：<br>
++ 用户进行登录时，用户提交包含用户名和密码的表单，放入 HTTP 请求报文中；
++ 服务器验证该用户名和密码，如果正确则把用户信息存储到 Redis 中，它在 Redis 中的 Key 称为 Session ID；
++ 服务器返回的响应报文的 Set-Cookie 首部字段包含了这个 Session ID，客户端收到响应报文之后将该 Cookie 值存入浏览器中；
++ 客户端之后对同一个服务器进行请求时会包含该 Cookie 值，服务器收到之后提取出 Session ID，从 Redis 中取出用户信息，继续之前的业务操作。
++ 应该注意 Session ID 的安全性问题，不能让它被恶意攻击者轻易获取，那么就不能产生一个容易被猜到的 Session ID 值。此外，还需要经常重新生成 Session ID。在对安全性要求极高的场景下，例如转账等操作，除了使用 Session 管理用户状态之外，还需要对用户进行重新验证，比如重新输入密码，或者使用短信验证码等方式。</p>
+
+<h3 id="浏览器禁用cookie">浏览器禁用Cookie</h3>
+
+<p>此时无法使用 Cookie 来保存用户信息，只能使用 Session。除此之外，不能再将 Session ID 存放到 Cookie 中，而是使用 URL 重写技术，将 Session ID 作为 URL 的参数进行传递。</p>
+
+<h3 id="cookie与session选择">Cookie与Session选择</h3>
+
+<ul>
+<li>Cookie 只能存储 ASCII 码字符串，而 Session 则可以存储任何类型的数据，因此在考虑数据复杂性时首选 Session；</li>
+<li>Cookie 存储在浏览器中，容易被恶意查看。如果非要将一些隐私数据存在 Cookie 中，可以将 Cookie 值进行加密，然后在服务器进行解密；</li>
+<li>对于大型网站，如果用户所有的信息都存储在 Session 中，那么开销是非常大的，因此不建议将所有的用户信息都存储到 Session 中。</li>
+</ul>
+
+<h2 id="缓存">缓存</h2>
+
+<h3 id="优点">优点</h3>
+
+<ul>
+<li>缓解服务器压力；</li>
+<li>降低客户端获取资源的延迟：缓存通常位于内存中，读取缓存的速度更快。并且缓存服务器在地理位置上也有可能比源服务器来得近，例如浏览器缓存。</li>
+</ul>
+
+<h3 id="实现方法">实现方法</h3>
+
+<ul>
+<li>让代理服务器进行缓存；</li>
+<li>让客户端浏览器进行缓存。</li>
+</ul>
+
+<h3 id="cache-control">Cache-Control</h3>
+
+<p>HTTP/1.1 通过 Cache-Control 首部字段来控制缓存。</p>
+
+<h4 id="禁止进行缓存">禁止进行缓存</h4>
+
+<p>no-store 指令规定不能对请求或响应的任何一部分进行缓存。</p>
+
+<pre><code>Cache-Control: no-store
+</code></pre>
+
+<h4 id="强制确认缓存">强制确认缓存</h4>
+
+<p>no-cache 指令规定缓存服务器需要先向源服务器验证缓存资源的有效性，只有当缓存资源有效时才能使用该缓存对客户端的请求进行响应。</p>
+
+<pre><code>Cache-Control: no-cache
+</code></pre>
+
+<h4 id="私有缓存和公共缓存">私有缓存和公共缓存</h4>
+
+<p>private 指令规定了将资源作为私有缓存，只能被单独用户使用，一般存储在用户浏览器中。</p>
+
+<pre><code>Cache-Control: private
+</code></pre>
+
+<p>public 指令规定了将资源作为公共缓存，可以被多个用户使用，一般存储在代理服务器中。</p>
+
+<pre><code>Cache-Control: public
+</code></pre>
+
+<h4 id="缓存过期机制">缓存过期机制</h4>
+
+<p>max-age 指令出现在请求报文，并且缓存资源的缓存时间小于该指令指定的时间，那么就能接受该缓存。<br></p>
+
+<p>max-age 指令出现在响应报文，表示缓存资源在缓存服务器中保存的时间。</p>
+
+<pre><code>Cache-Control: max-age=31536000
+</code></pre>
+
+<p>Expires 首部字段也可以用于告知缓存服务器该资源什么时候会过期。</p>
+
+<pre><code>Expires: Wed, 04 Jul 2012 08:26:05 GMT
+</code></pre>
+
+<ul>
+<li>在 HTTP/1.1 中，会优先处理 max-age 指令；</li>
+<li>在 HTTP/1.0 中，max-age 指令会被忽略掉。</li>
+</ul>
+
+<h3 id="缓存验证">缓存验证</h3>
+
+<p>需要先了解 ETag 首部字段的含义，它是资源的唯一标识。URL 不能唯一表示资源，例如 <a href="http://www.google.com/" target="_blank">http://www.google.com/</a> 有中文和英文两个资源，只有 ETag 才能对这两个资源进行唯一标识。</p>
+
+<pre><code>ETag: &quot;82e22293907ce725faf67773957acd12&quot;
+</code></pre>
+
+<p>可以将缓存资源的 ETag 值放入 If-None-Match 首部，服务器收到该请求后，判断缓存资源的 ETag 值和资源的最新 ETag 值是否一致，如果一致则表示缓存资源有效，返回 304 Not Modified。</p>
+
+<pre><code>If-None-Match: &quot;82e22293907ce725faf67773957acd12&quot;
+</code></pre>
+
+<p>Last-Modified 首部字段也可以用于缓存验证，它包含在源服务器发送的响应报文中，指示源服务器对资源的最后修改时间。但是它是一种弱校验器，因为只能精确到一秒，所以它通常作为 ETag 的备用方案。如果响应首部字段里含有这个信息，客户端可以在后续的请求中带上 If-Modified-Since 来验证缓存。服务器只在所请求的资源在给定的日期时间之后对内容进行过修改的情况下才会将资源返回，状态码为 200 OK。如果请求的资源从那时起未经修改，那么返回一个不带有实体主体的 304 Not Modified 响应报文。</p>
+
+<pre><code>Last-Modified: Wed, 21 Oct 2015 07:28:00 GMT
+</code></pre>
+
+<pre><code>If-Modified-Since: Wed, 21 Oct 2015 07:28:00 GMT
+</code></pre>
+
+<h2 id="内容协商">内容协商</h2>
+
+<p>通过内容协商返回最合适的内容，例如根据浏览器的默认语言选择返回中文界面还是英文界面。</p>
+
+<h3 id="类型">类型</h3>
+
+<h4 id="服务端驱动型">服务端驱动型</h4>
+
+<p>客户端设置特定的 HTTP 首部字段，例如 Accept、Accept-Charset、Accept-Encoding、Accept-Language，服务器根据这些字段返回特定的资源。<br>
+它存在以下问题：
++ 服务器很难知道客户端浏览器的全部信息；
++ 客户端提供的信息相当冗长（HTTP/2 协议的首部压缩机制缓解了这个问题），并且存在隐私风险（HTTP 指纹识别技术）；
++ 给定的资源需要返回不同的展现形式，共享缓存的效率会降低，而服务器端的实现会越来越复杂。</p>
+
+<h4 id="代理驱动型">代理驱动型</h4>
+
+<p>服务器返回 300 Multiple Choices 或者 406 Not Acceptable，客户端从中选出最合适的那个资源。</p>
+
+<h3 id="vary">Vary</h3>
+
+<pre><code>Vary: Accept-Language
+</code></pre>
+
+</div>
+
+  
+<footer class='entry-footer'>
+  <div class='container sep-before'><div class='categories'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M22,19a2,2,0,0,1-2,2H4a2,2,0,0,1-2-2V5A2,2,0,0,1,4,3H9l2,3h9a2,2,0,0,1,2,2Z"/>
+  
+</svg>
+<span class='screen-reader-text'>Categories: </span><a class='category' href='/categories/%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/'>网络协议</a></div>
+<div class='tags'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M20.59,13.41l-7.17,7.17a2,2,0,0,1-2.83,0L2,12V2H12l8.59,8.59A2,2,0,0,1,20.59,13.41Z"/>
+  <line x1="7" y1="7" x2="7" y2="7"/>
+  
+</svg>
+<span class='screen-reader-text'>Tags: </span><a class='tag' href='/tags/http/'>HTTP</a></div>
+
+  </div>
+</footer>
+
+
+</article>
+
+<nav class='entry-nav'>
+  <div class='container'><div class='prev-entry sep-before'>
+      <a href='/post/20190823191041/'>
+        <span aria-hidden='true'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="20" y1="12" x2="4" y2="12"/>
+  <polyline points="10 18 4 12 10 6"/>
+  
+</svg>
+ Previous</span>
+        <span class='screen-reader-text'>Previous post: </span>HTTP首部</a>
+    </div><div class='next-entry sep-before'>
+      <a href='/post/20190823212538/'>
+        <span class='screen-reader-text'>Next post: </span>HTTPS<span aria-hidden='true'>Next <svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="4" y1="12" x2="20" y2="12"/>
+  <polyline points="14 6 20 12 14 18"/>
+  
+</svg>
+</span>
+      </a>
+    </div></div>
+</nav>
+
+
+
+
+      </main>
+
+      <footer id='footer' class='footer'>
+        <div class='container sep-before'><section class='widget widget-social_menu sep-after'><nav aria-label='Social Menu'>
+    <ul><li>
+        <a href='https://github.com/mannuan' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Github account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='mailto:mannuandeyangguang@163.com' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Contact via Email</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+  <polyline points="22,6 12,13 2,6"/>
+  
+</svg>
+</a>
+      </li></ul>
+  </nav>
+</section><div class='copyright'>
+  <p> &copy; 2019 mannuan </p>
+</div>
+
+        </div>
+      </footer>
+
+    </div>
+  </div><script>window.__assets_js_src="/assets/js/"</script>
+
+<script src='/assets/js/main.67d669ac.js'></script><script src='/js/custom.js'></script>
+
+</body>
+
+</html>
+

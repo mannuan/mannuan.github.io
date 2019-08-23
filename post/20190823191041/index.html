@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang='en'><head>
+  <meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='description' content=' HTTP首部 有 4 种类型的首部字段：通用首部字段、请求首部字段、响应首部字段和实体首部字段。
+ 各种首部字段及其含义如下（不需要全记，仅供查阅）：
+ 通用首部字段    首部字段名 说明     Cache-Control 控制缓存的行为   Connection 控制不再转发给代理的首部字段、管理持久连接   Date 创建报文的日期时间   Pragma 报文指令   Trailer 报文末端的首部一览   Transfer-Encoding 指定报文主体的传输编码方式   Upgrade 升级为其他协议   Via 代理服务器的相关信息   Warning 错误通知    请求首部字段    首部字段名 说明     Accept 用户代理可处理的媒体类型   Accept-Charset 优先的字符集   Accept-Encoding 优先的内容编码   Accept-Language 优先的语言（自然语言）   Authorization Web 认证信息   Expect 期待服务器的特定行为   From 用户的电子邮箱地址   Host 请求资源所在服务器   If-Match 比较实体标记（ETag）   If-Modified-Since 比较资源的更新时间   If-None-Match 比较实体标记（与 If-Match 相反）   If-Range 资源未更新时发送实体 Byte 的范围请求   If-Unmodified-Since 比较资源的更新时间（与 If-Modified-Since 相反）   Max-Forwards 最大传输逐跳数   Proxy-Authorization 代理服务器要求客户端的认证信息   Range 实体的字节范围请求   Referer 对请求中 URI 的原始获取方   TE 传输编码的优先级   User-Agent HTTP 客户端程序的信息    响应首部字段    首部字段名 说明     Accept-Ranges 是否接受字节范围请求   Age 推算资源创建经过时间   ETag 资源的匹配信息   Location 令客户端重定向至指定 URI   Proxy-Authenticate 代理服务器对客户端的认证信息   Retry-After 对再次发起请求的时机要求   Server HTTP 服务器的安装信息   Vary 代理服务器缓存的管理信息   WWW-Authenticate 服务器对客户端的认证信息    实体首部字段    首部字段名 说明     Allow 资源可支持的 HTTP 方法   Content-Encoding 实体主体适用的编码方式   Content-Language 实体主体的自然语言   Content-Length 实体主体的大小   Content-Location 替代对应资源的 URI   Content-MD5 实体主体的报文摘要   Content-Range 实体主体的位置范围   Content-Type 实体主体的媒体类型   Expires 实体主体过期的日期时间   Last-Modified 资源的最后修改日期时间    '>
+<meta name='theme-color' content='#FFFFFF'>
+
+<meta property='og:title' content='HTTP首部 • mannuan'>
+<meta property='og:description' content=' HTTP首部 有 4 种类型的首部字段：通用首部字段、请求首部字段、响应首部字段和实体首部字段。
+ 各种首部字段及其含义如下（不需要全记，仅供查阅）：
+ 通用首部字段    首部字段名 说明     Cache-Control 控制缓存的行为   Connection 控制不再转发给代理的首部字段、管理持久连接   Date 创建报文的日期时间   Pragma 报文指令   Trailer 报文末端的首部一览   Transfer-Encoding 指定报文主体的传输编码方式   Upgrade 升级为其他协议   Via 代理服务器的相关信息   Warning 错误通知    请求首部字段    首部字段名 说明     Accept 用户代理可处理的媒体类型   Accept-Charset 优先的字符集   Accept-Encoding 优先的内容编码   Accept-Language 优先的语言（自然语言）   Authorization Web 认证信息   Expect 期待服务器的特定行为   From 用户的电子邮箱地址   Host 请求资源所在服务器   If-Match 比较实体标记（ETag）   If-Modified-Since 比较资源的更新时间   If-None-Match 比较实体标记（与 If-Match 相反）   If-Range 资源未更新时发送实体 Byte 的范围请求   If-Unmodified-Since 比较资源的更新时间（与 If-Modified-Since 相反）   Max-Forwards 最大传输逐跳数   Proxy-Authorization 代理服务器要求客户端的认证信息   Range 实体的字节范围请求   Referer 对请求中 URI 的原始获取方   TE 传输编码的优先级   User-Agent HTTP 客户端程序的信息    响应首部字段    首部字段名 说明     Accept-Ranges 是否接受字节范围请求   Age 推算资源创建经过时间   ETag 资源的匹配信息   Location 令客户端重定向至指定 URI   Proxy-Authenticate 代理服务器对客户端的认证信息   Retry-After 对再次发起请求的时机要求   Server HTTP 服务器的安装信息   Vary 代理服务器缓存的管理信息   WWW-Authenticate 服务器对客户端的认证信息    实体首部字段    首部字段名 说明     Allow 资源可支持的 HTTP 方法   Content-Encoding 实体主体适用的编码方式   Content-Language 实体主体的自然语言   Content-Length 实体主体的大小   Content-Location 替代对应资源的 URI   Content-MD5 实体主体的报文摘要   Content-Range 实体主体的位置范围   Content-Type 实体主体的媒体类型   Expires 实体主体过期的日期时间   Last-Modified 资源的最后修改日期时间    '>
+<meta property='og:url' content='https://mannuan.github.io/post/20190823191041/'>
+<meta property='og:site_name' content='mannuan'>
+<meta property='og:type' content='article'><meta property='og:image' content='https://www.gravatar.com/avatar/8bacfd69855171c6f53247456732f68a?s=256'><meta property='article:section' content='post'><meta property='article:tag' content='HTTP'><meta property='article:published_time' content='2019-08-23T19:10:41&#43;08:00'/><meta property='article:modified_time' content='2019-08-23T19:10:41&#43;08:00'/><meta name='twitter:card' content='summary'>
+
+<meta name="generator" content="Hugo 0.55.6" />
+
+  <title>HTTP首部 • mannuan</title>
+  <link rel='canonical' href='https://mannuan.github.io/post/20190823191041/'>
+  
+  
+  <link rel='icon' href='/favicon.ico'>
+<link rel='stylesheet' href='/assets/css/main.6a060eb7.css'><link rel='stylesheet' href='/css/custom.css'><style>
+:root{--color-accent:#FFFFFF;}
+</style>
+
+  
+
+</head>
+<body class='page type-post has-sidebar'>
+
+  <div class='site'><div id='sidebar' class='sidebar'>
+  <a class='screen-reader-text' href='#main-menu'>Skip to Main Menu</a>
+
+  <div class='container'><section class='widget widget-about sep-after'>
+  <header>
+    
+    <div class='logo'>
+      <a href='/'>
+        <img src='/images/%e6%88%91%e7%9a%84%e5%a4%b4%e5%83%8f.jpeg'>
+      </a>
+    </div>
+    
+    <h2 class='title site-title '>
+      <a href='/'>
+      mannuan
+      </a>
+    </h2>
+    <div class='desc'>
+    Rome was not built in a day.
+    </div>
+  </header>
+
+</section>
+<section class='widget widget-search sep-after'>
+  <header>
+    <h4 class='title widget-title'>Search</h4>
+  </header>
+
+  <form action='/search' id='search-form' class='search-form'>
+    <label>
+      <span class='screen-reader-text'>Search</span>
+      <input id='search-term' class='search-term' type='search' name='q' placeholder='Search&hellip;'>
+    </label></form>
+
+</section>
+<section class='widget widget-sidebar_menu sep-after'><nav id='sidebar-menu' class='menu sidebar-menu' aria-label='Sidebar Menu'>
+    <div class='container'>
+      <ul><li class='item'>
+  <a href='https://github.com/mannuan'>Github</a></li><li class='item'>
+  <a href='/skill-content/dist/'>skills</a></li><li class='item has-children'>
+  <a href=''>网络实验</a><button class='sub-menu-toggler'>
+    <span class='screen-reader-text'>expand sub menu</span>
+    <span class='sign'></span>
+  </button>
+
+  <ul class='sub-menu'><li class='item'>
+  <a href='/post/20190701101121/'>实验九</a></li><li class='item'>
+  <a href='/post/20190701090625/'>实验八</a></li><li class='item'>
+  <a href='/post/20190701105039/'>实验六</a></li><li class='item'>
+  <a href='/post/20190701172233/'>实验十</a></li><li class='item'>
+  <a href='/post/20190701182805/'>实验十一</a></li><li class='item'>
+  <a href='/post/20190701194642/'>实验十三</a></li><li class='item'>
+  <a href='/post/20190701192111/'>实验十二</a></li></ul></li><li class='item has-children'>
+  <a href=''>面经</a><button class='sub-menu-toggler'>
+    <span class='screen-reader-text'>expand sub menu</span>
+    <span class='sign'></span>
+  </button>
+
+  <ul class='sub-menu'><li class='item'>
+  <a href='/post/20190813191500/'>网易严选1</a></li><li class='item'>
+  <a href='/post/20190813190824/'>网易严选2</a></li></ul></li></ul>
+    </div>
+  </nav>
+
+</section><section class='widget widget-taxonomy_cloud sep-after'>
+  <header>
+    <h4 class='title widget-title'>Categories</h4>
+  </header>
+
+  <div class='container list-container'>
+  <ul class='list taxonomy-cloud'><li>
+        <a href='/categories/features/' style='font-size:1.1391304347826088em'>features</a>
+      </li><li>
+        <a href='/categories/ide/' style='font-size:1.0260869565217392em'>ide</a>
+      </li><li>
+        <a href='/categories/jupyter/' style='font-size:1.017391304347826em'>jupyter</a>
+      </li><li>
+        <a href='/categories/linux/' style='font-size:1.1478260869565218em'>linux</a>
+      </li><li>
+        <a href='/categories/mac/' style='font-size:1.1478260869565218em'>mac</a>
+      </li><li>
+        <a href='/categories/mongodb/' style='font-size:1.0347826086956522em'>mongodb</a>
+      </li><li>
+        <a href='/categories/others/' style='font-size:1em'>others</a>
+      </li><li>
+        <a href='/categories/pip/' style='font-size:1em'>pip</a>
+      </li><li>
+        <a href='/categories/python/' style='font-size:1.0521739130434782em'>python</a>
+      </li><li>
+        <a href='/categories/shell/' style='font-size:1em'>shell</a>
+      </li><li>
+        <a href='/categories/tutorial/' style='font-size:1.008695652173913em'>Tutorial</a>
+      </li><li>
+        <a href='/categories/vscode/' style='font-size:1.008695652173913em'>vscode</a>
+      </li><li>
+        <a href='/categories/%E4%BD%9C%E8%80%85/' style='font-size:1em'>作者</a>
+      </li><li>
+        <a href='/categories/%E5%86%99%E4%BD%9C/' style='font-size:1.008695652173913em'>写作</a>
+      </li><li>
+        <a href='/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/' style='font-size:2em'>前端开发</a>
+      </li><li>
+        <a href='/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/' style='font-size:1em'>博客搭建</a>
+      </li><li>
+        <a href='/categories/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/' style='font-size:1.008695652173913em'>学习方法</a>
+      </li><li>
+        <a href='/categories/%E5%B7%A5%E5%85%B7/' style='font-size:1.017391304347826em'>工具</a>
+      </li><li>
+        <a href='/categories/%E6%95%B0%E5%AD%A6/' style='font-size:1em'>数学</a>
+      </li><li>
+        <a href='/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/' style='font-size:1.0347826086956522em'>数据结构</a>
+      </li><li>
+        <a href='/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/' style='font-size:1.017391304347826em'>机器学习</a>
+      </li><li>
+        <a href='/categories/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/' style='font-size:1em'>正则表达式</a>
+      </li><li>
+        <a href='/categories/%E7%88%AC%E8%99%AB/' style='font-size:1.0956521739130434em'>爬虫</a>
+      </li><li>
+        <a href='/categories/%E7%AE%97%E6%B3%95/' style='font-size:1em'>算法</a>
+      </li><li>
+        <a href='/categories/%E7%AE%97%E6%B3%95%E9%A2%98/' style='font-size:1.0956521739130434em'>算法题</a>
+      </li><li>
+        <a href='/categories/%E7%B3%BB%E7%BB%9F/' style='font-size:1.017391304347826em'>系统</a>
+      </li><li>
+        <a href='/categories/%E7%BC%96%E7%A0%81%E8%BD%AC%E6%8D%A2/' style='font-size:1em'>编码转换</a>
+      </li><li>
+        <a href='/categories/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/' style='font-size:1em'>编程开发</a>
+      </li><li>
+        <a href='/categories/%E7%BC%96%E8%BE%91%E5%99%A8/' style='font-size:1em'>编辑器</a>
+      </li><li>
+        <a href='/categories/%E7%BD%91%E7%BB%9C/' style='font-size:1em'>网络</a>
+      </li><li>
+        <a href='/categories/%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/' style='font-size:1.1043478260869566em'>网络协议</a>
+      </li><li>
+        <a href='/categories/%E7%BF%BB%E5%A2%99/' style='font-size:1.017391304347826em'>翻墙</a>
+      </li><li>
+        <a href='/categories/%E8%8B%B1%E8%AF%AD/' style='font-size:1.1304347826086956em'>英语</a>
+      </li><li>
+        <a href='/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/' style='font-size:1em'>计算机基础</a>
+      </li><li>
+        <a href='/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/' style='font-size:1.0521739130434782em'>计算机网络</a>
+      </li><li>
+        <a href='/categories/%E8%AE%BA%E6%96%87/' style='font-size:1.0434782608695652em'>论文</a>
+      </li><li>
+        <a href='/categories/%E8%B0%83%E8%AF%95/' style='font-size:1em'>调试</a>
+      </li><li>
+        <a href='/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/' style='font-size:1.017391304347826em'>软件使用</a>
+      </li></ul>
+</div>
+
+
+</section>
+</div>
+
+  <div class='sidebar-overlay'></div>
+</div><div class='main'><nav id='main-menu' class='menu main-menu' aria-label='Main Menu'>
+  <div class='container'>
+    <a class='screen-reader-text' href='#content'>Skip to Content</a>
+
+<button id='sidebar-toggler' class='sidebar-toggler' aria-controls='sidebar'>
+  <span class='screen-reader-text'>Toggle Sidebar</span>
+  <span class='open'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="3" y1="12" x2="21" y2="12" />
+  <line x1="3" y1="6" x2="21" y2="6" />
+  <line x1="3" y1="18" x2="21" y2="18" />
+  
+</svg>
+</span>
+  <span class='close'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="18" y1="6" x2="6" y2="18" />
+  <line x1="6" y1="6" x2="18" y2="18" />
+  
+</svg>
+</span>
+</button>
+    <ul><li class='item'>
+        <a href='/'>Home</a>
+      </li><li class='item'>
+        <a href='/post/'>blogs</a>
+      </li><li class='item'>
+        <a href='/skill-content/dist/'>skills</a>
+      </li><li class='item'>
+        <a href='/tags/'>tags</a>
+      </li></ul>
+  </div>
+</nav><div class='header-widgets'>
+        <div class='container'>
+    
+    <style>.widget-breadcrumbs li:after{content:'\2f '}</style>
+  <section class='widget widget-breadcrumbs sep-after'>
+    <nav id='breadcrumbs'>
+      <ol><li><a href='/'>Home</a></li><li><a href='/post/'>blogs</a></li><li><span>HTTP首部</span></li></ol>
+    </nav>
+  </section></div>
+      </div>
+
+      <header id='header' class='header site-header'>
+        <div class='container sep-after'>
+          <div class='header-info'><p class='site-title title'>mannuan</p><p class='desc site-desc'>Rome was not built in a day.</p>
+          </div>
+        </div>
+      </header>
+
+      <main id='content'>
+
+
+<article lang='en' class='entry'>
+  <header class='header entry-header'>
+  <div class='container sep-after'>
+    <div class='header-info'>
+      <h1 class='title'>HTTP首部</h1>
+      
+
+    </div>
+    <div class='entry-meta'>
+  <span class='posted-on'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+  <line x1="16" y1="2" x2="16" y2="6"/>
+  <line x1="8" y1="2" x2="8" y2="6"/>
+  <line x1="3" y1="10" x2="21" y2="10"/>
+  
+</svg>
+<span class='screen-reader-text'>Posted on </span>
+  <time class='entry-date' datetime='2019-08-23T19:10:41&#43;08:00'>2019, Aug 23</time>
+</span>
+
+  <span class='byline'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M21,21V20c0-2.76-4-5-9-5s-9,2.24-9,5v1"/>
+  <path d="M16,6.37A4,4,0,1,1,12.63,3,4,4,0,0,1,16,6.37Z"/>
+  
+</svg>
+<span class='screen-reader-text'> by </span><a href='/authors/mannuan'>mannuan</a></span>
+  
+<span class='reading-time'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <circle cx="12" cy="12" r="10"/>
+  <polyline points="12 6 12 12 15 15"/>
+  
+</svg>
+One min read
+</span>
+
+
+</div>
+
+
+  </div>
+</header>
+
+  
+  
+<details class='container entry-toc'>
+  <summary class='title'>
+    <span>Table of Contents</span>
+  </summary>
+  <nav id="TableOfContents">
+<ul>
+<li><a href="#http首部">HTTP首部</a>
+<ul>
+<li><a href="#通用首部字段">通用首部字段</a></li>
+<li><a href="#请求首部字段">请求首部字段</a></li>
+<li><a href="#响应首部字段">响应首部字段</a></li>
+<li><a href="#实体首部字段">实体首部字段</a></li>
+</ul></li>
+</ul>
+</nav>
+</details>
+
+
+  <div class='container entry-content'>
+  
+
+<h1 id="http首部">HTTP首部</h1>
+
+<p>有 4 种类型的首部字段：通用首部字段、请求首部字段、响应首部字段和实体首部字段。<br></p>
+
+<blockquote>
+<p>各种首部字段及其含义如下（不需要全记，仅供查阅）：</p>
+</blockquote>
+
+<h2 id="通用首部字段">通用首部字段</h2>
+
+<table>
+<thead>
+<tr>
+<th align="center">首部字段名</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Cache-Control</td>
+<td align="center">控制缓存的行为</td>
+</tr>
+<tr>
+<td align="center">Connection</td>
+<td align="center">控制不再转发给代理的首部字段、管理持久连接</td>
+</tr>
+<tr>
+<td align="center">Date</td>
+<td align="center">创建报文的日期时间</td>
+</tr>
+<tr>
+<td align="center">Pragma</td>
+<td align="center">报文指令</td>
+</tr>
+<tr>
+<td align="center">Trailer</td>
+<td align="center">报文末端的首部一览</td>
+</tr>
+<tr>
+<td align="center">Transfer-Encoding</td>
+<td align="center">指定报文主体的传输编码方式</td>
+</tr>
+<tr>
+<td align="center">Upgrade</td>
+<td align="center">升级为其他协议</td>
+</tr>
+<tr>
+<td align="center">Via</td>
+<td align="center">代理服务器的相关信息</td>
+</tr>
+<tr>
+<td align="center">Warning</td>
+<td align="center">错误通知</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="请求首部字段">请求首部字段</h2>
+
+<table>
+<thead>
+<tr>
+<th align="center">首部字段名</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Accept</td>
+<td align="center">用户代理可处理的媒体类型</td>
+</tr>
+<tr>
+<td align="center">Accept-Charset</td>
+<td align="center">优先的字符集</td>
+</tr>
+<tr>
+<td align="center">Accept-Encoding</td>
+<td align="center">优先的内容编码</td>
+</tr>
+<tr>
+<td align="center">Accept-Language</td>
+<td align="center">优先的语言（自然语言）</td>
+</tr>
+<tr>
+<td align="center">Authorization</td>
+<td align="center">Web 认证信息</td>
+</tr>
+<tr>
+<td align="center">Expect</td>
+<td align="center">期待服务器的特定行为</td>
+</tr>
+<tr>
+<td align="center">From</td>
+<td align="center">用户的电子邮箱地址</td>
+</tr>
+<tr>
+<td align="center">Host</td>
+<td align="center">请求资源所在服务器</td>
+</tr>
+<tr>
+<td align="center">If-Match</td>
+<td align="center">比较实体标记（ETag）</td>
+</tr>
+<tr>
+<td align="center">If-Modified-Since</td>
+<td align="center">比较资源的更新时间</td>
+</tr>
+<tr>
+<td align="center">If-None-Match</td>
+<td align="center">比较实体标记（与 If-Match 相反）</td>
+</tr>
+<tr>
+<td align="center">If-Range</td>
+<td align="center">资源未更新时发送实体 Byte 的范围请求</td>
+</tr>
+<tr>
+<td align="center">If-Unmodified-Since</td>
+<td align="center">比较资源的更新时间（与 If-Modified-Since 相反）</td>
+</tr>
+<tr>
+<td align="center">Max-Forwards</td>
+<td align="center">最大传输逐跳数</td>
+</tr>
+<tr>
+<td align="center">Proxy-Authorization</td>
+<td align="center">代理服务器要求客户端的认证信息</td>
+</tr>
+<tr>
+<td align="center">Range</td>
+<td align="center">实体的字节范围请求</td>
+</tr>
+<tr>
+<td align="center">Referer</td>
+<td align="center">对请求中 URI 的原始获取方</td>
+</tr>
+<tr>
+<td align="center">TE</td>
+<td align="center">传输编码的优先级</td>
+</tr>
+<tr>
+<td align="center">User-Agent</td>
+<td align="center">HTTP 客户端程序的信息</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="响应首部字段">响应首部字段</h2>
+
+<table>
+<thead>
+<tr>
+<th align="center">首部字段名</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Accept-Ranges</td>
+<td align="center">是否接受字节范围请求</td>
+</tr>
+<tr>
+<td align="center">Age</td>
+<td align="center">推算资源创建经过时间</td>
+</tr>
+<tr>
+<td align="center">ETag</td>
+<td align="center">资源的匹配信息</td>
+</tr>
+<tr>
+<td align="center">Location</td>
+<td align="center">令客户端重定向至指定 URI</td>
+</tr>
+<tr>
+<td align="center">Proxy-Authenticate</td>
+<td align="center">代理服务器对客户端的认证信息</td>
+</tr>
+<tr>
+<td align="center">Retry-After</td>
+<td align="center">对再次发起请求的时机要求</td>
+</tr>
+<tr>
+<td align="center">Server</td>
+<td align="center">HTTP 服务器的安装信息</td>
+</tr>
+<tr>
+<td align="center">Vary</td>
+<td align="center">代理服务器缓存的管理信息</td>
+</tr>
+<tr>
+<td align="center">WWW-Authenticate</td>
+<td align="center">服务器对客户端的认证信息</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="实体首部字段">实体首部字段</h2>
+
+<table>
+<thead>
+<tr>
+<th align="center">首部字段名</th>
+<th align="center">说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">Allow</td>
+<td align="center">资源可支持的 HTTP 方法</td>
+</tr>
+<tr>
+<td align="center">Content-Encoding</td>
+<td align="center">实体主体适用的编码方式</td>
+</tr>
+<tr>
+<td align="center">Content-Language</td>
+<td align="center">实体主体的自然语言</td>
+</tr>
+<tr>
+<td align="center">Content-Length</td>
+<td align="center">实体主体的大小</td>
+</tr>
+<tr>
+<td align="center">Content-Location</td>
+<td align="center">替代对应资源的 URI</td>
+</tr>
+<tr>
+<td align="center">Content-MD5</td>
+<td align="center">实体主体的报文摘要</td>
+</tr>
+<tr>
+<td align="center">Content-Range</td>
+<td align="center">实体主体的位置范围</td>
+</tr>
+<tr>
+<td align="center">Content-Type</td>
+<td align="center">实体主体的媒体类型</td>
+</tr>
+<tr>
+<td align="center">Expires</td>
+<td align="center">实体主体过期的日期时间</td>
+</tr>
+<tr>
+<td align="center">Last-Modified</td>
+<td align="center">资源的最后修改日期时间</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+
+  
+<footer class='entry-footer'>
+  <div class='container sep-before'><div class='categories'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M22,19a2,2,0,0,1-2,2H4a2,2,0,0,1-2-2V5A2,2,0,0,1,4,3H9l2,3h9a2,2,0,0,1,2,2Z"/>
+  
+</svg>
+<span class='screen-reader-text'>Categories: </span><a class='category' href='/categories/%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/'>网络协议</a></div>
+<div class='tags'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M20.59,13.41l-7.17,7.17a2,2,0,0,1-2.83,0L2,12V2H12l8.59,8.59A2,2,0,0,1,20.59,13.41Z"/>
+  <line x1="7" y1="7" x2="7" y2="7"/>
+  
+</svg>
+<span class='screen-reader-text'>Tags: </span><a class='tag' href='/tags/http/'>HTTP</a></div>
+
+  </div>
+</footer>
+
+
+</article>
+
+<nav class='entry-nav'>
+  <div class='container'><div class='prev-entry sep-before'>
+      <a href='/post/20190823185325/'>
+        <span aria-hidden='true'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="20" y1="12" x2="4" y2="12"/>
+  <polyline points="10 18 4 12 10 6"/>
+  
+</svg>
+ Previous</span>
+        <span class='screen-reader-text'>Previous post: </span>HTTP方法</a>
+    </div><div class='next-entry sep-before'>
+      <a href='/post/20190823191245/'>
+        <span class='screen-reader-text'>Next post: </span>具体应用<span aria-hidden='true'>Next <svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="4" y1="12" x2="20" y2="12"/>
+  <polyline points="14 6 20 12 14 18"/>
+  
+</svg>
+</span>
+      </a>
+    </div></div>
+</nav>
+
+
+
+
+      </main>
+
+      <footer id='footer' class='footer'>
+        <div class='container sep-before'><section class='widget widget-social_menu sep-after'><nav aria-label='Social Menu'>
+    <ul><li>
+        <a href='https://github.com/mannuan' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Github account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='mailto:mannuandeyangguang@163.com' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Contact via Email</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+  <polyline points="22,6 12,13 2,6"/>
+  
+</svg>
+</a>
+      </li></ul>
+  </nav>
+</section><div class='copyright'>
+  <p> &copy; 2019 mannuan </p>
+</div>
+
+        </div>
+      </footer>
+
+    </div>
+  </div><script>window.__assets_js_src="/assets/js/"</script>
+
+<script src='/assets/js/main.67d669ac.js'></script><script src='/js/custom.js'></script>
+
+</body>
+
+</html>
+

@@ -19,23 +19,23 @@
     </a>
     <el-submenu
       v-for="cont in contents.filter(cont => cont['contents'].length)"
-      v-bind:key="cont['index']"
-      v-bind:index="cont['index']"
+      v-bind:key="cont['title']"
+      v-bind:index="cont['title']"
       class="nav-menu-item"
     >
       <template slot="title">{{ cont["title"] }}</template>
       <el-menu-item
         v-for="subcont in cont['contents']"
-        v-bind:key="cont['index'] + '-' + subcont['index']"
-        v-bind:index="cont['index'] + '-' + subcont['index']"
+        v-bind:key="cont['title'] + '-' + subcont['title']"
+        v-bind:index="cont['title'] + '-' + subcont['title']"
       >
         {{ subcont["title"] }}
       </el-menu-item>
     </el-submenu>
     <el-menu-item
       v-for="cont in contents.filter(cont => !cont['contents'].length)"
-      v-bind:key="cont['index']"
-      v-bind:index="cont['index']"
+      v-bind:key="cont['title']"
+      v-bind:index="cont['title']"
       class="nav-menu-item"
     >
       {{ cont["title"] }}

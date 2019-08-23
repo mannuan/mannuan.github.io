@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>计算机网络 on mannuan</title>
+    <link>https://mannuan.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</link>
+    <description>Recent content in 计算机网络 on mannuan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 22 Aug 2019 10:59:14 +0800</lastBuildDate>
+    
+	<atom:link href="https://mannuan.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>概述</title>
+      <link>https://mannuan.github.io/post/20190822105913/</link>
+      <pubDate>Thu, 22 Aug 2019 10:59:14 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190822105913/</guid>
+      <description> 概述 网络的网络 网络把主机连接起来，而互联网是把多种不同的网络连接起来，因此互联网是网络的网络。
+ISP </description>
+    </item>
+    
+  </channel>
+</rss>

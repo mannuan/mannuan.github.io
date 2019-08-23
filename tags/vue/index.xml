@@ -5,10 +5,27 @@
     <link>https://mannuan.github.io/tags/vue/</link>
     <description>Recent content in vue on mannuan</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 14 Aug 2019 14:20:03 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 23 Aug 2019 22:04:35 +0800</lastBuildDate>
     
 	<atom:link href="https://mannuan.github.io/tags/vue/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>生命周期</title>
+      <link>https://mannuan.github.io/post/20190823220435/</link>
+      <pubDate>Fri, 23 Aug 2019 22:04:35 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190823220435/</guid>
+      <description>生命周期 图解 实例创建过程 创建一个实例 new Vue()  init(初始化)  beforeCreate()
+injections和reactivity created()
+   在beforeCreate的时候不可以修改data数据，最早在created中添加一些行为
+ 在created完成以后，它会去判断instance(实例)中是否含有&amp;rdquo;el&amp;rdquo;option(选项)，如果没有的话，它会调用vm.$mount(el)这个方法，然后执行下一步；如果有的话，直接进入下一步。接下来他会判断是否含有“template”这个选项，如果有的话，他会把template解析成一个render function, 这是一个template编译的过程，结果是解析成功了render函数：
+render (h) { return h(&amp;#39;div&amp;#39;, {}, this.text) }   render函数中的h就是vue里面的createElement方法，return返回一个createElement方法，其中要传3个参数，第一个参数就是创建的div标签；第二个参数传了一个对象，就是组件上的props对象，或者是事件之类的东西或是事件之类的东西。第三个参数就是div标签里面的内容，就是data中的text。
+ 使用render函数的结果和我们之前使用template解析出来的结果是一样的。render函数是发生在beforeMount和mounted之间的。也就是说在beforeMount的时候，$el还是我们之前写的html中的节点，然后到mounted的时候，它就把渲染出来的内容挂载到了DOM节点上。
+在使用.vue文件开发的过程中，我们写的template模板，在经过了vue-loader的处理之后，就变成了render function, 最终放到了vue-loader解析过的文件里面。这样的好处就是：我们在在页面上执行vue代码的时候，效率高。
+beforeMount在有了render function的时候才会执行，当执行完render function之后，就会调用mounted这个钩子，在mounted挂载完毕以后，这个实力算是初步创建好了。
+后面的钩子函数都是需要外部的触发才会执行。比如数据的变化，会调用beforeUpdate,然后进过Virtual DOM，最后updated更新完毕。当组件</description>
+    </item>
     
     <item>
       <title>vue开发环境和生产环境自动切换baseUrl</title>
