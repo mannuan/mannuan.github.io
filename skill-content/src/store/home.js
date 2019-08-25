@@ -38,7 +38,7 @@ const home = {
         if (e1["contents"].length > 0) {
           navigation_content_array[i1]["contents"] = [];
           // 遍历生成二级目录
-          e1["contents"].forEach((e2, i2) => {
+          e1["contents"].forEach(e2 => {
             if (e2["level"] === undefined) {
               navigation_content_array[i1]["contents"].push({
                 title: e2["title"]
@@ -52,8 +52,7 @@ const home = {
                 e2["contents"];
             } else {
               // 出现这个的判断的原因是设置为一级目录
-              sidebar_content_object[e1["title"]] =
-                e1["contents"][0]["contents"];
+              sidebar_content_object[e1["title"]] = e1["contents"];
             }
           });
         } else {

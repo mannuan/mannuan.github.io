@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>常用对照表 on mannuan</title>
+    <link>https://mannuan.github.io/tags/%E5%B8%B8%E7%94%A8%E5%AF%B9%E7%85%A7%E8%A1%A8/</link>
+    <description>Recent content in 常用对照表 on mannuan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 25 Aug 2019 14:04:50 +0800</lastBuildDate>
+    
+	<atom:link href="https://mannuan.github.io/tags/%E5%B8%B8%E7%94%A8%E5%AF%B9%E7%85%A7%E8%A1%A8/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>ASCII码对照表</title>
+      <link>https://mannuan.github.io/post/20190825140450/</link>
+      <pubDate>Sun, 25 Aug 2019 14:04:50 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190825140450/</guid>
+      <description>ASCII码对照表  ASCII值 控制字符 ASCII值 控制字符 ASCII值 控制字符 ASCII值 控制字符   0 NUT 32 (space) 64 @ 96 、   1 SOH 33 ! 65 A 97 a   2 STX 34 &#34; 66 B 98 b   3 ETX 35 # 67 C 99 c   4 EOT 36 $ 68 D 100 d   5 ENQ 37 % 69 E 101 e   6 ACK 38 &amp;amp; 70 F 102 f   7 BEL 39 , 71 G 103 g   8 BS 40 ( 72 H 104 h   9 HT 41 ) 73 I 105 i   10 LF 42 * 74 J 106 j   11 VT 43 + 75 K 107 k   12 FF 44 , 76 L 108 l   13 CR 45 - 77 M 109 m   14 SO 46 .</description>
+    </item>
+    
+  </channel>
+</rss>

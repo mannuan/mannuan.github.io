@@ -5,10 +5,41 @@
     <link>https://mannuan.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/</link>
     <description>Recent content in 前端开发 on mannuan</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 23 Aug 2019 22:04:35 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 24 Aug 2019 17:40:52 +0800</lastBuildDate>
     
 	<atom:link href="https://mannuan.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>有赞一面凉面</title>
+      <link>https://mannuan.github.io/post/20190824174052/</link>
+      <pubDate>Sat, 24 Aug 2019 17:40:52 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190824174052/</guid>
+      <description>有赞一面凉面  首先上来就问了我对上午的宣讲会，说说对于有赞印象。
+ 我说听好的，有赞挺有意思的  然后，做了一个自我介绍，说了我现在在哪里上学，最近在做一个个人博客的项目
+ 这里我就开始疯狂扒拉我的项目： 我首先说了我前期使用hugo来搭建我的博客； 然后，之后我为了更好的呈现我的博客，我使用vue又重新写了一下我的博客导航页面 对于这当中的难点，我一一说了出来 首先，我使用vue-router来实现导航栏下面的页面的切换，然后，之后我改用vuex来实现页面的改变  事件流
+ 设计模式(单例模式，没有了解过)
+ 继承
+ css盒模型
+ 元素如何垂直居中
+ linux 权限管理
+ http协议
+ 7层网络模型
+ 从输入URL到获得数据的流程
+ https的原理（具体就是描述https的第三方代理机构ca）
+ 线程和进程的区别
+ javascript是单线程的吗
+ 什么是事件流的代理
+ this是什么
+ 0.1+0.2!=0.3为什么
+ 闭包
+ 为什么存在跨域
+ 快速排序(这个没写出来，写了一半中间有些细节忘了，要不然就成了，太可惜了，成了个备胎)
+ 链表反转（这个时间不够直接就没问）
+ 在页面中根据数组渲染页面，然后点击每个数组的每个内容输出&amp;rdquo;hello world&amp;rdquo;（写了，但是看面试官的表情很惊讶的意思？，好像我写错了？）
+  总结 算法思想基本都会，但就是写不出来 设计模式需要加强一下</description>
+    </item>
     
     <item>
       <title>生命周期</title>

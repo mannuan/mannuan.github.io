@@ -1,34 +1,36 @@
 <template>
-<div style="height:100%; width:100%;">
-<el-container style="height: 100%">
-  <el-header class="el-header">
-    <navBar 
-      :contents="contents"
-      :active_index="active_index"
-      :is_burger_active="is_burger_active"
-      ></navBar>
-  </el-header>
-  <el-container style="height: 100%">
-    <el-aside class="el-aside" style="height: 100%">
-      <contentTree
-          :contents="contents2"
-          :default_expand_all="true"
-          :accordion="false"
-        >
-      </contentTree>
-    </el-aside>
-    <!-- 使移动端可以滚动 -->
-    <el-main style="height: 100%; padding: 0px; -webkit-overflow-scrolling: touch;">
-        <iframe
-          ref="iframe"
-          :src="blog_url"
-          width="100%"
-          height="100%"
-          scrolling="no"
-          frameBorder="0"
+  <div style="height:100%; width:100%;">
+    <el-container style="height: 100%">
+      <el-header class="el-header">
+        <navBar
+          :contents="contents"
+          :active_index="active_index"
+          :is_burger_active="is_burger_active"
+        ></navBar>
+      </el-header>
+      <el-container style="height: 100%">
+        <el-aside class="el-aside" style="height: 100%">
+          <contentTree
+            :contents="contents2"
+            :default_expand_all="true"
+            :accordion="false"
           >
-        </iframe>
-        <!-- <iframe
+          </contentTree>
+        </el-aside>
+        <!-- 使移动端可以滚动 -->
+        <el-main
+          style="height: 100%; padding: 0px; -webkit-overflow-scrolling: touch;"
+        >
+          <iframe
+            ref="iframe"
+            :src="blog_url"
+            width="100%"
+            height="100%"
+            scrolling="no"
+            frameBorder="0"
+          >
+          </iframe>
+          <!-- <iframe
           ref="iframe"
           src="/mock/iframe.html"
           width="100%"
@@ -37,19 +39,18 @@
           frameBorder="0"
           >
         </iframe> -->
-    </el-main>
-  </el-container>
-</el-container>
-<sideContainer
-  :is_sidebar_open="is_sidebar_open">
-  <contentTree
-    :contents="contents1"
-    :default_expand_all="false"
-    :accordion="true"
-  >
-  </contentTree>
-</sideContainer>
-</div>
+        </el-main>
+      </el-container>
+    </el-container>
+    <sideContainer :is_sidebar_open="is_sidebar_open">
+      <contentTree
+        :contents="contents1"
+        :default_expand_all="false"
+        :accordion="true"
+      >
+      </contentTree>
+    </sideContainer>
+  </div>
 </template>
 
 <script>
@@ -94,7 +95,7 @@ export default {
     // 隐藏的侧边栏的数据
     contents1: function() {
       return this.$store.state.home.contents;
-    },
+    }
   },
   created() {
     request({
@@ -124,7 +125,7 @@ export default {
     // iframe在挂载之前才创建好, 把iframe句柄存放在store中
     this.$store.commit("setIframeInstance", this.$refs.iframe);
   }
-}
+};
 </script>
 
 <style lang="stylus" scoped>

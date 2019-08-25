@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>开发文档 on mannuan</title>
+    <link>https://mannuan.github.io/categories/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3/</link>
+    <description>Recent content in 开发文档 on mannuan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 25 Aug 2019 14:24:23 +0800</lastBuildDate>
+    
+	<atom:link href="https://mannuan.github.io/categories/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>markdown书写规范</title>
+      <link>https://mannuan.github.io/post/20190825142423/</link>
+      <pubDate>Sun, 25 Aug 2019 14:24:23 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190825142423/</guid>
+      <description> markdown书写规范 举例如下 --- date: &amp;#34;2019-08-25T14:24:23+08:00&amp;#34; title: &amp;#34;markdown书写规范&amp;#34; authors: [mannuan] toc: true 显示目录 categories: - 开发文档 draft: true --- # markdown开发文档</description>
+    </item>
+    
+  </channel>
+</rss>

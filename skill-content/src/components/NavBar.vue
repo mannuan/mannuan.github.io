@@ -47,7 +47,6 @@
 </template>
 
 <script>
-import { mapMutations } from "vuex";
 import burger from "@/components/Burger.vue";
 
 export default {

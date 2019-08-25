@@ -5,10 +5,37 @@
     <link>https://mannuan.github.io/categories/%E7%AE%97%E6%B3%95/</link>
     <description>Recent content in 算法 on mannuan</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 03 Jun 2019 21:57:21 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 24 Aug 2019 23:04:03 +0800</lastBuildDate>
     
 	<atom:link href="https://mannuan.github.io/categories/%E7%AE%97%E6%B3%95/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>反转链表</title>
+      <link>https://mannuan.github.io/post/20190824230403/</link>
+      <pubDate>Sat, 24 Aug 2019 23:04:03 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190824230403/</guid>
+      <description> 反转链表 </description>
+    </item>
+    
+    <item>
+      <title>大数相加</title>
+      <link>https://mannuan.github.io/post/20190824230046/</link>
+      <pubDate>Sat, 24 Aug 2019 23:00:46 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190824230046/</guid>
+      <description> 大数相加 </description>
+    </item>
+    
+    <item>
+      <title>快速排序</title>
+      <link>https://mannuan.github.io/post/20190824224818/</link>
+      <pubDate>Sat, 24 Aug 2019 22:48:19 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190824224818/</guid>
+      <description> 快速排序 function sortQuick(arr, reverse=False){ if(arr.length) &amp;lt; 2: return _sort_between(arr, 0, len(arr)-1, reverse); } function _sort_between(arr, low, high, reverse){ let stack = [[low, high]]; while stack: low, high = stack.pop() pivlot = Math.random() } </description>
+    </item>
     
     <item>
       <title>冒泡排序、选择排序和插入排序的比较</title>

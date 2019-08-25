@@ -1,42 +1,32 @@
-import java.util.HashSet;
 import java.util.Scanner;
-
-public class Test {
+public class Test{
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        String sendName = scan.nextLine();
-        int num = Integer.valueOf(scan.nextLine());
-        String[] groupNames = new String[num];
-        HashSet[] group = new HashSet[num];
-        for(int i = 0; i < num; i++){
-            groupNames[i] = scan.nextLine();
-            String[] names = groupNames[i].split(",");
-            group[i] = new HashSet<String>();
-            for (String name : names) {
-                group[i].add(name);
+        String n = scan.nextLine();
+        int N = Integer.valueOf(n);
+        String s = scan.nextLine();
+        int count = 0;
+        int max = 0;
+        for(int i=0;i<N;i++){
+            char c = s.charAt(i);
+            if(65<=c&&c<=90){
+                if(i!=N-1){
+                    count ++;
+                }else{
+                    count ++;
+                    max += count+1;
+                }
+            }else{
+                if(count >= 2){
+                    max += count + 3;
+                }else if(count == 1){
+                    max += 3;
+                }else{
+                    max += 1;
+                }
+                count = 0;
             }
         }
-
-        HashSet<String> res = new HashSet<>();
-        res.add(sendName);
-        for (int k = 1; k <=2; k ++){
-            for (int i = 0; i < num; i++){
-                boolean isCur = false;
-                for (String name : res) {
-                    if(group[i].contains(name)){
-                        isCur = true;
-                        break;
-                    }
-                }
-
-                if(isCur){
-                    res.addAll(group[i]);
-                }
-            }
-        }
-
-        System.out.println(res.size());
-
-
+        System.out.println(max);
     }
 }
