@@ -5,10 +5,55 @@
     <link>https://mannuan.github.io/categories/</link>
     <description>Recent content in Categories on mannuan</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 25 Aug 2019 14:24:23 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 28 Aug 2019 13:02:28 +0800</lastBuildDate>
     
 	<atom:link href="https://mannuan.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>前端开发</title>
+      <link>https://mannuan.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/</link>
+      <pubDate>Wed, 28 Aug 2019 13:02:28 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>算法</title>
+      <link>https://mannuan.github.io/categories/%E7%AE%97%E6%B3%95/</link>
+      <pubDate>Tue, 27 Aug 2019 21:27:58 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/categories/%E7%AE%97%E6%B3%95/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>后端开发</title>
+      <link>https://mannuan.github.io/categories/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/</link>
+      <pubDate>Tue, 27 Aug 2019 14:38:41 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/categories/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>数据库</title>
+      <link>https://mannuan.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/</link>
+      <pubDate>Tue, 27 Aug 2019 11:07:33 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>计算机基础</title>
+      <link>https://mannuan.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/</link>
+      <pubDate>Mon, 26 Aug 2019 22:46:19 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>开发文档</title>
@@ -16,33 +61,6 @@
       <pubDate>Sun, 25 Aug 2019 14:24:23 +0800</pubDate>
       
       <guid>https://mannuan.github.io/categories/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>计算机基础</title>
-      <link>https://mannuan.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/</link>
-      <pubDate>Sun, 25 Aug 2019 14:04:50 +0800</pubDate>
-      
-      <guid>https://mannuan.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>算法</title>
-      <link>https://mannuan.github.io/categories/%E7%AE%97%E6%B3%95/</link>
-      <pubDate>Sat, 24 Aug 2019 23:04:03 +0800</pubDate>
-      
-      <guid>https://mannuan.github.io/categories/%E7%AE%97%E6%B3%95/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>前端开发</title>
-      <link>https://mannuan.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/</link>
-      <pubDate>Sat, 24 Aug 2019 17:40:52 +0800</pubDate>
-      
-      <guid>https://mannuan.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/</guid>
       <description></description>
     </item>
     

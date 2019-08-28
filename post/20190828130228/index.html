@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang='en'><head>
+  <meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='description' content='参考链接
+promise Promise的立即执行性 var p = new Promise(function(resolve, reject){ console.log(&#34;create a promise&#34;); resolve(&#34;success&#34;); }); console.log(&#34;after new Promise&#34;); p.then(function(value){ console.log(value); });  控制台输出 &#34;create a promise&#34; &#34;after new Promise&#34; &#34;success&#34;  总结 Promise对象表示未来某个将要发生的事件，但在创建（new）Promise时，作为Promise参数传入的函数是会被立即执行的，只是其中执行的代码可以是异步代码。有些同学会认为，当Promise对象调用then方法时，Promise接收的函数才会执行，这是错误的。因此，代码中&rdquo;create a promise&rdquo;先于&rdquo;after new Promise&rdquo;输出。
+Promise 三种状态 var p1 = new Promise(function(resolve,reject){ resolve(1); }); var p2 = new Promise(function(resolve,reject){ setTimeout(function(){ resolve(2); }, 500); }); var p3 = new Promise(function(resolve,reject){ setTimeout(function(){ reject(3); }, 500); }); console.log(p1); console.log(p2); console.log(p3); setTimeout(function(){ console.'>
+<meta name='theme-color' content='#FFFFFF'>
+
+<meta property='og:title' content='promise • mannuan'>
+<meta property='og:description' content='参考链接
+promise Promise的立即执行性 var p = new Promise(function(resolve, reject){ console.log(&#34;create a promise&#34;); resolve(&#34;success&#34;); }); console.log(&#34;after new Promise&#34;); p.then(function(value){ console.log(value); });  控制台输出 &#34;create a promise&#34; &#34;after new Promise&#34; &#34;success&#34;  总结 Promise对象表示未来某个将要发生的事件，但在创建（new）Promise时，作为Promise参数传入的函数是会被立即执行的，只是其中执行的代码可以是异步代码。有些同学会认为，当Promise对象调用then方法时，Promise接收的函数才会执行，这是错误的。因此，代码中&rdquo;create a promise&rdquo;先于&rdquo;after new Promise&rdquo;输出。
+Promise 三种状态 var p1 = new Promise(function(resolve,reject){ resolve(1); }); var p2 = new Promise(function(resolve,reject){ setTimeout(function(){ resolve(2); }, 500); }); var p3 = new Promise(function(resolve,reject){ setTimeout(function(){ reject(3); }, 500); }); console.log(p1); console.log(p2); console.log(p3); setTimeout(function(){ console.'>
+<meta property='og:url' content='https://mannuan.github.io/post/20190828130228/'>
+<meta property='og:site_name' content='mannuan'>
+<meta property='og:type' content='article'><meta property='og:image' content='https://www.gravatar.com/avatar/8bacfd69855171c6f53247456732f68a?s=256'><meta property='article:section' content='post'><meta property='article:tag' content='javascript'><meta property='article:published_time' content='2019-08-28T13:02:28&#43;08:00'/><meta property='article:modified_time' content='2019-08-28T13:02:28&#43;08:00'/><meta name='twitter:card' content='summary'>
+
+<meta name="generator" content="Hugo 0.55.6" />
+
+  <title>promise • mannuan</title>
+  <link rel='canonical' href='https://mannuan.github.io/post/20190828130228/'>
+  
+  
+  <link rel='icon' href='/favicon.ico'>
+<link rel='stylesheet' href='/assets/css/main.6a060eb7.css'><link rel='stylesheet' href='/css/custom.css'><style>
+:root{--color-accent:#FFFFFF;}
+</style>
+
+  
+
+</head>
+<body class='page type-post has-sidebar'>
+
+  <div class='site'><div id='sidebar' class='sidebar'>
+  <a class='screen-reader-text' href='#main-menu'>Skip to Main Menu</a>
+
+  <div class='container'><section class='widget widget-about sep-after'>
+  <header>
+    
+    <div class='logo'>
+      <a href='/'>
+        <img src='/images/%e6%88%91%e7%9a%84%e5%a4%b4%e5%83%8f.jpeg'>
+      </a>
+    </div>
+    
+    <h2 class='title site-title '>
+      <a href='/'>
+      mannuan
+      </a>
+    </h2>
+    <div class='desc'>
+    Rome was not built in a day.
+    </div>
+  </header>
+
+</section>
+<section class='widget widget-search sep-after'>
+  <header>
+    <h4 class='title widget-title'>Search</h4>
+  </header>
+
+  <form action='/search' id='search-form' class='search-form'>
+    <label>
+      <span class='screen-reader-text'>Search</span>
+      <input id='search-term' class='search-term' type='search' name='q' placeholder='Search&hellip;'>
+    </label></form>
+
+</section>
+<section class='widget widget-sidebar_menu sep-after'><nav id='sidebar-menu' class='menu sidebar-menu' aria-label='Sidebar Menu'>
+    <div class='container'>
+      <ul><li class='item'>
+  <a href='https://github.com/mannuan'>Github</a></li><li class='item'>
+  <a href='/skill-content/dist/'>skills</a></li><li class='item has-children'>
+  <a href=''>网络实验</a><button class='sub-menu-toggler'>
+    <span class='screen-reader-text'>expand sub menu</span>
+    <span class='sign'></span>
+  </button>
+
+  <ul class='sub-menu'><li class='item'>
+  <a href='/post/20190701101121/'>实验九</a></li><li class='item'>
+  <a href='/post/20190701090625/'>实验八</a></li><li class='item'>
+  <a href='/post/20190701105039/'>实验六</a></li><li class='item'>
+  <a href='/post/20190701172233/'>实验十</a></li><li class='item'>
+  <a href='/post/20190701182805/'>实验十一</a></li><li class='item'>
+  <a href='/post/20190701194642/'>实验十三</a></li><li class='item'>
+  <a href='/post/20190701192111/'>实验十二</a></li></ul></li><li class='item has-children'>
+  <a href=''>面经</a><button class='sub-menu-toggler'>
+    <span class='screen-reader-text'>expand sub menu</span>
+    <span class='sign'></span>
+  </button>
+
+  <ul class='sub-menu'><li class='item'>
+  <a href='/post/20190813191500/'>网易严选1</a></li><li class='item'>
+  <a href='/post/20190813190824/'>网易严选2</a></li></ul></li></ul>
+    </div>
+  </nav>
+
+</section><section class='widget widget-taxonomy_cloud sep-after'>
+  <header>
+    <h4 class='title widget-title'>Categories</h4>
+  </header>
+
+  <div class='container list-container'>
+  <ul class='list taxonomy-cloud'><li>
+        <a href='/categories/features/' style='font-size:1.1355932203389831em'>features</a>
+      </li><li>
+        <a href='/categories/ide/' style='font-size:1.0254237288135593em'>ide</a>
+      </li><li>
+        <a href='/categories/jupyter/' style='font-size:1.0169491525423728em'>jupyter</a>
+      </li><li>
+        <a href='/categories/linux/' style='font-size:1.1440677966101696em'>linux</a>
+      </li><li>
+        <a href='/categories/mac/' style='font-size:1.1440677966101696em'>mac</a>
+      </li><li>
+        <a href='/categories/mongodb/' style='font-size:1.0338983050847457em'>mongodb</a>
+      </li><li>
+        <a href='/categories/others/' style='font-size:1em'>others</a>
+      </li><li>
+        <a href='/categories/pip/' style='font-size:1em'>pip</a>
+      </li><li>
+        <a href='/categories/python/' style='font-size:1.0508474576271187em'>python</a>
+      </li><li>
+        <a href='/categories/shell/' style='font-size:1em'>shell</a>
+      </li><li>
+        <a href='/categories/tutorial/' style='font-size:1.0084745762711864em'>Tutorial</a>
+      </li><li>
+        <a href='/categories/vscode/' style='font-size:1.0084745762711864em'>vscode</a>
+      </li><li>
+        <a href='/categories/%E4%BD%9C%E8%80%85/' style='font-size:1em'>作者</a>
+      </li><li>
+        <a href='/categories/%E5%86%99%E4%BD%9C/' style='font-size:1.0084745762711864em'>写作</a>
+      </li><li>
+        <a href='/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/' style='font-size:2em'>前端开发</a>
+      </li><li>
+        <a href='/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/' style='font-size:1em'>博客搭建</a>
+      </li><li>
+        <a href='/categories/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/' style='font-size:1.0169491525423728em'>后端开发</a>
+      </li><li>
+        <a href='/categories/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/' style='font-size:1.0084745762711864em'>学习方法</a>
+      </li><li>
+        <a href='/categories/%E5%B7%A5%E5%85%B7/' style='font-size:1.0169491525423728em'>工具</a>
+      </li><li>
+        <a href='/categories/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3/' style='font-size:1em'>开发文档</a>
+      </li><li>
+        <a href='/categories/%E6%95%B0%E5%AD%A6/' style='font-size:1em'>数学</a>
+      </li><li>
+        <a href='/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/' style='font-size:1em'>数据库</a>
+      </li><li>
+        <a href='/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/' style='font-size:1.0338983050847457em'>数据结构</a>
+      </li><li>
+        <a href='/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/' style='font-size:1.0169491525423728em'>机器学习</a>
+      </li><li>
+        <a href='/categories/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/' style='font-size:1em'>正则表达式</a>
+      </li><li>
+        <a href='/categories/%E7%88%AC%E8%99%AB/' style='font-size:1.0932203389830508em'>爬虫</a>
+      </li><li>
+        <a href='/categories/%E7%AE%97%E6%B3%95/' style='font-size:1.076271186440678em'>算法</a>
+      </li><li>
+        <a href='/categories/%E7%AE%97%E6%B3%95%E9%A2%98/' style='font-size:1.0932203389830508em'>算法题</a>
+      </li><li>
+        <a href='/categories/%E7%B3%BB%E7%BB%9F/' style='font-size:1.0169491525423728em'>系统</a>
+      </li><li>
+        <a href='/categories/%E7%BC%96%E7%A0%81%E8%BD%AC%E6%8D%A2/' style='font-size:1em'>编码转换</a>
+      </li><li>
+        <a href='/categories/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/' style='font-size:1em'>编程开发</a>
+      </li><li>
+        <a href='/categories/%E7%BC%96%E8%BE%91%E5%99%A8/' style='font-size:1em'>编辑器</a>
+      </li><li>
+        <a href='/categories/%E7%BD%91%E7%BB%9C/' style='font-size:1em'>网络</a>
+      </li><li>
+        <a href='/categories/%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/' style='font-size:1.1016949152542372em'>网络协议</a>
+      </li><li>
+        <a href='/categories/%E7%BF%BB%E5%A2%99/' style='font-size:1.0169491525423728em'>翻墙</a>
+      </li><li>
+        <a href='/categories/%E8%8B%B1%E8%AF%AD/' style='font-size:1.1271186440677967em'>英语</a>
+      </li><li>
+        <a href='/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/' style='font-size:1.0169491525423728em'>计算机基础</a>
+      </li><li>
+        <a href='/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/' style='font-size:1.0508474576271187em'>计算机网络</a>
+      </li><li>
+        <a href='/categories/%E8%AE%BA%E6%96%87/' style='font-size:1.042372881355932em'>论文</a>
+      </li><li>
+        <a href='/categories/%E8%B0%83%E8%AF%95/' style='font-size:1em'>调试</a>
+      </li><li>
+        <a href='/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/' style='font-size:1.0169491525423728em'>软件使用</a>
+      </li></ul>
+</div>
+
+
+</section>
+</div>
+
+  <div class='sidebar-overlay'></div>
+</div><div class='main'><nav id='main-menu' class='menu main-menu' aria-label='Main Menu'>
+  <div class='container'>
+    <a class='screen-reader-text' href='#content'>Skip to Content</a>
+
+<button id='sidebar-toggler' class='sidebar-toggler' aria-controls='sidebar'>
+  <span class='screen-reader-text'>Toggle Sidebar</span>
+  <span class='open'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="3" y1="12" x2="21" y2="12" />
+  <line x1="3" y1="6" x2="21" y2="6" />
+  <line x1="3" y1="18" x2="21" y2="18" />
+  
+</svg>
+</span>
+  <span class='close'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="18" y1="6" x2="6" y2="18" />
+  <line x1="6" y1="6" x2="18" y2="18" />
+  
+</svg>
+</span>
+</button>
+    <ul><li class='item'>
+        <a href='/'>Home</a>
+      </li><li class='item'>
+        <a href='/post/'>blogs</a>
+      </li><li class='item'>
+        <a href='/skill-content/dist/'>skills</a>
+      </li><li class='item'>
+        <a href='/tags/'>tags</a>
+      </li></ul>
+  </div>
+</nav><div class='header-widgets'>
+        <div class='container'>
+    
+    <style>.widget-breadcrumbs li:after{content:'\2f '}</style>
+  <section class='widget widget-breadcrumbs sep-after'>
+    <nav id='breadcrumbs'>
+      <ol><li><a href='/'>Home</a></li><li><a href='/post/'>blogs</a></li><li><span>promise</span></li></ol>
+    </nav>
+  </section></div>
+      </div>
+
+      <header id='header' class='header site-header'>
+        <div class='container sep-after'>
+          <div class='header-info'><p class='site-title title'>mannuan</p><p class='desc site-desc'>Rome was not built in a day.</p>
+          </div>
+        </div>
+      </header>
+
+      <main id='content'>
+
+
+<article lang='en' class='entry'>
+  <header class='header entry-header'>
+  <div class='container sep-after'>
+    <div class='header-info'>
+      <h1 class='title'>promise</h1>
+      
+
+    </div>
+    <div class='entry-meta'>
+  <span class='posted-on'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+  <line x1="16" y1="2" x2="16" y2="6"/>
+  <line x1="8" y1="2" x2="8" y2="6"/>
+  <line x1="3" y1="10" x2="21" y2="10"/>
+  
+</svg>
+<span class='screen-reader-text'>Posted on </span>
+  <time class='entry-date' datetime='2019-08-28T13:02:28&#43;08:00'>2019, Aug 28</time>
+</span>
+
+  <span class='byline'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M21,21V20c0-2.76-4-5-9-5s-9,2.24-9,5v1"/>
+  <path d="M16,6.37A4,4,0,1,1,12.63,3,4,4,0,0,1,16,6.37Z"/>
+  
+</svg>
+<span class='screen-reader-text'> by </span><a href='/authors/mannuan'>mannuan</a></span>
+  
+<span class='reading-time'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <circle cx="12" cy="12" r="10"/>
+  <polyline points="12 6 12 12 15 15"/>
+  
+</svg>
+3 mins read
+</span>
+
+
+</div>
+
+
+  </div>
+</header>
+
+  
+  
+<details class='container entry-toc'>
+  <summary class='title'>
+    <span>Table of Contents</span>
+  </summary>
+  <nav id="TableOfContents">
+<ul>
+<li><a href="#promise">promise</a>
+<ul>
+<li><a href="#promise的立即执行性">Promise的立即执行性</a>
+<ul>
+<li><a href="#控制台输出">控制台输出</a></li>
+<li><a href="#总结">总结</a></li>
+</ul></li>
+<li><a href="#promise-三种状态">Promise 三种状态</a>
+<ul>
+<li><a href="#控制台输出-1">控制台输出</a></li>
+<li><a href="#总结-1">总结</a></li>
+</ul></li>
+<li><a href="#promise状态的不可逆性">Promise状态的不可逆性</a>
+<ul>
+<li><a href="#控制台输出-2">控制台输出</a></li>
+<li><a href="#总结-2">总结</a></li>
+</ul></li>
+<li><a href="#链式调用">链式调用</a>
+<ul>
+<li><a href="#控制台输出-3">控制台输出</a></li>
+<li><a href="#总结-3">总结</a></li>
+</ul></li>
+<li><a href="#promise-then-回调异步性">Promise then() 回调异步性</a>
+<ul>
+<li><a href="#控制台输出-4">控制台输出</a></li>
+<li><a href="#总结-4">总结</a></li>
+</ul></li>
+<li><a href="#promise-中的异常">Promise 中的异常</a>
+<ul>
+<li><a href="#控制台输出-5">控制台输出</a></li>
+<li><a href="#总结-5">总结</a></li>
+</ul></li>
+<li><a href="#promise-resolve">Promise.resolve()</a></li>
+</ul></li>
+</ul>
+</nav>
+</details>
+
+
+  <div class='container entry-content'>
+  
+
+<p><a href="https://juejin.im/post/597724c26fb9a06bb75260e8" target="_blank">参考链接</a></p>
+
+<h1 id="promise">promise</h1>
+
+<h2 id="promise的立即执行性">Promise的立即执行性</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">p</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Promise(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">resolve</span>, <span style="color:#a6e22e">reject</span>){
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;create a promise&#34;</span>);
+  <span style="color:#a6e22e">resolve</span>(<span style="color:#e6db74">&#34;success&#34;</span>);
+});
+
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;after new Promise&#34;</span>);
+
+<span style="color:#a6e22e">p</span>.<span style="color:#a6e22e">then</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">value</span>){
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">value</span>);
+});
+</code></pre></div>
+<h3 id="控制台输出">控制台输出</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#e6db74">&#34;create a promise&#34;</span>
+<span style="color:#e6db74">&#34;after new Promise&#34;</span>
+<span style="color:#e6db74">&#34;success&#34;</span>
+</code></pre></div>
+<h3 id="总结">总结</h3>
+
+<p>Promise对象表示未来某个将要发生的事件，但在创建（new）Promise时，作为Promise参数传入的函数是会被立即执行的，只是其中执行的代码可以是异步代码。有些同学会认为，当Promise对象调用then方法时，Promise接收的函数才会执行，这是错误的。因此，代码中&rdquo;create a promise&rdquo;先于&rdquo;after new Promise&rdquo;输出。</p>
+
+<h2 id="promise-三种状态">Promise 三种状态</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">p1</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Promise(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">resolve</span>,<span style="color:#a6e22e">reject</span>){
+  <span style="color:#a6e22e">resolve</span>(<span style="color:#ae81ff">1</span>);
+});
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">p2</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Promise(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">resolve</span>,<span style="color:#a6e22e">reject</span>){
+  <span style="color:#a6e22e">setTimeout</span>(<span style="color:#66d9ef">function</span>(){
+    <span style="color:#a6e22e">resolve</span>(<span style="color:#ae81ff">2</span>);  
+  }, <span style="color:#ae81ff">500</span>);
+});
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">p3</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Promise(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">resolve</span>,<span style="color:#a6e22e">reject</span>){
+  <span style="color:#a6e22e">setTimeout</span>(<span style="color:#66d9ef">function</span>(){
+    <span style="color:#a6e22e">reject</span>(<span style="color:#ae81ff">3</span>);  
+  }, <span style="color:#ae81ff">500</span>);
+});
+
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">p1</span>);
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">p2</span>);
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">p3</span>);
+<span style="color:#a6e22e">setTimeout</span>(<span style="color:#66d9ef">function</span>(){
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">p2</span>);
+}, <span style="color:#ae81ff">1000</span>);
+<span style="color:#a6e22e">setTimeout</span>(<span style="color:#66d9ef">function</span>(){
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">p3</span>);
+}, <span style="color:#ae81ff">1000</span>);
+
+<span style="color:#a6e22e">p1</span>.<span style="color:#a6e22e">then</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">value</span>){
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">value</span>);
+});
+<span style="color:#a6e22e">p2</span>.<span style="color:#a6e22e">then</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">value</span>){
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">value</span>);
+});
+<span style="color:#a6e22e">p3</span>.<span style="color:#66d9ef">catch</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">err</span>){
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">err</span>);
+});
+</code></pre></div>
+<h3 id="控制台输出-1">控制台输出</h3>
+
+<pre><code>Promise {[[PromiseStatus]]: &quot;resolved&quot;, [[PromiseValue]]: 1}
+Promise {[[PromiseStatus]]: &quot;pending&quot;, [[PromiseValue]]: undefined}
+Promise {[[PromiseStatus]]: &quot;pending&quot;, [[PromiseValue]]: undefined}
+1
+2
+3
+Promise {[[PromiseStatus]]: &quot;resolved&quot;, [[PromiseValue]]: 2}
+Promise {[[PromiseStatus]]: &quot;rejected&quot;, [[PromiseValue]]: 3}
+</code></pre>
+
+<h3 id="总结-1">总结</h3>
+
+<p>Promise的内部实现是一个状态机。Promise有三种状态：pending，resolved，rejected。当Promise刚创建完成时，处于pending状态；当Promise中的函数参数执行了resolve后，Promise由pending状态变成resolved状态；如果在Promise的函数参数中执行的不是resolve方法，而是reject方法，那么Promise会由pending状态变成rejected状态。<br>
+p2、p3刚创建完成时，控制台输出的这两台Promise都处于pending状态，但为什么p1是resolved状态呢？ 这是因为p1 的函数参数中执行的是一段同步代码，Promise刚创建完成，resolve方法就已经被调用了，因而紧跟着的输出显示p1是resolved状态。我们通过两个setTimeout函数，延迟1s后再次输出p2、p3的状态，此时p2、p3已经执行完成，状态分别变成resolved和rejected。</p>
+
+<h2 id="promise状态的不可逆性">Promise状态的不可逆性</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">p1</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Promise(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">resolve</span>, <span style="color:#a6e22e">reject</span>){
+  <span style="color:#a6e22e">resolve</span>(<span style="color:#e6db74">&#34;success1&#34;</span>);
+  <span style="color:#a6e22e">resolve</span>(<span style="color:#e6db74">&#34;success2&#34;</span>);
+});
+
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">p2</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Promise(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">resolve</span>, <span style="color:#a6e22e">reject</span>){
+  <span style="color:#a6e22e">resolve</span>(<span style="color:#e6db74">&#34;success&#34;</span>);
+  <span style="color:#a6e22e">reject</span>(<span style="color:#e6db74">&#34;reject&#34;</span>);
+});
+
+<span style="color:#a6e22e">p1</span>.<span style="color:#a6e22e">then</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">value</span>){
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">value</span>);
+});
+
+<span style="color:#a6e22e">p2</span>.<span style="color:#a6e22e">then</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">value</span>){
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">value</span>);
+});
+</code></pre></div>
+<h3 id="控制台输出-2">控制台输出</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#e6db74">&#34;success1&#34;</span>
+<span style="color:#e6db74">&#34;success&#34;</span>
+</code></pre></div>
+<h3 id="总结-2">总结</h3>
+
+<p>Promise状态的一旦变成resolved或rejected时，Promise的状态和值就固定下来了，不论你后续再怎么调用resolve或reject方法，都不能改变它的状态和值。因此，p1中resolve(&ldquo;success2&rdquo;)并不能将p1的值更改为success2，p2中reject(&ldquo;reject&rdquo;)也不能将p2的状态由resolved改变为rejected.</p>
+
+<h2 id="链式调用">链式调用</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">p</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Promise(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">resolve</span>, <span style="color:#a6e22e">reject</span>){
+  <span style="color:#a6e22e">resolve</span>(<span style="color:#ae81ff">1</span>);
+});
+<span style="color:#a6e22e">p</span>.<span style="color:#a6e22e">then</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">value</span>){               <span style="color:#75715e">//第一个then
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">value</span>);
+  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">*</span><span style="color:#ae81ff">2</span>;
+}).<span style="color:#a6e22e">then</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">value</span>){              <span style="color:#75715e">//第二个then
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">value</span>);
+}).<span style="color:#a6e22e">then</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">value</span>){              <span style="color:#75715e">//第三个then
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">value</span>);
+  <span style="color:#66d9ef">return</span> Promise.<span style="color:#a6e22e">resolve</span>(<span style="color:#e6db74">&#39;resolve&#39;</span>); 
+}).<span style="color:#a6e22e">then</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">value</span>){              <span style="color:#75715e">//第四个then
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">value</span>);
+  <span style="color:#66d9ef">return</span> Promise.<span style="color:#a6e22e">reject</span>(<span style="color:#e6db74">&#39;reject&#39;</span>);
+}).<span style="color:#a6e22e">then</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">value</span>){              <span style="color:#75715e">//第五个then
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;resolve: &#39;</span><span style="color:#f92672">+</span> <span style="color:#a6e22e">value</span>);
+}, <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">err</span>){
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;reject: &#39;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">err</span>);
+})
+</code></pre></div>
+<h3 id="控制台输出-3">控制台输出</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#ae81ff">1</span>
+<span style="color:#ae81ff">2</span>
+<span style="color:#66d9ef">undefined</span>
+<span style="color:#e6db74">&#34;resolve&#34;</span>
+<span style="color:#e6db74">&#34;reject: reject&#34;</span>
+</code></pre></div>
+<h3 id="总结-3">总结</h3>
+
+<p>Promise对象的then方法返回一个新的Promise对象，因此可以通过链式调用then方法。then方法接收两个函数作为参数，第一个参数是Promise执行成功时的回调，第二个参数是Promise执行失败时的回调。两个函数只会有一个被调用，函数的返回值将被用作创建then返回的Promise对象。这两个参数的返回值可以是以下三种情况中的一种：<br></p>
+
+<ul>
+<li>return 一个同步的值 ，或者 undefined（当没有返回一个有效值时，默认返回undefined），then方法将返回一个resolved状态的Promise对象，Promise对象的值就是这个返回值。</li>
+<li>return 另一个 Promise，then方法将根据这个Promise的状态和值创建一个新的Promise对象返回。</li>
+<li>throw 一个同步异常，then方法将返回一个rejected状态的Promise,  值是该异常。</li>
+</ul>
+
+<p>根据以上分析，代码中第一个then会返回一个值为2（1*2），状态为resolved的Promise对象，于是第二个then输出的值是2。第二个then中没有返回值，因此将返回默认的undefined，于是在第三个then中输出undefined。第三个then和第四个then中分别返回一个状态是resolved的Promise和一个状态是rejected的Promise，依次由第四个then中成功的回调函数和第五个then中失败的回调函数处理。</p>
+
+<h2 id="promise-then-回调异步性">Promise then() 回调异步性</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">p</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Promise(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">resolve</span>, <span style="color:#a6e22e">reject</span>){
+  <span style="color:#a6e22e">resolve</span>(<span style="color:#e6db74">&#34;success&#34;</span>);
+});
+
+<span style="color:#a6e22e">p</span>.<span style="color:#a6e22e">then</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">value</span>){
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">value</span>);
+});
+
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;which one is called first ?&#34;</span>);
+</code></pre></div>
+<h3 id="控制台输出-4">控制台输出</h3>
+
+<pre><code>&quot;which one is called first ?&quot;
+&quot;success&quot;
+</code></pre>
+
+<h3 id="总结-4">总结</h3>
+
+<p>Promise接收的函数参数是同步执行的，但then方法中的回调函数执行则是异步的，因此，&rdquo;success&rdquo;会在后面输出。</p>
+
+<h2 id="promise-中的异常">Promise 中的异常</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">p1</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Promise( <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">resolve</span>,<span style="color:#a6e22e">reject</span>){
+  <span style="color:#a6e22e">foo</span>.<span style="color:#a6e22e">bar</span>();
+  <span style="color:#a6e22e">resolve</span>( <span style="color:#ae81ff">1</span> );
+});
+
+<span style="color:#a6e22e">p1</span>.<span style="color:#a6e22e">then</span>(
+  <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">value</span>){
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;p1 then value: &#39;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">value</span>);
+  },
+  <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">err</span>){
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;p1 then err: &#39;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">err</span>);
+  }
+).<span style="color:#a6e22e">then</span>(
+  <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">value</span>){
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;p1 then then value: &#39;</span><span style="color:#f92672">+</span><span style="color:#a6e22e">value</span>);
+  },
+  <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">err</span>){
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;p1 then then err: &#39;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">err</span>);
+  }
+);
+
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">p2</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Promise(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">resolve</span>,<span style="color:#a6e22e">reject</span>){
+  <span style="color:#a6e22e">resolve</span>( <span style="color:#ae81ff">2</span> );
+});
+
+<span style="color:#a6e22e">p2</span>.<span style="color:#a6e22e">then</span>(
+  <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">value</span>){
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;p2 then value: &#39;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">value</span>);
+    <span style="color:#a6e22e">foo</span>.<span style="color:#a6e22e">bar</span>();
+  }, 
+  <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">err</span>){
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;p2 then err: &#39;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">err</span>);
+  }
+).<span style="color:#a6e22e">then</span>(
+  <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">value</span>){
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;p2 then then value: &#39;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">value</span>);
+  },
+  <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">err</span>){
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;p2 then then err: &#39;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">err</span>);
+    <span style="color:#66d9ef">return</span> <span style="color:#ae81ff">1</span>;
+  }
+).<span style="color:#a6e22e">then</span>(
+  <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">value</span>){
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;p2 then then then value: &#39;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">value</span>);
+  },
+  <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">err</span>){
+    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;p2 then then then err: &#39;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">err</span>);
+  }
+);
+</code></pre></div>
+<h3 id="控制台输出-5">控制台输出</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">p1</span> <span style="color:#a6e22e">then</span> <span style="color:#a6e22e">err</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">ReferenceError</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">foo</span> <span style="color:#a6e22e">is</span> <span style="color:#a6e22e">not</span> <span style="color:#a6e22e">defined</span>
+<span style="color:#a6e22e">p2</span> <span style="color:#a6e22e">then</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">2</span>
+<span style="color:#a6e22e">p1</span> <span style="color:#a6e22e">then</span> <span style="color:#a6e22e">then</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">undefined</span>
+<span style="color:#a6e22e">p2</span> <span style="color:#a6e22e">then</span> <span style="color:#a6e22e">then</span> <span style="color:#a6e22e">err</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">ReferenceError</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">foo</span> <span style="color:#a6e22e">is</span> <span style="color:#a6e22e">not</span> <span style="color:#a6e22e">defined</span>
+<span style="color:#a6e22e">p2</span> <span style="color:#a6e22e">then</span> <span style="color:#a6e22e">then</span> <span style="color:#a6e22e">then</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">1</span>
+</code></pre></div>
+<h3 id="总结-5">总结</h3>
+
+<p>Promise中的异常由then参数中第二个回调函数（Promise执行失败的回调）处理，异常信息将作为Promise的值。异常一旦得到处理，then返回的后续Promise对象将恢复正常，并会被Promise执行成功的回调函数处理。另外，需要注意p1、p2 多级then的回调函数是交替执行的 ，这正是由Promise then回调的异步性决定的。</p>
+
+<h2 id="promise-resolve">Promise.resolve()</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">p1</span> <span style="color:#f92672">=</span> Promise.<span style="color:#a6e22e">resolve</span>( <span style="color:#ae81ff">1</span> );
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">p2</span> <span style="color:#f92672">=</span> Promise.<span style="color:#a6e22e">resolve</span>( <span style="color:#a6e22e">p1</span> );
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">p3</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Promise(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">resolve</span>, <span style="color:#a6e22e">reject</span>){
+  <span style="color:#a6e22e">resolve</span>(<span style="color:#ae81ff">1</span>);
+});
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">p4</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Promise(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">resolve</span>, <span style="color:#a6e22e">reject</span>){
+  <span style="color:#a6e22e">resolve</span>(<span style="color:#a6e22e">p1</span>);
+});
+
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">p1</span> <span style="color:#f92672">===</span> <span style="color:#a6e22e">p2</span>);
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">p1</span> <span style="color:#f92672">===</span> <span style="color:#a6e22e">p3</span>);
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">p1</span> <span style="color:#f92672">===</span> <span style="color:#a6e22e">p4</span>);
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">p3</span> <span style="color:#f92672">===</span> <span style="color:#a6e22e">p4</span>);
+
+<span style="color:#a6e22e">p4</span>.<span style="color:#a6e22e">then</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">value</span>){
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;p4=&#39;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">value</span>);
+});
+
+<span style="color:#a6e22e">p2</span>.<span style="color:#a6e22e">then</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">value</span>){
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;p2=&#39;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">value</span>);
+})
+
+<span style="color:#a6e22e">p1</span>.<span style="color:#a6e22e">then</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">value</span>){
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;p1=&#39;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">value</span>);
+});
+</code></pre></div>
+</div>
+
+  
+<footer class='entry-footer'>
+  <div class='container sep-before'><div class='categories'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M22,19a2,2,0,0,1-2,2H4a2,2,0,0,1-2-2V5A2,2,0,0,1,4,3H9l2,3h9a2,2,0,0,1,2,2Z"/>
+  
+</svg>
+<span class='screen-reader-text'>Categories: </span><a class='category' href='/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/'>前端开发</a></div>
+<div class='tags'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M20.59,13.41l-7.17,7.17a2,2,0,0,1-2.83,0L2,12V2H12l8.59,8.59A2,2,0,0,1,20.59,13.41Z"/>
+  <line x1="7" y1="7" x2="7" y2="7"/>
+  
+</svg>
+<span class='screen-reader-text'>Tags: </span><a class='tag' href='/tags/javascript/'>javascript</a></div>
+
+  </div>
+</footer>
+
+
+</article>
+
+<nav class='entry-nav'>
+  <div class='container'><div class='prev-entry sep-before'>
+      <a href='/post/20190828095201/'>
+        <span aria-hidden='true'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="20" y1="12" x2="4" y2="12"/>
+  <polyline points="10 18 4 12 10 6"/>
+  
+</svg>
+ Previous</span>
+        <span class='screen-reader-text'>Previous post: </span>flex</a>
+    </div></div>
+</nav>
+
+
+
+
+      </main>
+
+      <footer id='footer' class='footer'>
+        <div class='container sep-before'><section class='widget widget-social_menu sep-after'><nav aria-label='Social Menu'>
+    <ul><li>
+        <a href='https://github.com/mannuan' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Github account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='mailto:mannuandeyangguang@163.com' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Contact via Email</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+  <polyline points="22,6 12,13 2,6"/>
+  
+</svg>
+</a>
+      </li></ul>
+  </nav>
+</section><div class='copyright'>
+  <p> &copy; 2019 mannuan </p>
+</div>
+
+        </div>
+      </footer>
+
+    </div>
+  </div><script>window.__assets_js_src="/assets/js/"</script>
+
+<script src='/assets/js/main.67d669ac.js'></script><script src='/js/custom.js'></script>
+
+</body>
+
+</html>
+

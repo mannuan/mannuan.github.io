@@ -1,11 +1,13 @@
-# 整数之间的进制转换
-print(hex(16)) # 0x10
-print(oct(8)) # 0o10
-print(bin(8)) # 0b1000
-# 字符串转整数
-print(int("10")) # 10
-print(int("10", 16)) # 16
-print(int("0x10", 16)) # 16
-print(int("10", 8)) # 8
-print("010", 8) # 8
-print("10", 2) # 2
+function selectSort(arr){
+    for(let i=0;i<arr.length-1;i++){
+        let min = i;
+        for(let j=i+1;j<arr.length;j++){
+            if(arr[j]<arr[min]){
+                min = j;
+            }
+        }
+        let tmp = arr[min];
+        arr[min] = arr[i];
+        arr[i] = tmp;
+    }
+}

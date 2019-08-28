@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>数据库 on mannuan</title>
+    <link>https://mannuan.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/</link>
+    <description>Recent content in 数据库 on mannuan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 27 Aug 2019 11:07:33 +0800</lastBuildDate>
+    
+	<atom:link href="https://mannuan.github.io/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>mongodb</title>
+      <link>https://mannuan.github.io/post/20190827110733/</link>
+      <pubDate>Tue, 27 Aug 2019 11:07:33 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190827110733/</guid>
+      <description>mongodb 定义  非关系型数据库（没有特定的表结构），采用BSON存储文档数据 BSON( Binary Serialized Document Format) 采用c++编写  优点  面向文档存储，以json格式的文档存储数据 扩展性好（可以后续添加字段） 自动分片 查询功能丰富 即时更新  基本概念 字段 字段(field)对应列(column)
+文档 数据库的基本单元，类似于关系型数据库的行
+集合 一组文档，类似于关系型数据库中的表
+数据库 每个数据库都有自己的集合和权限
+ObjectID 时间戳(4字节，记录文档创建时间)+客户端ID(3字节，用来标识不同客户端)+客户端进程ID(2字节，用来区分不同进程创建的ObjectID)+自增字段(3字节，确保同一秒产生的ObjectID的唯一性)。
+相当于数据库中的主键
+命令行工具 javascriptshell
+数据类型 null 表示空值或未定义的对象
+布尔值 32位整数 shell不支持，默认转为64位浮点数
+64位整数 shell不支持，默认转为64位浮点数
+64位浮点数 shell使用的数据类型
+字符串 utf-8字符串
+符号 shell不支持, 自动转为字符串
+ObjectID 12个字节
+日期 从标准纪元开始的毫秒数
+正则表达式 遵循javascript的正则表达式语法
+代码 可以包含javascript代码
+undefined 数组 值的集合或列表
+内嵌文档 最大值 BSON包括一个特殊类型，表示可能的最大值。shell中没有这个类型。
+最小值 BSON包括一个特殊类型，表示可能的最小值。shell中没有这个类型。
+具体使用 切换数据库 use 数据库名称
+显示数据库列表 show dbs</description>
+    </item>
+    
+  </channel>
+</rss>

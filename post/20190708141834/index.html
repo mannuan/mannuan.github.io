@@ -2,14 +2,14 @@
 <html lang='en'><head>
   <meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
-<meta name='description' content='1、UDP 1.1、数据包格式   源端口号(16位) 目的端口号(16位)    UDP长度(16位) UDP校验和(16位)   数据    1.2、特点  沟通简单。不需要一肚子花花肠子(大量的数据结构、处理逻辑、包头字段)。前提是它相信网络世界是美好的，秉承性善论，相信网络通路默认就是很容易送达的，不容易被丢弃的。 轻信他人。它不会建立连接，虽然有端口号，但是监听在这个地方，谁都可以传给他数据，他也可以传给任何人数据，甚至可以同时传给多个人数据。 愣头青。做事不懂权变。不知道什么时候该坚持，什么时候该退让。它不会根据网络的情况进行发包的拥塞控制，无论网络丢包丢成啥样了，它该怎么发还怎么发。  1.3、使用场景  需要资源少，在网络情况比较好的内网，或者对于丢包不敏感的应用。这很好理解，就像如果你是领导，你会让你们组刚毕业的小朋友去做一些没有那么难的项目，打一些没有那么难的客户，或者做一些失败了也能忍受的实验性项目。 不需要一对一沟通，建立连接，而是可以广播的应用。咱们小时候人都很简单，大家在班级里面，谁成绩好，谁写作好，应该表扬谁惩罚谁，谁得几个小红花都是当着全班的面讲的，公平公正公开。长大了人心复杂了，薪水、奖金要背靠背，和员工一对一沟通。 需要处理速度快，时延低，可以容忍少数丢包，但是要求即便网络拥塞，也毫不退缩，一往无前的时候。记得曾国藩建立湘军的时候，专门招出生牛犊不怕虎的新兵，而不用那些“老油条”的八旗 兵，就是因为八旗兵经历的事情多，遇到敌军不敢舍死忘生。  TCP三次握手 握手过程   SYN(Synchronize sequence numbers): TCP首部中的同步序号标志 ACK(Acknowledgement): 确认字符      时间段 客户端 服务端   活动 状态 活动 状态       CLOSED  CLOSED     CLOSED  LISTEN    &rarr;   第一次握手 主动发起连接SYN SYN-SENT 收到发起的连接 SYN-RCVD   &larr;  第二次握手 收到SYN和ACK SYN_SENT 返回SYN并ACK客户端的SYN SYN_RCVD    &rarr;   第三次握手 发送ACK的ACK ESTABLISHED 收到客户端的ACK ESTABLISHED    为什么不是两次握手？  A为客户端，B为服务端'>
+<meta name='description' content='UDP和TCP协议 1、UDP 1.1、数据包格式   源端口号(16位) 目的端口号(16位)    UDP长度(16位) UDP校验和(16位)   数据    1.2、特点  沟通简单。不需要一肚子花花肠子(大量的数据结构、处理逻辑、包头字段)。前提是它相信网络世界是美好的，秉承性善论，相信网络通路默认就是很容易送达的，不容易被丢弃的。 轻信他人。它不会建立连接，虽然有端口号，但是监听在这个地方，谁都可以传给他数据，他也可以传给任何人数据，甚至可以同时传给多个人数据。 愣头青。做事不懂权变。不知道什么时候该坚持，什么时候该退让。它不会根据网络的情况进行发包的拥塞控制，无论网络丢包丢成啥样了，它该怎么发还怎么发。  1.3、使用场景  需要资源少，在网络情况比较好的内网，或者对于丢包不敏感的应用。这很好理解，就像如果你是领导，你会让你们组刚毕业的小朋友去做一些没有那么难的项目，打一些没有那么难的客户，或者做一些失败了也能忍受的实验性项目。 不需要一对一沟通，建立连接，而是可以广播的应用。咱们小时候人都很简单，大家在班级里面，谁成绩好，谁写作好，应该表扬谁惩罚谁，谁得几个小红花都是当着全班的面讲的，公平公正公开。长大了人心复杂了，薪水、奖金要背靠背，和员工一对一沟通。 需要处理速度快，时延低，可以容忍少数丢包，但是要求即便网络拥塞，也毫不退缩，一往无前的时候。记得曾国藩建立湘军的时候，专门招出生牛犊不怕虎的新兵，而不用那些“老油条”的八旗 兵，就是因为八旗兵经历的事情多，遇到敌军不敢舍死忘生。  TCP三次握手 握手过程   SYN(Synchronize sequence numbers): TCP首部中的同步序号标志 ACK(Acknowledgement): 确认字符      时间段 客户端 服务端   活动 状态 活动 状态       CLOSED  CLOSED     CLOSED  LISTEN    &rarr;   第一次握手 主动发起连接SYN SYN-SENT 收到发起的连接 SYN-RCVD   &larr;  第二次握手 收到SYN和ACK SYN_SENT 返回SYN并ACK客户端的SYN SYN_RCVD    &rarr;   第三次握手 发送ACK的ACK ESTABLISHED 收到客户端的ACK ESTABLISHED    为什么不是两次握手？  A为客户端，B为服务端'>
 <meta name='theme-color' content='#FFFFFF'>
 
 <meta property='og:title' content='UDP和TCP协议 • mannuan'>
-<meta property='og:description' content='1、UDP 1.1、数据包格式   源端口号(16位) 目的端口号(16位)    UDP长度(16位) UDP校验和(16位)   数据    1.2、特点  沟通简单。不需要一肚子花花肠子(大量的数据结构、处理逻辑、包头字段)。前提是它相信网络世界是美好的，秉承性善论，相信网络通路默认就是很容易送达的，不容易被丢弃的。 轻信他人。它不会建立连接，虽然有端口号，但是监听在这个地方，谁都可以传给他数据，他也可以传给任何人数据，甚至可以同时传给多个人数据。 愣头青。做事不懂权变。不知道什么时候该坚持，什么时候该退让。它不会根据网络的情况进行发包的拥塞控制，无论网络丢包丢成啥样了，它该怎么发还怎么发。  1.3、使用场景  需要资源少，在网络情况比较好的内网，或者对于丢包不敏感的应用。这很好理解，就像如果你是领导，你会让你们组刚毕业的小朋友去做一些没有那么难的项目，打一些没有那么难的客户，或者做一些失败了也能忍受的实验性项目。 不需要一对一沟通，建立连接，而是可以广播的应用。咱们小时候人都很简单，大家在班级里面，谁成绩好，谁写作好，应该表扬谁惩罚谁，谁得几个小红花都是当着全班的面讲的，公平公正公开。长大了人心复杂了，薪水、奖金要背靠背，和员工一对一沟通。 需要处理速度快，时延低，可以容忍少数丢包，但是要求即便网络拥塞，也毫不退缩，一往无前的时候。记得曾国藩建立湘军的时候，专门招出生牛犊不怕虎的新兵，而不用那些“老油条”的八旗 兵，就是因为八旗兵经历的事情多，遇到敌军不敢舍死忘生。  TCP三次握手 握手过程   SYN(Synchronize sequence numbers): TCP首部中的同步序号标志 ACK(Acknowledgement): 确认字符      时间段 客户端 服务端   活动 状态 活动 状态       CLOSED  CLOSED     CLOSED  LISTEN    &rarr;   第一次握手 主动发起连接SYN SYN-SENT 收到发起的连接 SYN-RCVD   &larr;  第二次握手 收到SYN和ACK SYN_SENT 返回SYN并ACK客户端的SYN SYN_RCVD    &rarr;   第三次握手 发送ACK的ACK ESTABLISHED 收到客户端的ACK ESTABLISHED    为什么不是两次握手？  A为客户端，B为服务端'>
+<meta property='og:description' content='UDP和TCP协议 1、UDP 1.1、数据包格式   源端口号(16位) 目的端口号(16位)    UDP长度(16位) UDP校验和(16位)   数据    1.2、特点  沟通简单。不需要一肚子花花肠子(大量的数据结构、处理逻辑、包头字段)。前提是它相信网络世界是美好的，秉承性善论，相信网络通路默认就是很容易送达的，不容易被丢弃的。 轻信他人。它不会建立连接，虽然有端口号，但是监听在这个地方，谁都可以传给他数据，他也可以传给任何人数据，甚至可以同时传给多个人数据。 愣头青。做事不懂权变。不知道什么时候该坚持，什么时候该退让。它不会根据网络的情况进行发包的拥塞控制，无论网络丢包丢成啥样了，它该怎么发还怎么发。  1.3、使用场景  需要资源少，在网络情况比较好的内网，或者对于丢包不敏感的应用。这很好理解，就像如果你是领导，你会让你们组刚毕业的小朋友去做一些没有那么难的项目，打一些没有那么难的客户，或者做一些失败了也能忍受的实验性项目。 不需要一对一沟通，建立连接，而是可以广播的应用。咱们小时候人都很简单，大家在班级里面，谁成绩好，谁写作好，应该表扬谁惩罚谁，谁得几个小红花都是当着全班的面讲的，公平公正公开。长大了人心复杂了，薪水、奖金要背靠背，和员工一对一沟通。 需要处理速度快，时延低，可以容忍少数丢包，但是要求即便网络拥塞，也毫不退缩，一往无前的时候。记得曾国藩建立湘军的时候，专门招出生牛犊不怕虎的新兵，而不用那些“老油条”的八旗 兵，就是因为八旗兵经历的事情多，遇到敌军不敢舍死忘生。  TCP三次握手 握手过程   SYN(Synchronize sequence numbers): TCP首部中的同步序号标志 ACK(Acknowledgement): 确认字符      时间段 客户端 服务端   活动 状态 活动 状态       CLOSED  CLOSED     CLOSED  LISTEN    &rarr;   第一次握手 主动发起连接SYN SYN-SENT 收到发起的连接 SYN-RCVD   &larr;  第二次握手 收到SYN和ACK SYN_SENT 返回SYN并ACK客户端的SYN SYN_RCVD    &rarr;   第三次握手 发送ACK的ACK ESTABLISHED 收到客户端的ACK ESTABLISHED    为什么不是两次握手？  A为客户端，B为服务端'>
 <meta property='og:url' content='https://mannuan.github.io/post/20190708141834/'>
 <meta property='og:site_name' content='mannuan'>
-<meta property='og:type' content='article'><meta property='og:image' content='https://www.gravatar.com/avatar/8bacfd69855171c6f53247456732f68a?s=256'><meta property='article:section' content='post'><meta property='article:tag' content='UDP'><meta property='article:tag' content='TCP'><meta property='article:published_time' content='2019-07-08T14:18:34&#43;08:00'/><meta property='article:modified_time' content='2019-07-08T14:18:34&#43;08:00'/><meta name='twitter:card' content='summary'>
+<meta property='og:type' content='article'><meta property='og:image' content='https://www.gravatar.com/avatar/8bacfd69855171c6f53247456732f68a?s=256'><meta property='article:section' content='post'><meta property='article:tag' content='计算机网络'><meta property='article:published_time' content='2019-07-08T14:18:34&#43;08:00'/><meta property='article:modified_time' content='2019-07-08T14:18:34&#43;08:00'/><meta name='twitter:card' content='summary'>
 
 <meta name="generator" content="Hugo 0.55.6" />
 
@@ -98,59 +98,63 @@
 
   <div class='container list-container'>
   <ul class='list taxonomy-cloud'><li>
-        <a href='/categories/features/' style='font-size:1.1379310344827587em'>features</a>
+        <a href='/categories/features/' style='font-size:1.1355932203389831em'>features</a>
       </li><li>
-        <a href='/categories/ide/' style='font-size:1.0258620689655173em'>ide</a>
+        <a href='/categories/ide/' style='font-size:1.0254237288135593em'>ide</a>
       </li><li>
-        <a href='/categories/jupyter/' style='font-size:1.0172413793103448em'>jupyter</a>
+        <a href='/categories/jupyter/' style='font-size:1.0169491525423728em'>jupyter</a>
       </li><li>
-        <a href='/categories/linux/' style='font-size:1.146551724137931em'>linux</a>
+        <a href='/categories/linux/' style='font-size:1.1440677966101696em'>linux</a>
       </li><li>
-        <a href='/categories/mac/' style='font-size:1.146551724137931em'>mac</a>
+        <a href='/categories/mac/' style='font-size:1.1440677966101696em'>mac</a>
       </li><li>
-        <a href='/categories/mongodb/' style='font-size:1.0344827586206897em'>mongodb</a>
+        <a href='/categories/mongodb/' style='font-size:1.0338983050847457em'>mongodb</a>
       </li><li>
         <a href='/categories/others/' style='font-size:1em'>others</a>
       </li><li>
         <a href='/categories/pip/' style='font-size:1em'>pip</a>
       </li><li>
-        <a href='/categories/python/' style='font-size:1.0517241379310345em'>python</a>
+        <a href='/categories/python/' style='font-size:1.0508474576271187em'>python</a>
       </li><li>
         <a href='/categories/shell/' style='font-size:1em'>shell</a>
       </li><li>
-        <a href='/categories/tutorial/' style='font-size:1.0086206896551724em'>Tutorial</a>
+        <a href='/categories/tutorial/' style='font-size:1.0084745762711864em'>Tutorial</a>
       </li><li>
-        <a href='/categories/vscode/' style='font-size:1.0086206896551724em'>vscode</a>
+        <a href='/categories/vscode/' style='font-size:1.0084745762711864em'>vscode</a>
       </li><li>
         <a href='/categories/%E4%BD%9C%E8%80%85/' style='font-size:1em'>作者</a>
       </li><li>
-        <a href='/categories/%E5%86%99%E4%BD%9C/' style='font-size:1.0086206896551724em'>写作</a>
+        <a href='/categories/%E5%86%99%E4%BD%9C/' style='font-size:1.0084745762711864em'>写作</a>
       </li><li>
         <a href='/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/' style='font-size:2em'>前端开发</a>
       </li><li>
         <a href='/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/' style='font-size:1em'>博客搭建</a>
       </li><li>
-        <a href='/categories/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/' style='font-size:1.0086206896551724em'>学习方法</a>
+        <a href='/categories/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/' style='font-size:1.0169491525423728em'>后端开发</a>
       </li><li>
-        <a href='/categories/%E5%B7%A5%E5%85%B7/' style='font-size:1.0172413793103448em'>工具</a>
+        <a href='/categories/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/' style='font-size:1.0084745762711864em'>学习方法</a>
+      </li><li>
+        <a href='/categories/%E5%B7%A5%E5%85%B7/' style='font-size:1.0169491525423728em'>工具</a>
       </li><li>
         <a href='/categories/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3/' style='font-size:1em'>开发文档</a>
       </li><li>
         <a href='/categories/%E6%95%B0%E5%AD%A6/' style='font-size:1em'>数学</a>
       </li><li>
-        <a href='/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/' style='font-size:1.0344827586206897em'>数据结构</a>
+        <a href='/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/' style='font-size:1em'>数据库</a>
       </li><li>
-        <a href='/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/' style='font-size:1.0172413793103448em'>机器学习</a>
+        <a href='/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/' style='font-size:1.0338983050847457em'>数据结构</a>
+      </li><li>
+        <a href='/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/' style='font-size:1.0169491525423728em'>机器学习</a>
       </li><li>
         <a href='/categories/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/' style='font-size:1em'>正则表达式</a>
       </li><li>
-        <a href='/categories/%E7%88%AC%E8%99%AB/' style='font-size:1.0948275862068966em'>爬虫</a>
+        <a href='/categories/%E7%88%AC%E8%99%AB/' style='font-size:1.0932203389830508em'>爬虫</a>
       </li><li>
-        <a href='/categories/%E7%AE%97%E6%B3%95/' style='font-size:1.0258620689655173em'>算法</a>
+        <a href='/categories/%E7%AE%97%E6%B3%95/' style='font-size:1.076271186440678em'>算法</a>
       </li><li>
-        <a href='/categories/%E7%AE%97%E6%B3%95%E9%A2%98/' style='font-size:1.0948275862068966em'>算法题</a>
+        <a href='/categories/%E7%AE%97%E6%B3%95%E9%A2%98/' style='font-size:1.0932203389830508em'>算法题</a>
       </li><li>
-        <a href='/categories/%E7%B3%BB%E7%BB%9F/' style='font-size:1.0172413793103448em'>系统</a>
+        <a href='/categories/%E7%B3%BB%E7%BB%9F/' style='font-size:1.0169491525423728em'>系统</a>
       </li><li>
         <a href='/categories/%E7%BC%96%E7%A0%81%E8%BD%AC%E6%8D%A2/' style='font-size:1em'>编码转换</a>
       </li><li>
@@ -160,21 +164,21 @@
       </li><li>
         <a href='/categories/%E7%BD%91%E7%BB%9C/' style='font-size:1em'>网络</a>
       </li><li>
-        <a href='/categories/%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/' style='font-size:1.103448275862069em'>网络协议</a>
+        <a href='/categories/%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/' style='font-size:1.1016949152542372em'>网络协议</a>
       </li><li>
-        <a href='/categories/%E7%BF%BB%E5%A2%99/' style='font-size:1.0172413793103448em'>翻墙</a>
+        <a href='/categories/%E7%BF%BB%E5%A2%99/' style='font-size:1.0169491525423728em'>翻墙</a>
       </li><li>
-        <a href='/categories/%E8%8B%B1%E8%AF%AD/' style='font-size:1.1293103448275863em'>英语</a>
+        <a href='/categories/%E8%8B%B1%E8%AF%AD/' style='font-size:1.1271186440677967em'>英语</a>
       </li><li>
-        <a href='/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/' style='font-size:1.0086206896551724em'>计算机基础</a>
+        <a href='/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/' style='font-size:1.0169491525423728em'>计算机基础</a>
       </li><li>
-        <a href='/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/' style='font-size:1.0517241379310345em'>计算机网络</a>
+        <a href='/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/' style='font-size:1.0508474576271187em'>计算机网络</a>
       </li><li>
-        <a href='/categories/%E8%AE%BA%E6%96%87/' style='font-size:1.043103448275862em'>论文</a>
+        <a href='/categories/%E8%AE%BA%E6%96%87/' style='font-size:1.042372881355932em'>论文</a>
       </li><li>
         <a href='/categories/%E8%B0%83%E8%AF%95/' style='font-size:1em'>调试</a>
       </li><li>
-        <a href='/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/' style='font-size:1.0172413793103448em'>软件使用</a>
+        <a href='/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/' style='font-size:1.0169491525423728em'>软件使用</a>
       </li></ul>
 </div>
 
@@ -289,6 +293,8 @@ One min read
   </summary>
   <nav id="TableOfContents">
 <ul>
+<li><a href="#udp和tcp协议">UDP和TCP协议</a>
+<ul>
 <li><a href="#1-udp">1、UDP</a></li>
 <li><a href="#1-1-数据包格式">1.1、数据包格式</a></li>
 <li><a href="#1-2-特点">1.2、特点</a></li>
@@ -304,6 +310,7 @@ One min read
 <ul>
 <li><a href="#过程">过程</a></li>
 </ul></li>
+</ul></li>
 </ul>
 </nav>
 </details>
@@ -312,9 +319,11 @@ One min read
   <div class='container entry-content'>
   
 
-<h1 id="1-udp">1、UDP</h1>
+<h1 id="udp和tcp协议">UDP和TCP协议</h1>
 
-<h1 id="1-1-数据包格式">1.1、数据包格式</h1>
+<h2 id="1-udp">1、UDP</h2>
+
+<h2 id="1-1-数据包格式">1.1、数据包格式</h2>
 
 <table>
 <thead>
@@ -332,7 +341,7 @@ One min read
 </tbody>
 </table>
 
-<h1 id="1-2-特点">1.2、特点</h1>
+<h2 id="1-2-特点">1.2、特点</h2>
 
 <ol>
 <li>沟通简单。不需要一肚子花花肠子(大量的数据结构、处理逻辑、包头字段)。前提是它相信网络世界是美好的，秉承性善论，相信网络通路默认就是很容易送达的，不容易被丢弃的。</li>
@@ -340,7 +349,7 @@ One min read
 <li>愣头青。做事不懂权变。不知道什么时候该坚持，什么时候该退让。它不会根据网络的情况进行发包的拥塞控制，无论网络丢包丢成啥样了，它该怎么发还怎么发。</li>
 </ol>
 
-<h1 id="1-3-使用场景">1.3、使用场景</h1>
+<h2 id="1-3-使用场景">1.3、使用场景</h2>
 
 <ol>
 <li>需要资源少，在网络情况比较好的内网，或者对于丢包不敏感的应用。这很好理解，就像如果你是领导，你会让你们组刚毕业的小朋友去做一些没有那么难的项目，打一些没有那么难的客户，或者做一些失败了也能忍受的实验性项目。</li>
@@ -349,9 +358,9 @@ One min read
 兵，就是因为八旗兵经历的事情多，遇到敌军不敢舍死忘生。</li>
 </ol>
 
-<h1 id="tcp三次握手">TCP三次握手</h1>
+<h2 id="tcp三次握手">TCP三次握手</h2>
 
-<h2 id="握手过程">握手过程</h2>
+<h3 id="握手过程">握手过程</h3>
 
 <blockquote>
 <ul>
@@ -423,7 +432,7 @@ One min read
 </tbody>
 </table>
 
-<h2 id="为什么不是两次握手">为什么不是两次握手？</h2>
+<h3 id="为什么不是两次握手">为什么不是两次握手？</h3>
 
 <blockquote>
 <p>A为客户端，B为服务端</p>
@@ -440,7 +449,7 @@ B收到了请求包，知道了A的存在。<br>
 
 <p>上述过程就是两次握手，我们可以看到如果B在第二次握手以后，继续确认客户端的ack（即第三次握手），就不会建立上面荒谬的连接。</p>
 
-<h2 id="为什么不四次握手">为什么不四次握手？</h2>
+<h3 id="为什么不四次握手">为什么不四次握手？</h3>
 
 <p>三次握手可以双方的消息有去有去有回，四次握手完全没有必要。</p>
 
@@ -448,16 +457,16 @@ B收到了请求包，知道了A的存在。<br>
 <p>即便更多次数的握手，也不能保证连接可靠</p>
 </blockquote>
 
-<h2 id="三次握手的作用">三次握手的作用？</h2>
+<h3 id="三次握手的作用">三次握手的作用？</h3>
 
 <ul>
 <li>建立连接;</li>
 <li>确定TCP包的起始序号;(序号是一个32位的计数器，每4ms加1，防止出现冲突)</li>
 </ul>
 
-<h1 id="tcp四次挥手">TCP四次挥手</h1>
+<h2 id="tcp四次挥手">TCP四次挥手</h2>
 
-<h2 id="过程">过程</h2>
+<h3 id="过程">过程</h3>
 
 <table>
 <thead>
@@ -537,14 +546,14 @@ B收到了请求包，知道了A的存在。<br>
   <path d="M22,19a2,2,0,0,1-2,2H4a2,2,0,0,1-2-2V5A2,2,0,0,1,4,3H9l2,3h9a2,2,0,0,1,2,2Z"/>
   
 </svg>
-<span class='screen-reader-text'>Categories: </span><a class='category' href='/categories/%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/'>网络协议</a>, <a class='category' href='/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/'>前端开发</a></div>
+<span class='screen-reader-text'>Categories: </span><a class='category' href='/categories/%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/'>网络协议</a></div>
 <div class='tags'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
   
   <path d="M20.59,13.41l-7.17,7.17a2,2,0,0,1-2.83,0L2,12V2H12l8.59,8.59A2,2,0,0,1,20.59,13.41Z"/>
   <line x1="7" y1="7" x2="7" y2="7"/>
   
 </svg>
-<span class='screen-reader-text'>Tags: </span><a class='tag' href='/tags/udp/'>UDP</a>, <a class='tag' href='/tags/tcp/'>TCP</a></div>
+<span class='screen-reader-text'>Tags: </span><a class='tag' href='/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/'>计算机网络</a></div>
 
   </div>
 </footer>

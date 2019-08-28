@@ -16,7 +16,9 @@
       <pubDate>Sat, 24 Aug 2019 23:04:03 +0800</pubDate>
       
       <guid>https://mannuan.github.io/post/20190824230403/</guid>
-      <description> 反转链表 </description>
+      <description>反转链表 参考视频地址 视频地址
+非递归实现 过程描述 需要两个指针prev, head在链表中进行移动；另外还需要一个指针save,用来保存head节点的下一个节点
+举例说明 初始化的时候  prev 1(head)-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;null  prev = null head = 1 save = null   第一次循环 改变指针的指向  prev&amp;lt;-1(head) 2-&amp;gt;3-&amp;gt;4-&amp;gt;null  prev = null head = 1 save = 2   往右平移prev,head  null&amp;lt;-1(prev) 2(head)-&amp;gt;3-&amp;gt;4-&amp;gt;null  prev = 1 head = 2 save = 2   第二次循环 改变指针指向  null&amp;lt;-1(prev)&amp;lt;-2(head) 3-&amp;gt;4-&amp;gt;null  prev = 1 head = 2 save = 3   往右平移指针prev,head  null&amp;lt;-1&amp;lt;-2(prev) 3(head)-&amp;gt;4-&amp;gt;null  prev = 2 head = 3 save = 3   第三次循环 改变指针指向  null&amp;lt;-1&amp;lt;-2(prev)&amp;lt;-3(head) 4-&amp;gt;null  prev = 2 head = 3 save = 4   往右平移指针prev,head  null&amp;lt;-1&amp;lt;-2&amp;lt;-3(prev) 4(head)-&amp;gt;null  prev = 3 head = 4 save = 4   第四次循环 改变指针指向  null&amp;lt;-1&amp;lt;-2&amp;lt;-3(prev)&amp;lt;-4(head) null  prev = 3 head = 4 save = null   往右平移指针prev,head  null&amp;lt;-1&amp;lt;-2&amp;lt;-3&amp;lt;-4(prev) null(head)  prev = 4 head = null save = null   循环结束条件 根据第四次循环的结果，可以看到循环的终止条件就是head=null</description>
     </item>
     
   </channel>

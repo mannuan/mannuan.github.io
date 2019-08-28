@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>前端常见算法 on mannuan</title>
+    <link>https://mannuan.github.io/tags/%E5%89%8D%E7%AB%AF%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95/</link>
+    <description>Recent content in 前端常见算法 on mannuan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 26 Aug 2019 17:03:28 +0800</lastBuildDate>
+    
+	<atom:link href="https://mannuan.github.io/tags/%E5%89%8D%E7%AB%AF%E5%B8%B8%E8%A7%81%E7%AE%97%E6%B3%95/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>数组去重</title>
+      <link>https://mannuan.github.io/post/20190826170328/</link>
+      <pubDate>Mon, 26 Aug 2019 17:03:28 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190826170328/</guid>
+      <description>数组去重 最简洁的做法 function unique(arr){ return [...new Set(arr)]; }  对象属性的唯一性 function unique(arr){ let res = []; let obj = new Object(); arr.forEach(e =&amp;gt; { if(!obj[e]){ obj[e] = 1; res.push(e); } }); return res; }  一般的做法 function unique(arr){ let seen = []; arr.forEach(e =&amp;gt; { if(seen.indexOf(e) &amp;lt; 0){ seen.push(e); } }); return seen; } console.log(unique([1,1,1,1,3,4]));  python实现-普通做法 def unique(arr): seen = [] for i in arr: if i not in seen: seen.</description>
+    </item>
+    
+    <item>
+      <title>判断一个单词是否是回文</title>
+      <link>https://mannuan.github.io/post/20190826162047/</link>
+      <pubDate>Mon, 26 Aug 2019 16:20:48 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190826162047/</guid>
+      <description> 判断一个单词是否是回文  回文是指把相同的词汇或句子，在下文中调换位置或颠倒过来，产生首尾回环的情趣，叫做回文，也叫回环。比如 mamam redivider.
+很多人拿到这样的题目非常容易想到用for 将字符串颠倒字母顺序然后匹配就行了。其实重要的考察的就是对于reverse的实现。其实我们可以利用现成的函数，将字符串转换成数组，这个思路很重要，我们可以拥有更多的自由度去进行字符串的一些操作。
+ function isHuiWen(str){ return str == str.split(&amp;#39;&amp;#39;).reverse().join(&amp;#39;&amp;#39;); } def isHuiWen(_str): return _str == &amp;#34;&amp;#34;.join(_str.split()[::-1])# include&amp;lt;iostream&amp;gt;  # include&amp;lt;cstring&amp;gt;  # include&amp;lt;cstdlib&amp;gt;  using namespace std; int main(){ string str; bool flag = true; cin&amp;gt;&amp;gt;str; for(int i=0,j=str.size()-1;i&amp;lt;str.size();i++, j--){ if(str[i] != str[j]){ flag = false; } } if(flag){ cout&amp;lt;&amp;lt;&amp;#34;是回文&amp;#34;&amp;lt;&amp;lt;endl; }else{ cout&amp;lt;&amp;lt;&amp;#34;不是回文&amp;#34;&amp;lt;&amp;lt;endl; } return 0; } </description>
+    </item>
+    
+  </channel>
+</rss>

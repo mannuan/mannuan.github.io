@@ -2,7 +2,7 @@
 <html lang='en'><head>
   <meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
-<meta name='description' content='生命周期 图解 实例创建过程 创建一个实例 new Vue()  init(初始化)  beforeCreate()
+<meta name='description' content=' 生命周期 图解 实例创建过程 创建一个实例 new Vue()  init(初始化)  beforeCreate()
 injections和reactivity created()
    在beforeCreate的时候不可以修改data数据，最早在created中添加一些行为
  在created完成以后，它会去判断instance(实例)中是否含有&rdquo;el&rdquo;option(选项)，如果没有的话，它会调用vm.$mount(el)这个方法，然后执行下一步；如果有的话，直接进入下一步。接下来他会判断是否含有“template”这个选项，如果有的话，他会把template解析成一个render function, 这是一个template编译的过程，结果是解析成功了render函数：
@@ -10,11 +10,12 @@ render (h) { return h(&#39;div&#39;, {}, this.text) }   render函数中的h就�
  使用render函数的结果和我们之前使用template解析出来的结果是一样的。render函数是发生在beforeMount和mounted之间的。也就是说在beforeMount的时候，$el还是我们之前写的html中的节点，然后到mounted的时候，它就把渲染出来的内容挂载到了DOM节点上。
 在使用.vue文件开发的过程中，我们写的template模板，在经过了vue-loader的处理之后，就变成了render function, 最终放到了vue-loader解析过的文件里面。这样的好处就是：我们在在页面上执行vue代码的时候，效率高。
 beforeMount在有了render function的时候才会执行，当执行完render function之后，就会调用mounted这个钩子，在mounted挂载完毕以后，这个实力算是初步创建好了。
-后面的钩子函数都是需要外部的触发才会执行。比如数据的变化，会调用beforeUpdate,然后进过Virtual DOM，最后updated更新完毕。当组件'>
+后面的钩子函数都是需要外部的触发才会执行。比如数据的变化，会调用beforeUpdate,然后进过Virtual DOM，最后updated更新完毕。当组件
+ vue的双向数据绑定  Object.defineProperty() 观察者模式 让双向绑定更有效率 一对多的模式  一：改了一个地方 多：页面凡是用了数据的地方都更新  数据劫持，就是通过defineProperty()   '>
 <meta name='theme-color' content='#FFFFFF'>
 
 <meta property='og:title' content='生命周期 • mannuan'>
-<meta property='og:description' content='生命周期 图解 实例创建过程 创建一个实例 new Vue()  init(初始化)  beforeCreate()
+<meta property='og:description' content=' 生命周期 图解 实例创建过程 创建一个实例 new Vue()  init(初始化)  beforeCreate()
 injections和reactivity created()
    在beforeCreate的时候不可以修改data数据，最早在created中添加一些行为
  在created完成以后，它会去判断instance(实例)中是否含有&rdquo;el&rdquo;option(选项)，如果没有的话，它会调用vm.$mount(el)这个方法，然后执行下一步；如果有的话，直接进入下一步。接下来他会判断是否含有“template”这个选项，如果有的话，他会把template解析成一个render function, 这是一个template编译的过程，结果是解析成功了render函数：
@@ -22,7 +23,8 @@ render (h) { return h(&#39;div&#39;, {}, this.text) }   render函数中的h就�
  使用render函数的结果和我们之前使用template解析出来的结果是一样的。render函数是发生在beforeMount和mounted之间的。也就是说在beforeMount的时候，$el还是我们之前写的html中的节点，然后到mounted的时候，它就把渲染出来的内容挂载到了DOM节点上。
 在使用.vue文件开发的过程中，我们写的template模板，在经过了vue-loader的处理之后，就变成了render function, 最终放到了vue-loader解析过的文件里面。这样的好处就是：我们在在页面上执行vue代码的时候，效率高。
 beforeMount在有了render function的时候才会执行，当执行完render function之后，就会调用mounted这个钩子，在mounted挂载完毕以后，这个实力算是初步创建好了。
-后面的钩子函数都是需要外部的触发才会执行。比如数据的变化，会调用beforeUpdate,然后进过Virtual DOM，最后updated更新完毕。当组件'>
+后面的钩子函数都是需要外部的触发才会执行。比如数据的变化，会调用beforeUpdate,然后进过Virtual DOM，最后updated更新完毕。当组件
+ vue的双向数据绑定  Object.defineProperty() 观察者模式 让双向绑定更有效率 一对多的模式  一：改了一个地方 多：页面凡是用了数据的地方都更新  数据劫持，就是通过defineProperty()   '>
 <meta property='og:url' content='https://mannuan.github.io/post/20190823220435/'>
 <meta property='og:site_name' content='mannuan'>
 <meta property='og:type' content='article'><meta property='og:image' content='https://www.gravatar.com/avatar/8bacfd69855171c6f53247456732f68a?s=256'><meta property='article:section' content='post'><meta property='article:tag' content='框架'><meta property='article:tag' content='vue'><meta property='article:published_time' content='2019-08-23T22:04:35&#43;08:00'/><meta property='article:modified_time' content='2019-08-23T22:04:35&#43;08:00'/><meta name='twitter:card' content='summary'>
@@ -114,59 +116,63 @@ beforeMount在有了render function的时候才会执行，当执行完render fu
 
   <div class='container list-container'>
   <ul class='list taxonomy-cloud'><li>
-        <a href='/categories/features/' style='font-size:1.1379310344827587em'>features</a>
+        <a href='/categories/features/' style='font-size:1.1355932203389831em'>features</a>
       </li><li>
-        <a href='/categories/ide/' style='font-size:1.0258620689655173em'>ide</a>
+        <a href='/categories/ide/' style='font-size:1.0254237288135593em'>ide</a>
       </li><li>
-        <a href='/categories/jupyter/' style='font-size:1.0172413793103448em'>jupyter</a>
+        <a href='/categories/jupyter/' style='font-size:1.0169491525423728em'>jupyter</a>
       </li><li>
-        <a href='/categories/linux/' style='font-size:1.146551724137931em'>linux</a>
+        <a href='/categories/linux/' style='font-size:1.1440677966101696em'>linux</a>
       </li><li>
-        <a href='/categories/mac/' style='font-size:1.146551724137931em'>mac</a>
+        <a href='/categories/mac/' style='font-size:1.1440677966101696em'>mac</a>
       </li><li>
-        <a href='/categories/mongodb/' style='font-size:1.0344827586206897em'>mongodb</a>
+        <a href='/categories/mongodb/' style='font-size:1.0338983050847457em'>mongodb</a>
       </li><li>
         <a href='/categories/others/' style='font-size:1em'>others</a>
       </li><li>
         <a href='/categories/pip/' style='font-size:1em'>pip</a>
       </li><li>
-        <a href='/categories/python/' style='font-size:1.0517241379310345em'>python</a>
+        <a href='/categories/python/' style='font-size:1.0508474576271187em'>python</a>
       </li><li>
         <a href='/categories/shell/' style='font-size:1em'>shell</a>
       </li><li>
-        <a href='/categories/tutorial/' style='font-size:1.0086206896551724em'>Tutorial</a>
+        <a href='/categories/tutorial/' style='font-size:1.0084745762711864em'>Tutorial</a>
       </li><li>
-        <a href='/categories/vscode/' style='font-size:1.0086206896551724em'>vscode</a>
+        <a href='/categories/vscode/' style='font-size:1.0084745762711864em'>vscode</a>
       </li><li>
         <a href='/categories/%E4%BD%9C%E8%80%85/' style='font-size:1em'>作者</a>
       </li><li>
-        <a href='/categories/%E5%86%99%E4%BD%9C/' style='font-size:1.0086206896551724em'>写作</a>
+        <a href='/categories/%E5%86%99%E4%BD%9C/' style='font-size:1.0084745762711864em'>写作</a>
       </li><li>
         <a href='/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/' style='font-size:2em'>前端开发</a>
       </li><li>
         <a href='/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/' style='font-size:1em'>博客搭建</a>
       </li><li>
-        <a href='/categories/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/' style='font-size:1.0086206896551724em'>学习方法</a>
+        <a href='/categories/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/' style='font-size:1.0169491525423728em'>后端开发</a>
       </li><li>
-        <a href='/categories/%E5%B7%A5%E5%85%B7/' style='font-size:1.0172413793103448em'>工具</a>
+        <a href='/categories/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/' style='font-size:1.0084745762711864em'>学习方法</a>
+      </li><li>
+        <a href='/categories/%E5%B7%A5%E5%85%B7/' style='font-size:1.0169491525423728em'>工具</a>
       </li><li>
         <a href='/categories/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3/' style='font-size:1em'>开发文档</a>
       </li><li>
         <a href='/categories/%E6%95%B0%E5%AD%A6/' style='font-size:1em'>数学</a>
       </li><li>
-        <a href='/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/' style='font-size:1.0344827586206897em'>数据结构</a>
+        <a href='/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/' style='font-size:1em'>数据库</a>
       </li><li>
-        <a href='/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/' style='font-size:1.0172413793103448em'>机器学习</a>
+        <a href='/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/' style='font-size:1.0338983050847457em'>数据结构</a>
+      </li><li>
+        <a href='/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/' style='font-size:1.0169491525423728em'>机器学习</a>
       </li><li>
         <a href='/categories/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/' style='font-size:1em'>正则表达式</a>
       </li><li>
-        <a href='/categories/%E7%88%AC%E8%99%AB/' style='font-size:1.0948275862068966em'>爬虫</a>
+        <a href='/categories/%E7%88%AC%E8%99%AB/' style='font-size:1.0932203389830508em'>爬虫</a>
       </li><li>
-        <a href='/categories/%E7%AE%97%E6%B3%95/' style='font-size:1.0258620689655173em'>算法</a>
+        <a href='/categories/%E7%AE%97%E6%B3%95/' style='font-size:1.076271186440678em'>算法</a>
       </li><li>
-        <a href='/categories/%E7%AE%97%E6%B3%95%E9%A2%98/' style='font-size:1.0948275862068966em'>算法题</a>
+        <a href='/categories/%E7%AE%97%E6%B3%95%E9%A2%98/' style='font-size:1.0932203389830508em'>算法题</a>
       </li><li>
-        <a href='/categories/%E7%B3%BB%E7%BB%9F/' style='font-size:1.0172413793103448em'>系统</a>
+        <a href='/categories/%E7%B3%BB%E7%BB%9F/' style='font-size:1.0169491525423728em'>系统</a>
       </li><li>
         <a href='/categories/%E7%BC%96%E7%A0%81%E8%BD%AC%E6%8D%A2/' style='font-size:1em'>编码转换</a>
       </li><li>
@@ -176,21 +182,21 @@ beforeMount在有了render function的时候才会执行，当执行完render fu
       </li><li>
         <a href='/categories/%E7%BD%91%E7%BB%9C/' style='font-size:1em'>网络</a>
       </li><li>
-        <a href='/categories/%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/' style='font-size:1.103448275862069em'>网络协议</a>
+        <a href='/categories/%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/' style='font-size:1.1016949152542372em'>网络协议</a>
       </li><li>
-        <a href='/categories/%E7%BF%BB%E5%A2%99/' style='font-size:1.0172413793103448em'>翻墙</a>
+        <a href='/categories/%E7%BF%BB%E5%A2%99/' style='font-size:1.0169491525423728em'>翻墙</a>
       </li><li>
-        <a href='/categories/%E8%8B%B1%E8%AF%AD/' style='font-size:1.1293103448275863em'>英语</a>
+        <a href='/categories/%E8%8B%B1%E8%AF%AD/' style='font-size:1.1271186440677967em'>英语</a>
       </li><li>
-        <a href='/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/' style='font-size:1.0086206896551724em'>计算机基础</a>
+        <a href='/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/' style='font-size:1.0169491525423728em'>计算机基础</a>
       </li><li>
-        <a href='/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/' style='font-size:1.0517241379310345em'>计算机网络</a>
+        <a href='/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/' style='font-size:1.0508474576271187em'>计算机网络</a>
       </li><li>
-        <a href='/categories/%E8%AE%BA%E6%96%87/' style='font-size:1.043103448275862em'>论文</a>
+        <a href='/categories/%E8%AE%BA%E6%96%87/' style='font-size:1.042372881355932em'>论文</a>
       </li><li>
         <a href='/categories/%E8%B0%83%E8%AF%95/' style='font-size:1em'>调试</a>
       </li><li>
-        <a href='/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/' style='font-size:1.0172413793103448em'>软件使用</a>
+        <a href='/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/' style='font-size:1.0169491525423728em'>软件使用</a>
       </li></ul>
 </div>
 
@@ -368,6 +374,23 @@ One min read
 <p>beforeMount在有了render function的时候才会执行，当执行完render function之后，就会调用mounted这个钩子，在mounted挂载完毕以后，这个实力算是初步创建好了。</p>
 
 <p>后面的钩子函数都是需要外部的触发才会执行。比如数据的变化，会调用beforeUpdate,然后进过Virtual DOM，最后updated更新完毕。当组件</p>
+
+<ul>
+<li>vue的双向数据绑定
+
+<ul>
+<li>Object.defineProperty()</li>
+<li>观察者模式</li>
+<li>让双向绑定更有效率</li>
+<li>一对多的模式
+
+<ul>
+<li>一：改了一个地方</li>
+<li>多：页面凡是用了数据的地方都更新</li>
+</ul></li>
+<li>数据劫持，就是通过defineProperty()</li>
+</ul></li>
+</ul>
 
 </div>
 

@@ -5,10 +5,48 @@
     <link>https://mannuan.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/</link>
     <description>Recent content in 前端开发 on mannuan</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 24 Aug 2019 17:40:52 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 28 Aug 2019 13:02:28 +0800</lastBuildDate>
     
 	<atom:link href="https://mannuan.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>promise</title>
+      <link>https://mannuan.github.io/post/20190828130228/</link>
+      <pubDate>Wed, 28 Aug 2019 13:02:28 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190828130228/</guid>
+      <description>参考链接
+promise Promise的立即执行性 var p = new Promise(function(resolve, reject){ console.log(&amp;#34;create a promise&amp;#34;); resolve(&amp;#34;success&amp;#34;); }); console.log(&amp;#34;after new Promise&amp;#34;); p.then(function(value){ console.log(value); });  控制台输出 &amp;#34;create a promise&amp;#34; &amp;#34;after new Promise&amp;#34; &amp;#34;success&amp;#34;  总结 Promise对象表示未来某个将要发生的事件，但在创建（new）Promise时，作为Promise参数传入的函数是会被立即执行的，只是其中执行的代码可以是异步代码。有些同学会认为，当Promise对象调用then方法时，Promise接收的函数才会执行，这是错误的。因此，代码中&amp;rdquo;create a promise&amp;rdquo;先于&amp;rdquo;after new Promise&amp;rdquo;输出。
+Promise 三种状态 var p1 = new Promise(function(resolve,reject){ resolve(1); }); var p2 = new Promise(function(resolve,reject){ setTimeout(function(){ resolve(2); }, 500); }); var p3 = new Promise(function(resolve,reject){ setTimeout(function(){ reject(3); }, 500); }); console.log(p1); console.log(p2); console.log(p3); setTimeout(function(){ console.</description>
+    </item>
+    
+    <item>
+      <title>flex</title>
+      <link>https://mannuan.github.io/post/20190828095201/</link>
+      <pubDate>Wed, 28 Aug 2019 09:52:01 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190828095201/</guid>
+      <description>参考链接
+flex 定义  Flex 是 Flexible Box 的缩写，意为&amp;rdquo;弹性布局&amp;rdquo;，用来为盒状模型提供最大的灵活性。 任何一个容器都可以指定为 Flex 布局。  .box{ display: flex; }  行内元素也可以使用 Flex 布局。  .box{ display: inline-flex; }  Webkit 内核的浏览器，必须加上-webkit前缀。  .box{ display: -webkit-flex; /* Safari */ display: flex; } 注意 设为 Flex 布局以后，子元素的float、clear和vertical-align属性将失效。
+基本概念 flex container flex容器就是采用flex布局的元素
+flex item flex项目
+main axis 水平主轴
+cross axis 垂直主轴
+main start main axis的开始位置与边框的交叉点
+main end main axis的结束位置
+cross start cross axis的开始位置
+cross end cross axis的结束位置</description>
+    </item>
+    
+    <item>
+      <title>jquery</title>
+      <link>https://mannuan.github.io/post/20190827144836/</link>
+      <pubDate>Tue, 27 Aug 2019 14:48:36 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190827144836/</guid>
+      <description> jquery  链接 链接  </description>
+    </item>
     
     <item>
       <title>有赞一面凉面</title>
@@ -24,21 +62,24 @@
  css盒模型
  元素如何垂直居中
  linux 权限管理
+ 数据类型
  http协议
  7层网络模型
  从输入URL到获得数据的流程
  https的原理（具体就是描述https的第三方代理机构ca）
  线程和进程的区别
- javascript是单线程的吗
+ javascript是单线程的吗，举个例子说明一下
  什么是事件流的代理
  this是什么
  0.1+0.2!=0.3为什么
  闭包
  为什么存在跨域
+ 数组你是如何去重的？
+ box-sizing
  快速排序(这个没写出来，写了一半中间有些细节忘了，要不然就成了，太可惜了，成了个备胎)
  链表反转（这个时间不够直接就没问）
- 在页面中根据数组渲染页面，然后点击每个数组的每个内容输出&amp;rdquo;hello world&amp;rdquo;（写了，但是看面试官的表情很惊讶的意思？，好像我写错了？）
-  总结 算法思想基本都会，但就是写不出来 设计模式需要加强一下</description>
+ 在页面中根据数组渲染页面，然后点击每个数组的每个内容输出&amp;rdquo;hello world&amp;rdquo;(这题主要考察编码规范)
+ 我写的是下面的代码，正好完美的躲避了错误   function render(arr){ arr.forEach(e =&amp;gt; { let li = document.</description>
     </item>
     
     <item>
@@ -47,7 +88,7 @@
       <pubDate>Fri, 23 Aug 2019 22:04:35 +0800</pubDate>
       
       <guid>https://mannuan.github.io/post/20190823220435/</guid>
-      <description>生命周期 图解 实例创建过程 创建一个实例 new Vue()  init(初始化)  beforeCreate()
+      <description> 生命周期 图解 实例创建过程 创建一个实例 new Vue()  init(初始化)  beforeCreate()
 injections和reactivity created()
    在beforeCreate的时候不可以修改data数据，最早在created中添加一些行为
  在created完成以后，它会去判断instance(实例)中是否含有&amp;rdquo;el&amp;rdquo;option(选项)，如果没有的话，它会调用vm.$mount(el)这个方法，然后执行下一步；如果有的话，直接进入下一步。接下来他会判断是否含有“template”这个选项，如果有的话，他会把template解析成一个render function, 这是一个template编译的过程，结果是解析成功了render函数：
@@ -55,7 +96,8 @@ render (h) { return h(&amp;#39;div&amp;#39;, {}, this.text) }   render函数中�
  使用render函数的结果和我们之前使用template解析出来的结果是一样的。render函数是发生在beforeMount和mounted之间的。也就是说在beforeMount的时候，$el还是我们之前写的html中的节点，然后到mounted的时候，它就把渲染出来的内容挂载到了DOM节点上。
 在使用.vue文件开发的过程中，我们写的template模板，在经过了vue-loader的处理之后，就变成了render function, 最终放到了vue-loader解析过的文件里面。这样的好处就是：我们在在页面上执行vue代码的时候，效率高。
 beforeMount在有了render function的时候才会执行，当执行完render function之后，就会调用mounted这个钩子，在mounted挂载完毕以后，这个实力算是初步创建好了。
-后面的钩子函数都是需要外部的触发才会执行。比如数据的变化，会调用beforeUpdate,然后进过Virtual DOM，最后updated更新完毕。当组件</description>
+后面的钩子函数都是需要外部的触发才会执行。比如数据的变化，会调用beforeUpdate,然后进过Virtual DOM，最后updated更新完毕。当组件
+ vue的双向数据绑定  Object.defineProperty() 观察者模式 让双向绑定更有效率 一对多的模式  一：改了一个地方 多：页面凡是用了数据的地方都更新  数据劫持，就是通过defineProperty()   </description>
     </item>
     
     <item>
@@ -384,15 +426,6 @@ var num = [1,5,6,10]; for (var i = 0; i &amp;lt; num.length; i++) { console.log(
       
       <guid>https://mannuan.github.io/post/20190710101926/</guid>
       <description> span.new { float: right; color: #fff; background-color: #90b575; font-weight: 700; padding-left: 1px; padding-right: 1px; border: 1px solid #fff; outline: 1px solid #90b575; line-height: 16px; }    属性 描述   accesskey 设置访问元素的键盘快捷键。   class 规定元素的类名（classname）   contenteditableNew 规定是否可编辑元素的内容。   contextmenuNew 指定一个元素的上下文菜单。当用户右击该元素，出现上下文菜单   data-*New 用于存储页面的自定义数据   dir 设置元素中内容的文本方向。   draggableNew 指定某个元素是否可以拖动   dropzoneNew 指定是否将数据复制，移动，或链接，或删除   hiddenNew hidden 属性规定对元素进行隐藏。   id 规定元素的唯一 id   lang 设置元素中内容的语言代码。   spellcheckNew 检测元素是否拼写错误   style 规定元素的行内样式（inline style）   tabindex 设置元素的 Tab 键控制次序。   title 规定元素的额外信息（可在工具提示中显示）   translateNew 指定是否一个元素的值在页面载入时是否需要翻译    </description>
-    </item>
-    
-    <item>
-      <title>UDP和TCP协议</title>
-      <link>https://mannuan.github.io/post/20190708141834/</link>
-      <pubDate>Mon, 08 Jul 2019 14:18:34 +0800</pubDate>
-      
-      <guid>https://mannuan.github.io/post/20190708141834/</guid>
-      <description>1、UDP 1.1、数据包格式   源端口号(16位) 目的端口号(16位)    UDP长度(16位) UDP校验和(16位)   数据    1.2、特点  沟通简单。不需要一肚子花花肠子(大量的数据结构、处理逻辑、包头字段)。前提是它相信网络世界是美好的，秉承性善论，相信网络通路默认就是很容易送达的，不容易被丢弃的。 轻信他人。它不会建立连接，虽然有端口号，但是监听在这个地方，谁都可以传给他数据，他也可以传给任何人数据，甚至可以同时传给多个人数据。 愣头青。做事不懂权变。不知道什么时候该坚持，什么时候该退让。它不会根据网络的情况进行发包的拥塞控制，无论网络丢包丢成啥样了，它该怎么发还怎么发。  1.3、使用场景  需要资源少，在网络情况比较好的内网，或者对于丢包不敏感的应用。这很好理解，就像如果你是领导，你会让你们组刚毕业的小朋友去做一些没有那么难的项目，打一些没有那么难的客户，或者做一些失败了也能忍受的实验性项目。 不需要一对一沟通，建立连接，而是可以广播的应用。咱们小时候人都很简单，大家在班级里面，谁成绩好，谁写作好，应该表扬谁惩罚谁，谁得几个小红花都是当着全班的面讲的，公平公正公开。长大了人心复杂了，薪水、奖金要背靠背，和员工一对一沟通。 需要处理速度快，时延低，可以容忍少数丢包，但是要求即便网络拥塞，也毫不退缩，一往无前的时候。记得曾国藩建立湘军的时候，专门招出生牛犊不怕虎的新兵，而不用那些“老油条”的八旗 兵，就是因为八旗兵经历的事情多，遇到敌军不敢舍死忘生。  TCP三次握手 握手过程   SYN(Synchronize sequence numbers): TCP首部中的同步序号标志 ACK(Acknowledgement): 确认字符      时间段 客户端 服务端   活动 状态 活动 状态       CLOSED  CLOSED     CLOSED  LISTEN    &amp;rarr;   第一次握手 主动发起连接SYN SYN-SENT 收到发起的连接 SYN-RCVD   &amp;larr;  第二次握手 收到SYN和ACK SYN_SENT 返回SYN并ACK客户端的SYN SYN_RCVD    &amp;rarr;   第三次握手 发送ACK的ACK ESTABLISHED 收到客户端的ACK ESTABLISHED    为什么不是两次握手？  A为客户端，B为服务端</description>
     </item>
     
     <item>

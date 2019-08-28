@@ -16,7 +16,7 @@
       <pubDate>Sat, 24 Aug 2019 23:00:46 +0800</pubDate>
       
       <guid>https://mannuan.github.io/post/20190824230046/</guid>
-      <description> 大数相加 </description>
+      <description> 大数相加 javascript实现 function sumBigNumber(a, b) { var res = &amp;#39;&amp;#39;, temp = 0; a = a.split(&amp;#39;&amp;#39;); b = b.split(&amp;#39;&amp;#39;); while (a.length || b.length || temp) { temp += ~~a.pop() + ~~b.pop(); res = (temp % 10) + res; temp = temp &amp;gt; 9; } return res.replace(/^0+/, &amp;#39;&amp;#39;); } </description>
     </item>
     
   </channel>

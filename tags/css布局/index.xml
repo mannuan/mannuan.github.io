@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>css布局 on mannuan</title>
+    <link>https://mannuan.github.io/tags/css%E5%B8%83%E5%B1%80/</link>
+    <description>Recent content in css布局 on mannuan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 28 Aug 2019 09:52:01 +0800</lastBuildDate>
+    
+	<atom:link href="https://mannuan.github.io/tags/css%E5%B8%83%E5%B1%80/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>flex</title>
+      <link>https://mannuan.github.io/post/20190828095201/</link>
+      <pubDate>Wed, 28 Aug 2019 09:52:01 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190828095201/</guid>
+      <description>参考链接
+flex 定义  Flex 是 Flexible Box 的缩写，意为&amp;rdquo;弹性布局&amp;rdquo;，用来为盒状模型提供最大的灵活性。 任何一个容器都可以指定为 Flex 布局。  .box{ display: flex; }  行内元素也可以使用 Flex 布局。  .box{ display: inline-flex; }  Webkit 内核的浏览器，必须加上-webkit前缀。  .box{ display: -webkit-flex; /* Safari */ display: flex; } 注意 设为 Flex 布局以后，子元素的float、clear和vertical-align属性将失效。
+基本概念 flex container flex容器就是采用flex布局的元素
+flex item flex项目
+main axis 水平主轴
+cross axis 垂直主轴
+main start main axis的开始位置与边框的交叉点
+main end main axis的结束位置
+cross start cross axis的开始位置
+cross end cross axis的结束位置</description>
+    </item>
+    
+  </channel>
+</rss>

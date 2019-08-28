@@ -2,11 +2,15 @@
 <html lang='en'><head>
   <meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
-<meta name='description' content=' 反转链表 '>
+<meta name='description' content='反转链表 参考视频地址 视频地址
+非递归实现 过程描述 需要两个指针prev, head在链表中进行移动；另外还需要一个指针save,用来保存head节点的下一个节点
+举例说明 初始化的时候  prev 1(head)-&gt;2-&gt;3-&gt;4-&gt;null  prev = null head = 1 save = null   第一次循环 改变指针的指向  prev&lt;-1(head) 2-&gt;3-&gt;4-&gt;null  prev = null head = 1 save = 2   往右平移prev,head  null&lt;-1(prev) 2(head)-&gt;3-&gt;4-&gt;null  prev = 1 head = 2 save = 2   第二次循环 改变指针指向  null&lt;-1(prev)&lt;-2(head) 3-&gt;4-&gt;null  prev = 1 head = 2 save = 3   往右平移指针prev,head  null&lt;-1&lt;-2(prev) 3(head)-&gt;4-&gt;null  prev = 2 head = 3 save = 3   第三次循环 改变指针指向  null&lt;-1&lt;-2(prev)&lt;-3(head) 4-&gt;null  prev = 2 head = 3 save = 4   往右平移指针prev,head  null&lt;-1&lt;-2&lt;-3(prev) 4(head)-&gt;null  prev = 3 head = 4 save = 4   第四次循环 改变指针指向  null&lt;-1&lt;-2&lt;-3(prev)&lt;-4(head) null  prev = 3 head = 4 save = null   往右平移指针prev,head  null&lt;-1&lt;-2&lt;-3&lt;-4(prev) null(head)  prev = 4 head = null save = null   循环结束条件 根据第四次循环的结果，可以看到循环的终止条件就是head=null'>
 <meta name='theme-color' content='#FFFFFF'>
 
 <meta property='og:title' content='反转链表 • mannuan'>
-<meta property='og:description' content=' 反转链表 '>
+<meta property='og:description' content='反转链表 参考视频地址 视频地址
+非递归实现 过程描述 需要两个指针prev, head在链表中进行移动；另外还需要一个指针save,用来保存head节点的下一个节点
+举例说明 初始化的时候  prev 1(head)-&gt;2-&gt;3-&gt;4-&gt;null  prev = null head = 1 save = null   第一次循环 改变指针的指向  prev&lt;-1(head) 2-&gt;3-&gt;4-&gt;null  prev = null head = 1 save = 2   往右平移prev,head  null&lt;-1(prev) 2(head)-&gt;3-&gt;4-&gt;null  prev = 1 head = 2 save = 2   第二次循环 改变指针指向  null&lt;-1(prev)&lt;-2(head) 3-&gt;4-&gt;null  prev = 1 head = 2 save = 3   往右平移指针prev,head  null&lt;-1&lt;-2(prev) 3(head)-&gt;4-&gt;null  prev = 2 head = 3 save = 3   第三次循环 改变指针指向  null&lt;-1&lt;-2(prev)&lt;-3(head) 4-&gt;null  prev = 2 head = 3 save = 4   往右平移指针prev,head  null&lt;-1&lt;-2&lt;-3(prev) 4(head)-&gt;null  prev = 3 head = 4 save = 4   第四次循环 改变指针指向  null&lt;-1&lt;-2&lt;-3(prev)&lt;-4(head) null  prev = 3 head = 4 save = null   往右平移指针prev,head  null&lt;-1&lt;-2&lt;-3&lt;-4(prev) null(head)  prev = 4 head = null save = null   循环结束条件 根据第四次循环的结果，可以看到循环的终止条件就是head=null'>
 <meta property='og:url' content='https://mannuan.github.io/post/20190824230403/'>
 <meta property='og:site_name' content='mannuan'>
 <meta property='og:type' content='article'><meta property='og:image' content='https://www.gravatar.com/avatar/8bacfd69855171c6f53247456732f68a?s=256'><meta property='article:section' content='post'><meta property='article:tag' content='数据结构'><meta property='article:tag' content='链表'><meta property='article:published_time' content='2019-08-24T23:04:03&#43;08:00'/><meta property='article:modified_time' content='2019-08-24T23:04:03&#43;08:00'/><meta name='twitter:card' content='summary'>
@@ -98,59 +102,63 @@
 
   <div class='container list-container'>
   <ul class='list taxonomy-cloud'><li>
-        <a href='/categories/features/' style='font-size:1.1379310344827587em'>features</a>
+        <a href='/categories/features/' style='font-size:1.1355932203389831em'>features</a>
       </li><li>
-        <a href='/categories/ide/' style='font-size:1.0258620689655173em'>ide</a>
+        <a href='/categories/ide/' style='font-size:1.0254237288135593em'>ide</a>
       </li><li>
-        <a href='/categories/jupyter/' style='font-size:1.0172413793103448em'>jupyter</a>
+        <a href='/categories/jupyter/' style='font-size:1.0169491525423728em'>jupyter</a>
       </li><li>
-        <a href='/categories/linux/' style='font-size:1.146551724137931em'>linux</a>
+        <a href='/categories/linux/' style='font-size:1.1440677966101696em'>linux</a>
       </li><li>
-        <a href='/categories/mac/' style='font-size:1.146551724137931em'>mac</a>
+        <a href='/categories/mac/' style='font-size:1.1440677966101696em'>mac</a>
       </li><li>
-        <a href='/categories/mongodb/' style='font-size:1.0344827586206897em'>mongodb</a>
+        <a href='/categories/mongodb/' style='font-size:1.0338983050847457em'>mongodb</a>
       </li><li>
         <a href='/categories/others/' style='font-size:1em'>others</a>
       </li><li>
         <a href='/categories/pip/' style='font-size:1em'>pip</a>
       </li><li>
-        <a href='/categories/python/' style='font-size:1.0517241379310345em'>python</a>
+        <a href='/categories/python/' style='font-size:1.0508474576271187em'>python</a>
       </li><li>
         <a href='/categories/shell/' style='font-size:1em'>shell</a>
       </li><li>
-        <a href='/categories/tutorial/' style='font-size:1.0086206896551724em'>Tutorial</a>
+        <a href='/categories/tutorial/' style='font-size:1.0084745762711864em'>Tutorial</a>
       </li><li>
-        <a href='/categories/vscode/' style='font-size:1.0086206896551724em'>vscode</a>
+        <a href='/categories/vscode/' style='font-size:1.0084745762711864em'>vscode</a>
       </li><li>
         <a href='/categories/%E4%BD%9C%E8%80%85/' style='font-size:1em'>作者</a>
       </li><li>
-        <a href='/categories/%E5%86%99%E4%BD%9C/' style='font-size:1.0086206896551724em'>写作</a>
+        <a href='/categories/%E5%86%99%E4%BD%9C/' style='font-size:1.0084745762711864em'>写作</a>
       </li><li>
         <a href='/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/' style='font-size:2em'>前端开发</a>
       </li><li>
         <a href='/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/' style='font-size:1em'>博客搭建</a>
       </li><li>
-        <a href='/categories/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/' style='font-size:1.0086206896551724em'>学习方法</a>
+        <a href='/categories/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/' style='font-size:1.0169491525423728em'>后端开发</a>
       </li><li>
-        <a href='/categories/%E5%B7%A5%E5%85%B7/' style='font-size:1.0172413793103448em'>工具</a>
+        <a href='/categories/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/' style='font-size:1.0084745762711864em'>学习方法</a>
+      </li><li>
+        <a href='/categories/%E5%B7%A5%E5%85%B7/' style='font-size:1.0169491525423728em'>工具</a>
       </li><li>
         <a href='/categories/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3/' style='font-size:1em'>开发文档</a>
       </li><li>
         <a href='/categories/%E6%95%B0%E5%AD%A6/' style='font-size:1em'>数学</a>
       </li><li>
-        <a href='/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/' style='font-size:1.0344827586206897em'>数据结构</a>
+        <a href='/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/' style='font-size:1em'>数据库</a>
       </li><li>
-        <a href='/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/' style='font-size:1.0172413793103448em'>机器学习</a>
+        <a href='/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/' style='font-size:1.0338983050847457em'>数据结构</a>
+      </li><li>
+        <a href='/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/' style='font-size:1.0169491525423728em'>机器学习</a>
       </li><li>
         <a href='/categories/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/' style='font-size:1em'>正则表达式</a>
       </li><li>
-        <a href='/categories/%E7%88%AC%E8%99%AB/' style='font-size:1.0948275862068966em'>爬虫</a>
+        <a href='/categories/%E7%88%AC%E8%99%AB/' style='font-size:1.0932203389830508em'>爬虫</a>
       </li><li>
-        <a href='/categories/%E7%AE%97%E6%B3%95/' style='font-size:1.0258620689655173em'>算法</a>
+        <a href='/categories/%E7%AE%97%E6%B3%95/' style='font-size:1.076271186440678em'>算法</a>
       </li><li>
-        <a href='/categories/%E7%AE%97%E6%B3%95%E9%A2%98/' style='font-size:1.0948275862068966em'>算法题</a>
+        <a href='/categories/%E7%AE%97%E6%B3%95%E9%A2%98/' style='font-size:1.0932203389830508em'>算法题</a>
       </li><li>
-        <a href='/categories/%E7%B3%BB%E7%BB%9F/' style='font-size:1.0172413793103448em'>系统</a>
+        <a href='/categories/%E7%B3%BB%E7%BB%9F/' style='font-size:1.0169491525423728em'>系统</a>
       </li><li>
         <a href='/categories/%E7%BC%96%E7%A0%81%E8%BD%AC%E6%8D%A2/' style='font-size:1em'>编码转换</a>
       </li><li>
@@ -160,21 +168,21 @@
       </li><li>
         <a href='/categories/%E7%BD%91%E7%BB%9C/' style='font-size:1em'>网络</a>
       </li><li>
-        <a href='/categories/%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/' style='font-size:1.103448275862069em'>网络协议</a>
+        <a href='/categories/%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/' style='font-size:1.1016949152542372em'>网络协议</a>
       </li><li>
-        <a href='/categories/%E7%BF%BB%E5%A2%99/' style='font-size:1.0172413793103448em'>翻墙</a>
+        <a href='/categories/%E7%BF%BB%E5%A2%99/' style='font-size:1.0169491525423728em'>翻墙</a>
       </li><li>
-        <a href='/categories/%E8%8B%B1%E8%AF%AD/' style='font-size:1.1293103448275863em'>英语</a>
+        <a href='/categories/%E8%8B%B1%E8%AF%AD/' style='font-size:1.1271186440677967em'>英语</a>
       </li><li>
-        <a href='/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/' style='font-size:1.0086206896551724em'>计算机基础</a>
+        <a href='/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/' style='font-size:1.0169491525423728em'>计算机基础</a>
       </li><li>
-        <a href='/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/' style='font-size:1.0517241379310345em'>计算机网络</a>
+        <a href='/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/' style='font-size:1.0508474576271187em'>计算机网络</a>
       </li><li>
-        <a href='/categories/%E8%AE%BA%E6%96%87/' style='font-size:1.043103448275862em'>论文</a>
+        <a href='/categories/%E8%AE%BA%E6%96%87/' style='font-size:1.042372881355932em'>论文</a>
       </li><li>
         <a href='/categories/%E8%B0%83%E8%AF%95/' style='font-size:1em'>调试</a>
       </li><li>
-        <a href='/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/' style='font-size:1.0172413793103448em'>软件使用</a>
+        <a href='/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/' style='font-size:1.0169491525423728em'>软件使用</a>
       </li></ul>
 </div>
 
@@ -289,7 +297,44 @@ One min read
   </summary>
   <nav id="TableOfContents">
 <ul>
-<li><a href="#反转链表">反转链表</a></li>
+<li><a href="#反转链表">反转链表</a>
+<ul>
+<li><a href="#参考视频地址">参考视频地址</a></li>
+<li><a href="#非递归实现">非递归实现</a>
+<ul>
+<li><a href="#过程描述">过程描述</a></li>
+<li><a href="#举例说明">举例说明</a>
+<ul>
+<li><a href="#初始化的时候">初始化的时候</a></li>
+<li><a href="#第一次循环">第一次循环</a>
+<ul>
+<li><a href="#改变指针的指向">改变指针的指向</a></li>
+<li><a href="#往右平移prev-head">往右平移prev,head</a></li>
+</ul></li>
+<li><a href="#第二次循环">第二次循环</a>
+<ul>
+<li><a href="#改变指针指向">改变指针指向</a></li>
+<li><a href="#往右平移指针prev-head">往右平移指针prev,head</a></li>
+</ul></li>
+<li><a href="#第三次循环">第三次循环</a>
+<ul>
+<li><a href="#改变指针指向-1">改变指针指向</a></li>
+<li><a href="#往右平移指针prev-head-1">往右平移指针prev,head</a></li>
+</ul></li>
+<li><a href="#第四次循环">第四次循环</a>
+<ul>
+<li><a href="#改变指针指向-2">改变指针指向</a></li>
+<li><a href="#往右平移指针prev-head-2">往右平移指针prev,head</a></li>
+</ul></li>
+<li><a href="#循环结束条件">循环结束条件</a></li>
+<li><a href="#最后返回的头部">最后返回的头部</a></li>
+</ul></li>
+<li><a href="#javascript代码实现">javascript代码实现</a></li>
+<li><a href="#python实现">python实现</a></li>
+<li><a href="#c-实现">c++实现</a></li>
+</ul></li>
+<li><a href="#递归实现">递归实现</a></li>
+</ul></li>
 </ul>
 </nav>
 </details>
@@ -300,6 +345,180 @@ One min read
 
 <h1 id="反转链表">反转链表</h1>
 
+<h2 id="参考视频地址">参考视频地址</h2>
+
+<p><a href="https://www.bilibili.com/video/av49696612?from=search&amp;seid=2043195713994231540" target="_blank">视频地址</a></p>
+
+<h2 id="非递归实现">非递归实现</h2>
+
+<h3 id="过程描述">过程描述</h3>
+
+<p>需要两个指针prev, head在链表中进行移动；另外还需要一个指针save,用来保存head节点的下一个节点</p>
+
+<h3 id="举例说明">举例说明</h3>
+
+<h4 id="初始化的时候">初始化的时候</h4>
+
+<ul>
+<li>prev  1(head)-&gt;2-&gt;3-&gt;4-&gt;null
+
+<ul>
+<li>prev = null</li>
+<li>head = 1</li>
+<li>save = null</li>
+</ul></li>
+</ul>
+
+<h4 id="第一次循环">第一次循环</h4>
+
+<h5 id="改变指针的指向">改变指针的指向</h5>
+
+<ul>
+<li>prev&lt;-1(head)  2-&gt;3-&gt;4-&gt;null
+
+<ul>
+<li>prev = null</li>
+<li>head = 1</li>
+<li>save = 2</li>
+</ul></li>
+</ul>
+
+<h5 id="往右平移prev-head">往右平移prev,head</h5>
+
+<ul>
+<li>null&lt;-1(prev)  2(head)-&gt;3-&gt;4-&gt;null
+
+<ul>
+<li>prev = 1</li>
+<li>head = 2</li>
+<li>save = 2</li>
+</ul></li>
+</ul>
+
+<h4 id="第二次循环">第二次循环</h4>
+
+<h5 id="改变指针指向">改变指针指向</h5>
+
+<ul>
+<li>null&lt;-1(prev)&lt;-2(head)  3-&gt;4-&gt;null
+
+<ul>
+<li>prev = 1</li>
+<li>head = 2</li>
+<li>save = 3</li>
+</ul></li>
+</ul>
+
+<h5 id="往右平移指针prev-head">往右平移指针prev,head</h5>
+
+<ul>
+<li>null&lt;-1&lt;-2(prev)  3(head)-&gt;4-&gt;null
+
+<ul>
+<li>prev = 2</li>
+<li>head = 3</li>
+<li>save = 3</li>
+</ul></li>
+</ul>
+
+<h4 id="第三次循环">第三次循环</h4>
+
+<h5 id="改变指针指向-1">改变指针指向</h5>
+
+<ul>
+<li>null&lt;-1&lt;-2(prev)&lt;-3(head)  4-&gt;null
+
+<ul>
+<li>prev = 2</li>
+<li>head = 3</li>
+<li>save = 4</li>
+</ul></li>
+</ul>
+
+<h5 id="往右平移指针prev-head-1">往右平移指针prev,head</h5>
+
+<ul>
+<li>null&lt;-1&lt;-2&lt;-3(prev)  4(head)-&gt;null
+
+<ul>
+<li>prev = 3</li>
+<li>head = 4</li>
+<li>save = 4</li>
+</ul></li>
+</ul>
+
+<h4 id="第四次循环">第四次循环</h4>
+
+<h5 id="改变指针指向-2">改变指针指向</h5>
+
+<ul>
+<li>null&lt;-1&lt;-2&lt;-3(prev)&lt;-4(head) null
+
+<ul>
+<li>prev = 3</li>
+<li>head = 4</li>
+<li>save = null</li>
+</ul></li>
+</ul>
+
+<h5 id="往右平移指针prev-head-2">往右平移指针prev,head</h5>
+
+<ul>
+<li>null&lt;-1&lt;-2&lt;-3&lt;-4(prev) null(head)
+
+<ul>
+<li>prev = 4</li>
+<li>head = null</li>
+<li>save = null</li>
+</ul></li>
+</ul>
+
+<h4 id="循环结束条件">循环结束条件</h4>
+
+<p>根据第四次循环的结果，可以看到循环的终止条件就是head=null<br></p>
+
+<h4 id="最后返回的头部">最后返回的头部</h4>
+
+<p>prev就是反转后链表的头部</p>
+
+<h3 id="javascript代码实现">javascript代码实现</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">let</span> <span style="color:#a6e22e">reverseList</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">head</span>){
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">prev</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span>;
+  <span style="color:#66d9ef">while</span>(<span style="color:#a6e22e">head</span>){
+    <span style="color:#75715e">// 改变指向
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">save</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">head</span>.<span style="color:#a6e22e">next</span>;
+    <span style="color:#a6e22e">head</span>.<span style="color:#a6e22e">next</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">prev</span>;
+    <span style="color:#75715e">// 向右平移prev和head指针
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">prev</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">head</span>;
+    <span style="color:#a6e22e">head</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">save</span>;
+  }
+  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">prev</span>;
+}
+</code></pre></div>
+<h3 id="python实现">python实现</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">reverseList</span>(head):
+  prev <span style="color:#f92672">=</span> None
+  <span style="color:#66d9ef">while</span>(head):
+    <span style="color:#75715e"># 改变指向</span>
+    save <span style="color:#f92672">=</span> head<span style="color:#f92672">.</span>next
+    head<span style="color:#f92672">.</span>next <span style="color:#f92672">=</span> prev
+    <span style="color:#75715e"># 向右平移prev和head指针</span>
+    prev <span style="color:#f92672">=</span> head
+    head <span style="color:#f92672">=</span> save
+  <span style="color:#66d9ef">return</span> prev</code></pre></div>
+<h3 id="c-实现">c++实现</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c++" data-lang="c++">ListNode<span style="color:#f92672">*</span> <span style="color:#a6e22e">reverseList</span>(ListNode<span style="color:#f92672">*</span> head){
+  
+}
+</code></pre></div>
+<h2 id="递归实现">递归实现</h2>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">reverseList</span>(head):
+  <span style="color:#66d9ef">if</span> head <span style="color:#f92672">==</span> None <span style="color:#f92672">or</span> head<span style="color:#f92672">.</span>next <span style="color:#f92672">==</span> None:
+    <span style="color:#66d9ef">return</span> head
+  let new_head <span style="color:#f92672">=</span> reverseList(head<span style="color:#f92672">.</span>next)
+  head<span style="color:#f92672">.</span>next<span style="color:#f92672">.</span>next <span style="color:#f92672">=</span> head
+  head<span style="color:#f92672">.</span>next <span style="color:#f92672">=</span> null
+  <span style="color:#66d9ef">return</span> new_head</code></pre></div>
 </div>
 
   

@@ -24,21 +24,24 @@
  css盒模型
  元素如何垂直居中
  linux 权限管理
+ 数据类型
  http协议
  7层网络模型
  从输入URL到获得数据的流程
  https的原理（具体就是描述https的第三方代理机构ca）
  线程和进程的区别
- javascript是单线程的吗
+ javascript是单线程的吗，举个例子说明一下
  什么是事件流的代理
  this是什么
  0.1+0.2!=0.3为什么
  闭包
  为什么存在跨域
+ 数组你是如何去重的？
+ box-sizing
  快速排序(这个没写出来，写了一半中间有些细节忘了，要不然就成了，太可惜了，成了个备胎)
  链表反转（这个时间不够直接就没问）
- 在页面中根据数组渲染页面，然后点击每个数组的每个内容输出&amp;rdquo;hello world&amp;rdquo;（写了，但是看面试官的表情很惊讶的意思？，好像我写错了？）
-  总结 算法思想基本都会，但就是写不出来 设计模式需要加强一下</description>
+ 在页面中根据数组渲染页面，然后点击每个数组的每个内容输出&amp;rdquo;hello world&amp;rdquo;(这题主要考察编码规范)
+ 我写的是下面的代码，正好完美的躲避了错误   function render(arr){ arr.forEach(e =&amp;gt; { let li = document.</description>
     </item>
     
     <item>

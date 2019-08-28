@@ -5,10 +5,83 @@
     <link>https://mannuan.github.io/tags/%E7%88%AC%E8%99%AB/</link>
     <description>Recent content in 爬虫 on mannuan</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 06 Aug 2019 21:58:03 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 27 Aug 2019 14:38:41 +0800</lastBuildDate>
     
 	<atom:link href="https://mannuan.github.io/tags/%E7%88%AC%E8%99%AB/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>selenium</title>
+      <link>https://mannuan.github.io/post/20190827143841/</link>
+      <pubDate>Tue, 27 Aug 2019 14:38:41 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190827143841/</guid>
+      <description>selenium webDriver原理 工作流程  打开浏览器并绑定到指定端口，作为remote server client通过commandExecuter发送httpRequest给remote server remote server 根据原生的浏览器组件来转化为浏览器的本地调用
+元素定位 find_element_by_id
+ find_element_by_name
+ find_element_by_class_name
+ find_element_by_tag_name
+ find_element_by_link_text
+ find_element_by_partial_link_text
+ find_element_by_xpath 绝对定位
+ find_element_by_css_selector
+常见控件 button element.click()
+Textbox,Upload element.send_keys()
+MouseEvent double_click()
+ context_click()
+ drag_and_drop()
+ move_to_element()
+ perform()
+Dropdown下拉菜单 select_by_index()
+ select_by_value()
+ select_by_visible_text()
+Alert switch_to.alert.accept()
+ switch_to.alert.dismiss()
+ switch_to.alert.text()
+ switch_to.alert.send_keys()
+Window Driver.refresh()
+ Driver.back()
+ Driver.forward()
+ Driver.maximize_window()
+ Driver.set_window_size(100, 200)
+ Driver.</description>
+    </item>
+    
+    <item>
+      <title>pyspider</title>
+      <link>https://mannuan.github.io/post/20190827142620/</link>
+      <pubDate>Tue, 27 Aug 2019 14:26:20 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190827142620/</guid>
+      <description> pyspider 数据库 sqlite mongodb mysql redis elasticsearch fetcher引擎 phantomjs puppeteer fetcher调用客户端 tornado 消息队列 python内置队列 multiprocessing.queues queue
+高级消息队列协议 amqp
+Beanstalk import beanstalkc kombu import kombu redis消息队列 import redis 页面框架 flask 架构流程 调度器 抓取器 处理器 页面代码, 比如pyquery
+webui 可以监视这个流程
+创建任务 on_start函数 self.crawl  @config修饰符  age单位秒 priority优先级，越高越好  exetime,几秒后执行 retries,重试次数 itag, 页面标记 auto_recrawl,重爬 method params, get, url参数 data, post，传输的数据 user_agent headers  也可以使用Handler.crawl_config cookies  connect_timeout timeout allow_redirects validate_cert proxy etag last_modified fetch_type js_script load_images save taskid force_update cancel  </description>
+    </item>
+    
+    <item>
+      <title>pyquery</title>
+      <link>https://mannuan.github.io/post/20190827141725/</link>
+      <pubDate>Tue, 27 Aug 2019 14:17:25 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190827141725/</guid>
+      <description>pyquery 定义 PyQuery支持下载网页为文本，是通过Requests实现的
+导入包使用 from pyquery import PyQuery as pq pq = p(_str) 获取网页源代码 html()
+获取网页中的文字 text()
+根据指定索引号得到指定元素 eq(index)
+根据类名、id名得到指定元素 filter()
+查找嵌套元素 find()
+获取或设置属性值 attr()
+为元素添加类 addClass(value)
+判断元素是否包含给定的类 hasClass(name)
+获取子元素 children(selector=None)
+获取父元素 parents(selector=None)
+返回一个节点的拷贝 clone()
+移除节点内容 empty()
+返回后面全部的元素块 nextAll(selector=None)
+返回不匹配选择器的元素 not_(selector)</description>
+    </item>
     
     <item>
       <title>爬虫面试知识点总结</title>

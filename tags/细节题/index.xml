@@ -5,10 +5,63 @@
     <link>https://mannuan.github.io/tags/%E7%BB%86%E8%8A%82%E9%A2%98/</link>
     <description>Recent content in 细节题 on mannuan</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 21 Aug 2019 21:23:36 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 25 Aug 2019 16:34:50 +0800</lastBuildDate>
     
 	<atom:link href="https://mannuan.github.io/tags/%E7%BB%86%E8%8A%82%E9%A2%98/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>姓名排序</title>
+      <link>https://mannuan.github.io/post/20190825163450/</link>
+      <pubDate>Sun, 25 Aug 2019 16:34:50 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190825163450/</guid>
+      <description>姓名排序 时间限制：C/C++语言 3000MS；其他语言 5000MS
+内存限制：C/C++语言 131072KB；其他语言 655360KB
+题目描述： 马上就要开学了，教务处的老师拿到了新生的名单，现在他需要根据考生的姓名录入一个拼音版的新名单。
+老师录入时，需要输入姓和名(例如：ZHANG SAN，字母均为大写，姓名以空格隔开)，并且要将这些人按一定规则排序。
+排序的方式如下：
+首先，按照该姓的出现次数排序，即：姓出现次数多的人先排序
+其次，若两个人的姓出现的次数一样多（或者是同一个姓），按照原名单的顺序。
+输入 输入包括多行，每一行两个字符串，代表一个人的姓和名
+输出 输出排序后的名单
+样例输入 ZHANG SAN
+LI SI
+WANG WU
+WANG LIU
+WANG QI
+ZHANG WU
+LI WU
+样例输出 WANG WU
+WANG LIU
+WANG QI
+ZHANG SAN
+LI SI
+ZHANG WU
+LI WU
+提示 范围 输入只包含大写字母，最多10000行，每行最多50个字符
+#include&amp;lt;bits/stdc++.h&amp;gt; typedef long long ll; const int maxn = 1e4 + 5; const int INF = 0x3f3f3f3f; const int MOD = 1e9 + 7; using namespace std; struct node { string x, m; }f[maxn]; map&amp;lt;string, int&amp;gt;mp; bool cmp(node a, node b) { return mp[a.</description>
+    </item>
+    
+    <item>
+      <title>最优打字策略</title>
+      <link>https://mannuan.github.io/post/20190825161517/</link>
+      <pubDate>Sun, 25 Aug 2019 16:15:18 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190825161517/</guid>
+      <description>最优打字策略 题目描述 在英文的输入中，我们经常会遇到大小写切换的问题，频繁切换大小写会增加我们的按键次数，也会降低我们的打字效率。
+众所周知，切换大小写有两种方式，一种是按下“caps locks”，也就是大写锁定键，这样一来，之后的输入模式都会被切换。另一种是同时按下shift和需要打印的字母，可以临时切换大小写(算作按下两个键)。
+已知初始状态下，打字模式是小写，现在给出需要打印的字符串(区分大小写)，请你计算出最少需按键多少次才能打印出来。
+输入 输入第一行仅包含一个正整数n，表示字符串的长度(1&amp;lt;=n&amp;lt;=1000000)。
+输入第二行包含一个长度为n的字符串，仅包含大小写字母。
+输出 输出仅包含一个正整数，即最少的按键次数。
+样例输入
+6
+AaAAAA
+样例输出
+8
+#include&amp;lt;bits/stdc++.h&amp;gt; typedef long long ll; const int maxn = 1e3 + 5; const int INF = 0x3f3f3f3f; const int MOD = 1e9 + 7; using namespace std; int main() { int n, flag = 0, sum; string p; cin &amp;gt;&amp;gt; n &amp;gt;&amp;gt; p; sum = p.length(); for (int i = 0; i &amp;lt; p.</description>
+    </item>
     
     <item>
       <title>报文转义</title>

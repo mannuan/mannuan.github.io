@@ -16,7 +16,9 @@
       <pubDate>Sat, 24 Aug 2019 22:48:19 +0800</pubDate>
       
       <guid>https://mannuan.github.io/post/20190824224818/</guid>
-      <description> 快速排序 function sortQuick(arr, reverse=False){ if(arr.length) &amp;lt; 2: return _sort_between(arr, 0, len(arr)-1, reverse); } function _sort_between(arr, low, high, reverse){ let stack = [[low, high]]; while stack: low, high = stack.pop() pivlot = Math.random() } </description>
+      <description>快速排序 过程描述 对数组的每一个部分，分别根据base进行元素的划分
+在元素的划分过程中，需要借助两个指针i,j; 分别向后和向前移动
+javascript实现 function partion(arr, left, right){ let base = arr[left]; let i = left; let j = right; while(i&amp;lt;j){ while(arr[j]&amp;gt;=base&amp;amp;&amp;amp;i&amp;lt;j){ j--; } while(arr[i]&amp;lt;=base&amp;amp;&amp;amp;i&amp;lt;j){ i++; } let tmp = arr[i]; arr[i] = arr[j]; arr[j] = tmp; } arr[left] = arr[i]; arr[i] = base; return i; } function quickSort(arr, left, right){ if(left &amp;lt; right){ let m = partion(arr, left, right); quickSort(arr, left, m); quickSort(arr, m+1,right); } }  c++实现 # include&amp;lt;iostream&amp;gt;  # include&amp;lt;cstring&amp;gt;  # include&amp;lt;cstdlib&amp;gt;  using namespace std; int partion(int arr[], int left, int right){ int base = arr[left]; int i = left; int j = right; while(i&amp;lt;j){ while(arr[j]&amp;gt;=base&amp;amp;&amp;amp;i&amp;lt;j){ j--; } while(arr[i]&amp;lt;=base&amp;amp;&amp;amp;i&amp;lt;j){ i++; } int tmp = arr[i]; arr[i] = arr[j]; arr[j] = tmp; } arr[left] = arr[i]; arr[i] = base; return i; } void quickSort(int arr[], int left, int right){ if(left &amp;lt; right){ int m = partion(arr, left, right); quickSort(arr, left, m); quickSort(arr, m+1, right); } } int main(){ const int n = 10; int arr[n] = {0}; for(int i=0;i&amp;lt;n;i++){ arr[i] = rand() % n + 0; } for(int i=0;i&amp;lt;n;i++){ cout&amp;lt;&amp;lt; arr[i] &amp;lt;&amp;lt; &amp;#34; &amp;#34;; } cout&amp;lt;&amp;lt;endl; quickSort(arr, 0, n); for(int i=0;i&amp;lt;n;i++){ cout&amp;lt;&amp;lt; arr[i] &amp;lt;&amp;lt; &amp;#34; &amp;#34;; } cout&amp;lt;&amp;lt;endl; return 0; }  python实现 import random arr = [random.</description>
     </item>
     
     <item>

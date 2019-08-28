@@ -5,10 +5,272 @@
     <link>https://mannuan.github.io/post/</link>
     <description>Recent content in Blog on mannuan</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 25 Aug 2019 14:24:23 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 28 Aug 2019 13:02:28 +0800</lastBuildDate>
     
 	<atom:link href="https://mannuan.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>promise</title>
+      <link>https://mannuan.github.io/post/20190828130228/</link>
+      <pubDate>Wed, 28 Aug 2019 13:02:28 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190828130228/</guid>
+      <description>参考链接
+promise Promise的立即执行性 var p = new Promise(function(resolve, reject){ console.log(&amp;#34;create a promise&amp;#34;); resolve(&amp;#34;success&amp;#34;); }); console.log(&amp;#34;after new Promise&amp;#34;); p.then(function(value){ console.log(value); });  控制台输出 &amp;#34;create a promise&amp;#34; &amp;#34;after new Promise&amp;#34; &amp;#34;success&amp;#34;  总结 Promise对象表示未来某个将要发生的事件，但在创建（new）Promise时，作为Promise参数传入的函数是会被立即执行的，只是其中执行的代码可以是异步代码。有些同学会认为，当Promise对象调用then方法时，Promise接收的函数才会执行，这是错误的。因此，代码中&amp;rdquo;create a promise&amp;rdquo;先于&amp;rdquo;after new Promise&amp;rdquo;输出。
+Promise 三种状态 var p1 = new Promise(function(resolve,reject){ resolve(1); }); var p2 = new Promise(function(resolve,reject){ setTimeout(function(){ resolve(2); }, 500); }); var p3 = new Promise(function(resolve,reject){ setTimeout(function(){ reject(3); }, 500); }); console.log(p1); console.log(p2); console.log(p3); setTimeout(function(){ console.</description>
+    </item>
+    
+    <item>
+      <title>flex</title>
+      <link>https://mannuan.github.io/post/20190828095201/</link>
+      <pubDate>Wed, 28 Aug 2019 09:52:01 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190828095201/</guid>
+      <description>参考链接
+flex 定义  Flex 是 Flexible Box 的缩写，意为&amp;rdquo;弹性布局&amp;rdquo;，用来为盒状模型提供最大的灵活性。 任何一个容器都可以指定为 Flex 布局。  .box{ display: flex; }  行内元素也可以使用 Flex 布局。  .box{ display: inline-flex; }  Webkit 内核的浏览器，必须加上-webkit前缀。  .box{ display: -webkit-flex; /* Safari */ display: flex; } 注意 设为 Flex 布局以后，子元素的float、clear和vertical-align属性将失效。
+基本概念 flex container flex容器就是采用flex布局的元素
+flex item flex项目
+main axis 水平主轴
+cross axis 垂直主轴
+main start main axis的开始位置与边框的交叉点
+main end main axis的结束位置
+cross start cross axis的开始位置
+cross end cross axis的结束位置</description>
+    </item>
+    
+    <item>
+      <title>项目分配</title>
+      <link>https://mannuan.github.io/post/20190827212757/</link>
+      <pubDate>Tue, 27 Aug 2019 21:27:58 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190827212757/</guid>
+      <description> 项目分配 时间限制：C/C++语言 1000MS；其他语言 3000MS 内存限制：C/C++语言 65536KB；其他语言 589824KB
+题目描述： 某公司雇有N名员工，每名员工可以负责多个项目，但一个项目只能交由一名员工负责。现在该公司接到M个项目，令A_{i,j}表示第i名员工负责第j个项目所带来的收益，那么如果项目分配得当，总收益最大是多少？
+输入 第一行包含两个整数N和M，1≤N，M≤1000。
+接下来N行，每行包含M个整数，第i行的第j个整数表示A{i,j}，1≤A{i,j}≤1000。
+输出 输出总收益的最大值。
+样例输入 3 3
+1 3 3
+2 2 2
+3 2 1
+样例输出 9
+# include&amp;lt;iostream&amp;gt;  using namespace std; int n,m,cost =0; int x[1001],c[1001][1001]; void work(int i, int count){ if(i&amp;gt;n&amp;amp;&amp;amp;count&amp;gt;cost){ cost=count; return ; } if(count&amp;gt;cost){ for(int j=1;j&amp;lt;=m;j++){ if(x[j]==0){ x[j] = 1; work(i+1, count+c[i][j]); x[j] =0; } } } } int main(){ cin&amp;gt;&amp;gt;n&amp;gt;&amp;gt;m; for(int i=1;i&amp;lt;=n;i++){ for(int j=1;j&amp;lt;=m;j++){ cin&amp;gt;&amp;gt;c[i][j]; c[i][j] = -c[i][j]; x[j] = 0; } cost+=c[i][i]; } work(1, 0); cout&amp;lt;&amp;lt;-cost&amp;lt;&amp;lt;endl; return 0; } </description>
+    </item>
+    
+    <item>
+      <title>链表</title>
+      <link>https://mannuan.github.io/post/20190827152635/</link>
+      <pubDate>Tue, 27 Aug 2019 15:26:35 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190827152635/</guid>
+      <description>链表 定义 本质是线性表</description>
+    </item>
+    
+    <item>
+      <title>jquery</title>
+      <link>https://mannuan.github.io/post/20190827144836/</link>
+      <pubDate>Tue, 27 Aug 2019 14:48:36 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190827144836/</guid>
+      <description> jquery  链接 链接  </description>
+    </item>
+    
+    <item>
+      <title>selenium</title>
+      <link>https://mannuan.github.io/post/20190827143841/</link>
+      <pubDate>Tue, 27 Aug 2019 14:38:41 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190827143841/</guid>
+      <description>selenium webDriver原理 工作流程  打开浏览器并绑定到指定端口，作为remote server client通过commandExecuter发送httpRequest给remote server remote server 根据原生的浏览器组件来转化为浏览器的本地调用
+元素定位 find_element_by_id
+ find_element_by_name
+ find_element_by_class_name
+ find_element_by_tag_name
+ find_element_by_link_text
+ find_element_by_partial_link_text
+ find_element_by_xpath 绝对定位
+ find_element_by_css_selector
+常见控件 button element.click()
+Textbox,Upload element.send_keys()
+MouseEvent double_click()
+ context_click()
+ drag_and_drop()
+ move_to_element()
+ perform()
+Dropdown下拉菜单 select_by_index()
+ select_by_value()
+ select_by_visible_text()
+Alert switch_to.alert.accept()
+ switch_to.alert.dismiss()
+ switch_to.alert.text()
+ switch_to.alert.send_keys()
+Window Driver.refresh()
+ Driver.back()
+ Driver.forward()
+ Driver.maximize_window()
+ Driver.set_window_size(100, 200)
+ Driver.</description>
+    </item>
+    
+    <item>
+      <title>pyspider</title>
+      <link>https://mannuan.github.io/post/20190827142620/</link>
+      <pubDate>Tue, 27 Aug 2019 14:26:20 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190827142620/</guid>
+      <description> pyspider 数据库 sqlite mongodb mysql redis elasticsearch fetcher引擎 phantomjs puppeteer fetcher调用客户端 tornado 消息队列 python内置队列 multiprocessing.queues queue
+高级消息队列协议 amqp
+Beanstalk import beanstalkc kombu import kombu redis消息队列 import redis 页面框架 flask 架构流程 调度器 抓取器 处理器 页面代码, 比如pyquery
+webui 可以监视这个流程
+创建任务 on_start函数 self.crawl  @config修饰符  age单位秒 priority优先级，越高越好  exetime,几秒后执行 retries,重试次数 itag, 页面标记 auto_recrawl,重爬 method params, get, url参数 data, post，传输的数据 user_agent headers  也可以使用Handler.crawl_config cookies  connect_timeout timeout allow_redirects validate_cert proxy etag last_modified fetch_type js_script load_images save taskid force_update cancel  </description>
+    </item>
+    
+    <item>
+      <title>pyquery</title>
+      <link>https://mannuan.github.io/post/20190827141725/</link>
+      <pubDate>Tue, 27 Aug 2019 14:17:25 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190827141725/</guid>
+      <description>pyquery 定义 PyQuery支持下载网页为文本，是通过Requests实现的
+导入包使用 from pyquery import PyQuery as pq pq = p(_str) 获取网页源代码 html()
+获取网页中的文字 text()
+根据指定索引号得到指定元素 eq(index)
+根据类名、id名得到指定元素 filter()
+查找嵌套元素 find()
+获取或设置属性值 attr()
+为元素添加类 addClass(value)
+判断元素是否包含给定的类 hasClass(name)
+获取子元素 children(selector=None)
+获取父元素 parents(selector=None)
+返回一个节点的拷贝 clone()
+移除节点内容 empty()
+返回后面全部的元素块 nextAll(selector=None)
+返回不匹配选择器的元素 not_(selector)</description>
+    </item>
+    
+    <item>
+      <title>mongodb</title>
+      <link>https://mannuan.github.io/post/20190827110733/</link>
+      <pubDate>Tue, 27 Aug 2019 11:07:33 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190827110733/</guid>
+      <description>mongodb 定义  非关系型数据库（没有特定的表结构），采用BSON存储文档数据 BSON( Binary Serialized Document Format) 采用c++编写  优点  面向文档存储，以json格式的文档存储数据 扩展性好（可以后续添加字段） 自动分片 查询功能丰富 即时更新  基本概念 字段 字段(field)对应列(column)
+文档 数据库的基本单元，类似于关系型数据库的行
+集合 一组文档，类似于关系型数据库中的表
+数据库 每个数据库都有自己的集合和权限
+ObjectID 时间戳(4字节，记录文档创建时间)+客户端ID(3字节，用来标识不同客户端)+客户端进程ID(2字节，用来区分不同进程创建的ObjectID)+自增字段(3字节，确保同一秒产生的ObjectID的唯一性)。
+相当于数据库中的主键
+命令行工具 javascriptshell
+数据类型 null 表示空值或未定义的对象
+布尔值 32位整数 shell不支持，默认转为64位浮点数
+64位整数 shell不支持，默认转为64位浮点数
+64位浮点数 shell使用的数据类型
+字符串 utf-8字符串
+符号 shell不支持, 自动转为字符串
+ObjectID 12个字节
+日期 从标准纪元开始的毫秒数
+正则表达式 遵循javascript的正则表达式语法
+代码 可以包含javascript代码
+undefined 数组 值的集合或列表
+内嵌文档 最大值 BSON包括一个特殊类型，表示可能的最大值。shell中没有这个类型。
+最小值 BSON包括一个特殊类型，表示可能的最小值。shell中没有这个类型。
+具体使用 切换数据库 use 数据库名称
+显示数据库列表 show dbs</description>
+    </item>
+    
+    <item>
+      <title>设计模式</title>
+      <link>https://mannuan.github.io/post/20190826224619/</link>
+      <pubDate>Mon, 26 Aug 2019 22:46:19 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190826224619/</guid>
+      <description> 设计模式 javascript中的设计模式 工厂模式 构造函数模式 考虑到在 ECMAScript 中无法创建类，开发人员 就发明了一种函数，用函数来封装以特定接口创建对象的细节
+原型模式 用一个已经创建的实例作为原型，通过复制该原型对象来创建一个和原型相同或相似的新对象。
+组合模式 动态原型模式 寄生构造函数模式 稳妥构造函数模式 其他常用设计模式 单例模式  单例类只有一个实例对象； 该单例对象必须由单例类自行创建； 单例类对外提供一个访问该单例的全局访问点；  享元模式 优点 相同对象只要保存一份，这降低了系统中对象的数量，从而降低了系统中细粒度对象给内存带来的压力。
+缺点  为了使对象可以共享，需要将一些不能共享的状态外部化，这将增加程序的复杂性。 读取享元模式的外部状态会使得运行时间稍微变长。  装饰模式 优点  采用装饰模式扩展对象的功能比采用继承方式更加灵活。 可以设计出多个不同的具体装饰类，创造出多个不同行为的组合。
+缺点 装饰模式增加了许多子类，如果过度使用会使程序变得很复杂。
+  代理模式 优点  代理模式在客户端与目标对象之间起到一个中介作用和保护目标对象的作用； 代理对象可以扩展目标对象的功能； 代理模式能将客户端与目标对象分离，在一定程度上降低了系统的耦合度；
+缺点 在客户端和目标对象之间增加一个代理对象，会造成请求处理速度变慢；
+ 增加了系统的复杂度；
+  观察者模式 优点  降低了目标与观察者之间的耦合关系，两者之间是抽象耦合关系。 目标与观察者之间建立了一套触发机制。
+缺点 目标与观察者之间的依赖关系并没有完全解除，而且有可能出现循环引用。
+ 当观察者对象很多时，通知的发布会花费很多时间，影响程序的效率。
+  适配器模式 优点  客户端通过适配器可以透明地调用目标接口。 复用了现存的类，程序员不需要修改原有代码而重用现有的适配者类。 将目标类和适配者类解耦，解决了目标类和适配者类接口不一致的问题。  缺点  对类适配器来说，更换适配器的实现过程比较复杂  </description>
+    </item>
+    
+    <item>
+      <title>数组去重</title>
+      <link>https://mannuan.github.io/post/20190826170328/</link>
+      <pubDate>Mon, 26 Aug 2019 17:03:28 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190826170328/</guid>
+      <description>数组去重 最简洁的做法 function unique(arr){ return [...new Set(arr)]; }  对象属性的唯一性 function unique(arr){ let res = []; let obj = new Object(); arr.forEach(e =&amp;gt; { if(!obj[e]){ obj[e] = 1; res.push(e); } }); return res; }  一般的做法 function unique(arr){ let seen = []; arr.forEach(e =&amp;gt; { if(seen.indexOf(e) &amp;lt; 0){ seen.push(e); } }); return seen; } console.log(unique([1,1,1,1,3,4]));  python实现-普通做法 def unique(arr): seen = [] for i in arr: if i not in seen: seen.</description>
+    </item>
+    
+    <item>
+      <title>判断一个单词是否是回文</title>
+      <link>https://mannuan.github.io/post/20190826162047/</link>
+      <pubDate>Mon, 26 Aug 2019 16:20:48 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190826162047/</guid>
+      <description> 判断一个单词是否是回文  回文是指把相同的词汇或句子，在下文中调换位置或颠倒过来，产生首尾回环的情趣，叫做回文，也叫回环。比如 mamam redivider.
+很多人拿到这样的题目非常容易想到用for 将字符串颠倒字母顺序然后匹配就行了。其实重要的考察的就是对于reverse的实现。其实我们可以利用现成的函数，将字符串转换成数组，这个思路很重要，我们可以拥有更多的自由度去进行字符串的一些操作。
+ function isHuiWen(str){ return str == str.split(&amp;#39;&amp;#39;).reverse().join(&amp;#39;&amp;#39;); } def isHuiWen(_str): return _str == &amp;#34;&amp;#34;.join(_str.split()[::-1])# include&amp;lt;iostream&amp;gt;  # include&amp;lt;cstring&amp;gt;  # include&amp;lt;cstdlib&amp;gt;  using namespace std; int main(){ string str; bool flag = true; cin&amp;gt;&amp;gt;str; for(int i=0,j=str.size()-1;i&amp;lt;str.size();i++, j--){ if(str[i] != str[j]){ flag = false; } } if(flag){ cout&amp;lt;&amp;lt;&amp;#34;是回文&amp;#34;&amp;lt;&amp;lt;endl; }else{ cout&amp;lt;&amp;lt;&amp;#34;不是回文&amp;#34;&amp;lt;&amp;lt;endl; } return 0; } </description>
+    </item>
+    
+    <item>
+      <title>姓名排序</title>
+      <link>https://mannuan.github.io/post/20190825163450/</link>
+      <pubDate>Sun, 25 Aug 2019 16:34:50 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190825163450/</guid>
+      <description>姓名排序 时间限制：C/C++语言 3000MS；其他语言 5000MS
+内存限制：C/C++语言 131072KB；其他语言 655360KB
+题目描述： 马上就要开学了，教务处的老师拿到了新生的名单，现在他需要根据考生的姓名录入一个拼音版的新名单。
+老师录入时，需要输入姓和名(例如：ZHANG SAN，字母均为大写，姓名以空格隔开)，并且要将这些人按一定规则排序。
+排序的方式如下：
+首先，按照该姓的出现次数排序，即：姓出现次数多的人先排序
+其次，若两个人的姓出现的次数一样多（或者是同一个姓），按照原名单的顺序。
+输入 输入包括多行，每一行两个字符串，代表一个人的姓和名
+输出 输出排序后的名单
+样例输入 ZHANG SAN
+LI SI
+WANG WU
+WANG LIU
+WANG QI
+ZHANG WU
+LI WU
+样例输出 WANG WU
+WANG LIU
+WANG QI
+ZHANG SAN
+LI SI
+ZHANG WU
+LI WU
+提示 范围 输入只包含大写字母，最多10000行，每行最多50个字符
+#include&amp;lt;bits/stdc++.h&amp;gt; typedef long long ll; const int maxn = 1e4 + 5; const int INF = 0x3f3f3f3f; const int MOD = 1e9 + 7; using namespace std; struct node { string x, m; }f[maxn]; map&amp;lt;string, int&amp;gt;mp; bool cmp(node a, node b) { return mp[a.</description>
+    </item>
+    
+    <item>
+      <title>最优打字策略</title>
+      <link>https://mannuan.github.io/post/20190825161517/</link>
+      <pubDate>Sun, 25 Aug 2019 16:15:18 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190825161517/</guid>
+      <description>最优打字策略 题目描述 在英文的输入中，我们经常会遇到大小写切换的问题，频繁切换大小写会增加我们的按键次数，也会降低我们的打字效率。
+众所周知，切换大小写有两种方式，一种是按下“caps locks”，也就是大写锁定键，这样一来，之后的输入模式都会被切换。另一种是同时按下shift和需要打印的字母，可以临时切换大小写(算作按下两个键)。
+已知初始状态下，打字模式是小写，现在给出需要打印的字符串(区分大小写)，请你计算出最少需按键多少次才能打印出来。
+输入 输入第一行仅包含一个正整数n，表示字符串的长度(1&amp;lt;=n&amp;lt;=1000000)。
+输入第二行包含一个长度为n的字符串，仅包含大小写字母。
+输出 输出仅包含一个正整数，即最少的按键次数。
+样例输入
+6
+AaAAAA
+样例输出
+8
+#include&amp;lt;bits/stdc++.h&amp;gt; typedef long long ll; const int maxn = 1e3 + 5; const int INF = 0x3f3f3f3f; const int MOD = 1e9 + 7; using namespace std; int main() { int n, flag = 0, sum; string p; cin &amp;gt;&amp;gt; n &amp;gt;&amp;gt; p; sum = p.length(); for (int i = 0; i &amp;lt; p.</description>
+    </item>
     
     <item>
       <title>markdown书写规范</title>
@@ -34,7 +296,9 @@
       <pubDate>Sat, 24 Aug 2019 23:04:03 +0800</pubDate>
       
       <guid>https://mannuan.github.io/post/20190824230403/</guid>
-      <description> 反转链表 </description>
+      <description>反转链表 参考视频地址 视频地址
+非递归实现 过程描述 需要两个指针prev, head在链表中进行移动；另外还需要一个指针save,用来保存head节点的下一个节点
+举例说明 初始化的时候  prev 1(head)-&amp;gt;2-&amp;gt;3-&amp;gt;4-&amp;gt;null  prev = null head = 1 save = null   第一次循环 改变指针的指向  prev&amp;lt;-1(head) 2-&amp;gt;3-&amp;gt;4-&amp;gt;null  prev = null head = 1 save = 2   往右平移prev,head  null&amp;lt;-1(prev) 2(head)-&amp;gt;3-&amp;gt;4-&amp;gt;null  prev = 1 head = 2 save = 2   第二次循环 改变指针指向  null&amp;lt;-1(prev)&amp;lt;-2(head) 3-&amp;gt;4-&amp;gt;null  prev = 1 head = 2 save = 3   往右平移指针prev,head  null&amp;lt;-1&amp;lt;-2(prev) 3(head)-&amp;gt;4-&amp;gt;null  prev = 2 head = 3 save = 3   第三次循环 改变指针指向  null&amp;lt;-1&amp;lt;-2(prev)&amp;lt;-3(head) 4-&amp;gt;null  prev = 2 head = 3 save = 4   往右平移指针prev,head  null&amp;lt;-1&amp;lt;-2&amp;lt;-3(prev) 4(head)-&amp;gt;null  prev = 3 head = 4 save = 4   第四次循环 改变指针指向  null&amp;lt;-1&amp;lt;-2&amp;lt;-3(prev)&amp;lt;-4(head) null  prev = 3 head = 4 save = null   往右平移指针prev,head  null&amp;lt;-1&amp;lt;-2&amp;lt;-3&amp;lt;-4(prev) null(head)  prev = 4 head = null save = null   循环结束条件 根据第四次循环的结果，可以看到循环的终止条件就是head=null</description>
     </item>
     
     <item>
@@ -43,7 +307,7 @@
       <pubDate>Sat, 24 Aug 2019 23:00:46 +0800</pubDate>
       
       <guid>https://mannuan.github.io/post/20190824230046/</guid>
-      <description> 大数相加 </description>
+      <description> 大数相加 javascript实现 function sumBigNumber(a, b) { var res = &amp;#39;&amp;#39;, temp = 0; a = a.split(&amp;#39;&amp;#39;); b = b.split(&amp;#39;&amp;#39;); while (a.length || b.length || temp) { temp += ~~a.pop() + ~~b.pop(); res = (temp % 10) + res; temp = temp &amp;gt; 9; } return res.replace(/^0+/, &amp;#39;&amp;#39;); } </description>
     </item>
     
     <item>
@@ -52,7 +316,9 @@
       <pubDate>Sat, 24 Aug 2019 22:48:19 +0800</pubDate>
       
       <guid>https://mannuan.github.io/post/20190824224818/</guid>
-      <description> 快速排序 function sortQuick(arr, reverse=False){ if(arr.length) &amp;lt; 2: return _sort_between(arr, 0, len(arr)-1, reverse); } function _sort_between(arr, low, high, reverse){ let stack = [[low, high]]; while stack: low, high = stack.pop() pivlot = Math.random() } </description>
+      <description>快速排序 过程描述 对数组的每一个部分，分别根据base进行元素的划分
+在元素的划分过程中，需要借助两个指针i,j; 分别向后和向前移动
+javascript实现 function partion(arr, left, right){ let base = arr[left]; let i = left; let j = right; while(i&amp;lt;j){ while(arr[j]&amp;gt;=base&amp;amp;&amp;amp;i&amp;lt;j){ j--; } while(arr[i]&amp;lt;=base&amp;amp;&amp;amp;i&amp;lt;j){ i++; } let tmp = arr[i]; arr[i] = arr[j]; arr[j] = tmp; } arr[left] = arr[i]; arr[i] = base; return i; } function quickSort(arr, left, right){ if(left &amp;lt; right){ let m = partion(arr, left, right); quickSort(arr, left, m); quickSort(arr, m+1,right); } }  c++实现 # include&amp;lt;iostream&amp;gt;  # include&amp;lt;cstring&amp;gt;  # include&amp;lt;cstdlib&amp;gt;  using namespace std; int partion(int arr[], int left, int right){ int base = arr[left]; int i = left; int j = right; while(i&amp;lt;j){ while(arr[j]&amp;gt;=base&amp;amp;&amp;amp;i&amp;lt;j){ j--; } while(arr[i]&amp;lt;=base&amp;amp;&amp;amp;i&amp;lt;j){ i++; } int tmp = arr[i]; arr[i] = arr[j]; arr[j] = tmp; } arr[left] = arr[i]; arr[i] = base; return i; } void quickSort(int arr[], int left, int right){ if(left &amp;lt; right){ int m = partion(arr, left, right); quickSort(arr, left, m); quickSort(arr, m+1, right); } } int main(){ const int n = 10; int arr[n] = {0}; for(int i=0;i&amp;lt;n;i++){ arr[i] = rand() % n + 0; } for(int i=0;i&amp;lt;n;i++){ cout&amp;lt;&amp;lt; arr[i] &amp;lt;&amp;lt; &amp;#34; &amp;#34;; } cout&amp;lt;&amp;lt;endl; quickSort(arr, 0, n); for(int i=0;i&amp;lt;n;i++){ cout&amp;lt;&amp;lt; arr[i] &amp;lt;&amp;lt; &amp;#34; &amp;#34;; } cout&amp;lt;&amp;lt;endl; return 0; }  python实现 import random arr = [random.</description>
     </item>
     
     <item>
@@ -69,21 +335,24 @@
  css盒模型
  元素如何垂直居中
  linux 权限管理
+ 数据类型
  http协议
  7层网络模型
  从输入URL到获得数据的流程
  https的原理（具体就是描述https的第三方代理机构ca）
  线程和进程的区别
- javascript是单线程的吗
+ javascript是单线程的吗，举个例子说明一下
  什么是事件流的代理
  this是什么
  0.1+0.2!=0.3为什么
  闭包
  为什么存在跨域
+ 数组你是如何去重的？
+ box-sizing
  快速排序(这个没写出来，写了一半中间有些细节忘了，要不然就成了，太可惜了，成了个备胎)
  链表反转（这个时间不够直接就没问）
- 在页面中根据数组渲染页面，然后点击每个数组的每个内容输出&amp;rdquo;hello world&amp;rdquo;（写了，但是看面试官的表情很惊讶的意思？，好像我写错了？）
-  总结 算法思想基本都会，但就是写不出来 设计模式需要加强一下</description>
+ 在页面中根据数组渲染页面，然后点击每个数组的每个内容输出&amp;rdquo;hello world&amp;rdquo;(这题主要考察编码规范)
+ 我写的是下面的代码，正好完美的躲避了错误   function render(arr){ arr.forEach(e =&amp;gt; { let li = document.</description>
     </item>
     
     <item>
@@ -92,7 +361,7 @@
       <pubDate>Fri, 23 Aug 2019 22:04:35 +0800</pubDate>
       
       <guid>https://mannuan.github.io/post/20190823220435/</guid>
-      <description>生命周期 图解 实例创建过程 创建一个实例 new Vue()  init(初始化)  beforeCreate()
+      <description> 生命周期 图解 实例创建过程 创建一个实例 new Vue()  init(初始化)  beforeCreate()
 injections和reactivity created()
    在beforeCreate的时候不可以修改data数据，最早在created中添加一些行为
  在created完成以后，它会去判断instance(实例)中是否含有&amp;rdquo;el&amp;rdquo;option(选项)，如果没有的话，它会调用vm.$mount(el)这个方法，然后执行下一步；如果有的话，直接进入下一步。接下来他会判断是否含有“template”这个选项，如果有的话，他会把template解析成一个render function, 这是一个template编译的过程，结果是解析成功了render函数：
@@ -100,7 +369,8 @@ render (h) { return h(&amp;#39;div&amp;#39;, {}, this.text) }   render函数中�
  使用render函数的结果和我们之前使用template解析出来的结果是一样的。render函数是发生在beforeMount和mounted之间的。也就是说在beforeMount的时候，$el还是我们之前写的html中的节点，然后到mounted的时候，它就把渲染出来的内容挂载到了DOM节点上。
 在使用.vue文件开发的过程中，我们写的template模板，在经过了vue-loader的处理之后，就变成了render function, 最终放到了vue-loader解析过的文件里面。这样的好处就是：我们在在页面上执行vue代码的时候，效率高。
 beforeMount在有了render function的时候才会执行，当执行完render function之后，就会调用mounted这个钩子，在mounted挂载完毕以后，这个实力算是初步创建好了。
-后面的钩子函数都是需要外部的触发才会执行。比如数据的变化，会调用beforeUpdate,然后进过Virtual DOM，最后updated更新完毕。当组件</description>
+后面的钩子函数都是需要外部的触发才会执行。比如数据的变化，会调用beforeUpdate,然后进过Virtual DOM，最后updated更新完毕。当组件
+ vue的双向数据绑定  Object.defineProperty() 观察者模式 让双向绑定更有效率 一对多的模式  一：改了一个地方 多：页面凡是用了数据的地方都更新  数据劫持，就是通过defineProperty()   </description>
     </item>
     
     <item>
@@ -1106,7 +1376,7 @@ var num = [1,5,6,10]; for (var i = 0; i &amp;lt; num.length; i++) { console.log(
       <pubDate>Mon, 08 Jul 2019 14:18:34 +0800</pubDate>
       
       <guid>https://mannuan.github.io/post/20190708141834/</guid>
-      <description>1、UDP 1.1、数据包格式   源端口号(16位) 目的端口号(16位)    UDP长度(16位) UDP校验和(16位)   数据    1.2、特点  沟通简单。不需要一肚子花花肠子(大量的数据结构、处理逻辑、包头字段)。前提是它相信网络世界是美好的，秉承性善论，相信网络通路默认就是很容易送达的，不容易被丢弃的。 轻信他人。它不会建立连接，虽然有端口号，但是监听在这个地方，谁都可以传给他数据，他也可以传给任何人数据，甚至可以同时传给多个人数据。 愣头青。做事不懂权变。不知道什么时候该坚持，什么时候该退让。它不会根据网络的情况进行发包的拥塞控制，无论网络丢包丢成啥样了，它该怎么发还怎么发。  1.3、使用场景  需要资源少，在网络情况比较好的内网，或者对于丢包不敏感的应用。这很好理解，就像如果你是领导，你会让你们组刚毕业的小朋友去做一些没有那么难的项目，打一些没有那么难的客户，或者做一些失败了也能忍受的实验性项目。 不需要一对一沟通，建立连接，而是可以广播的应用。咱们小时候人都很简单，大家在班级里面，谁成绩好，谁写作好，应该表扬谁惩罚谁，谁得几个小红花都是当着全班的面讲的，公平公正公开。长大了人心复杂了，薪水、奖金要背靠背，和员工一对一沟通。 需要处理速度快，时延低，可以容忍少数丢包，但是要求即便网络拥塞，也毫不退缩，一往无前的时候。记得曾国藩建立湘军的时候，专门招出生牛犊不怕虎的新兵，而不用那些“老油条”的八旗 兵，就是因为八旗兵经历的事情多，遇到敌军不敢舍死忘生。  TCP三次握手 握手过程   SYN(Synchronize sequence numbers): TCP首部中的同步序号标志 ACK(Acknowledgement): 确认字符      时间段 客户端 服务端   活动 状态 活动 状态       CLOSED  CLOSED     CLOSED  LISTEN    &amp;rarr;   第一次握手 主动发起连接SYN SYN-SENT 收到发起的连接 SYN-RCVD   &amp;larr;  第二次握手 收到SYN和ACK SYN_SENT 返回SYN并ACK客户端的SYN SYN_RCVD    &amp;rarr;   第三次握手 发送ACK的ACK ESTABLISHED 收到客户端的ACK ESTABLISHED    为什么不是两次握手？  A为客户端，B为服务端</description>
+      <description>UDP和TCP协议 1、UDP 1.1、数据包格式   源端口号(16位) 目的端口号(16位)    UDP长度(16位) UDP校验和(16位)   数据    1.2、特点  沟通简单。不需要一肚子花花肠子(大量的数据结构、处理逻辑、包头字段)。前提是它相信网络世界是美好的，秉承性善论，相信网络通路默认就是很容易送达的，不容易被丢弃的。 轻信他人。它不会建立连接，虽然有端口号，但是监听在这个地方，谁都可以传给他数据，他也可以传给任何人数据，甚至可以同时传给多个人数据。 愣头青。做事不懂权变。不知道什么时候该坚持，什么时候该退让。它不会根据网络的情况进行发包的拥塞控制，无论网络丢包丢成啥样了，它该怎么发还怎么发。  1.3、使用场景  需要资源少，在网络情况比较好的内网，或者对于丢包不敏感的应用。这很好理解，就像如果你是领导，你会让你们组刚毕业的小朋友去做一些没有那么难的项目，打一些没有那么难的客户，或者做一些失败了也能忍受的实验性项目。 不需要一对一沟通，建立连接，而是可以广播的应用。咱们小时候人都很简单，大家在班级里面，谁成绩好，谁写作好，应该表扬谁惩罚谁，谁得几个小红花都是当着全班的面讲的，公平公正公开。长大了人心复杂了，薪水、奖金要背靠背，和员工一对一沟通。 需要处理速度快，时延低，可以容忍少数丢包，但是要求即便网络拥塞，也毫不退缩，一往无前的时候。记得曾国藩建立湘军的时候，专门招出生牛犊不怕虎的新兵，而不用那些“老油条”的八旗 兵，就是因为八旗兵经历的事情多，遇到敌军不敢舍死忘生。  TCP三次握手 握手过程   SYN(Synchronize sequence numbers): TCP首部中的同步序号标志 ACK(Acknowledgement): 确认字符      时间段 客户端 服务端   活动 状态 活动 状态       CLOSED  CLOSED     CLOSED  LISTEN    &amp;rarr;   第一次握手 主动发起连接SYN SYN-SENT 收到发起的连接 SYN-RCVD   &amp;larr;  第二次握手 收到SYN和ACK SYN_SENT 返回SYN并ACK客户端的SYN SYN_RCVD    &amp;rarr;   第三次握手 发送ACK的ACK ESTABLISHED 收到客户端的ACK ESTABLISHED    为什么不是两次握手？  A为客户端，B为服务端</description>
     </item>
     
     <item>

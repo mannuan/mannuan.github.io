@@ -5,10 +5,21 @@
     <link>https://mannuan.github.io/tags/javascript/</link>
     <description>Recent content in javascript on mannuan</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 17 Jul 2019 08:43:21 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 28 Aug 2019 13:02:28 +0800</lastBuildDate>
     
 	<atom:link href="https://mannuan.github.io/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>promise</title>
+      <link>https://mannuan.github.io/post/20190828130228/</link>
+      <pubDate>Wed, 28 Aug 2019 13:02:28 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190828130228/</guid>
+      <description>参考链接
+promise Promise的立即执行性 var p = new Promise(function(resolve, reject){ console.log(&amp;#34;create a promise&amp;#34;); resolve(&amp;#34;success&amp;#34;); }); console.log(&amp;#34;after new Promise&amp;#34;); p.then(function(value){ console.log(value); });  控制台输出 &amp;#34;create a promise&amp;#34; &amp;#34;after new Promise&amp;#34; &amp;#34;success&amp;#34;  总结 Promise对象表示未来某个将要发生的事件，但在创建（new）Promise时，作为Promise参数传入的函数是会被立即执行的，只是其中执行的代码可以是异步代码。有些同学会认为，当Promise对象调用then方法时，Promise接收的函数才会执行，这是错误的。因此，代码中&amp;rdquo;create a promise&amp;rdquo;先于&amp;rdquo;after new Promise&amp;rdquo;输出。
+Promise 三种状态 var p1 = new Promise(function(resolve,reject){ resolve(1); }); var p2 = new Promise(function(resolve,reject){ setTimeout(function(){ resolve(2); }, 500); }); var p3 = new Promise(function(resolve,reject){ setTimeout(function(){ reject(3); }, 500); }); console.log(p1); console.log(p2); console.log(p3); setTimeout(function(){ console.</description>
+    </item>
     
     <item>
       <title>单链表</title>
