@@ -1,0 +1,1381 @@
+<!DOCTYPE html>
+<html lang='en'><head>
+  <meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='description' content='常见业务题总结  BOM navigator 了解  CSS  link和@import引入CSS的区别 less和sass掌握程度   ES6  ES6里头的箭头函数的this对象与其他的有啥区别
+promise   cookie  介绍一下cookie,localstorage,sessionstorage,session cookie和session有什么区别 Cookie 是否会被覆盖，localStorage是否会被覆盖 如果页面初始载入的时候把ajax请求返回的数据存在localStorage里面，然后每次调用的时候去localStorage里面取数，是否可行 Cookie跨域请求能不能带上  三者共同点：都是保存在浏览器端，且同源的。
+区别:
+1、cookie在浏览器和服务器间来回传递。而sessionStorage和localStorage不会自动把数据发给服务器，仅在本地保存
+2、存储大小限制也不同，cookie数据不能超过4k，sessionStorage和localStorage 但比cookie大得多，可以达到5M
+3、数据有效期不同，sessionStorage：仅在当前浏览器窗口关闭前有效，自然也就不可能持久保持；localStorage：始终有效，窗口或浏览器关闭也一直保存，因此用作持久数据；cookie只在设置的cookie过期时间之前一直有效，即使窗口或浏览器关闭
+4、作用域不同，sessionStorage不在不同的浏览器窗口中共享，即使是同一个页面(即数据不共享)；localStorage 在所有同源窗口中都是共享的；cookie也是在所有同源窗口中都是共享的( 即数据共享 )。
+ 盒子模型  http的头部 HTTP请求头  cookie在哪个里面,url在哪里面
+HTTP响应头 HTTP Response的Header里面都有些啥
+HTTP状态码 HTTP状态码列表   状态码 状态码英文名称 中文描述   100 Continue 继续。客户端应继续其请求   101 Switching Protocols 切换协议。服务器根据客户端的请求切换协议。只能切换到更高级的协议，例如，切换到HTTP的新版本协议      200 OK 请求成功。一般用于GET与POST请求   201 Created 已创建。成功请求并创建了新的资源   202 Accepted 已接受。已经接受请求，但未处理完成   203 Non-Authoritative Information 非授权信息。请求成功。但返回的meta信息不在原始的服务器，而是一个副本   204 No Content 无内容。服务器成功处理，但未返回内容。在未更新网页的情况下，可确保浏览器继续显示当前文档   205 Reset Content 重置内容。服务器处理成功，用户终端（例如：浏览器）应重置文档视图。可通过此返回码清除浏览器的表单域   206 Partial Content 部分内容。服务器成功处理了部分GET请求      300 Multiple Choices 多种选择。请求的资源可包括多个位置，相应可返回一个资源特征与地址的列表用于用户终端（例如：浏览器）选择   301 Moved Permanently 永久移动。请求的资源已被永久的移动到新URI，返回信息会包括新的URI，浏览器会自动定向到新URI。今后任何新的请求都应使用新的URI代替   302 Found 临时移动。与301类似。但资源只是临时被移动。客户端应继续使用原有URI   303 See Other 查看其它地址。与301类似。使用GET和POST请求查看   304 Not Modified 未修改。所请求的资源未修改，服务器返回此状态码时，不会返回任何资源。客户端通常会缓存访问过的资源，通过提供一个头信息指出客户端希望只返回在指定日期之后修改的资源   305 Use Proxy 使用代理。所请求的资源必须通过代理访问   306 Unused 已经被废弃的HTTP状态码   307 Temporary Redirect 临时重定向。与302类似。使用GET请求重定向      400 Bad Request 客户端请求的语法错误，服务器无法理解   401 Unauthorized 请求要求用户的身份认证   402 Payment Required 保留，将来使用   403 Forbidden 服务器理解请求客户端的请求，但是拒绝执行此请求   404 Not Found 服务器无法根据客户端的请求找到资源（网页）。通过此代码，网站设计人员可设置&#34;'>
+<meta name='theme-color' content='#FFFFFF'>
+
+<meta property='og:title' content='常见业务题总结 • mannuan'>
+<meta property='og:description' content='常见业务题总结  BOM navigator 了解  CSS  link和@import引入CSS的区别 less和sass掌握程度   ES6  ES6里头的箭头函数的this对象与其他的有啥区别
+promise   cookie  介绍一下cookie,localstorage,sessionstorage,session cookie和session有什么区别 Cookie 是否会被覆盖，localStorage是否会被覆盖 如果页面初始载入的时候把ajax请求返回的数据存在localStorage里面，然后每次调用的时候去localStorage里面取数，是否可行 Cookie跨域请求能不能带上  三者共同点：都是保存在浏览器端，且同源的。
+区别:
+1、cookie在浏览器和服务器间来回传递。而sessionStorage和localStorage不会自动把数据发给服务器，仅在本地保存
+2、存储大小限制也不同，cookie数据不能超过4k，sessionStorage和localStorage 但比cookie大得多，可以达到5M
+3、数据有效期不同，sessionStorage：仅在当前浏览器窗口关闭前有效，自然也就不可能持久保持；localStorage：始终有效，窗口或浏览器关闭也一直保存，因此用作持久数据；cookie只在设置的cookie过期时间之前一直有效，即使窗口或浏览器关闭
+4、作用域不同，sessionStorage不在不同的浏览器窗口中共享，即使是同一个页面(即数据不共享)；localStorage 在所有同源窗口中都是共享的；cookie也是在所有同源窗口中都是共享的( 即数据共享 )。
+ 盒子模型  http的头部 HTTP请求头  cookie在哪个里面,url在哪里面
+HTTP响应头 HTTP Response的Header里面都有些啥
+HTTP状态码 HTTP状态码列表   状态码 状态码英文名称 中文描述   100 Continue 继续。客户端应继续其请求   101 Switching Protocols 切换协议。服务器根据客户端的请求切换协议。只能切换到更高级的协议，例如，切换到HTTP的新版本协议      200 OK 请求成功。一般用于GET与POST请求   201 Created 已创建。成功请求并创建了新的资源   202 Accepted 已接受。已经接受请求，但未处理完成   203 Non-Authoritative Information 非授权信息。请求成功。但返回的meta信息不在原始的服务器，而是一个副本   204 No Content 无内容。服务器成功处理，但未返回内容。在未更新网页的情况下，可确保浏览器继续显示当前文档   205 Reset Content 重置内容。服务器处理成功，用户终端（例如：浏览器）应重置文档视图。可通过此返回码清除浏览器的表单域   206 Partial Content 部分内容。服务器成功处理了部分GET请求      300 Multiple Choices 多种选择。请求的资源可包括多个位置，相应可返回一个资源特征与地址的列表用于用户终端（例如：浏览器）选择   301 Moved Permanently 永久移动。请求的资源已被永久的移动到新URI，返回信息会包括新的URI，浏览器会自动定向到新URI。今后任何新的请求都应使用新的URI代替   302 Found 临时移动。与301类似。但资源只是临时被移动。客户端应继续使用原有URI   303 See Other 查看其它地址。与301类似。使用GET和POST请求查看   304 Not Modified 未修改。所请求的资源未修改，服务器返回此状态码时，不会返回任何资源。客户端通常会缓存访问过的资源，通过提供一个头信息指出客户端希望只返回在指定日期之后修改的资源   305 Use Proxy 使用代理。所请求的资源必须通过代理访问   306 Unused 已经被废弃的HTTP状态码   307 Temporary Redirect 临时重定向。与302类似。使用GET请求重定向      400 Bad Request 客户端请求的语法错误，服务器无法理解   401 Unauthorized 请求要求用户的身份认证   402 Payment Required 保留，将来使用   403 Forbidden 服务器理解请求客户端的请求，但是拒绝执行此请求   404 Not Found 服务器无法根据客户端的请求找到资源（网页）。通过此代码，网站设计人员可设置&#34;'>
+<meta property='og:url' content='https://mannuan.github.io/post/20190903220534/'>
+<meta property='og:site_name' content='mannuan'>
+<meta property='og:type' content='article'><meta property='og:image' content='https://www.gravatar.com/avatar/8bacfd69855171c6f53247456732f68a?s=256'><meta property='article:section' content='post'><meta property='article:tag' content='面试总结'><meta property='article:published_time' content='2019-09-03T22:05:34&#43;08:00'/><meta property='article:modified_time' content='2019-09-03T22:05:34&#43;08:00'/><meta name='twitter:card' content='summary'>
+
+<meta name="generator" content="Hugo 0.55.6" />
+
+  <title>常见业务题总结 • mannuan</title>
+  <link rel='canonical' href='https://mannuan.github.io/post/20190903220534/'>
+  
+  
+  <link rel='icon' href='/favicon.ico'>
+<link rel='stylesheet' href='/assets/css/main.6a060eb7.css'><link rel='stylesheet' href='/css/custom.css'><style>
+:root{--color-accent:#FFFFFF;}
+</style>
+
+  
+
+</head>
+<body class='page type-post has-sidebar'>
+
+  <div class='site'><div id='sidebar' class='sidebar'>
+  <a class='screen-reader-text' href='#main-menu'>Skip to Main Menu</a>
+
+  <div class='container'><section class='widget widget-about sep-after'>
+  <header>
+    
+    <div class='logo'>
+      <a href='/'>
+        <img src='/images/%e6%88%91%e7%9a%84%e5%a4%b4%e5%83%8f.jpeg'>
+      </a>
+    </div>
+    
+    <h2 class='title site-title '>
+      <a href='/'>
+      mannuan
+      </a>
+    </h2>
+    <div class='desc'>
+    Rome was not built in a day.
+    </div>
+  </header>
+
+</section>
+<section class='widget widget-search sep-after'>
+  <header>
+    <h4 class='title widget-title'>Search</h4>
+  </header>
+
+  <form action='/search' id='search-form' class='search-form'>
+    <label>
+      <span class='screen-reader-text'>Search</span>
+      <input id='search-term' class='search-term' type='search' name='q' placeholder='Search&hellip;'>
+    </label></form>
+
+</section>
+<section class='widget widget-sidebar_menu sep-after'><nav id='sidebar-menu' class='menu sidebar-menu' aria-label='Sidebar Menu'>
+    <div class='container'>
+      <ul><li class='item'>
+  <a href='https://github.com/mannuan'>Github</a></li><li class='item'>
+  <a href='/skill-content/dist/'>skills</a></li><li class='item has-children'>
+  <a href=''>网络实验</a><button class='sub-menu-toggler'>
+    <span class='screen-reader-text'>expand sub menu</span>
+    <span class='sign'></span>
+  </button>
+
+  <ul class='sub-menu'><li class='item'>
+  <a href='/post/20190701101121/'>实验九</a></li><li class='item'>
+  <a href='/post/20190701090625/'>实验八</a></li><li class='item'>
+  <a href='/post/20190701105039/'>实验六</a></li><li class='item'>
+  <a href='/post/20190701172233/'>实验十</a></li><li class='item'>
+  <a href='/post/20190701182805/'>实验十一</a></li><li class='item'>
+  <a href='/post/20190701194642/'>实验十三</a></li><li class='item'>
+  <a href='/post/20190701192111/'>实验十二</a></li></ul></li><li class='item has-children'>
+  <a href=''>面经</a><button class='sub-menu-toggler'>
+    <span class='screen-reader-text'>expand sub menu</span>
+    <span class='sign'></span>
+  </button>
+
+  <ul class='sub-menu'><li class='item'>
+  <a href='/post/20190813191500/'>网易严选1</a></li><li class='item'>
+  <a href='/post/20190813190824/'>网易严选2</a></li></ul></li></ul>
+    </div>
+  </nav>
+
+</section><section class='widget widget-taxonomy_cloud sep-after'>
+  <header>
+    <h4 class='title widget-title'>Categories</h4>
+  </header>
+
+  <div class='container list-container'>
+  <ul class='list taxonomy-cloud'><li>
+        <a href='/categories/features/' style='font-size:1.129032258064516em'>features</a>
+      </li><li>
+        <a href='/categories/ide/' style='font-size:1.0241935483870968em'>ide</a>
+      </li><li>
+        <a href='/categories/jupyter/' style='font-size:1.0161290322580645em'>jupyter</a>
+      </li><li>
+        <a href='/categories/linux/' style='font-size:1.1370967741935485em'>linux</a>
+      </li><li>
+        <a href='/categories/mac/' style='font-size:1.1370967741935485em'>mac</a>
+      </li><li>
+        <a href='/categories/mongodb/' style='font-size:1.032258064516129em'>mongodb</a>
+      </li><li>
+        <a href='/categories/others/' style='font-size:1em'>others</a>
+      </li><li>
+        <a href='/categories/pip/' style='font-size:1em'>pip</a>
+      </li><li>
+        <a href='/categories/python/' style='font-size:1.0483870967741935em'>python</a>
+      </li><li>
+        <a href='/categories/shell/' style='font-size:1em'>shell</a>
+      </li><li>
+        <a href='/categories/tutorial/' style='font-size:1.0080645161290323em'>Tutorial</a>
+      </li><li>
+        <a href='/categories/vscode/' style='font-size:1.0080645161290323em'>vscode</a>
+      </li><li>
+        <a href='/categories/%E4%BD%9C%E8%80%85/' style='font-size:1em'>作者</a>
+      </li><li>
+        <a href='/categories/%E5%86%99%E4%BD%9C/' style='font-size:1.0080645161290323em'>写作</a>
+      </li><li>
+        <a href='/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/' style='font-size:2em'>前端开发</a>
+      </li><li>
+        <a href='/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/' style='font-size:1em'>博客搭建</a>
+      </li><li>
+        <a href='/categories/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/' style='font-size:1.0161290322580645em'>后端开发</a>
+      </li><li>
+        <a href='/categories/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/' style='font-size:1.0080645161290323em'>学习方法</a>
+      </li><li>
+        <a href='/categories/%E5%AD%A6%E6%9C%AF/' style='font-size:1em'>学术</a>
+      </li><li>
+        <a href='/categories/%E5%B7%A5%E5%85%B7/' style='font-size:1.0161290322580645em'>工具</a>
+      </li><li>
+        <a href='/categories/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3/' style='font-size:1em'>开发文档</a>
+      </li><li>
+        <a href='/categories/%E6%95%B0%E5%AD%A6/' style='font-size:1em'>数学</a>
+      </li><li>
+        <a href='/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/' style='font-size:1em'>数据库</a>
+      </li><li>
+        <a href='/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/' style='font-size:1.032258064516129em'>数据结构</a>
+      </li><li>
+        <a href='/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/' style='font-size:1.0161290322580645em'>机器学习</a>
+      </li><li>
+        <a href='/categories/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/' style='font-size:1em'>正则表达式</a>
+      </li><li>
+        <a href='/categories/%E7%88%AC%E8%99%AB/' style='font-size:1.0887096774193548em'>爬虫</a>
+      </li><li>
+        <a href='/categories/%E7%AE%97%E6%B3%95/' style='font-size:1.0806451612903225em'>算法</a>
+      </li><li>
+        <a href='/categories/%E7%AE%97%E6%B3%95%E9%A2%98/' style='font-size:1.0887096774193548em'>算法题</a>
+      </li><li>
+        <a href='/categories/%E7%B3%BB%E7%BB%9F/' style='font-size:1.0161290322580645em'>系统</a>
+      </li><li>
+        <a href='/categories/%E7%BC%96%E7%A0%81%E8%BD%AC%E6%8D%A2/' style='font-size:1em'>编码转换</a>
+      </li><li>
+        <a href='/categories/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/' style='font-size:1em'>编程开发</a>
+      </li><li>
+        <a href='/categories/%E7%BC%96%E8%BE%91%E5%99%A8/' style='font-size:1em'>编辑器</a>
+      </li><li>
+        <a href='/categories/%E7%BD%91%E7%BB%9C/' style='font-size:1em'>网络</a>
+      </li><li>
+        <a href='/categories/%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/' style='font-size:1.096774193548387em'>网络协议</a>
+      </li><li>
+        <a href='/categories/%E7%BF%BB%E5%A2%99/' style='font-size:1.0161290322580645em'>翻墙</a>
+      </li><li>
+        <a href='/categories/%E8%8B%B1%E8%AF%AD/' style='font-size:1.120967741935484em'>英语</a>
+      </li><li>
+        <a href='/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/' style='font-size:1.0161290322580645em'>计算机基础</a>
+      </li><li>
+        <a href='/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/' style='font-size:1.0483870967741935em'>计算机网络</a>
+      </li><li>
+        <a href='/categories/%E8%AE%BA%E6%96%87/' style='font-size:1.0403225806451613em'>论文</a>
+      </li><li>
+        <a href='/categories/%E8%B0%83%E8%AF%95/' style='font-size:1em'>调试</a>
+      </li><li>
+        <a href='/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/' style='font-size:1.0161290322580645em'>软件使用</a>
+      </li></ul>
+</div>
+
+
+</section>
+</div>
+
+  <div class='sidebar-overlay'></div>
+</div><div class='main'><nav id='main-menu' class='menu main-menu' aria-label='Main Menu'>
+  <div class='container'>
+    <a class='screen-reader-text' href='#content'>Skip to Content</a>
+
+<button id='sidebar-toggler' class='sidebar-toggler' aria-controls='sidebar'>
+  <span class='screen-reader-text'>Toggle Sidebar</span>
+  <span class='open'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="3" y1="12" x2="21" y2="12" />
+  <line x1="3" y1="6" x2="21" y2="6" />
+  <line x1="3" y1="18" x2="21" y2="18" />
+  
+</svg>
+</span>
+  <span class='close'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="18" y1="6" x2="6" y2="18" />
+  <line x1="6" y1="6" x2="18" y2="18" />
+  
+</svg>
+</span>
+</button>
+    <ul><li class='item'>
+        <a href='/'>Home</a>
+      </li><li class='item'>
+        <a href='/post/'>blogs</a>
+      </li><li class='item'>
+        <a href='/skill-content/dist/'>skills</a>
+      </li><li class='item'>
+        <a href='/tags/'>tags</a>
+      </li></ul>
+  </div>
+</nav><div class='header-widgets'>
+        <div class='container'>
+    
+    <style>.widget-breadcrumbs li:after{content:'\2f '}</style>
+  <section class='widget widget-breadcrumbs sep-after'>
+    <nav id='breadcrumbs'>
+      <ol><li><a href='/'>Home</a></li><li><a href='/post/'>blogs</a></li><li><span>常见业务题总结</span></li></ol>
+    </nav>
+  </section></div>
+      </div>
+
+      <header id='header' class='header site-header'>
+        <div class='container sep-after'>
+          <div class='header-info'><p class='site-title title'>mannuan</p><p class='desc site-desc'>Rome was not built in a day.</p>
+          </div>
+        </div>
+      </header>
+
+      <main id='content'>
+
+
+<article lang='en' class='entry'>
+  <header class='header entry-header'>
+  <div class='container sep-after'>
+    <div class='header-info'>
+      <h1 class='title'>常见业务题总结</h1>
+      
+
+    </div>
+    <div class='entry-meta'>
+  <span class='posted-on'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+  <line x1="16" y1="2" x2="16" y2="6"/>
+  <line x1="8" y1="2" x2="8" y2="6"/>
+  <line x1="3" y1="10" x2="21" y2="10"/>
+  
+</svg>
+<span class='screen-reader-text'>Posted on </span>
+  <time class='entry-date' datetime='2019-09-03T22:05:34&#43;08:00'>2019, Sep 03</time>
+</span>
+
+  <span class='byline'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M21,21V20c0-2.76-4-5-9-5s-9,2.24-9,5v1"/>
+  <path d="M16,6.37A4,4,0,1,1,12.63,3,4,4,0,0,1,16,6.37Z"/>
+  
+</svg>
+<span class='screen-reader-text'> by </span><a href='/authors/mannuan'>mannuan</a></span>
+  
+<span class='reading-time'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <circle cx="12" cy="12" r="10"/>
+  <polyline points="12 6 12 12 15 15"/>
+  
+</svg>
+3 mins read
+</span>
+
+
+</div>
+
+
+  </div>
+</header>
+
+  
+  
+<details class='container entry-toc'>
+  <summary class='title'>
+    <span>Table of Contents</span>
+  </summary>
+  <nav id="TableOfContents">
+<ul>
+<li><a href="#常见业务题总结">常见业务题总结</a>
+<ul>
+<li><a href="#bom">BOM</a>
+<ul>
+<li><a href="#navigator">navigator</a>
+<ul>
+<li><a href="#了解">了解</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#css">CSS</a></li>
+<li><a href="#es6">ES6</a>
+<ul>
+<li><a href="#promise">promise</a></li>
+</ul></li>
+<li><a href="#cookie">cookie</a></li>
+<li><a href="#盒子模型">盒子模型</a></li>
+<li><a href="#http的头部">http的头部</a>
+<ul>
+<li><a href="#http请求头">HTTP请求头</a></li>
+<li><a href="#http响应头">HTTP响应头</a></li>
+<li><a href="#http状态码">HTTP状态码</a></li>
+</ul></li>
+<li><a href="#面向对象">面向对象</a>
+<ul>
+<li><a href="#继承">继承</a></li>
+<li><a href="#new操作符做了什么">new操作符做了什么</a></li>
+<li><a href="#对象属性的属性">对象属性的属性</a></li>
+<li><a href="#原型链">原型链</a></li>
+</ul></li>
+<li><a href="#跨域">跨域</a></li>
+<li><a href="#类数组">类数组</a></li>
+<li><a href="#linux中常用的命令行">linux中常用的命令行</a></li>
+<li><a href="#模块化编程">模块化编程</a>
+<ul>
+<li><a href="#amd">AMD</a></li>
+<li><a href="#cmd">CMD</a></li>
+<li><a href="#commonjs">CommonJs</a></li>
+<li><a href="#区别">区别</a></li>
+<li><a href="#requirejs的原理">requireJS的原理</a></li>
+</ul></li>
+<li><a href="#nodejs">nodejs</a>
+<ul>
+<li><a href="#在项目中的具体使用">在项目中的具体使用</a></li>
+<li><a href="#架构">架构</a></li>
+<li><a href="#优缺点">优缺点</a></li>
+<li><a href="#回调">回调</a></li>
+</ul></li>
+<li><a href="#前后端分离">前后端分离</a></li>
+<li><a href="#前端安全">前端安全</a>
+<ul>
+<li><a href="#xss和csrf">xss和csrf</a></li>
+</ul></li>
+<li><a href="#前端工程化">前端工程化</a></li>
+<li><a href="#前端兼容">前端兼容</a>
+<ul>
+<li><a href="#低版本浏览器支持html5标签">低版本浏览器支持HTML5标签</a></li>
+<li><a href="#列举不兼容import的浏览器">列举不兼容import的浏览器</a></li>
+</ul></li>
+<li><a href="#前端路由">前端路由</a>
+<ul>
+<li><a href="#理解">理解</a></li>
+<li><a href="#前后端路由的区别">前后端路由的区别</a></li>
+</ul></li>
+<li><a href="#前端学习方法和途径">前端学习方法和途径</a></li>
+<li><a href="#前端优化">前端优化</a>
+<ul>
+<li><a href="#seo">SEO</a></li>
+<li><a href="#优化网站的原则">优化网站的原则</a></li>
+</ul></li>
+<li><a href="#设计模式">设计模式</a></li>
+<li><a href="#数据类型">数据类型</a>
+<ul>
+<li><a href="#基本数据类型">基本数据类型</a></li>
+<li><a href="#复杂数据类型">复杂数据类型</a>
+<ul>
+<li><a href="#array">Array</a>
+<ul>
+<li><a href="#自带的方法">自带的方法</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li><a href="#网络分层模型">网络分层模型</a>
+<ul>
+<li><a href="#osi七层模型">OSI七层模型</a></li>
+<li><a href="#tcp-ip五层模型">TCP/IP五层模型</a></li>
+</ul></li>
+<li><a href="#html5">HTML5</a></li>
+<li><a href="#个人相关">个人相关</a></li>
+<li><a href="#http2">HTTP2</a></li>
+<li><a href="#输入url后发生了什么">输入URL后发生了什么</a></li>
+<li><a href="#事件流">事件流</a>
+<ul>
+<li><a href="#事件代理">事件代理</a></li>
+<li><a href="#事件">事件</a></li>
+</ul></li>
+<li><a href="#项目管理">项目管理</a></li>
+<li><a href="#登录验证">登录验证</a></li>
+<li><a href="#html语义化">Html语义化</a></li>
+<li><a href="#http状态码-1">HTTP状态码</a></li>
+<li><a href="#http方法">HTTP方法</a></li>
+<li><a href="#框架">框架</a>
+<ul>
+<li><a href="#vue">Vue</a></li>
+<li><a href="#其他">其他</a></li>
+</ul></li>
+<li><a href="#尺寸">尺寸</a></li>
+<li><a href="#数据库">数据库</a></li>
+<li><a href="#ajax">ajax</a></li>
+<li><a href="#数据结构">数据结构</a></li>
+<li><a href="#操作系统">操作系统</a></li>
+<li><a href="#计算机组成原理">计算机组成原理</a></li>
+<li><a href="#算法">算法</a></li>
+<li><a href="#http缓存">HTTP缓存</a></li>
+<li><a href="#作用域">作用域</a></li>
+<li><a href="#前端布局">前端布局</a></li>
+<li><a href="#前端性能优化">前端性能优化</a></li>
+<li><a href="#移动开发">移动开发</a></li>
+<li><a href="#页面渲染">页面渲染</a></li>
+<li><a href="#行内元素">行内元素</a>
+<ul>
+<li><a href="#特征">特征</a></li>
+</ul></li>
+<li><a href="#块级元素">块级元素</a>
+<ul>
+<li><a href="#特征-1">特征</a></li>
+</ul></li>
+<li><a href="#linux">linux</a>
+<ul>
+<li><a href="#进程间6大通信方式">进程间6大通信方式</a></li>
+</ul></li>
+<li><a href="#浏览器事件循环">浏览器事件循环</a>
+<ul>
+<li><a href="#event-loop介绍">event loop介绍</a></li>
+<li><a href="#事件循环的主要机制">事件循环的主要机制</a></li>
+<li><a href="#microtask-queue-微任务队列">microtask queue 微任务队列</a></li>
+<li><a href="#事件循环处理过程">事件循环处理过程</a></li>
+</ul></li>
+<li><a href="#文档流">文档流</a></li>
+<li><a href="#javascript基础">javascript基础</a></li>
+</ul></li>
+</ul>
+</nav>
+</details>
+
+
+  <div class='container entry-content'>
+  
+
+<h1 id="常见业务题总结">常见业务题总结</h1>
+
+<hr>
+
+<h2 id="bom">BOM</h2>
+
+<h3 id="navigator">navigator</h3>
+
+<h4 id="了解">了解</h4>
+
+<hr>
+
+<h2 id="css">CSS</h2>
+
+<ul>
+<li>link和@import引入CSS的区别</li>
+<li>less和sass掌握程度</li>
+</ul>
+
+<hr>
+
+<h2 id="es6">ES6</h2>
+
+<ul>
+<li><p>ES6里头的箭头函数的this对象与其他的有啥区别</p>
+
+<h3 id="promise">promise</h3></li>
+</ul>
+
+<hr>
+
+<h2 id="cookie">cookie</h2>
+
+<ul>
+<li>介绍一下cookie,localstorage,sessionstorage,session</li>
+<li>cookie和session有什么区别</li>
+<li>Cookie 是否会被覆盖，localStorage是否会被覆盖</li>
+<li>如果页面初始载入的时候把ajax请求返回的数据存在localStorage里面，然后每次调用的时候去localStorage里面取数，是否可行</li>
+<li>Cookie跨域请求能不能带上</li>
+</ul>
+
+<p>三者共同点：都是保存在浏览器端，且同源的。</p>
+
+<p>区别:<br>
+1、cookie在浏览器和服务器间来回传递。而sessionStorage和localStorage不会自动把数据发给服务器，仅在本地保存<br></p>
+
+<p>2、存储大小限制也不同，cookie数据不能超过4k，sessionStorage和localStorage 但比cookie大得多，可以达到5M<br></p>
+
+<p>3、数据有效期不同，sessionStorage：仅在当前浏览器窗口关闭前有效，自然也就不可能持久保持；localStorage：始终有效，窗口或浏览器关闭也一直保存，因此用作持久数据；cookie只在设置的cookie过期时间之前一直有效，即使窗口或浏览器关闭<br></p>
+
+<p>4、作用域不同，sessionStorage不在不同的浏览器窗口中共享，即使是同一个页面(即数据不共享)；localStorage 在所有同源窗口中都是共享的；cookie也是在所有同源窗口中都是共享的( 即数据共享 )。<br></p>
+
+<hr>
+
+<h2 id="盒子模型">盒子模型</h2>
+
+<hr>
+
+<h2 id="http的头部">http的头部</h2>
+
+<h3 id="http请求头">HTTP请求头</h3>
+
+<blockquote>
+<p>cookie在哪个里面,url在哪里面</p>
+
+<h3 id="http响应头">HTTP响应头</h3>
+
+<p>HTTP Response的Header里面都有些啥</p>
+
+<h3 id="http状态码">HTTP状态码</h3>
+
+<table ><caption>HTTP状态码列表</caption>
+<tbody>
+<tr>
+<th>状态码</th>
+<th>状态码英文名称</th>
+<th>中文描述</th>
+</tr>
+<tr>
+<td>100</td>
+<td>Continue</td>
+<td>继续。<a href="http://www.dreamdu.com/webbuild/client_vs_server/">客户端</a>应继续其请求</td>
+</tr>
+<tr>
+<td>101</td>
+<td>Switching Protocols</td>
+<td>切换协议。服务器根据客户端的请求切换协议。只能切换到更高级的协议，例如，切换到HTTP的新版本协议</td>
+</tr>
+<tr>
+<td colspan="3"></td>
+</tr>
+<tr>
+<td>200</td>
+<td>OK</td>
+<td>请求成功。一般用于GET与POST请求</td>
+</tr>
+<tr>
+<td>201</td>
+<td>Created</td>
+<td>已创建。成功请求并创建了新的资源</td>
+</tr>
+<tr>
+<td>202</td>
+<td>Accepted</td>
+<td>已接受。已经接受请求，但未处理完成</td>
+</tr>
+<tr>
+<td>203</td>
+<td>Non-Authoritative Information</td>
+<td>非授权信息。请求成功。但返回的meta信息不在原始的服务器，而是一个副本</td>
+</tr>
+<tr>
+<td>204</td>
+<td>No Content</td>
+<td>无内容。服务器成功处理，但未返回内容。在未更新网页的情况下，可确保浏览器继续显示当前文档</td>
+</tr>
+<tr>
+<td>205</td>
+<td>Reset Content</td>
+<td>重置内容。服务器处理成功，用户终端（例如：浏览器）应重置文档视图。可通过此返回码清除浏览器的表单域</td>
+</tr>
+<tr>
+<td>206</td>
+<td>Partial Content</td>
+<td>部分内容。服务器成功处理了部分GET请求</td>
+</tr>
+<tr>
+<td colspan="3"></td>
+</tr>
+<tr>
+<td>300</td>
+<td>Multiple Choices</td>
+<td>多种选择。请求的资源可包括多个位置，相应可返回一个资源特征与地址的列表用于用户终端（例如：浏览器）选择</td>
+</tr>
+<tr>
+<td>301</td>
+<td>Moved Permanently</td>
+<td>永久移动。请求的资源已被永久的移动到新URI，返回信息会包括新的URI，浏览器会自动定向到新URI。今后任何新的请求都应使用新的URI代替</td>
+</tr>
+<tr>
+<td>302</td>
+<td>Found</td>
+<td>临时移动。与301类似。但资源只是临时被移动。客户端应继续使用原有URI</td>
+</tr>
+<tr>
+<td>303</td>
+<td>See Other</td>
+<td>查看其它地址。与301类似。使用GET和POST请求查看</td>
+</tr>
+<tr>
+<td>304</td>
+<td>Not Modified</td>
+<td>未修改。所请求的资源未修改，服务器返回此状态码时，不会返回任何资源。客户端通常会缓存访问过的资源，通过提供一个头信息指出客户端希望只返回在指定日期之后修改的资源</td>
+</tr>
+<tr>
+<td>305</td>
+<td>Use Proxy</td>
+<td>使用代理。所请求的资源必须通过代理访问</td>
+</tr>
+<tr>
+<td>306</td>
+<td>Unused</td>
+<td>已经被废弃的HTTP状态码</td>
+</tr>
+<tr>
+<td>307</td>
+<td>Temporary Redirect</td>
+<td>临时重定向。与302类似。使用GET请求重定向</td>
+</tr>
+<tr>
+<td colspan="3"></td>
+</tr>
+<tr>
+<td>400</td>
+<td>Bad Request</td>
+<td>客户端请求的语法错误，服务器无法理解</td>
+</tr>
+<tr>
+<td>401</td>
+<td>Unauthorized</td>
+<td>请求要求用户的身份认证</td>
+</tr>
+<tr>
+<td>402</td>
+<td>Payment Required</td>
+<td>保留，将来使用</td>
+</tr>
+<tr>
+<td>403</td>
+<td>Forbidden</td>
+<td>服务器理解请求客户端的请求，但是拒绝执行此请求</td>
+</tr>
+<tr>
+<td>404</td>
+<td>Not Found</td>
+<td>服务器无法根据客户端的请求找到资源（网页）。通过此代码，网站设计人员可设置"您所请求的资源无法找到"的个性页面</td>
+</tr>
+<tr>
+<td>405</td>
+<td>Method Not Allowed</td>
+<td>客户端请求中的方法被禁止</td>
+</tr>
+<tr>
+<td>406</td>
+<td>Not Acceptable</td>
+<td>服务器无法根据客户端请求的内容特性完成请求</td>
+</tr>
+<tr>
+<td>407</td>
+<td>Proxy Authentication Required</td>
+<td>请求要求代理的身份认证，与401类似，但请求者应当使用代理进行授权</td>
+</tr>
+<tr>
+<td>408</td>
+<td>Request Time-out</td>
+<td>服务器等待客户端发送的请求时间过长，超时</td>
+</tr>
+<tr>
+<td>409</td>
+<td>Conflict</td>
+<td>服务器完成客户端的 PUT 请求时可能返回此代码，服务器处理请求时发生了冲突</td>
+</tr>
+<tr>
+<td>410</td>
+<td>Gone</td>
+<td>客户端请求的资源已经不存在。410不同于404，如果资源以前有现在被永久删除了可使用410代码，网站设计人员可通过301代码指定资源的新位置</td>
+</tr>
+<tr>
+<td>411</td>
+<td>Length Required</td>
+<td>服务器无法处理客户端发送的不带Content-Length的请求信息</td>
+</tr>
+<tr>
+<td>412</td>
+<td>Precondition Failed</td>
+<td>客户端请求信息的先决条件错误</td>
+</tr>
+<tr>
+<td>413</td>
+<td>Request Entity Too Large</td>
+<td>由于请求的实体过大，服务器无法处理，因此拒绝请求。为防止客户端的连续请求，服务器可能会关闭连接。如果只是服务器暂时无法处理，则会包含一个Retry-After的响应信息</td>
+</tr>
+<tr>
+<td>414</td>
+<td>Request-URI Too Large</td>
+<td>请求的URI过长（URI通常为网址），服务器无法处理</td>
+</tr>
+<tr>
+<td>415</td>
+<td>Unsupported Media Type</td>
+<td>服务器无法处理请求附带的媒体格式</td>
+</tr>
+<tr>
+<td>416</td>
+<td>Requested range not satisfiable</td>
+<td>客户端请求的范围无效</td>
+</tr>
+<tr>
+<td>417</td>
+<td>Expectation Failed</td>
+<td>服务器无法满足Expect的请求头信息</td>
+</tr>
+<tr>
+<td colspan="3"></td>
+</tr>
+<tr>
+<td>500</td>
+<td>Internal Server Error</td>
+<td>服务器内部错误，无法完成请求</td>
+</tr>
+<tr>
+<td>501</td>
+<td>Not Implemented</td>
+<td>服务器不支持请求的功能，无法完成请求</td>
+</tr>
+<tr>
+<td>502</td>
+<td>Bad Gateway</td>
+<td>作为网关或者代理工作的服务器尝试执行请求时，从远程服务器接收到了一个无效的响应</td>
+</tr>
+<tr>
+<td>503</td>
+<td>Service Unavailable</td>
+<td>由于超载或系统维护，服务器暂时的无法处理客户端的请求。延时的长度可包含在服务器的Retry-After头信息中</td>
+</tr>
+<tr>
+<td>504</td>
+<td>Gateway Time-out</td>
+<td>充当网关或代理的服务器，未及时从远端服务器获取请求</td>
+</tr>
+<tr>
+<td>505</td>
+<td>HTTP Version not supported</td>
+<td>服务器不支持请求的HTTP协议的版本，无法完成处理</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+
+<hr>
+
+<h2 id="面向对象">面向对象</h2>
+
+<h3 id="继承">继承</h3>
+
+<h3 id="new操作符做了什么">new操作符做了什么</h3>
+
+<h3 id="对象属性的属性">对象属性的属性</h3>
+
+<h3 id="原型链">原型链</h3>
+
+<ul>
+<li>对象中key-value的value怎么再放一个对象</li>
+<li>静态属性怎么继承</li>
+</ul>
+
+<hr>
+
+<h2 id="跨域">跨域</h2>
+
+<ul>
+<li>你知道有哪些跨域方式,分别说说</li>
+<li>你所了解的跨域的方法都说说看你了解的？</li>
+</ul>
+
+<hr>
+
+<h2 id="类数组">类数组</h2>
+
+<hr>
+
+<h2 id="linux中常用的命令行">linux中常用的命令行</h2>
+
+<hr>
+
+<h2 id="模块化编程">模块化编程</h2>
+
+<h3 id="amd">AMD</h3>
+
+<h3 id="cmd">CMD</h3>
+
+<h3 id="commonjs">CommonJs</h3>
+
+<h3 id="区别">区别</h3>
+
+<h3 id="requirejs的原理">requireJS的原理</h3>
+
+<ul>
+<li>requirejs怎么防止重复加载</li>
+<li>requirejs如何避免循环依赖？</li>
+</ul>
+
+<hr>
+
+<h2 id="nodejs">nodejs</h2>
+
+<h3 id="在项目中的具体使用">在项目中的具体使用</h3>
+
+<h3 id="架构">架构</h3>
+
+<h3 id="优缺点">优缺点</h3>
+
+<h3 id="回调">回调</h3>
+
+<ul>
+<li>nodejs中的文件怎么读写？</li>
+</ul>
+
+<hr>
+
+<h2 id="前后端分离">前后端分离</h2>
+
+<ul>
+<li>意义</li>
+</ul>
+
+<hr>
+
+<h2 id="前端安全">前端安全</h2>
+
+<h3 id="xss和csrf">xss和csrf</h3>
+
+<hr>
+
+<h2 id="前端工程化">前端工程化</h2>
+
+<ul>
+<li>理解</li>
+</ul>
+
+<hr>
+
+<h2 id="前端兼容">前端兼容</h2>
+
+<h3 id="低版本浏览器支持html5标签">低版本浏览器支持HTML5标签</h3>
+
+<ul>
+<li><p>使用js底层是怎么实现的</p>
+
+<h3 id="列举不兼容import的浏览器">列举不兼容import的浏览器</h3></li>
+</ul>
+
+<hr>
+
+<h2 id="前端路由">前端路由</h2>
+
+<h3 id="理解">理解</h3>
+
+<h3 id="前后端路由的区别">前后端路由的区别</h3>
+
+<hr>
+
+<h2 id="前端学习方法和途径">前端学习方法和途径</h2>
+
+<hr>
+
+<h2 id="前端优化">前端优化</h2>
+
+<h3 id="seo">SEO</h3>
+
+<h3 id="优化网站的原则">优化网站的原则</h3>
+
+<hr>
+
+<h2 id="设计模式">设计模式</h2>
+
+<ul>
+<li>了解哪些设计模式说说看</li>
+<li>说下你所了解的设计模式的优点</li>
+<li>平常在项目中用到过哪些设计模式,说说看</li>
+</ul>
+
+<hr>
+
+<h2 id="数据类型">数据类型</h2>
+
+<h3 id="基本数据类型">基本数据类型</h3>
+
+<h3 id="复杂数据类型">复杂数据类型</h3>
+
+<h4 id="array">Array</h4>
+
+<h5 id="自带的方法">自带的方法</h5>
+
+<hr>
+
+<h2 id="网络分层模型">网络分层模型</h2>
+
+<h3 id="osi七层模型">OSI七层模型</h3>
+
+<p><img src="/images/0_1325744597WM32.gif"></p>
+
+<h3 id="tcp-ip五层模型">TCP/IP五层模型</h3>
+
+<ul>
+<li>tcp/udp区别</li>
+<li>tcp三次握手过程</li>
+<li><a href="https://www.cnblogs.com/haimishasha/p/10872857.html#autoid-10-0-0" target="_blank">TCP为什么不两次握手而要三次握手？</a></li>
+<li></li>
+</ul>
+
+<hr>
+
+<h2 id="html5">HTML5</h2>
+
+<ul>
+<li>h5有个api能定位你知道是哪个吗？</li>
+</ul>
+
+<hr>
+
+<h2 id="个人相关">个人相关</h2>
+
+<ul>
+<li>抗压能力强?</li>
+<li>说明</li>
+<li>自我规划</li>
+<li>遇到最难的问题</li>
+<li>期望的项目角色</li>
+<li>你的不足是什么</li>
+<li>你觉得你什么技术最擅长</li>
+<li>你平时有没有什么技术的沉淀</li>
+<li>前端发展趋势</li>
+<li>你的职业规划是怎么样的</li>
+<li>为什么选择前端，如何学习的，看了哪些书，《js高级程序设计》和《你不知道的js》有什么区别，看书，看博客，看公众号三者的时间是如何分配的？</li>
+<li>手里有什么offer</li>
+<li>你对于第一份工作最看重的三个方面是什么？</li>
+<li>如何评价现在的前端？</li>
+<li>为什么选择前端</li>
+</ul>
+
+<hr>
+
+<hr>
+
+<h2 id="http2">HTTP2</h2>
+
+<hr>
+
+<h2 id="输入url后发生了什么">输入URL后发生了什么</h2>
+
+<ul>
+<li><a href="https://mp.weixin.qq.com/s/ekzYrrzAfLjig3ipEA1UAw" target="_blank">链接</a></li>
+</ul>
+
+<hr>
+
+<h2 id="事件流">事件流</h2>
+
+<h3 id="事件代理">事件代理</h3>
+
+<ul>
+<li>w3c事件与IE事件的区别</li>
+
+<li><p>IE与W3C怎么阻止事件的冒泡</p>
+
+<h3 id="事件">事件</h3></li>
+
+<li><p>一来给了张纸要求写js自定义事件</p></li>
+</ul>
+
+<hr>
+
+<h2 id="项目管理">项目管理</h2>
+
+<ul>
+<li>工程怎么进行文件管理</li>
+</ul>
+
+<hr>
+
+<h2 id="登录验证">登录验证</h2>
+
+<ul>
+<li>如何保持登录状态</li>
+</ul>
+
+<hr>
+
+<h2 id="html语义化">Html语义化</h2>
+
+<hr>
+
+<h2 id="http状态码-1">HTTP状态码</h2>
+
+<ul>
+<li>304是什么意思？有没有方法不请求不经过服务器直接使用缓存</li>
+<li>说下你知道的响应状态码</li>
+<li>304与200读取缓存的区别</li>
+<li>http状态码。。。401和403区别</li>
+</ul>
+
+<hr>
+
+<h2 id="http方法">HTTP方法</h2>
+
+<ul>
+<li>Get和post的区别</li>
+<li>Post一个file的时候file放在哪的</li>
+</ul>
+
+<hr>
+
+<h2 id="框架">框架</h2>
+
+<h3 id="vue">Vue</h3>
+
+<ul>
+<li>说说你对组件的理解</li>
+<li>组件的html怎么进行管理</li>
+<li>vuex是用来做什么的</li>
+<li>vue源码结构</li>
+
+<li><p>vue的特点</p>
+
+<h3 id="其他">其他</h3></li>
+
+<li><p>要是让你自己写一个js框架你会用到哪些设计模式</p></li>
+
+<li><p>MVVM</p></li>
+
+<li><p>对mvc的理解</p></li>
+</ul>
+
+<hr>
+
+<h2 id="尺寸">尺寸</h2>
+
+<ul>
+<li>rem是什么？em是什么？如果上一层就是根root了，em和rem等价么</li>
+</ul>
+
+<hr>
+
+<h2 id="数据库">数据库</h2>
+
+<ul>
+<li>mysql与 MongoDB的区别</li>
+</ul>
+
+<hr>
+
+<h2 id="ajax">ajax</h2>
+
+<ul>
+<li>ajax的过程以及 readyState几个状态的含义</li>
+</ul>
+
+<hr>
+
+<h2 id="数据结构">数据结构</h2>
+
+<ul>
+<li>你学过数据结构没,说说你都了解些什么</li>
+<li>数组和链表区别，分别适合什么数据结构</li>
+</ul>
+
+<hr>
+
+<h2 id="操作系统">操作系统</h2>
+
+<ul>
+<li>你学过计算机操作系统没,说说你都了解些什么</li>
+</ul>
+
+<hr>
+
+<h2 id="计算机组成原理">计算机组成原理</h2>
+
+<ul>
+<li>你学过计算机组成原理没,说说你都了解些什么</li>
+</ul>
+
+<hr>
+
+<h2 id="算法">算法</h2>
+
+<ul>
+<li>你学过算法没,说说你都了解些什么</li>
+</ul>
+
+<hr>
+
+<h2 id="http缓存">HTTP缓存</h2>
+
+<ul>
+<li>浏览器缓存的区别</li>
+</ul>
+
+<hr>
+
+<h2 id="作用域">作用域</h2>
+
+<ul>
+<li>js中this的作用</li>
+<li>js中上下文是什么</li>
+<li>js有哪些函数能改变上下文</li>
+<li>call,apply作用,以及用法</li>
+<li>call与apply的区别</li>
+</ul>
+
+<hr>
+
+<h2 id="前端布局">前端布局</h2>
+
+<ul>
+<li>position有哪些值,说下各自的作用</li>
+</ul>
+
+<hr>
+
+<h2 id="前端性能优化">前端性能优化</h2>
+
+<ul>
+<li>lazyload如何实现</li>
+<li>浏览器如何实现图片缓存</li>
+</ul>
+
+<hr>
+
+<h2 id="移动开发">移动开发</h2>
+
+<ul>
+<li>点透问题</li>
+</ul>
+
+<hr>
+
+<h2 id="页面渲染">页面渲染</h2>
+
+<ul>
+<li>原生js模板引擎</li>
+<li>repaint和reflow区别</li>
+<li>window.onload和$(document).ready()的区别，浏览器加载转圈结束时哪个时间点</li>
+<li>页面加载过程</li>
+</ul>
+
+<hr>
+
+<h2 id="行内元素">行内元素</h2>
+
+<ul>
+<li><a href="https://juejin.im/post/5c96fcbb5188252d955921b7" target="_blank">参考链接</a></li>
+<li>b,i,small,tt</li>
+<li>abbr,code,em,</li>
+<li>a,br,img,q,span,sub,sup</li>
+
+<li><p>button,input,label,select,textarea</p>
+
+<h3 id="特征">特征</h3></li>
+
+<li><p>块级元素内嵌块级元素和行内元素</p></li>
+
+<li><p>默认情况下，块级元素会新起一行</p></li>
+
+<li><p>默认情况下，块级元素占满父级元素的width</p></li>
+
+<li><p>块级元素的width、height、padding、margin、line-height正常设置（可以达到想要的结果）</p></li>
+</ul>
+
+<hr>
+
+<h2 id="块级元素">块级元素</h2>
+
+<ul>
+<li><a href="https://juejin.im/post/5c96fcbb5188252d955921b7" target="_blank">参考链接</a></li>
+<li><code>&lt;div&gt; 文档分区</code></li>
+<li><code>&lt;form&gt; 表单</code></li>
+<li><code>&lt;address&gt; 联系方式信息</code></li>
+<li><code>&lt;article&gt; 文章内容</code></li>
+<li><code>&lt;audio&gt; 音频播放</code></li>
+<li><code>&lt;aside&gt; 伴随内容</code></li>
+<li><code>&lt;canvas&gt; 绘制图形</code></li>
+<li><code>&lt;dl&gt; 定义列表</code></li>
+<li><code>&lt;footer&gt; 区段尾或页尾</code></li>
+<li><code>&lt;h1&gt;,&lt;h2&gt;,&lt;h3&gt;,&lt;h4&gt;,&lt;h5&gt;,&lt;h6&gt; 标题级别 1-6</code></li>
+<li><code>&lt;header&gt; 区段头或页头</code></li>
+<li><code>&lt;ol&gt; 有序列表, ul, li</code></li>
+<li><code>&lt;p&gt; 行</code></li>
+<li><code>&lt;section&gt; 一个页面区段</code></li>
+<li><code>&lt;table&gt;表格</code></li>
+<li><code>&lt;ul&gt; 无序列表</code></li>
+
+<li><p><code>&lt;video&gt; 视频</code></p>
+
+<h3 id="特征-1">特征</h3></li>
+
+<li><p>行内元素只能包含数据和其它行内元素</p></li>
+
+<li><p>默认情况下，行内元素不会以新行开始</p></li>
+
+<li><p>默认情况下行内元素width默认为元素内容的宽度</p></li>
+
+<li><p>不能设置width、height、padding-top、padding-bottom、margin-top、margin-bttom、line-height(就算设置了也达不到想要的效果)</p></li>
+</ul>
+
+<hr>
+
+<h2 id="linux">linux</h2>
+
+<h3 id="进程间6大通信方式">进程间6大通信方式</h3>
+
+<ul>
+<li>管道（pipe）,流管道(s_pipe)和有名管道（FIFO）</li>
+<li>信号（signal）</li>
+<li>消息队列</li>
+<li>共享内存</li>
+<li>信号量</li>
+<li>套接字（socket)
+<a href="https://www.cnblogs.com/haimishasha/p/10872857.html#autoid-9-0-0" target="_blank">参考链接</a></li>
+</ul>
+
+<hr>
+
+<h2 id="浏览器事件循环">浏览器事件循环</h2>
+
+<p><a href="https://segmentfault.com/a/1190000012748907" target="_blank">参考链接</a></p>
+
+<h3 id="event-loop介绍">event loop介绍</h3>
+
+<p>javascript 在浏览器端运行是单线程的，这是由浏览器决定的，这是为了避免多线程执行不同任务会发生冲突的情况。也就是说我们写的javascript 代码只在一个线程上运行，称之为主线程（HTML5提供了web worker API可以让浏览器开一个线程运行比较复杂耗时的 javascript任务，但是这个线程仍受主线程的控制）。单线程的话，如果我们做一些“sleep”的操作。</p>
+
+<h3 id="事件循环的主要机制">事件循环的主要机制</h3>
+
+<ul>
+<li>一个事件循环有一个或者多个任务队列（task queues）。任务队列是task的有序列表，task是调度Events，Parsing，Callbacks，Using a resource，Reacting to DOM manipulation这些任务的算法;</li>
+<li>每个任务都来自一个特定的任务源（task source）(比如鼠标键盘事件)。来自同一个特定任务源且属于特定事件循环的任务必须被加入到同一个任务队列中，来自不同任务源的任务可以放在不同的任务队列中;</li>
+
+<li><p>浏览器调用这些队列中的任务时采取这样的做法: 相同队列中的任务按照先进先出的顺序, 不同的队列按照提前设置的队列优先级来调用. 例如，用户代理可以有一个用于鼠标和键盘事件的任务队列（用户交互任务源），另一个用于其他任务。然后，用户代理75%概率调用键盘和鼠标事件任务队列，25%调用其他队列, 这样的话就保持界面响应而且不会饿死其他任务队列. 但是相同队列中的任务要按照先进先出的顺序。也就是说单独的任务队列中的任务总是按先进先出的顺序执行，但是不保证多个任务队列中的任务优先级，具体实现可能会交叉执行；
+在调用任务的过程中, 会产生新的任务, 浏览器就会不断执行任务, 因此称为事件循环。</p>
+
+<h3 id="microtask-queue-微任务队列">microtask queue 微任务队列</h3>
+
+<p>还有一些特殊任务, 它们不会被放在task queues中, 会放在一个叫做microtask(微任务) queue中，<br>
+任务队列可以有多个, 但是微任务队列只有一个。<br>
+那么哪些任务是放在task queue, 哪些放在microtask queue呢? 通常对浏览器和Node.js来说:<br></p></li>
+
+<li><p>macrotask(宏任务): script（整体代码）, setTimeout, setInterval, setImmediate, I/O, UI rendering等;</p></li>
+
+<li><p>microtask(微任务): process.nextTick, Promises（这里指浏览器实现的原生 Promise）, Object.observe, MutationObserver等;</p></li>
+</ul>
+
+<p>请尤其注意macrotask中执行整体代码也是一个宏任务<br></p>
+
+<h3 id="事件循环处理过程">事件循环处理过程</h3>
+
+<p>总体来说, 浏览器端事件循环的一个回合(go-around或者叫cycle)就是:<br></p>
+
+<ul>
+<li>从macrotask队列中(task queue)取一个宏任务执行, 执行完后, 取出所有的microtask执行.</li>
+<li>重复回合</li>
+</ul>
+
+<p>无论在执行macrotask还是microtask, 都有可能产生新的macrotask或者microtask, 就这样继续执行.</p>
+
+<hr>
+
+<h2 id="文档流">文档流</h2>
+
+<p><a href="https://www.jianshu.com/p/4921ba9e101d" target="_blank">参考链接</a>
++ <a href="https://blog.csdn.net/qq_35765126/article/details/89047755" target="_blank">替换元素、非替换元素、行内替换元素、行内非替换元素</a></p>
+
+<hr>
+
+<h2 id="javascript基础">javascript基础</h2>
+
+<p><a href="https://www.cnblogs.com/zjx304/p/9782942.html" target="_blank">js中布尔值为false的六种情况</a></p>
+
+</div>
+
+  
+<footer class='entry-footer'>
+  <div class='container sep-before'><div class='categories'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M22,19a2,2,0,0,1-2,2H4a2,2,0,0,1-2-2V5A2,2,0,0,1,4,3H9l2,3h9a2,2,0,0,1,2,2Z"/>
+  
+</svg>
+<span class='screen-reader-text'>Categories: </span><a class='category' href='/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/'>前端开发</a></div>
+<div class='tags'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M20.59,13.41l-7.17,7.17a2,2,0,0,1-2.83,0L2,12V2H12l8.59,8.59A2,2,0,0,1,20.59,13.41Z"/>
+  <line x1="7" y1="7" x2="7" y2="7"/>
+  
+</svg>
+<span class='screen-reader-text'>Tags: </span><a class='tag' href='/tags/%E9%9D%A2%E8%AF%95%E6%80%BB%E7%BB%93/'>面试总结</a></div>
+
+  </div>
+</footer>
+
+
+</article>
+
+<nav class='entry-nav'>
+  <div class='container'><div class='prev-entry sep-before'>
+      <a href='/post/20190903215340/'>
+        <span aria-hidden='true'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="20" y1="12" x2="4" y2="12"/>
+  <polyline points="10 18 4 12 10 6"/>
+  
+</svg>
+ Previous</span>
+        <span class='screen-reader-text'>Previous post: </span>常见业务编程题总结</a>
+    </div><div class='next-entry sep-before'>
+      <a href='/post/20190909150915/'>
+        <span class='screen-reader-text'>Next post: </span>小米一面凉经<span aria-hidden='true'>Next <svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="4" y1="12" x2="20" y2="12"/>
+  <polyline points="14 6 20 12 14 18"/>
+  
+</svg>
+</span>
+      </a>
+    </div></div>
+</nav>
+
+
+
+
+      </main>
+
+      <footer id='footer' class='footer'>
+        <div class='container sep-before'><section class='widget widget-social_menu sep-after'><nav aria-label='Social Menu'>
+    <ul><li>
+        <a href='https://github.com/mannuan' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Github account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='mailto:mannuandeyangguang@163.com' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Contact via Email</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+  <polyline points="22,6 12,13 2,6"/>
+  
+</svg>
+</a>
+      </li></ul>
+  </nav>
+</section><div class='copyright'>
+  <p> &copy; 2019 mannuan </p>
+</div>
+
+        </div>
+      </footer>
+
+    </div>
+  </div><script>window.__assets_js_src="/assets/js/"</script>
+
+<script src='/assets/js/main.67d669ac.js'></script><script src='/js/custom.js'></script>
+
+</body>
+
+</html>
+

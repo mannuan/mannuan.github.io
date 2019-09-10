@@ -1,14 +1,11 @@
-function sumBigNumber(a, b) {
-    var res = '',
-        temp = 0;
-    a = a.split('');
-    b = b.split('');
-    while (a.length || b.length || temp) {
-        temp += ~~a.pop() + ~~b.pop();
-        res = (temp % 10) + res;
-        temp = temp > 9;
-    }
-    return res.replace(/^0+/, '');
+let N = 4;
+let A = [1, 1, 0];
+
+let arr = new Array(N);
+for(let i=1;i<=arr.length;i++){
+    arr[i-1] = i;
 }
 
-console.log(sumBigNumber("11111111111111111111", "22222222222222222222222222222222222"))
+for(let i=0; i<arr.length; i++){
+    
+}

@@ -5,10 +5,28 @@
     <link>https://mannuan.github.io/tags/css/</link>
     <description>Recent content in css on mannuan</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 13 Aug 2019 21:51:19 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 31 Aug 2019 11:49:09 +0800</lastBuildDate>
     
 	<atom:link href="https://mannuan.github.io/tags/css/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>居中的方式</title>
+      <link>https://mannuan.github.io/post/20190831114909/</link>
+      <pubDate>Sat, 31 Aug 2019 11:49:09 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190831114909/</guid>
+      <description> 居中的方式 水平居中 参考文章  16种方法实现水平居中垂直居中  </description>
+    </item>
+    
+    <item>
+      <title>基础</title>
+      <link>https://mannuan.github.io/post/20190828163512/</link>
+      <pubDate>Wed, 28 Aug 2019 16:35:12 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190828163512/</guid>
+      <description> 基础 css的三个特点 </description>
+    </item>
     
     <item>
       <title>把矩形往右边移动</title>

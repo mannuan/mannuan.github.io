@@ -1,32 +1,34 @@
 import java.util.Scanner;
 public class Test{
-    public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-        String n = scan.nextLine();
-        int N = Integer.valueOf(n);
-        String s = scan.nextLine();
-        int count = 0;
-        int max = 0;
-        for(int i=0;i<N;i++){
-            char c = s.charAt(i);
-            if(65<=c&&c<=90){
-                if(i!=N-1){
-                    count ++;
-                }else{
-                    count ++;
-                    max += count+1;
+
+    public static void dp(String d, int N){
+        int mod = 1_000_000_007;
+        int[][] dp = new int[N+1][N+1];
+        for(int i=0; i<=N; i++){
+            dp[0][i] = 1;
+        }
+        for(int i=0; i<N;i++){
+            if(d.charAt(i) == '0'){
+                for(int j=0, ct =0; j<N-i;j++){
+                    dp[i+1][j] = ct = (ct + dp[i][j]) % mod;
                 }
             }else{
-                if(count >= 2){
-                    max += count + 3;
-                }else if(count == 1){
-                    max += 3;
-                }else{
-                    max += 1;
+                for(int j=N-i-1, ct=0;j>=0;j--){
+                    dp[i+1][j] = ct = (ct + dp[i][j+1]) % mod;
                 }
-                count = 0;
             }
         }
-        System.out.println(max);
+        System.out.println(dp[N][0]);
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int N = sc.nextInt()-1;
+        StringBuilder sb = new StringBuilder();
+        for(int i=0; i<N;i++){
+            sb.append(sc.nextInt()+"");
+        }
+        String d = sb.toString();
+        dp(d, N);
     }
 }

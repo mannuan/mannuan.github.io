@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<!-- saved from url=(0104)https://mi.acmcoder.com/cand/index?.r=0.22081522989064295&#/main/onlinecode/5d63a2d433593534d07283f5/0/1 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>
+    <title>小米集团2020校招在线考试系统</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <link rel="icon" type="image/ico" href="https://cdn.acmcoder.com/release/exam/2.0.5/images/favicon.ico">
+
+    <link href="./小米集团2020校招在线考试系统_files/libs.css" rel="stylesheet">
+    <link href="./小米集团2020校招在线考试系统_files/toastr.css" rel="stylesheet">
+    <!-- <link href="/release/exam/2.0.5/css/libs.css" rel="stylesheet" /> -->
+    <!--<link href="/static/css/base.css" rel="stylesheet" />-->
+
+    <script src="./小米集团2020校招在线考试系统_files/hm.js"></script><script language="JavaScript" type="text/javascript">
+
+        var CompInfo = {
+            compCode: 'mi'
+          , compName: '小米集团'
+          , compURL: ''
+          , webTitle: '2020校招'
+          , compLogo: 'https://cdn.acmcoder.com/release/exam/2.0.5/images/logo.png'
+          , topImg: ''
+          , bkImg: ''
+            , unionExam: ''=='true' ? true : false
+        };
+        var user = {realName: '吴俊磊', timePassAfterAnsterAQ: false, vipCode: 174};
+        var beforeEnterPaper = null;
+        var whenSubmitPapers = null;
+        
+        
+    </script>
+<style type="text/css" abt="234"></style><script async="" src="./小米集团2020校招在线考试系统_files/controller.js"></script><script async="" src="./小米集团2020校招在线考试系统_files/piController.js"></script><style>.cke{visibility:hidden;}</style><script async="" src="./小米集团2020校招在线考试系统_files/codemirror.js"></script><script async="" src="./小米集团2020校招在线考试系统_files/anyLine.js"></script><script async="" src="./小米集团2020校招在线考试系统_files/canvas.js"></script><script async="" src="./小米集团2020校招在线考试系统_files/myPhotoController.js"></script><script async="" src="./小米集团2020校招在线考试系统_files/faceid.js"></script><script async="" src="./小米集团2020校招在线考试系统_files/rulesController.js"></script><script async="" src="./小米集团2020校招在线考试系统_files/practiseController.js"></script><script async="" src="./小米集团2020校招在线考试系统_files/startController.js"></script><script async="" src="./小米集团2020校招在线考试系统_files/answerController.js"></script><script async="" src="./小米集团2020校招在线考试系统_files/onlinecodeController.js"></script><script>//remove baidu search ad
+var _countAA = 0
+function doBBBd(){
+    var alla = document.getElementsByTagName('a')
+    for(var i = 0; i < alla.length; i++){
+        if(/baidu.com\/(baidu.php\?url=|adrc.php\?t)/.test(alla[i].href)){
+            var _temp = alla[i].parentElement, loop = 0
+            while(loop < 5){
+                _temp = _temp.parentElement
+                loop++
+                if(_temp.parentElement.id == 'content_left'){
+                    _temp.remove()
+                    break
+                }
+            }
+        }
+    }
+    
+    if(_countAA++ < 20){
+        setTimeout(doBBBd, 500)
+    }
+    
+}
+doBBBd()
+document.addEventListener('keyup', function(){_countAA-=10;doBBBd()}, false)
+document.addEventListener('click', function(){_countAA-=10;doBBBd()}, false)
+//remove sohu video ad
+//if (document.URL.indexOf("tv.sohu.com") >= 0){
+//    if (document.cookie.indexOf("fee_status=true")==-1){document.cookie='fee_status=true'};
+//}
+//remove 56.com video ad
+//if (document.URL.indexOf("56.com") >= 0){
+//    if (document.cookie.indexOf("fee_status=true")==-1){document.cookie='fee_status=true'};
+//}
+</script><style data-name="js-show-invisibles">.cm-whitespace::before {position: absolute;pointer-events: none;color: #666666;}
+
+.CodeMirror .cm-whitespace-1::before { content: "·";}
+.cm-nc-tab-space-close .CodeMirror .cm-whitespace-1::before { content: "";}
+.CodeMirror .cm-whitespace-2::before { content: "··";}
+.cm-nc-tab-space-close .CodeMirror .cm-whitespace-2::before { content: "";}
+.CodeMirror .cm-whitespace-3::before { content: "···";}
+.cm-nc-tab-space-close .CodeMirror .cm-whitespace-3::before { content: "";}
+.CodeMirror .cm-whitespace-4::before { content: "····";}
+.cm-nc-tab-space-close .CodeMirror .cm-whitespace-4::before { content: "";}
+.CodeMirror .cm-whitespace-5::before { content: "·····";}
+.cm-nc-tab-space-close .CodeMirror .cm-whitespace-5::before { content: "";}
+.CodeMirror .cm-whitespace-6::before { content: "······";}
+.cm-nc-tab-space-close .CodeMirror .cm-whitespace-6::before { content: "";}
+.CodeMirror .cm-whitespace-7::before { content: "·······";}
+.cm-nc-tab-space-close .CodeMirror .cm-whitespace-7::before { content: "";}
+.CodeMirror .cm-whitespace-8::before { content: "········";}
+.cm-nc-tab-space-close .CodeMirror .cm-whitespace-8::before { content: "";}
+.CodeMirror .cm-whitespace-9::before { content: "·········";}
+.cm-nc-tab-space-close .CodeMirror .cm-whitespace-9::before { content: "";}
+.CodeMirror .cm-whitespace-10::before { content: "··········";}
+.cm-nc-tab-space-close .CodeMirror .cm-whitespace-10::before { content: "";}
+.CodeMirror .cm-whitespace-11::before { content: "···········";}
+.cm-nc-tab-space-close .CodeMirror .cm-whitespace-11::before { content: "";}
+.CodeMirror .cm-whitespace-12::before { content: "············";}
+.cm-nc-tab-space-close .CodeMirror .cm-whitespace-12::before { content: "";}
+.CodeMirror .cm-whitespace-13::before { content: "·············";}
+.cm-nc-tab-space-close .CodeMirror .cm-whitespace-13::before { content: "";}
+.CodeMirror .cm-whitespace-14::before { content: "··············";}
+.cm-nc-tab-space-close .CodeMirror .cm-whitespace-14::before { content: "";}
+.CodeMirror .cm-whitespace-15::before { content: "···············";}
+.cm-nc-tab-space-close .CodeMirror .cm-whitespace-15::before { content: "";}
+.CodeMirror .cm-whitespace-16::before { content: "················";}
+.cm-nc-tab-space-close .CodeMirror .cm-whitespace-16::before { content: "";}
+</style><style data-name="js-show-invisibles">.cm-whitespace::before {position: absolute;pointer-events: none;color: #666666;}
+
+.CodeMirror .cm-whitespace-1::before { content: "·";}
+.cm-nc-tab-space-close .CodeMirror .cm-whitespace-1::before { content: "";}
+.CodeMirror .cm-whitespace-2::before { content: "··";}
+.cm-nc-tab-space-close .CodeMirror .cm-whitespace-2::before { content: "";}
+.CodeMirror .cm-whitespace-3::before { content: "···";}
+.cm-nc-tab-space-close .CodeMirror .cm-whitespace-3::before { content: "";}
+.CodeMirror .cm-whitespace-4::before { content: "····";}
+.cm-nc-tab-space-close .CodeMirror .cm-whitespace-4::before { content: "";}
+.CodeMirror .cm-whitespace-5::before { content: "·····";}
+.cm-nc-tab-space-close .CodeMirror .cm-whitespace-5::before { content: "";}
+.CodeMirror .cm-whitespace-6::before { content: "······";}
+.cm-nc-tab-space-close .CodeMirror .cm-whitespace-6::before { content: "";}
+.CodeMirror .cm-whitespace-7::before { content: "·······";}
+.cm-nc-tab-space-close .CodeMirror .cm-whitespace-7::before { content: "";}
+.CodeMirror .cm-whitespace-8::before { content: "········";}
+.cm-nc-tab-space-close .CodeMirror .cm-whitespace-8::before { content: "";}
+.CodeMirror .cm-whitespace-9::before { content: "·········";}
+.cm-nc-tab-space-close .CodeMirror .cm-whitespace-9::before { content: "";}
+.CodeMirror .cm-whitespace-10::before { content: "··········";}
+.cm-nc-tab-space-close .CodeMirror .cm-whitespace-10::before { content: "";}
+.CodeMirror .cm-whitespace-11::before { content: "···········";}
+.cm-nc-tab-space-close .CodeMirror .cm-whitespace-11::before { content: "";}
+.CodeMirror .cm-whitespace-12::before { content: "············";}
+.cm-nc-tab-space-close .CodeMirror .cm-whitespace-12::before { content: "";}
+.CodeMirror .cm-whitespace-13::before { content: "·············";}
+.cm-nc-tab-space-close .CodeMirror .cm-whitespace-13::before { content: "";}
+.CodeMirror .cm-whitespace-14::before { content: "··············";}
+.cm-nc-tab-space-close .CodeMirror .cm-whitespace-14::before { content: "";}
+.CodeMirror .cm-whitespace-15::before { content: "···············";}
+.cm-nc-tab-space-close .CodeMirror .cm-whitespace-15::before { content: "";}
+.CodeMirror .cm-whitespace-16::before { content: "················";}
+.cm-nc-tab-space-close .CodeMirror .cm-whitespace-16::before { content: "";}
+</style><style data-name="js-show-invisibles">.cm-whitespace::before {position: absolute;pointer-events: none;color: #666666;}
+
+.CodeMirror .cm-whitespace-1::before { content: "·";}
+.cm-nc-tab-space-close .CodeMirror .cm-whitespace-1::before { content: "";}
+.CodeMirror .cm-whitespace-2::before { content: "··";}
+.cm-nc-tab-space-close .CodeMirror .cm-whitespace-2::before { content: "";}
+.CodeMirror .cm-whitespace-3::before { content: "···";}
+.cm-nc-tab-space-close .CodeMirror .cm-whitespace-3::before { content: "";}
+.CodeMirror .cm-whitespace-4::before { content: "····";}
+.cm-nc-tab-space-close .CodeMirror .cm-whitespace-4::before { content: "";}
+.CodeMirror .cm-whitespace-5::before { content: "·····";}
+.cm-nc-tab-space-close .CodeMirror .cm-whitespace-5::before { content: "";}
+.CodeMirror .cm-whitespace-6::before { content: "······";}
+.cm-nc-tab-space-close .CodeMirror .cm-whitespace-6::before { content: "";}
+.CodeMirror .cm-whitespace-7::before { content: "·······";}
+.cm-nc-tab-space-close .CodeMirror .cm-whitespace-7::before { content: "";}
+.CodeMirror .cm-whitespace-8::before { content: "········";}
+.cm-nc-tab-space-close .CodeMirror .cm-whitespace-8::before { content: "";}
+.CodeMirror .cm-whitespace-9::before { content: "·········";}
+.cm-nc-tab-space-close .CodeMirror .cm-whitespace-9::before { content: "";}
+.CodeMirror .cm-whitespace-10::before { content: "··········";}
+.cm-nc-tab-space-close .CodeMirror .cm-whitespace-10::before { content: "";}
+.CodeMirror .cm-whitespace-11::before { content: "···········";}
+.cm-nc-tab-space-close .CodeMirror .cm-whitespace-11::before { content: "";}
+.CodeMirror .cm-whitespace-12::before { content: "············";}
+.cm-nc-tab-space-close .CodeMirror .cm-whitespace-12::before { content: "";}
+.CodeMirror .cm-whitespace-13::before { content: "·············";}
+.cm-nc-tab-space-close .CodeMirror .cm-whitespace-13::before { content: "";}
+.CodeMirror .cm-whitespace-14::before { content: "··············";}
+.cm-nc-tab-space-close .CodeMirror .cm-whitespace-14::before { content: "";}
+.CodeMirror .cm-whitespace-15::before { content: "···············";}
+.cm-nc-tab-space-close .CodeMirror .cm-whitespace-15::before { content: "";}
+.CodeMirror .cm-whitespace-16::before { content: "················";}
+.cm-nc-tab-space-close .CodeMirror .cm-whitespace-16::before { content: "";}
+</style><style data-name="js-show-invisibles">.cm-whitespace::before {position: absolute;pointer-events: none;color: #666666;}
+
+.CodeMirror .cm-whitespace-1::before { content: "·";}
+.cm-nc-tab-space-close .CodeMirror .cm-whitespace-1::before { content: "";}
+.CodeMirror .cm-whitespace-2::before { content: "··";}
+.cm-nc-tab-space-close .CodeMirror .cm-whitespace-2::before { content: "";}
+.CodeMirror .cm-whitespace-3::before { content: "···";}
+.cm-nc-tab-space-close .CodeMirror .cm-whitespace-3::before { content: "";}
+.CodeMirror .cm-whitespace-4::before { content: "····";}
+.cm-nc-tab-space-close .CodeMirror .cm-whitespace-4::before { content: "";}
+.CodeMirror .cm-whitespace-5::before { content: "·····";}
+.cm-nc-tab-space-close .CodeMirror .cm-whitespace-5::before { content: "";}
+.CodeMirror .cm-whitespace-6::before { content: "······";}
+.cm-nc-tab-space-close .CodeMirror .cm-whitespace-6::before { content: "";}
+.CodeMirror .cm-whitespace-7::before { content: "·······";}
+.cm-nc-tab-space-close .CodeMirror .cm-whitespace-7::before { content: "";}
+.CodeMirror .cm-whitespace-8::before { content: "········";}
+.cm-nc-tab-space-close .CodeMirror .cm-whitespace-8::before { content: "";}
+.CodeMirror .cm-whitespace-9::before { content: "·········";}
+.cm-nc-tab-space-close .CodeMirror .cm-whitespace-9::before { content: "";}
+.CodeMirror .cm-whitespace-10::before { content: "··········";}
+.cm-nc-tab-space-close .CodeMirror .cm-whitespace-10::before { content: "";}
+.CodeMirror .cm-whitespace-11::before { content: "···········";}
+.cm-nc-tab-space-close .CodeMirror .cm-whitespace-11::before { content: "";}
+.CodeMirror .cm-whitespace-12::before { content: "············";}
+.cm-nc-tab-space-close .CodeMirror .cm-whitespace-12::before { content: "";}
+.CodeMirror .cm-whitespace-13::before { content: "·············";}
+.cm-nc-tab-space-close .CodeMirror .cm-whitespace-13::before { content: "";}
+.CodeMirror .cm-whitespace-14::before { content: "··············";}
+.cm-nc-tab-space-close .CodeMirror .cm-whitespace-14::before { content: "";}
+.CodeMirror .cm-whitespace-15::before { content: "···············";}
+.cm-nc-tab-space-close .CodeMirror .cm-whitespace-15::before { content: "";}
+.CodeMirror .cm-whitespace-16::before { content: "················";}
+.cm-nc-tab-space-close .CodeMirror .cm-whitespace-16::before { content: "";}
+</style><style data-name="js-show-invisibles">.cm-whitespace::before {position: absolute;pointer-events: none;color: #666666;}
+
+.CodeMirror .cm-whitespace-1::before { content: "·";}
+.cm-nc-tab-space-close .CodeMirror .cm-whitespace-1::before { content: "";}
+.CodeMirror .cm-whitespace-2::before { content: "··";}
+.cm-nc-tab-space-close .CodeMirror .cm-whitespace-2::before { content: "";}
+.CodeMirror .cm-whitespace-3::before { content: "···";}
+.cm-nc-tab-space-close .CodeMirror .cm-whitespace-3::before { content: "";}
+.CodeMirror .cm-whitespace-4::before { content: "····";}
+.cm-nc-tab-space-close .CodeMirror .cm-whitespace-4::before { content: "";}
+.CodeMirror .cm-whitespace-5::before { content: "·····";}
+.cm-nc-tab-space-close .CodeMirror .cm-whitespace-5::before { content: "";}
+.CodeMirror .cm-whitespace-6::before { content: "······";}
+.cm-nc-tab-space-close .CodeMirror .cm-whitespace-6::before { content: "";}
+.CodeMirror .cm-whitespace-7::before { content: "·······";}
+.cm-nc-tab-space-close .CodeMirror .cm-whitespace-7::before { content: "";}
+.CodeMirror .cm-whitespace-8::before { content: "········";}
+.cm-nc-tab-space-close .CodeMirror .cm-whitespace-8::before { content: "";}
+.CodeMirror .cm-whitespace-9::before { content: "·········";}
+.cm-nc-tab-space-close .CodeMirror .cm-whitespace-9::before { content: "";}
+.CodeMirror .cm-whitespace-10::before { content: "··········";}
+.cm-nc-tab-space-close .CodeMirror .cm-whitespace-10::before { content: "";}
+.CodeMirror .cm-whitespace-11::before { content: "···········";}
+.cm-nc-tab-space-close .CodeMirror .cm-whitespace-11::before { content: "";}
+.CodeMirror .cm-whitespace-12::before { content: "············";}
+.cm-nc-tab-space-close .CodeMirror .cm-whitespace-12::before { content: "";}
+.CodeMirror .cm-whitespace-13::before { content: "·············";}
+.cm-nc-tab-space-close .CodeMirror .cm-whitespace-13::before { content: "";}
+.CodeMirror .cm-whitespace-14::before { content: "··············";}
+.cm-nc-tab-space-close .CodeMirror .cm-whitespace-14::before { content: "";}
+.CodeMirror .cm-whitespace-15::before { content: "···············";}
+.cm-nc-tab-space-close .CodeMirror .cm-whitespace-15::before { content: "";}
+.CodeMirror .cm-whitespace-16::before { content: "················";}
+.cm-nc-tab-space-close .CodeMirror .cm-whitespace-16::before { content: "";}
+</style><style data-name="js-show-invisibles">.cm-whitespace::before {position: absolute;pointer-events: none;color: #666666;}
+
+.CodeMirror .cm-whitespace-1::before { content: "·";}
+.cm-nc-tab-space-close .CodeMirror .cm-whitespace-1::before { content: "";}
+.CodeMirror .cm-whitespace-2::before { content: "··";}
+.cm-nc-tab-space-close .CodeMirror .cm-whitespace-2::before { content: "";}
+.CodeMirror .cm-whitespace-3::before { content: "···";}
+.cm-nc-tab-space-close .CodeMirror .cm-whitespace-3::before { content: "";}
+.CodeMirror .cm-whitespace-4::before { content: "····";}
+.cm-nc-tab-space-close .CodeMirror .cm-whitespace-4::before { content: "";}
+.CodeMirror .cm-whitespace-5::before { content: "·····";}
+.cm-nc-tab-space-close .CodeMirror .cm-whitespace-5::before { content: "";}
+.CodeMirror .cm-whitespace-6::before { content: "······";}
+.cm-nc-tab-space-close .CodeMirror .cm-whitespace-6::before { content: "";}
+.CodeMirror .cm-whitespace-7::before { content: "·······";}
+.cm-nc-tab-space-close .CodeMirror .cm-whitespace-7::before { content: "";}
+.CodeMirror .cm-whitespace-8::before { content: "········";}
+.cm-nc-tab-space-close .CodeMirror .cm-whitespace-8::before { content: "";}
+.CodeMirror .cm-whitespace-9::before { content: "·········";}
+.cm-nc-tab-space-close .CodeMirror .cm-whitespace-9::before { content: "";}
+.CodeMirror .cm-whitespace-10::before { content: "··········";}
+.cm-nc-tab-space-close .CodeMirror .cm-whitespace-10::before { content: "";}
+.CodeMirror .cm-whitespace-11::before { content: "···········";}
+.cm-nc-tab-space-close .CodeMirror .cm-whitespace-11::before { content: "";}
+.CodeMirror .cm-whitespace-12::before { content: "············";}
+.cm-nc-tab-space-close .CodeMirror .cm-whitespace-12::before { content: "";}
+.CodeMirror .cm-whitespace-13::before { content: "·············";}
+.cm-nc-tab-space-close .CodeMirror .cm-whitespace-13::before { content: "";}
+.CodeMirror .cm-whitespace-14::before { content: "··············";}
+.cm-nc-tab-space-close .CodeMirror .cm-whitespace-14::before { content: "";}
+.CodeMirror .cm-whitespace-15::before { content: "···············";}
+.cm-nc-tab-space-close .CodeMirror .cm-whitespace-15::before { content: "";}
+.CodeMirror .cm-whitespace-16::before { content: "················";}
+.cm-nc-tab-space-close .CodeMirror .cm-whitespace-16::before { content: "";}
+</style></head>
+<body ng-app="app" class="ng-scope">
+
+    <video id="screenCaptureVideo" style="width:100%; height: 100%; display: none;"></video>
+    <input id="caremaSwf" name="caremaSwf" value="0" type="hidden">
+    <!-- uiView:  --><div class="ng-scope" ui-view="">
+<div class="mianall forcode">
+
+    <div class="header">
+        <div class="">
+            <div class="logo"><img alt="logo" ng-src="https://cdn.acmcoder.com/discuss/avatar/1535097546484.jpg" style="float:left" src="./小米集团2020校招在线考试系统_files/1535097546484.jpg"></div>
+            <ul class="nav">
+                
+                <li class="userName" id="pcUser"><span ng-bind-html="App.lang.welcomeYou | trustHtml" class="ng-binding">欢迎你，</span><span ng-bind="App.myInfo.realName" class="ng-binding">吴俊磊</span><br><a href="javascript:void(0)" ng-bind="App.lang.logout" onclick="location.href = &#39;/cand/logout&#39;.RandomURL()" class="ng-binding">退出</a></li>
+                
+                <li class="examlist" data-intro1="下拉“全部考题”按钮，可以看到本试卷的所有试题，以及各个试题的作答情况，可以在此提交试卷！" data-position="bottom" style="display: block;" id="pcExamlist" data-step="4" data-intro="下拉“全部考题”按钮，可以看到本试卷的所有试题，以及各个试题的作答情况，可以在此提交试卷！">
+                    <span class="qbtitle ng-binding" ng-bind="App.lang.main.allQuestions">全部考题</span> <i class="fa jt fa-chevron-down"></i> <i class="line"></i>
+                    <div id="exam-part-progress">
+                        <div class="questionModal" style="opacity: 0.5; display: none;"></div>
+                        <div id="exam-questionProgress-wrap" class="questionProgress" style="min-height: 220px; padding-top: 10px; margin-top: 0px; padding-bottom: 10px; margin-bottom: 0px; display: none;">
+                            <!-- 试卷部分信息  -->
+                            <div id="exam-questionProgress">
+                                <div class="timeling"><span class="title ng-binding" ng-bind="App.lang.main.paperTotalTime">试卷总时长：</span><span class="time ng-binding">90</span><span ng-bind="App.lang.start.minute" class="ng-binding">分钟</span></div>
+                                <div class="part_list">
+                                    <ul class="partList">
+                                        <!-- ngRepeat: p in App.Papers --><!-- ngIf: App.Papers != null --><li ng-if="App.Papers != null" ng-repeat="p in App.Papers" class="ng-scope">
+                                            <a href="javascript:;" lefttime="" style="cursor:default" ng-class="{false:&#39;part&#39;, true:&#39;part part_now&#39;}[p._id.toString() == App.paperId]" class="ng-binding part part_now">在线编程</a>
+                                        </li><!-- end ngIf: App.Papers != null --><!-- end ngRepeat: p in App.Papers -->
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- 题目面板信息  -->
+                            <div class="clearfix" style="display: none;" id="exam-question-panel">
+                                <div class="qnumb_qums">
+                                    <div class="ml3">
+                                        <!-- ngIf: App.paperAns != null && App.paperAns.length>0 --><ul data-jsv-df="" ng-if="App.paperAns != null &amp;&amp; App.paperAns.length&gt;0" class="ng-scope">
+                                            <!-- ngRepeat: q in App.paperAns --><li ng-repeat="q in App.paperAns" class="ng-scope">
+                                                <button ng-click="goToQuestion(App.paperId, $index * 100)" class="qnum btn btn-default hadAnstrue nowAnsfalse" type="button">
+                                                    1
+                                                </button>
+                                            </li><!-- end ngRepeat: q in App.paperAns --><li ng-repeat="q in App.paperAns" class="ng-scope">
+                                                <button ng-click="goToQuestion(App.paperId, $index * 100)" class="qnum btn btn-default hadAnstrue nowAnstrue" type="button">
+                                                    2
+                                                </button>
+                                            </li><!-- end ngRepeat: q in App.paperAns -->
+                                        </ul><!-- end ngIf: App.paperAns != null && App.paperAns.length>0 -->
+                                        <div style="clear:both;"></div>
+                                        <div class="common-pane mt20 tc">
+                                            <div style="float:left;">
+                                                <span class="span_answered"></span> <span class="gray ng-binding" ng-bind="App.lang.main.answered">已答</span> &nbsp;&nbsp;
+                                                <span class="span_noanswered"></span> <span class="gray ng-binding" ng-bind="App.lang.main.noAnswered">未答</span>
+                                            </div>
+                                            <button type="button" class="btn btn-primary exam-submit-part-btn last pl30 pr30 ng-binding" ng-click="submitPaper()" ng-bind="App.lang.main.submitAPaper">提交该部分</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- ngIf: App.paper.paperComment != '' --><div class="tipinfo ng-scope" ng-if="App.paper.paperComment != &#39;&#39;">
+                                    <div class="info clearfix">
+                                        <div class="fr light"></div>
+                                        <span class="tip ng-binding" ng-bind="App.lang.main.tip">提示：</span><br>
+                                        <!-- ngIf: App.paper != null && App.lang.lang!='en' --><span ng-if="App.paper != null &amp;&amp; App.lang.lang!=&#39;en&#39;" ng-bind-html="App.paper.paperComment | trustHtml" class="ng-binding ng-scope">您仔细阅读试题，并合理安排答题时间。建议按顺序作答不要跳出考试页面，完成后请点击“提交该部分”</span><!-- end ngIf: App.paper != null && App.lang.lang!='en' -->
+                                        <!-- ngIf: App.paper != null && App.lang.lang=='en' -->
+                                    </div>
+                                </div><!-- end ngIf: App.paper.paperComment != '' -->
+                            </div>
+                            <!--end 题目面板 -->
+
+                        </div>
+                    </div>
+                </li>
+
+                <li class="textName">
+                    <a href="javascript:void(0)" class="two" id="leftTime">整场考试计时<br><span class="time">00:36:31</span></a>
+                </li>
+                <!--<li class="monitor" style="display:none"><i class="camera fa fa-circle red animated flash infinite m3 delay"></i> 正在监控</li>-->
+                <!-- ngIf: App.myInfo.supervisor!=2 --><li class="monitor ng-scope" ng-if="App.myInfo.supervisor!=2" style="">
+                    <div class="text successMonitor" style=""><i class="camera fa fa-circle red animated flash infinite m3 delay"></i>
+                        <span class="hoverTip ng-binding" ng-bind="App.lang.main.monitor">正在监控</span></div>
+                    <div class="text errorMonitor" style="display:none;">
+                        <i class="triangle"></i><span class="hoverTip ng-binding">监拍异常</span></div>
+                    <div class="monitorBox heightLimited">
+                        <iframe width="65px" height="65px" id="myphoto" name="myphoto" src="./小米集团2020校招在线考试系统_files/photoh5.html" scrolling="no" border="0" frameborder="0" style=""></iframe>
+                        <div class="close"><i class="fa fa-times"></i></div>
+                        <div class="open"></div>
+                    </div>
+                    <div class="monitorLayout hide"></div>
+                </li><!-- end ngIf: App.myInfo.supervisor!=2 -->
+                <!--<li class="monitor" style="display:none"><i class="camera fa fa-circle red animated flash infinite m3 delay"></i> 正在监控</li>-->
+                <!-- ngIf: App.mobileMonitor.active!=-1 -->
+
+                <li class="screenMonitor hide" ng-click="getLuping()">
+                    <div>
+                        <img class="screenMonitorImg" src="./小米集团2020校招在线考试系统_files/pc_err.png">
+                        <i class="triangle"></i>
+                        <span class="title hoverTip">录屏异常</span>
+                    </div>
+                </li>
+                    
+            </ul>
+        </div>
+    </div>
+    <div class="mainbody">
+        <div class="innerInfo">
+            <div class="examtitle" style="display: none;">
+                <div class="titleleft">
+                    <div class="title"><span title="小米集团 2020校招   前端试卷" class="jobtitle ng-binding" ng-bind-html="App.version.paperName | trustHtml">小米集团 2020校招   前端试卷</span>  <span title="在线考试" class="examtype ng-binding" ng-bind-html="App.version.prjtypeTitle | trustHtml">在线考试</span></div>
+
+                </div>
+            <div class="titleright" style="display: none;"><span class="type" title="专项技能">专项技能</span> <span class="Num" id="Nums">10</span><span id="pointer">/</span><span class="total" id="totals">10</span></div></div>
+            <div class="stepinfo">
+                <!-- uiView:  --><div ui-view="" class="ng-scope"><script class="ng-scope">
+    function stop() {
+        return true;
+    }
+    document.oncontextmenu = stop;
+    document.oncopy = stop;
+    document.onselectstart = stop;
+
+    if (Object.isNullString(cdn))
+        cdn = '';
+
+</script>
+
+<div style="opacity: 1;" class="codeshow ng-scope">
+    <!-- ngIf: loading == true -->
+    <!-- ngIf: loading == false && model != null && model.code == -1 -->
+    <!-- ngIf: loading == false && model != null && model.code == -2 -->
+    <!-- ngIf: loading == false && model != null && model.code == -3 -->
+    <!-- ngIf: loading == false && model != null && model.code == -4 -->
+
+    <!-- ngIf: loading == false && model != null && model.code == 0 --><div ng-if="loading == false &amp;&amp; model != null &amp;&amp; model.code == 0" class="ng-scope">
+        <div class="left" oncopy1="return false;" onselectstart1="return false;">
+            <div class="info">
+                <div class="title">
+                    <div class="webtitle"><span title="小米集团 2020校招   前端试卷" class="jobtitle ng-binding" ng-bind-html="App.version.paperName | trustHtml">小米集团 2020校招   前端试卷</span>  <span title="在线考试" class="ng-binding small" ng-bind-html="App.version.prjtypeTitle | trustHtml">在线考试</span></div>
+                </div>
+                <div class="guider answerTitle">
+                    <span class="score quesType ng-binding" ng-bind="model.ques.questype | quesType">编程题</span>
+                    <!-- ngIf: model.ques.fenzhi!=null --><span class="line ng-scope" ng-if="model.ques.fenzhi!=null"> </span><!-- end ngIf: model.ques.fenzhi!=null --> <span style="float:left;padding:0px 10px;"> | </span>
+                    <!-- ngIf: App.lang.lang!='en' --><span class="score answerFenshu ng-binding ng-scope" ng-if="App.lang.lang!=&#39;en&#39;" ng-bind="model.ques.fenzhi + &#39;分&#39;">20.0分</span><!-- end ngIf: App.lang.lang!='en' -->
+                    <!-- ngIf: App.lang.lang=='en' -->
+                    <span class="wave"><span class="first">2</span>/<span class="total">2</span></span>
+                </div>
+                <!-- ngIf: model.ques.questype==100 -->
+                <div class="intro">
+                    <div class="titleinfo ng-binding" ng-bind-html="model.ques.questitle | trustHtml">小米之家购物</div>
+                    <!-- ngIf: model.ques.questype==6 || model.ques.questype==100 --><span class="q6Limit ng-binding ng-scope" ng-if="model.ques.questype==6 || model.ques.questype==100">
+                        <!--<b>Time Limit: </b>{{model.ques.javatimelimit}}/{{model.ques.timeLimit}} MS (C,C++/Others)
+                        <b>Memory Limit: </b>{{model.ques.javamemorylimit}}/{{model.ques.memoryLimit}} K (C,C++/Others)-->
+
+                        <b ng-bind="App.lang.onlinecode.timeLimit" class="ng-binding">时间限制：</b><span ng-bind="App.lang.onlinecode.cpluslang" class="ng-binding">C/C++语言</span> 1000MS；<span ng-bind="App.lang.onlinecode.otherlang" class="ng-binding">其他语言</span> 3000MS<br>
+                        <b ng-bind="App.lang.onlinecode.memoryLimit" class="ng-binding">内存限制：</b><span ng-bind="App.lang.onlinecode.cpluslang" class="ng-binding">C/C++语言</span> 65536KB；<span ng-bind="App.lang.onlinecode.otherlang" class="ng-binding">其他语言</span> 589824KB
+                    </span><!-- end ngIf: model.ques.questype==6 || model.ques.questype==100 -->
+                    <!-- ngIf: model.ques.questype==6 || model.ques.questype==100 --><div class="q6PD ng-scope" ng-if="model.ques.questype==6 || model.ques.questype==100">
+                        <div><b ng-bind="App.lang.onlinecode.topicDescription" class="ng-binding">题目描述：</b></div>
+                        <span class="qBody ng-binding" ng-bind-html="model.ques.quesDesc.endsReplace(&#39;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&#39;) | trustHtml"><p>小米之家有很多米粉喜欢的产品，产品种类很多，价格也不同。比如某签字笔1元，某充电宝79元，某电池1元，某电视1999元等</p><p>假设库存不限，小明去小米之家买东西，要用光N元预算的钱，请问他最少能买几件产品？
+
+</p></span>
+                    </div><!-- end ngIf: model.ques.questype==6 || model.ques.questype==100 -->
+                </div>
+                <div class="templet">
+                    <!-- ngIf: model.ques.questype==6 && model.ques.input != null && model.ques.input!='' --><div class="inputarea ng-scope" ng-if="model.ques.questype==6 &amp;&amp; model.ques.input != null &amp;&amp; model.ques.input!=&#39;&#39;">
+                        <div class="input blue ng-binding" ng-bind="App.lang.onlinecode.input">输入</div>
+                        <div class="code ng-binding" ng-bind-html="model.ques.input.endsReplace(&#39;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&#39;) | trustHtml"><p>第1行为产品种类数</p><p>接下来的每行为每种产品的价格</p><p>最后一行为预算金额</p><p><span style="white-space: normal;"></span></p></div>
+                    </div><!-- end ngIf: model.ques.questype==6 && model.ques.input != null && model.ques.input!='' -->
+                    <!-- ngIf: model.ques.questype==6 && model.ques.output != null && model.ques.output!='' --><div class="outputarea ng-scope" ng-if="model.ques.questype==6 &amp;&amp; model.ques.output != null &amp;&amp; model.ques.output!=&#39;&#39;" "="">
+                        <div class="input blue ng-binding" ng-bind="App.lang.onlinecode.output">输出</div>
+                        <div class="code ng-binding" ng-bind-html="model.ques.output.endsReplace(&#39;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&#39;) | trustHtml"><p><span style="white-space: normal;">能买到的最少的产品的件数，无法没有匹配的返回-1</span></p></div>
+                        <br>
+                    </div><!-- end ngIf: model.ques.questype==6 && model.ques.output != null && model.ques.output!='' -->
+                    <!-- ngIf: model.ques.questype==6 && model.ques.inputSample != null && model.ques.inputSample!='' --><div class="inputarea yangli ng-scope" ng-if="model.ques.questype==6 &amp;&amp; model.ques.inputSample != null &amp;&amp; model.ques.inputSample!=&#39;&#39;" "="">
+                        <div class="input orange ng-binding" ng-bind="App.lang.onlinecode.caseInput">样例输入</div>
+                        <pre class="code ng-binding" ng-bind-html="model.ques.inputSample.endsReplace(&#39;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&#39;) | trustHtml">2
+500
+1
+1000</pre>
+                    </div><!-- end ngIf: model.ques.questype==6 && model.ques.inputSample != null && model.ques.inputSample!='' -->
+                    <!-- ngIf: model.ques.questype==6 && model.ques.outputSample != null && model.ques.outputSample!='' --><div class="outputarea yangli ng-scope" ng-if="model.ques.questype==6 &amp;&amp; model.ques.outputSample != null &amp;&amp; model.ques.outputSample!=&#39;&#39;" "="">
+                        <div class="input orange ng-binding" ng-bind="App.lang.onlinecode.caseOutput">样例输出</div>
+                        <pre class="code ng-binding" ng-bind-html="model.ques.outputSample.endsReplace(&#39;&lt;p&gt;&lt;br /&gt;&lt;/p&gt;&#39;) | trustHtml">2</pre>
+                        <br>
+                    </div><!-- end ngIf: model.ques.questype==6 && model.ques.outputSample != null && model.ques.outputSample!='' -->
+                    <!-- ngIf: (model.ques.questype==6 || model.ques.questype==100) && model.ques.hint != null && model.ques.hint != '' -->
+                </div>
+
+                <div class="warmtitle ng-binding" ng-bind="App.lang.onlinecode.tips">规则</div>
+                <div class="warmtip ng-binding" ng-bind-html="App.lang.onlinecode.tipsContent | trustHtml">请尽量在全场考试结束10分钟前调试程序，否则由于密集排队提交，可能查询不到编译结果 <br> 点击“调试”亦可保存代码<br> 编程题可以使用本地编译器，此页面不记录跳出次数</div>
+                <div class="pb50"></div>
+            </div>
+        </div>
+
+        <!-- ngIf: model.ques.questype==6 || model.ques.questype==100 --><div class="right ng-scope" ng-if="model.ques.questype==6 || model.ques.questype==100">
+            <div class="info">
+                <div class="title">
+                    <div id="forWeb" style="display:none;">
+                        <div class="titlename fweb" id="fhtml">HTML</div>
+                        <div class="titlename fweb" id="fcss">CSS</div>
+                        <div class="titlename fweb" id="fjs">Javascript</div>
+                        <div class="titlename fweb ng-binding" id="frend" ng-bind="App.lang.answer.preview">预览</div>
+                    </div>
+                    <div id="forOther" style="">
+                    <div class="titlename" data-step="2" data-intro="请从此处下拉列表中，选择擅长的语言作答" data-position="top">
+                        <span ng-bind="langText" class="ng-binding">JavaScript(V8)</span> <i class="fa fa-angle-down"></i>
+                        <ul style="display: none;" class="dropdown-menu" name="lang" id="lang" selectvalue="18"><li value="3" $code_3="">Java 8</li>
+<li value="0" $code_0="">C</li>
+<li value="1" $code_1="">C++</li>
+<li value="18" $code_18="">JavaScript(V8)</li>
+<li value="19" $code_19="">NodeJs</li>
+<li value="6" $code_6="">Python 2.7</li>
+<li value="32" $code_32="">Python 3</li>
+<li value="9" $code_9="">C#</li>
+<li value="13" $code_13="">Clang</li>
+<li value="14" $code_14="">Clang++</li>
+<li value="7" $code_7="">PHP</li>
+<li value="10" $code_10="">Obj-C</li>
+<li value="16" $code_16="">Swift</li>
+<li value="4" $code_4="">Ruby</li>
+<li value="5" $code_5="">Bash</li>
+<li value="15" $code_15="">Lua</li>
+<li value="17" $code_17="">Go</li>
+<li value="22" $code_22="">R</li></ul>
+                    </div>
+                    <div class="refresh fl refreshTemp" style=""><i class="fa fa-refresh" title="重置为初始模版"></i></div>
+                    <div class="reundo">
+                        <a class="tooltipclass first" title="撤销" ng-click="codemirror_undo()" data-placement="bottom" style="margin-left: 0px;"><img src="./小米集团2020校招在线考试系统_files/undo.png"></a>
+                        <a class="tooltipclass" title="恢复" ng-click="codemirror_redo()" data-placement="bottom"><img src="./小米集团2020校招在线考试系统_files/redo.png"></a>
+                        <a class="programmingNotes tooltipclass" title="编译器版本：Google V8 Engine" data-placement="bottom">编译器版本 <img src="./小米集团2020校招在线考试系统_files/vip.png"></a>
+                    </div>
+                    <div id="codeComment" style="display: none;"></div>
+                    <!-- ngIf: isPc --><div ng-if="isPc" class="toollist ng-scope">
+                        <a class="fa fa-arrows-alt fullscreen" title="全屏"></a>  &nbsp;
+                        <a class="fa fa-indent indent" title="格式化"></a>  &nbsp;
+                        <a class="fa fa-caret-up versionInfo" title="代码编写规范"><span ng-bind="App.lang.onlinecode.tips" class="ng-binding">规则</span></a>
+
+                        <a ng-href="http://oj.acmcoder.com/ExamNotice.html" title="编译器" target="_blank" href="http://oj.acmcoder.com/ExamNotice.html"><i class="fa fa-info-circle"></i> <span style="font-size: 14px;position: relative;top: -2px;" ng-bind="App.lang.onlinecode.compilerDetails" class="ng-binding">编译器</span></a>
+                    </div><!-- end ngIf: isPc -->
+                    <div class="viewLangInfo"><table><tbody><tr><td><span><li>作答时不要进行DOM相关操作。</li><li>读写API：gets(size)、readInt()、readDouble()、printsth(sth...)、print(sth...)、read_line()，具体参考第7条：<a target="_blank" href="http://oj.acmcoder.com/ExamNotice.html">http://oj.acmcoder.com/ExamNotice.html</a></li></span></td><td><a class="closeBtn"><i class="fa fa-times-circle"></i></a></td></tr></tbody></table></div>
+                    </div>
+                </div>
+                <div class="codeInfo" style="height: 636px; margin-top: 54px; margin-bottom: 0px;">
+                    <article id="efhtml" class="feditor">
+                        <form class="ng-pristine ng-valid">
+                            <textarea id="txtAnswer" name="txtAnswer" rows="10" style="height: 300px; width: 100%; display: none;"></textarea><div class="CodeMirror cm-s-default CodeMirror-focused" style="height: 636px;"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 141px; left: 62.8125px;"><textarea autocorrect="off" autocapitalize="off" spellcheck="false" tabindex="0" style="position: absolute; bottom: -1em; padding: 0px; width: 1000px; height: 1em; outline: none;"></textarea></div><div class="CodeMirror-vscrollbar" cm-not-content="true" style="bottom: 0px; width: 18px; pointer-events: none;"><div style="min-width: 1px; height: 0px;"></div></div><div class="CodeMirror-hscrollbar" cm-not-content="true" style="height: 18px; pointer-events: none;"><div style="height: 100%; min-height: 1px; width: 0px;"></div></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1" draggable="false"><div class="CodeMirror-sizer" style="margin-left: 30px; margin-bottom: 0px; border-right-width: 30px; min-height: 450px; min-width: 513px; padding-right: 0px; padding-bottom: 0px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines" role="presentation"><div role="presentation" style="position: relative; outline: none;"><div class="CodeMirror-measure"><div class="CodeMirror-linenumber CodeMirror-gutter-elt"><div>26</div></div></div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-cursors" style="visibility: hidden;"><div class="CodeMirror-cursor" style="left: 32.8125px; top: 136px; height: 17px;">&nbsp;</div></div><div class="CodeMirror-code" role="presentation" style=""><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">1</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">2</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">3</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">4</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">5</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment cm-overlay cm-cm-eol">/*请完成下面这个函数，实现题目要求的功能</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">6</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment cm-overlay cm-cm-eol">当然，你也可以不按照下面这个模板来作答，完全按照自己的想法来</span><span class="cm-comment cm-overlay cm-whitespace cm-whitespace-1"> </span><span class="cm-comment cm-overlay cm-cm-eol">^-^</span><span class="cm-comment cm-overlay cm-whitespace cm-whitespace-1"> </span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">7</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment cm-overlay cm-cm-eol">******************************开始写代码******************************/</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">8</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword cm-overlay cm-cm-eol">function</span><span class="cm-overlay cm-whitespace cm-whitespace-1"> </span><span class="cm-variable cm-overlay cm-cm-eol">solution</span><span class="cm-overlay cm-cm-eol">(</span><span class="cm-def cm-overlay cm-cm-eol">prices</span><span class="cm-overlay cm-cm-eol">,</span><span class="cm-overlay cm-whitespace cm-whitespace-1"> </span><span class="cm-def cm-overlay cm-cm-eol">budget</span><span class="cm-overlay cm-cm-eol">)</span><span class="cm-overlay cm-whitespace cm-whitespace-1"> </span><span class="cm-overlay cm-cm-eol">{</span></span></pre></div><div class="CodeMirror-activeline" style="position: relative;"><div class="CodeMirror-activeline-background CodeMirror-linebackground"></div><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">9</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" class="cm-tab-wrap-hack" style="padding-right: 0.1px;"><span class="cm-overlay cm-cm-eol"><span class="cm-tab" role="presentation" cm-text="	">    </span></span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">10</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-overlay cm-cm-eol">}</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">11</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-comment cm-overlay cm-cm-eol">/******************************结束写代码******************************/</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">12</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">13</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span cm-text="">​</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">14</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword cm-overlay cm-cm-eol">var</span><span class="cm-overlay cm-whitespace cm-whitespace-1"> </span><span class="cm-variable cm-overlay cm-cm-eol">res</span><span class="cm-overlay cm-cm-eol">;</span><span class="cm-overlay cm-whitespace cm-whitespace-1"> </span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">15</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-overlay cm-whitespace cm-whitespace-2">  </span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">16</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword cm-overlay cm-cm-eol">var</span><span class="cm-overlay cm-whitespace cm-whitespace-1"> </span><span class="cm-variable cm-overlay cm-cm-eol">_prices_size</span><span class="cm-overlay cm-whitespace cm-whitespace-1"> </span><span class="cm-operator cm-overlay cm-cm-eol">=</span><span class="cm-overlay cm-whitespace cm-whitespace-1"> </span><span class="cm-variable cm-overlay cm-cm-eol">parseInt</span><span class="cm-overlay cm-cm-eol">(</span><span class="cm-variable cm-overlay cm-cm-eol">read_line</span><span class="cm-overlay cm-cm-eol">());</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">17</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-overlay cm-whitespace cm-whitespace-4">    </span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">18</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword cm-overlay cm-cm-eol">var</span><span class="cm-overlay cm-whitespace cm-whitespace-1"> </span><span class="cm-variable cm-overlay cm-cm-eol">_prices</span><span class="cm-overlay cm-whitespace cm-whitespace-1"> </span><span class="cm-operator cm-overlay cm-cm-eol">=</span><span class="cm-overlay cm-whitespace cm-whitespace-1"> </span><span class="cm-keyword cm-overlay cm-cm-eol">new</span><span class="cm-overlay cm-whitespace cm-whitespace-1"> </span><span class="cm-variable cm-overlay cm-cm-eol">Array</span><span class="cm-overlay cm-cm-eol">();</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">19</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword cm-overlay cm-cm-eol">var</span><span class="cm-overlay cm-whitespace cm-whitespace-1"> </span><span class="cm-variable cm-overlay cm-cm-eol">_prices_item</span><span class="cm-overlay cm-cm-eol">;</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">20</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword cm-overlay cm-cm-eol">for</span><span class="cm-overlay cm-cm-eol">(</span><span class="cm-keyword cm-overlay cm-cm-eol">var</span><span class="cm-overlay cm-whitespace cm-whitespace-1"> </span><span class="cm-variable cm-overlay cm-cm-eol">_prices_i</span><span class="cm-overlay cm-whitespace cm-whitespace-1"> </span><span class="cm-operator cm-overlay cm-cm-eol">=</span><span class="cm-overlay cm-whitespace cm-whitespace-1"> </span><span class="cm-number cm-overlay cm-cm-eol">0</span><span class="cm-overlay cm-cm-eol">;</span><span class="cm-overlay cm-whitespace cm-whitespace-1"> </span><span class="cm-variable cm-overlay cm-cm-eol">_prices_i</span><span class="cm-overlay cm-whitespace cm-whitespace-1"> </span><span class="cm-operator cm-overlay cm-cm-eol">&lt;</span><span class="cm-overlay cm-whitespace cm-whitespace-1"> </span><span class="cm-variable cm-overlay cm-cm-eol">_prices_size</span><span class="cm-overlay cm-cm-eol">;</span><span class="cm-overlay cm-whitespace cm-whitespace-1"> </span><span class="cm-variable cm-overlay cm-cm-eol">_prices_i</span><span class="cm-operator cm-overlay cm-cm-eol">++</span><span class="cm-overlay cm-cm-eol">)</span><span class="cm-overlay cm-whitespace cm-whitespace-1"> </span><span class="cm-overlay cm-cm-eol">{</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">21</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-overlay cm-whitespace cm-whitespace-4">    </span><span class="cm-keyword cm-overlay cm-cm-eol">var</span><span class="cm-overlay cm-whitespace cm-whitespace-1"> </span><span class="cm-variable cm-overlay cm-cm-eol">_prices_item</span><span class="cm-overlay cm-whitespace cm-whitespace-1"> </span><span class="cm-operator cm-overlay cm-cm-eol">=</span><span class="cm-overlay cm-whitespace cm-whitespace-1"> </span><span class="cm-variable cm-overlay cm-cm-eol">parseInt</span><span class="cm-overlay cm-cm-eol">(</span><span class="cm-variable cm-overlay cm-cm-eol">read_line</span><span class="cm-overlay cm-cm-eol">());</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">22</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-overlay cm-whitespace cm-whitespace-4">    </span><span class="cm-variable cm-overlay cm-cm-eol">_prices</span><span class="cm-overlay cm-cm-eol">.</span><span class="cm-property cm-overlay cm-cm-eol">push</span><span class="cm-overlay cm-cm-eol">(</span><span class="cm-variable cm-overlay cm-cm-eol">_prices_item</span><span class="cm-overlay cm-cm-eol">);</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">23</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-overlay cm-cm-eol">}</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">24</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-keyword cm-overlay cm-cm-eol">var</span><span class="cm-overlay cm-whitespace cm-whitespace-1"> </span><span class="cm-variable cm-overlay cm-cm-eol">_budget</span><span class="cm-overlay cm-whitespace cm-whitespace-1"> </span><span class="cm-operator cm-overlay cm-cm-eol">=</span><span class="cm-overlay cm-whitespace cm-whitespace-1"> </span><span class="cm-variable cm-overlay cm-cm-eol">parseInt</span><span class="cm-overlay cm-cm-eol">(</span><span class="cm-variable cm-overlay cm-cm-eol">read_line</span><span class="cm-overlay cm-cm-eol">());</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">25</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable cm-overlay cm-cm-eol">res</span><span class="cm-overlay cm-whitespace cm-whitespace-1"> </span><span class="cm-operator cm-overlay cm-cm-eol">=</span><span class="cm-overlay cm-whitespace cm-whitespace-1"> </span><span class="cm-variable cm-overlay cm-cm-eol">solution</span><span class="cm-overlay cm-cm-eol">(</span><span class="cm-variable cm-overlay cm-cm-eol">_prices</span><span class="cm-overlay cm-cm-eol">,</span><span class="cm-overlay cm-whitespace cm-whitespace-1"> </span><span class="cm-variable cm-overlay cm-cm-eol">_budget</span><span class="cm-overlay cm-cm-eol">);</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">26</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-variable cm-overlay cm-cm-eol">print</span><span class="cm-overlay cm-cm-eol">(</span><span class="cm-variable cm-overlay cm-cm-eol">res</span><span class="cm-overlay cm-cm-eol">);</span></span></pre></div><div style="position: relative; display: none;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">20</div></div><pre class=" CodeMirror-line " role="presentation"><span role="presentation" style="padding-right: 0.1px;"><span class="cm-overlay cm-whitespace cm-whitespace-4">    </span><span class="cm-property cm-overlay cm-cm-eol">public</span><span class="cm-overlay cm-whitespace cm-whitespace-1"> </span><span class="cm-variable cm-overlay cm-cm-eol">static</span><span class="cm-overlay cm-whitespace cm-whitespace-1"> </span><span class="cm-variable cm-overlay cm-cm-eol">void</span><span class="cm-overlay cm-whitespace cm-whitespace-1"> </span><span class="cm-variable cm-overlay cm-cm-eol">main</span><span class="cm-overlay cm-cm-eol">(</span><span class="cm-def cm-overlay cm-cm-eol">String</span><span class="cm-overlay cm-cm-eol">[]</span><span class="cm-overlay cm-whitespace cm-whitespace-1"> </span><span class="cm-variable cm-overlay cm-cm-eol">args</span><span class="cm-overlay cm-cm-eol">){</span></span></pre></div></div></div></div></div></div><div style="position: absolute; height: 30px; width: 1px; border-bottom: 0px solid transparent; top: 450px;"></div><div class="CodeMirror-gutters" style="height: 480px;"><div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 29px;"></div></div></div></div>
+                        </form>
+                        <script>
+
+
+
+                        </script>
+                    </article>
+                    <article id="efcss" class="feditor" style="display:none;">
+                        <form class="ng-pristine ng-valid">
+                            <textarea id="txtA2" name="txtA2" rows="10" style="height:30px; width:2000px;"></textarea>
+                        </form>
+                        <script>
+                        </script>
+                    </article>
+                    <article id="efjs" class="feditor" style="display:none;">
+                        <form class="ng-pristine ng-valid">
+                            <textarea id="txtA3" name="txtA3" rows="10" style="height:30px; width:2000px;"></textarea>
+                        </form>
+                        <script>
+                        </script>
+                    </article>
+                    <article id="efrend" class="feditor" style="display:none;">
+                        <div class="CodeMirror" id="webrender" style="height: 636px;">
+                        </div>
+                    </article>
+                    <!-- ngIf: recordBool -->
+                </div>
+                <!-- ngIf: customData_bool -->
+
+                <div class="editorbanner">
+                    <div class="line1">
+                        <!-- ngIf: loading == false && model != null && model.code == 0 && model.paper.quesPrev!=0 && model.rowNumber > 0 --><a href="javascript:void(0)" class="link ng-binding ng-scope" ng-if="loading == false &amp;&amp; model != null &amp;&amp; model.code == 0 &amp;&amp; model.paper.quesPrev!=0 &amp;&amp; model.rowNumber &gt; 0" ng-click="prev(model.rowNumber)" ng-bind="App.lang.main.prevQues">上一题</a><!-- end ngIf: loading == false && model != null && model.code == 0 && model.paper.quesPrev!=0 && model.rowNumber > 0 -->
+                        <!-- ngIf: loading == false && model != null && model.code == 0 && model.rowNumber < (model.paper.quesNum-1) * 100 -->
+                        <!-- ngIf: loading == false && model != null && model.code == 0 && model.rowNumber == (model.paper.quesNum-1) * 100 --><a href="javascript:void(0)" class="beginExam ng-binding ng-scope" ng-if="loading == false &amp;&amp; model != null &amp;&amp; model.code == 0 &amp;&amp; model.rowNumber == (model.paper.quesNum-1) * 100" ng-click="submitPaper(model.rowNumber)" ng-bind="App.lang.main.submitPaper">提交该部分</a><!-- end ngIf: loading == false && model != null && model.code == 0 && model.rowNumber == (model.paper.quesNum-1) * 100 -->
+                        <a href="javascript:void(0)" class="debugbuttom ng-binding" ng-click="saveAnswer(model.rowNumber)" data-step="3" data-intro="点击此处，可以实时调试您编写好的代码！" data-position="left" style="font-weight:bold;" ng-bind="App.lang.onlinecode.debug">调试</a>
+                        <!-- ngIf: loading == false && model != null && model.code == 0 --><a href="javascript:void(0)" class="savebuttom ng-binding ng-scope" ng-if="loading == false &amp;&amp; model != null &amp;&amp; model.code == 0" ng-click="saveAnswerExt(model.rowNumber)" ng-bind="App.lang.main.saveQues">保存</a><!-- end ngIf: loading == false && model != null && model.code == 0 -->
+
+                        <!-- ngIf: loading == false && model != null && model.code == 0 && debugBtn && App.ques.ques.customData===1 --><a href="javascript:void(0)" class="savebuttom customData ng-binding ng-scope" ng-if="loading == false &amp;&amp; model != null &amp;&amp; model.code == 0 &amp;&amp; debugBtn &amp;&amp; App.ques.ques.customData===1" ng-click="customData(model.rowNumber)" ng-bind="App.lang.main.customData">自定义数据</a><!-- end ngIf: loading == false && model != null && model.code == 0 && debugBtn && App.ques.ques.customData===1 -->
+                        <!-- ngIf: loading == false && model != null && model.code == 0 && debugBtn --><a href="javascript:void(0)" class="savebuttom customData ng-binding ng-scope" ng-if="loading == false &amp;&amp; model != null &amp;&amp; model.code == 0 &amp;&amp; debugBtn" ng-click="findRecordsList(model.rowNumber)" ng-bind="App.lang.main.recordsList">提交记录</a><!-- end ngIf: loading == false && model != null && model.code == 0 && debugBtn -->
+                    </div>
+                    
+                </div>
+                <div class="resultInfo">
+                    <div class="line2">
+                        <div class="title">
+                            <div class="alert">
+                                <div class="alert-warm ng-binding" ng-bind-html="result_title | trustHtml"></div>
+                                <div class="buttom" ng-click="saveAnswer(model.rowNumber)"><i class="fa fa-play-circle-o"></i> <span ng-bind="App.lang.onlinecode.run" class="ng-binding">运行</span></div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="infolist ng-binding" ng-bind-html="result_info | trustHtml"></div>
+                    <a class="btn-hide-run-pane pull-right ng-binding" ng-click="closeDebugDialog()" ng-bind="App.lang.answer.close">关闭</a>
+                </div>
+            </div>
+        </div><!-- end ngIf: model.ques.questype==6 || model.ques.questype==100 -->
+
+    </div><!-- end ngIf: loading == false && model != null && model.code == 0 -->
+</div>
+<script language="JavaScript" type="text/javascript" class="ng-scope">
+
+</script></div>
+            </div>
+        </div>
+
+        <!-- ngIf: App.lang.lang=='zh-cn' --><div class="footer ng-scope" ng-if="App.lang.lang==&#39;zh-cn&#39;" style="bottom: 0px; position: fixed;">
+            <img src="./小米集团2020校招在线考试系统_files/wlogo.png" style="height: 25px;position: relative;top: -1px;">  &nbsp;&nbsp;本考试系统由 <a target="_blank" href="https://kao.acmcoder.com/" style="font-weight:bold;color:#Fff;">赛码网</a> 提供技术支持
+        </div><!-- end ngIf: App.lang.lang=='zh-cn' -->
+        <!-- ngIf: App.lang.lang!='zh-cn' -->
+
+    </div>
+
+    <div class="noticeTips forall">
+        <ul>
+
+            <!-- ngIf: App.mobileMonitor.active!=-1 -->
+            <!-- ngIf: App.version.key==2 || App.version.key==3 --><li ng-if="App.version.key==2 || App.version.key==3" class="immMessage mianli ">
+                <span class="clickarea"><i class="fa fa-envelope"></i> <span ng-bind="App.lang.main.notice" class="title ng-binding">公告</span> <i class="tip animated flash m3" style="display:none;">0</i> </span>
+                <div class="MessageBox">
+                    <div class="toolguider">
+                        <div style="float: left; line-height: 30px;" ng-bind="App.lang.main.notice" class="ng-binding">公告</div>
+                        <i class="fa fa-times-circle"></i>
+                    </div>
+                    <ul><li> 【小米2020校招在线笔试】将于6日周五晚7点开考，时长90分钟；注意：练习题仅供熟悉考试系统操作，正式笔试会以实际试卷内容为准。如果您有任何疑问，可以在页面右侧的对话框中给我们留言，预祝考试顺利！</li></ul>
+                </div>
+            </li><!-- end ngIf: App.version.key==2 || App.version.key==3 -->
+            <!-- ngIf: (App.version.key==2 || App.version.key==3) && (App.myInfo.secretary==1 || App.myInfo.secretary==undefined) --><li ng-if="(App.version.key==2 || App.version.key==3) &amp;&amp; (App.myInfo.secretary==1 || App.myInfo.secretary==undefined)" class="onlineRefer mianli" data-step="1" data-intro="在答题过程中，如遇到系统故障或试题问题，可以与工作人员联系" data-position="top">
+                <span class="clickarea"><i class="fa fa-comments"></i> <span ng-bind="App.lang.main.chat" class="title ng-binding">咨询</span>  <i class="tip animated flash m3" style="display:none;">0</i> </span>
+                <div class="MessageBox">
+                    <div class="toolguider">
+                        <div style="float: left; line-height: 30px;" ng-bind="App.lang.main.chat" class="ng-binding">咨询</div>
+                        <i class="fa fa-times-circle"></i>
+                    </div>
+                    <div class="InfoBox">
+                        <ul></ul>
+                    </div>
+                    <div class="InputBox">
+
+                        <div class="messtype">
+                            <span ng-bind="App.lang.main.chatTips" class="ng-binding">请选择问题类型</span> <i class="fa fa-angle-down"></i>
+                            <!-- ngIf: App.lang.lang=='en' -->
+                            <!-- ngIf: App.lang.lang=='zh-cn' --><ul ng-if="App.lang.lang==&#39;zh-cn&#39;" role="menu" style="" class="messtype-menu ng-scope" data-jsv-df="">
+                                <li xtvalue="1">系统登录问题</li>
+                                <li xtvalue="2">摄像头问题</li>
+                                <li xtvalue="3">系统使用问题</li>
+                                <li xtvalue="4">网速卡顿问题</li>
+                                <li xtvalue="5">试题相关问题</li>
+                                <li xtvalue="6">编程题相关问题</li>
+                                <li xtvalue="7">其他问题</li>
+                            </ul><!-- end ngIf: App.lang.lang=='zh-cn' -->
+                        </div>
+                        <textarea id="inputviewBox" maxlength="1000" rows="2" cols="20" class="inputviewBox"></textarea><input id="messbutton" onclick="sendQuestion()" class="btn" type="button" value="发送">
+                    </div>
+                </div>
+            </li><!-- end ngIf: (App.version.key==2 || App.version.key==3) && (App.myInfo.secretary==1 || App.myInfo.secretary==undefined) -->
+            <!-- ngIf: App.myInfo.calculatormode!=0 --><li ng-if="App.myInfo.calculatormode!=0" class="myCalculator mianli " style="display: none;">
+                <a href="javascript:void(0)" class="showCalculator">
+                   <span class="imgSpan"> <img src="./小米集团2020校招在线考试系统_files/Calculator.png" style=" margin-bottom: 5px;"></span>
+                   <div class="calcInfo ng-binding" ng-bind-html="App.lang.main.calculator | trustHtml">计算器</div>
+                </a>
+                <div class="CalculatorBox" style=" display:none;">
+                    <div class="jcalculator_wrap">
+                        <div class="calculatorTitle"><span class="left ng-binding" ng-bind-html="App.lang.main.calculator | trustHtml">计算器</span><i class="fa fa-times-circle"></i></div>
+                        <iframe src="./小米集团2020校招在线考试系统_files/calc.html" frameborder="0" style="width:506px;height:263px;"></iframe>
+                    </div>
+                </div>
+            </li><!-- end ngIf: App.myInfo.calculatormode!=0 -->
+        </ul>
+    </div>
+
+    <div class="infoview animated flash" style="display:none;">
+        <div class="left" style="width: 100%; float: left; padding-left: 5%; "><i class="fa fa-lightbulb-o circle"></i> 最新消息: 大家请检查一下摄像头是否拍摄正常！</div><div class="right" style="width:10%; float:right;"><i class="fa fa-close fr"></i></div>
+    </div>
+
+</div>
+<div id="dvTimend" class="modal fade loadexam ng-scope" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog" style="top:15%;width:800px;height:400px;">
+        <div class="modal-content">
+            <div class="modal-body">
+
+                <!-- ngIf: App.lang.lang!='en' --><div class="info ng-scope" ng-if="App.lang.lang!=&#39;en&#39;">
+                    <div class="mess">
+                        <div class="line1">发卷中，请耐心等候！</div>
+                        <div class="line2">倒计时 <span id="timeToStart" class="time" style="font-weight:bold;">00:00:00</span></div>
+                        <div class="line3">
+                            <div class="blue">为使本次在线考试更顺畅，我们<span class="red">随机安排</span><br>你在考试开始后的5分钟内开始答题</div>
+                            <div class="gray">等待时间将顺延至交卷，<span class="red">考试总时长不变</span></div>
+
+                            <div class="apply" id="dvStartExam" style="">
+                                <button id="btnStartExam" class="btn btn-primary" ng-click="startExam()">开始答题</button>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- end ngIf: App.lang.lang!='en' -->
+
+                <!-- ngIf: App.lang.lang=='en' -->
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="loginmodal" style="display:none;" class="ng-scope">
+    <div style="text-align:right;clear:both; position:relative;"><span id="freshphoto" style="  cursor:pointer; font-size:20px; position:absolute; z-index:9999;" class="cancelbtn"></span></div>
+    <!--<div class="showceng" style="position: absolute; z-index: 999; left:0px; height:100%; top:0px; top:0px; width:100%;"></div>-->
+    <div class="info">
+
+    </div>
+</div>
+
+
+<div id="submitmodal" class="loginmodal ng-scope" style="display: none; padding: 10px 10px 20px;">
+    <div class="info" style="padding:15px 0px;">您还有未作答的题目！<br><span style="color:Red;font-weight:bold;">交卷后无法再次登录考试系统</span><br>您确认要交卷吗？</div>
+    <div class="center">
+        <a class="left btn btn-primary save">确认</a>
+        <a class="left btn cancelbtn cancelforsubmit">取消</a>
+    </div>
+</div>
+
+
+
+<div id="qadialog" class="qadialog ng-scope" style="display:none;">
+    <iframe id="myqa" name="myqa" src="./小米集团2020校招在线考试系统_files/saved_resource.html" scrolling="auto" style="" border="0" width="1100px" height="500px" frameborder="0"></iframe>
+</div></div>
+    <!-- 模态框（Modal） -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display:none;">
+        <div class="modal-dialog" style="top:15%;">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                        ×
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">
+                        赛码在线编程考试
+                    </h4>
+                </div>
+                <div class="modal-body"></div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">
+                        我知道了
+                    </button>
+                    <button type="button" class="btn btn-primary" style="display:none;">
+                        我知道了
+                    </button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal -->
+    </div>
+
+    <div class="loadshow hide">
+        <img src="./小米集团2020校招在线考试系统_files/load.gif" style="height:40px;width:40px;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span ng-bind="App.lang.main.questionLoad" class="ng-binding"></span>... ...
+    </div>
+
+    <script src="./小米集团2020校招在线考试系统_files/sea.js" type="text/javascript"></script>
+    <script src="./小米集团2020校招在线考试系统_files/libs.js" type="text/javascript"></script>
+    <!--<script src="/release/exam/2.0.5/plugins/libs.js" type="text/javascript"></script>-->
+
+    <script src="./小米集团2020校招在线考试系统_files/ClientJS.js" type="text/javascript"></script>
+    <script src="./小米集团2020校招在线考试系统_files/config.js" type="text/javascript"></script>
+    <script src="./小米集团2020校招在线考试系统_files/toastr.js" type="text/javascript"></script>
+
+    <script src="./小米集团2020校招在线考试系统_files/jsencrypt.min.js" type="text/javascript"></script>
+
+    <script src="./小米集团2020校招在线考试系统_files/ckeditor.js" type="text/javascript"></script>
+    <script src="./小米集团2020校招在线考试系统_files/jquery.js" type="text/javascript"></script>
+
+     <script src="./小米集团2020校招在线考试系统_files/screenCapture.js" type="text/javascript"></script>
+    <!--<script src="/static/plugins/tools/screenCapture.js" type="text/javascript"></script>-->
+
+    <!-- <script src="/static/plugins/ckeditor/ckeditor.js" type="text/javascript" ></script>
+    <script src="/static/plugins/ckeditor/adapters/jquery.js" type="text/javascript" ></script>
+ -->
+    <!-- <script src="/release/exam/2.0.5/plugins/index.js" type="text/javascript" ></script> -->
+    <script src="./小米集团2020校招在线考试系统_files/index.js" type="text/javascript"></script>
+
+     <script src="./小米集团2020校招在线考试系统_files/app.js" type="text/javascript"></script>
+    <!--<script src="/static/extra/mvc/app.js" type="text/javascript"></script>-->
+    <!--<script src="https://cdn.acmcoder.com/assets/public/assets/js/plugin/jstree/jstree.min.js" language="JavaScript" type="text/javascript"></script>-->
+
+<div role="log" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><div role="log" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><div role="log" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><div role="log" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><div role="log" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><div role="log" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><div role="log" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><div role="log" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div><div class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-front ui-draggable ui-resizable" tabindex="-1" role="dialog" aria-describedby="dialog" aria-labelledby="ui-id-1" style="display: none; position: absolute;"><div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix ui-draggable-handle"><span id="ui-id-1" class="ui-dialog-title">画板</span><button type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only ui-dialog-titlebar-close" role="button" title="Close"><span class="ui-button-icon-primary ui-icon ui-icon-closethick"></span><span class="ui-button-text">Close</span></button></div><div id="dialog" class="painterdialog ng-scope ui-dialog-content ui-widget-content" style="display: block;">
+    <div style="font-size:9pt;">
+        <fieldset style="float:left;width:250px;">
+            <legend>工具</legend>
+            <div id="toolsOptions">
+                <input type="radio" id="tools_pencil" name="toolsOption" checked="checked" class="ui-helper-hidden-accessible"><label for="tools_pencil" class="ui-state-active ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-primary" role="button"><span class="ui-button-icon-primary ui-icon ui-icon-pencil"></span><span class="ui-button-text">画笔</span></label>
+                <input type="radio" id="tools_eraser" name="toolsOption" class="ui-helper-hidden-accessible"><label for="tools_eraser" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-primary" role="button"><span class="ui-button-icon-primary ui-icon ui-icon-bullet"></span><span class="ui-button-text">橡皮擦</span></label>
+                <input type="radio" id="tools_trash" name="toolsOption" class="ui-helper-hidden-accessible"><label for="tools_trash" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-primary" role="button"><span class="ui-button-icon-primary ui-icon ui-icon-trash"></span><span class="ui-button-text">清空</span></label>
+                <div style="border-top:1px dashed gray;margin-top:8px;padding-top:8px;">
+                    <span>
+                        <button id="tools_save" class="redbg ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-primary" role="button"><span class="ui-button-icon-primary ui-icon ui-icon-disk"></span><span class="ui-button-text">保存图片</span></button>&nbsp;&nbsp;&nbsp;
+                        <button id="tools_undo" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-primary" role="button"><span class="ui-button-icon-primary ui-icon ui-icon-arrowreturnthick-1-w"></span><span class="ui-button-text">撤销</span></button>&nbsp;&nbsp;&nbsp;
+                        <button id="tools_redo" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-primary" role="button"><span class="ui-button-icon-primary ui-icon ui-icon-arrowreturnthick-1-e"></span><span class="ui-button-text">恢复</span></button>
+                    </span>
+                </div>
+            </div>
+
+        </fieldset>
+        <fieldset style="float: left;width: 202px">
+            <legend>多边形</legend>
+            <div>
+                <span>
+                    <input type="radio" id="tools_line" name="toolsOption" class="ui-helper-hidden-accessible"><label for="tools_line" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-primary" role="button"><span class="ui-button-icon-primary ui-icon ui-icon-minusthick"></span><span class="ui-button-text">直线</span></label>
+                    <input type="radio" id="tools_rectangle" name="toolsOption" class="ui-helper-hidden-accessible"><label for="tools_rectangle" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-primary" role="button"><span class="ui-button-icon-primary ui-icon ui-icon-stop"></span><span class="ui-button-text">矩形</span></label>
+                    <input type="radio" id="tools_circle" name="toolsOption" class="ui-helper-hidden-accessible"><label for="tools_circle" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-icon-primary" role="button"><span class="ui-button-icon-primary ui-icon ui-icon-radio-off"></span><span class="ui-button-text">文字</span></label>
+                </span>
+            </div>
+            <div style="width:100%;color:#aaa;">
+                注：输入文字，请先用文字工具画出输入区域
+            </div>
+        </fieldset>
+        <fieldset style="float:left;width:150px;">
+            <legend>线条设置</legend>
+            <span style="float: left;margin-top: 6px;">线条粗细: </span>
+            <select id="penWidth" style="display: none;">
+                <option value="1" selected="">1px</option>
+                <option value="2">2px</option>
+                <option value="4">4px</option>
+                <option value="6">6px</option>
+                <option value="8">8px</option>
+                <option value="12">12px</option>
+                <option value="14">14px</option>
+                <option value="16">16px</option>
+                <option value="18">18px</option>
+            </select><span class="ui-selectmenu-button ui-widget ui-state-default ui-corner-all" tabindex="0" id="penWidth-button" role="combobox" aria-expanded="false" aria-autocomplete="list" aria-owns="penWidth-menu" aria-haspopup="true" style="width: 68px;"><span class="ui-icon ui-icon-triangle-1-s"></span><span class="ui-selectmenu-text">1px</span></span>
+            <div style="border-top:1px dashed gray;margin-top:8px;padding-top:8px;">
+                <span>边框:<input id="colorpicker-popup" type="text" value="000000" style="width: 72px;display:none; "><button type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button"><span class="ui-button-text"><img src="./小米集团2020校招在线考试系统_files/ui-colorpicker.png" alt="Color" title="Color" style="background-color: rgb(0, 0, 0);"></span></button></span>&nbsp;
+                <span>填充:<input id="colorpicker-popup2" type="text" value="fe9810" style="width: 72px;display:none; "><button type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button"><span class="ui-button-text"><img src="./小米集团2020校招在线考试系统_files/ui-colorpicker.png" alt="Color" title="Color" style="background-color: rgb(254, 152, 16);"></span></button></span>
+            </div>
+        </fieldset>
+        <fieldset style="float:left;width:160px;">
+            <legend>字体设置</legend>
+            <span>
+                <span style="float: left;margin-top: 6px;">字体大小: </span>
+                <select id="fontSize" style="display: none;">
+                    <option value="8px" selected="">8px</option>
+                    <option value="10px">10px</option>
+                    <option value="12px">12px</option>
+                    <option value="14px">14px</option>
+                    <option value="16px">16px</option>
+                    <option value="18px">18px</option>
+                    <option value="20px">20px</option>
+                    <option value="22px">22px</option>
+                    <option value="24px">24px</option>
+                    <option value="26px">26px</option>
+                    <option value="28px">28px</option>
+                    <option value="30px">30px</option>
+                    <option value="32px">32px</option>
+                    <option value="34px">34px</option>
+                    <option value="36px">36px</option>
+                </select><span class="ui-selectmenu-button ui-widget ui-state-default ui-corner-all" tabindex="0" id="fontSize-button" role="combobox" aria-expanded="false" aria-autocomplete="list" aria-owns="fontSize-menu" aria-haspopup="true" style="width: 98px;"><span class="ui-icon ui-icon-triangle-1-s"></span><span class="ui-selectmenu-text">8px</span></span>
+            </span>
+            <br>
+            <span>
+                <span style="float: left;margin-top: 6px;">字体选择:</span>
+                <select id="fontType" style="top: 20px; display: none;">
+                    <option value="宋体">宋体</option>
+                    <option value="微软雅黑">微软雅黑</option>
+                    <option value="仿宋">仿宋</option>
+                    <option value="Arial" selected="">Arial</option>
+                    <option value="Consolas">Consolas</option>
+                </select><span class="ui-selectmenu-button ui-widget ui-state-default ui-corner-all" tabindex="0" id="fontType-button" role="combobox" aria-expanded="false" aria-autocomplete="list" aria-owns="fontType-menu" aria-haspopup="true" style="width: 98px;"><span class="ui-icon ui-icon-triangle-1-s"></span><span class="ui-selectmenu-text">Arial</span></span>
+            </span>
+            <span style="font-weight:bold;"><input type="checkbox" id="boldOption" name="fontOption" class="ui-helper-hidden-accessible"><label for="boldOption" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button"><span class="ui-button-text">B</span></label></span>
+            <span style="font-style: italic;"><input type="checkbox" id="italicOption" name="italicOption" class="ui-helper-hidden-accessible"><label for="italicOption" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button"><span class="ui-button-text">I</span></label></span>
+        </fieldset>
+
+        <div style="clear:both;"></div>
+    </div>
+
+    <div style="background:white;position:relative;" id="container">
+        <div id="temp" style="border:1px solid gray;width:1px;height:1px;position:absolute;display:none;"></div>
+
+        <canvas id="myCanvas" width="880" height="400" class="container_pencil"></canvas>
+
+    <div style="border-top: 1px solid red; width: 1.41421px; transform: rotate(45deg); position: absolute; left: -0.207107px; top: 0.5px;"></div><div style="border:1px solid gray;width:1px;height:1px;position:absolute;display:none;"></div><textarea rows="3" cols="20" style="background: transparent; position: absolute; display: none; font-size: 8px; font-family: Arial; color: rgb(254, 152, 16);"></textarea></div>
+    <div class="clearfix">
+        <a class="btn savepainterimg" style="float: right; margin-right: 5px; background-color: #FF8A00; color: #fff;">保存图片</a>
+    </div>
+    <span id="show" style="display:none;"></span>
+</div><div class="ui-resizable-handle ui-resizable-n" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-e" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-s" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-w" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-sw" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-ne" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-nw" style="z-index: 90;"></div><div class="ui-selectmenu-menu ui-front"><ul aria-hidden="true" aria-labelledby="penWidth-button" id="penWidth-menu" class="ui-menu ui-widget ui-widget-content ui-corner-bottom" role="listbox" tabindex="0"></ul></div><div class="ui-selectmenu-menu ui-front"><ul aria-hidden="true" aria-labelledby="fontSize-button" id="fontSize-menu" class="ui-menu ui-widget ui-widget-content ui-corner-bottom" role="listbox" tabindex="0"></ul></div><div class="ui-selectmenu-menu ui-front"><ul aria-hidden="true" aria-labelledby="fontType-button" id="fontType-menu" class="ui-menu ui-widget ui-widget-content ui-corner-bottom" role="listbox" tabindex="0"></ul></div></div><div id="cxdialog" class="cxdialog out" style="margin-left: -188px; margin-top: -130px;"><div class="cxdialog_title">提示</div><div class="cxdialog_info"><div style="padding:20px; text-align:center;font-size:18px;">系统发现您有多个语言编写的代码 <br> 系统将以当前语言：<span style="color:#2cbfde;font-weight:bold;">Java</span><br> 作为最终提交代码，保存至数据库中！</div></div><div class="cxdialog_btns"><a class="btn_no" rel="cxdialog" rev="btn_no">取消</a><a class="btn_ok" rel="cxdialog" rev="btn_ok">确定</a></div><a rel="cxdialog" rev="close"></a></div><div id="cxdialog_overlay" class="cxdialog_overlay" style="background: rgb(0, 0, 0);"></div></body></html>

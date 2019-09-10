@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang='en'><head>
+  <meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='description' content='常见业务编程题总结  0. 前言 写前端小demo的最好用的工具是codepen, 上面也有一些问题的解决方案，我把下面题目的答案都放在codepen上面，有部分题目的代码会放在leetcode上面
+ jsonp 原生jsonp jQuery中的jsonp  闭包  简单说一个闭包的应用，然后闭包的主要作用是什么 写个从几个li中取下标的闭包代码  代码链接    前端布局 两列布局  左边固定宽度为200,右边自适应,而且滚动条要自动选择只出现最高的那个 做一个两栏布局，左边fixed width，右边responsive，用纸笔手写 左边定宽右边自适应 实现布局：左边一张图片，右边一段文字（不是环绕）
+三列布局 使用flex布局实现三等分，左右两个元素分别贴到左边和右边，垂直居中
+其他 浮动的原理以及如何清除浮动
+ 绝对定位与相对定位的区别
+ 如何让各种情况下的div居中(绝对定位的div,垂直居中,水平居中)
+ 清除浮动有哪几种方式,分别说说
+   jQuery 手写一个jQuery插件 手写实现jquery里面的insertAfter 在jquery方法和原型上面添加方法的区别和实现，以及jquery对象的实现 jquery绑定click的方法  画图和动画 css实现一个三角形 用canvas绘制一个有限度的斐波那契数列的曲线 css动画demo Animation还有哪些其他属性  为什么要用translate3d 使用js画一个抛物线，抛物线上有个小球随着抛物线运动，有两个按钮能使小球继续运动停止运动 CSS动画：animation、transition、transform、translate傻傻分不清参考链接   ajax 原生js实现ajax 用promise手写ajax  js深拷贝  js异步  for函数里面setTimeout异步问题 写一个递归。就是每隔5秒调用一个自身，一共100次 setTimeout和setInterval区别，如何互相实现'>
+<meta name='theme-color' content='#FFFFFF'>
+
+<meta property='og:title' content='常见业务编程题总结 • mannuan'>
+<meta property='og:description' content='常见业务编程题总结  0. 前言 写前端小demo的最好用的工具是codepen, 上面也有一些问题的解决方案，我把下面题目的答案都放在codepen上面，有部分题目的代码会放在leetcode上面
+ jsonp 原生jsonp jQuery中的jsonp  闭包  简单说一个闭包的应用，然后闭包的主要作用是什么 写个从几个li中取下标的闭包代码  代码链接    前端布局 两列布局  左边固定宽度为200,右边自适应,而且滚动条要自动选择只出现最高的那个 做一个两栏布局，左边fixed width，右边responsive，用纸笔手写 左边定宽右边自适应 实现布局：左边一张图片，右边一段文字（不是环绕）
+三列布局 使用flex布局实现三等分，左右两个元素分别贴到左边和右边，垂直居中
+其他 浮动的原理以及如何清除浮动
+ 绝对定位与相对定位的区别
+ 如何让各种情况下的div居中(绝对定位的div,垂直居中,水平居中)
+ 清除浮动有哪几种方式,分别说说
+   jQuery 手写一个jQuery插件 手写实现jquery里面的insertAfter 在jquery方法和原型上面添加方法的区别和实现，以及jquery对象的实现 jquery绑定click的方法  画图和动画 css实现一个三角形 用canvas绘制一个有限度的斐波那契数列的曲线 css动画demo Animation还有哪些其他属性  为什么要用translate3d 使用js画一个抛物线，抛物线上有个小球随着抛物线运动，有两个按钮能使小球继续运动停止运动 CSS动画：animation、transition、transform、translate傻傻分不清参考链接   ajax 原生js实现ajax 用promise手写ajax  js深拷贝  js异步  for函数里面setTimeout异步问题 写一个递归。就是每隔5秒调用一个自身，一共100次 setTimeout和setInterval区别，如何互相实现'>
+<meta property='og:url' content='https://mannuan.github.io/post/20190903215340/'>
+<meta property='og:site_name' content='mannuan'>
+<meta property='og:type' content='article'><meta property='og:image' content='https://www.gravatar.com/avatar/8bacfd69855171c6f53247456732f68a?s=256'><meta property='article:section' content='post'><meta property='article:tag' content='面试总结'><meta property='article:published_time' content='2019-09-03T21:53:40&#43;08:00'/><meta property='article:modified_time' content='2019-09-03T21:53:40&#43;08:00'/><meta name='twitter:card' content='summary'>
+
+<meta name="generator" content="Hugo 0.55.6" />
+
+  <title>常见业务编程题总结 • mannuan</title>
+  <link rel='canonical' href='https://mannuan.github.io/post/20190903215340/'>
+  
+  
+  <link rel='icon' href='/favicon.ico'>
+<link rel='stylesheet' href='/assets/css/main.6a060eb7.css'><link rel='stylesheet' href='/css/custom.css'><style>
+:root{--color-accent:#FFFFFF;}
+</style>
+
+  
+
+</head>
+<body class='page type-post has-sidebar'>
+
+  <div class='site'><div id='sidebar' class='sidebar'>
+  <a class='screen-reader-text' href='#main-menu'>Skip to Main Menu</a>
+
+  <div class='container'><section class='widget widget-about sep-after'>
+  <header>
+    
+    <div class='logo'>
+      <a href='/'>
+        <img src='/images/%e6%88%91%e7%9a%84%e5%a4%b4%e5%83%8f.jpeg'>
+      </a>
+    </div>
+    
+    <h2 class='title site-title '>
+      <a href='/'>
+      mannuan
+      </a>
+    </h2>
+    <div class='desc'>
+    Rome was not built in a day.
+    </div>
+  </header>
+
+</section>
+<section class='widget widget-search sep-after'>
+  <header>
+    <h4 class='title widget-title'>Search</h4>
+  </header>
+
+  <form action='/search' id='search-form' class='search-form'>
+    <label>
+      <span class='screen-reader-text'>Search</span>
+      <input id='search-term' class='search-term' type='search' name='q' placeholder='Search&hellip;'>
+    </label></form>
+
+</section>
+<section class='widget widget-sidebar_menu sep-after'><nav id='sidebar-menu' class='menu sidebar-menu' aria-label='Sidebar Menu'>
+    <div class='container'>
+      <ul><li class='item'>
+  <a href='https://github.com/mannuan'>Github</a></li><li class='item'>
+  <a href='/skill-content/dist/'>skills</a></li><li class='item has-children'>
+  <a href=''>网络实验</a><button class='sub-menu-toggler'>
+    <span class='screen-reader-text'>expand sub menu</span>
+    <span class='sign'></span>
+  </button>
+
+  <ul class='sub-menu'><li class='item'>
+  <a href='/post/20190701101121/'>实验九</a></li><li class='item'>
+  <a href='/post/20190701090625/'>实验八</a></li><li class='item'>
+  <a href='/post/20190701105039/'>实验六</a></li><li class='item'>
+  <a href='/post/20190701172233/'>实验十</a></li><li class='item'>
+  <a href='/post/20190701182805/'>实验十一</a></li><li class='item'>
+  <a href='/post/20190701194642/'>实验十三</a></li><li class='item'>
+  <a href='/post/20190701192111/'>实验十二</a></li></ul></li><li class='item has-children'>
+  <a href=''>面经</a><button class='sub-menu-toggler'>
+    <span class='screen-reader-text'>expand sub menu</span>
+    <span class='sign'></span>
+  </button>
+
+  <ul class='sub-menu'><li class='item'>
+  <a href='/post/20190813191500/'>网易严选1</a></li><li class='item'>
+  <a href='/post/20190813190824/'>网易严选2</a></li></ul></li></ul>
+    </div>
+  </nav>
+
+</section><section class='widget widget-taxonomy_cloud sep-after'>
+  <header>
+    <h4 class='title widget-title'>Categories</h4>
+  </header>
+
+  <div class='container list-container'>
+  <ul class='list taxonomy-cloud'><li>
+        <a href='/categories/features/' style='font-size:1.129032258064516em'>features</a>
+      </li><li>
+        <a href='/categories/ide/' style='font-size:1.0241935483870968em'>ide</a>
+      </li><li>
+        <a href='/categories/jupyter/' style='font-size:1.0161290322580645em'>jupyter</a>
+      </li><li>
+        <a href='/categories/linux/' style='font-size:1.1370967741935485em'>linux</a>
+      </li><li>
+        <a href='/categories/mac/' style='font-size:1.1370967741935485em'>mac</a>
+      </li><li>
+        <a href='/categories/mongodb/' style='font-size:1.032258064516129em'>mongodb</a>
+      </li><li>
+        <a href='/categories/others/' style='font-size:1em'>others</a>
+      </li><li>
+        <a href='/categories/pip/' style='font-size:1em'>pip</a>
+      </li><li>
+        <a href='/categories/python/' style='font-size:1.0483870967741935em'>python</a>
+      </li><li>
+        <a href='/categories/shell/' style='font-size:1em'>shell</a>
+      </li><li>
+        <a href='/categories/tutorial/' style='font-size:1.0080645161290323em'>Tutorial</a>
+      </li><li>
+        <a href='/categories/vscode/' style='font-size:1.0080645161290323em'>vscode</a>
+      </li><li>
+        <a href='/categories/%E4%BD%9C%E8%80%85/' style='font-size:1em'>作者</a>
+      </li><li>
+        <a href='/categories/%E5%86%99%E4%BD%9C/' style='font-size:1.0080645161290323em'>写作</a>
+      </li><li>
+        <a href='/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/' style='font-size:2em'>前端开发</a>
+      </li><li>
+        <a href='/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/' style='font-size:1em'>博客搭建</a>
+      </li><li>
+        <a href='/categories/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/' style='font-size:1.0161290322580645em'>后端开发</a>
+      </li><li>
+        <a href='/categories/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/' style='font-size:1.0080645161290323em'>学习方法</a>
+      </li><li>
+        <a href='/categories/%E5%AD%A6%E6%9C%AF/' style='font-size:1em'>学术</a>
+      </li><li>
+        <a href='/categories/%E5%B7%A5%E5%85%B7/' style='font-size:1.0161290322580645em'>工具</a>
+      </li><li>
+        <a href='/categories/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3/' style='font-size:1em'>开发文档</a>
+      </li><li>
+        <a href='/categories/%E6%95%B0%E5%AD%A6/' style='font-size:1em'>数学</a>
+      </li><li>
+        <a href='/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/' style='font-size:1em'>数据库</a>
+      </li><li>
+        <a href='/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/' style='font-size:1.032258064516129em'>数据结构</a>
+      </li><li>
+        <a href='/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/' style='font-size:1.0161290322580645em'>机器学习</a>
+      </li><li>
+        <a href='/categories/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/' style='font-size:1em'>正则表达式</a>
+      </li><li>
+        <a href='/categories/%E7%88%AC%E8%99%AB/' style='font-size:1.0887096774193548em'>爬虫</a>
+      </li><li>
+        <a href='/categories/%E7%AE%97%E6%B3%95/' style='font-size:1.0806451612903225em'>算法</a>
+      </li><li>
+        <a href='/categories/%E7%AE%97%E6%B3%95%E9%A2%98/' style='font-size:1.0887096774193548em'>算法题</a>
+      </li><li>
+        <a href='/categories/%E7%B3%BB%E7%BB%9F/' style='font-size:1.0161290322580645em'>系统</a>
+      </li><li>
+        <a href='/categories/%E7%BC%96%E7%A0%81%E8%BD%AC%E6%8D%A2/' style='font-size:1em'>编码转换</a>
+      </li><li>
+        <a href='/categories/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/' style='font-size:1em'>编程开发</a>
+      </li><li>
+        <a href='/categories/%E7%BC%96%E8%BE%91%E5%99%A8/' style='font-size:1em'>编辑器</a>
+      </li><li>
+        <a href='/categories/%E7%BD%91%E7%BB%9C/' style='font-size:1em'>网络</a>
+      </li><li>
+        <a href='/categories/%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/' style='font-size:1.096774193548387em'>网络协议</a>
+      </li><li>
+        <a href='/categories/%E7%BF%BB%E5%A2%99/' style='font-size:1.0161290322580645em'>翻墙</a>
+      </li><li>
+        <a href='/categories/%E8%8B%B1%E8%AF%AD/' style='font-size:1.120967741935484em'>英语</a>
+      </li><li>
+        <a href='/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/' style='font-size:1.0161290322580645em'>计算机基础</a>
+      </li><li>
+        <a href='/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/' style='font-size:1.0483870967741935em'>计算机网络</a>
+      </li><li>
+        <a href='/categories/%E8%AE%BA%E6%96%87/' style='font-size:1.0403225806451613em'>论文</a>
+      </li><li>
+        <a href='/categories/%E8%B0%83%E8%AF%95/' style='font-size:1em'>调试</a>
+      </li><li>
+        <a href='/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/' style='font-size:1.0161290322580645em'>软件使用</a>
+      </li></ul>
+</div>
+
+
+</section>
+</div>
+
+  <div class='sidebar-overlay'></div>
+</div><div class='main'><nav id='main-menu' class='menu main-menu' aria-label='Main Menu'>
+  <div class='container'>
+    <a class='screen-reader-text' href='#content'>Skip to Content</a>
+
+<button id='sidebar-toggler' class='sidebar-toggler' aria-controls='sidebar'>
+  <span class='screen-reader-text'>Toggle Sidebar</span>
+  <span class='open'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="3" y1="12" x2="21" y2="12" />
+  <line x1="3" y1="6" x2="21" y2="6" />
+  <line x1="3" y1="18" x2="21" y2="18" />
+  
+</svg>
+</span>
+  <span class='close'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="18" y1="6" x2="6" y2="18" />
+  <line x1="6" y1="6" x2="18" y2="18" />
+  
+</svg>
+</span>
+</button>
+    <ul><li class='item'>
+        <a href='/'>Home</a>
+      </li><li class='item'>
+        <a href='/post/'>blogs</a>
+      </li><li class='item'>
+        <a href='/skill-content/dist/'>skills</a>
+      </li><li class='item'>
+        <a href='/tags/'>tags</a>
+      </li></ul>
+  </div>
+</nav><div class='header-widgets'>
+        <div class='container'>
+    
+    <style>.widget-breadcrumbs li:after{content:'\2f '}</style>
+  <section class='widget widget-breadcrumbs sep-after'>
+    <nav id='breadcrumbs'>
+      <ol><li><a href='/'>Home</a></li><li><a href='/post/'>blogs</a></li><li><span>常见业务编程题总结</span></li></ol>
+    </nav>
+  </section></div>
+      </div>
+
+      <header id='header' class='header site-header'>
+        <div class='container sep-after'>
+          <div class='header-info'><p class='site-title title'>mannuan</p><p class='desc site-desc'>Rome was not built in a day.</p>
+          </div>
+        </div>
+      </header>
+
+      <main id='content'>
+
+
+<article lang='en' class='entry'>
+  <header class='header entry-header'>
+  <div class='container sep-after'>
+    <div class='header-info'>
+      <h1 class='title'>常见业务编程题总结</h1>
+      
+
+    </div>
+    <div class='entry-meta'>
+  <span class='posted-on'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+  <line x1="16" y1="2" x2="16" y2="6"/>
+  <line x1="8" y1="2" x2="8" y2="6"/>
+  <line x1="3" y1="10" x2="21" y2="10"/>
+  
+</svg>
+<span class='screen-reader-text'>Posted on </span>
+  <time class='entry-date' datetime='2019-09-03T21:53:40&#43;08:00'>2019, Sep 03</time>
+</span>
+
+  <span class='byline'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M21,21V20c0-2.76-4-5-9-5s-9,2.24-9,5v1"/>
+  <path d="M16,6.37A4,4,0,1,1,12.63,3,4,4,0,0,1,16,6.37Z"/>
+  
+</svg>
+<span class='screen-reader-text'> by </span><a href='/authors/mannuan'>mannuan</a></span>
+  
+<span class='reading-time'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <circle cx="12" cy="12" r="10"/>
+  <polyline points="12 6 12 12 15 15"/>
+  
+</svg>
+One min read
+</span>
+
+
+</div>
+
+
+  </div>
+</header>
+
+  
+  
+<details class='container entry-toc'>
+  <summary class='title'>
+    <span>Table of Contents</span>
+  </summary>
+  <nav id="TableOfContents">
+<ul>
+<li><a href="#常见业务编程题总结">常见业务编程题总结</a>
+<ul>
+<li><a href="#0-前言">0. 前言</a></li>
+<li><a href="#jsonp">jsonp</a>
+<ul>
+<li><a href="#原生jsonp">原生jsonp</a></li>
+<li><a href="#jquery中的jsonp">jQuery中的jsonp</a></li>
+</ul></li>
+<li><a href="#闭包">闭包</a></li>
+<li><a href="#前端布局">前端布局</a>
+<ul>
+<li><a href="#两列布局">两列布局</a></li>
+<li><a href="#三列布局">三列布局</a></li>
+<li><a href="#其他">其他</a></li>
+</ul></li>
+<li><a href="#jquery">jQuery</a>
+<ul>
+<li><a href="#手写一个jquery插件">手写一个jQuery插件</a></li>
+<li><a href="#手写实现jquery里面的insertafter">手写实现jquery里面的insertAfter</a></li>
+<li><a href="#在jquery方法和原型上面添加方法的区别和实现-以及jquery对象的实现">在jquery方法和原型上面添加方法的区别和实现，以及jquery对象的实现</a></li>
+<li><a href="#jquery绑定click的方法">jquery绑定click的方法</a></li>
+</ul></li>
+<li><a href="#画图和动画">画图和动画</a>
+<ul>
+<li><a href="#css实现一个三角形">css实现一个三角形</a></li>
+<li><a href="#用canvas绘制一个有限度的斐波那契数列的曲线">用canvas绘制一个有限度的斐波那契数列的曲线</a></li>
+<li><a href="#css动画demo">css动画demo</a></li>
+<li><a href="#animation还有哪些其他属性">Animation还有哪些其他属性</a></li>
+</ul></li>
+<li><a href="#ajax">ajax</a>
+<ul>
+<li><a href="#原生js实现ajax">原生js实现ajax</a></li>
+<li><a href="#用promise手写ajax">用promise手写ajax</a></li>
+</ul></li>
+<li><a href="#js深拷贝">js深拷贝</a></li>
+<li><a href="#js异步">js异步</a>
+<ul>
+<li><a href="#promise">promise</a></li>
+</ul></li>
+<li><a href="#实现原理">实现原理</a>
+<ul>
+<li><a href="#array-prototype-sort实现原理">Array.prototype.sort实现原理</a></li>
+<li><a href="#手写实现requirejs模块实现">手写实现requireJS模块实现</a></li>
+</ul></li>
+<li><a href="#读取">读取</a>
+<ul>
+<li><a href="#元素js读取cookie">元素js读取cookie</a></li>
+</ul></li>
+<li><a href="#监听数据变化">监听数据变化</a>
+<ul>
+<li><a href="#脏检查">脏检查</a></li>
+</ul></li>
+<li><a href="#margin问题">margin问题</a>
+<ul>
+<li><a href="#塌陷">塌陷</a></li>
+<li><a href="#合并">合并</a></li>
+</ul></li>
+<li><a href="#事件流">事件流</a></li>
+<li><a href="#图形设计">图形设计</a></li>
+<li><a href="#样式设计">样式设计</a></li>
+<li><a href="#vue">Vue</a>
+<ul>
+<li><a href="#双向绑定原理">双向绑定原理</a></li>
+<li><a href="#mvvm">MVVM</a></li>
+</ul></li>
+<li><a href="#选择器">选择器</a></li>
+<li><a href="#局部刷新">局部刷新</a></li>
+<li><a href="#前端功能">前端功能</a></li>
+<li><a href="#表单提交">表单提交</a></li>
+<li><a href="#作用域">作用域</a></li>
+</ul></li>
+</ul>
+</nav>
+</details>
+
+
+  <div class='container entry-content'>
+  
+
+<h1 id="常见业务编程题总结">常见业务编程题总结</h1>
+
+<hr>
+
+<h2 id="0-前言">0. 前言</h2>
+
+<p>写前端小demo的最好用的工具是codepen, 上面也有一些问题的解决方案，我把下面题目的答案都放在codepen上面，有部分题目的代码会放在leetcode上面</p>
+
+<hr>
+
+<h2 id="jsonp">jsonp</h2>
+
+<h3 id="原生jsonp">原生jsonp</h3>
+
+<h3 id="jquery中的jsonp">jQuery中的jsonp</h3>
+
+<hr>
+
+<h2 id="闭包">闭包</h2>
+
+<ul>
+<li>简单说一个闭包的应用，然后闭包的主要作用是什么</li>
+<li>写个从几个li中取下标的闭包代码
+
+<ul>
+<li><a href="https://codepen.io/mannuan/pen/aboVPWW" target="_blank">代码链接</a></li>
+</ul></li>
+</ul>
+
+<hr>
+
+<h2 id="前端布局">前端布局</h2>
+
+<h3 id="两列布局">两列布局</h3>
+
+<ul>
+<li>左边固定宽度为200,右边自适应,而且滚动条要自动选择只出现最高的那个</li>
+<li>做一个两栏布局，左边fixed width，右边responsive，用纸笔手写</li>
+<li>左边定宽右边自适应</li>
+
+<li><p>实现布局：左边一张图片，右边一段文字（不是环绕）</p>
+
+<h3 id="三列布局">三列布局</h3></li>
+
+<li><p>使用flex布局实现三等分，左右两个元素分别贴到左边和右边，垂直居中</p>
+
+<h3 id="其他">其他</h3></li>
+
+<li><p>浮动的原理以及如何清除浮动</p></li>
+
+<li><p>绝对定位与相对定位的区别</p></li>
+
+<li><p>如何让各种情况下的div居中(绝对定位的div,垂直居中,水平居中)</p></li>
+
+<li><p>清除浮动有哪几种方式,分别说说</p></li>
+</ul>
+
+<hr>
+
+<h2 id="jquery">jQuery</h2>
+
+<h3 id="手写一个jquery插件">手写一个jQuery插件</h3>
+
+<h3 id="手写实现jquery里面的insertafter">手写实现jquery里面的insertAfter</h3>
+
+<h3 id="在jquery方法和原型上面添加方法的区别和实现-以及jquery对象的实现">在jquery方法和原型上面添加方法的区别和实现，以及jquery对象的实现</h3>
+
+<h3 id="jquery绑定click的方法">jquery绑定click的方法</h3>
+
+<hr>
+
+<h2 id="画图和动画">画图和动画</h2>
+
+<h3 id="css实现一个三角形">css实现一个三角形</h3>
+
+<h3 id="用canvas绘制一个有限度的斐波那契数列的曲线">用canvas绘制一个有限度的斐波那契数列的曲线</h3>
+
+<h3 id="css动画demo">css动画demo</h3>
+
+<h3 id="animation还有哪些其他属性">Animation还有哪些其他属性</h3>
+
+<ul>
+<li>为什么要用translate3d</li>
+<li>使用js画一个抛物线，抛物线上有个小球随着抛物线运动，有两个按钮能使小球继续运动停止运动</li>
+<li>CSS动画：animation、transition、transform、translate傻傻分不清<a href="https://juejin.im/post/5b137e6e51882513ac201dfb" target="_blank">参考链接</a></li>
+</ul>
+
+<hr>
+
+<h2 id="ajax">ajax</h2>
+
+<h3 id="原生js实现ajax">原生js实现ajax</h3>
+
+<h3 id="用promise手写ajax">用promise手写ajax</h3>
+
+<hr>
+
+<h2 id="js深拷贝">js深拷贝</h2>
+
+<hr>
+
+<h2 id="js异步">js异步</h2>
+
+<ul>
+<li>for函数里面setTimeout异步问题</li>
+<li>写一个递归。就是每隔5秒调用一个自身，一共100次</li>
+
+<li><p>setTimeout和setInterval区别，如何互相实现</p>
+
+<h3 id="promise">promise</h3></li>
+
+<li><p>手写实现一个promise</p></li>
+
+<li><p>promise的三种状态，ES7中的async用过么</p></li>
+
+<li><p>如何避免多重回调—promise，promise简单描述一下，如何在外部进行resolve()</p></li>
+</ul>
+
+<hr>
+
+<h2 id="实现原理">实现原理</h2>
+
+<h3 id="array-prototype-sort实现原理">Array.prototype.sort实现原理</h3>
+
+<h3 id="手写实现requirejs模块实现">手写实现requireJS模块实现</h3>
+
+<hr>
+
+<h2 id="读取">读取</h2>
+
+<h3 id="元素js读取cookie">元素js读取cookie</h3>
+
+<hr>
+
+<h2 id="监听数据变化">监听数据变化</h2>
+
+<h3 id="脏检查">脏检查</h3>
+
+<hr>
+
+<h2 id="margin问题">margin问题</h2>
+
+<h3 id="塌陷">塌陷</h3>
+
+<h3 id="合并">合并</h3>
+
+<ul>
+<li>两个块状元素上下的margin-top和margin-bottom会重叠。啥原因？怎么解决？</li>
+<li>margin坍塌？水平方向会不会坍塌？</li>
+</ul>
+
+<hr>
+
+<h2 id="事件流">事件流</h2>
+
+<ul>
+<li>事件代理js实现</li>
+</ul>
+
+<hr>
+
+<h2 id="图形设计">图形设计</h2>
+
+<ul>
+<li>保持长宽比1:1</li>
+<li>实现两个自适应等宽元素中间空10个像素</li>
+<li>怎么在页面里放置一个很简单的图标，不能用img和background-img</li>
+</ul>
+
+<hr>
+
+<h2 id="样式设计">样式设计</h2>
+
+<ul>
+<li>原生js添加class怎么添加，如果本身已经有class了，会不会覆盖，怎么保留？</li>
+<li>display有哪些值？说明他们的作用</li>
+<li>css定义的权重</li>
+</ul>
+
+<hr>
+
+<h2 id="vue">Vue</h2>
+
+<h3 id="双向绑定原理">双向绑定原理</h3>
+
+<h3 id="mvvm">MVVM</h3>
+
+<ul>
+<li>vue如何实现父子组件通信，以及非父子组件通信</li>
+</ul>
+
+<hr>
+
+<h2 id="选择器">选择器</h2>
+
+<ul>
+<li>怎么得到一个页面的a标签</li>
+<li>伪类和伪元素区别</li>
+</ul>
+
+<hr>
+
+<h2 id="局部刷新">局部刷新</h2>
+
+<ul>
+<li>实现页面的局部刷新</li>
+</ul>
+
+<hr>
+
+<h2 id="前端功能">前端功能</h2>
+
+<ul>
+<li>js轮播实现思路</li>
+<li>五子棋</li>
+<li>用原生js实现复选框选择以及全选非全选功能</li>
+<li>嵌套的ul-li结构，根据input中输入的内容，去除相应的li节点，且如果某个嵌套的ul下面的li都被移除，则该ul的父li节点也要被移除</li>
+</ul>
+
+<hr>
+
+<h2 id="表单提交">表单提交</h2>
+
+<ul>
+<li>form表单当前页面无刷新提交 target iframe</li>
+</ul>
+
+<hr>
+
+<h2 id="作用域">作用域</h2>
+
+<ul>
+<li>实现bind函数</li>
+</ul>
+
+<hr>
+
+</div>
+
+  
+<footer class='entry-footer'>
+  <div class='container sep-before'><div class='categories'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M22,19a2,2,0,0,1-2,2H4a2,2,0,0,1-2-2V5A2,2,0,0,1,4,3H9l2,3h9a2,2,0,0,1,2,2Z"/>
+  
+</svg>
+<span class='screen-reader-text'>Categories: </span><a class='category' href='/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/'>前端开发</a></div>
+<div class='tags'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M20.59,13.41l-7.17,7.17a2,2,0,0,1-2.83,0L2,12V2H12l8.59,8.59A2,2,0,0,1,20.59,13.41Z"/>
+  <line x1="7" y1="7" x2="7" y2="7"/>
+  
+</svg>
+<span class='screen-reader-text'>Tags: </span><a class='tag' href='/tags/%E9%9D%A2%E8%AF%95%E6%80%BB%E7%BB%93/'>面试总结</a></div>
+
+  </div>
+</footer>
+
+
+</article>
+
+<nav class='entry-nav'>
+  <div class='container'><div class='prev-entry sep-before'>
+      <a href='/post/20190903211442/'>
+        <span aria-hidden='true'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="20" y1="12" x2="4" y2="12"/>
+  <polyline points="10 18 4 12 10 6"/>
+  
+</svg>
+ Previous</span>
+        <span class='screen-reader-text'>Previous post: </span>前端面试常见算法总结</a>
+    </div><div class='next-entry sep-before'>
+      <a href='/post/20190903220534/'>
+        <span class='screen-reader-text'>Next post: </span>常见业务题总结<span aria-hidden='true'>Next <svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="4" y1="12" x2="20" y2="12"/>
+  <polyline points="14 6 20 12 14 18"/>
+  
+</svg>
+</span>
+      </a>
+    </div></div>
+</nav>
+
+
+
+
+      </main>
+
+      <footer id='footer' class='footer'>
+        <div class='container sep-before'><section class='widget widget-social_menu sep-after'><nav aria-label='Social Menu'>
+    <ul><li>
+        <a href='https://github.com/mannuan' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Github account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='mailto:mannuandeyangguang@163.com' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Contact via Email</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+  <polyline points="22,6 12,13 2,6"/>
+  
+</svg>
+</a>
+      </li></ul>
+  </nav>
+</section><div class='copyright'>
+  <p> &copy; 2019 mannuan </p>
+</div>
+
+        </div>
+      </footer>
+
+    </div>
+  </div><script>window.__assets_js_src="/assets/js/"</script>
+
+<script src='/assets/js/main.67d669ac.js'></script><script src='/js/custom.js'></script>
+
+</body>
+
+</html>
+

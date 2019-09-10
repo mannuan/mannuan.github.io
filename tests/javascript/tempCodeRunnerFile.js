@@ -1,1 +1,2 @@
-console.log(arr[i]);
+rr);
+// console.log(arr);

@@ -5,10 +5,20 @@
     <link>https://mannuan.github.io/categories/%E7%AE%97%E6%B3%95/</link>
     <description>Recent content in 算法 on mannuan</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 27 Aug 2019 21:27:58 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 03 Sep 2019 21:14:42 +0800</lastBuildDate>
     
 	<atom:link href="https://mannuan.github.io/categories/%E7%AE%97%E6%B3%95/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>前端面试常见算法总结</title>
+      <link>https://mannuan.github.io/post/20190903211442/</link>
+      <pubDate>Tue, 03 Sep 2019 21:14:42 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190903211442/</guid>
+      <description> 前端面试常见算法总结  0. 前言 做算法题最好用的无疑是leetcode, 上面基本上涵盖了几乎可以想到的所有题目，另外playground也挺好用的，可以自定义代码，下面我总结的算法题的代码都放在leetcode上面
+ 单词回文  排序算法 冒泡排序 选择排序 插入排序 归并排序 希尔排序 快速排序 堆排序  数组  数组去重(考虑整数和字符) 找出数组的最大差值 随机获取数组中的元素 生成从0到指定值的数字数组 打乱数组 对象转换为数组 验证是否为数组 获取数组中的最大值或最小值 清空数组 不要直接使用delete来删除数组中的元素 实现两个排序数组的合并 找出数组中出现次数多的元素和它的下标 若干个数字,怎么选出最大的k个 n长的数组放入n+1个数，不能重复，找出那个缺失的数   频率统计 统计一个字符出现最多的字母  交换 整数交换  实现类似功能 实现类似getElementsByClassName的功能  二叉树 二叉查找树 二叉平衡树 二叉树的镜像  随机 获取指定范围内的随机数 随机生成指定长度的字符串 生成指定长度的随机字母数字字符串  计算精度 保留指定小数位  排除条件 排除null和undefined  链表 链表反转 输出单链表的倒数第k个节点 链表问题,要求用es6写 单向链表怎么查找有没有环  大数计算 大数相加 大数相乘  递归 手写一个递归函数 尾递归阶乘  查找 二分查找  正则表达式 正则表达式验证邮箱 正则表达式验证ipv4,ipv6,mac 正则表达式判断url 去除字符串前后的空格  字符串 统计一个字符串出现频率最高的字母/数字  </description>
+    </item>
     
     <item>
       <title>项目分配</title>
