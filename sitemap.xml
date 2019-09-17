@@ -4,12 +4,12 @@
   
   <url>
     <loc>https://mannuan.github.io/</loc>
-    <lastmod>2019-09-09T15:09:15+08:00</lastmod>
+    <lastmod>2019-09-17T10:46:33+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://mannuan.github.io/post/</loc>
-    <lastmod>2019-09-09T15:09:15+08:00</lastmod>
+    <lastmod>2019-09-17T10:46:33+08:00</lastmod>
   </url>
   
   <url>
@@ -28,42 +28,58 @@
   
   <url>
     <loc>https://mannuan.github.io/authors/</loc>
-    <lastmod>2019-09-09T15:09:15+08:00</lastmod>
+    <lastmod>2019-09-17T10:46:33+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://mannuan.github.io/categories/</loc>
-    <lastmod>2019-09-09T15:09:15+08:00</lastmod>
+    <lastmod>2019-09-17T10:46:33+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://mannuan.github.io/tags/</loc>
-    <lastmod>2019-09-09T15:09:15+08:00</lastmod>
+    <lastmod>2019-09-17T10:46:33+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
+    <loc>https://mannuan.github.io/tags/javascript/</loc>
+    <lastmod>2019-09-17T10:46:33+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mannuan.github.io/post/20190917104633/</loc>
+    <lastmod>2019-09-17T10:46:33+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://mannuan.github.io/authors/mannuan/</loc>
-    <lastmod>2019-09-09T15:09:15+08:00</lastmod>
+    <lastmod>2019-09-17T10:46:33+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://mannuan.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/</loc>
-    <lastmod>2019-09-09T15:09:15+08:00</lastmod>
+    <lastmod>2019-09-17T10:46:33+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mannuan.github.io/post/20190912150305/</loc>
+    <lastmod>2019-09-12T15:03:06+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mannuan.github.io/tags/%E9%9D%A2%E8%AF%95%E7%BB%8F%E9%AA%8C/</loc>
+    <lastmod>2019-09-12T15:03:06+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://mannuan.github.io/post/20190909150915/</loc>
     <lastmod>2019-09-09T15:09:15+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://mannuan.github.io/tags/%E9%9D%A2%E8%AF%95%E7%BB%8F%E9%AA%8C/</loc>
-    <lastmod>2019-09-09T15:09:15+08:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -135,12 +151,6 @@
   <url>
     <loc>https://mannuan.github.io/post/20190828160817/</loc>
     <lastmod>2019-08-28T16:08:17+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://mannuan.github.io/tags/javascript/</loc>
-    <lastmod>2019-08-28T13:02:28+08:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>

@@ -3,7 +3,8 @@
   <meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
 <meta name='description' content='常见业务题总结  BOM navigator 了解  CSS  link和@import引入CSS的区别 less和sass掌握程度   ES6  ES6里头的箭头函数的this对象与其他的有啥区别
-promise   cookie  介绍一下cookie,localstorage,sessionstorage,session cookie和session有什么区别 Cookie 是否会被覆盖，localStorage是否会被覆盖 如果页面初始载入的时候把ajax请求返回的数据存在localStorage里面，然后每次调用的时候去localStorage里面取数，是否可行 Cookie跨域请求能不能带上  三者共同点：都是保存在浏览器端，且同源的。
+promise 新特性 参考链接
+   cookie  介绍一下cookie,localstorage,sessionstorage,session cookie和session有什么区别 Cookie 是否会被覆盖，localStorage是否会被覆盖 如果页面初始载入的时候把ajax请求返回的数据存在localStorage里面，然后每次调用的时候去localStorage里面取数，是否可行 Cookie跨域请求能不能带上  三者共同点：都是保存在浏览器端，且同源的。
 区别:
 1、cookie在浏览器和服务器间来回传递。而sessionStorage和localStorage不会自动把数据发给服务器，仅在本地保存
 2、存储大小限制也不同，cookie数据不能超过4k，sessionStorage和localStorage 但比cookie大得多，可以达到5M
@@ -11,12 +12,13 @@ promise   cookie  介绍一下cookie,localstorage,sessionstorage,session cookie�
 4、作用域不同，sessionStorage不在不同的浏览器窗口中共享，即使是同一个页面(即数据不共享)；localStorage 在所有同源窗口中都是共享的；cookie也是在所有同源窗口中都是共享的( 即数据共享 )。
  盒子模型  http的头部 HTTP请求头  cookie在哪个里面,url在哪里面
 HTTP响应头 HTTP Response的Header里面都有些啥
-HTTP状态码 HTTP状态码列表   状态码 状态码英文名称 中文描述   100 Continue 继续。客户端应继续其请求   101 Switching Protocols 切换协议。服务器根据客户端的请求切换协议。只能切换到更高级的协议，例如，切换到HTTP的新版本协议      200 OK 请求成功。一般用于GET与POST请求   201 Created 已创建。成功请求并创建了新的资源   202 Accepted 已接受。已经接受请求，但未处理完成   203 Non-Authoritative Information 非授权信息。请求成功。但返回的meta信息不在原始的服务器，而是一个副本   204 No Content 无内容。服务器成功处理，但未返回内容。在未更新网页的情况下，可确保浏览器继续显示当前文档   205 Reset Content 重置内容。服务器处理成功，用户终端（例如：浏览器）应重置文档视图。可通过此返回码清除浏览器的表单域   206 Partial Content 部分内容。服务器成功处理了部分GET请求      300 Multiple Choices 多种选择。请求的资源可包括多个位置，相应可返回一个资源特征与地址的列表用于用户终端（例如：浏览器）选择   301 Moved Permanently 永久移动。请求的资源已被永久的移动到新URI，返回信息会包括新的URI，浏览器会自动定向到新URI。今后任何新的请求都应使用新的URI代替   302 Found 临时移动。与301类似。但资源只是临时被移动。客户端应继续使用原有URI   303 See Other 查看其它地址。与301类似。使用GET和POST请求查看   304 Not Modified 未修改。所请求的资源未修改，服务器返回此状态码时，不会返回任何资源。客户端通常会缓存访问过的资源，通过提供一个头信息指出客户端希望只返回在指定日期之后修改的资源   305 Use Proxy 使用代理。所请求的资源必须通过代理访问   306 Unused 已经被废弃的HTTP状态码   307 Temporary Redirect 临时重定向。与302类似。使用GET请求重定向      400 Bad Request 客户端请求的语法错误，服务器无法理解   401 Unauthorized 请求要求用户的身份认证   402 Payment Required 保留，将来使用   403 Forbidden 服务器理解请求客户端的请求，但是拒绝执行此请求   404 Not Found 服务器无法根据客户端的请求找到资源（网页）。通过此代码，网站设计人员可设置&#34;'>
+HTTP状态码  参考链接    面向对象 继承 new操作符做了什么 对象属性的属性 原型链  对象中key-value的value怎么再放一个对象 静态属性怎么继承   跨域  你知道有哪些跨域方式,分别说说 你所了解的跨域的方法都说说看你了解的？   类数组  linux中常用的命令行  模块化编程 AMD CMD CommonJs 区别 requireJS的原理  requirejs怎么防止重复加载 requirejs如何避免循环依赖？   nodejs 在项目中的具体使用 架构 优缺点 回调  nodejs中的文件怎么读写？   前后端分离  意义   前端安全 xss和csrf  前端工程化  理解   前端兼容 低版本浏览器支持HTML5标签  使用js底层是怎么实现的'>
 <meta name='theme-color' content='#FFFFFF'>
 
 <meta property='og:title' content='常见业务题总结 • mannuan'>
 <meta property='og:description' content='常见业务题总结  BOM navigator 了解  CSS  link和@import引入CSS的区别 less和sass掌握程度   ES6  ES6里头的箭头函数的this对象与其他的有啥区别
-promise   cookie  介绍一下cookie,localstorage,sessionstorage,session cookie和session有什么区别 Cookie 是否会被覆盖，localStorage是否会被覆盖 如果页面初始载入的时候把ajax请求返回的数据存在localStorage里面，然后每次调用的时候去localStorage里面取数，是否可行 Cookie跨域请求能不能带上  三者共同点：都是保存在浏览器端，且同源的。
+promise 新特性 参考链接
+   cookie  介绍一下cookie,localstorage,sessionstorage,session cookie和session有什么区别 Cookie 是否会被覆盖，localStorage是否会被覆盖 如果页面初始载入的时候把ajax请求返回的数据存在localStorage里面，然后每次调用的时候去localStorage里面取数，是否可行 Cookie跨域请求能不能带上  三者共同点：都是保存在浏览器端，且同源的。
 区别:
 1、cookie在浏览器和服务器间来回传递。而sessionStorage和localStorage不会自动把数据发给服务器，仅在本地保存
 2、存储大小限制也不同，cookie数据不能超过4k，sessionStorage和localStorage 但比cookie大得多，可以达到5M
@@ -24,7 +26,7 @@ promise   cookie  介绍一下cookie,localstorage,sessionstorage,session cookie�
 4、作用域不同，sessionStorage不在不同的浏览器窗口中共享，即使是同一个页面(即数据不共享)；localStorage 在所有同源窗口中都是共享的；cookie也是在所有同源窗口中都是共享的( 即数据共享 )。
  盒子模型  http的头部 HTTP请求头  cookie在哪个里面,url在哪里面
 HTTP响应头 HTTP Response的Header里面都有些啥
-HTTP状态码 HTTP状态码列表   状态码 状态码英文名称 中文描述   100 Continue 继续。客户端应继续其请求   101 Switching Protocols 切换协议。服务器根据客户端的请求切换协议。只能切换到更高级的协议，例如，切换到HTTP的新版本协议      200 OK 请求成功。一般用于GET与POST请求   201 Created 已创建。成功请求并创建了新的资源   202 Accepted 已接受。已经接受请求，但未处理完成   203 Non-Authoritative Information 非授权信息。请求成功。但返回的meta信息不在原始的服务器，而是一个副本   204 No Content 无内容。服务器成功处理，但未返回内容。在未更新网页的情况下，可确保浏览器继续显示当前文档   205 Reset Content 重置内容。服务器处理成功，用户终端（例如：浏览器）应重置文档视图。可通过此返回码清除浏览器的表单域   206 Partial Content 部分内容。服务器成功处理了部分GET请求      300 Multiple Choices 多种选择。请求的资源可包括多个位置，相应可返回一个资源特征与地址的列表用于用户终端（例如：浏览器）选择   301 Moved Permanently 永久移动。请求的资源已被永久的移动到新URI，返回信息会包括新的URI，浏览器会自动定向到新URI。今后任何新的请求都应使用新的URI代替   302 Found 临时移动。与301类似。但资源只是临时被移动。客户端应继续使用原有URI   303 See Other 查看其它地址。与301类似。使用GET和POST请求查看   304 Not Modified 未修改。所请求的资源未修改，服务器返回此状态码时，不会返回任何资源。客户端通常会缓存访问过的资源，通过提供一个头信息指出客户端希望只返回在指定日期之后修改的资源   305 Use Proxy 使用代理。所请求的资源必须通过代理访问   306 Unused 已经被废弃的HTTP状态码   307 Temporary Redirect 临时重定向。与302类似。使用GET请求重定向      400 Bad Request 客户端请求的语法错误，服务器无法理解   401 Unauthorized 请求要求用户的身份认证   402 Payment Required 保留，将来使用   403 Forbidden 服务器理解请求客户端的请求，但是拒绝执行此请求   404 Not Found 服务器无法根据客户端的请求找到资源（网页）。通过此代码，网站设计人员可设置&#34;'>
+HTTP状态码  参考链接    面向对象 继承 new操作符做了什么 对象属性的属性 原型链  对象中key-value的value怎么再放一个对象 静态属性怎么继承   跨域  你知道有哪些跨域方式,分别说说 你所了解的跨域的方法都说说看你了解的？   类数组  linux中常用的命令行  模块化编程 AMD CMD CommonJs 区别 requireJS的原理  requirejs怎么防止重复加载 requirejs如何避免循环依赖？   nodejs 在项目中的具体使用 架构 优缺点 回调  nodejs中的文件怎么读写？   前后端分离  意义   前端安全 xss和csrf  前端工程化  理解   前端兼容 低版本浏览器支持HTML5标签  使用js底层是怎么实现的'>
 <meta property='og:url' content='https://mannuan.github.io/post/20190903220534/'>
 <meta property='og:site_name' content='mannuan'>
 <meta property='og:type' content='article'><meta property='og:image' content='https://www.gravatar.com/avatar/8bacfd69855171c6f53247456732f68a?s=256'><meta property='article:section' content='post'><meta property='article:tag' content='面试总结'><meta property='article:published_time' content='2019-09-03T22:05:34&#43;08:00'/><meta property='article:modified_time' content='2019-09-03T22:05:34&#43;08:00'/><meta name='twitter:card' content='summary'>
@@ -116,45 +118,45 @@ HTTP状态码 HTTP状态码列表   状态码 状态码英文名称 中文描述
 
   <div class='container list-container'>
   <ul class='list taxonomy-cloud'><li>
-        <a href='/categories/features/' style='font-size:1.129032258064516em'>features</a>
+        <a href='/categories/features/' style='font-size:1.126984126984127em'>features</a>
       </li><li>
-        <a href='/categories/ide/' style='font-size:1.0241935483870968em'>ide</a>
+        <a href='/categories/ide/' style='font-size:1.0238095238095237em'>ide</a>
       </li><li>
-        <a href='/categories/jupyter/' style='font-size:1.0161290322580645em'>jupyter</a>
+        <a href='/categories/jupyter/' style='font-size:1.0158730158730158em'>jupyter</a>
       </li><li>
-        <a href='/categories/linux/' style='font-size:1.1370967741935485em'>linux</a>
+        <a href='/categories/linux/' style='font-size:1.1349206349206349em'>linux</a>
       </li><li>
-        <a href='/categories/mac/' style='font-size:1.1370967741935485em'>mac</a>
+        <a href='/categories/mac/' style='font-size:1.1349206349206349em'>mac</a>
       </li><li>
-        <a href='/categories/mongodb/' style='font-size:1.032258064516129em'>mongodb</a>
+        <a href='/categories/mongodb/' style='font-size:1.0317460317460316em'>mongodb</a>
       </li><li>
         <a href='/categories/others/' style='font-size:1em'>others</a>
       </li><li>
         <a href='/categories/pip/' style='font-size:1em'>pip</a>
       </li><li>
-        <a href='/categories/python/' style='font-size:1.0483870967741935em'>python</a>
+        <a href='/categories/python/' style='font-size:1.0476190476190477em'>python</a>
       </li><li>
         <a href='/categories/shell/' style='font-size:1em'>shell</a>
       </li><li>
-        <a href='/categories/tutorial/' style='font-size:1.0080645161290323em'>Tutorial</a>
+        <a href='/categories/tutorial/' style='font-size:1.007936507936508em'>Tutorial</a>
       </li><li>
-        <a href='/categories/vscode/' style='font-size:1.0080645161290323em'>vscode</a>
+        <a href='/categories/vscode/' style='font-size:1.007936507936508em'>vscode</a>
       </li><li>
         <a href='/categories/%E4%BD%9C%E8%80%85/' style='font-size:1em'>作者</a>
       </li><li>
-        <a href='/categories/%E5%86%99%E4%BD%9C/' style='font-size:1.0080645161290323em'>写作</a>
+        <a href='/categories/%E5%86%99%E4%BD%9C/' style='font-size:1.007936507936508em'>写作</a>
       </li><li>
         <a href='/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/' style='font-size:2em'>前端开发</a>
       </li><li>
         <a href='/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/' style='font-size:1em'>博客搭建</a>
       </li><li>
-        <a href='/categories/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/' style='font-size:1.0161290322580645em'>后端开发</a>
+        <a href='/categories/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/' style='font-size:1.0158730158730158em'>后端开发</a>
       </li><li>
-        <a href='/categories/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/' style='font-size:1.0080645161290323em'>学习方法</a>
+        <a href='/categories/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/' style='font-size:1.007936507936508em'>学习方法</a>
       </li><li>
         <a href='/categories/%E5%AD%A6%E6%9C%AF/' style='font-size:1em'>学术</a>
       </li><li>
-        <a href='/categories/%E5%B7%A5%E5%85%B7/' style='font-size:1.0161290322580645em'>工具</a>
+        <a href='/categories/%E5%B7%A5%E5%85%B7/' style='font-size:1.0158730158730158em'>工具</a>
       </li><li>
         <a href='/categories/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3/' style='font-size:1em'>开发文档</a>
       </li><li>
@@ -162,19 +164,19 @@ HTTP状态码 HTTP状态码列表   状态码 状态码英文名称 中文描述
       </li><li>
         <a href='/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/' style='font-size:1em'>数据库</a>
       </li><li>
-        <a href='/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/' style='font-size:1.032258064516129em'>数据结构</a>
+        <a href='/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/' style='font-size:1.0317460317460316em'>数据结构</a>
       </li><li>
-        <a href='/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/' style='font-size:1.0161290322580645em'>机器学习</a>
+        <a href='/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/' style='font-size:1.0158730158730158em'>机器学习</a>
       </li><li>
         <a href='/categories/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/' style='font-size:1em'>正则表达式</a>
       </li><li>
-        <a href='/categories/%E7%88%AC%E8%99%AB/' style='font-size:1.0887096774193548em'>爬虫</a>
+        <a href='/categories/%E7%88%AC%E8%99%AB/' style='font-size:1.0873015873015872em'>爬虫</a>
       </li><li>
-        <a href='/categories/%E7%AE%97%E6%B3%95/' style='font-size:1.0806451612903225em'>算法</a>
+        <a href='/categories/%E7%AE%97%E6%B3%95/' style='font-size:1.0793650793650793em'>算法</a>
       </li><li>
-        <a href='/categories/%E7%AE%97%E6%B3%95%E9%A2%98/' style='font-size:1.0887096774193548em'>算法题</a>
+        <a href='/categories/%E7%AE%97%E6%B3%95%E9%A2%98/' style='font-size:1.0873015873015872em'>算法题</a>
       </li><li>
-        <a href='/categories/%E7%B3%BB%E7%BB%9F/' style='font-size:1.0161290322580645em'>系统</a>
+        <a href='/categories/%E7%B3%BB%E7%BB%9F/' style='font-size:1.0158730158730158em'>系统</a>
       </li><li>
         <a href='/categories/%E7%BC%96%E7%A0%81%E8%BD%AC%E6%8D%A2/' style='font-size:1em'>编码转换</a>
       </li><li>
@@ -184,21 +186,21 @@ HTTP状态码 HTTP状态码列表   状态码 状态码英文名称 中文描述
       </li><li>
         <a href='/categories/%E7%BD%91%E7%BB%9C/' style='font-size:1em'>网络</a>
       </li><li>
-        <a href='/categories/%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/' style='font-size:1.096774193548387em'>网络协议</a>
+        <a href='/categories/%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/' style='font-size:1.0952380952380953em'>网络协议</a>
       </li><li>
-        <a href='/categories/%E7%BF%BB%E5%A2%99/' style='font-size:1.0161290322580645em'>翻墙</a>
+        <a href='/categories/%E7%BF%BB%E5%A2%99/' style='font-size:1.0158730158730158em'>翻墙</a>
       </li><li>
-        <a href='/categories/%E8%8B%B1%E8%AF%AD/' style='font-size:1.120967741935484em'>英语</a>
+        <a href='/categories/%E8%8B%B1%E8%AF%AD/' style='font-size:1.119047619047619em'>英语</a>
       </li><li>
-        <a href='/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/' style='font-size:1.0161290322580645em'>计算机基础</a>
+        <a href='/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/' style='font-size:1.0158730158730158em'>计算机基础</a>
       </li><li>
-        <a href='/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/' style='font-size:1.0483870967741935em'>计算机网络</a>
+        <a href='/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/' style='font-size:1.0476190476190477em'>计算机网络</a>
       </li><li>
-        <a href='/categories/%E8%AE%BA%E6%96%87/' style='font-size:1.0403225806451613em'>论文</a>
+        <a href='/categories/%E8%AE%BA%E6%96%87/' style='font-size:1.0396825396825398em'>论文</a>
       </li><li>
         <a href='/categories/%E8%B0%83%E8%AF%95/' style='font-size:1em'>调试</a>
       </li><li>
-        <a href='/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/' style='font-size:1.0161290322580645em'>软件使用</a>
+        <a href='/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/' style='font-size:1.0158730158730158em'>软件使用</a>
       </li></ul>
 </div>
 
@@ -295,7 +297,7 @@ HTTP状态码 HTTP状态码列表   状态码 状态码英文名称 中文描述
   <polyline points="12 6 12 12 15 15"/>
   
 </svg>
-3 mins read
+2 mins read
 </span>
 
 
@@ -326,6 +328,7 @@ HTTP状态码 HTTP状态码列表   状态码 状态码英文名称 中文描述
 <li><a href="#es6">ES6</a>
 <ul>
 <li><a href="#promise">promise</a></li>
+<li><a href="#新特性">新特性</a></li>
 </ul></li>
 <li><a href="#cookie">cookie</a></li>
 <li><a href="#盒子模型">盒子模型</a></li>
@@ -452,6 +455,10 @@ HTTP状态码 HTTP状态码列表   状态码 状态码英文名称 中文描述
 </ul></li>
 <li><a href="#文档流">文档流</a></li>
 <li><a href="#javascript基础">javascript基础</a></li>
+<li><a href="#ipv6的结构">ipv6的结构</a></li>
+<li><a href="#流量控制和拥塞控制">流量控制和拥塞控制</a></li>
+<li><a href="#https流程">HTTPS流程</a></li>
+<li><a href="#判断闰年的条件">判断闰年的条件</a></li>
 </ul></li>
 </ul>
 </nav>
@@ -487,7 +494,11 @@ HTTP状态码 HTTP状态码列表   状态码 状态码英文名称 中文描述
 <ul>
 <li><p>ES6里头的箭头函数的this对象与其他的有啥区别</p>
 
-<h3 id="promise">promise</h3></li>
+<h3 id="promise">promise</h3>
+
+<h3 id="新特性">新特性</h3></li>
+
+<li><p><a href="https://www.jianshu.com/p/87008f4f8513" target="_blank">参考链接</a></p></li>
 </ul>
 
 <hr>
@@ -532,232 +543,9 @@ HTTP状态码 HTTP状态码列表   状态码 状态码英文名称 中文描述
 
 <h3 id="http状态码">HTTP状态码</h3>
 
-<table ><caption>HTTP状态码列表</caption>
-<tbody>
-<tr>
-<th>状态码</th>
-<th>状态码英文名称</th>
-<th>中文描述</th>
-</tr>
-<tr>
-<td>100</td>
-<td>Continue</td>
-<td>继续。<a href="http://www.dreamdu.com/webbuild/client_vs_server/">客户端</a>应继续其请求</td>
-</tr>
-<tr>
-<td>101</td>
-<td>Switching Protocols</td>
-<td>切换协议。服务器根据客户端的请求切换协议。只能切换到更高级的协议，例如，切换到HTTP的新版本协议</td>
-</tr>
-<tr>
-<td colspan="3"></td>
-</tr>
-<tr>
-<td>200</td>
-<td>OK</td>
-<td>请求成功。一般用于GET与POST请求</td>
-</tr>
-<tr>
-<td>201</td>
-<td>Created</td>
-<td>已创建。成功请求并创建了新的资源</td>
-</tr>
-<tr>
-<td>202</td>
-<td>Accepted</td>
-<td>已接受。已经接受请求，但未处理完成</td>
-</tr>
-<tr>
-<td>203</td>
-<td>Non-Authoritative Information</td>
-<td>非授权信息。请求成功。但返回的meta信息不在原始的服务器，而是一个副本</td>
-</tr>
-<tr>
-<td>204</td>
-<td>No Content</td>
-<td>无内容。服务器成功处理，但未返回内容。在未更新网页的情况下，可确保浏览器继续显示当前文档</td>
-</tr>
-<tr>
-<td>205</td>
-<td>Reset Content</td>
-<td>重置内容。服务器处理成功，用户终端（例如：浏览器）应重置文档视图。可通过此返回码清除浏览器的表单域</td>
-</tr>
-<tr>
-<td>206</td>
-<td>Partial Content</td>
-<td>部分内容。服务器成功处理了部分GET请求</td>
-</tr>
-<tr>
-<td colspan="3"></td>
-</tr>
-<tr>
-<td>300</td>
-<td>Multiple Choices</td>
-<td>多种选择。请求的资源可包括多个位置，相应可返回一个资源特征与地址的列表用于用户终端（例如：浏览器）选择</td>
-</tr>
-<tr>
-<td>301</td>
-<td>Moved Permanently</td>
-<td>永久移动。请求的资源已被永久的移动到新URI，返回信息会包括新的URI，浏览器会自动定向到新URI。今后任何新的请求都应使用新的URI代替</td>
-</tr>
-<tr>
-<td>302</td>
-<td>Found</td>
-<td>临时移动。与301类似。但资源只是临时被移动。客户端应继续使用原有URI</td>
-</tr>
-<tr>
-<td>303</td>
-<td>See Other</td>
-<td>查看其它地址。与301类似。使用GET和POST请求查看</td>
-</tr>
-<tr>
-<td>304</td>
-<td>Not Modified</td>
-<td>未修改。所请求的资源未修改，服务器返回此状态码时，不会返回任何资源。客户端通常会缓存访问过的资源，通过提供一个头信息指出客户端希望只返回在指定日期之后修改的资源</td>
-</tr>
-<tr>
-<td>305</td>
-<td>Use Proxy</td>
-<td>使用代理。所请求的资源必须通过代理访问</td>
-</tr>
-<tr>
-<td>306</td>
-<td>Unused</td>
-<td>已经被废弃的HTTP状态码</td>
-</tr>
-<tr>
-<td>307</td>
-<td>Temporary Redirect</td>
-<td>临时重定向。与302类似。使用GET请求重定向</td>
-</tr>
-<tr>
-<td colspan="3"></td>
-</tr>
-<tr>
-<td>400</td>
-<td>Bad Request</td>
-<td>客户端请求的语法错误，服务器无法理解</td>
-</tr>
-<tr>
-<td>401</td>
-<td>Unauthorized</td>
-<td>请求要求用户的身份认证</td>
-</tr>
-<tr>
-<td>402</td>
-<td>Payment Required</td>
-<td>保留，将来使用</td>
-</tr>
-<tr>
-<td>403</td>
-<td>Forbidden</td>
-<td>服务器理解请求客户端的请求，但是拒绝执行此请求</td>
-</tr>
-<tr>
-<td>404</td>
-<td>Not Found</td>
-<td>服务器无法根据客户端的请求找到资源（网页）。通过此代码，网站设计人员可设置"您所请求的资源无法找到"的个性页面</td>
-</tr>
-<tr>
-<td>405</td>
-<td>Method Not Allowed</td>
-<td>客户端请求中的方法被禁止</td>
-</tr>
-<tr>
-<td>406</td>
-<td>Not Acceptable</td>
-<td>服务器无法根据客户端请求的内容特性完成请求</td>
-</tr>
-<tr>
-<td>407</td>
-<td>Proxy Authentication Required</td>
-<td>请求要求代理的身份认证，与401类似，但请求者应当使用代理进行授权</td>
-</tr>
-<tr>
-<td>408</td>
-<td>Request Time-out</td>
-<td>服务器等待客户端发送的请求时间过长，超时</td>
-</tr>
-<tr>
-<td>409</td>
-<td>Conflict</td>
-<td>服务器完成客户端的 PUT 请求时可能返回此代码，服务器处理请求时发生了冲突</td>
-</tr>
-<tr>
-<td>410</td>
-<td>Gone</td>
-<td>客户端请求的资源已经不存在。410不同于404，如果资源以前有现在被永久删除了可使用410代码，网站设计人员可通过301代码指定资源的新位置</td>
-</tr>
-<tr>
-<td>411</td>
-<td>Length Required</td>
-<td>服务器无法处理客户端发送的不带Content-Length的请求信息</td>
-</tr>
-<tr>
-<td>412</td>
-<td>Precondition Failed</td>
-<td>客户端请求信息的先决条件错误</td>
-</tr>
-<tr>
-<td>413</td>
-<td>Request Entity Too Large</td>
-<td>由于请求的实体过大，服务器无法处理，因此拒绝请求。为防止客户端的连续请求，服务器可能会关闭连接。如果只是服务器暂时无法处理，则会包含一个Retry-After的响应信息</td>
-</tr>
-<tr>
-<td>414</td>
-<td>Request-URI Too Large</td>
-<td>请求的URI过长（URI通常为网址），服务器无法处理</td>
-</tr>
-<tr>
-<td>415</td>
-<td>Unsupported Media Type</td>
-<td>服务器无法处理请求附带的媒体格式</td>
-</tr>
-<tr>
-<td>416</td>
-<td>Requested range not satisfiable</td>
-<td>客户端请求的范围无效</td>
-</tr>
-<tr>
-<td>417</td>
-<td>Expectation Failed</td>
-<td>服务器无法满足Expect的请求头信息</td>
-</tr>
-<tr>
-<td colspan="3"></td>
-</tr>
-<tr>
-<td>500</td>
-<td>Internal Server Error</td>
-<td>服务器内部错误，无法完成请求</td>
-</tr>
-<tr>
-<td>501</td>
-<td>Not Implemented</td>
-<td>服务器不支持请求的功能，无法完成请求</td>
-</tr>
-<tr>
-<td>502</td>
-<td>Bad Gateway</td>
-<td>作为网关或者代理工作的服务器尝试执行请求时，从远程服务器接收到了一个无效的响应</td>
-</tr>
-<tr>
-<td>503</td>
-<td>Service Unavailable</td>
-<td>由于超载或系统维护，服务器暂时的无法处理客户端的请求。延时的长度可包含在服务器的Retry-After头信息中</td>
-</tr>
-<tr>
-<td>504</td>
-<td>Gateway Time-out</td>
-<td>充当网关或代理的服务器，未及时从远端服务器获取请求</td>
-</tr>
-<tr>
-<td>505</td>
-<td>HTTP Version not supported</td>
-<td>服务器不支持请求的HTTP协议的版本，无法完成处理</td>
-</tr>
-</tbody>
-</table>
+<ul>
+<li><a href="https://www.cnblogs.com/xflonga/p/9368993.html" target="_blank">参考链接</a></li>
+</ul>
 </blockquote>
 
 <hr>
@@ -1084,6 +872,8 @@ HTTP状态码 HTTP状态码列表   状态码 状态码英文名称 中文描述
 
 <ul>
 <li>你学过计算机操作系统没,说说你都了解些什么</li>
+<li>用户态和内核态的理解和区别？</li>
+<li>线程和进程的区别？</li>
 </ul>
 
 <hr>
@@ -1287,7 +1077,38 @@ HTTP状态码 HTTP状态码列表   状态码 状态码英文名称 中文描述
 
 <h2 id="javascript基础">javascript基础</h2>
 
-<p><a href="https://www.cnblogs.com/zjx304/p/9782942.html" target="_blank">js中布尔值为false的六种情况</a></p>
+<ul>
+<li><a href="https://www.cnblogs.com/zjx304/p/9782942.html" target="_blank">js中布尔值为false的六种情况</a></li>
+<li><a href="https://www.cnblogs.com/wujie520303/p/4931384.html" target="_blank">JavaScript中in操作符(for..in)、Object.keys()和Object.getOwnPropertyNames()的区别</a></li>
+</ul>
+
+<h2 id="ipv6的结构">ipv6的结构</h2>
+
+<ul>
+<li>不省略表示，ipv6地址必须分为8段</li>
+<li>中间出现若干0,可以压缩，但是只可以省略一次</li>
+<li>前导0可以省略</li>
+</ul>
+
+<h2 id="流量控制和拥塞控制">流量控制和拥塞控制</h2>
+
+<ul>
+<li><a href="https://blog.csdn.net/jtracydy/article/details/52366461" target="_blank">TCP拥塞控制-慢启动、拥塞避免、快重传、快恢复</a></li>
+<li><a href="https://www.cnblogs.com/kubidemanong/p/9987810.html" target="_blank">TCP流量控制</a></li>
+</ul>
+
+<h2 id="https流程">HTTPS流程</h2>
+
+<ul>
+<li><a href="https://blog.csdn.net/iispring/article/details/51615631" target="_blank">Https原理及流程</a></li>
+</ul>
+
+<h2 id="判断闰年的条件">判断闰年的条件</h2>
+
+<ul>
+<li>1、能被4整除，但不能被100整除；</li>
+<li>2、能被400整除；</li>
+</ul>
 
 </div>
 

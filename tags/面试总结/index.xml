@@ -17,7 +17,8 @@
       
       <guid>https://mannuan.github.io/post/20190903220534/</guid>
       <description>常见业务题总结  BOM navigator 了解  CSS  link和@import引入CSS的区别 less和sass掌握程度   ES6  ES6里头的箭头函数的this对象与其他的有啥区别
-promise   cookie  介绍一下cookie,localstorage,sessionstorage,session cookie和session有什么区别 Cookie 是否会被覆盖，localStorage是否会被覆盖 如果页面初始载入的时候把ajax请求返回的数据存在localStorage里面，然后每次调用的时候去localStorage里面取数，是否可行 Cookie跨域请求能不能带上  三者共同点：都是保存在浏览器端，且同源的。
+promise 新特性 参考链接
+   cookie  介绍一下cookie,localstorage,sessionstorage,session cookie和session有什么区别 Cookie 是否会被覆盖，localStorage是否会被覆盖 如果页面初始载入的时候把ajax请求返回的数据存在localStorage里面，然后每次调用的时候去localStorage里面取数，是否可行 Cookie跨域请求能不能带上  三者共同点：都是保存在浏览器端，且同源的。
 区别:
 1、cookie在浏览器和服务器间来回传递。而sessionStorage和localStorage不会自动把数据发给服务器，仅在本地保存
 2、存储大小限制也不同，cookie数据不能超过4k，sessionStorage和localStorage 但比cookie大得多，可以达到5M
@@ -25,7 +26,7 @@ promise   cookie  介绍一下cookie,localstorage,sessionstorage,session cookie�
 4、作用域不同，sessionStorage不在不同的浏览器窗口中共享，即使是同一个页面(即数据不共享)；localStorage 在所有同源窗口中都是共享的；cookie也是在所有同源窗口中都是共享的( 即数据共享 )。
  盒子模型  http的头部 HTTP请求头  cookie在哪个里面,url在哪里面
 HTTP响应头 HTTP Response的Header里面都有些啥
-HTTP状态码 HTTP状态码列表   状态码 状态码英文名称 中文描述   100 Continue 继续。客户端应继续其请求   101 Switching Protocols 切换协议。服务器根据客户端的请求切换协议。只能切换到更高级的协议，例如，切换到HTTP的新版本协议      200 OK 请求成功。一般用于GET与POST请求   201 Created 已创建。成功请求并创建了新的资源   202 Accepted 已接受。已经接受请求，但未处理完成   203 Non-Authoritative Information 非授权信息。请求成功。但返回的meta信息不在原始的服务器，而是一个副本   204 No Content 无内容。服务器成功处理，但未返回内容。在未更新网页的情况下，可确保浏览器继续显示当前文档   205 Reset Content 重置内容。服务器处理成功，用户终端（例如：浏览器）应重置文档视图。可通过此返回码清除浏览器的表单域   206 Partial Content 部分内容。服务器成功处理了部分GET请求      300 Multiple Choices 多种选择。请求的资源可包括多个位置，相应可返回一个资源特征与地址的列表用于用户终端（例如：浏览器）选择   301 Moved Permanently 永久移动。请求的资源已被永久的移动到新URI，返回信息会包括新的URI，浏览器会自动定向到新URI。今后任何新的请求都应使用新的URI代替   302 Found 临时移动。与301类似。但资源只是临时被移动。客户端应继续使用原有URI   303 See Other 查看其它地址。与301类似。使用GET和POST请求查看   304 Not Modified 未修改。所请求的资源未修改，服务器返回此状态码时，不会返回任何资源。客户端通常会缓存访问过的资源，通过提供一个头信息指出客户端希望只返回在指定日期之后修改的资源   305 Use Proxy 使用代理。所请求的资源必须通过代理访问   306 Unused 已经被废弃的HTTP状态码   307 Temporary Redirect 临时重定向。与302类似。使用GET请求重定向      400 Bad Request 客户端请求的语法错误，服务器无法理解   401 Unauthorized 请求要求用户的身份认证   402 Payment Required 保留，将来使用   403 Forbidden 服务器理解请求客户端的请求，但是拒绝执行此请求   404 Not Found 服务器无法根据客户端的请求找到资源（网页）。通过此代码，网站设计人员可设置&#34;</description>
+HTTP状态码  参考链接    面向对象 继承 new操作符做了什么 对象属性的属性 原型链  对象中key-value的value怎么再放一个对象 静态属性怎么继承   跨域  你知道有哪些跨域方式,分别说说 你所了解的跨域的方法都说说看你了解的？   类数组  linux中常用的命令行  模块化编程 AMD CMD CommonJs 区别 requireJS的原理  requirejs怎么防止重复加载 requirejs如何避免循环依赖？   nodejs 在项目中的具体使用 架构 优缺点 回调  nodejs中的文件怎么读写？   前后端分离  意义   前端安全 xss和csrf  前端工程化  理解   前端兼容 低版本浏览器支持HTML5标签  使用js底层是怎么实现的</description>
     </item>
     
     <item>

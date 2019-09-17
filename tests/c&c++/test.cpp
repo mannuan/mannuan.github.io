@@ -1,33 +1,23 @@
-# include<iostream>
-# include<string.h>
-# include<stdio.h>
+#include<iostream>
 using namespace std;
-#define maxn 100010
-#define inf 1000000007
-int dp[maxn];
-int z[maxn];
+class TestClass{
+    private:
+    int number;
+    public:
+    TestClass(int n){
+        number = n;
+    }
+    TestClass(const TestClass& rhs){
+        number = rhs.number;
+        std::cout<<"1"<<std::endl;
+    }
+    TestClass operator=(const TestClass& rhs){
+        number = rhs.number;
+        return *this;
+    }
+};
 int main(){
-    int n;
-    scanf("%d", &n);
-    for(int i=1; i<=n; i++){
-        scanf("%d", &z[i]);
-    }
-    int mon;
-    scanf("%d", &mon);
-    for(int i=0; i<mon; i++){
-        dp[i] = inf;
-    }
-    dp[0] = 0;
-    for(int i=1; i<=n;i++){
-        for(int v=z[i]; v<=mon; v++){
-            dp[v] = min(dp[v], dp[v-z[i]]+1);
-        }
-    }
-    if(dp[mon]>=inf){
-        printf("-1\n");
-
-    }else{
-        printf("%d\n", dp[mon]);
-    }
+    TestClass a(1), b(2), c(3);
+    a = b = c;
     return 0;
 }

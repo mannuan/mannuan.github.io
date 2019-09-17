@@ -1,34 +1,45 @@
-import java.util.Scanner;
+import java.util.*;
 public class Test{
-
-    public static void dp(String d, int N){
-        int mod = 1_000_000_007;
-        int[][] dp = new int[N+1][N+1];
-        for(int i=0; i<=N; i++){
-            dp[0][i] = 1;
+    public static void main(String[] args){
+        Scanner scanner = new Scanner(System.in);
+        String line = scanner.nextLine();
+        char[] s = line.toCharArray();
+        int[] nums = new int[s.length];
+        int cha = 0;
+        StringBuilder stringBuilder = new StringBuilder(line);
+        String temp = stringBuilder.toString();
+        List<Integer> res = new ArrayList<>();
+        
+        while(true){
+            int index=temp.indexOf("RL");
+            if(index==-1) break;
+            res.add(index+cha);
+            if(temp.length()<=index+2) break;
+            cha+=index+2;
+            temp = temp.substring(index+2);
         }
-        for(int i=0; i<N;i++){
-            if(d.charAt(i) == '0'){
-                for(int j=0, ct =0; j<N-i;j++){
-                    dp[i+1][j] = ct = (ct + dp[i][j]) % mod;
-                }
-            }else{
-                for(int j=N-i-1, ct=0;j>=0;j--){
-                    dp[i+1][j] = ct = (ct + dp[i][j+1]) % mod;
-                }
+        int l=0;
+        for(int i=0;i<res.size();i++)
+        {
+            int st = res.get(i);
+            nums[st] = 1;
+            nums[st+1]=1;
+            for(int p=l;p<st;p++)
+            {
+                if((st-p)%2==0) nums[st]++;
+                else nums[st+1]++;
             }
+            int index = st+2;
+            while(index<line.length() && line.charAt(index)=='L'){
+                if((index-st)%2==0) nums[st]++;
+                else nums[st+1]++;
+                index++;
+            }
+            l=index;
         }
-        System.out.println(dp[N][0]);
-    }
-
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int N = sc.nextInt()-1;
-        StringBuilder sb = new StringBuilder();
-        for(int i=0; i<N;i++){
-            sb.append(sc.nextInt()+"");
+        for(int i=0;i<nums.length;i++){
+            System.out.print(nums[i]+(i==nums.length-1?"":" "));
         }
-        String d = sb.toString();
-        dp(d, N);
+        System.out.println();
     }
 }

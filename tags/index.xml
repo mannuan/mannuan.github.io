@@ -5,15 +5,24 @@
     <link>https://mannuan.github.io/tags/</link>
     <description>Recent content in Tags on mannuan</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 09 Sep 2019 15:09:15 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 17 Sep 2019 10:46:33 +0800</lastBuildDate>
     
 	<atom:link href="https://mannuan.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>javascript</title>
+      <link>https://mannuan.github.io/tags/javascript/</link>
+      <pubDate>Tue, 17 Sep 2019 10:46:33 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/tags/javascript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>面试经验</title>
       <link>https://mannuan.github.io/tags/%E9%9D%A2%E8%AF%95%E7%BB%8F%E9%AA%8C/</link>
-      <pubDate>Mon, 09 Sep 2019 15:09:15 +0800</pubDate>
+      <pubDate>Thu, 12 Sep 2019 15:03:06 +0800</pubDate>
       
       <guid>https://mannuan.github.io/tags/%E9%9D%A2%E8%AF%95%E7%BB%8F%E9%AA%8C/</guid>
       <description></description>
@@ -52,15 +61,6 @@
       <pubDate>Fri, 30 Aug 2019 10:41:34 +0800</pubDate>
       
       <guid>https://mannuan.github.io/tags/%E6%83%85%E6%84%9F%E5%88%86%E6%9E%90/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>javascript</title>
-      <link>https://mannuan.github.io/tags/javascript/</link>
-      <pubDate>Wed, 28 Aug 2019 13:02:28 +0800</pubDate>
-      
-      <guid>https://mannuan.github.io/tags/javascript/</guid>
       <description></description>
     </item>
     
