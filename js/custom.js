@@ -20,9 +20,13 @@ function getQueryStringArgs() {
     return args;
 }
 
+function downloadPDF(){
+    html2canvas();
+}
+
 let args = getQueryStringArgs(location.href);
 if(JSON.stringify(args) !== "{}"){
-    if(args["mode"] === "skill-content"){
+    if(args["mode"] === "skill-content" || args["mode"] === "resume"){
         document.getElementsByTagName("html")[0].style="width: 100%; height: 100%;";
         document.getElementsByTagName("body")[0].style="width: 100%; height: 100%;";
         document.querySelector("body > div").style="width: 100%;";
@@ -45,6 +49,18 @@ if(JSON.stringify(args) !== "{}"){
             tags[i].removeAttribute("href");
         }
         document.getElementById("footer").outerHTML = "";
+        if(args["mode"] == "resume"){
+            document.getElementsByTagName("header")[0].style.display="none";
+            document.getElementsByTagName("footer")[0].style.display="none";
+            document.getElementById("英文简历").style.display = "none";
+            document.getElementById("jsCpn_0_component_0").style.border = "0px;";
+            document.getElementsByTagName("article")[0].style.padding = "0px";
+            // let downloader = document.createElement("button");
+            // downloader.innerText = "下载";
+            // downloader.style = "background: skyblue;font-size: 24px;padding: 10px;font-family: Georgia, serif;position:fixed;right:20px;bottom:20px;";
+            // document.body.appendChild(downloader);
+            // downloader.onclick = downloadPDF;
+        }
     }
 } else {
     if (location.href.split("/").filter(item => item).length <= 2){

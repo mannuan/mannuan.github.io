@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>javascript基础 on mannuan</title>
+    <link>https://mannuan.github.io/tags/javascript%E5%9F%BA%E7%A1%80/</link>
+    <description>Recent content in javascript基础 on mannuan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 18 Sep 2019 10:20:17 +0800</lastBuildDate>
+    
+	<atom:link href="https://mannuan.github.io/tags/javascript%E5%9F%BA%E7%A1%80/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>基本数据类型和复杂数据类型的区别</title>
+      <link>https://mannuan.github.io/post/20190918102017/</link>
+      <pubDate>Wed, 18 Sep 2019 10:20:17 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190918102017/</guid>
+      <description> 基本数据类型和复杂数据类型的区别  对象可以动态的添加属性和方法，而基本类型不行。 参考链接  这篇文章解释为什么不能给基本类型添加方法和属性   </description>
+    </item>
+    
+    <item>
+      <title>控制台输出undefined</title>
+      <link>https://mannuan.github.io/post/20190918094846/</link>
+      <pubDate>Wed, 18 Sep 2019 09:48:46 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190918094846/</guid>
+      <description> 控制台输出undefined  本质就是是否调用eval函数 + 对浏览器console控制台输出undefined的分析
+ </description>
+    </item>
+    
+  </channel>
+</rss>

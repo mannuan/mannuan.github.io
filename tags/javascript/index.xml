@@ -5,10 +5,19 @@
     <link>https://mannuan.github.io/tags/javascript/</link>
     <description>Recent content in javascript on mannuan</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 17 Sep 2019 10:46:33 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 18 Sep 2019 09:25:26 +0800</lastBuildDate>
     
 	<atom:link href="https://mannuan.github.io/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>变量提升引出的一些问题</title>
+      <link>https://mannuan.github.io/post/20190918092526/</link>
+      <pubDate>Wed, 18 Sep 2019 09:25:26 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190918092526/</guid>
+      <description> 变量提升引出的一些问题  var可以重复声明 let不可以重复声明阮一峰的博客解释了这个问题 这篇文章的两段话很好的解释了这些问题；参考链接  </description>
+    </item>
     
     <item>
       <title>js继承面试要点</title>

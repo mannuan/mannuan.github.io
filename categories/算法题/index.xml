@@ -154,7 +154,8 @@ ABCD
 AABCD
 CFS
 输出 110
-代码待添加</description>
+代码待验证
+function getPrefix(pattern, prefix){ let i = 1; let len = 0; prefix[0] = 0; while(i&amp;lt;pattern.length){ if(pattern[i] == pattern[len]){ prefix[i++] = ++len; }else{ if(len&amp;gt;0){ len = prefix[len-1]; }else{ prefix[i++] = len; } } } } function kmpSearch(text, pattern){ let prefix = []; getPrefix(pattern, prefix); prefix.unshift(-1); prefix.pop(); let i = 0; let j = 0; while(i&amp;lt;text.</description>
     </item>
     
     <item>
@@ -163,7 +164,7 @@ CFS
       <pubDate>Sat, 10 Aug 2019 22:19:53 +0800</pubDate>
       
       <guid>https://mannuan.github.io/post/20190810221953/</guid>
-      <description>时间限制： C/C++语言 1秒；其他语言 2秒
+      <description> 时间限制： C/C++语言 1秒；其他语言 2秒
 内存限制： C/C++语言 32768K；其他语言 65536K 64bit IO Format %lld
 题目描述 小明是个有强迫症的卖家，他手头有10000台设备，他想以他的幸运数D元（D是个浮点数）每台的价格批量卖一些出去，他不在乎能卖出去多少台，只在乎卖出去的每台均价最接近D元，而且他只收整数数额的钱。请你编程计算他应该每次卖出去的台数N，一共售价M。
 输入描述 输入一个浮点数D(0 &amp;lt;D &amp;lt;10），精确到小数点后14位，表示小明钟情的价格。
@@ -174,7 +175,7 @@ CFS
 示例2  输入输出示例仅供调试，后台判题数据一般不包含示例
  输入 3.14159265358979
 输出 355 113
-代码待添加</description>
+#coding=utf-8 import sys D = float(sys.stdin.readline().strip()) n, m = 1, 1 # 正负无穷 float(&amp;#34;inf&amp;#34;), float(&amp;#34;-inf&amp;#34;) diff = float(&amp;#39;inf&amp;#39;) while m &amp;lt; 100000 and n &amp;lt;= 10000: if abs(m/n-D) &amp;lt; diff: tmp_m, tmp_n = m, n diff = abs(m/n-D) if m/n-D &amp;gt; 0: n += 1 elif m/n-D &amp;lt;= 0: m += 1 print(tmp_m, tmp_n)</description>
     </item>
     
     <item>

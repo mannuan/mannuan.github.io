@@ -1,21 +1,22 @@
-var complexnumbermulti = function(a, b){
-    let alist = a.includes("+")?a.split('+'):a.split("-");
-    let blist = b.includes("+")?b.split("+"):b.split("-");
-    if(blist[1].length==1){
-        blist[1] = 1;
-    }else{
-        blist[1] = parseInt(blist[1].split('')[0]);
+function sum(cn, ys){
+    let sn = "";
+    if(ys != 0){
+        sn += ys;
     }
-    if(alist[1].length ==1){
-        alist[1] = 1;
-    }else{
-        alist[1] = parseInt(alist[1].split('')[0]);
+    for(let i=0; i<cn; i++){
+        sn += '9';
     }
-    let r = parseInt(alist[0]) * parseInt(blist[0]) - alist[1]*blist[1];
-    let c = parseInt(alist[0])*blist[1]+alist[1]*parseInt(blist[0]);
-    return r+"+"+c+"i";
+    return sn;
 }
-// console.log(complexnumbermulti('1+2i', '2+i'));
-let a = readline();
-let b = readline();
-console.log(complexnumbermulti(a, b));
+
+let n = parseInt(readline());
+for(let i=0; i<n; i++){
+    let x = parseInt(readline());
+    let s = Math.floor(x/9);
+    let ys = x%9;
+    console.log(sum(s, ys));
+}
+// let x = 18;
+// let s = Math.floor(x/9);
+// let ys = x%9;
+// console.log(sum(s, ys));
