@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>珠峰培训</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		html,
+		body {
+			height: 100%;
+			overflow: hidden;
+		}
+
+		#btn {
+			margin: 20px;
+			padding: 0 15px;
+			height: 35px;
+			cursor: pointer;
+		}
+	</style>
+</head>
+
+<body id="body" style="background-color: white">
+	<button id="btn">点击更换BODY皮肤（白->红->绿->蓝->黑->白...）</button>
+
+	<script>
+		btn.onclick = function () {
+			let bg = body.style.backgroundColor;
+			switch (bg) {
+				case 'white':
+					body.style.backgroundColor = 'red';
+					break;
+				case 'red':
+					body.style.backgroundColor = 'green';
+					break;
+				case 'green':
+					body.style.backgroundColor = 'blue';
+					break;
+				case 'blue':
+					body.style.backgroundColor = 'black';
+					break;
+				default:
+					body.style.backgroundColor = 'white';
+			}
+		}
+
+		
+	</script>
+
+	
+</body>
+
+
+</html>

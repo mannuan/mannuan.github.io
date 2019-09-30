@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>随机车牌</title>
+	<!-- IMPORT CSS -->
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		.box {
+			margin: 20px auto;
+			width: 300px;
+		}
+
+		#licensePlate {
+			padding: 10px 20px;
+			width: 200px;
+			height: 35px;
+			line-height: 35px;
+			font-size: 20px;
+			border: 1px dashed lightblue;
+		}
+
+		#shakeBtn {
+			margin-top: 10px;
+			width: 50px;
+			line-height: 30px;
+		}
+	</style>
+</head>
+
+<body>
+	<div class='box'>
+		<!--P：存放生成的车牌号-->
+		<p id='licensePlate'></p>
+		<input type='button' value='摇号' id='shakeBtn' />
+	</div>
+	<script>
+		//=>完成你的JS代码，实现老板安排的需求
+		let licensePlate = document.getElementById('licensePlate'),
+			shakeBtn = document.getElementById('shakeBtn');
+		let n = 0;
+		shakeBtn.onclick = function () {
+			n++;
+			if (n > 3) {
+				alert('温馨提示：只有三次机会哈~~')
+				return;
+			}
+			var area1 = 'ABCEFGHJK',
+				area2 = 'QWERTYUIOPLKJHGFDSAZXCVBNM0123456789',
+				result = '';
+			result += '京' + area1[random(0, 6)];
+			for (var i = 1; i <= 5; i++) {
+				result += area2[random(0, 35)];
+			}
+			licensePlate.innerHTML = result;
+		}
+
+		function random(n, m) {
+			return Math.round(Math.random() * (m - n) + n);
+		}
+	</script>
+</body>
+
+</html>

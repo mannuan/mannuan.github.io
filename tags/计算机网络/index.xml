@@ -5,10 +5,19 @@
     <link>https://mannuan.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</link>
     <description>Recent content in 计算机网络 on mannuan</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 22 Aug 2019 10:59:14 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 30 Sep 2019 18:11:45 +0800</lastBuildDate>
     
 	<atom:link href="https://mannuan.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>计算机网络</title>
+      <link>https://mannuan.github.io/post/20190930181145/</link>
+      <pubDate>Mon, 30 Sep 2019 18:11:45 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190930181145/</guid>
+      <description> 计算机网络  TCP/IP协议体系的认知 链路层 以太网帧的格式 MTU的概念 ARP协议和RARP协议（掌握一下ARP缓存的原理） 网络层 掌握IP的首部格式 掌握IP的分片 掌握IP选路 ICMP协议 掌握报文格式 分类：查询 + 差错 两种 + 五种 传输层 UDP，次要一点，掌握特点和首部各个字段 掌握TCP 特点 + 首部字段 + 可靠机制 连接控制 ： 三次握手，四次挥手，同时打开，同时关闭，半关闭（可能问到为什么需要） 流量控制机制：滑动窗口,慢启动，拥塞避免，快速重传，快速恢复 超时重传机制 应用层 掌握DNS协议 名字空间 指针查询（反向查找或逆向解析）基本原理 DNS缓存 FTP协议（活化石）： 控制流和数据流 两种工作模式： PASV 和 PORT 各种指令和响应码 断点续传和匿名FTP的概念 HTTP协议： 报文格式：请求报文，响应报文，请求头各种字段，响应头各种字段 HTTP状态码 HTTPS协议 握手的详细过程 摘要算法，数字签名，数字证书的原理和过程  </description>
+    </item>
     
     <item>
       <title>概述</title>

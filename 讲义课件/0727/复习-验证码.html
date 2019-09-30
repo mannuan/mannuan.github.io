@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>验证码</title>
+</head>
+
+<body>
+	<div id="box">AAAA</div>
+	<button id="submit">点击重新生成</button>
+
+	<!-- IMPORT JS -->
+	<script>
+		let box = document.querySelector('#box'),
+			submit = document.querySelector('#submit');
+		// 创建验证码的方法
+		let createCode = () => {
+			// 准备获取验证码的范围（0~61）
+			let result = "";
+			let area = 'qwertyuioplkjhgfdsazxcvbnmQWERTYUIOPLKJHGFDSAZXCVBNM';
+			area += '0123456789';
+			while (result.length < 4) {
+				// 只要还不到四位，循环则继续执行
+				let n = Math.round(Math.random() * 61),
+					char = area.charAt(n);
+				// 去重复
+				let x = result.toLowerCase(),
+					y = char.toLowerCase();
+				!x.includes(y) ? result += char : null;
+			}
+			box.innerHTML = result;
+		};
+		createCode();
+		submit.onclick = createCode;
+	</script>
+</body>
+
+</html>

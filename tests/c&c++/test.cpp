@@ -1,23 +1,25 @@
 #include<iostream>
 using namespace std;
-class TestClass{
-    private:
-    int number;
-    public:
-    TestClass(int n){
-        number = n;
-    }
-    TestClass(const TestClass& rhs){
-        number = rhs.number;
-        std::cout<<"1"<<std::endl;
-    }
-    TestClass operator=(const TestClass& rhs){
-        number = rhs.number;
-        return *this;
-    }
-};
 int main(){
-    TestClass a(1), b(2), c(3);
-    a = b = c;
+    int n,max = 9;
+    cin>>n;
+    if(n<10){
+        cout<<n;
+    }else if(n==10){
+        cout<<9;
+    }else{
+        for(int i=11; i<=n; i++){
+            int temp = i;
+            int now = 1;
+            while(temp > 0){
+                now*= temp%10;
+                temp/=10;
+            }
+            if(now <max){
+                max=now;
+            }
+        }
+        cout<<max;
+    }
     return 0;
 }

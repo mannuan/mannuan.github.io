@@ -1,43 +1,51 @@
 # include<iostream>
-# include<cstdlib>
-# include<cstdio>
-# include<cstring>
-# include<string.h>
+# include<stdio.h>
+# include<algorithm>
 
 using namespace std;
+typeof long long ll;
 
-int n;
-int a[25][25];
-int vis[25];
-int mincost = 0;
-
-void dfs(int t, int cost){
-    if(t<n&&mincost>cost){
-        mincost = cost;
-        return;
-    }
-    if(mincost>cost){
-        for(int i=1;i<=n;i++){
-            if(!vis[i]){
-                vis[i] = 1;
-                dfs(t+1, cost+a[t][i]);
-                vis[i] = 0;
-            }
-        }
-    }
-}
+ll d[15];
+ll c[15];
+ll ten[15];
 
 int main(){
-    memset(vis, 0,sizeof(vis)); 
-    cin>>n;
-    for(int i=1;i<=n;i++){
-        for(int j=1;j<=n;j++){
-            cin>>a[i][i];
-        }
-        mincost += a[i][i];
+    ll n;
+    ten[0] = 1;
+    for(int i=1; i<=10; i++){
+        ten[i] = ten[i-1]*10;
     }
-    dfs(1, 0);
-    cout<<mincost<<endl;
-    cout<<endl;
+    while(scanf("%lld", &n)!=EOF){
+        ll a = n;
+        int cnt = 0;
+        ll anss = 1;
+        while(a){
+            d[cnt++]=a%10;
+            anss = anss*(a%10);
+            a=a/10;
+        }
+        for(int i=0; i<cnt; i++){
+            ll now = 0;
+            d[i] = d[i] -1;
+            for(int j=0; j<i; j++){
+                now+= 9*ten[j];
+            }
+            for(int j=i; j<cnt; j++){
+                now+=d[j]*ten[j];
+            }
+            int cc = 0;
+            ll ans = 1;
+            while(now){
+                c[cc++] = now%10;
+                now/=10;
+            }
+            for(int j=0; j<cc; j++){
+                ans = ans*c[j];
+            }
+            anss = max(ans, anss);
+            d[i] = d[i] + 1;
+        }
+        cout<<anss<<endl;
+    }
     return 0;
 }

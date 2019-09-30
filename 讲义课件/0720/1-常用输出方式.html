@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>浏览器中常用的输出方式</title>
+</head>
+
+<body>
+	<script>
+		let a = 10;
+		let b = [{
+			id: 1,
+			name: '张三'
+		}, {
+			id: 2,
+			name: '李四'
+		}];
+		/* [12,23] 一维数组
+		[12,{name:'xxx'}] 二维数组
+		[12,[{xxx:'xxx'}]] 三维数组 =>多维数组 
+		{name:'xxx'} 一维对象
+		{name:[12,23]} 二维对象
+		{
+			name:{
+				xxx:{
+					xxx:{
+						xxx:{
+
+						}
+					}
+				}
+			}
+		}
+		{
+			fn:function(){
+
+			}
+		}
+		*/
+
+		// 1.console.log/dir/table...在控制台输出
+		// .dir：输出一个对象的详细键值对信息
+		// .table：把一个多维JSON数组在控制台按照表格的方式呈现出来
+		// console.log(a);
+		// console.dir(document.body);
+		// console.table(b);
+
+		// 2.浏览器窗口弹窗 alert/confirm/prompt
+		// =>三种方式输出的结果都必先经过toString转换为字符串
+		// alert(1); //=>'1'
+		// =>三种方式会阻断JS代码的执行，只有当窗口关掉，JS才会继续运行
+		/* for (let i = 0; i < 5; i++) {
+			alert(i);
+			console.log('哈哈');
+		} */
+		// 确定和取消：选择型弹框
+		// confirm('确定要干啥吗？');
+		// 在CONFIRM的基础上多了一个输入框
+		// prompt('确定要干啥吗？写出原因！');
+
+		// 3.document.write在页面中写入信息
+		// =>和alert一样，输出的结果都是字符串
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>基础知识 on mannuan</title>
+    <link>https://mannuan.github.io/categories/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</link>
+    <description>Recent content in 基础知识 on mannuan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 30 Sep 2019 19:32:54 +0800</lastBuildDate>
+    
+	<atom:link href="https://mannuan.github.io/categories/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>剑指offer</title>
+      <link>https://mannuan.github.io/post/20190930193254/</link>
+      <pubDate>Mon, 30 Sep 2019 19:32:54 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190930193254/</guid>
+      <description> 剑指offer  二维数组中的查找  左下角 行和列容易混淆  替换空格  考察数组的理解 不要使用正则 在末尾填充一些无关字符串  从尾到头打印链表  考察了栈的特点 注意使用unshift  重建二叉树  比较难理解 充分利用前序遍历的递归  用两个栈实现队列  先进后出，在一次”先进后出“，变为先进先出  旋转数组的最小数字  要求时间复杂度达到O(lgn) 只能使用二分 二分比O(n)多一种情况考虑 边界条件需要考虑 不会写二分查找  斐波那契数列  prev, curr双指针 for循环从0开始  跳台阶  斐波那契数列  变态跳台阶  找规律，位运算  矩形覆盖  斐波那契数列 0不在斐波那契数列中   </description>
+    </item>
+    
+    <item>
+      <title>计算机网络</title>
+      <link>https://mannuan.github.io/post/20190930181145/</link>
+      <pubDate>Mon, 30 Sep 2019 18:11:45 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20190930181145/</guid>
+      <description> 计算机网络  TCP/IP协议体系的认知 链路层 以太网帧的格式 MTU的概念 ARP协议和RARP协议（掌握一下ARP缓存的原理） 网络层 掌握IP的首部格式 掌握IP的分片 掌握IP选路 ICMP协议 掌握报文格式 分类：查询 + 差错 两种 + 五种 传输层 UDP，次要一点，掌握特点和首部各个字段 掌握TCP 特点 + 首部字段 + 可靠机制 连接控制 ： 三次握手，四次挥手，同时打开，同时关闭，半关闭（可能问到为什么需要） 流量控制机制：滑动窗口,慢启动，拥塞避免，快速重传，快速恢复 超时重传机制 应用层 掌握DNS协议 名字空间 指针查询（反向查找或逆向解析）基本原理 DNS缓存 FTP协议（活化石）： 控制流和数据流 两种工作模式： PASV 和 PORT 各种指令和响应码 断点续传和匿名FTP的概念 HTTP协议： 报文格式：请求报文，响应报文，请求头各种字段，响应头各种字段 HTTP状态码 HTTPS协议 握手的详细过程 摘要算法，数字签名，数字证书的原理和过程  </description>
+    </item>
+    
+  </channel>
+</rss>

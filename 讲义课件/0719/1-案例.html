@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>案例练习</title>
+	<!-- IMPORT CSS -->
+	<style>
+		#numInp,
+		#submit {
+			box-sizing: border-box;
+			padding: 0 15px;
+			height: 35px;
+			border: 1px solid red;
+		}
+
+		#submit {
+			cursor: pointer;
+		}
+	</style>
+</head>
+
+<body>
+	<input type="text" id="numInp">
+	<button id="submit">点击计算</button>
+
+	<!-- IMPORT JS -->
+	<script>
+		// 想操作谁就先获取谁
+		let numInp = document.getElementById('numInp');
+		let submit = document.getElementById('submit');
+
+		// 事件绑定
+		submit.onclick = function () {
+			// 1.获取文本框中的信息
+			let n = numInp.value;
+			// console.log(typeof n); 
+			//文本框中获取的信息是字符串格式的 "string"
+			n = Number(n);
+
+			// 2.验证是否为有效数字
+			if (!isNaN(n)) { //isNaN(n)===false
+				// 有效数字
+				if (n > 0) {
+					console.log('正数');
+				} else if (n < 0) {
+					console.log('负数');
+				} else {
+					console.log('零');
+				}
+			} else {
+				console.log('当前输入的信息为非有效数字!');
+			}
+		}
+	</script>
+</body>
+
+</html>

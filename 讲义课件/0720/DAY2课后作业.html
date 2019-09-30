@@ -1,0 +1,175 @@
+<!DOCTYPE html><html><head><title>课后作业</title><meta charset='utf-8'><link href='https://cdn.maxiang.io/res-min/themes/marxico.css' rel='stylesheet'><style>
+.note-content  {font-family: 'Helvetica Neue', Arial, 'Hiragino Sans GB', STHeiti, 'Microsoft YaHei', 'WenQuanYi Micro Hei', SimSun, Song, sans-serif;}
+
+</style></head><body><div id='preview-contents' class='note-content'>
+                        
+                    
+
+
+
+<h3 id="课后作业">课后作业</h3>
+
+<h4 id="一问答题">一、问答题</h4>
+
+<ol><li rel="1"><p>JS中常用的数据类型有哪些？</p></li>
+<li rel="2"><p>浏览器中常用的内核有哪些？</p></li>
+<li rel="3"><p>数据类型之间的区别？</p></li>
+<li rel="4"><p>列举常用的关键字和保留字</p></li>
+<li rel="5"><p>JS中创建变量的几种常用方式？</p></li>
+</ol>
+
+<h4 id="二练习题">二、练习题</h4>
+
+<ol start="1"><li rel="1"><p>写出下面结果输出的答案 （阿里面试题）</p></li>
+</ol>
+
+<pre class="prettyprint hljs-dark"><code class="language-javascript hljs"><div class="hljs-line"><span class="hljs-keyword">let</span> a = {
+</div><div class="hljs-line">    <span class="hljs-attr">n</span>: <span class="hljs-number">1</span>
+</div><div class="hljs-line">};
+</div><div class="hljs-line"><span class="hljs-keyword">let</span> b = a;
+</div><div class="hljs-line">a.x = a = {
+</div><div class="hljs-line">    <span class="hljs-attr">n</span>: <span class="hljs-number">2</span>
+</div><div class="hljs-line">};
+</div><div class="hljs-line"><span class="hljs-built_in">console</span>.log(a.x);
+</div><div class="hljs-line"><span class="hljs-built_in">console</span>.log(b);
+</div></code></pre>
+
+<ol start="2"><li rel="2"><p>分别写出下列表达式输出的结果 （腾讯面试题）</p></li>
+</ol>
+
+<pre class="prettyprint hljs-dark"><code class="language-javascript hljs"><div class="hljs-line"><span class="hljs-keyword">var</span> a = <span class="hljs-string">'abc'</span> + <span class="hljs-number">123</span> + <span class="hljs-number">456</span>;
+</div><div class="hljs-line"><span class="hljs-keyword">var</span> b = <span class="hljs-string">'456'</span> - <span class="hljs-string">'123'</span>;
+</div><div class="hljs-line"><span class="hljs-keyword">var</span> c = <span class="hljs-number">100</span> + <span class="hljs-literal">true</span> + <span class="hljs-number">21.2</span> + <span class="hljs-literal">null</span> + <span class="hljs-literal">undefined</span> + <span class="hljs-string">"Tencent"</span> + [] + <span class="hljs-literal">null</span> + <span class="hljs-number">9</span> + <span class="hljs-literal">false</span>;
+</div><div class="hljs-line"><span class="hljs-built_in">console</span>.log(a,b,c);
+</div></code></pre>
+
+<ol start="3"><li rel="3"><p>写出下列代码的输出结果 （腾讯面试题）</p></li>
+</ol>
+
+<pre class="prettyprint hljs-dark"><code class="language-javascript hljs"><div class="hljs-line"><span class="hljs-keyword">var</span> str = <span class="hljs-string">'abc123'</span>;
+</div><div class="hljs-line"><span class="hljs-keyword">var</span> num = <span class="hljs-built_in">parseInt</span>(str);
+</div><div class="hljs-line"><span class="hljs-keyword">if</span> (num == <span class="hljs-literal">NaN</span>) {
+</div><div class="hljs-line">    alert(<span class="hljs-literal">NaN</span>);
+</div><div class="hljs-line">} <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (num == <span class="hljs-number">123</span>) {
+</div><div class="hljs-line">    alert(<span class="hljs-number">123</span>);
+</div><div class="hljs-line">} <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> num == <span class="hljs-string">'number'</span>) {
+</div><div class="hljs-line">    alert(<span class="hljs-string">'number'</span>);
+</div><div class="hljs-line">} <span class="hljs-keyword">else</span> {
+</div><div class="hljs-line">    alert(<span class="hljs-string">'str'</span>);
+</div><div class="hljs-line">}
+</div></code></pre>
+
+<ol start="4"><li rel="4"><p>写出下列代码的输出结果 （腾讯面试题）</p></li>
+</ol>
+
+<pre class="prettyprint hljs-dark"><code class="language-javascript hljs"><div class="hljs-line"><span class="hljs-keyword">var</span> a = <span class="hljs-number">0</span>;
+</div><div class="hljs-line"><span class="hljs-keyword">var</span> b = a;
+</div><div class="hljs-line">b++;
+</div><div class="hljs-line">alert(a)
+</div><div class="hljs-line"><span class="hljs-keyword">var</span> o = {};
+</div><div class="hljs-line">o.a = <span class="hljs-number">0</span>;
+</div><div class="hljs-line"><span class="hljs-keyword">var</span> b = o;
+</div><div class="hljs-line">b.a = <span class="hljs-number">10</span>;
+</div><div class="hljs-line">alert(o.a)
+</div></code></pre>
+
+<ol start="5"><li rel="5"><p>能输出”1”的有哪些？</p></li>
+</ol>
+
+<pre class="prettyprint hljs-dark"><code class="language-javascript hljs"><div class="hljs-line">A.alert(<span class="hljs-number">1</span>)          
+</div><div class="hljs-line">B.console.log(<span class="hljs-built_in">parseInt</span>(<span class="hljs-number">1.3</span>))              
+</div><div class="hljs-line">C.console.log(<span class="hljs-number">1</span>)  
+</div><div class="hljs-line">D.console.log(<span class="hljs-built_in">isNaN</span>(<span class="hljs-number">1</span>))   
+</div><div class="hljs-line">E.console.log(<span class="hljs-built_in">parseInt</span>(<span class="hljs-string">"1"</span>))
+</div></code></pre>
+
+<ol start="6"><li rel="6"><p>下面结果是”undefined”的是</p></li>
+</ol>
+
+<pre class="prettyprint hljs-dark"><code class="language-javascript hljs"><div class="hljs-line">A.console.log(alert(<span class="hljs-number">1</span>))                
+</div><div class="hljs-line">B.typeof <span class="hljs-literal">undefined</span>
+</div><div class="hljs-line">C.console.log(<span class="hljs-built_in">parseInt</span>(<span class="hljs-literal">undefined</span>))      
+</div><div class="hljs-line">D.isNaN(<span class="hljs-literal">undefined</span>)
+</div></code></pre>
+
+<ol start="7"><li rel="7"><p>下面结果能得到true的是</p></li>
+</ol>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-javascript hljs"><div class="hljs-line">A.isNaN(<span class="hljs-literal">null</span>)  
+</div><div class="hljs-line">B.isNaN(<span class="hljs-built_in">parseInt</span>(<span class="hljs-literal">null</span>))  
+</div><div class="hljs-line">C.Number(<span class="hljs-literal">null</span>)  
+</div><div class="hljs-line">D.parseFloat(<span class="hljs-literal">null</span>)
+</div></code></pre>
+
+<ol start="8"><li rel="8"><p>输出下面程序的结果</p></li>
+</ol>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-javascript hljs"><div class="hljs-line"><span class="hljs-built_in">parseInt</span>(<span class="hljs-string">""</span>)
+</div><div class="hljs-line"><span class="hljs-built_in">Number</span>(<span class="hljs-string">""</span>)
+</div><div class="hljs-line"><span class="hljs-built_in">isNaN</span>(<span class="hljs-string">""</span>)
+</div><div class="hljs-line"><span class="hljs-built_in">parseInt</span>(<span class="hljs-literal">null</span>)
+</div><div class="hljs-line"><span class="hljs-built_in">Number</span>(<span class="hljs-literal">null</span>)
+</div><div class="hljs-line"><span class="hljs-built_in">isNaN</span>(nul)
+</div><div class="hljs-line"><span class="hljs-built_in">parseInt</span>(<span class="hljs-string">"12px"</span>)  
+</div><div class="hljs-line"><span class="hljs-built_in">Number</span>(<span class="hljs-string">"12px"</span>)
+</div><div class="hljs-line"><span class="hljs-built_in">isNaN</span>(<span class="hljs-string">"12px"</span>)
+</div></code></pre>
+
+<ol start="9"><li rel="9"><p>下面程序输出的结果</p></li>
+</ol>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-javascript hljs"><div class="hljs-line"><span class="hljs-keyword">if</span> (<span class="hljs-built_in">isNaN</span>(<span class="hljs-literal">NaN</span>) == <span class="hljs-string">""</span>) {
+</div><div class="hljs-line">    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"珠峰"</span>)
+</div><div class="hljs-line">} <span class="hljs-keyword">else</span> {
+</div><div class="hljs-line">    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">"培训"</span>)
+</div><div class="hljs-line">}
+</div></code></pre>
+
+<ol start="10"><li rel="10"><p>下面程序输出的结果</p></li>
+</ol>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-javascript hljs"><div class="hljs-line"><span class="hljs-keyword">let</span> x = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>];
+</div><div class="hljs-line"><span class="hljs-keyword">let</span> y = x;
+</div><div class="hljs-line"><span class="hljs-keyword">let</span> z = [<span class="hljs-number">4</span>, <span class="hljs-number">5</span>, <span class="hljs-number">6</span>];
+</div><div class="hljs-line">y[<span class="hljs-number">0</span>] = <span class="hljs-number">10</span>;
+</div><div class="hljs-line">y = z;
+</div><div class="hljs-line">z[<span class="hljs-number">1</span>] = <span class="hljs-number">20</span>;
+</div><div class="hljs-line">x[<span class="hljs-number">2</span>] = z = <span class="hljs-number">30</span>;
+</div><div class="hljs-line"><span class="hljs-built_in">console</span>.log(x, y, z);
+</div></code></pre>
+
+<h4 id="三扩展题">三、扩展题</h4>
+
+<ol><li rel="1"><p>浏览器常用的输出方式，除了console.log还有哪些？</p></li>
+<li rel="2"><p>&lt; script &gt; 标签放到页面头部和尾部的区别，以及解决办法？</p></li>
+</ol>
+
+
+
+<pre class="prettyprint hljs-dark"><code class="language-htmlbars hljs"><div class="hljs-line"><span class="xml"><span class="hljs-meta">&lt;!DOCTYPE html&gt;</span></span>
+</div><div class="hljs-line"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">html</span>&gt;</span></span>
+</div><div class="hljs-line"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span></span>
+</div><div class="hljs-line"><span class="xml">    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">charset</span>=<span class="hljs-string">"UTF-8"</span>&gt;</span></span>
+</div><div class="hljs-line"><span class="xml">    <span class="hljs-tag">&lt;<span class="hljs-name">title</span>&gt;</span>珠峰练习题<span class="hljs-tag">&lt;/<span class="hljs-name">title</span>&gt;</span></span>
+</div><div class="hljs-line"><span class="xml">    <span class="hljs-comment">&lt;!-- IMPORT JS --&gt;</span></span>
+</div><div class="hljs-line"><span class="xml">    <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="actionscript"></span></span>
+</div><div class="hljs-line"><span class="xml">        <span class="hljs-comment">// JS代码</span></span>
+</div><div class="hljs-line"><span class="xml">    <span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></span>
+</div><div class="hljs-line"><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span></span>
+</div><div class="hljs-line"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span></span>
+</div><div class="hljs-line"><span class="xml">    ...... </span>
+</div><div class="hljs-line"><span class="xml">    <span class="hljs-comment">&lt;!-- IMPORT JS --&gt;</span></span>
+</div><div class="hljs-line"><span class="xml">    <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="actionscript"></span></span>
+</div><div class="hljs-line"><span class="xml">        <span class="hljs-comment">// JS代码</span></span>
+</div><div class="hljs-line"><span class="xml">    <span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span></span>
+</div><div class="hljs-line"><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span></span>
+</div><div class="hljs-line"><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">html</span>&gt;</span></span>
+</div></code></pre></div></body></html>

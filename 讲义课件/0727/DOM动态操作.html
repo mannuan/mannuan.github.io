@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>操作DOM</title>
+	<style>
+		.RED {
+			color: red;
+			background: lightblue;
+		}
+
+		.box {
+			margin-top: 10px;
+			width: 100px;
+			height: 100px;
+			background-color: lightblue;
+		}
+
+		.box span {
+			color: red;
+			font-size: 18px;
+		}
+	</style>
+</head>
+
+<body>
+	<!-- <div id="haha">哈哈</div> -->
+	<div class="box">
+		<span>珠峰培训1</span>
+	</div>
+	<script>
+		let box1 = document.querySelector('.box');
+		// 克隆第一份（深克隆）
+		let box2 = box1.cloneNode(true);
+		box2.querySelector('span').innerText = '珠峰培训2';
+		// 克隆第二份（浅克隆）
+		let box3 = box1.cloneNode(false);
+		box3.innerHTML = "<span>珠峰培训3</span>";
+
+		document.body.appendChild(box2);
+		document.body.appendChild(box3);
+
+		//===========
+		// 容器.removeChild(元素)
+		document.body.removeChild(box2);
+	</script>
+
+
+	<script>
+		/* // 动态创建一个DIV元素对象，把其赋给BOX
+		let box = document.createElement('div');
+		box.id = 'boxActive';
+		box.style.width = '200px';
+		box.style.height = '200px';
+		box.className = 'RED';
+
+		// 动态创建一个文本
+		let text = document.createTextNode('珠峰培训');
+
+		// 添加：容器.appendChild(元素)
+		box.appendChild(text);
+		// document.body.appendChild(box);
+
+		// 放到指定元素前：容器.insertBefore([新增元素],[指定元素])
+		let haha = document.getElementById('haha');
+		// haha.parentNode.insertBefore(...)
+		document.body.insertBefore(box, haha); */
+	</script>
+</body>
+
+</html>
