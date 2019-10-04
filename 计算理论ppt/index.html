@@ -53,7 +53,9 @@
         nums.forEach((e, i)=>{
             for(let j=1; j<=e; j++){
                 let li = document.createElement("li");
-                li.innerHTML = `<a href="/计算理论ppt/${i+1}-${j}.ppt">${i+1}-${j}.ppt</a>`;
+                let x = ((i+1)==6||(i+1)==8)?"x":"";
+                // console.log(x);
+                li.innerHTML = `<a href="/计算理论ppt${x}/${i+1}-${j}.ppt${x}">${i+1}-${j}.ppt${x}</a>`;
                 ppts.appendChild(li);
             }
         });
