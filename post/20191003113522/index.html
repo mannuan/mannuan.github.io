@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang='en'><head>
+  <meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='description' content='页面布局  假设高度已知，请写出三栏布局，其中左栏、右栏宽度各为300px，中间自适应；  解决方案  浮动布局，绝对布局，弹性布局，表格布局，网格布局  延伸一：优缺点  在浮动布局中，浮动元素脱离文档流，要做清除浮动，这个处理不好，会带来很多问题，比如高度塌陷等。但是使用比较简单，兼容性也比较好。 绝对布局是脱离文档流的，下面的所有子元素也会脱离文档流，这就导致了这种方法的有效性和可使用性是比较差的。但是很快捷，设置很方便，而且也不容易出问题。 弹性布局不能兼容IE8及以下浏览器。但是它解决上述两种方式的不足，比较完美。目前移动端的布局也都是用它。 在表格布局中，当其中一个单元格高度超出的时候，两侧的单元格也是会跟着一起变高的，而有时候这种效果不是我们想要的。但是兼容性好； 网格布局可以做很多复杂的样式设计；  延伸二：改为高度自适应  在浮动布局中，浮动元素的高度无法被撑开； 为什么文字会出现在左边的方块的上方？浮动布局的原理是哪边可以填充就填哪边； 如何解决？创建BFC； 在绝对布局中，两边元素的高度无法被撑开； 弹性布局没有影响； 表格布局没有影响； 网格布局不设置行高也可以达到自适应的效果；  延伸三：兼容性 小结：  语义化掌握到位 页面布局理解深刻 CSS基础知识扎实 思维灵活且积极上进 代码书写规范   上下固定，中间自适应  解决方案：绝对布局，弹性布局，表格布局，网格布局   CSS盒模型  谈谈你对CSS盒模型的认识？  基本概念：标准模型&#43;IE模型 标准模型和IE模型的区别(高度和宽度) CSS如何设置这两种模型 JS如何设置获取模型对应的宽和高 实例题（根据盒模型解释什么是边距重叠） BFC(边距重叠解决方案)   什么是盒模型 CSS盒模型本质上是一个盒子，封装周围的HTML元素，它包括：外边距（margin）、边框（border）、内边距（padding）、实际内容（content）四个属性。
+标准模型和IE模型的区别  标准模型  width=内容的宽度 height=内容的高度  IE模型(是一种怪异模型)
+ width=border&#43;padding&#43;内容的宽度 height=border&#43;padding&#43;内容的高度
+CSS如何设置这两种模型  box-sizing: content-box, border-box(IE);'>
+<meta name='theme-color' content='#FFFFFF'>
+
+<meta property='og:title' content='页面布局，CSS盒模型和DOM事件类 • mannuan'>
+<meta property='og:description' content='页面布局  假设高度已知，请写出三栏布局，其中左栏、右栏宽度各为300px，中间自适应；  解决方案  浮动布局，绝对布局，弹性布局，表格布局，网格布局  延伸一：优缺点  在浮动布局中，浮动元素脱离文档流，要做清除浮动，这个处理不好，会带来很多问题，比如高度塌陷等。但是使用比较简单，兼容性也比较好。 绝对布局是脱离文档流的，下面的所有子元素也会脱离文档流，这就导致了这种方法的有效性和可使用性是比较差的。但是很快捷，设置很方便，而且也不容易出问题。 弹性布局不能兼容IE8及以下浏览器。但是它解决上述两种方式的不足，比较完美。目前移动端的布局也都是用它。 在表格布局中，当其中一个单元格高度超出的时候，两侧的单元格也是会跟着一起变高的，而有时候这种效果不是我们想要的。但是兼容性好； 网格布局可以做很多复杂的样式设计；  延伸二：改为高度自适应  在浮动布局中，浮动元素的高度无法被撑开； 为什么文字会出现在左边的方块的上方？浮动布局的原理是哪边可以填充就填哪边； 如何解决？创建BFC； 在绝对布局中，两边元素的高度无法被撑开； 弹性布局没有影响； 表格布局没有影响； 网格布局不设置行高也可以达到自适应的效果；  延伸三：兼容性 小结：  语义化掌握到位 页面布局理解深刻 CSS基础知识扎实 思维灵活且积极上进 代码书写规范   上下固定，中间自适应  解决方案：绝对布局，弹性布局，表格布局，网格布局   CSS盒模型  谈谈你对CSS盒模型的认识？  基本概念：标准模型&#43;IE模型 标准模型和IE模型的区别(高度和宽度) CSS如何设置这两种模型 JS如何设置获取模型对应的宽和高 实例题（根据盒模型解释什么是边距重叠） BFC(边距重叠解决方案)   什么是盒模型 CSS盒模型本质上是一个盒子，封装周围的HTML元素，它包括：外边距（margin）、边框（border）、内边距（padding）、实际内容（content）四个属性。
+标准模型和IE模型的区别  标准模型  width=内容的宽度 height=内容的高度  IE模型(是一种怪异模型)
+ width=border&#43;padding&#43;内容的宽度 height=border&#43;padding&#43;内容的高度
+CSS如何设置这两种模型  box-sizing: content-box, border-box(IE);'>
+<meta property='og:url' content='https://mannuan.github.io/post/20191003113522/'>
+<meta property='og:site_name' content='mannuan'>
+<meta property='og:type' content='article'><meta property='og:image' content='https://www.gravatar.com/avatar/8bacfd69855171c6f53247456732f68a?s=256'><meta property='article:section' content='post'><meta property='article:tag' content='页面布局'><meta property='article:tag' content='CSS盒模型'><meta property='article:tag' content='DOM事件类'><meta property='article:published_time' content='2019-10-03T11:35:23&#43;08:00'/><meta property='article:modified_time' content='2019-10-03T11:35:23&#43;08:00'/><meta name='twitter:card' content='summary'>
+
+<meta name="generator" content="Hugo 0.55.6" />
+
+  <title>页面布局，CSS盒模型和DOM事件类 • mannuan</title>
+  <link rel='canonical' href='https://mannuan.github.io/post/20191003113522/'>
+  
+  
+  <link rel='icon' href='/favicon.ico'>
+<link rel='stylesheet' href='/assets/css/main.6a060eb7.css'><link rel='stylesheet' href='/css/custom.css'><style>
+:root{--color-accent:#FFFFFF;}
+</style>
+
+  
+
+</head>
+<body class='page type-post has-sidebar'>
+
+  <div class='site'><div id='sidebar' class='sidebar'>
+  <a class='screen-reader-text' href='#main-menu'>Skip to Main Menu</a>
+
+  <div class='container'><section class='widget widget-about sep-after'>
+  <header>
+    
+    <div class='logo'>
+      <a href='/'>
+        <img src='/images/%e6%88%91%e7%9a%84%e5%a4%b4%e5%83%8f.jpeg'>
+      </a>
+    </div>
+    
+    <h2 class='title site-title '>
+      <a href='/'>
+      mannuan
+      </a>
+    </h2>
+    <div class='desc'>
+    Rome was not built in a day.
+    </div>
+  </header>
+
+</section>
+<section class='widget widget-search sep-after'>
+  <header>
+    <h4 class='title widget-title'>Search</h4>
+  </header>
+
+  <form action='/search' id='search-form' class='search-form'>
+    <label>
+      <span class='screen-reader-text'>Search</span>
+      <input id='search-term' class='search-term' type='search' name='q' placeholder='Search&hellip;'>
+    </label></form>
+
+</section>
+<section class='widget widget-sidebar_menu sep-after'><nav id='sidebar-menu' class='menu sidebar-menu' aria-label='Sidebar Menu'>
+    <div class='container'>
+      <ul><li class='item'>
+  <a href='https://github.com/mannuan'>Github</a></li><li class='item'>
+  <a href='/skill-content/dist/'>skills</a></li><li class='item has-children'>
+  <a href=''>网络实验</a><button class='sub-menu-toggler'>
+    <span class='screen-reader-text'>expand sub menu</span>
+    <span class='sign'></span>
+  </button>
+
+  <ul class='sub-menu'><li class='item'>
+  <a href='/post/20190701101121/'>实验九</a></li><li class='item'>
+  <a href='/post/20190701090625/'>实验八</a></li><li class='item'>
+  <a href='/post/20190701105039/'>实验六</a></li><li class='item'>
+  <a href='/post/20190701172233/'>实验十</a></li><li class='item'>
+  <a href='/post/20190701182805/'>实验十一</a></li><li class='item'>
+  <a href='/post/20190701194642/'>实验十三</a></li><li class='item'>
+  <a href='/post/20190701192111/'>实验十二</a></li></ul></li><li class='item has-children'>
+  <a href=''>面经</a><button class='sub-menu-toggler'>
+    <span class='screen-reader-text'>expand sub menu</span>
+    <span class='sign'></span>
+  </button>
+
+  <ul class='sub-menu'><li class='item'>
+  <a href='/post/20190813191500/'>网易严选1</a></li><li class='item'>
+  <a href='/post/20190813190824/'>网易严选2</a></li></ul></li></ul>
+    </div>
+  </nav>
+
+</section><section class='widget widget-taxonomy_cloud sep-after'>
+  <header>
+    <h4 class='title widget-title'>Categories</h4>
+  </header>
+
+  <div class='container list-container'>
+  <ul class='list taxonomy-cloud'><li>
+        <a href='/categories/features/' style='font-size:1.1167883211678833em'>features</a>
+      </li><li>
+        <a href='/categories/ide/' style='font-size:1.0218978102189782em'>ide</a>
+      </li><li>
+        <a href='/categories/jupyter/' style='font-size:1.0145985401459854em'>jupyter</a>
+      </li><li>
+        <a href='/categories/linux/' style='font-size:1.1240875912408759em'>linux</a>
+      </li><li>
+        <a href='/categories/mac/' style='font-size:1.1240875912408759em'>mac</a>
+      </li><li>
+        <a href='/categories/mongodb/' style='font-size:1.0291970802919708em'>mongodb</a>
+      </li><li>
+        <a href='/categories/others/' style='font-size:1em'>others</a>
+      </li><li>
+        <a href='/categories/pip/' style='font-size:1em'>pip</a>
+      </li><li>
+        <a href='/categories/python/' style='font-size:1.0437956204379562em'>python</a>
+      </li><li>
+        <a href='/categories/shell/' style='font-size:1em'>shell</a>
+      </li><li>
+        <a href='/categories/tutorial/' style='font-size:1.0072992700729928em'>Tutorial</a>
+      </li><li>
+        <a href='/categories/vscode/' style='font-size:1.0072992700729928em'>vscode</a>
+      </li><li>
+        <a href='/categories/%E4%BD%9C%E8%80%85/' style='font-size:1em'>作者</a>
+      </li><li>
+        <a href='/categories/%E5%85%AC%E5%8A%A1%E5%91%98/' style='font-size:1em'>公务员</a>
+      </li><li>
+        <a href='/categories/%E5%86%99%E4%BD%9C/' style='font-size:1.0072992700729928em'>写作</a>
+      </li><li>
+        <a href='/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/' style='font-size:2em'>前端开发</a>
+      </li><li>
+        <a href='/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/' style='font-size:1em'>博客搭建</a>
+      </li><li>
+        <a href='/categories/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/' style='font-size:1.0145985401459854em'>后端开发</a>
+      </li><li>
+        <a href='/categories/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/' style='font-size:1.0145985401459854em'>基础知识</a>
+      </li><li>
+        <a href='/categories/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/' style='font-size:1.0072992700729928em'>学习方法</a>
+      </li><li>
+        <a href='/categories/%E5%AD%A6%E6%9C%AF/' style='font-size:1em'>学术</a>
+      </li><li>
+        <a href='/categories/%E5%B7%A5%E5%85%B7/' style='font-size:1.0145985401459854em'>工具</a>
+      </li><li>
+        <a href='/categories/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3/' style='font-size:1em'>开发文档</a>
+      </li><li>
+        <a href='/categories/%E6%95%B0%E5%AD%A6/' style='font-size:1em'>数学</a>
+      </li><li>
+        <a href='/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/' style='font-size:1em'>数据库</a>
+      </li><li>
+        <a href='/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/' style='font-size:1.0291970802919708em'>数据结构</a>
+      </li><li>
+        <a href='/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/' style='font-size:1.0145985401459854em'>机器学习</a>
+      </li><li>
+        <a href='/categories/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/' style='font-size:1em'>正则表达式</a>
+      </li><li>
+        <a href='/categories/%E7%88%AC%E8%99%AB/' style='font-size:1.0802919708029197em'>爬虫</a>
+      </li><li>
+        <a href='/categories/%E7%AE%97%E6%B3%95/' style='font-size:1.072992700729927em'>算法</a>
+      </li><li>
+        <a href='/categories/%E7%AE%97%E6%B3%95%E9%A2%98/' style='font-size:1.0802919708029197em'>算法题</a>
+      </li><li>
+        <a href='/categories/%E7%B3%BB%E7%BB%9F/' style='font-size:1.0145985401459854em'>系统</a>
+      </li><li>
+        <a href='/categories/%E7%BC%96%E7%A0%81%E8%BD%AC%E6%8D%A2/' style='font-size:1em'>编码转换</a>
+      </li><li>
+        <a href='/categories/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/' style='font-size:1em'>编程开发</a>
+      </li><li>
+        <a href='/categories/%E7%BC%96%E8%BE%91%E5%99%A8/' style='font-size:1em'>编辑器</a>
+      </li><li>
+        <a href='/categories/%E7%BD%91%E7%BB%9C/' style='font-size:1em'>网络</a>
+      </li><li>
+        <a href='/categories/%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/' style='font-size:1.0875912408759123em'>网络协议</a>
+      </li><li>
+        <a href='/categories/%E7%BF%BB%E5%A2%99/' style='font-size:1.0145985401459854em'>翻墙</a>
+      </li><li>
+        <a href='/categories/%E8%8B%B1%E8%AF%AD/' style='font-size:1.1094890510948905em'>英语</a>
+      </li><li>
+        <a href='/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/' style='font-size:1.0145985401459854em'>计算机基础</a>
+      </li><li>
+        <a href='/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/' style='font-size:1.0437956204379562em'>计算机网络</a>
+      </li><li>
+        <a href='/categories/%E8%AE%BA%E6%96%87/' style='font-size:1.0364963503649636em'>论文</a>
+      </li><li>
+        <a href='/categories/%E8%B0%83%E8%AF%95/' style='font-size:1em'>调试</a>
+      </li><li>
+        <a href='/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/' style='font-size:1.0145985401459854em'>软件使用</a>
+      </li></ul>
+</div>
+
+
+</section>
+</div>
+
+  <div class='sidebar-overlay'></div>
+</div><div class='main'><nav id='main-menu' class='menu main-menu' aria-label='Main Menu'>
+  <div class='container'>
+    <a class='screen-reader-text' href='#content'>Skip to Content</a>
+
+<button id='sidebar-toggler' class='sidebar-toggler' aria-controls='sidebar'>
+  <span class='screen-reader-text'>Toggle Sidebar</span>
+  <span class='open'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="3" y1="12" x2="21" y2="12" />
+  <line x1="3" y1="6" x2="21" y2="6" />
+  <line x1="3" y1="18" x2="21" y2="18" />
+  
+</svg>
+</span>
+  <span class='close'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="18" y1="6" x2="6" y2="18" />
+  <line x1="6" y1="6" x2="18" y2="18" />
+  
+</svg>
+</span>
+</button>
+    <ul><li class='item'>
+        <a href='/'>Home</a>
+      </li><li class='item'>
+        <a href='/post/'>blogs</a>
+      </li><li class='item'>
+        <a href='/skill-content/dist/'>skills</a>
+      </li><li class='item'>
+        <a href='/tags/'>tags</a>
+      </li></ul>
+  </div>
+</nav><div class='header-widgets'>
+        <div class='container'>
+    
+    <style>.widget-breadcrumbs li:after{content:'\2f '}</style>
+  <section class='widget widget-breadcrumbs sep-after'>
+    <nav id='breadcrumbs'>
+      <ol><li><a href='/'>Home</a></li><li><a href='/post/'>blogs</a></li><li><span>页面布局，CSS盒模型和DOM事件类</span></li></ol>
+    </nav>
+  </section></div>
+      </div>
+
+      <header id='header' class='header site-header'>
+        <div class='container sep-after'>
+          <div class='header-info'><p class='site-title title'>mannuan</p><p class='desc site-desc'>Rome was not built in a day.</p>
+          </div>
+        </div>
+      </header>
+
+      <main id='content'>
+
+
+<article lang='en' class='entry'>
+  <header class='header entry-header'>
+  <div class='container sep-after'>
+    <div class='header-info'>
+      <h1 class='title'>页面布局，CSS盒模型和DOM事件类</h1>
+      
+
+    </div>
+    <div class='entry-meta'>
+  <span class='posted-on'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+  <line x1="16" y1="2" x2="16" y2="6"/>
+  <line x1="8" y1="2" x2="8" y2="6"/>
+  <line x1="3" y1="10" x2="21" y2="10"/>
+  
+</svg>
+<span class='screen-reader-text'>Posted on </span>
+  <time class='entry-date' datetime='2019-10-03T11:35:23&#43;08:00'>2019, Oct 03</time>
+</span>
+
+  <span class='byline'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M21,21V20c0-2.76-4-5-9-5s-9,2.24-9,5v1"/>
+  <path d="M16,6.37A4,4,0,1,1,12.63,3,4,4,0,0,1,16,6.37Z"/>
+  
+</svg>
+<span class='screen-reader-text'> by </span><a href='/authors/mannuan'>mannuan</a></span>
+  
+<span class='reading-time'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <circle cx="12" cy="12" r="10"/>
+  <polyline points="12 6 12 12 15 15"/>
+  
+</svg>
+One min read
+</span>
+
+
+</div>
+
+
+  </div>
+</header>
+
+  
+  
+
+  <div class='container entry-content'>
+  
+
+<h1 id="页面布局">页面布局</h1>
+
+<ul>
+<li>假设高度已知，请写出三栏布局，其中左栏、右栏宽度各为300px，中间自适应；
+
+<ul>
+<li>解决方案
+
+<ul>
+<li>浮动布局，绝对布局，弹性布局，表格布局，网格布局</li>
+</ul></li>
+<li>延伸一：优缺点
+
+<ul>
+<li>在浮动布局中，浮动元素脱离文档流，要做清除浮动，这个处理不好，会带来很多问题，比如高度塌陷等。但是使用比较简单，兼容性也比较好。</li>
+<li>绝对布局是脱离文档流的，下面的所有子元素也会脱离文档流，这就导致了这种方法的有效性和可使用性是比较差的。但是很快捷，设置很方便，而且也不容易出问题。</li>
+<li>弹性布局不能兼容IE8及以下浏览器。但是它解决上述两种方式的不足，比较完美。目前移动端的布局也都是用它。</li>
+<li>在表格布局中，当其中一个单元格高度超出的时候，两侧的单元格也是会跟着一起变高的，而有时候这种效果不是我们想要的。但是兼容性好；</li>
+<li>网格布局可以做很多复杂的样式设计；</li>
+</ul></li>
+<li>延伸二：改为高度自适应
+
+<ul>
+<li>在浮动布局中，浮动元素的高度无法被撑开；</li>
+<li>为什么文字会出现在左边的方块的上方？浮动布局的原理是哪边可以填充就填哪边；</li>
+<li>如何解决？创建BFC；</li>
+<li>在绝对布局中，两边元素的高度无法被撑开；</li>
+<li>弹性布局没有影响；</li>
+<li>表格布局没有影响；</li>
+<li>网格布局不设置行高也可以达到自适应的效果；</li>
+</ul></li>
+<li>延伸三：兼容性</li>
+<li>小结：
+
+<ul>
+<li>语义化掌握到位</li>
+<li>页面布局理解深刻</li>
+<li>CSS基础知识扎实</li>
+<li>思维灵活且积极上进</li>
+<li>代码书写规范</li>
+</ul></li>
+</ul></li>
+<li>上下固定，中间自适应
+
+<ul>
+<li>解决方案：绝对布局，弹性布局，表格布局，网格布局</li>
+</ul></li>
+</ul>
+
+<h1 id="css盒模型">CSS盒模型</h1>
+
+<ul>
+<li>谈谈你对CSS盒模型的认识？
+
+<ul>
+<li>基本概念：标准模型+IE模型</li>
+<li>标准模型和IE模型的区别(高度和宽度)</li>
+<li>CSS如何设置这两种模型</li>
+<li>JS如何设置获取模型对应的宽和高</li>
+<li>实例题（根据盒模型解释什么是边距重叠）</li>
+<li>BFC(边距重叠解决方案)</li>
+</ul></li>
+</ul>
+
+<h2 id="什么是盒模型">什么是盒模型</h2>
+
+<p>CSS盒模型本质上是一个盒子，封装周围的HTML元素，它包括：外边距（margin）、边框（border）、内边距（padding）、实际内容（content）四个属性。</p>
+
+<h2 id="标准模型和ie模型的区别">标准模型和IE模型的区别</h2>
+
+<ul>
+<li>标准模型
+
+<ul>
+<li>width=内容的宽度</li>
+<li>height=内容的高度</li>
+</ul></li>
+
+<li><p>IE模型(是一种怪异模型)</p>
+
+<ul>
+<li>width=border+padding+内容的宽度</li>
+
+<li><p>height=border+padding+内容的高度</p>
+
+<h2 id="css如何设置这两种模型">CSS如何设置这两种模型</h2></li>
+</ul></li>
+
+<li><p>box-sizing: content-box, border-box(IE);</p></li>
+</ul>
+
+<h2 id="js如何设置获取盒模型对应的宽和高">JS如何设置获取盒模型对应的宽和高</h2>
+
+<ul>
+<li>dom.style.width/height
+
+<ul>
+<li>只能取内联样式的，也就是行内样式</li>
+</ul></li>
+<li>dom.currentStyle.width/height
+
+<ul>
+<li>渲染以后的，比较准确</li>
+<li>但是只有IE支持</li>
+</ul></li>
+<li>window.getComputedStyle(dom).width/height;
+
+<ul>
+<li>也是渲染以后的</li>
+<li>所有的浏览器都支持（兼容firefox和chrome）</li>
+</ul></li>
+<li>dom.getBoundingClientRect().width/height;
+
+<ul>
+<li>也是运行完以后获得的</li>
+<li>通常用来计算一个元素的绝对位置（相对于viewport）
+
+<ul>
+<li>可以拿到四个元素：left, top, width, height;</li>
+</ul></li>
+<li>兼容性很好基本都支持</li>
+</ul></li>
+</ul>
+
+<h2 id="实例题-根据盒模型解释边距重叠">实例题（根据盒模型解释边距重叠）</h2>
+
+<ul>
+<li>由面试官提出问题，你来回答的方式考察</li>
+<li>边距重叠的情况
+
+<ul>
+<li>父子元素</li>
+<li>兄弟元素</li>
+<li>空元素的边距</li>
+</ul></li>
+</ul>
+
+<h2 id="bfc-边距重叠解决方案">BFC（边距重叠解决方案）</h2>
+
+<ul>
+<li>BFC的基本概念（相关的还有IFC）
+
+<ul>
+<li>块级格式化上下文</li>
+</ul></li>
+<li>BFC的原理(BFC的渲染规则)
+
+<ul>
+<li>BCF这个元素的垂直方向的边距会发生重叠</li>
+<li>BFC的区域不会与浮动元素的box重叠</li>
+<li>BFC在页面上是一个独立的容器</li>
+<li>计算BFC高度的时候，浮动元素也会参与计算</li>
+</ul></li>
+<li>如何创建BFC
+
+<ul>
+<li>float值不为None,当前元素就创建了BFC</li>
+<li>position的值不为static或relative</li>
+<li>display=table-caption,table-cell,table,table-row等；</li>
+<li>overflow不为visiable;也就是auto和hidden;</li>
+</ul></li>
+<li>BFC使用场景
+
+<ul>
+<li>垂直方向边距重叠</li>
+<li>BFC不和float重叠</li>
+<li>清除浮动，BFC子元素即使是float参与运算</li>
+</ul></li>
+</ul>
+
+<h1 id="dom事件类">DOM事件类</h1>
+
+<h2 id="基本概念-dom事件的级别">基本概念：DOM事件的级别</h2>
+
+<ul>
+<li>提问方式：请用DOM2中的事件如何如何?</li>
+</ul>
+
+<h3 id="事件级别-dom标准定义的级别-只要回答出来就行了-这部分不深">事件级别(DOM标准定义的级别)（只要回答出来就行了，这部分不深）</h3>
+
+<ul>
+<li>DOM0: element.onclick = function(){}</li>
+<li>DOM2: element.addEventListener(&lsquo;click&rsquo;, function(){}, false);</li>
+<li>DOM3: element.addEventListener(&lsquo;keyup&rsquo;, function(){}, flase);(增加了鼠标事件和键盘事件等等)；</li>
+</ul>
+
+<h2 id="dom事件模型">DOM事件模型</h2>
+
+<p>指的就是冒泡和捕获
++ 提问方式
+  - 你了解DOM事件模型吗？
+  - DOM事件模型是什么?</p>
+
+<h2 id="dom事件流">DOM事件流</h2>
+
+<ul>
+<li>捕获阶段，目标元素阶段，冒泡阶段</li>
+</ul>
+
+<h2 id="描述dom事件捕获的具体流程">描述DOM事件捕获的具体流程</h2>
+
+<p>window-&gt;document-&gt;html-&gt;body-&gt;具体的结构
++ 获取html: document.documentElement;
++ 获取body: document.body</p>
+
+<h2 id="event对象的常见应用">Event对象的常见应用</h2>
+
+<ul>
+<li>event.preventDefault();</li>
+<li>event.stopPropagation();阻止冒泡</li>
+<li>event.stopImmediatePropagation();注册了两个click事件，只触发第一个；</li>
+<li>event.currentTarget;当前所绑定的事件；</li>
+<li>event.target;当前被点击的元素</li>
+</ul>
+
+<h3 id="事件委托">事件委托</h3>
+
+<ul>
+<li>常见题目：一个for循环给一个DOM注册了n多个事件，问你怎么优化？</li>
+<li>解决：把子元素的事件代理都转移到父元素上，你绑定一次事件就可以了；然而你要做响应的时候，你就要区分当前是哪个元素被点击；</li>
+<li>event.target(目前都支持)表示当前被点击的元素，早期版本的IE使用sourceTarget</li>
+</ul>
+
+<h2 id="自定义事件">自定义事件</h2>
+
+<h3 id="event">Event</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">eve</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Event</span>(<span style="color:#e6db74">&#39;custome&#39;</span>);
+<span style="color:#a6e22e">ev</span>.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#39;custom&#39;</span>, <span style="color:#66d9ef">function</span>(){
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;custom&#39;</span>);
+});
+<span style="color:#a6e22e">ev</span>.<span style="color:#a6e22e">dispatchEvent</span>(<span style="color:#a6e22e">eve</span>);<span style="color:#75715e">//触发事件
+</span></code></pre></div>
+<ul>
+<li>缺点：只能指定事件名</li>
+</ul>
+
+<h3 id="customevent">CustomEvent</h3>
+
+<ul>
+<li>除了可以指定事件名，后面还可以跟一个Object,来指定参数，这个参数可以自定义</li>
+</ul>
+
+<h3 id="使用场景">使用场景</h3>
+
+<ul>
+<li>一个按钮，不是一个常规的click，我想给它自己增加一个事件，然后我想在其他地方触发这个事件，而不是用回调的方式去处理；</li>
+</ul>
+
+</div>
+
+  
+<footer class='entry-footer'>
+  <div class='container sep-before'><div class='categories'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M22,19a2,2,0,0,1-2,2H4a2,2,0,0,1-2-2V5A2,2,0,0,1,4,3H9l2,3h9a2,2,0,0,1,2,2Z"/>
+  
+</svg>
+<span class='screen-reader-text'>Categories: </span><a class='category' href='/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/'>前端开发</a></div>
+<div class='tags'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M20.59,13.41l-7.17,7.17a2,2,0,0,1-2.83,0L2,12V2H12l8.59,8.59A2,2,0,0,1,20.59,13.41Z"/>
+  <line x1="7" y1="7" x2="7" y2="7"/>
+  
+</svg>
+<span class='screen-reader-text'>Tags: </span><a class='tag' href='/tags/%E9%A1%B5%E9%9D%A2%E5%B8%83%E5%B1%80/'>页面布局</a>, <a class='tag' href='/tags/css%E7%9B%92%E6%A8%A1%E5%9E%8B/'>CSS盒模型</a>, <a class='tag' href='/tags/dom%E4%BA%8B%E4%BB%B6%E7%B1%BB/'>DOM事件类</a></div>
+
+  </div>
+</footer>
+
+
+</article>
+
+<nav class='entry-nav'>
+  <div class='container'><div class='prev-entry sep-before'>
+      <a href='/post/20191002173418/'>
+        <span aria-hidden='true'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="20" y1="12" x2="4" y2="12"/>
+  <polyline points="10 18 4 12 10 6"/>
+  
+</svg>
+ Previous</span>
+        <span class='screen-reader-text'>Previous post: </span>webapck面试考点</a>
+    </div></div>
+</nav>
+
+
+
+
+      </main>
+
+      <footer id='footer' class='footer'>
+        <div class='container sep-before'><section class='widget widget-social_menu sep-after'><nav aria-label='Social Menu'>
+    <ul><li>
+        <a href='https://github.com/mannuan' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Github account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='mailto:mannuandeyangguang@163.com' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Contact via Email</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+  <polyline points="22,6 12,13 2,6"/>
+  
+</svg>
+</a>
+      </li></ul>
+  </nav>
+</section><div class='copyright'>
+  <p> &copy; 2019 mannuan </p>
+</div>
+
+        </div>
+      </footer>
+
+    </div>
+  </div><script>window.__assets_js_src="/assets/js/"</script>
+
+<script src='/assets/js/main.67d669ac.js'></script><script src='/js/custom.js'></script>
+
+</body>
+
+</html>
+

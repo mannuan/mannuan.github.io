@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>右边固定，左边自适应</title>
+		<style>
+			html * {
+				padding: 0;
+				margin: 0;
+			}
+			.layout {
+				margin-top: 50px;
+				border: 1px solid white;
+			}
+			.layout div {
+				min-height: 100px;
+			}
+		</style>
+	</head>
+	<body>
+		<section class="layout float">
+			<style type="text/css">
+				.layout.float  .right{
+					float: right;
+					width: 100px;
+					background: orange;
+				}
+				.layout.float .left{
+					background: red;
+				}
+			</style>
+			<article class="right-left">
+				<div class="right">right</div>
+				<div class="left">
+					<h1>这是浮动布局实现的双栏布局</h1>
+					<p>扩充高度</p>
+					<p>扩充高度</p>
+					<p>扩充高度</p>
+					<p>扩充高度</p>
+					<p>扩充高度</p>
+					<p>扩充高度</p>
+				</div>
+			</article>
+		</section>
+		<section class="layout absolute">
+			<style type="text/css">
+				.layout.absolute div {
+					position: absolute;
+				}
+				.layout.absolute .left {
+					left: 0;
+					background: red;
+					right: 100px;
+				}
+				.layout.absolute .right {
+					right: 0;
+					width: 100px;
+					background: orange;
+				}
+			</style>
+			<article class="left-right">
+				<div class="left">
+					<h1>这是绝对布局实现的双栏布局</h1>
+					<p>扩充高度</p>
+					<p>扩充高度</p>
+					<p>扩充高度</p>
+					<p>扩充高度</p>
+					<p>扩充高度</p>
+					<p>扩充高度</p>
+				</div>
+				<div class="right">right</div>
+			</article>
+		</section>
+		<section class="layout flex">
+			<style type="text/css">
+				.layout.flex {
+					margin-top: 200px;
+				}
+				.layout.flex .left-right {
+					display: flex;
+				}
+				.layout.flex .left {
+					background: red;
+					flex: 1;
+				}
+				.layout.flex .right {
+					background: orange;
+					width: 100px;
+				}
+			</style>
+			<article class="left-right">
+				<div class="left">
+					<h1>这是弹性布局实现的双栏布局</h1>
+					<p>扩充高度</p>
+					<p>扩充高度</p>
+					<p>扩充高度</p>
+					<p>扩充高度</p>
+					<p>扩充高度</p>
+					<p>扩充高度</p>
+				</div>
+				<div class="right">right</div>
+			</article>
+		</section>
+		<section class="layout table">
+			<style type="text/css">
+				.layout.table .left-right {
+					display: table;
+					width: 100%;
+					min-height: 100px;
+				}
+				.layout.table div {
+					display: table-cell;
+				}
+				.layout.table .left {
+					background: red;
+				}
+				.layout.table .right {
+					background: orange;
+					width: 100px;
+				}
+			</style>
+			<article class="left-right">
+				<div class="left">
+					<h1>这是表格布局实现的双栏布局</h1>
+					<p>扩充高度</p>
+					<p>扩充高度</p>
+					<p>扩充高度</p>
+					<p>扩充高度</p>
+					<p>扩充高度</p>
+					<p>扩充高度</p>
+				</div>
+				<div class="right">right</div>
+			</article>
+		</section>
+		<section class="layout grid">
+			<style type="text/css">
+				.layout.grid .left-right {
+					display: grid;
+					grid-template-columns: auto 100px;
+					/* grid-template-rows: 100px; */
+				}
+				.layout.grid .left {
+					background: red;
+				}
+				.layout.grid .right {
+					background: orange;
+				}
+			</style>
+			<article class="left-right">
+				<div class="left">
+					<h1>这是网格布局实现的两栏布局</h1>
+					<p>扩充高度</p>
+					<p>扩充高度</p>
+					<p>扩充高度</p>
+					<p>扩充高度</p>
+					<p>扩充高度</p>
+					<p>扩充高度</p>
+				</div>
+				<div class="right">right</div>
+			</article>
+		</section>
+	</body>
+</html>

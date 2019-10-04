@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>操作系统 on mannuan</title>
+    <link>https://mannuan.github.io/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</link>
+    <description>Recent content in 操作系统 on mannuan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 01 Oct 2019 17:17:57 +0800</lastBuildDate>
+    
+	<atom:link href="https://mannuan.github.io/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>操作系统基础</title>
+      <link>https://mannuan.github.io/post/20191001171757/</link>
+      <pubDate>Tue, 01 Oct 2019 17:17:57 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20191001171757/</guid>
+      <description> 操作系统 操作系统的演进  无操作系统 批处理系统 分时系统
+多道程序设计 进程管理
+ 存储管理
+ 作业管理
+ 文件管理
+ 设备管理
+什么是操作系统？ 管理硬件和提供用户交互的计算机程序；
+为什么使用操作系统？ 不能直接使用硬件；
+ 屏蔽不同设备的差异；
+ 使用方便
+操作系统资源 处理器
+ 存储器
+ IO设备
+ 文件
+操作系统的基本功能? 统一管理计算机资源;
+ 对计算机资源的抽象;
+ 提供用户与计算机之间的接口;
+并发性 并行同一时刻发生;
+ 并发同一时间间隔发生;
+共享性 含义：计算机资源可以被程序并发使用
+互斥共享 同时访问 虚拟性 物理实体-&amp;gt;逻辑实体
+时分复用 虚拟处理器技术
+ 虚拟设备技术
+空分复用 虚拟磁盘技术
+ 虚拟内存技术
+异步性 为什么需要进程？  </description>
+    </item>
+    
+  </channel>
+</rss>

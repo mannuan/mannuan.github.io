@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>flex练习</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maxinum-scale=1.0,user-scalable=0">
+        <style type="text/css">
+            .parent{
+                display: flex;
+                background: #ccc;
+                height: 400px;
+                width: 100%;
+            }
+            .child{
+                background: blue;
+                width: 20px;
+                height: 40px;
+                margin: 10px;
+                color: white;
+                text-align: center;
+                line-height: 40px;
+                flex: 1 1;
+            }
+            .child1 {
+                order: 3;
+            }
+            .child2 {
+                order: 2;
+            }
+            .child3 {
+                order: 1;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="parent">
+            <div class="child child1">1</div>
+            <div class="child child2">2</div>
+            <div class="child child3">3</div>
+        </div>
+    </body>
+</html>

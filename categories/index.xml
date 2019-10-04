@@ -5,26 +5,26 @@
     <link>https://mannuan.github.io/categories/</link>
     <description>Recent content in Categories on mannuan</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 30 Sep 2019 19:32:54 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 03 Oct 2019 11:35:23 +0800</lastBuildDate>
     
 	<atom:link href="https://mannuan.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>基础知识</title>
-      <link>https://mannuan.github.io/categories/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</link>
-      <pubDate>Mon, 30 Sep 2019 19:32:54 +0800</pubDate>
+      <title>前端开发</title>
+      <link>https://mannuan.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/</link>
+      <pubDate>Thu, 03 Oct 2019 11:35:23 +0800</pubDate>
       
-      <guid>https://mannuan.github.io/categories/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</guid>
+      <guid>https://mannuan.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>前端开发</title>
-      <link>https://mannuan.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/</link>
-      <pubDate>Mon, 30 Sep 2019 16:41:01 +0800</pubDate>
+      <title>基础知识</title>
+      <link>https://mannuan.github.io/categories/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</link>
+      <pubDate>Tue, 01 Oct 2019 17:17:57 +0800</pubDate>
       
-      <guid>https://mannuan.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/</guid>
+      <guid>https://mannuan.github.io/categories/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</guid>
       <description></description>
     </item>
     
@@ -340,6 +340,15 @@
       <pubDate>Thu, 02 May 2019 14:01:32 +0800</pubDate>
       
       <guid>https://mannuan.github.io/categories/%E7%B3%BB%E7%BB%9F/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>公务员</title>
+      <link>https://mannuan.github.io/categories/%E5%85%AC%E5%8A%A1%E5%91%98/</link>
+      <pubDate>Tue, 02 Oct 2018 21:18:50 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/categories/%E5%85%AC%E5%8A%A1%E5%91%98/</guid>
       <description></description>
     </item>
     

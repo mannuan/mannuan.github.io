@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>模块化工具 on mannuan</title>
+    <link>https://mannuan.github.io/tags/%E6%A8%A1%E5%9D%97%E5%8C%96%E5%B7%A5%E5%85%B7/</link>
+    <description>Recent content in 模块化工具 on mannuan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 02 Oct 2019 17:34:18 +0800</lastBuildDate>
+    
+	<atom:link href="https://mannuan.github.io/tags/%E6%A8%A1%E5%9D%97%E5%8C%96%E5%B7%A5%E5%85%B7/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>webapck面试考点</title>
+      <link>https://mannuan.github.io/post/20191002173418/</link>
+      <pubDate>Wed, 02 Oct 2019 17:34:18 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20191002173418/</guid>
+      <description> 模块化工具-webpack webpack是什么? Webpack 是一个前端资源的打包工具，它可以将js、image、css等资源当成一个模块进行打包。
+webpack的好处？  小文件合并，减少页面的请求次数，提高效率； 对es6语法进行转换编译，兼容老版本的浏览器； 混淆代码，提高安全性；
+webpack3和webpack4的区别 mode参数用来判断开发还是生产
+ 移除loaders，必须使用rules
+ 移除了CommonsChunkPlugin (提取公共代码)，用optimization.splitChunks和optimization.runtimeChunk来代替
+ 支持es6的方式导入JSON文件，并且可以过滤无用的代码
+let jsonData = require(&amp;#39;./data.json&amp;#39;); import jsonData from &amp;#39;./data.json&amp;#39; import { first } from &amp;#39;./data.json&amp;#39; // 打包时只会把first相关的打进去   webpack4默认不需要配置文件
+loader 和 plugin 不同 loader是使webpack拥有加载和解析非js文件的能力；
+ 目的在于解决loader无法实现的其他事，比如打包优化和压缩，到重新定义环境变量；
+  webpack构建流程  初始化参数: 配置文件参数，shell参数，合并； 开始编译: 合并参数，compiler对象，加载插件，执行run方法; 确定入口: entry; 编译模块: 入口文件，调用所有的loader，对模块进行解析翻译; 完成模块编译: 最终的内容和依赖关系; 输出资源: 入口和模块的依赖关系，输出包含模块的chunk, 转换成单独的文件，加载到输出列表; 输出完成: 确定输出的路径和文件名，把内容写入文件系统;  code spliting 代码拆分，按需加载
+  </description>
+    </item>
+    
+  </channel>
+</rss>

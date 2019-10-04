@@ -1,0 +1,34 @@
+html,body {
+	height: 100%;
+	width: 100%;
+	padding: 0px;
+	margin: 0px;
+}
+body{
+	display: flex;
+	flex-direction: column;
+}
+div{
+	border: 1px solid #ccc;
+}
+.head {
+	height: 86px;
+}
+.footer {
+	flex: 1;
+	display: flex;
+}
+.item1 {
+	width: 100px;
+}
+.item2 {
+	flex: 1;
+	display: flex;
+	flex-flow: column;
+}
+.child1 {
+	height: 66px;
+}
+.child2 {
+	flex: 1;
+}

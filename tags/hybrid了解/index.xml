@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>hybrid了解 on mannuan</title>
+    <link>https://mannuan.github.io/tags/hybrid%E4%BA%86%E8%A7%A3/</link>
+    <description>Recent content in hybrid了解 on mannuan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 01 Oct 2019 09:03:09 +0800</lastBuildDate>
+    
+	<atom:link href="https://mannuan.github.io/tags/hybrid%E4%BA%86%E8%A7%A3/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>hybrid了解</title>
+      <link>https://mannuan.github.io/post/20191001090308/</link>
+      <pubDate>Tue, 01 Oct 2019 09:03:09 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20191001090308/</guid>
+      <description>hybrid hybrid是什么，为何使用hybrid?  介绍一下hybrid更新和上线流程? hybrid和h5的区别? 前端js和客户端如何通信?  移动web开发与传统pc开发的区别  跑在手机端的web页面(h5页面) 跨平台 基于webview 告别IE拥抱webkit 更高的适配和性能要求  什么是移动web  ios, android; 2G,3G,4G; h5; viewport,hybrid;  移动web调试  alert() firebug chrome dev tools调试
+移动web适配(响应式布局) (media query)媒体查询和flex
+ 定高，宽度百分比
+ viewport和流式布局
+ rem原理和适配方法
+viewport 什么是css像素和物理像素?
+ 物理像素是屏幕实际拥有的像素点，而css像素是逻辑上的，比如放大页面就是让css像素承载更多的物理像素点;  Layout viewport（布局视窗），Visual viewport（物理视窗），Ideal viewport （理想视窗）
+ 物理视窗:可以看到的区域 布局视窗:css布局区域 理想视窗 html &amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width,initial-scale=1.0,maxinum-scale=1.0,user-scalable=0&amp;quot;&amp;gt;  + 手机打开pc端的页面为什么会等比例缩放? - 浏览器将页面的内容缩放至可视区内; + 设备的宽高和viewport有什么关系? + 如何使用meta标签设置viewport? + flex有哪些参数？ - flex-direction - flex-wrap - flex-flow - justify-content - align-items - align-content - order - flex-grow - flex-shrink - flex-basis - flex - align-self + 什么是流式布局?</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>上下固定，中间自适应</title>
+		<style type="text/css">
+			html * {
+				padding: 0;
+				margin: 0;
+			}
+			html, body{
+				height: 100%;
+			}
+			.layout {
+				width: 100px;
+				display: inline-block;
+				height: 100%;
+				overflow: hidden;
+				margin-left: 20px;
+			}
+			.layout div {
+				width: 100px;
+				text-align: center;
+				color: #ccc;
+			}
+		</style>
+	</head>
+	<body>
+		<section class="layout absolute">
+			<style type="text/css">
+				.layout.absolute div {
+					position: absolute;
+				}
+				.layout.absolute .top {
+					background: red;
+					height: 100px;
+					top: 0;
+				}
+				.layout.absolute .center {
+					background: orange;
+					top: 100px;
+					bottom: 100px;
+				}
+				.layout.absolute .bottom {
+					background: yellow;
+					height: 100px;
+					bottom: 0;
+				}
+			</style>
+			<article class="top-center-bottom">
+				<div class="top">top</div>
+				<div class="center">
+					<h1>这是绝对布局实现的三栏布局</h1>
+				</div>
+				<div class="bottom">bottom</div>
+			</article>
+		</section>
+		<section class="layout flex">
+			<style type="text/css">
+				.layout.flex {
+					height: 100%;
+				}
+				.layout.flex .top-center-bottom {
+					display: flex;
+					flex-flow: column;
+					height: 100%;
+				}
+				.layout.flex .top {
+					height: 100px;
+					background: red;
+				}
+				.layout.flex .center {
+					flex: 1;
+					background: orange;
+					overflow: auto;
+				}
+				.layout.flex .bottom {
+					height: 100px;
+					background: yellow;
+				}
+			</style>
+			<article class="top-center-bottom">
+				<div class="top">top</div>
+				<div class="center">
+					<h1>这是弹性布局实现的三栏布局</h1>
+				</div>
+				<div class="bottom">bottom</div>
+			</article>
+		</section>
+		<section class="layout table">
+			<style>
+				.layout.table .top-center-bottom {
+					display: table;
+					width: 100px;
+					height: 100%;
+				}
+				.layout.table div {
+					display: table-row;
+				}
+				.layout.table .top {
+					height: 100px;
+					background: red;
+				}
+				.layout.table .center {
+					background: orange;
+				}
+				.layout.table .bottom {
+					height: 100px;
+					background: yellow;
+				}
+			</style>
+			<article class="top-center-bottom">
+				<div class="top">top</div>
+				<div class="center">
+					<h1>这是表格布局实现的三栏布局</h1>
+				</div>
+				<div class="bottom">bottom</div>
+			</article>
+		</section>
+		<section class="layout grid">
+			<style>
+				.layout.grid .top-center-bottom {
+					display: grid;
+					height: 100%;
+					grid-template-columns: 100px;
+					grid-template-rows: 100px 1fr 100px;
+				}
+				.layout.grid .top {
+					background: red;
+				}
+				.layout.grid .center {
+					background: orange;
+				}
+				.layout.grid .bottom {
+					background: yellow;
+				}
+			</style>
+			<article class="top-center-bottom">
+				<div class="top">top</div>
+				<div class="center">
+					<h1>这是网格布局实现的三栏布局</h1>
+				</div>
+				<div class="bottom">bottom</div>
+			</article>
+		</section>
+	</body>
+</html>

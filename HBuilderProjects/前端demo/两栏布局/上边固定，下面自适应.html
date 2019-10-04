@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>上边固定，下面自适应</title>
+		<style>
+			html * {
+				padding: 0;
+				margin: 0;
+			}
+			html,body {
+				height: 100%;
+			}
+			.layout {
+				display: inline-block;
+				width: 100px;
+				margin-left: 20px;
+				overflow: hidden;
+				height: 100%;
+			}
+			.layout div {
+				width: 100px;
+			}
+		</style>
+	</head>
+	<body>
+		<section class="layout absolute">
+			<style type="text/css">
+				.layout.absolute div {
+					position: absolute;
+				}
+				.layout.absolute .top {
+					top: 0;
+					height: 100px;
+					background: red;
+				}
+				.layout.absolute .bottom {
+					top: 100px;
+					background: orange;
+					bottom: 0;
+				}
+			</style>
+			<article class="top-bottom">
+				<div class="top">top</div>
+				<div class="bottom">
+					<h1>这是绝对布局实现上下两栏布局</h1>
+				</div>
+			</article>
+		</section>
+		<section class="layout flex">
+			<style type="text/css">
+				.layout.flex .top-bottom {
+					display: flex;
+					flex-flow: column;
+					height: 100%;
+				}
+				.layout.flex .top {
+					height: 100px;
+					background: red;
+				}
+				.layout.flex .bottom {
+					flex: 1;
+					background: orange;
+				}
+			</style>
+			<article class="top-bottom">
+				<div class="top">top</div>
+				<div class="bottom">
+					<h1>这是弹性布局实现的上下两栏布局</h1>
+				</div>
+			</article>
+		</section>
+		<section class="layout table">
+			<style type="text/css">
+				.layout.table .top-bottom {
+					display: table;
+					height: 100%;
+				}
+				.layout.table div {
+					display: table-row;
+				}
+				.layout.table .top {
+					height: 100px;
+					background: red;
+				}
+				.layout.table .bottom {
+					background: orange;
+				}
+			</style>
+			<article class="top-bottom">
+				<div class="top">top</div>
+				<div class="bottom">
+					<h1>这是表格布局实现的上下两栏布局</h1>
+				</div>
+			</article>
+		</section>
+		<section class="layout grid">
+			<style>
+				.layout.grid .top-bottom {
+					display: grid;
+					grid-template-columns: 100px;
+					grid-template-rows: 100px auto;
+					height: 100%;
+				}
+				.layout.grid .top {
+					background: red;
+				}
+				.layout.grid .bottom {
+					background: orange;
+				}
+			</style>
+			<article class="top-bottom">
+				<div class="top">top</div>
+				<div class="bottom">
+					<h1>这是网格布局实现的上下两栏布局</h1>
+				</div>
+			</article>
+		</section>
+	</body>
+</html>

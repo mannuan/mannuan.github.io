@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>左右固定，中间自适应</title>
+		<style type="text/css">
+			html * {
+				padding: 0;
+				margin: 0;
+			}
+			.layout {
+				margin-top: 20px;
+			}
+			.layout article div {
+				min-height: 100px;
+				color: #ccc;
+			}
+		</style>
+	</head>
+	<section class="layout float">
+		<style type="text/css">
+			.layout.float .left {
+				float: left;
+				background: red;
+				width: 100px;
+			}
+			.layout.float .right {
+				float: right;
+				background: yellow;
+				width: 100px;
+			}
+			.layout.float .center {
+				background: orange;
+			}
+		</style>
+		<article class="left-right-center">
+			<div class="left">left</div>
+			<div class="right">right</div>
+			<div class="center">
+				<h1>这是浮动方式实现的三栏布局</h1>
+				<p>填充文字</p>
+				<p>填充文字</p>
+				<p>填充文字</p>
+				<p>填充文字</p>
+				<p>填充文字</p>
+				<p>填充文字</p>
+			</div>
+		</article>
+	</section>
+	<section class="layout absolute">
+		<style type="text/css">
+			.layout.absolute .left-center-right>div {
+				position: absolute;
+			}
+			.layout.absolute .left {
+				background: red;
+				width: 100px;
+				left: 0;
+			}
+			.layout.absolute .center {
+				background: orange;
+				left: 100px;
+				right: 100px;
+			}
+			.layout.absolute .right {
+				background: yellow;
+				width: 100px;
+				right: 0;
+			}
+		</style>
+		<article class="left-center-right">
+			<div class="left">left</div>
+			<div class="center">
+				<h1>这是绝对布局实现的三栏布局</h1>
+				<p>填充文字</p>
+				<p>填充文字</p>
+				<p>填充文字</p>
+				<p>填充文字</p>
+				<p>填充文字</p>
+				<p>填充文字</p>
+			</div>
+			<div class="right">right</div>
+		</article>
+	</section>
+	<section class="layout flex">
+		<style type="text/css">
+			.layout.flex {
+				margin-top: 140px;
+			}
+			.layout.flex .left-center-right {
+				display: flex;
+			}
+			.layout.flex .left {
+				width: 100px;
+				background: red;
+			}
+			.layout.flex .center {
+				flex: 1;
+				background: orange;
+			}
+			.layout.flex .right {
+				width: 100px;
+				background: yellow;
+			}
+		</style>
+		<article class="left-center-right">
+			<div class="left">left</div>
+			<div class="center">
+				<h1>这是弹性布局实现的三栏布局</h1>
+				<p>填充文字</p>
+				<p>填充文字</p>
+				<p>填充文字</p>
+				<p>填充文字</p>
+				<p>填充文字</p>
+				<p>填充文字</p>
+			</div>
+			<div class="right">right</div>
+		</article>
+	</section>
+	<section class="layout table">
+		<style type="text/css">
+			.layout.table .left-center-right {
+				display: table;
+				width: 100%;
+				height: 100px;
+			}
+			.layout.table div {
+				display: table-cell;
+			}
+			.layout.table .left {
+				width: 100px;
+				background: red;
+			}
+			.layout.table .center {
+				background: orange;
+			}
+			.layout.table .right {
+				width: 100px;
+				background: yellow;
+			}
+		</style>
+		<article class="left-center-right">
+			<div class="left">left</div>
+			<div class="center">
+				<h1>这是表格布局实现的三栏布局</h1>
+				<p>填充文字</p>
+				<p>填充文字</p>
+				<p>填充文字</p>
+				<p>填充文字</p>
+				<p>填充文字</p>
+				<p>填充文字</p>
+			</div>
+			<div class="right">right</div>
+		</article>
+	</section>
+	<section class="layout grid">
+		<style type="text/css">
+			.layout.grid .left-center-right {
+				display: grid;
+				grid-template-columns: 100px auto 100px;
+				grid-template-rows: 100px;
+			}
+			.layout.grid .left {
+				background: red;
+			}
+			.layout.grid .center {
+				background: orange;
+			}
+			.layout.grid .right {
+				background: yellow;
+			}
+		</style>
+		<article class="left-center-right">
+			<div class="left">left</div>
+			<div class="center">
+				<h1>这是网格布局实现的三栏布局</h1>
+				<p>填充文字</p>
+				<p>填充文字</p>
+				<p>填充文字</p>
+				<p>填充文字</p>
+				<p>填充文字</p>
+				<p>填充文字</p>
+			</div>
+			<div class="right">right</div>
+		</article>
+	</section>
+</html>
