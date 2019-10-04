@@ -151,17 +151,6 @@
   </url>
   
   <url>
-    <loc>https://mannuan.github.io/tags/%E7%AE%80%E5%8E%86/</loc>
-    <lastmod>2019-09-20T15:15:44+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://mannuan.github.io/post/20190920151544/</loc>
-    <lastmod>2019-09-20T15:15:44+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://mannuan.github.io/tags/%E6%B5%81%E7%A8%8B/</loc>
     <lastmod>2019-09-18T11:44:56+08:00</lastmod>
     <priority>0</priority>
@@ -3091,13 +3080,13 @@
   </url>
   
   <url>
-    <loc>https://mannuan.github.io/categories/mongodb/</loc>
+    <loc>https://mannuan.github.io/tags/mongodb/</loc>
     <lastmod>2019-05-30T16:16:20+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://mannuan.github.io/tags/mongodb/</loc>
+    <loc>https://mannuan.github.io/categories/mongodb/</loc>
     <lastmod>2019-05-30T16:16:20+08:00</lastmod>
     <priority>0</priority>
   </url>
@@ -3388,13 +3377,13 @@
   </url>
   
   <url>
-    <loc>https://mannuan.github.io/categories/jupyter/</loc>
+    <loc>https://mannuan.github.io/tags/jupyter/</loc>
     <lastmod>2019-05-15T15:55:13+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://mannuan.github.io/tags/jupyter/</loc>
+    <loc>https://mannuan.github.io/categories/jupyter/</loc>
     <lastmod>2019-05-15T15:55:13+08:00</lastmod>
     <priority>0</priority>
   </url>
@@ -3597,6 +3586,17 @@
     <loc>https://mannuan.github.io/tags/%E8%A1%8C%E6%B5%8B/</loc>
     <lastmod>2018-10-02T21:18:50+08:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mannuan.github.io/tags/%E7%AE%80%E5%8E%86/</loc>
+    <lastmod>2018-09-20T15:15:44+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mannuan.github.io/post/20190920151544/</loc>
+    <lastmod>2018-09-20T15:15:44+08:00</lastmod>
   </url>
   
   <url>
