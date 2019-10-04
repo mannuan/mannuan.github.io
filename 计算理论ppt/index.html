@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>计算理论ppt</title>
+</head>
+<body>
+    <ul id="ppt-list">
+
+    </ul>
+    <script>
+        let ppts = document.getElementById("ppt-list");
+        let nums = [8, 6, 7, 7, 9, 10, 13, 9];
+        nums.forEach((e, i)=>{
+            for(let j=1; j<=e; j++){
+                let li = document.createElement("li");
+                li.innerHTML = `<a href="/${i+1}-${j}.ppt">${i+1}-${j}.ppt</a>`;
+                ppts.appendChild(li);
+            }
+        });
+    </script>
+</body>
+</html>
