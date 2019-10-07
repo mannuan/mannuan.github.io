@@ -17,7 +17,7 @@
       
       <guid>https://mannuan.github.io/post/20190809214541/</guid>
       <description>前言 网易面试注重对基本知识的考察。主要从css和js两方面着手。给大家的告诫就是凡是简历上面的东西，最好掌握的很熟悉。
-面试自我介绍 面试官你好，我叫吴俊磊，我是杭州电子科技大学，计算机学院的研究生。 我熟悉html、css和js的使用，了解过jquery和vue前端开发框架。 我最近做的项目是智慧旅游的爬虫管理系统。我的任务是负责爬虫和呈现数据。我使用的技术栈是selenium+vue 以上就是我的自我介绍，谢谢！
+面试自我介绍 面试官你好，我叫XXX，我是XXXXXX，计算机学院的研究生。 我熟悉html、css和js的使用，了解过jquery和vue前端开发框架。 我最近做的项目是智慧旅游的爬虫管理系统。我的任务是负责爬虫和呈现数据。我使用的技术栈是selenium+vue 以上就是我的自我介绍，谢谢！
 向面试官提问 你们部门使用的是什么技术栈？
 CSS部分  两列布局，一列自适应，这篇文章解释的很好链接  扩展：三列布局链接链接   css选择器  元素选择器 id选择器 class选择器 通配选择器 关系选择器 后代选择器 子选择器 相邻选择器 兄弟选择器 属性选择器 E[att] 选择具有att属性的E元素 E[att=&amp;ldquo;val&amp;rdquo;] 选择具有att属性且属性值等于val的E元素 E[att~=&amp;ldquo;val&amp;rdquo;] 选择具有att属性且属性值其中一个等于val的E元素（包含只有一个值且该值等于val的情况） E[att|=&amp;ldquo;val&amp;rdquo;] 选择具有att属性且属性值为以val开头并用连接符-分隔的字符串的E元素，如果属性值仅为val，也将被选择 E[att^=&amp;ldquo;val&amp;rdquo;] 选择具有att属性且属性值为以val开头的字符串的E元素 E[att$=&amp;ldquo;val&amp;rdquo;] 选择具有att属性且属性值为以val结尾的字符串的E元素 E[att*=&amp;ldquo;val&amp;rdquo;] 选择具有att属性且属性值为包含val的字符串的E元素 伪类选择器 E:link 设置超链接a在未被访问前的样式 E:visited 设置超链接a在其链接地址已被访问过时的样式 伪对象选择器   JS部分  数据类型：6种  基本数据类型：5种 复杂数据类型：1种 ES6新增了Symbol，不需要new  数据类型判断  typeof返回值 typeof() 括号可以省略吗，操作符可以省略， 一元运算符优先级很高 对象进行判断 对数组进行判断  var a = []; Array.</description>
     </item>

@@ -1,7 +1,7 @@
 <template>
   <div style="height:100%; width:100%;">
     <el-container style="height: 100%">
-      <el-header class="el-header">
+      <el-header class="el-header" style="display:fixed; top:0; left:0;">
         <navBar
           :contents="contents"
           :active_index="active_index"

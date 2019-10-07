@@ -5,10 +5,20 @@
     <link>https://mannuan.github.io/tags/http%E5%8D%8F%E8%AE%AE/</link>
     <description>Recent content in http协议 on mannuan</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 17 Jul 2019 22:02:31 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 03 Oct 2019 11:35:23 +0800</lastBuildDate>
     
 	<atom:link href="https://mannuan.github.io/tags/http%E5%8D%8F%E8%AE%AE/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>前端开发一面/二面</title>
+      <link>https://mannuan.github.io/post/20191003113522/</link>
+      <pubDate>Thu, 03 Oct 2019 11:35:23 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20191003113522/</guid>
+      <description>一面/二面 面试技巧  准备要充分 知识要系统 沟通要简洁 内心要诚实 态度要谦虚 回答要灵活  面试模拟 页面布局  假设高度已知，请写出三栏布局，其中左栏、右栏宽度各为300px，中间自适应；  解决方案  浮动布局，绝对布局，弹性布局，表格布局，网格布局  延伸一：优缺点  在浮动布局中，浮动元素脱离文档流，要做清除浮动，这个处理不好，会带来很多问题，比如高度塌陷等。但是使用比较简单，兼容性也比较好。 绝对布局是脱离文档流的，下面的所有子元素也会脱离文档流，这就导致了这种方法的有效性和可使用性是比较差的。但是很快捷，设置很方便，而且也不容易出问题。 弹性布局不能兼容IE8及以下浏览器。但是它解决上述两种方式的不足，比较完美。目前移动端的布局也都是用它。 在表格布局中，当其中一个单元格高度超出的时候，两侧的单元格也是会跟着一起变高的，而有时候这种效果不是我们想要的。但是兼容性好； 网格布局可以做很多复杂的样式设计；  延伸二：改为高度自适应  在浮动布局中，浮动元素的高度无法被撑开； 为什么文字会出现在左边的方块的上方？浮动布局的原理是哪边可以填充就填哪边； 如何解决？创建BFC； 在绝对布局中，两边元素的高度无法被撑开； 弹性布局没有影响； 表格布局没有影响； 网格布局不设置行高也可以达到自适应的效果；  延伸三：兼容性 小结：  语义化掌握到位 页面布局理解深刻 CSS基础知识扎实 思维灵活且积极上进 代码书写规范   上下固定，中间自适应  解决方案：绝对布局，弹性布局，表格布局，网格布局   CSS盒模型  谈谈你对CSS盒模型的认识？  基本概念：标准模型+IE模型 标准模型和IE模型的区别(高度和宽度) CSS如何设置这两种模型 JS如何设置获取模型对应的宽和高 实例题（根据盒模型解释什么是边距重叠） BFC(边距重叠解决方案)   什么是盒模型 CSS盒模型本质上是一个盒子，封装周围的HTML元素，它包括：外边距（margin）、边框（border）、内边距（padding）、实际内容（content）四个属性。
+标准模型和IE模型的区别  标准模型  width=内容的宽度 height=内容的高度  IE模型(是一种怪异模型)</description>
+    </item>
     
     <item>
       <title>http协议</title>

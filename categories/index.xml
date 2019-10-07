@@ -5,15 +5,24 @@
     <link>https://mannuan.github.io/categories/</link>
     <description>Recent content in Categories on mannuan</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 03 Oct 2019 11:35:23 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 06 Oct 2019 18:04:15 +0800</lastBuildDate>
     
 	<atom:link href="https://mannuan.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>前端开发面试</title>
+      <link>https://mannuan.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E9%9D%A2%E8%AF%95/</link>
+      <pubDate>Sun, 06 Oct 2019 18:04:15 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E9%9D%A2%E8%AF%95/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>前端开发</title>
       <link>https://mannuan.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/</link>
-      <pubDate>Thu, 03 Oct 2019 11:35:23 +0800</pubDate>
+      <pubDate>Wed, 02 Oct 2019 17:34:18 +0800</pubDate>
       
       <guid>https://mannuan.github.io/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/</guid>
       <description></description>

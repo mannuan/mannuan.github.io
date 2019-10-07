@@ -23,7 +23,12 @@
  rem原理和适配方法
 viewport 什么是css像素和物理像素?
  物理像素是屏幕实际拥有的像素点，而css像素是逻辑上的，比如放大页面就是让css像素承载更多的物理像素点;  Layout viewport（布局视窗），Visual viewport（物理视窗），Ideal viewport （理想视窗）
- 物理视窗:可以看到的区域 布局视窗:css布局区域 理想视窗 html &amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width,initial-scale=1.0,maxinum-scale=1.0,user-scalable=0&amp;quot;&amp;gt;  + 手机打开pc端的页面为什么会等比例缩放? - 浏览器将页面的内容缩放至可视区内; + 设备的宽高和viewport有什么关系? + 如何使用meta标签设置viewport? + flex有哪些参数？ - flex-direction - flex-wrap - flex-flow - justify-content - align-items - align-content - order - flex-grow - flex-shrink - flex-basis - flex - align-self + 什么是流式布局?</description>
+ 物理视窗:可以看到的区域 布局视窗:css布局区域 理想视窗
+&amp;lt;meta name=&amp;#34;viewport&amp;#34; content=&amp;#34;width=device-width,initial-scale=1.0,maxinum-scale=1.0,user-scalable=0&amp;#34;&amp;gt;  手机打开pc端的页面为什么会等比例缩放? 浏览器将页面的内容缩放至可视区内; 设备的宽高和viewport有什么关系? 如何使用meta标签设置viewport?
+ flex有哪些参数？
+ flex-direction
+ flex-wrap
+ flex-flow</description>
     </item>
     
   </channel>

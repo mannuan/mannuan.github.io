@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>团队协作 on mannuan</title>
+    <link>https://mannuan.github.io/tags/%E5%9B%A2%E9%98%9F%E5%8D%8F%E4%BD%9C/</link>
+    <description>Recent content in 团队协作 on mannuan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 06 Oct 2019 18:04:15 +0800</lastBuildDate>
+    
+	<atom:link href="https://mannuan.github.io/tags/%E5%9B%A2%E9%98%9F%E5%8D%8F%E4%BD%9C/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>前端开发三面/四面</title>
+      <link>https://mannuan.github.io/post/20191006180415/</link>
+      <pubDate>Sun, 06 Oct 2019 18:04:15 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20191006180415/</guid>
+      <description> 业务能力 举例说明 团队协作能力 事务推动能力 终面 总结 </description>
+    </item>
+    
+  </channel>
+</rss>

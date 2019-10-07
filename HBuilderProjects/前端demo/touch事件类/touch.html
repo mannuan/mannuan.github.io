@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>touch</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+		<style>
+			html * {
+				padding: 0;
+				margin: 0;
+			}
+			#touch {
+				height: 300px;
+				width: 300px;
+				text-align: center;
+				line-height: 300px;
+				background: red;
+				color: white;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="touch">触摸按钮</div>
+		<script>
+			let t = document.getElementById("touch");
+			t.addEventListener("touch", function(e){
+				// t.innerText = e.targetTouches[0].pageX;
+				console.log(123);
+			}, false);
+		</script>
+	</body>
+</html>

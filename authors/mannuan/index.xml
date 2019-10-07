@@ -5,21 +5,41 @@
     <link>https://mannuan.github.io/authors/mannuan/</link>
     <description>Recent content on mannuan</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 03 Oct 2019 11:35:23 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 06 Oct 2019 18:04:15 +0800</lastBuildDate>
     
 	<atom:link href="https://mannuan.github.io/authors/mannuan/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>页面布局，CSS盒模型和DOM事件类</title>
+      <title>前端开发三面/四面</title>
+      <link>https://mannuan.github.io/post/20191006180415/</link>
+      <pubDate>Sun, 06 Oct 2019 18:04:15 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20191006180415/</guid>
+      <description> 业务能力 举例说明 团队协作能力 事务推动能力 终面 总结 </description>
+    </item>
+    
+    <item>
+      <title>前端开发二面/三面</title>
+      <link>https://mannuan.github.io/post/20191006140009/</link>
+      <pubDate>Sun, 06 Oct 2019 14:00:09 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20191006140009/</guid>
+      <description>面试技巧  知识面要广 理解要深刻 内心要诚实 态度要谦虚 回答要灵活 要学会赞美  面试模拟 渲染机制类 什么是DOCTYPE及作用  DTD (document type definition，文档类型定义）是一系列的语法规则，用来定义 XML 或（X) HTML 的文件类型。浏览器会使用它来判断文档类型，决定使用何种协议来解析以及切换浏览器模式； DOCTYPE是用来声明文档类型和 DTD 规范的，一个主要的用途便是文件的合法性验证。如果文件代码不合法，那么浏览器解析时便会出一些差错；
+常见的DOCTYPE有哪些？   浏览器渲染过程 重排Reflow 定义 DOM 结构中的各个元素都有自己的盒子（模型），这些都需要浏览器根据各种样式来计算并根据计算结果将元素放到它该出现的位置，这个过程称之为reflow
+触发Reflow(答出至少2条)  当你增加、删除、修改 DOM 结点时，会导致 Reflow 或 Repaint 当你移动 DOM 的位置，或是搞个动画的时候 当你修改 CSS 样式的时候 当你 Resize 窗口的时候（移动端没有这个问题），或是滚动的时候 当你修改网页的默认字体时  重绘Repaint 定义 当各种盒子的位置、大小以及其他属性，例如颜色、字体大小等都确定下来后，浏览器于是便把这些元素都按照各自的特性绘制了一遍，于是页面的内容出现了，这个过程称之为 repaint
+触发Repaint  DOM改动 CSS改动  减少频率 组装成一个fragment
+布局Layout 运行机制类 console.log(1); setTimeout(function(){ console.log(3); }, 0); console.</description>
+    </item>
+    
+    <item>
+      <title>前端开发一面/二面</title>
       <link>https://mannuan.github.io/post/20191003113522/</link>
       <pubDate>Thu, 03 Oct 2019 11:35:23 +0800</pubDate>
       
       <guid>https://mannuan.github.io/post/20191003113522/</guid>
-      <description>页面布局  假设高度已知，请写出三栏布局，其中左栏、右栏宽度各为300px，中间自适应；  解决方案  浮动布局，绝对布局，弹性布局，表格布局，网格布局  延伸一：优缺点  在浮动布局中，浮动元素脱离文档流，要做清除浮动，这个处理不好，会带来很多问题，比如高度塌陷等。但是使用比较简单，兼容性也比较好。 绝对布局是脱离文档流的，下面的所有子元素也会脱离文档流，这就导致了这种方法的有效性和可使用性是比较差的。但是很快捷，设置很方便，而且也不容易出问题。 弹性布局不能兼容IE8及以下浏览器。但是它解决上述两种方式的不足，比较完美。目前移动端的布局也都是用它。 在表格布局中，当其中一个单元格高度超出的时候，两侧的单元格也是会跟着一起变高的，而有时候这种效果不是我们想要的。但是兼容性好； 网格布局可以做很多复杂的样式设计；  延伸二：改为高度自适应  在浮动布局中，浮动元素的高度无法被撑开； 为什么文字会出现在左边的方块的上方？浮动布局的原理是哪边可以填充就填哪边； 如何解决？创建BFC； 在绝对布局中，两边元素的高度无法被撑开； 弹性布局没有影响； 表格布局没有影响； 网格布局不设置行高也可以达到自适应的效果；  延伸三：兼容性 小结：  语义化掌握到位 页面布局理解深刻 CSS基础知识扎实 思维灵活且积极上进 代码书写规范   上下固定，中间自适应  解决方案：绝对布局，弹性布局，表格布局，网格布局   CSS盒模型  谈谈你对CSS盒模型的认识？  基本概念：标准模型+IE模型 标准模型和IE模型的区别(高度和宽度) CSS如何设置这两种模型 JS如何设置获取模型对应的宽和高 实例题（根据盒模型解释什么是边距重叠） BFC(边距重叠解决方案)   什么是盒模型 CSS盒模型本质上是一个盒子，封装周围的HTML元素，它包括：外边距（margin）、边框（border）、内边距（padding）、实际内容（content）四个属性。
-标准模型和IE模型的区别  标准模型  width=内容的宽度 height=内容的高度  IE模型(是一种怪异模型)
- width=border+padding+内容的宽度 height=border+padding+内容的高度
-CSS如何设置这两种模型  box-sizing: content-box, border-box(IE);</description>
+      <description>一面/二面 面试技巧  准备要充分 知识要系统 沟通要简洁 内心要诚实 态度要谦虚 回答要灵活  面试模拟 页面布局  假设高度已知，请写出三栏布局，其中左栏、右栏宽度各为300px，中间自适应；  解决方案  浮动布局，绝对布局，弹性布局，表格布局，网格布局  延伸一：优缺点  在浮动布局中，浮动元素脱离文档流，要做清除浮动，这个处理不好，会带来很多问题，比如高度塌陷等。但是使用比较简单，兼容性也比较好。 绝对布局是脱离文档流的，下面的所有子元素也会脱离文档流，这就导致了这种方法的有效性和可使用性是比较差的。但是很快捷，设置很方便，而且也不容易出问题。 弹性布局不能兼容IE8及以下浏览器。但是它解决上述两种方式的不足，比较完美。目前移动端的布局也都是用它。 在表格布局中，当其中一个单元格高度超出的时候，两侧的单元格也是会跟着一起变高的，而有时候这种效果不是我们想要的。但是兼容性好； 网格布局可以做很多复杂的样式设计；  延伸二：改为高度自适应  在浮动布局中，浮动元素的高度无法被撑开； 为什么文字会出现在左边的方块的上方？浮动布局的原理是哪边可以填充就填哪边； 如何解决？创建BFC； 在绝对布局中，两边元素的高度无法被撑开； 弹性布局没有影响； 表格布局没有影响； 网格布局不设置行高也可以达到自适应的效果；  延伸三：兼容性 小结：  语义化掌握到位 页面布局理解深刻 CSS基础知识扎实 思维灵活且积极上进 代码书写规范   上下固定，中间自适应  解决方案：绝对布局，弹性布局，表格布局，网格布局   CSS盒模型  谈谈你对CSS盒模型的认识？  基本概念：标准模型+IE模型 标准模型和IE模型的区别(高度和宽度) CSS如何设置这两种模型 JS如何设置获取模型对应的宽和高 实例题（根据盒模型解释什么是边距重叠） BFC(边距重叠解决方案)   什么是盒模型 CSS盒模型本质上是一个盒子，封装周围的HTML元素，它包括：外边距（margin）、边框（border）、内边距（padding）、实际内容（content）四个属性。
+标准模型和IE模型的区别  标准模型  width=内容的宽度 height=内容的高度  IE模型(是一种怪异模型)</description>
     </item>
     
     <item>
@@ -37,7 +57,7 @@ webpack3和webpack4的区别 mode参数用来判断开发还是生产
 let jsonData = require(&amp;#39;./data.json&amp;#39;); import jsonData from &amp;#39;./data.json&amp;#39; import { first } from &amp;#39;./data.json&amp;#39; // 打包时只会把first相关的打进去   webpack4默认不需要配置文件
 loader 和 plugin 不同 loader是使webpack拥有加载和解析非js文件的能力；
  目的在于解决loader无法实现的其他事，比如打包优化和压缩，到重新定义环境变量；
-  webpack构建流程  初始化参数: 配置文件参数，shell参数，合并； 开始编译: 合并参数，compiler对象，加载插件，执行run方法; 确定入口: entry; 编译模块: 入口文件，调用所有的loader，对模块进行解析翻译; 完成模块编译: 最终的内容和依赖关系; 输出资源: 入口和模块的依赖关系，输出包含模块的chunk, 转换成单独的文件，加载到输出列表; 输出完成: 确定输出的路径和文件名，把内容写入文件系统;  code spliting 代码拆分，按需加载
+  webpack构建流程  初始化参数: 配置文件参数，shell参数，合并； 开始编译: 合并参数，compiler对象，加载插件，执行run方法; 确定入口: entry; 编译模块: 入口文件，调用所有的rules，对模块进行解析翻译; 完成模块编译: 最终的内容和依赖关系; 输出资源: 入口和模块的依赖关系，输出包含模块的chunk, 转换成单独的文件，加载到输出列表; 输出完成: 确定输出的路径和文件名，把内容写入到文件系统;  code spliting 代码拆分，按需加载
   </description>
     </item>
     
@@ -88,11 +108,16 @@ loader 和 plugin 不同 loader是使webpack拥有加载和解析非js文件的�
  rem原理和适配方法
 viewport 什么是css像素和物理像素?
  物理像素是屏幕实际拥有的像素点，而css像素是逻辑上的，比如放大页面就是让css像素承载更多的物理像素点;  Layout viewport（布局视窗），Visual viewport（物理视窗），Ideal viewport （理想视窗）
- 物理视窗:可以看到的区域 布局视窗:css布局区域 理想视窗 html &amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width,initial-scale=1.0,maxinum-scale=1.0,user-scalable=0&amp;quot;&amp;gt;  + 手机打开pc端的页面为什么会等比例缩放? - 浏览器将页面的内容缩放至可视区内; + 设备的宽高和viewport有什么关系? + 如何使用meta标签设置viewport? + flex有哪些参数？ - flex-direction - flex-wrap - flex-flow - justify-content - align-items - align-content - order - flex-grow - flex-shrink - flex-basis - flex - align-self + 什么是流式布局?</description>
+ 物理视窗:可以看到的区域 布局视窗:css布局区域 理想视窗
+&amp;lt;meta name=&amp;#34;viewport&amp;#34; content=&amp;#34;width=device-width,initial-scale=1.0,maxinum-scale=1.0,user-scalable=0&amp;#34;&amp;gt;  手机打开pc端的页面为什么会等比例缩放? 浏览器将页面的内容缩放至可视区内; 设备的宽高和viewport有什么关系? 如何使用meta标签设置viewport?
+ flex有哪些参数？
+ flex-direction
+ flex-wrap
+ flex-flow</description>
     </item>
     
     <item>
-      <title>剑指offer</title>
+      <title>剑指offer总结</title>
       <link>https://mannuan.github.io/post/20190930193254/</link>
       <pubDate>Mon, 30 Sep 2019 19:32:54 +0800</pubDate>
       
@@ -107,35 +132,6 @@ viewport 什么是css像素和物理像素?
       
       <guid>https://mannuan.github.io/post/20190930181145/</guid>
       <description> TCP/IP协议体系的认知 链路层 以太网帧的格式 MTU的概念 ARP协议和RARP协议（掌握一下ARP缓存的原理） 网络层 掌握IP的首部格式 掌握IP的分片 掌握IP选路 ICMP协议 掌握报文格式 分类：查询 + 差错 两种 + 五种 传输层 UDP，次要一点，掌握特点和首部各个字段 掌握TCP 特点 + 首部字段 + 可靠机制 连接控制 ： 三次握手，四次挥手，同时打开，同时关闭，半关闭（可能问到为什么需要） 流量控制机制：滑动窗口,慢启动，拥塞避免，快速重传，快速恢复 超时重传机制 应用层 掌握DNS协议 命名空间 指针查询（反向查找或逆向解析）基本原理 DNS缓存 FTP协议（活化石）： 控制流和数据流 两种工作模式： PASV 和 PORT 各种指令和响应码 断点续传和匿名FTP的概念 HTTP协议： 报文格式：请求报文，响应报文，请求头各种字段，响应头各种字段 HTTP状态码 HTTPS协议 握手的详细过程 摘要算法，数字签名，数字证书的原理和过程 </description>
-    </item>
-    
-    <item>
-      <title>HTTP协议类</title>
-      <link>https://mannuan.github.io/post/20190930164101/</link>
-      <pubDate>Mon, 30 Sep 2019 16:41:01 +0800</pubDate>
-      
-      <guid>https://mannuan.github.io/post/20190930164101/</guid>
-      <description>HTTP协议类 一面/二面 HTTP协议的主要特点  无连接: 连接一次就会断掉，不会保持连接; 无状态: 客户端和服务端建立连接后传输数据，断开连接，再次建立连接后，无法区分是不是同一个连接; 简单快速: 每个资源的URI都是固定的，访问资源只需要输入URI就行了; 灵活: 通过一个http协议就可以完成不同类型的传输;
-HTTP报文的组成部分 请求报文
- 请求行(http方法,页面地址,http协议/版本)，请求头(key-value值)，空行，请求体；  响应报文
- 状态行(http协议/版本, http状态码)，响应头，空行，响应体；
-HTTP方法 GET: 获取资源
- POST: 传输资源
- PUT: 更新资源
- DELETE: 删除资源
- HEAD: 获得报文首部
-POST和GET的区别 GET在浏览器回退时是无害的，而POST会再次提交请求;
- GET请求会被浏览器主动缓存，而POST不会，除非手动设置;
- GET请求参数会被完整保留在浏览器历史记录里，而POST中的参数不会被保留;
- GET请求在URL中传送的参数是有长度限制的，而POST没有限制;
- GET参数通过URL传递，POST放在Request body中;
-HTTP状态码 1xx: 指示信息-表示请求已接收，继续处理;
- 2xx: 成功-表示请求已被成功接收;
- 3xx: 重定向-要完成请求必须进行更进一步的操作;
- 4xx: 客户端错误-请求有语法错误或请求无法实现;
- 5xx: 服务器错误一服务器未能实现合法的请求;
- 200 OK: 客户端请求成功;
- 206 Partial Content: 客户发送了一个带有Range 头的GET请求，服务器完成了它;</description>
     </item>
     
     <item>
@@ -1136,7 +1132,7 @@ n,m&amp;lt;=1800
       
       <guid>https://mannuan.github.io/post/20190809214541/</guid>
       <description>前言 网易面试注重对基本知识的考察。主要从css和js两方面着手。给大家的告诫就是凡是简历上面的东西，最好掌握的很熟悉。
-面试自我介绍 面试官你好，我叫吴俊磊，我是杭州电子科技大学，计算机学院的研究生。 我熟悉html、css和js的使用，了解过jquery和vue前端开发框架。 我最近做的项目是智慧旅游的爬虫管理系统。我的任务是负责爬虫和呈现数据。我使用的技术栈是selenium+vue 以上就是我的自我介绍，谢谢！
+面试自我介绍 面试官你好，我叫XXX，我是XXXXXX，计算机学院的研究生。 我熟悉html、css和js的使用，了解过jquery和vue前端开发框架。 我最近做的项目是智慧旅游的爬虫管理系统。我的任务是负责爬虫和呈现数据。我使用的技术栈是selenium+vue 以上就是我的自我介绍，谢谢！
 向面试官提问 你们部门使用的是什么技术栈？
 CSS部分  两列布局，一列自适应，这篇文章解释的很好链接  扩展：三列布局链接链接   css选择器  元素选择器 id选择器 class选择器 通配选择器 关系选择器 后代选择器 子选择器 相邻选择器 兄弟选择器 属性选择器 E[att] 选择具有att属性的E元素 E[att=&amp;ldquo;val&amp;rdquo;] 选择具有att属性且属性值等于val的E元素 E[att~=&amp;ldquo;val&amp;rdquo;] 选择具有att属性且属性值其中一个等于val的E元素（包含只有一个值且该值等于val的情况） E[att|=&amp;ldquo;val&amp;rdquo;] 选择具有att属性且属性值为以val开头并用连接符-分隔的字符串的E元素，如果属性值仅为val，也将被选择 E[att^=&amp;ldquo;val&amp;rdquo;] 选择具有att属性且属性值为以val开头的字符串的E元素 E[att$=&amp;ldquo;val&amp;rdquo;] 选择具有att属性且属性值为以val结尾的字符串的E元素 E[att*=&amp;ldquo;val&amp;rdquo;] 选择具有att属性且属性值为包含val的字符串的E元素 伪类选择器 E:link 设置超链接a在未被访问前的样式 E:visited 设置超链接a在其链接地址已被访问过时的样式 伪对象选择器   JS部分  数据类型：6种  基本数据类型：5种 复杂数据类型：1种 ES6新增了Symbol，不需要new  数据类型判断  typeof返回值 typeof() 括号可以省略吗，操作符可以省略， 一元运算符优先级很高 对象进行判断 对数组进行判断  var a = []; Array.</description>
     </item>

@@ -2,24 +2,20 @@
 <html lang='en'><head>
   <meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
-<meta name='description' content='页面布局  假设高度已知，请写出三栏布局，其中左栏、右栏宽度各为300px，中间自适应；  解决方案  浮动布局，绝对布局，弹性布局，表格布局，网格布局  延伸一：优缺点  在浮动布局中，浮动元素脱离文档流，要做清除浮动，这个处理不好，会带来很多问题，比如高度塌陷等。但是使用比较简单，兼容性也比较好。 绝对布局是脱离文档流的，下面的所有子元素也会脱离文档流，这就导致了这种方法的有效性和可使用性是比较差的。但是很快捷，设置很方便，而且也不容易出问题。 弹性布局不能兼容IE8及以下浏览器。但是它解决上述两种方式的不足，比较完美。目前移动端的布局也都是用它。 在表格布局中，当其中一个单元格高度超出的时候，两侧的单元格也是会跟着一起变高的，而有时候这种效果不是我们想要的。但是兼容性好； 网格布局可以做很多复杂的样式设计；  延伸二：改为高度自适应  在浮动布局中，浮动元素的高度无法被撑开； 为什么文字会出现在左边的方块的上方？浮动布局的原理是哪边可以填充就填哪边； 如何解决？创建BFC； 在绝对布局中，两边元素的高度无法被撑开； 弹性布局没有影响； 表格布局没有影响； 网格布局不设置行高也可以达到自适应的效果；  延伸三：兼容性 小结：  语义化掌握到位 页面布局理解深刻 CSS基础知识扎实 思维灵活且积极上进 代码书写规范   上下固定，中间自适应  解决方案：绝对布局，弹性布局，表格布局，网格布局   CSS盒模型  谈谈你对CSS盒模型的认识？  基本概念：标准模型&#43;IE模型 标准模型和IE模型的区别(高度和宽度) CSS如何设置这两种模型 JS如何设置获取模型对应的宽和高 实例题（根据盒模型解释什么是边距重叠） BFC(边距重叠解决方案)   什么是盒模型 CSS盒模型本质上是一个盒子，封装周围的HTML元素，它包括：外边距（margin）、边框（border）、内边距（padding）、实际内容（content）四个属性。
-标准模型和IE模型的区别  标准模型  width=内容的宽度 height=内容的高度  IE模型(是一种怪异模型)
- width=border&#43;padding&#43;内容的宽度 height=border&#43;padding&#43;内容的高度
-CSS如何设置这两种模型  box-sizing: content-box, border-box(IE);'>
+<meta name='description' content='一面/二面 面试技巧  准备要充分 知识要系统 沟通要简洁 内心要诚实 态度要谦虚 回答要灵活  面试模拟 页面布局  假设高度已知，请写出三栏布局，其中左栏、右栏宽度各为300px，中间自适应；  解决方案  浮动布局，绝对布局，弹性布局，表格布局，网格布局  延伸一：优缺点  在浮动布局中，浮动元素脱离文档流，要做清除浮动，这个处理不好，会带来很多问题，比如高度塌陷等。但是使用比较简单，兼容性也比较好。 绝对布局是脱离文档流的，下面的所有子元素也会脱离文档流，这就导致了这种方法的有效性和可使用性是比较差的。但是很快捷，设置很方便，而且也不容易出问题。 弹性布局不能兼容IE8及以下浏览器。但是它解决上述两种方式的不足，比较完美。目前移动端的布局也都是用它。 在表格布局中，当其中一个单元格高度超出的时候，两侧的单元格也是会跟着一起变高的，而有时候这种效果不是我们想要的。但是兼容性好； 网格布局可以做很多复杂的样式设计；  延伸二：改为高度自适应  在浮动布局中，浮动元素的高度无法被撑开； 为什么文字会出现在左边的方块的上方？浮动布局的原理是哪边可以填充就填哪边； 如何解决？创建BFC； 在绝对布局中，两边元素的高度无法被撑开； 弹性布局没有影响； 表格布局没有影响； 网格布局不设置行高也可以达到自适应的效果；  延伸三：兼容性 小结：  语义化掌握到位 页面布局理解深刻 CSS基础知识扎实 思维灵活且积极上进 代码书写规范   上下固定，中间自适应  解决方案：绝对布局，弹性布局，表格布局，网格布局   CSS盒模型  谈谈你对CSS盒模型的认识？  基本概念：标准模型&#43;IE模型 标准模型和IE模型的区别(高度和宽度) CSS如何设置这两种模型 JS如何设置获取模型对应的宽和高 实例题（根据盒模型解释什么是边距重叠） BFC(边距重叠解决方案)   什么是盒模型 CSS盒模型本质上是一个盒子，封装周围的HTML元素，它包括：外边距（margin）、边框（border）、内边距（padding）、实际内容（content）四个属性。
+标准模型和IE模型的区别  标准模型  width=内容的宽度 height=内容的高度  IE模型(是一种怪异模型)'>
 <meta name='theme-color' content='#FFFFFF'>
 
-<meta property='og:title' content='页面布局，CSS盒模型和DOM事件类 • mannuan'>
-<meta property='og:description' content='页面布局  假设高度已知，请写出三栏布局，其中左栏、右栏宽度各为300px，中间自适应；  解决方案  浮动布局，绝对布局，弹性布局，表格布局，网格布局  延伸一：优缺点  在浮动布局中，浮动元素脱离文档流，要做清除浮动，这个处理不好，会带来很多问题，比如高度塌陷等。但是使用比较简单，兼容性也比较好。 绝对布局是脱离文档流的，下面的所有子元素也会脱离文档流，这就导致了这种方法的有效性和可使用性是比较差的。但是很快捷，设置很方便，而且也不容易出问题。 弹性布局不能兼容IE8及以下浏览器。但是它解决上述两种方式的不足，比较完美。目前移动端的布局也都是用它。 在表格布局中，当其中一个单元格高度超出的时候，两侧的单元格也是会跟着一起变高的，而有时候这种效果不是我们想要的。但是兼容性好； 网格布局可以做很多复杂的样式设计；  延伸二：改为高度自适应  在浮动布局中，浮动元素的高度无法被撑开； 为什么文字会出现在左边的方块的上方？浮动布局的原理是哪边可以填充就填哪边； 如何解决？创建BFC； 在绝对布局中，两边元素的高度无法被撑开； 弹性布局没有影响； 表格布局没有影响； 网格布局不设置行高也可以达到自适应的效果；  延伸三：兼容性 小结：  语义化掌握到位 页面布局理解深刻 CSS基础知识扎实 思维灵活且积极上进 代码书写规范   上下固定，中间自适应  解决方案：绝对布局，弹性布局，表格布局，网格布局   CSS盒模型  谈谈你对CSS盒模型的认识？  基本概念：标准模型&#43;IE模型 标准模型和IE模型的区别(高度和宽度) CSS如何设置这两种模型 JS如何设置获取模型对应的宽和高 实例题（根据盒模型解释什么是边距重叠） BFC(边距重叠解决方案)   什么是盒模型 CSS盒模型本质上是一个盒子，封装周围的HTML元素，它包括：外边距（margin）、边框（border）、内边距（padding）、实际内容（content）四个属性。
-标准模型和IE模型的区别  标准模型  width=内容的宽度 height=内容的高度  IE模型(是一种怪异模型)
- width=border&#43;padding&#43;内容的宽度 height=border&#43;padding&#43;内容的高度
-CSS如何设置这两种模型  box-sizing: content-box, border-box(IE);'>
+<meta property='og:title' content='前端开发一面/二面 • mannuan'>
+<meta property='og:description' content='一面/二面 面试技巧  准备要充分 知识要系统 沟通要简洁 内心要诚实 态度要谦虚 回答要灵活  面试模拟 页面布局  假设高度已知，请写出三栏布局，其中左栏、右栏宽度各为300px，中间自适应；  解决方案  浮动布局，绝对布局，弹性布局，表格布局，网格布局  延伸一：优缺点  在浮动布局中，浮动元素脱离文档流，要做清除浮动，这个处理不好，会带来很多问题，比如高度塌陷等。但是使用比较简单，兼容性也比较好。 绝对布局是脱离文档流的，下面的所有子元素也会脱离文档流，这就导致了这种方法的有效性和可使用性是比较差的。但是很快捷，设置很方便，而且也不容易出问题。 弹性布局不能兼容IE8及以下浏览器。但是它解决上述两种方式的不足，比较完美。目前移动端的布局也都是用它。 在表格布局中，当其中一个单元格高度超出的时候，两侧的单元格也是会跟着一起变高的，而有时候这种效果不是我们想要的。但是兼容性好； 网格布局可以做很多复杂的样式设计；  延伸二：改为高度自适应  在浮动布局中，浮动元素的高度无法被撑开； 为什么文字会出现在左边的方块的上方？浮动布局的原理是哪边可以填充就填哪边； 如何解决？创建BFC； 在绝对布局中，两边元素的高度无法被撑开； 弹性布局没有影响； 表格布局没有影响； 网格布局不设置行高也可以达到自适应的效果；  延伸三：兼容性 小结：  语义化掌握到位 页面布局理解深刻 CSS基础知识扎实 思维灵活且积极上进 代码书写规范   上下固定，中间自适应  解决方案：绝对布局，弹性布局，表格布局，网格布局   CSS盒模型  谈谈你对CSS盒模型的认识？  基本概念：标准模型&#43;IE模型 标准模型和IE模型的区别(高度和宽度) CSS如何设置这两种模型 JS如何设置获取模型对应的宽和高 实例题（根据盒模型解释什么是边距重叠） BFC(边距重叠解决方案)   什么是盒模型 CSS盒模型本质上是一个盒子，封装周围的HTML元素，它包括：外边距（margin）、边框（border）、内边距（padding）、实际内容（content）四个属性。
+标准模型和IE模型的区别  标准模型  width=内容的宽度 height=内容的高度  IE模型(是一种怪异模型)'>
 <meta property='og:url' content='https://mannuan.github.io/post/20191003113522/'>
 <meta property='og:site_name' content='mannuan'>
-<meta property='og:type' content='article'><meta property='og:image' content='https://www.gravatar.com/avatar/8bacfd69855171c6f53247456732f68a?s=256'><meta property='article:section' content='post'><meta property='article:tag' content='页面布局'><meta property='article:tag' content='CSS盒模型'><meta property='article:tag' content='DOM事件类'><meta property='article:published_time' content='2019-10-03T11:35:23&#43;08:00'/><meta property='article:modified_time' content='2019-10-03T11:35:23&#43;08:00'/><meta name='twitter:card' content='summary'>
+<meta property='og:type' content='article'><meta property='og:image' content='https://www.gravatar.com/avatar/8bacfd69855171c6f53247456732f68a?s=256'><meta property='article:section' content='post'><meta property='article:tag' content='页面布局'><meta property='article:tag' content='CSS盒模型'><meta property='article:tag' content='DOM事件类'><meta property='article:tag' content='HTTP协议'><meta property='article:tag' content='面向对象'><meta property='article:tag' content='原型链'><meta property='article:tag' content='通信类'><meta property='article:tag' content='安全类'><meta property='article:tag' content='算法类'><meta property='article:published_time' content='2019-10-03T11:35:23&#43;08:00'/><meta property='article:modified_time' content='2019-10-03T11:35:23&#43;08:00'/><meta name='twitter:card' content='summary'>
 
 <meta name="generator" content="Hugo 0.55.6" />
 
-  <title>页面布局，CSS盒模型和DOM事件类 • mannuan</title>
+  <title>前端开发一面/二面 • mannuan</title>
   <link rel='canonical' href='https://mannuan.github.io/post/20191003113522/'>
   
   
@@ -104,49 +100,51 @@ CSS如何设置这两种模型  box-sizing: content-box, border-box(IE);'>
 
   <div class='container list-container'>
   <ul class='list taxonomy-cloud'><li>
-        <a href='/categories/features/' style='font-size:1.1167883211678833em'>features</a>
+        <a href='/categories/features/' style='font-size:1.1185185185185185em'>features</a>
       </li><li>
-        <a href='/categories/ide/' style='font-size:1.0218978102189782em'>ide</a>
+        <a href='/categories/ide/' style='font-size:1.0222222222222221em'>ide</a>
       </li><li>
-        <a href='/categories/jupyter/' style='font-size:1.0145985401459854em'>jupyter</a>
+        <a href='/categories/jupyter/' style='font-size:1.0148148148148148em'>jupyter</a>
       </li><li>
-        <a href='/categories/linux/' style='font-size:1.1240875912408759em'>linux</a>
+        <a href='/categories/linux/' style='font-size:1.125925925925926em'>linux</a>
       </li><li>
-        <a href='/categories/mac/' style='font-size:1.1240875912408759em'>mac</a>
+        <a href='/categories/mac/' style='font-size:1.125925925925926em'>mac</a>
       </li><li>
-        <a href='/categories/mongodb/' style='font-size:1.0291970802919708em'>mongodb</a>
+        <a href='/categories/mongodb/' style='font-size:1.0296296296296297em'>mongodb</a>
       </li><li>
         <a href='/categories/others/' style='font-size:1em'>others</a>
       </li><li>
         <a href='/categories/pip/' style='font-size:1em'>pip</a>
       </li><li>
-        <a href='/categories/python/' style='font-size:1.0437956204379562em'>python</a>
+        <a href='/categories/python/' style='font-size:1.0444444444444445em'>python</a>
       </li><li>
         <a href='/categories/shell/' style='font-size:1em'>shell</a>
       </li><li>
-        <a href='/categories/tutorial/' style='font-size:1.0072992700729928em'>Tutorial</a>
+        <a href='/categories/tutorial/' style='font-size:1.0074074074074073em'>Tutorial</a>
       </li><li>
-        <a href='/categories/vscode/' style='font-size:1.0072992700729928em'>vscode</a>
+        <a href='/categories/vscode/' style='font-size:1.0074074074074073em'>vscode</a>
       </li><li>
         <a href='/categories/%E4%BD%9C%E8%80%85/' style='font-size:1em'>作者</a>
       </li><li>
         <a href='/categories/%E5%85%AC%E5%8A%A1%E5%91%98/' style='font-size:1em'>公务员</a>
       </li><li>
-        <a href='/categories/%E5%86%99%E4%BD%9C/' style='font-size:1.0072992700729928em'>写作</a>
+        <a href='/categories/%E5%86%99%E4%BD%9C/' style='font-size:1.0074074074074073em'>写作</a>
       </li><li>
         <a href='/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/' style='font-size:2em'>前端开发</a>
       </li><li>
+        <a href='/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E9%9D%A2%E8%AF%95/' style='font-size:1.0148148148148148em'>前端开发面试</a>
+      </li><li>
         <a href='/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/' style='font-size:1em'>博客搭建</a>
       </li><li>
-        <a href='/categories/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/' style='font-size:1.0145985401459854em'>后端开发</a>
+        <a href='/categories/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/' style='font-size:1.0148148148148148em'>后端开发</a>
       </li><li>
-        <a href='/categories/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/' style='font-size:1.0145985401459854em'>基础知识</a>
+        <a href='/categories/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/' style='font-size:1.0148148148148148em'>基础知识</a>
       </li><li>
-        <a href='/categories/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/' style='font-size:1.0072992700729928em'>学习方法</a>
+        <a href='/categories/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/' style='font-size:1.0074074074074073em'>学习方法</a>
       </li><li>
         <a href='/categories/%E5%AD%A6%E6%9C%AF/' style='font-size:1em'>学术</a>
       </li><li>
-        <a href='/categories/%E5%B7%A5%E5%85%B7/' style='font-size:1.0145985401459854em'>工具</a>
+        <a href='/categories/%E5%B7%A5%E5%85%B7/' style='font-size:1.0148148148148148em'>工具</a>
       </li><li>
         <a href='/categories/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3/' style='font-size:1em'>开发文档</a>
       </li><li>
@@ -154,19 +152,19 @@ CSS如何设置这两种模型  box-sizing: content-box, border-box(IE);'>
       </li><li>
         <a href='/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/' style='font-size:1em'>数据库</a>
       </li><li>
-        <a href='/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/' style='font-size:1.0291970802919708em'>数据结构</a>
+        <a href='/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/' style='font-size:1.0296296296296297em'>数据结构</a>
       </li><li>
-        <a href='/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/' style='font-size:1.0145985401459854em'>机器学习</a>
+        <a href='/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/' style='font-size:1.0148148148148148em'>机器学习</a>
       </li><li>
         <a href='/categories/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/' style='font-size:1em'>正则表达式</a>
       </li><li>
-        <a href='/categories/%E7%88%AC%E8%99%AB/' style='font-size:1.0802919708029197em'>爬虫</a>
+        <a href='/categories/%E7%88%AC%E8%99%AB/' style='font-size:1.0814814814814815em'>爬虫</a>
       </li><li>
-        <a href='/categories/%E7%AE%97%E6%B3%95/' style='font-size:1.072992700729927em'>算法</a>
+        <a href='/categories/%E7%AE%97%E6%B3%95/' style='font-size:1.074074074074074em'>算法</a>
       </li><li>
-        <a href='/categories/%E7%AE%97%E6%B3%95%E9%A2%98/' style='font-size:1.0802919708029197em'>算法题</a>
+        <a href='/categories/%E7%AE%97%E6%B3%95%E9%A2%98/' style='font-size:1.0814814814814815em'>算法题</a>
       </li><li>
-        <a href='/categories/%E7%B3%BB%E7%BB%9F/' style='font-size:1.0145985401459854em'>系统</a>
+        <a href='/categories/%E7%B3%BB%E7%BB%9F/' style='font-size:1.0148148148148148em'>系统</a>
       </li><li>
         <a href='/categories/%E7%BC%96%E7%A0%81%E8%BD%AC%E6%8D%A2/' style='font-size:1em'>编码转换</a>
       </li><li>
@@ -176,21 +174,21 @@ CSS如何设置这两种模型  box-sizing: content-box, border-box(IE);'>
       </li><li>
         <a href='/categories/%E7%BD%91%E7%BB%9C/' style='font-size:1em'>网络</a>
       </li><li>
-        <a href='/categories/%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/' style='font-size:1.0875912408759123em'>网络协议</a>
+        <a href='/categories/%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/' style='font-size:1.0888888888888888em'>网络协议</a>
       </li><li>
-        <a href='/categories/%E7%BF%BB%E5%A2%99/' style='font-size:1.0145985401459854em'>翻墙</a>
+        <a href='/categories/%E7%BF%BB%E5%A2%99/' style='font-size:1.0148148148148148em'>翻墙</a>
       </li><li>
-        <a href='/categories/%E8%8B%B1%E8%AF%AD/' style='font-size:1.1094890510948905em'>英语</a>
+        <a href='/categories/%E8%8B%B1%E8%AF%AD/' style='font-size:1.1111111111111112em'>英语</a>
       </li><li>
-        <a href='/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/' style='font-size:1.0145985401459854em'>计算机基础</a>
+        <a href='/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/' style='font-size:1.0148148148148148em'>计算机基础</a>
       </li><li>
-        <a href='/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/' style='font-size:1.0437956204379562em'>计算机网络</a>
+        <a href='/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/' style='font-size:1.0444444444444445em'>计算机网络</a>
       </li><li>
-        <a href='/categories/%E8%AE%BA%E6%96%87/' style='font-size:1.0364963503649636em'>论文</a>
+        <a href='/categories/%E8%AE%BA%E6%96%87/' style='font-size:1.037037037037037em'>论文</a>
       </li><li>
         <a href='/categories/%E8%B0%83%E8%AF%95/' style='font-size:1em'>调试</a>
       </li><li>
-        <a href='/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/' style='font-size:1.0145985401459854em'>软件使用</a>
+        <a href='/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/' style='font-size:1.0148148148148148em'>软件使用</a>
       </li></ul>
 </div>
 
@@ -237,7 +235,7 @@ CSS如何设置这两种模型  box-sizing: content-box, border-box(IE);'>
     <style>.widget-breadcrumbs li:after{content:'\2f '}</style>
   <section class='widget widget-breadcrumbs sep-after'>
     <nav id='breadcrumbs'>
-      <ol><li><a href='/'>Home</a></li><li><a href='/post/'>blogs</a></li><li><span>页面布局，CSS盒模型和DOM事件类</span></li></ol>
+      <ol><li><a href='/'>Home</a></li><li><a href='/post/'>blogs</a></li><li><span>前端开发一面/二面</span></li></ol>
     </nav>
   </section></div>
       </div>
@@ -256,7 +254,7 @@ CSS如何设置这两种模型  box-sizing: content-box, border-box(IE);'>
   <header class='header entry-header'>
   <div class='container sep-after'>
     <div class='header-info'>
-      <h1 class='title'>页面布局，CSS盒模型和DOM事件类</h1>
+      <h1 class='title'>前端开发一面/二面</h1>
       
 
     </div>
@@ -287,7 +285,7 @@ CSS如何设置这两种模型  box-sizing: content-box, border-box(IE);'>
   <polyline points="12 6 12 12 15 15"/>
   
 </svg>
-One min read
+3 mins read
 </span>
 
 
@@ -299,11 +297,163 @@ One min read
 
   
   
+<details class='container entry-toc'>
+  <summary class='title'>
+    <span>Table of Contents</span>
+  </summary>
+  <nav id="TableOfContents">
+<ul>
+<li><a href="#一面-二面">一面/二面</a>
+<ul>
+<li><a href="#面试技巧">面试技巧</a></li>
+<li><a href="#面试模拟">面试模拟</a></li>
+<li><a href="#页面布局">页面布局</a></li>
+<li><a href="#css盒模型">CSS盒模型</a>
+<ul>
+<li><a href="#什么是盒模型">什么是盒模型</a></li>
+<li><a href="#标准模型和ie模型的区别">标准模型和IE模型的区别</a></li>
+<li><a href="#css如何设置这两种模型">CSS如何设置这两种模型</a></li>
+<li><a href="#js如何设置获取盒模型对应的宽和高">JS如何设置获取盒模型对应的宽和高</a></li>
+<li><a href="#实例题-根据盒模型解释边距重叠">实例题（根据盒模型解释边距重叠）</a></li>
+<li><a href="#bfc-边距重叠解决方案">BFC（边距重叠解决方案）</a></li>
+</ul></li>
+<li><a href="#dom事件类">DOM事件类</a>
+<ul>
+<li><a href="#基本概念-dom事件的级别">基本概念：DOM事件的级别</a></li>
+<li><a href="#事件级别-dom标准定义的级别-只要回答出来就行了-这部分不深">事件级别(DOM标准定义的级别)（只要回答出来就行了，这部分不深）</a></li>
+<li><a href="#dom事件模型">DOM事件模型</a></li>
+<li><a href="#dom事件流">DOM事件流</a></li>
+<li><a href="#描述dom事件捕获的具体流程">描述DOM事件捕获的具体流程</a></li>
+<li><a href="#event对象的常见应用">Event对象的常见应用</a></li>
+<li><a href="#事件委托">事件委托</a></li>
+<li><a href="#自定义事件">自定义事件</a>
+<ul>
+<li><a href="#event">Event</a></li>
+<li><a href="#customevent">CustomEvent</a></li>
+<li><a href="#使用场景">使用场景</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#http协议类">HTTP协议类</a>
+<ul>
+<li><a href="#http协议的主要特点">HTTP协议的主要特点</a></li>
+<li><a href="#http报文的组成部分">HTTP报文的组成部分</a>
+<ul>
+<li><a href="#请求报文">请求报文</a></li>
+<li><a href="#响应报文">响应报文</a></li>
+</ul></li>
+<li><a href="#http方法">HTTP方法</a></li>
+<li><a href="#post和get的区别">POST和GET的区别</a></li>
+<li><a href="#http状态码">HTTP状态码</a></li>
+<li><a href="#什么是持久连接">什么是持久连接?</a></li>
+<li><a href="#什么是管线化">什么是管线化</a></li>
+</ul></li>
+<li><a href="#原型链类">原型链类</a>
+<ul>
+<li><a href="#创建对象的有几种方法">创建对象的有几种方法</a></li>
+<li><a href="#原型-构造函数-实例-原型链">原型、构造函数、实例、原型链</a></li>
+<li><a href="#什么是原型链">什么是原型链？</a></li>
+<li><a href="#instanceof的原理">instanceof的原理</a></li>
+<li><a href="#new运算符">new运算符</a></li>
+<li><a href="#手写new运算符">手写new运算符</a></li>
+</ul></li>
+<li><a href="#面向对象">面向对象</a>
+<ul>
+<li><a href="#类与实例">类与实例</a>
+<ul>
+<li><a href="#类的声明">类的声明</a></li>
+<li><a href="#生成实例">生成实例</a></li>
+</ul></li>
+<li><a href="#类与继承">类与继承</a>
+<ul>
+<li><a href="#如何实现继承">如何实现继承</a></li>
+<li><a href="#继承的几种方式">继承的几种方式</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#通信类">通信类</a>
+<ul>
+<li><a href="#什么是同源策略和限制">什么是同源策略和限制？</a>
+<ul>
+<li><a href="#什么">什么？</a></li>
+<li><a href="#源">源？</a></li>
+<li><a href="#限制">限制？</a></li>
+</ul></li>
+<li><a href="#前后端如何通信">前后端如何通信？</a></li>
+<li><a href="#如何创建ajax">如何创建ajax</a>
+<ul>
+<li><a href="#工作流程">工作流程</a></li>
+<li><a href="#兼容性处理">兼容性处理？</a></li>
+</ul></li>
+<li><a href="#跨域通信的几种方式">跨域通信的几种方式</a>
+<ul>
+<li><a href="#jsonp的原理">JSONP的原理</a></li>
+<li><a href="#hash的原理">Hash的原理</a></li>
+<li><a href="#postmessage的原理">postMessage的原理</a></li>
+<li><a href="#websocket的原理">Websocket的原理</a></li>
+<li><a href="#cors原理-是ajax的变种-是一种标准">CORS原理（是ajax的变种，是一种标准）</a>
+<ul>
+<li><a href="#cors为什么就能支持跨域通信了">CORS为什么就能支持跨域通信了</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li><a href="#安全类">安全类</a>
+<ul>
+<li><a href="#csrf">CSRF</a>
+<ul>
+<li><a href="#基本概念和缩写">基本概念和缩写</a></li>
+<li><a href="#攻击原理">攻击原理</a>
+<ul>
+<li><a href="#实现csrf攻击的两大因素">实现CSRF攻击的两大因素</a></li>
+</ul></li>
+<li><a href="#防御措施">防御措施</a>
+<ul>
+<li><a href="#token验证">Token验证</a></li>
+<li><a href="#referer验证">Referer验证</a></li>
+<li><a href="#隐藏令牌">隐藏令牌</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#xss">XSS</a></li>
+<li><a href="#基本概念和缩写-1">基本概念和缩写</a>
+<ul>
+<li><a href="#攻击原理-1">攻击原理</a></li>
+<li><a href="#防御措施-1">防御措施</a></li>
+</ul></li>
+<li><a href="#对比xss和csrf的区别">对比XSS和CSRF的区别</a></li>
+</ul></li>
+<li><a href="#算法类">算法类</a>
+<ul>
+<li><a href="#排序">排序</a></li>
+<li><a href="#堆栈-队列和链表">堆栈、队列和链表</a></li>
+<li><a href="#递归">递归</a></li>
+<li><a href="#波兰式和逆波兰式">波兰式和逆波兰式</a></li>
+<li><a href="#答题技巧">答题技巧</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+</details>
+
 
   <div class='container entry-content'>
   
 
-<h1 id="页面布局">页面布局</h1>
+<h1 id="一面-二面">一面/二面</h1>
+
+<h2 id="面试技巧">面试技巧</h2>
+
+<ul>
+<li>准备要充分</li>
+<li>知识要系统</li>
+<li>沟通要简洁</li>
+<li>内心要诚实</li>
+<li>态度要谦虚</li>
+<li>回答要灵活</li>
+</ul>
+
+<h2 id="面试模拟">面试模拟</h2>
+
+<p><img src="/images/Jietu20191006-231123.jpg"></p>
+
+<h2 id="页面布局">页面布局</h2>
 
 <ul>
 <li>假设高度已知，请写出三栏布局，其中左栏、右栏宽度各为300px，中间自适应；
@@ -352,7 +502,7 @@ One min read
 </ul></li>
 </ul>
 
-<h1 id="css盒模型">CSS盒模型</h1>
+<h2 id="css盒模型">CSS盒模型</h2>
 
 <ul>
 <li>谈谈你对CSS盒模型的认识？
@@ -367,11 +517,11 @@ One min read
 </ul></li>
 </ul>
 
-<h2 id="什么是盒模型">什么是盒模型</h2>
+<h3 id="什么是盒模型">什么是盒模型</h3>
 
 <p>CSS盒模型本质上是一个盒子，封装周围的HTML元素，它包括：外边距（margin）、边框（border）、内边距（padding）、实际内容（content）四个属性。</p>
 
-<h2 id="标准模型和ie模型的区别">标准模型和IE模型的区别</h2>
+<h3 id="标准模型和ie模型的区别">标准模型和IE模型的区别</h3>
 
 <ul>
 <li>标准模型
@@ -388,13 +538,13 @@ One min read
 
 <li><p>height=border+padding+内容的高度</p>
 
-<h2 id="css如何设置这两种模型">CSS如何设置这两种模型</h2></li>
+<h3 id="css如何设置这两种模型">CSS如何设置这两种模型</h3></li>
 </ul></li>
 
 <li><p>box-sizing: content-box, border-box(IE);</p></li>
 </ul>
 
-<h2 id="js如何设置获取盒模型对应的宽和高">JS如何设置获取盒模型对应的宽和高</h2>
+<h3 id="js如何设置获取盒模型对应的宽和高">JS如何设置获取盒模型对应的宽和高</h3>
 
 <ul>
 <li>dom.style.width/height
@@ -423,11 +573,11 @@ One min read
 <ul>
 <li>可以拿到四个元素：left, top, width, height;</li>
 </ul></li>
-<li>兼容性很好基本都支持</li>
+<li>兼容性很好，基本都支持</li>
 </ul></li>
 </ul>
 
-<h2 id="实例题-根据盒模型解释边距重叠">实例题（根据盒模型解释边距重叠）</h2>
+<h3 id="实例题-根据盒模型解释边距重叠">实例题（根据盒模型解释边距重叠）</h3>
 
 <ul>
 <li>由面试官提出问题，你来回答的方式考察</li>
@@ -440,7 +590,7 @@ One min read
 </ul></li>
 </ul>
 
-<h2 id="bfc-边距重叠解决方案">BFC（边距重叠解决方案）</h2>
+<h3 id="bfc-边距重叠解决方案">BFC（边距重叠解决方案）</h3>
 
 <ul>
 <li>BFC的基本概念（相关的还有IFC）
@@ -469,13 +619,15 @@ One min read
 <ul>
 <li>垂直方向边距重叠</li>
 <li>BFC不和float重叠</li>
-<li>清除浮动，BFC子元素即使是float参与运算</li>
+<li>清除浮动，BFC子元素——即使是float也会参与运算</li>
 </ul></li>
 </ul>
 
-<h1 id="dom事件类">DOM事件类</h1>
+<h2 id="dom事件类">DOM事件类</h2>
 
-<h2 id="基本概念-dom事件的级别">基本概念：DOM事件的级别</h2>
+<p><img src="/images/Jietu20191006-231706.jpg"></p>
+
+<h3 id="基本概念-dom事件的级别">基本概念：DOM事件的级别</h3>
 
 <ul>
 <li>提问方式：请用DOM2中的事件如何如何?</li>
@@ -489,29 +641,29 @@ One min read
 <li>DOM3: element.addEventListener(&lsquo;keyup&rsquo;, function(){}, flase);(增加了鼠标事件和键盘事件等等)；</li>
 </ul>
 
-<h2 id="dom事件模型">DOM事件模型</h2>
+<h3 id="dom事件模型">DOM事件模型</h3>
 
 <p>指的就是冒泡和捕获
 + 提问方式
   - 你了解DOM事件模型吗？
   - DOM事件模型是什么?</p>
 
-<h2 id="dom事件流">DOM事件流</h2>
+<h3 id="dom事件流">DOM事件流</h3>
 
 <ul>
 <li>捕获阶段，目标元素阶段，冒泡阶段</li>
 </ul>
 
-<h2 id="描述dom事件捕获的具体流程">描述DOM事件捕获的具体流程</h2>
+<h3 id="描述dom事件捕获的具体流程">描述DOM事件捕获的具体流程</h3>
 
 <p>window-&gt;document-&gt;html-&gt;body-&gt;具体的结构
 + 获取html: document.documentElement;
 + 获取body: document.body</p>
 
-<h2 id="event对象的常见应用">Event对象的常见应用</h2>
+<h3 id="event对象的常见应用">Event对象的常见应用</h3>
 
 <ul>
-<li>event.preventDefault();</li>
+<li>event.preventDefault();阻止默认的点击事件执行</li>
 <li>event.stopPropagation();阻止冒泡</li>
 <li>event.stopImmediatePropagation();注册了两个click事件，只触发第一个；</li>
 <li>event.currentTarget;当前所绑定的事件；</li>
@@ -526,9 +678,9 @@ One min read
 <li>event.target(目前都支持)表示当前被点击的元素，早期版本的IE使用sourceTarget</li>
 </ul>
 
-<h2 id="自定义事件">自定义事件</h2>
+<h3 id="自定义事件">自定义事件</h3>
 
-<h3 id="event">Event</h3>
+<h4 id="event">Event</h4>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">eve</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Event</span>(<span style="color:#e6db74">&#39;custome&#39;</span>);
 <span style="color:#a6e22e">ev</span>.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#39;custom&#39;</span>, <span style="color:#66d9ef">function</span>(){
   <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;custom&#39;</span>);
@@ -539,16 +691,388 @@ One min read
 <li>缺点：只能指定事件名</li>
 </ul>
 
-<h3 id="customevent">CustomEvent</h3>
+<h4 id="customevent">CustomEvent</h4>
 
 <ul>
-<li>除了可以指定事件名，后面还可以跟一个Object,来指定参数，这个参数可以自定义</li>
+<li>除了可以指定事件名，后面还可以跟一个{detail:XXX},来指定参数，这个参数可以自定义</li>
 </ul>
 
-<h3 id="使用场景">使用场景</h3>
+<h4 id="使用场景">使用场景</h4>
 
 <ul>
 <li>一个按钮，不是一个常规的click，我想给它自己增加一个事件，然后我想在其他地方触发这个事件，而不是用回调的方式去处理；</li>
+</ul>
+
+<h2 id="http协议类">HTTP协议类</h2>
+
+<p><img src="/images/Jietu20191005-181027.jpg"></p>
+
+<h3 id="http协议的主要特点">HTTP协议的主要特点</h3>
+
+<ul>
+<li><strong>无连接</strong>: 连接一次就会断掉，不会保持连接;</li>
+<li><strong>无状态</strong>: 客户端和服务端建立连接后传输数据，断开连接，再次建立连接后，无法区分是不是同一个连接;</li>
+<li>简单快速: 每个资源的URI都是固定的，访问资源只需要输入URI就行了;</li>
+
+<li><p>灵活: 通过一个http协议就可以完成不同类型的传输;</p>
+
+<h3 id="http报文的组成部分">HTTP报文的组成部分</h3>
+
+<h4 id="请求报文">请求报文</h4></li>
+
+<li><p>请求行(http方法,页面地址,http协议/版本)，请求头(key-value值)，空行，请求体；</p></li>
+</ul>
+
+<h4 id="响应报文">响应报文</h4>
+
+<ul>
+<li>状态行(http协议/版本, http状态码)，响应头，空行，响应体；</li>
+</ul>
+
+<h3 id="http方法">HTTP方法</h3>
+
+<ul>
+<li>GET: 获取资源</li>
+<li>POST: 传输资源</li>
+<li>PUT: 更新资源</li>
+<li>DELETE: 删除资源</li>
+
+<li><p>HEAD: 获得报文首部</p>
+
+<h3 id="post和get的区别">POST和GET的区别</h3></li>
+
+<li><p>GET在浏览器回退时是无害的，而POST会再次提交请求;</p></li>
+
+<li><p>GET请求会被浏览器主动缓存，而POST不会，除非手动设置;</p></li>
+
+<li><p>GET请求参数会被完整保留在浏览器历史记录里，而POST中的参数不会被保留;</p></li>
+
+<li><p>GET请求在URL中传送的参数是有长度限制的，而POST没有限制;</p></li>
+
+<li><p>GET参数通过URL传递，POST放在Request body中;</p>
+
+<h3 id="http状态码">HTTP状态码</h3></li>
+
+<li><p>1xx: 指示信息-表示请求已接收，继续处理;</p></li>
+
+<li><p>2xx: 成功-表示请求已被成功接收;</p></li>
+
+<li><p>3xx: 重定向-要完成请求必须进行更进一步的操作;</p></li>
+
+<li><p>4xx: 客户端错误-请求有语法错误或请求无法实现;</p></li>
+
+<li><p>5xx: 服务器错误一服务器未能实现合法的请求;</p>
+
+<ul>
+<li>200 OK: 客户端请求成功;</li>
+<li>206 Partial Content: 客户发送了一个带有Range 头的GET请求，服务器完成了它;</li>
+<li>301 Moved Permanently: 所请求的页面已经转移至新的url;</li>
+<li>302 Found: 所请求的页面已经临时转移至新的url;</li>
+<li>304 Not Modified: 客户端有缓冲的文档并发出了一个条件性的请求，服务器告诉客户，原来缓冲的文档还可以继续使用;</li>
+<li>400 Bad Request: 客户端请求有语法错误，不能被服务器所理解;</li>
+<li>401 Unauthorized: 请求未经授权，这个状态代码必须和WWW- Authenticate 报头域一起使用;</li>
+<li>403 Forbidden: 禁止访问请求的页面;</li>
+<li>404 Not Found: 请求的资源不存在;</li>
+<li>500 Internal Server Error: 服务器发生不可预期的错误;</li>
+
+<li><p>503 Server Unavailable: 请求未完成，服务器临时过载或当机;</p>
+
+<h3 id="什么是持久连接">什么是持久连接?</h3></li>
+</ul></li>
+
+<li><p>建立连接后，发完一个请求不断开，还可以继续发;</p></li>
+
+<li><p>http1.1开始支持keep-alive</p>
+
+<h3 id="什么是管线化">什么是管线化</h3></li>
+
+<li><p>在持久连接的基础上连续发生多个请求，每个请求之间不用等待上一个请求的响应回到客户端;</p></li>
+
+<li><p>管线化机制通过持久连接完成，仅HTTP/1.1支持此技术;</p></li>
+
+<li><p>只有GET和HEAD请求可以进行管线化，而POST则有所限制;</p></li>
+
+<li><p>初次创建连接时不应启动管线机制,因为对方(服务器)不ー定支持HTTP/1.1版本的协议;</p></li>
+</ul>
+
+<h2 id="原型链类">原型链类</h2>
+
+<p><img src="/images/Jietu20191006-232139.jpg"></p>
+
+<h3 id="创建对象的有几种方法">创建对象的有几种方法</h3>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">//字面量
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">o1</span> <span style="color:#f92672">=</span> {<span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;o1&#39;</span>};
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">o2</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> Object({<span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;o2&#39;</span>});
+<span style="color:#75715e">//显式构造函数
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">M</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>(){
+  <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;o3&#39;</span>;
+}
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">o3</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">M</span>();
+<span style="color:#75715e">//Object.create
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">P</span> <span style="color:#f92672">=</span> {<span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;o4&#39;</span>}
+<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">o4</span> <span style="color:#f92672">=</span> Object.<span style="color:#a6e22e">create</span>(<span style="color:#a6e22e">P</span>);
+</code></pre></div>
+<h3 id="原型-构造函数-实例-原型链">原型、构造函数、实例、原型链</h3>
+
+<p><img src="/images/Jietu20191005-100353.jpg"></p>
+
+<h3 id="什么是原型链">什么是原型链？</h3>
+
+<p>从一个实例对象，往上找这个实例相关联的对象，然后这个关联的对象再往上找创造它的相关联的原型对象，以此类推，一直到Object.prototype为止</p>
+
+<h3 id="instanceof的原理">instanceof的原理</h3>
+
+<p><img src="/images/Jietu20191005-102504.jpg"></p>
+
+<ul>
+<li>比较实例的<code>__proto__</code>和构造函数的prototype是不是一个地址，只要在原型链上的构造函数，都是这个实例对象的构造函数，虽然不太严谨，但是instanceof都会返回true，使用constructor比instanceof更加严谨</li>
+<li>使用constructor来判断实例对象的构造函数是最正确的方法</li>
+</ul>
+
+<h3 id="new运算符">new运算符</h3>
+
+<p><img src="/images/Jietu20191005-103556.jpg"></p>
+
+<h3 id="手写new运算符">手写new运算符</h3>
+
+<h2 id="面向对象">面向对象</h2>
+
+<p><img src="/images/Jietu20191006-232325.jpg"></p>
+
+<h3 id="类与实例">类与实例</h3>
+
+<h4 id="类的声明">类的声明</h4>
+
+<h4 id="生成实例">生成实例</h4>
+
+<h3 id="类与继承">类与继承</h3>
+
+<h4 id="如何实现继承">如何实现继承</h4>
+
+<h4 id="继承的几种方式">继承的几种方式</h4>
+
+<h2 id="通信类">通信类</h2>
+
+<p><img src="/images/Jietu20191005-151226.jpg"></p>
+
+<h3 id="什么是同源策略和限制">什么是同源策略和限制？</h3>
+
+<p><img src="/images/Jietu20191005-151513.jpg"></p>
+
+<h4 id="什么">什么？</h4>
+
+<p>限制不同源之间进行交互；</p>
+
+<h4 id="源">源？</h4>
+
+<p>协议，域名，端口；</p>
+
+<h4 id="限制">限制？</h4>
+
+<ol>
+<li>Cookie, LocalStorage和IndexDB无法读取；</li>
+<li>DOM无法获得；</li>
+
+<li><p>AJAX请求不能发送；</p>
+
+<h3 id="前后端如何通信">前后端如何通信？</h3></li>
+
+<li><p>ajax: 同源；</p></li>
+
+<li><p>websocket: 不受同源策略限制；</p></li>
+
+<li><p>cors: 跨域和同源都支持，新的通信协议标准；</p>
+
+<h3 id="如何创建ajax">如何创建ajax</h3>
+
+<p><img src="/images/Jietu20191005-151949.jpg"></p></li>
+</ol>
+
+<h4 id="工作流程">工作流程</h4>
+
+<p>判断存在XMLHttpRequest;
+new XMLHttpRequest;
+open确定发送方式;
+send发送请求;
+onload;
+200,206,304</p>
+
+<h4 id="兼容性处理">兼容性处理？</h4>
+
+<p>考虑，但是不必记得
+事件的触发条件？
+事件的触发顺序？
+只要进入onload请求中，一定是已经到4这个状态了。
+onreadystatechange则需要加判断；</p>
+
+<h3 id="跨域通信的几种方式">跨域通信的几种方式</h3>
+
+<p><img src="/images/Jietu20191005-153318.jpg"></p>
+
+<ul>
+<li>Hash改变页面不刷新</li>
+<li>Search改变会刷新页面</li>
+<li>cors是支持跨域通信的ajax</li>
+</ul>
+
+<h4 id="jsonp的原理">JSONP的原理</h4>
+
+<ul>
+<li>前后端协商好回调函数的名称为jsonp</li>
+<li>创建一个名为jsonp的全局函数</li>
+<li>创建script标签，设置src属性，url后面添加callback=jsonp的字符串</li>
+<li>清空全局函数</li>
+</ul>
+
+<h4 id="hash的原理">Hash的原理</h4>
+
+<ul>
+<li>使用场景: 当前页面A通过iframe或frame嵌入了跨域页面B</li>
+<li>拿到B的窗口的src，在src后面拼接上要发送的数据（通过JSON.stringify生成）</li>
+<li>B在自己的代码中使用window.onhashchange监听，通过window.location.hash获得，需要经过处理</li>
+</ul>
+
+<h4 id="postmessage的原理">postMessage的原理</h4>
+
+<ul>
+<li>窗口A向跨域窗口B发送信息</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#75715e">//B窗口的句柄
+</span><span style="color:#75715e"></span><span style="color:#a6e22e">Bwindow</span>.<span style="color:#a6e22e">postMessage</span>(<span style="color:#a6e22e">数据</span>, <span style="color:#a6e22e">B的url</span>);
+</code></pre></div>
+<ul>
+<li>在窗口B中进行监听</li>
+</ul>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">window.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#34;message&#34;</span>, <span style="color:#66d9ef">function</span>(){
+  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">origin</span>);<span style="color:#75715e">//A窗口的地址
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">source</span>);<span style="color:#75715e">//A窗口的句柄
+</span><span style="color:#75715e"></span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">data</span>);<span style="color:#75715e">//数据
+</span><span style="color:#75715e"></span>}, <span style="color:#66d9ef">false</span>);
+</code></pre></div>
+<h4 id="websocket的原理">Websocket的原理</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">var</span> <span style="color:#a6e22e">ws</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Websocket</span>(<span style="color:#e6db74">&#34;wss://...&#34;</span><span style="color:#a6e22e">或者</span><span style="color:#e6db74">&#34;ws://...&#34;</span>);
+<span style="color:#a6e22e">ws</span>.<span style="color:#a6e22e">onopen</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>(){}
+<span style="color:#a6e22e">ws</span>.<span style="color:#a6e22e">onmessage</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>(){}
+<span style="color:#a6e22e">ws</span>.<span style="color:#a6e22e">onclose</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">function</span>(){}
+</code></pre></div>
+<h4 id="cors原理-是ajax的变种-是一种标准">CORS原理（是ajax的变种，是一种标准）</h4>
+
+<p><a href="http://www.ruanyifeng.com/blog/2016/04/cors.html" target="_blank">参考资料</a></p>
+
+<h5 id="cors为什么就能支持跨域通信了">CORS为什么就能支持跨域通信了</h5>
+
+<ul>
+<li>浏览器会拦截ajax请求，如果这个请求跨域的，它会在http头中增加一个origin字段
+```javascript
+fetch(url, {
+method: &ldquo;get&rdquo;
+}).then(function(response){</li>
+</ul>
+
+<p>}).catch(function(err){</p>
+
+<p>});
+```</p>
+
+<h2 id="安全类">安全类</h2>
+
+<h3 id="csrf">CSRF</h3>
+
+<h4 id="基本概念和缩写">基本概念和缩写</h4>
+
+<p>CSRF，通常称为跨站请求伪造，英文名Cross-site request forgery缩写CSRF</p>
+
+<h4 id="攻击原理">攻击原理</h4>
+
+<p><img src="/images/Jietu20191005-181645.jpg"></p>
+
+<h5 id="实现csrf攻击的两大因素">实现CSRF攻击的两大因素</h5>
+
+<ul>
+<li>用户在网站登录过</li>
+<li>网站存在漏洞接口</li>
+</ul>
+
+<h4 id="防御措施">防御措施</h4>
+
+<h5 id="token验证">Token验证</h5>
+
+<p>访问网站，服务器自动在你的本地存储token，访问接口的时候，必须带着token</p>
+
+<h5 id="referer验证">Referer验证</h5>
+
+<p>referer指页面来源，服务器判断是不是自己站点的页面来源，如果是才会执行操作</p>
+
+<h5 id="隐藏令牌">隐藏令牌</h5>
+
+<p>类似于token，隐藏在http头部中，不会放在链接中，比较隐蔽，与token本质上区别不大；</p>
+
+<h3 id="xss">XSS</h3>
+
+<h3 id="基本概念和缩写-1">基本概念和缩写</h3>
+
+<p>跨域脚本攻击(cross-site scripting)</p>
+
+<h4 id="攻击原理-1">攻击原理</h4>
+
+<ul>
+<li>不需要任何的登录认证；</li>
+
+<li><p>核心原理就是往页面注入脚本；</p>
+
+<h4 id="防御措施-1">防御措施</h4></li>
+
+<li><p>核心宗旨就是让注入的js脚本不可执行；</p></li>
+</ul>
+
+<h3 id="对比xss和csrf的区别">对比XSS和CSRF的区别</h3>
+
+<ul>
+<li>攻击方式不一样：XSS向你的页面注入js去运行，然后js函数体中，做他想做的事情；CSRF利用您本身的漏洞，帮你自动执行那些借口，而且CSRF依赖于你这个用户要登录网站；</li>
+</ul>
+
+<h2 id="算法类">算法类</h2>
+
+<p><img src="/images/Jietu20191005-201855.jpg"></p>
+
+<h3 id="排序">排序</h3>
+
+<p><img src="/images/Jietu20191005-202532.jpg"></p>
+
+<ul>
+<li><a href="https://segmentfault.com/a/1190000009426421" target="_blank">快速排序</a></li>
+<li><a href="https://segmentfault.com/a/1190000009366805" target="_blank">选择排序</a></li>
+<li><a href="https://segmentfault.com/a/1190000009461832" target="_blank">希尔排序</a></li>
+<li>冒泡排序</li>
+</ul>
+
+<h3 id="堆栈-队列和链表">堆栈、队列和链表</h3>
+
+<ul>
+<li><a href="https://juejin.im/entry/58759e79128fe1006b48cdfd" target="_blank">堆栈</a></li>
+<li><a href="https://juejin.im/entry/58759e79128fe1006b48cdfd" target="_blank">队列</a></li>
+<li><a href="https://juejin.im/entry/58759e79128fe1006b48cdfd" target="_blank">链表</a></li>
+</ul>
+
+<h3 id="递归">递归</h3>
+
+<ul>
+<li><a href="https://segmentfault.com/a/1190000009857470" target="_blank">递归</a></li>
+</ul>
+
+<h3 id="波兰式和逆波兰式">波兰式和逆波兰式</h3>
+
+<ul>
+<li><a href="http://www.cnblogs.com/chenying99/p/3675876.html" target="_blank">理论</a></li>
+<li><a href="https://github.com/Tairraos/rpn.js/blob/master/rpn.js" target="_blank">源码</a></li>
+</ul>
+
+<h3 id="答题技巧">答题技巧</h3>
+
+<ul>
+<li>先理解题目，向面试官求助</li>
+<li>伪代码，卡住了，</li>
+<li>知识面，写不出来，我知道用什么算法</li>
 </ul>
 
 </div>
@@ -560,14 +1084,14 @@ One min read
   <path d="M22,19a2,2,0,0,1-2,2H4a2,2,0,0,1-2-2V5A2,2,0,0,1,4,3H9l2,3h9a2,2,0,0,1,2,2Z"/>
   
 </svg>
-<span class='screen-reader-text'>Categories: </span><a class='category' href='/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/'>前端开发</a></div>
+<span class='screen-reader-text'>Categories: </span><a class='category' href='/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E9%9D%A2%E8%AF%95/'>前端开发面试</a></div>
 <div class='tags'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
   
   <path d="M20.59,13.41l-7.17,7.17a2,2,0,0,1-2.83,0L2,12V2H12l8.59,8.59A2,2,0,0,1,20.59,13.41Z"/>
   <line x1="7" y1="7" x2="7" y2="7"/>
   
 </svg>
-<span class='screen-reader-text'>Tags: </span><a class='tag' href='/tags/%E9%A1%B5%E9%9D%A2%E5%B8%83%E5%B1%80/'>页面布局</a>, <a class='tag' href='/tags/css%E7%9B%92%E6%A8%A1%E5%9E%8B/'>CSS盒模型</a>, <a class='tag' href='/tags/dom%E4%BA%8B%E4%BB%B6%E7%B1%BB/'>DOM事件类</a></div>
+<span class='screen-reader-text'>Tags: </span><a class='tag' href='/tags/%E9%A1%B5%E9%9D%A2%E5%B8%83%E5%B1%80/'>页面布局</a>, <a class='tag' href='/tags/css%E7%9B%92%E6%A8%A1%E5%9E%8B/'>CSS盒模型</a>, <a class='tag' href='/tags/dom%E4%BA%8B%E4%BB%B6%E7%B1%BB/'>DOM事件类</a>, <a class='tag' href='/tags/http%E5%8D%8F%E8%AE%AE/'>http协议</a>, <a class='tag' href='/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/'>面向对象</a>, <a class='tag' href='/tags/%E5%8E%9F%E5%9E%8B%E9%93%BE/'>原型链</a>, <a class='tag' href='/tags/%E9%80%9A%E4%BF%A1%E7%B1%BB/'>通信类</a>, <a class='tag' href='/tags/%E5%AE%89%E5%85%A8%E7%B1%BB/'>安全类</a>, <a class='tag' href='/tags/%E7%AE%97%E6%B3%95%E7%B1%BB/'>算法类</a></div>
 
   </div>
 </footer>
@@ -586,6 +1110,16 @@ One min read
 </svg>
  Previous</span>
         <span class='screen-reader-text'>Previous post: </span>webapck面试考点</a>
+    </div><div class='next-entry sep-before'>
+      <a href='/post/20191006140009/'>
+        <span class='screen-reader-text'>Next post: </span>前端开发二面/三面<span aria-hidden='true'>Next <svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="4" y1="12" x2="20" y2="12"/>
+  <polyline points="14 6 20 12 14 18"/>
+  
+</svg>
+</span>
+      </a>
     </div></div>
 </nav>
 

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>proto</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			// 字面量
+			var o1 = {name: "o1"};
+			var o2 = new Object({name: "o2"});
+			
+			// 显式构造函数
+			var M = function(){
+				this.name = "o3";
+			}
+			var o3 = new M();
+			
+			//Object.create()
+			var P = {name: "o4"};
+			var o4 = Object.create(P);
+			
+			//手写实现new
+			var new2 = function(func){
+				var o = Object.create(func.prototype);
+				var k = func.call(o);
+				if(k==='object'){
+					return k;
+				}else{
+					return o;
+				}
+			}
+		</script>
+	</body>
+</html>
