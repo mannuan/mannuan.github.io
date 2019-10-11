@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>隔行变色</title>
+</head>
+
+<body>
+	<ul class="box">
+		<li>我是第1个LI</li>
+		<li>我是第2个LI</li>
+		<li>我是第3个LI</li>
+		<li>我是第4个LI</li>
+		<li>我是第5个LI</li>
+	</ul>
+	<!-- IMPORT JS -->
+	<script>
+		var boxList = document.querySelectorAll('.box li');
+		for (var i = 0; i < boxList.length; i++) {
+			// 实现奇偶行变色（并且把计算出来的颜色事先存储到元素的自定义属性上，方便后期调取使用）
+			var bg = i % 2 === 0 ? '#EEE' : '#FFF';
+			boxList[i].style.background = bg;
+			boxList[i].orignBg = bg;
+
+			// 鼠标滑过变颜色，离开回归原有的颜色
+			boxList[i].onmouseover = function () {
+				// 给元素的某个事件绑定方法，方法执行时里面的THIS是当前操作的元素
+				this.style.background = 'orange';
+			}
+			boxList[i].onmouseout = function () {
+				this.style.background = this.orignBg;
+			}
+		}
+	</script>
+</body>
+
+</html>

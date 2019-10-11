@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>跑马灯效果</title>
+</head>
+<body>
+    <div id="app">
+        <input type="button" value="浪起来" @click="lang">
+        <input type="button" value="低调" @click="stop">
+        <h4>{{ msg }}</h4>
+    </div>
+</body>
+<script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+<script>
+    // 注意：在VM实例中，如果想要获取data的上的数据，或者想要调用methmods中的方法，
+    // 必须通过this.数据属性名 或 this.方法名 来进行访问，这里的this，就表示我们
+    // new出来的VM实例对象
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            msg: '猥琐发育，别浪~~~~',
+            interval: null,
+        },
+        methods: {
+            lang(){
+                if(!this.interval){
+                    // 注意ES6的箭头函数内部的this指向与外部的this指向一致
+                    this.interval = setInterval(() => {
+                        // 获取到头的第一个字符
+                        var start = this.msg.substring(0, 1)
+                        // 获取到后面的所有字符
+                        var end = this.msg.substring(1);
+                        // 重新拼接得到的新的字符串，并赋值给this
+                        this.msg = end + start;
+                    }, 400);
+                }
+                //注意：VM实例，会监听自己身上data所有数据的改变，只要数据一发生变化，
+                // 就会自动把最新的数据，从data上同步到页面中去；[好处：程序员只需要关心数据，
+                // 不需要考虑如何重新渲染DOM页面]
+            },
+            stop(){
+                if(this.interval){
+                    clearInterval(this.interval);
+                    this.interval = null;
+                }
+            }
+        }
+    });
+
+    // 分析：
+    // 1. 给[浪起来]按钮，绑定一个点击事件 v-on/@
+    // 2. 在按钮的事件处理函数中，写相关的业务逻辑代码：拿到msg字符串，
+    // 然后调用字符串的substring来进行字符串的截取操作，放到最后的位置即可；
+    // 3. 为了实现点击下按钮，自动截取的功能，需要把2步骤中的代码，放到一个定时器中去；
+</script>
+</html>

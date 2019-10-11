@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>扩展思考</title>
+	<style>
+		#box {
+			box-sizing: border-box;
+			width: 200px;
+			height: 200px;
+			border: 3px solid lightblue;
+		}
+
+		.AA {
+			background: lightcoral;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="box"></div>
+
+	<script>
+		let box = document.getElementById('box');
+		// =>通过方法获取的元素是对象数据类型的值
+		// console.log(typeof box); //=>"object"
+
+		// =>基于.dir可以看到一个对象的详细信息
+		/*
+		 * id：操作元素的ID值
+		 * className：操作元素的CLASS样式类的值
+		 * innerHTML：操作的元素的内容(可以识别标签)
+		 * innerText：和innerHTML的区别是不能识别标签
+		 * tagName：获取元素的标签名（一般大写）
+		 * ...
+		 * style：操作元素的行内样式  属性值是一个新的对象（CSSStyleDeclaration）
+		 */
+		console.dir(box);
+	</script>
+</body>
+
+</html>

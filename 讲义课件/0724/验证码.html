@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>史上最LOW的验证码</title>
+</head>
+
+<body>
+	<input type="text" id="codeInp">
+	<br>
+	<span id="codeBox">AAAA</span>
+	<button id="changeCode">看不清换一张</button>
+
+	<!-- IMPORT JS -->
+	<script>
+		let codeInp = document.getElementById('codeInp'),
+			codeBox = document.getElementById('codeBox'),
+			changeCode = document.getElementById('changeCode');
+
+		/*
+		 * queryCode：获取到四位随机的验证码，然后放到指定的盒子中
+		 *   @params
+		 *   @return
+		 * by Team on 2019/07/24  
+		 */
+		function queryCode() {
+			// 准备获取范围的字符串 0~61
+			let area = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+			let result = "";
+			for (let i = 0; i < 4; i++) {
+				// 每一次循环都获取一个随机的数字索引
+				let ran = Math.round(Math.random() * 61);
+				// 再根据获取的索引从范围字符串中找到对应的字符，把找到的字符拼接到最后的结果中
+				result += area.charAt(ran);
+			}
+			// 放到盒子里面
+			codeBox.innerHTML = result;
+		}
+
+		// 第一次加载页面需要执行方法，让其显示在页面中
+		queryCode();
+
+		// 点击看不清按钮，需要重新执行方法生成新的验证码
+		changeCode.onclick = queryCode;
+
+		// 文本框失去焦点的时候：验证用户输入的内容和验证码是否相同，给予相关的提示，如果不一样需要重新生成验证码
+		// onblur：文本框失去焦点事件
+		codeInp.onblur = function () {
+			// 获取用户和验证码内容（表单元素.value / 非标单元素.innerHTML 获取内容）
+			let val = codeInp.value,
+				code = codeBox.innerHTML;
+			// 不区分大小写的验证（都转成小写）
+			if (val.toLowerCase() === code.toLowerCase()) {
+				alert('温馨提示：验证码输入成功！');
+			} else {
+				alert('温馨提示：验证码输入有误，请重试！');
+				codeInp.value = '';
+				// 重新生成验证码
+				queryCode();
+			}
+		}
+	</script>
+</body>
+
+</html>

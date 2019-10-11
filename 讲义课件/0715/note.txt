@@ -1,0 +1,41 @@
+﻿VSCODE
+   安装：一路下一步，遇框全选
+
+1.  安装插件
+   左侧图片菜单栏最后一项中（Extensions），连网安装插件
+   Chinese 汉化
+   Beautify 代码格式化（shift + alt + F）
+   open in browser  把html页面在浏览器中预览
+   Power Mode 鼠标炫的效果（在设置 -> 首选项 -> Power Mode: Enable开启）
+   .....
+
+2.  创建的文件要指定后缀名
+
+3. File -> Prefer... -> Settings
+         Auto Save 自动保存
+         Font Size 字体大小
+         Word Warp 自动折行
+         ...
+
+4. 快捷键
+   ! 生成HTML的骨架
+   直接写标签名（或者加#.[]等等）只要有提示，按ENTER就可以自动补全，无需写<>
+   ctrl + / 单行注释
+   shift + alt + A  块注释
+   shift + alt + F  代码格式化
+   ctrl + k + 0 代码收起
+   ctrl + k + J  代码展开
+
+=================
+Markdown 专业记录技术笔记的方式
+用简单的符号就可以创造：标题、段落、描述、列表、公式、表格、代码块、流程图等等样式
+
+.md
+马克飞象（印象笔记）、有道云笔记、vscode ...
+https://maxiang.io/
+
+
+
+
+
+         

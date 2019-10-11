@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+
+<body>
+	<button value="按钮1">按钮1</button>
+	<button value="按钮2">按钮2</button>
+	<button value="按钮3">按钮3</button>
+	<button value="按钮4">按钮4</button>
+	<button value="按钮5">按钮5</button>
+	​
+	<script>
+		var btnList = document.getElementsByTagName('button');
+		for (var i = 0; i < btnList.length; i++) {
+			btnList[i].myIndex = i;
+			btnList[i].onclick = function () {
+				alert(this.myIndex);
+			}
+		}
+	</script>
+</body>
+
+</html>

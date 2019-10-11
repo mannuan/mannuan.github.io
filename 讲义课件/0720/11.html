@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		html,
+		body {
+			height: 100%;
+			overflow: hidden;
+		}
+
+		button {
+			width: 200px;
+			line-height: 40px;
+		}
+	</style>
+</head>
+
+<body>
+	<button value="按钮1"></button>
+	<button value="按钮2"></button>
+	<button value="按钮3"></button>
+	<button value="按钮4"></button>
+	<button value="按钮5"></button>
+
+	<script>
+		var name = 10;
+		var obj = {
+			name: '珠峰培训'
+		};
+		console.log(obj.name);
+		console.log(obj['name']);
+		console.log(obj[name]);
+	</script>
+</body>
+
+</html>

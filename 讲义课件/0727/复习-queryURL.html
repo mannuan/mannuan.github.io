@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>QUERY-URL</title>
+</head>
+
+<body>
+	<!-- <a href="http://www.zhufengpeixun.cn/" id="link"></a> -->
+
+	<script>
+		/*
+		 * queryURLParams：获取URL地址中的参数和哈希值信息
+		 *   @params
+		 * 	   url [string] 要解析的URL地址
+		 *   @return 
+		 *     [object] 把参数和哈希值存储成为对象的方式返回
+		 * by zhouxiaotian on 2019/07/27
+		 */
+		/* let queryURLParams = url => {
+			// 1.获取问号和井号后面的信息
+			let askIn = url.indexOf('?'),
+				wellIn = url.indexOf('#'),
+				askText = '',
+				wellText = '';
+			// 1)没有井号
+			wellIn === -1 ? wellIn = url.length : null;
+			// 2)有问号再处理
+			askIn >= 0 ? askText = url.slice(askIn + 1, wellIn) : null;
+			wellText = url.substring(wellIn + 1);
+			// 2.基于获取的信息进行拆分截取，最后把获取的值作为对象的键值对存储起来
+			let result = {};
+			wellText !== '' ? result['hash'] = wellText : null;
+			if (askText.length > 0) {
+				askText = askText.split('&');
+				askText.forEach(item => {
+					item = item.split('=');
+					result[item[0]] = item[1];
+				});
+			}
+			return result;
+		}; */
+
+		let queryURLParams = url => {
+			// 1.获取问号和井号后面的信息（利用A标签元素对象默认存在hash/search两个属性，分别存储的是问号和井号的信息）
+			let link = document.createElement('a');
+			link.href = url;
+			let askText = link.search.substr(1),
+				wellText = link.hash.substr(1);
+			link = null;
+			// 2.基于获取的信息进行拆分截取，最后把获取的值作为对象的键值对存储起来
+			let result = {};
+			wellText !== '' ? result['hash'] = wellText : null;
+			if (askText.length > 0) {
+				askText = askText.split('&');
+				askText.forEach(item => {
+					item = item.split('=');
+					result[item[0]] = item[1];
+				});
+			}
+			return result;
+		};
+		let params = queryURLParams("http://www.zhufengpeixun.cn/?lx=1&name=zxt#teacher");
+		console.log(params);
+		/*
+		 * {
+		 *    lx:1,
+		 *    name:'zxt',
+		 *    hash:'teacher'
+		 * } 
+		 */
+	</script>
+</body>
+
+</html>

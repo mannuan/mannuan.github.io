@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>任意数求和</title>
+</head>
+
+<body>
+	<script>
+		// arguments：函数内置的实参集合，存储了所有传递的实参信息（类数组）
+		/* function sum() {
+			let total = null,
+				arg = arguments;
+			for (let i = 0; i < arg.length; i++) {
+				let item = Number(arg[i]);
+				if (!isNaN(item)) {
+					total += item;
+				}
+			}
+			return total;
+		} */
+		// ES6箭头函数中没有ARGUMENTS
+		// 但是可以基于...剩余运算符获取到传递的实参信息ARG（并且它是一个数组）
+		let sum = (...arg) => {
+			let total = null;
+			arg.forEach(item => {
+				item = Number(item);
+				!isNaN(item) ? total += item : null;
+			});
+			return total;
+		};
+		let total = sum(10, 20, '30', 'A', 40, 50, '30AA');
+		console.log(total); //=>100
+	</script>
+</body>
+
+</html>

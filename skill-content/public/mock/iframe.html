@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>iframe</title>
+    <script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <style>
+        html, body, div {
+            height: 100%;
+            padding: 0px;
+            margin: 0px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="app" style="width: 100%; display: flex; justify-content: center;">
+        <div style="max-width: 1024px;">
+            <p v-for="i in arr" :key="i">决胜巅峰和客户端付代理费的地方导航栏是的疯狂收到货法拉利速度快回复了SDK冻死了福建水电费；铃声多多解放了；束带结发；大连市附近的加法路口就是电费卡就算打断孵化了束带结发的弗兰克的时代峰峻爱的速递句法；萨克雷手动阀决胜巅峰评论；束带结发就是道路；分开交水电费；塑料壳地方撒多；发卡事件发生电话费电脑，男生</p>
+        </div>
+    </div>
+</body>
+<script>
+    new Vue({
+        el: "#app",
+        data: {
+
+        },
+        computed: {
+            arr() {
+                let arr = [];
+                for(let i=0;i<100;i++){
+                    arr.push(i);
+                }
+                return arr;
+            }
+        }
+    });
+</script>
+<script>
+window.parent.postMessage({
+    cmd: 'returnHeight',
+    params: {
+        success: true,
+        data: document.body.scrollHeight + 'px'
+    }
+}, '*');
+</script>
+</html>

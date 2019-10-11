@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>珠峰培训</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		html,
+		body {
+			height: 100%;
+			overflow: hidden;
+		}
+
+		#inpBox,
+		#btn {
+			padding: 0 15px;
+			margin: 5px;
+			height: 35px;
+		}
+	</style>
+</head>
+
+<body>
+	<input type="text" id="inpBox" value="0">
+	<button id="btn">计算结果</button>
+
+	<!-- IMPORT JS -->
+	<script>
+		let inpBox = document.getElementById('inpBox');
+		let btn = document.getElementById('btn');
+		btn.onclick = function () {
+			// 获取文本框中的内容：元素.value 
+			// 获取的结果是字符串，所以需要转换为数字
+			let n = inpBox.value;
+			n = Number(n);
+
+			// 接下里根据输入的内容进行相关验证，输出对应的结果
+			if (n > 0) {
+				console.log('输入的是正数');
+			} else if (n < 0) {
+				console.log('输入的是负数');
+			} else {
+				console.log('输入的是零或者非法数字');
+			}
+		}
+	</script>
+</body>
+
+
+</html>

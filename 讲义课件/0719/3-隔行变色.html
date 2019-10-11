@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>隔行变色</title>
+	<!-- IMPORT CSS -->
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		ul {
+			list-style: none;
+		}
+
+		#newsBox {
+			box-sizing: border-box;
+			margin: 20px auto;
+			padding: 20px;
+			width: 300px;
+			border: 2px solid lightblue;
+		}
+
+		#newsBox li {
+			line-height: 50px;
+			border-bottom: 1px dashed lightcoral;
+		}
+
+		#newsBox li:nth-last-child(1) {
+			/* 获取LI中的倒数第一个 */
+			border-bottom: none;
+		}
+
+		/* 基于CSS实现 */
+		/* #newsBox li:nth-child(even) {
+			background: lightgray;
+		}
+
+		#newsBox li:hover {
+			background: lightgreen;
+		} */
+	</style>
+</head>
+
+<body>
+	<!-- ul#newsBox>li*5{我是第$个LI} -->
+	<ul id="newsBox">
+		<li>我是第1个LI</li>
+		<li>我是第2个LI</li>
+		<li>我是第3个LI</li>
+		<li>我是第4个LI</li>
+		<li>我是第5个LI</li>
+	</ul>
+
+	<!-- IMPORT JS -->
+	<script>
+		// [context].getElementsByTagName([tagname])：在指定的context范围之内，通过标签名获取一组元素（元素集合 HTMLCollection） =>集合和数组很相似，也是以数字索引作为属性名，有length属性存储长度，但是不是数组，属于“类数组”
+		let newsBox = document.getElementById('newsBox');
+		let newsList = newsBox.getElementsByTagName('li');
+
+		// 1.实现奇偶行变色
+		for (let i = 0; i < newsList.length; i++) {
+			let curLi = newsList[i];
+			curLi.style.background = i % 2 === 0 ? '#FFF' : '#DDD';
+
+			// 2.循环的时候给每一个LI都绑定mouseover/mouseout事件
+			curLi.onmouseover = function () {
+				// this ：当前操作的这个LI
+				this.style.background = 'lightblue';
+			}
+
+			curLi.onmouseout = function () {
+				// 思考题？：如何在离开的时候知道原来的背景颜色
+				this.style.background = '#FFF';
+			}
+		}
+
+
+
+
+
+
+
+
+
+
+		/* 
+		// 1.循环所有获取的LI，判断每一个LI的奇偶行，让其有不同的背景颜色
+		for (let i = 0; i < newsList.length; i++) {
+			//一轮 i=0 操作第一个LI newsList[0]
+			//二轮 i=1 操作第二个LI newsList[1]
+			//=> newsList[i] 当前本轮循环我们要操作的这个LI
+			let curLi = newsList[i];
+			//i=0(偶数) 第一个LI 奇数行
+			//i=1(奇数) 第二行LI 偶数行
+			//=>当前这一行的索引如果是偶数，那么它是奇数行，否则是偶数行
+			// 偶数判断的标准：能被2整除（除以2的余数为0）=>  n/2除法  n%2除以2取余数
+			if (i % 2 === 0) {
+				// 索引是偶数，代表奇数行
+				curLi.style.background = '#FFF';
+			} else {
+				// 索引是奇数，代表偶数行
+				curLi.style.background = '#DDD';
+			}
+		} */
+	</script>
+</body>
+
+</html>
