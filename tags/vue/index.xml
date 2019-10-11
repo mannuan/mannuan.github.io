@@ -39,16 +39,6 @@ const devBaseUrl = &amp;#34;/&amp;#34;; const proBaseUrl = &amp;#34;/knowledge-s
     </item>
     
     <item>
-      <title>vue从入门到精通</title>
-      <link>https://mannuan.github.io/post/20190808140332/</link>
-      <pubDate>Thu, 08 Aug 2019 14:03:32 +0800</pubDate>
-      
-      <guid>https://mannuan.github.io/post/20190808140332/</guid>
-      <description>创建项目 安装vue-cli3.x cnpm install -g @vue/cli 创建项目 vue create xxx Please pick a preset: ? Please pick a preset: firstpractice (vue-router, vuex, dart-sass, eslint) default (babel, eslint) ❯ Manually select features  选择最后一项
-Check the features needed for your project: ? Please pick a preset: Manually select features ? Check the features needed for your project: ◯ Babel ◯ TypeScript ◯ Progressive Web App (PWA) Support ◉ Router ◉ Vuex ◉ CSS Pre-processors ❯◉ Linter / Formatter ◯ Unit Testing ◯ E2E Testing  选择上面实心圆的几项</description>
-    </item>
-    
-    <item>
       <title>智慧旅游</title>
       <link>https://mannuan.github.io/post/20190807092523/</link>
       <pubDate>Wed, 07 Aug 2019 09:25:23 +0800</pubDate>
