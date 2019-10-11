@@ -16,15 +16,14 @@
       <pubDate>Tue, 13 Aug 2019 19:15:00 +0800</pubDate>
       
       <guid>https://mannuan.github.io/post/20190813191500/</guid>
-      <description>面试过程  首先是一个自我介绍， 然后，上来就是说我前端项目做的比较多（但我没做过多少，我每个项目的前端工作，我都用一行字介绍了一下） 面试官首先问我最早什么时候开始接触前端 首先问了我，原生实现ajax 然后问了我一个关于promise的题目  这道题目由于当时比较紧张，没答上来，现在一想挺简单的，挺可惜的   console.log(1); const promise = new Promise((resolve, reject) =&amp;gt; { console.log(3); resolve(4); }) promise.then(console.log); console.log(2);   我项目上就写前端布局用了vue和element-ui就疯狂地问我
- 面试官了问了知不知道vue中自定义指令，我直接说不知道。 问我element-ui中用了哪些组件，我说了el-header,el-footer,el-main 还问有没有使用element-ui中的table组件 我说之前我的项目用的不是vue和element-ui中的table，我说我用的是其他的库中的table组件  然后就问了我原生的table
- 面试问我如何合并行，rowspan 如何合并原生table中的边框 这个我回答把border设置为0 但其实是这个：border-collapse:collapse;  如何让一个矩形往右边移动
- 我说用css中的transform实现，然后具体怎么写，我说不知道 面试官问我js如何实现上面的这个效果 我直接说不知道  然后面试官让实现每个一秒钟减1的功能，输入是hh:mm:ss的格式
- 看到这个我一脸懵逼，我知道使用setInterval(),其他的具体就不知道了 主要是让我使用在线的ide,然后还让我运行代码，我很不适应  之后面试官发现我项目的重心在爬虫上面，
+      <description> 面试过程  我最早什么时候开始接触前端 原生实现ajax 关于promise的题目  console.log(1); const promise = new Promise((resolve, reject) =&amp;gt; { console.log(3); resolve(4); }) promise.then(console.log); console.log(2);   我项目上就写前端布局用了vue和element-ui
+ 面试官了问了知不知道vue中自定义指令  然后就问了我原生的table
+ 面试问我如何合并行，rowspan 如何合并原生table中的边框  如何让一个矩形往右边移动
+ 然后面试官让实现每个一秒钟减1的功能，输入是hh:mm:ss的格式
+ 之后面试官发现我项目的重心在爬虫上面，
  问我爬虫是不是使用的mongodb，我说是
- 然后面试官问我ObjectId是如何实现的 我回答了，它由4部分组成，第一部分是时间戳，中间两个部分忘记了，最后一个部分是自增的一个字段， 然后，面试问我，这个自增的字段具体是如何实现的， 我说我没有深入了解过  然后问了如何实现自动登录
- 我说先使用selenium模拟登录一遍，然后暂停几分钟， 手动登录，获取cookie 然后之后直接加载cookie就可以登录了  最后，面试官说我的前端掌握的比较欠缺，然后就结束面试了
-  面试总结 整个面试花费了我半个多小时，在面试过程中，面试官的几个问题都说明我对于vue的理解和使用都很欠缺（这个其实我早就在担心了，但是没有办法，我真的没有时间深入理解vue），我认为对于现阶段我来说，应该多看vue相关的资料和面经，然后查漏补缺，弥补一下其他方面的知识。</description>
+ 然后面试官问我ObjectId是如何实现的  然后问了如何实现自动登录
+  </description>
     </item>
     
     <item>

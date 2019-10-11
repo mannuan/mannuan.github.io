@@ -124,12 +124,12 @@ viewport 什么是css像素和物理像素?
     </item>
     
     <item>
-      <title>小米一面凉经</title>
+      <title>小米一面面经</title>
       <link>https://mannuan.github.io/post/20190909150915/</link>
       <pubDate>Mon, 09 Sep 2019 15:09:15 +0800</pubDate>
       
       <guid>https://mannuan.github.io/post/20190909150915/</guid>
-      <description>小米一面凉经 CSS和HTML基础  px, em, rem position有哪些定位方式，分别是怎么实现的？  static: 没有定位，唯一的作用就是取消定位 relative absolute fixed inherit 参考链接  清除浮动的方式参考链接参考链接 垂直居中和水平居中参考链接 img是行内元素还是块级函数？  行内元素，行内替换元素 既然img是行内元素，那为什么可以通过CSS设置框高呢？  span是行内元素，可以设置padding和margin参考链接  js基础  domcontentloaded和onload哪个先  一般情况下，DOMContentLoaded事件要在window.onload之前执行，当DOM树构建完成的时候就会执行DOMContentLoaded事件，而window.onload是在页面载入完成的时候，才执行，这其中包括图片等元素。大多数时候我们只是想在DOM树构建完成后，绑定事件到元素，我们并不需要图片元素，加上有时候加载外域图片的速度非常缓慢。  domcontentloaded什么时候执行？ img也在dom树构建过程中加载吗 script会在domcontentloaded之前加载吗？ defer和async的区别参考链接
+      <description>小米一面面经 CSS和HTML基础  px, em, rem position有哪些定位方式，分别是怎么实现的？  static: 没有定位，唯一的作用就是取消定位 relative absolute fixed inherit 参考链接  清除浮动的方式参考链接参考链接 垂直居中和水平居中参考链接 img是行内元素还是块级函数？  行内元素，行内替换元素 既然img是行内元素，那为什么可以通过CSS设置框高呢？  span是行内元素，可以设置padding和margin参考链接  js基础  domcontentloaded和onload哪个先  一般情况下，DOMContentLoaded事件要在window.onload之前执行，当DOM树构建完成的时候就会执行DOMContentLoaded事件，而window.onload是在页面载入完成的时候，才执行，这其中包括图片等元素。大多数时候我们只是想在DOM树构建完成后，绑定事件到元素，我们并不需要图片元素，加上有时候加载外域图片的速度非常缓慢。  domcontentloaded什么时候执行？ img也在dom树构建过程中加载吗 script会在domcontentloaded之前加载吗？ defer和async的区别参考链接
 数据类型 1 + &#39;1&#39;==?11
  null == undefined?v
  [] == 0?v
@@ -257,12 +257,12 @@ cross end cross axis的结束位置</description>
     </item>
     
     <item>
-      <title>有赞一面凉面</title>
+      <title>有赞一面</title>
       <link>https://mannuan.github.io/post/20190824174052/</link>
       <pubDate>Sat, 24 Aug 2019 17:40:52 +0800</pubDate>
       
       <guid>https://mannuan.github.io/post/20190824174052/</guid>
-      <description>有赞一面凉面  首先上来就问了我对上午的宣讲会，说说对于有赞印象。
+      <description>有赞一面  首先上来就问了我对上午的宣讲会，说说对于有赞印象。
  我说听好的，有赞挺有意思的  然后，做了一个自我介绍，说了我现在在哪里上学，最近在做一个个人博客的项目
  这里我就开始疯狂扒拉我的项目： 我首先说了我前期使用hugo来搭建我的博客； 然后，之后我为了更好的呈现我的博客，我使用vue又重新写了一下我的博客导航页面 对于这当中的难点，我一一说了出来 首先，我使用vue-router来实现导航栏下面的页面的切换，然后，之后我改用vuex来实现页面的改变  事件流
  设计模式(单例模式，没有了解过)
@@ -333,15 +333,14 @@ const devBaseUrl = &amp;#34;/&amp;#34;; const proBaseUrl = &amp;#34;/knowledge-s
       <pubDate>Tue, 13 Aug 2019 19:15:00 +0800</pubDate>
       
       <guid>https://mannuan.github.io/post/20190813191500/</guid>
-      <description>面试过程  首先是一个自我介绍， 然后，上来就是说我前端项目做的比较多（但我没做过多少，我每个项目的前端工作，我都用一行字介绍了一下） 面试官首先问我最早什么时候开始接触前端 首先问了我，原生实现ajax 然后问了我一个关于promise的题目  这道题目由于当时比较紧张，没答上来，现在一想挺简单的，挺可惜的   console.log(1); const promise = new Promise((resolve, reject) =&amp;gt; { console.log(3); resolve(4); }) promise.then(console.log); console.log(2);   我项目上就写前端布局用了vue和element-ui就疯狂地问我
- 面试官了问了知不知道vue中自定义指令，我直接说不知道。 问我element-ui中用了哪些组件，我说了el-header,el-footer,el-main 还问有没有使用element-ui中的table组件 我说之前我的项目用的不是vue和element-ui中的table，我说我用的是其他的库中的table组件  然后就问了我原生的table
- 面试问我如何合并行，rowspan 如何合并原生table中的边框 这个我回答把border设置为0 但其实是这个：border-collapse:collapse;  如何让一个矩形往右边移动
- 我说用css中的transform实现，然后具体怎么写，我说不知道 面试官问我js如何实现上面的这个效果 我直接说不知道  然后面试官让实现每个一秒钟减1的功能，输入是hh:mm:ss的格式
- 看到这个我一脸懵逼，我知道使用setInterval(),其他的具体就不知道了 主要是让我使用在线的ide,然后还让我运行代码，我很不适应  之后面试官发现我项目的重心在爬虫上面，
+      <description> 面试过程  我最早什么时候开始接触前端 原生实现ajax 关于promise的题目  console.log(1); const promise = new Promise((resolve, reject) =&amp;gt; { console.log(3); resolve(4); }) promise.then(console.log); console.log(2);   我项目上就写前端布局用了vue和element-ui
+ 面试官了问了知不知道vue中自定义指令  然后就问了我原生的table
+ 面试问我如何合并行，rowspan 如何合并原生table中的边框  如何让一个矩形往右边移动
+ 然后面试官让实现每个一秒钟减1的功能，输入是hh:mm:ss的格式
+ 之后面试官发现我项目的重心在爬虫上面，
  问我爬虫是不是使用的mongodb，我说是
- 然后面试官问我ObjectId是如何实现的 我回答了，它由4部分组成，第一部分是时间戳，中间两个部分忘记了，最后一个部分是自增的一个字段， 然后，面试问我，这个自增的字段具体是如何实现的， 我说我没有深入了解过  然后问了如何实现自动登录
- 我说先使用selenium模拟登录一遍，然后暂停几分钟， 手动登录，获取cookie 然后之后直接加载cookie就可以登录了  最后，面试官说我的前端掌握的比较欠缺，然后就结束面试了
-  面试总结 整个面试花费了我半个多小时，在面试过程中，面试官的几个问题都说明我对于vue的理解和使用都很欠缺（这个其实我早就在担心了，但是没有办法，我真的没有时间深入理解vue），我认为对于现阶段我来说，应该多看vue相关的资料和面经，然后查漏补缺，弥补一下其他方面的知识。</description>
+ 然后面试官问我ObjectId是如何实现的  然后问了如何实现自动登录
+  </description>
     </item>
     
     <item>

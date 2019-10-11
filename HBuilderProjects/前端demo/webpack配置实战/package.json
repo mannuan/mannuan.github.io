@@ -1,8 +1,0 @@
-{
-  "scripts":{
-    "app1-d":"webpack-dev-server --env dev --config ./app1/build/webpack.config.js --open",
-    "app1-p":"webpack --env prod --config ./app1/build/webpack.config.js",
-    "app2-d":"webpack-dev-server --env dev --config ./app2/build/webpack.config.js --open",
-    "app2-p":"webpack --env prod --config ./app2/build/webpack.config.js"
-  }
-}
