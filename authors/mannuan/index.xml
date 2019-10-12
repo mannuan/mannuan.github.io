@@ -198,12 +198,12 @@ viewport 什么是css像素和物理像素?
     </item>
     
     <item>
-      <title>美团前端二面</title>
+      <title>美团前端现场面</title>
       <link>https://mannuan.github.io/post/20190912150305/</link>
       <pubDate>Thu, 12 Sep 2019 15:03:06 +0800</pubDate>
       
       <guid>https://mannuan.github.io/post/20190912150305/</guid>
-      <description> 美团现场面  问了微任务和宏任务，微任务的优先级高于宏任务； 问了csp内容安全策略； css中如何画圆； css选择器 问了box-sizing,content-box,border-box,inherit domcontentloaded和onload分别在什么时候，谁先执行，iframe在什么时候被加载 请说说页面输入url后进行了什么操作？着重问了http建立连接的过程； async和defer，需要写代码实验一下； http状态码: 301,302,403,500,501,502,503； 如何防止页面被篡改，回答https; 描述一下https的实现原理； Https是非对称还是对称加密； http的长连接和短连接需要再琢磨琢磨参考链接 http的头部是怎么样的，描述一下？ get请求的数据放在get后面的一小部分字符串中 keep-alive在http连接中问到；参考链接 有哪几种事件类型 await sleep(5);实现sleep函数；参考链接 问了箭头函数中的this；参考链接  参考链接  问了class中的this，class中怎么写箭头函数； class中的箭头函数的指向如何修改  </description>
+      <description> 美团现场面  问了微任务和宏任务，微任务的优先级高于宏任务； 问了csp内容安全策略； css中如何画圆； css选择器 问了box-sizing,content-box,border-box,inherit domcontentloaded和onload分别在什么时候，谁先执行，iframe在什么时候被加载 请说说页面输入url后进行了什么操作？着重问了http建立连接的过程； async和defer，需要写代码实验一下； http状态码: 301,302,403,500,501,502,503； 如何防止页面被篡改，回答https; 描述一下https的实现原理； Https是非对称还是对称加密； http的长连接和短连接需要再琢磨琢磨参考链接 http的头部是怎么样的，描述一下？ get请求的数据放在get后面的一小部分字符串中 持久连接，管线化 有哪几种事件类型 await sleep(5);实现sleep函数；参考链接 问了箭头函数中的this；参考链接  参考链接  问了class中的this，class中怎么写箭头函数； class中的箭头函数的指向如何修改  </description>
     </item>
     
     <item>
