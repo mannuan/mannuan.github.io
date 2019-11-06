@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>镜像 on mannuan</title>
+    <link>https://mannuan.github.io/tags/%E9%95%9C%E5%83%8F/</link>
+    <description>Recent content in 镜像 on mannuan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 06 Nov 2019 15:56:49 +0800</lastBuildDate>
+    
+	<atom:link href="https://mannuan.github.io/tags/%E9%95%9C%E5%83%8F/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>阿里云服务器迁移教程</title>
+      <link>https://mannuan.github.io/post/20191106155649/</link>
+      <pubDate>Wed, 06 Nov 2019 15:56:49 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20191106155649/</guid>
+      <description> 阿里云服务器迁移教程 分享方的阿里云 创建快照  打开云服务器管理控制台(可以通过搜索框搜索云服务器 ECS) 左侧点击存储与快照-&amp;gt;云盘-&amp;gt;创建快照(这个过程大概需要15分钟)   创建镜像  左侧点击快照-&amp;gt;在快照的某项上点击创建自定义镜像(秒建)  复制镜像  左侧点击镜像-&amp;gt;复制镜像-&amp;gt;跳出一个模态框，输入自定义名称，和目标区域(这个过程很坑，没有进度显示，大概需要1个小时)  共享镜像  在地区选择栏，选择之前复制镜像的目标区域(这一步很关键)  左侧点击镜像-&amp;gt;更多-&amp;gt;共享镜像-&amp;gt;在模态框中输入目标用户的id
+  接受方的阿里云 关闭阿里云主机  打开云服务器管理控制台(可以通过搜索框搜索云服务器 ECS) 左侧点击实例-&amp;gt;管理-&amp;gt;停止  更换系统镜像  返回实例界面-&amp;gt;更多-&amp;gt;磁盘和镜像-&amp;gt;更换系统盘-&amp;gt;&amp;hellip;-&amp;gt;选择共享镜像  </description>
+    </item>
+    
+  </channel>
+</rss>

@@ -4,12 +4,12 @@
   
   <url>
     <loc>https://mannuan.github.io/</loc>
-    <lastmod>2019-11-06T10:07:46+08:00</lastmod>
+    <lastmod>2019-11-06T15:56:49+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://mannuan.github.io/post/</loc>
-    <lastmod>2019-11-06T10:07:46+08:00</lastmod>
+    <lastmod>2019-11-06T15:56:49+08:00</lastmod>
   </url>
   
   <url>
@@ -28,29 +28,70 @@
   
   <url>
     <loc>https://mannuan.github.io/authors/</loc>
-    <lastmod>2019-11-06T10:07:46+08:00</lastmod>
+    <lastmod>2019-11-06T15:56:49+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://mannuan.github.io/categories/</loc>
-    <lastmod>2019-11-06T10:07:46+08:00</lastmod>
+    <lastmod>2019-11-06T15:56:49+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mannuan.github.io/tags/ecs/</loc>
+    <lastmod>2019-11-06T15:56:49+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://mannuan.github.io/tags/</loc>
-    <lastmod>2019-11-06T10:07:46+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://mannuan.github.io/tags/bbrplus/</loc>
-    <lastmod>2019-11-06T10:07:46+08:00</lastmod>
+    <lastmod>2019-11-06T15:56:49+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://mannuan.github.io/authors/mannuan/</loc>
+    <lastmod>2019-11-06T15:56:49+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mannuan.github.io/tags/%E5%BF%AB%E7%85%A7/</loc>
+    <lastmod>2019-11-06T15:56:49+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mannuan.github.io/tags/%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%BF%81%E7%A7%BB/</loc>
+    <lastmod>2019-11-06T15:56:49+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mannuan.github.io/tags/%E9%95%9C%E5%83%8F/</loc>
+    <lastmod>2019-11-06T15:56:49+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mannuan.github.io/categories/%E9%98%BF%E9%87%8C%E4%BA%91/</loc>
+    <lastmod>2019-11-06T15:56:49+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mannuan.github.io/tags/%E9%98%BF%E9%87%8C%E4%BA%91/</loc>
+    <lastmod>2019-11-06T15:56:49+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mannuan.github.io/post/20191106155649/</loc>
+    <lastmod>2019-11-06T15:56:49+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mannuan.github.io/tags/bbrplus/</loc>
     <lastmod>2019-11-06T10:07:46+08:00</lastmod>
     <priority>0</priority>
   </url>
@@ -3226,13 +3267,13 @@
   </url>
   
   <url>
-    <loc>https://mannuan.github.io/tags/mongodb/</loc>
+    <loc>https://mannuan.github.io/categories/mongodb/</loc>
     <lastmod>2019-05-30T16:16:20+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://mannuan.github.io/categories/mongodb/</loc>
+    <loc>https://mannuan.github.io/tags/mongodb/</loc>
     <lastmod>2019-05-30T16:16:20+08:00</lastmod>
     <priority>0</priority>
   </url>
@@ -3517,13 +3558,13 @@
   </url>
   
   <url>
-    <loc>https://mannuan.github.io/tags/jupyter/</loc>
+    <loc>https://mannuan.github.io/categories/jupyter/</loc>
     <lastmod>2019-05-15T15:55:13+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://mannuan.github.io/categories/jupyter/</loc>
+    <loc>https://mannuan.github.io/tags/jupyter/</loc>
     <lastmod>2019-05-15T15:55:13+08:00</lastmod>
     <priority>0</priority>
   </url>
@@ -3602,12 +3643,6 @@
   
   <url>
     <loc>https://mannuan.github.io/tags/%E8%AF%81%E4%B9%A6%E7%94%B3%E8%AF%B7/</loc>
-    <lastmod>2019-05-02T14:01:32+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://mannuan.github.io/tags/%E9%98%BF%E9%87%8C%E4%BA%91/</loc>
     <lastmod>2019-05-02T14:01:32+08:00</lastmod>
     <priority>0</priority>
   </url>
