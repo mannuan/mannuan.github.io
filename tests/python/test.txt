@@ -1,0 +1,27 @@
+\begin{table*}
+	\renewcommand{\multirowsetup}{\centering}
+	\caption{Statistics of semeval}
+	\centering
+	\label{semeval-stat-dataset}
+	\scalebox{1.2}{
+		\begin{tabular}{ccccc}
+			\toprule[2pt]
+			\textbf{year} & \textbf{domain} & \textbf{target} & \textbf{-} & \textbf{negative}\\
+			\midrule[1pt]
+			\multirow{2}{0.2in}{\textbf{2014}} & 
+			\multirow{2}{0.2in}{\textbf{laptop}} & 
+			629 & 629 & 629\\ & 
+			629 & 629 & 629\\
+			\textbf{food} & 1929 & 1929 & 1929\\
+			\midrule[0.5pt]
+			\multirow{2}{0.2in}{\textbf{2015}} & 
+			\textbf{laptop} & 280 & 280 & 280\\ &
+			\textbf{food} & 208 & 208 & 208\\
+			\midrule[0.5pt]
+			\multirow{2}{0.2in}{\textbf{2016}} & 
+			\textbf{laptop} & 280 & 280 & 280\\ &
+			\textbf{food} & 208 & 208 & 208\\
+			\bottomrule[2pt]
+		\end{tabular}
+	}
+\end{table*}

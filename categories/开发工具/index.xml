@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>开发工具 on mannuan</title>
+    <link>https://mannuan.github.io/categories/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/</link>
+    <description>Recent content in 开发工具 on mannuan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 12 Oct 2019 10:42:30 +0800</lastBuildDate>
+    
+	<atom:link href="https://mannuan.github.io/categories/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>yarn国内镜像</title>
+      <link>https://mannuan.github.io/post/20191012104229/</link>
+      <pubDate>Sat, 12 Oct 2019 10:42:30 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20191012104229/</guid>
+      <description>yarn国内源 为什么慢 执行 yarn 各种命令的时候，默认是去 npm/yarn 官方镜像源获取需要安装的具体软件信息
+以下命令查看当前使用的镜像源
+yarn config get registry  默认源地址在国外，从国内访问的速度肯定比较慢
+ 如何修改镜像源 阿里旗下维护着一个完整的 npm 镜像源 https://registry.npm.taobao.org/ 同样适用于 yarn
+1. 临时修改 yarn save 软件名 --registry https://registry.npm.taobao.org/ 2. 全局修改 yarn config set registry https://registry.npm.taobao.org/ 3. 使用第三方软件快速修改、切换 yarn 镜像源 yrm YARN registry manager
+yrm 不仅可以快速切换镜像源，还可以测试自己网络访问不同源的速度
+安装 yrm npm install -g yrm 列出当前可用的所有镜像源 yrm ls npm ----- https://registry.npmjs.org/ cnpm ---- http://r.cnpmjs.org/ taobao -- https://registry.npm.taobao.org/ nj ------ https://registry.nodejitsu.com/ rednpm -- http://registry.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -5,7 +5,7 @@
     <link>https://mannuan.github.io/</link>
     <description>Recent content in Home on mannuan</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 06 Oct 2019 18:04:15 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 06 Nov 2019 10:07:46 +0800</lastBuildDate>
     
 	<atom:link href="https://mannuan.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -30,6 +30,49 @@ Heading 3 Yet another, but centered! Excepteur sint occaecat cupidatat non proid
       <description>Mínimo is a Spanish word that roughly translate to Minimal.
 Minimo is a minimalist theme for Hugo.
 Minimo keeps the focus on your content and lets it shine!</description>
+    </item>
+    
+    <item>
+      <title>服务端一键化翻墙脚本</title>
+      <link>https://mannuan.github.io/post/20191106100746/</link>
+      <pubDate>Wed, 06 Nov 2019 10:07:46 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20191106100746/</guid>
+      <description>bbrplus bbrplus一键安装脚本
+shadowsocks shadowsocks一键安装脚本</description>
+    </item>
+    
+    <item>
+      <title>linux tar</title>
+      <link>https://mannuan.github.io/post/20191022144943/</link>
+      <pubDate>Tue, 22 Oct 2019 14:49:43 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20191022144943/</guid>
+      <description>压缩 tar zcvf FileName.tar.gz DirName 解压 tar zxvf FileName.</description>
+    </item>
+    
+    <item>
+      <title>yarn国内镜像</title>
+      <link>https://mannuan.github.io/post/20191012104229/</link>
+      <pubDate>Sat, 12 Oct 2019 10:42:30 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20191012104229/</guid>
+      <description>yarn国内源 为什么慢 执行 yarn 各种命令的时候，默认是去 npm/yarn 官方镜像源获取需要安装的具体软件信息
+以下命令查看当前使用的镜像源
+yarn config get registry  默认源地址在国外，从国内访问的速度肯定比较慢
+ 如何修改镜像源 阿里旗下维护着一个完整的 npm 镜像源 https://registry.npm.taobao.org/ 同样适用于 yarn
+1. 临时修改 yarn save 软件名 --registry https://registry.npm.taobao.org/ 2. 全局修改 yarn config set registry https://registry.npm.taobao.org/ 3. 使用第三方软件快速修改、切换 yarn 镜像源 yrm YARN registry manager
+yrm 不仅可以快速切换镜像源，还可以测试自己网络访问不同源的速度
+安装 yrm npm install -g yrm 列出当前可用的所有镜像源 yrm ls npm ----- https://registry.npmjs.org/ cnpm ---- http://r.cnpmjs.org/ taobao -- https://registry.npm.taobao.org/ nj ------ https://registry.nodejitsu.com/ rednpm -- http://registry.</description>
+    </item>
+    
+    <item>
+      <title>给变量取名的高效解决方法</title>
+      <link>https://mannuan.github.io/post/20191012102913/</link>
+      <pubDate>Sat, 12 Oct 2019 10:29:13 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20191012102913/</guid>
+      <description>给变量取名的高效解决方法 cerebro-codelf这个厂库目前已经有300多个赞了，支持一下。</description>
     </item>
     
     <item>
@@ -1148,7 +1191,8 @@ n,m&amp;lt;=1800
       <pubDate>Wed, 07 Aug 2019 22:13:47 +0800</pubDate>
       
       <guid>https://mannuan.github.io/post/20190807221347/</guid>
-      <description>摘要 随着网络的快速发展，越来越多的网络社交平台产生。人们普遍通过社交网络来发泄直接对这个社会的不满，其中reddit是国外一个重要的社交平台。在网站中如果是讽刺的文字会用#sarcasm来标注，其中反讽是一个分析人类情感的很重要的一个平台。分析反讽的评论对公众的态度有很太的提升。以前，一般通过上下文来获取的一句话的反讽倾向，或者，提升句子语义的提取来获取反讽的评判依据。我认为之前的研究对于一个反讽的判别器来说太过于片面，没有整体地把握住反讽的评判标准。我认为应该同时考虑以上的两个方面，并且我认为反讽的检测还与情感的变化相关。上下文的反讽主要由于语境的不协调的引起的，因此我认为，可以与正面情感和负面活动的单词的数量、正面情感和负面活动的词对的长度有关。我通过几组实验验证了我的假设，实验表明我的模型优越于最先进的模型。</description>
+      <description> 摘要 随着网络的快速发展，越来越多的网络社交平台出现。人们普遍通过社交网络来发泄直接对这个社会的不满，其中reddit是国外一个重要的社交平台。在网站中如果是讽刺的文字会用#sarcasm来标注，其中反讽是一个分析人类情感的很重要的一个平台。分析反讽的评论对公众的态度有很大的提升。以前，一般通过上下文来获取的一句话的反讽倾向，或者，提升句子语义的提取来获取反讽的评判依据。我认为之前的研究对于一个反讽的判别器来说太过于片面，没有整体地把握住反讽的评判标准。我认为应该同时考虑以上的两个方面，并且我认为反讽的检测还与情感的变化相关。上下文的反讽主要由于语境的不协调的引起的，因此我认为，可以与正面情感和负面活动的单词的数量、正面情感和负面活动的词对的长度有关。我通过几组实验验证了我的假设，实验表明我的模型优越于最先进的模型。
+介绍 </description>
     </item>
     
     <item>

@@ -4,12 +4,12 @@
   
   <url>
     <loc>https://mannuan.github.io/</loc>
-    <lastmod>2019-10-06T18:04:15+08:00</lastmod>
+    <lastmod>2019-11-06T10:07:46+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://mannuan.github.io/post/</loc>
-    <lastmod>2019-10-06T18:04:15+08:00</lastmod>
+    <lastmod>2019-11-06T10:07:46+08:00</lastmod>
   </url>
   
   <url>
@@ -28,25 +28,105 @@
   
   <url>
     <loc>https://mannuan.github.io/authors/</loc>
-    <lastmod>2019-10-06T18:04:15+08:00</lastmod>
+    <lastmod>2019-11-06T10:07:46+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://mannuan.github.io/categories/</loc>
-    <lastmod>2019-10-06T18:04:15+08:00</lastmod>
+    <lastmod>2019-11-06T10:07:46+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://mannuan.github.io/tags/</loc>
-    <lastmod>2019-10-06T18:04:15+08:00</lastmod>
+    <lastmod>2019-11-06T10:07:46+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mannuan.github.io/tags/bbrplus/</loc>
+    <lastmod>2019-11-06T10:07:46+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://mannuan.github.io/authors/mannuan/</loc>
-    <lastmod>2019-10-06T18:04:15+08:00</lastmod>
+    <lastmod>2019-11-06T10:07:46+08:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mannuan.github.io/tags/shadowsocks/</loc>
+    <lastmod>2019-11-06T10:07:46+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mannuan.github.io/post/20191106100746/</loc>
+    <lastmod>2019-11-06T10:07:46+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mannuan.github.io/categories/%E7%BF%BB%E5%A2%99/</loc>
+    <lastmod>2019-11-06T10:07:46+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mannuan.github.io/post/20191022144943/</loc>
+    <lastmod>2019-10-22T14:49:43+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mannuan.github.io/categories/linux%E5%91%BD%E4%BB%A4/</loc>
+    <lastmod>2019-10-22T14:49:43+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mannuan.github.io/tags/tar/</loc>
+    <lastmod>2019-10-22T14:49:43+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mannuan.github.io/tags/yarn/</loc>
+    <lastmod>2019-10-12T10:42:30+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mannuan.github.io/post/20191012104229/</loc>
+    <lastmod>2019-10-12T10:42:30+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mannuan.github.io/tags/yrm/</loc>
+    <lastmod>2019-10-12T10:42:30+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mannuan.github.io/categories/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/</loc>
+    <lastmod>2019-10-12T10:42:30+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mannuan.github.io/tags/%E5%8F%98%E9%87%8F%E5%90%8D/</loc>
+    <lastmod>2019-10-12T10:29:13+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mannuan.github.io/categories/%E5%BC%80%E5%8F%91%E6%95%88%E7%8E%87/</loc>
+    <lastmod>2019-10-12T10:29:13+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mannuan.github.io/post/20191012102913/</loc>
+    <lastmod>2019-10-12T10:29:13+08:00</lastmod>
   </url>
   
   <url>
@@ -1161,24 +1241,12 @@
   </url>
   
   <url>
-    <loc>https://mannuan.github.io/tags/shadowsocks/</loc>
-    <lastmod>2019-08-03T21:49:03+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://mannuan.github.io/post/20190803214903/</loc>
     <lastmod>2019-08-03T21:49:03+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://mannuan.github.io/tags/sslocal/</loc>
-    <lastmod>2019-08-03T21:49:03+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://mannuan.github.io/categories/%E7%BF%BB%E5%A2%99/</loc>
     <lastmod>2019-08-03T21:49:03+08:00</lastmod>
     <priority>0</priority>
   </url>
@@ -3040,12 +3108,6 @@
   </url>
   
   <url>
-    <loc>https://mannuan.github.io/tags/tar/</loc>
-    <lastmod>2019-06-02T13:51:44+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://mannuan.github.io/tags/%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</loc>
     <lastmod>2019-06-02T13:51:44+08:00</lastmod>
     <priority>0</priority>
@@ -3164,13 +3226,13 @@
   </url>
   
   <url>
-    <loc>https://mannuan.github.io/categories/mongodb/</loc>
+    <loc>https://mannuan.github.io/tags/mongodb/</loc>
     <lastmod>2019-05-30T16:16:20+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://mannuan.github.io/tags/mongodb/</loc>
+    <loc>https://mannuan.github.io/categories/mongodb/</loc>
     <lastmod>2019-05-30T16:16:20+08:00</lastmod>
     <priority>0</priority>
   </url>
@@ -3455,13 +3517,13 @@
   </url>
   
   <url>
-    <loc>https://mannuan.github.io/categories/jupyter/</loc>
+    <loc>https://mannuan.github.io/tags/jupyter/</loc>
     <lastmod>2019-05-15T15:55:13+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://mannuan.github.io/tags/jupyter/</loc>
+    <loc>https://mannuan.github.io/categories/jupyter/</loc>
     <lastmod>2019-05-15T15:55:13+08:00</lastmod>
     <priority>0</priority>
   </url>

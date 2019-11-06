@@ -5,10 +5,64 @@
     <link>https://mannuan.github.io/tags/</link>
     <description>Recent content in Tags on mannuan</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 06 Oct 2019 18:04:15 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 06 Nov 2019 10:07:46 +0800</lastBuildDate>
     
 	<atom:link href="https://mannuan.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>bbrplus</title>
+      <link>https://mannuan.github.io/tags/bbrplus/</link>
+      <pubDate>Wed, 06 Nov 2019 10:07:46 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/tags/bbrplus/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>shadowsocks</title>
+      <link>https://mannuan.github.io/tags/shadowsocks/</link>
+      <pubDate>Wed, 06 Nov 2019 10:07:46 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/tags/shadowsocks/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tar</title>
+      <link>https://mannuan.github.io/tags/tar/</link>
+      <pubDate>Tue, 22 Oct 2019 14:49:43 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/tags/tar/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>yarn</title>
+      <link>https://mannuan.github.io/tags/yarn/</link>
+      <pubDate>Sat, 12 Oct 2019 10:42:30 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/tags/yarn/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>yrm</title>
+      <link>https://mannuan.github.io/tags/yrm/</link>
+      <pubDate>Sat, 12 Oct 2019 10:42:30 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/tags/yrm/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>变量名</title>
+      <link>https://mannuan.github.io/tags/%E5%8F%98%E9%87%8F%E5%90%8D/</link>
+      <pubDate>Sat, 12 Oct 2019 10:29:13 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/tags/%E5%8F%98%E9%87%8F%E5%90%8D/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>业务能力</title>
@@ -272,7 +326,7 @@
     </item>
     
     <item>
-      <title>CSS</title>
+      <title>css</title>
       <link>https://mannuan.github.io/tags/css/</link>
       <pubDate>Sat, 31 Aug 2019 11:49:09 +0800</pubDate>
       
@@ -817,15 +871,6 @@
       <pubDate>Sat, 03 Aug 2019 21:59:30 +0800</pubDate>
       
       <guid>https://mannuan.github.io/tags/ubuntu16.04/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>shadowsocks</title>
-      <link>https://mannuan.github.io/tags/shadowsocks/</link>
-      <pubDate>Sat, 03 Aug 2019 21:49:03 +0800</pubDate>
-      
-      <guid>https://mannuan.github.io/tags/shadowsocks/</guid>
       <description></description>
     </item>
     
@@ -2464,15 +2509,6 @@
       <pubDate>Sun, 02 Jun 2019 13:51:44 +0800</pubDate>
       
       <guid>https://mannuan.github.io/tags/nohup/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>tar</title>
-      <link>https://mannuan.github.io/tags/tar/</link>
-      <pubDate>Sun, 02 Jun 2019 13:51:44 +0800</pubDate>
-      
-      <guid>https://mannuan.github.io/tags/tar/</guid>
       <description></description>
     </item>
     

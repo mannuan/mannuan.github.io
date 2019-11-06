@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>变量名 on mannuan</title>
+    <link>https://mannuan.github.io/tags/%E5%8F%98%E9%87%8F%E5%90%8D/</link>
+    <description>Recent content in 变量名 on mannuan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 12 Oct 2019 10:29:13 +0800</lastBuildDate>
+    
+	<atom:link href="https://mannuan.github.io/tags/%E5%8F%98%E9%87%8F%E5%90%8D/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>给变量取名的高效解决方法</title>
+      <link>https://mannuan.github.io/post/20191012102913/</link>
+      <pubDate>Sat, 12 Oct 2019 10:29:13 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20191012102913/</guid>
+      <description>给变量取名的高效解决方法 cerebro-codelf这个厂库目前已经有300多个赞了，支持一下。</description>
+    </item>
+    
+  </channel>
+</rss>

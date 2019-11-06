@@ -5,10 +5,20 @@
     <link>https://mannuan.github.io/categories/%E7%BF%BB%E5%A2%99/</link>
     <description>Recent content in 翻墙 on mannuan</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 03 Aug 2019 21:49:03 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 06 Nov 2019 10:07:46 +0800</lastBuildDate>
     
 	<atom:link href="https://mannuan.github.io/categories/%E7%BF%BB%E5%A2%99/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>服务端一键化翻墙脚本</title>
+      <link>https://mannuan.github.io/post/20191106100746/</link>
+      <pubDate>Wed, 06 Nov 2019 10:07:46 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20191106100746/</guid>
+      <description>bbrplus bbrplus一键安装脚本
+shadowsocks shadowsocks一键安装脚本</description>
+    </item>
     
     <item>
       <title>shadowsocks的sslocal的使用</title>

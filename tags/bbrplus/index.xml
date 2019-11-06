@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>bbrplus on mannuan</title>
+    <link>https://mannuan.github.io/tags/bbrplus/</link>
+    <description>Recent content in bbrplus on mannuan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Wed, 06 Nov 2019 10:07:46 +0800</lastBuildDate>
+    
+	<atom:link href="https://mannuan.github.io/tags/bbrplus/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>服务端一键化翻墙脚本</title>
+      <link>https://mannuan.github.io/post/20191106100746/</link>
+      <pubDate>Wed, 06 Nov 2019 10:07:46 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20191106100746/</guid>
+      <description>bbrplus bbrplus一键安装脚本
+shadowsocks shadowsocks一键安装脚本</description>
+    </item>
+    
+  </channel>
+</rss>
