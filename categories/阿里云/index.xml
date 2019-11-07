@@ -5,10 +5,23 @@
     <link>https://mannuan.github.io/categories/%E9%98%BF%E9%87%8C%E4%BA%91/</link>
     <description>Recent content in 阿里云 on mannuan</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 06 Nov 2019 15:56:49 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 07 Nov 2019 15:58:45 +0800</lastBuildDate>
     
 	<atom:link href="https://mannuan.github.io/categories/%E9%98%BF%E9%87%8C%E4%BA%91/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>记录一次阿里云服务器在账号间迁移的过程</title>
+      <link>https://mannuan.github.io/post/20191107155845/</link>
+      <pubDate>Thu, 07 Nov 2019 15:58:45 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20191107155845/</guid>
+      <description>前言 我先介绍一下，我目前阿里云服务器需要迁移的东西：
+ ECS服务器 域名 备案  迁移流程 购买新的ECS服务器 在新的阿里云账号上买一个新的ECS服务器（因为服务器通过域名访问，需要备案，而且备案时间比较长，大概需要两周）
+对ECS服务器进行备案 由于ECS服务器的ip发生了变化，所以需要重新备案，可以通过阿里云的备案系统进行备案
+转移域名 教程详见线上转移_域名转移至其他阿里云账号_域名转移_域名-阿里云
+迁移数据 教程参看阿里云服务器迁移教程</description>
+    </item>
     
     <item>
       <title>阿里云服务器迁移教程</title>

@@ -5,7 +5,7 @@
     <link>https://mannuan.github.io/tags/</link>
     <description>Recent content in Tags on mannuan</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 06 Nov 2019 15:56:49 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 07 Nov 2019 15:58:45 +0800</lastBuildDate>
     
 	<atom:link href="https://mannuan.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -13,9 +13,36 @@
     <item>
       <title>ECS</title>
       <link>https://mannuan.github.io/tags/ecs/</link>
-      <pubDate>Wed, 06 Nov 2019 15:56:49 +0800</pubDate>
+      <pubDate>Thu, 07 Nov 2019 15:58:45 +0800</pubDate>
       
       <guid>https://mannuan.github.io/tags/ecs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>aliyun</title>
+      <link>https://mannuan.github.io/tags/aliyun/</link>
+      <pubDate>Thu, 07 Nov 2019 15:58:45 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/tags/aliyun/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>域名</title>
+      <link>https://mannuan.github.io/tags/%E5%9F%9F%E5%90%8D/</link>
+      <pubDate>Thu, 07 Nov 2019 15:58:45 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/tags/%E5%9F%9F%E5%90%8D/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>备案</title>
+      <link>https://mannuan.github.io/tags/%E5%A4%87%E6%A1%88/</link>
+      <pubDate>Thu, 07 Nov 2019 15:58:45 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/tags/%E5%A4%87%E6%A1%88/</guid>
       <description></description>
     </item>
     
@@ -2833,15 +2860,6 @@
       <pubDate>Thu, 02 May 2019 14:01:32 +0800</pubDate>
       
       <guid>https://mannuan.github.io/tags/ssl/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>域名</title>
-      <link>https://mannuan.github.io/tags/%E5%9F%9F%E5%90%8D/</link>
-      <pubDate>Thu, 02 May 2019 14:01:32 +0800</pubDate>
-      
-      <guid>https://mannuan.github.io/tags/%E5%9F%9F%E5%90%8D/</guid>
       <description></description>
     </item>
     
