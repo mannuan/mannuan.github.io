@@ -5,20 +5,10 @@
     <link>https://mannuan.github.io/tags/%E5%8F%8D%E8%AE%BD/</link>
     <description>Recent content in 反讽 on mannuan</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 07 Aug 2019 22:13:47 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 22 Jul 2019 09:07:49 +0800</lastBuildDate>
     
 	<atom:link href="https://mannuan.github.io/tags/%E5%8F%8D%E8%AE%BD/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>基于情感以及各种规则的反讽检测</title>
-      <link>https://mannuan.github.io/post/20190807221347/</link>
-      <pubDate>Wed, 07 Aug 2019 22:13:47 +0800</pubDate>
-      
-      <guid>https://mannuan.github.io/post/20190807221347/</guid>
-      <description> 摘要 随着网络的快速发展，越来越多的网络社交平台出现。人们普遍通过社交网络来发泄直接对这个社会的不满，其中reddit是国外一个重要的社交平台。在网站中如果是讽刺的文字会用#sarcasm来标注，其中反讽是一个分析人类情感的很重要的一个平台。分析反讽的评论对公众的态度有很大的提升。以前，一般通过上下文来获取的一句话的反讽倾向，或者，提升句子语义的提取来获取反讽的评判依据。我认为之前的研究对于一个反讽的判别器来说太过于片面，没有整体地把握住反讽的评判标准。我认为应该同时考虑以上的两个方面，并且我认为反讽的检测还与情感的变化相关。上下文的反讽主要由于语境的不协调的引起的，因此我认为，可以与正面情感和负面活动的单词的数量、正面情感和负面活动的词对的长度有关。我通过几组实验验证了我的假设，实验表明我的模型优越于最先进的模型。
-介绍 </description>
-    </item>
     
     <item>
       <title>A Large Self-Annotated Corpus for Sarcasm</title>

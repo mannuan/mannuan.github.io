@@ -27,11 +27,6 @@
   </url>
   
   <url>
-    <loc>https://mannuan.github.io/post/20191106155649/</loc>
-    <lastmod>2019-11-06T15:56:49+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://mannuan.github.io/authors/</loc>
     <lastmod>2019-11-06T15:56:49+08:00</lastmod>
   </url>
@@ -88,6 +83,11 @@
     <loc>https://mannuan.github.io/categories/%E9%98%BF%E9%87%8C%E4%BA%91/</loc>
     <lastmod>2019-11-06T15:56:49+08:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mannuan.github.io/post/20191106155649/</loc>
+    <lastmod>2019-11-06T15:56:49+08:00</lastmod>
   </url>
   
   <url>
@@ -983,23 +983,6 @@
   </url>
   
   <url>
-    <loc>https://mannuan.github.io/tags/%E5%8F%8D%E8%AE%BD/</loc>
-    <lastmod>2019-08-07T22:13:47+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://mannuan.github.io/post/20190807221347/</loc>
-    <lastmod>2019-08-07T22:13:47+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://mannuan.github.io/categories/%E8%AE%BA%E6%96%87/</loc>
-    <lastmod>2019-08-07T22:13:47+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://mannuan.github.io/tags/dns/</loc>
     <lastmod>2019-08-07T11:09:59+08:00</lastmod>
     <priority>0</priority>
@@ -1430,6 +1413,12 @@
   </url>
   
   <url>
+    <loc>https://mannuan.github.io/tags/%E5%8F%8D%E8%AE%BD/</loc>
+    <lastmod>2019-07-22T09:07:49+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://mannuan.github.io/tags/%E6%95%B0%E6%8D%AE%E9%9B%86/</loc>
     <lastmod>2019-07-22T09:07:49+08:00</lastmod>
     <priority>0</priority>
@@ -1437,6 +1426,12 @@
   
   <url>
     <loc>https://mannuan.github.io/tags/%E7%BF%BB%E8%AF%91/</loc>
+    <lastmod>2019-07-22T09:07:49+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mannuan.github.io/categories/%E8%AE%BA%E6%96%87/</loc>
     <lastmod>2019-07-22T09:07:49+08:00</lastmod>
     <priority>0</priority>
   </url>
