@@ -5,10 +5,28 @@
     <link>https://mannuan.github.io/categories/</link>
     <description>Recent content in Categories on mannuan</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 07 Nov 2019 15:58:45 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 06 Dec 2019 22:06:09 +0800</lastBuildDate>
     
 	<atom:link href="https://mannuan.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>nlp</title>
+      <link>https://mannuan.github.io/categories/nlp/</link>
+      <pubDate>Fri, 06 Dec 2019 22:06:09 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/categories/nlp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>linux</title>
+      <link>https://mannuan.github.io/categories/linux/</link>
+      <pubDate>Fri, 15 Nov 2019 11:38:24 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/categories/linux/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>阿里云</title>
@@ -169,15 +187,6 @@
       <pubDate>Tue, 06 Aug 2019 19:23:14 +0800</pubDate>
       
       <guid>https://mannuan.github.io/categories/python/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>linux</title>
-      <link>https://mannuan.github.io/categories/linux/</link>
-      <pubDate>Sun, 04 Aug 2019 15:48:08 +0800</pubDate>
-      
-      <guid>https://mannuan.github.io/categories/linux/</guid>
       <description></description>
     </item>
     

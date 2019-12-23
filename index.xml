@@ -5,7 +5,7 @@
     <link>https://mannuan.github.io/</link>
     <description>Recent content in Home on mannuan</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 07 Nov 2019 15:58:45 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 06 Dec 2019 22:06:09 +0800</lastBuildDate>
     
 	<atom:link href="https://mannuan.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -30,6 +30,42 @@ Heading 3 Yet another, but centered! Excepteur sint occaecat cupidatat non proid
       <description>Mínimo is a Spanish word that roughly translate to Minimal.
 Minimo is a minimalist theme for Hugo.
 Minimo keeps the focus on your content and lets it shine!</description>
+    </item>
+    
+    <item>
+      <title>对单词嵌入的直观理解：从计数向量到Word2Vec</title>
+      <link>https://mannuan.github.io/post/20191206220609/</link>
+      <pubDate>Fri, 06 Dec 2019 22:06:09 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20191206220609/</guid>
+      <description>词嵌入 用非常简单的术语来说，“词嵌入”就是将文本转换为数字，并且同一文本可能会有不同的数字表示形式。在深入研究Word Embedding的细节之前，我们应该回答以下问题——为什么需要Word Embedding?</description>
+    </item>
+    
+    <item>
+      <title>An Intuitive Understanding of Word Embeddings: From Count Vectors to Word2Vec</title>
+      <link>https://mannuan.github.io/post/20191206194350/</link>
+      <pubDate>Fri, 06 Dec 2019 19:43:51 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20191206194350/</guid>
+      <description>Introduction Before we start, have a look at the below examples.
+ You open Google and search for a news article on the ongoing Champions trophy and get hundreds of search results in return about it.
+ Nate silver analysed millions of tweets and correctly predicted the results of 49 out of 50 states in 2008 U.S Presidential Elections.
+ You type a sentence in google translate in English and get an Equivalent Chinese conversion.</description>
+    </item>
+    
+    <item>
+      <title>Git服务器搭建</title>
+      <link>https://mannuan.github.io/post/20191115113824/</link>
+      <pubDate>Fri, 15 Nov 2019 11:38:24 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20191115113824/</guid>
+      <description>Git 服务器搭建 上一章节中我们远程仓库使用了 Github，Github 公开的项目是免费的，但是如果你不想让其他人看到你的项目就需要收费。
+这时我们就需要自己搭建一台Git服务器作为私有仓库使用。
+接下来我们将以 Centos 为例搭建 Git 服务器。
+1、安装Git $ yum install curl-devel expat-devel gettext-devel openssl-devel zlib-devel perl-devel $ yum install git 接下来我们 创建一个git用户组和用户，用来运行git服务： $ groupadd git $ useradd git -g git 2、创建证书登录 收集所有需要登录的用户的公钥，公钥位于id_rsa.pub文件中，把我们的公钥导入到/home/git/.ssh/authorized_keys文件里，一行一个。 如果没有该文件创建它：
+$ cd /home/git/$ mkdir .ssh $ chmod 755.ssh $ touch .ssh/authorized_keys $ chmod 644.ssh/authorized_keys 
+3、初始化Git仓库 首先我们选定一个目录作为Git仓库，假定是/home/gitrepo/runoob.git，在/home/gitrepo目录下输入命令：
+$ cd /home $ mkdir gitrepo $ chown git:git gitrepo/$ cd gitrepo $ git init --bare runoob.</description>
     </item>
     
     <item>
@@ -3041,7 +3077,7 @@ javascript代码 function bubbleSort(){ var arr = arguments[0]; for(var end=arr.
       <pubDate>Mon, 03 Jun 2019 14:35:36 +0800</pubDate>
       
       <guid>https://mannuan.github.io/post/20190603143536/</guid>
-      <description>标记 作用 备注     文字 字体加粗    连续两个空格 换行    连续两个回车 或 在空行处输出连续两个&amp;lt;br&amp;gt;&amp;lt;br&amp;gt; 空行    &amp;amp;nbsp; 它叫不换行空格，全称是 No-Break Space，它是最常见和我们使用最多的空格，大多数的人可能只接触了&amp;amp;nbsp;，它是按下space键产生的空格。 在HTML中，如果你用空格键产生此空格，空格是不会累加的（只算1个）。要使用html实体表示才可累加，该空格占据宽度受字体影响明显而强烈。   &amp;amp;ensp; 它叫“半角空格”，全称是 En Space ，en是字体排印学的计量单位，为em宽度的一半。根据定义，它等同于字体度的一半（如16px字体中就是8px）。名义上是小写字母n的宽度。 此空格传承空格家族一贯的特性：透明的，此空格有个相当稳健的特性，就是其占据的宽度正好是1/2个中文宽度，而且基本上不受字体影响。   &amp;amp;emsp; 它叫“全角空格”，全称是 Em Space ，em是字体排印学的计量单位，相当于当前指定的点数。例如，1em在16px的字体中就是16px。 此空格也传承空格家族一贯的特性：透明的，此空格也有个相当稳健的特性，就是其占据的宽度正好是1个中文宽度，而且基本上不受字体影响。   &amp;amp;thinsp; 它叫“窄空格”，全称是 Thin Space    。我们不妨称之为“瘦弱空格”，就是该空格长得比较瘦弱，身体单薄，占据的宽度比较小。它是em之六分之一宽。     &amp;amp;zwnj; 它叫零宽不连字，全称是 Zero Width Non Joiner，简称“ZWNJ”，是一个不打印字符，放在电子文本的两个字符之间，抑制本来会发生的连字，而是以这两个字符原本的字形来绘制。 Unicode中的零宽不连字字符映射为“”（zero width non-joiner，U+200C），HTML字符值引用为：“‌”   !</description>
+      <description>标记 作用 备注     **文字** 字体加粗    连续两个空格 换行    连续两个回车 或 在空行处输出连续两个&amp;lt;br&amp;gt;&amp;lt;br&amp;gt; 空行    &amp;amp;nbsp; 它叫不换行空格，全称是 No-Break Space，它是最常见和我们使用最多的空格，大多数的人可能只接触了&amp;amp;nbsp;，它是按下space键产生的空格。 在HTML中，如果你用空格键产生此空格，空格是不会累加的（只算1个）。要使用html实体表示才可累加，该空格占据宽度受字体影响明显而强烈。   &amp;amp;ensp; 它叫“半角空格”，全称是 En Space ，en是字体排印学的计量单位，为em宽度的一半。根据定义，它等同于字体度的一半（如16px字体中就是8px）。名义上是小写字母n的宽度。 此空格传承空格家族一贯的特性：透明的，此空格有个相当稳健的特性，就是其占据的宽度正好是1/2个中文宽度，而且基本上不受字体影响。   &amp;amp;emsp; 它叫“全角空格”，全称是 Em Space ，em是字体排印学的计量单位，相当于当前指定的点数。例如，1em在16px的字体中就是16px。 此空格也传承空格家族一贯的特性：透明的，此空格也有个相当稳健的特性，就是其占据的宽度正好是1个中文宽度，而且基本上不受字体影响。   &amp;amp;thinsp; 它叫“窄空格”，全称是 Thin Space    。我们不妨称之为“瘦弱空格”，就是该空格长得比较瘦弱，身体单薄，占据的宽度比较小。它是em之六分之一宽。     &amp;amp;zwnj; 它叫零宽不连字，全称是 Zero Width Non Joiner，简称“ZWNJ”，是一个不打印字符，放在电子文本的两个字符之间，抑制本来会发生的连字，而是以这两个字符原本的字形来绘制。 Unicode中的零宽不连字字符映射为“”（zero width non-joiner，U+200C），HTML字符值引用为：“‌”   !</description>
     </item>
     
     <item>

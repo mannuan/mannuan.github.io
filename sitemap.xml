@@ -4,12 +4,12 @@
   
   <url>
     <loc>https://mannuan.github.io/</loc>
-    <lastmod>2019-11-07T15:58:45+08:00</lastmod>
+    <lastmod>2019-12-06T22:06:09+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://mannuan.github.io/post/</loc>
-    <lastmod>2019-11-07T15:58:45+08:00</lastmod>
+    <lastmod>2019-12-06T22:06:09+08:00</lastmod>
   </url>
   
   <url>
@@ -28,12 +28,63 @@
   
   <url>
     <loc>https://mannuan.github.io/authors/</loc>
-    <lastmod>2019-11-07T15:58:45+08:00</lastmod>
+    <lastmod>2019-12-06T22:06:09+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://mannuan.github.io/categories/</loc>
-    <lastmod>2019-11-07T15:58:45+08:00</lastmod>
+    <lastmod>2019-12-06T22:06:09+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mannuan.github.io/tags/</loc>
+    <lastmod>2019-12-06T22:06:09+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mannuan.github.io/authors/mannuan/</loc>
+    <lastmod>2019-12-06T22:06:09+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mannuan.github.io/categories/nlp/</loc>
+    <lastmod>2019-12-06T22:06:09+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mannuan.github.io/tags/word-embedding/</loc>
+    <lastmod>2019-12-06T22:06:09+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mannuan.github.io/post/20191206220609/</loc>
+    <lastmod>2019-12-06T22:06:09+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mannuan.github.io/post/20191206194350/</loc>
+    <lastmod>2019-12-06T19:43:51+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mannuan.github.io/post/20191115113824/</loc>
+    <lastmod>2019-11-15T11:38:24+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://mannuan.github.io/tags/git/</loc>
+    <lastmod>2019-11-15T11:38:24+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://mannuan.github.io/categories/linux/</loc>
+    <lastmod>2019-11-15T11:38:24+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -44,19 +95,7 @@
   </url>
   
   <url>
-    <loc>https://mannuan.github.io/tags/</loc>
-    <lastmod>2019-11-07T15:58:45+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://mannuan.github.io/tags/aliyun/</loc>
-    <lastmod>2019-11-07T15:58:45+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://mannuan.github.io/authors/mannuan/</loc>
     <lastmod>2019-11-07T15:58:45+08:00</lastmod>
     <priority>0</priority>
   </url>
@@ -1237,12 +1276,6 @@
   
   <url>
     <loc>https://mannuan.github.io/tags/jpegoptim/</loc>
-    <lastmod>2019-08-04T15:48:08+08:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://mannuan.github.io/categories/linux/</loc>
     <lastmod>2019-08-04T15:48:08+08:00</lastmod>
     <priority>0</priority>
   </url>

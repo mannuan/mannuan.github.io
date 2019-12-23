@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>git on mannuan</title>
+    <link>https://mannuan.github.io/tags/git/</link>
+    <description>Recent content in git on mannuan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 15 Nov 2019 11:38:24 +0800</lastBuildDate>
+    
+	<atom:link href="https://mannuan.github.io/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Git服务器搭建</title>
+      <link>https://mannuan.github.io/post/20191115113824/</link>
+      <pubDate>Fri, 15 Nov 2019 11:38:24 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20191115113824/</guid>
+      <description>Git 服务器搭建 上一章节中我们远程仓库使用了 Github，Github 公开的项目是免费的，但是如果你不想让其他人看到你的项目就需要收费。
+这时我们就需要自己搭建一台Git服务器作为私有仓库使用。
+接下来我们将以 Centos 为例搭建 Git 服务器。
+1、安装Git $ yum install curl-devel expat-devel gettext-devel openssl-devel zlib-devel perl-devel $ yum install git 接下来我们 创建一个git用户组和用户，用来运行git服务： $ groupadd git $ useradd git -g git 2、创建证书登录 收集所有需要登录的用户的公钥，公钥位于id_rsa.pub文件中，把我们的公钥导入到/home/git/.ssh/authorized_keys文件里，一行一个。 如果没有该文件创建它：
+$ cd /home/git/$ mkdir .ssh $ chmod 755.ssh $ touch .ssh/authorized_keys $ chmod 644.ssh/authorized_keys 
+3、初始化Git仓库 首先我们选定一个目录作为Git仓库，假定是/home/gitrepo/runoob.git，在/home/gitrepo目录下输入命令：
+$ cd /home $ mkdir gitrepo $ chown git:git gitrepo/$ cd gitrepo $ git init --bare runoob.</description>
+    </item>
+    
+  </channel>
+</rss>

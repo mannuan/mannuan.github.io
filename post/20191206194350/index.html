@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<html lang='en'><head>
+  <meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='description' content='Introduction Before we start, have a look at the below examples.
+ You open Google and search for a news article on the ongoing Champions trophy and get hundreds of search results in return about it.
+ Nate silver analysed millions of tweets and correctly predicted the results of 49 out of 50 states in 2008 U.S Presidential Elections.
+ You type a sentence in google translate in English and get an Equivalent Chinese conversion.'>
+<meta name='theme-color' content='#FFFFFF'>
+
+<meta property='og:title' content='An Intuitive Understanding of Word Embeddings: From Count Vectors to Word2Vec • mannuan'>
+<meta property='og:description' content='Introduction Before we start, have a look at the below examples.
+ You open Google and search for a news article on the ongoing Champions trophy and get hundreds of search results in return about it.
+ Nate silver analysed millions of tweets and correctly predicted the results of 49 out of 50 states in 2008 U.S Presidential Elections.
+ You type a sentence in google translate in English and get an Equivalent Chinese conversion.'>
+<meta property='og:url' content='https://mannuan.github.io/post/20191206194350/'>
+<meta property='og:site_name' content='mannuan'>
+<meta property='og:type' content='article'><meta property='og:image' content='https://www.gravatar.com/avatar/8bacfd69855171c6f53247456732f68a?s=256'><meta property='article:section' content='post'><meta property='article:tag' content='word embedding'><meta property='article:published_time' content='2019-12-06T19:43:51&#43;08:00'/><meta property='article:modified_time' content='2019-12-06T19:43:51&#43;08:00'/><meta name='twitter:card' content='summary'>
+
+<meta name="generator" content="Hugo 0.55.6" />
+
+  <title>An Intuitive Understanding of Word Embeddings: From Count Vectors to Word2Vec • mannuan</title>
+  <link rel='canonical' href='https://mannuan.github.io/post/20191206194350/'>
+  
+  
+  <link rel='icon' href='/favicon.ico'>
+<link rel='stylesheet' href='/assets/css/main.6a060eb7.css'><link rel='stylesheet' href='/css/custom.css'><style>
+:root{--color-accent:#FFFFFF;}
+</style>
+
+  
+
+</head>
+<body class='page type-post has-sidebar'>
+
+  <div class='site'><div id='sidebar' class='sidebar'>
+  <a class='screen-reader-text' href='#main-menu'>Skip to Main Menu</a>
+
+  <div class='container'><section class='widget widget-about sep-after'>
+  <header>
+    
+    <div class='logo'>
+      <a href='/'>
+        <img src='/images/%e6%88%91%e7%9a%84%e5%a4%b4%e5%83%8f.jpeg'>
+      </a>
+    </div>
+    
+    <h2 class='title site-title '>
+      <a href='/'>
+      mannuan
+      </a>
+    </h2>
+    <div class='desc'>
+    Rome was not built in a day.
+    </div>
+  </header>
+
+</section>
+<section class='widget widget-search sep-after'>
+  <header>
+    <h4 class='title widget-title'>Search</h4>
+  </header>
+
+  <form action='/search' id='search-form' class='search-form'>
+    <label>
+      <span class='screen-reader-text'>Search</span>
+      <input id='search-term' class='search-term' type='search' name='q' placeholder='Search&hellip;'>
+    </label></form>
+
+</section>
+<section class='widget widget-sidebar_menu sep-after'><nav id='sidebar-menu' class='menu sidebar-menu' aria-label='Sidebar Menu'>
+    <div class='container'>
+      <ul><li class='item'>
+  <a href='https://github.com/mannuan'>Github</a></li><li class='item'>
+  <a href='/skill-content/dist/'>skills</a></li><li class='item has-children'>
+  <a href=''>网络实验</a><button class='sub-menu-toggler'>
+    <span class='screen-reader-text'>expand sub menu</span>
+    <span class='sign'></span>
+  </button>
+
+  <ul class='sub-menu'><li class='item'>
+  <a href='/post/20190701101121/'>实验九</a></li><li class='item'>
+  <a href='/post/20190701090625/'>实验八</a></li><li class='item'>
+  <a href='/post/20190701105039/'>实验六</a></li><li class='item'>
+  <a href='/post/20190701172233/'>实验十</a></li><li class='item'>
+  <a href='/post/20190701182805/'>实验十一</a></li><li class='item'>
+  <a href='/post/20190701194642/'>实验十三</a></li><li class='item'>
+  <a href='/post/20190701192111/'>实验十二</a></li></ul></li><li class='item has-children'>
+  <a href=''>面经</a><button class='sub-menu-toggler'>
+    <span class='screen-reader-text'>expand sub menu</span>
+    <span class='sign'></span>
+  </button>
+
+  <ul class='sub-menu'><li class='item'>
+  <a href='/post/20190813191500/'>网易严选1</a></li><li class='item'>
+  <a href='/post/20190813190824/'>网易严选2</a></li></ul></li></ul>
+    </div>
+  </nav>
+
+</section><section class='widget widget-taxonomy_cloud sep-after'>
+  <header>
+    <h4 class='title widget-title'>Categories</h4>
+  </header>
+
+  <div class='container list-container'>
+  <ul class='list taxonomy-cloud'><li>
+        <a href='/categories/features/' style='font-size:1.1194029850746268em'>features</a>
+      </li><li>
+        <a href='/categories/ide/' style='font-size:1.0223880597014925em'>ide</a>
+      </li><li>
+        <a href='/categories/jupyter/' style='font-size:1.0149253731343284em'>jupyter</a>
+      </li><li>
+        <a href='/categories/linux/' style='font-size:1.1343283582089552em'>linux</a>
+      </li><li>
+        <a href='/categories/linux%E5%91%BD%E4%BB%A4/' style='font-size:1em'>linux命令</a>
+      </li><li>
+        <a href='/categories/mac/' style='font-size:1.126865671641791em'>mac</a>
+      </li><li>
+        <a href='/categories/mongodb/' style='font-size:1.0298507462686568em'>mongodb</a>
+      </li><li>
+        <a href='/categories/nlp/' style='font-size:1.007462686567164em'>nlp</a>
+      </li><li>
+        <a href='/categories/others/' style='font-size:1em'>others</a>
+      </li><li>
+        <a href='/categories/pip/' style='font-size:1em'>pip</a>
+      </li><li>
+        <a href='/categories/python/' style='font-size:1.044776119402985em'>python</a>
+      </li><li>
+        <a href='/categories/shell/' style='font-size:1em'>shell</a>
+      </li><li>
+        <a href='/categories/tutorial/' style='font-size:1.007462686567164em'>Tutorial</a>
+      </li><li>
+        <a href='/categories/vscode/' style='font-size:1.007462686567164em'>vscode</a>
+      </li><li>
+        <a href='/categories/%E4%BD%9C%E8%80%85/' style='font-size:1em'>作者</a>
+      </li><li>
+        <a href='/categories/%E5%85%AC%E5%8A%A1%E5%91%98/' style='font-size:1em'>公务员</a>
+      </li><li>
+        <a href='/categories/%E5%86%99%E4%BD%9C/' style='font-size:1.007462686567164em'>写作</a>
+      </li><li>
+        <a href='/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91/' style='font-size:2em'>前端开发</a>
+      </li><li>
+        <a href='/categories/%E5%89%8D%E7%AB%AF%E5%BC%80%E5%8F%91%E9%9D%A2%E8%AF%95/' style='font-size:1.0149253731343284em'>前端开发面试</a>
+      </li><li>
+        <a href='/categories/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/' style='font-size:1em'>博客搭建</a>
+      </li><li>
+        <a href='/categories/%E5%90%8E%E7%AB%AF%E5%BC%80%E5%8F%91/' style='font-size:1.0149253731343284em'>后端开发</a>
+      </li><li>
+        <a href='/categories/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/' style='font-size:1.0149253731343284em'>基础知识</a>
+      </li><li>
+        <a href='/categories/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/' style='font-size:1.007462686567164em'>学习方法</a>
+      </li><li>
+        <a href='/categories/%E5%AD%A6%E6%9C%AF/' style='font-size:1em'>学术</a>
+      </li><li>
+        <a href='/categories/%E5%B7%A5%E5%85%B7/' style='font-size:1.0149253731343284em'>工具</a>
+      </li><li>
+        <a href='/categories/%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7/' style='font-size:1em'>开发工具</a>
+      </li><li>
+        <a href='/categories/%E5%BC%80%E5%8F%91%E6%95%88%E7%8E%87/' style='font-size:1em'>开发效率</a>
+      </li><li>
+        <a href='/categories/%E5%BC%80%E5%8F%91%E6%96%87%E6%A1%A3/' style='font-size:1em'>开发文档</a>
+      </li><li>
+        <a href='/categories/%E6%95%B0%E5%AD%A6/' style='font-size:1em'>数学</a>
+      </li><li>
+        <a href='/categories/%E6%95%B0%E6%8D%AE%E5%BA%93/' style='font-size:1em'>数据库</a>
+      </li><li>
+        <a href='/categories/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/' style='font-size:1.0298507462686568em'>数据结构</a>
+      </li><li>
+        <a href='/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/' style='font-size:1.0149253731343284em'>机器学习</a>
+      </li><li>
+        <a href='/categories/%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/' style='font-size:1em'>正则表达式</a>
+      </li><li>
+        <a href='/categories/%E7%88%AC%E8%99%AB/' style='font-size:1.0820895522388059em'>爬虫</a>
+      </li><li>
+        <a href='/categories/%E7%AE%97%E6%B3%95/' style='font-size:1.0746268656716418em'>算法</a>
+      </li><li>
+        <a href='/categories/%E7%AE%97%E6%B3%95%E9%A2%98/' style='font-size:1.0820895522388059em'>算法题</a>
+      </li><li>
+        <a href='/categories/%E7%B3%BB%E7%BB%9F/' style='font-size:1.0149253731343284em'>系统</a>
+      </li><li>
+        <a href='/categories/%E7%BC%96%E7%A0%81%E8%BD%AC%E6%8D%A2/' style='font-size:1em'>编码转换</a>
+      </li><li>
+        <a href='/categories/%E7%BC%96%E7%A8%8B%E5%BC%80%E5%8F%91/' style='font-size:1em'>编程开发</a>
+      </li><li>
+        <a href='/categories/%E7%BC%96%E8%BE%91%E5%99%A8/' style='font-size:1em'>编辑器</a>
+      </li><li>
+        <a href='/categories/%E7%BD%91%E7%BB%9C/' style='font-size:1em'>网络</a>
+      </li><li>
+        <a href='/categories/%E7%BD%91%E7%BB%9C%E5%8D%8F%E8%AE%AE/' style='font-size:1.0895522388059702em'>网络协议</a>
+      </li><li>
+        <a href='/categories/%E7%BF%BB%E5%A2%99/' style='font-size:1.0223880597014925em'>翻墙</a>
+      </li><li>
+        <a href='/categories/%E8%8B%B1%E8%AF%AD/' style='font-size:1.1119402985074627em'>英语</a>
+      </li><li>
+        <a href='/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/' style='font-size:1.0149253731343284em'>计算机基础</a>
+      </li><li>
+        <a href='/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/' style='font-size:1.044776119402985em'>计算机网络</a>
+      </li><li>
+        <a href='/categories/%E8%AE%BA%E6%96%87/' style='font-size:1.0298507462686568em'>论文</a>
+      </li><li>
+        <a href='/categories/%E8%B0%83%E8%AF%95/' style='font-size:1em'>调试</a>
+      </li><li>
+        <a href='/categories/%E8%BD%AF%E4%BB%B6%E4%BD%BF%E7%94%A8/' style='font-size:1.0149253731343284em'>软件使用</a>
+      </li><li>
+        <a href='/categories/%E9%98%BF%E9%87%8C%E4%BA%91/' style='font-size:1.007462686567164em'>阿里云</a>
+      </li></ul>
+</div>
+
+
+</section>
+</div>
+
+  <div class='sidebar-overlay'></div>
+</div><div class='main'><nav id='main-menu' class='menu main-menu' aria-label='Main Menu'>
+  <div class='container'>
+    <a class='screen-reader-text' href='#content'>Skip to Content</a>
+
+<button id='sidebar-toggler' class='sidebar-toggler' aria-controls='sidebar'>
+  <span class='screen-reader-text'>Toggle Sidebar</span>
+  <span class='open'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="3" y1="12" x2="21" y2="12" />
+  <line x1="3" y1="6" x2="21" y2="6" />
+  <line x1="3" y1="18" x2="21" y2="18" />
+  
+</svg>
+</span>
+  <span class='close'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="18" y1="6" x2="6" y2="18" />
+  <line x1="6" y1="6" x2="18" y2="18" />
+  
+</svg>
+</span>
+</button>
+    <ul><li class='item'>
+        <a href='/'>Home</a>
+      </li><li class='item'>
+        <a href='/post/'>blogs</a>
+      </li><li class='item'>
+        <a href='/skill-content/dist/'>skills</a>
+      </li><li class='item'>
+        <a href='/tags/'>tags</a>
+      </li></ul>
+  </div>
+</nav><div class='header-widgets'>
+        <div class='container'>
+    
+    <style>.widget-breadcrumbs li:after{content:'\2f '}</style>
+  <section class='widget widget-breadcrumbs sep-after'>
+    <nav id='breadcrumbs'>
+      <ol><li><a href='/'>Home</a></li><li><a href='/post/'>blogs</a></li><li><span>An Intuitive Understanding of Word Embeddings: From Count Vectors to Word2Vec</span></li></ol>
+    </nav>
+  </section></div>
+      </div>
+
+      <header id='header' class='header site-header'>
+        <div class='container sep-after'>
+          <div class='header-info'><p class='site-title title'>mannuan</p><p class='desc site-desc'>Rome was not built in a day.</p>
+          </div>
+        </div>
+      </header>
+
+      <main id='content'>
+
+
+<article lang='en' class='entry'>
+  <header class='header entry-header'>
+  <div class='container sep-after'>
+    <div class='header-info'>
+      <h1 class='title'>An Intuitive Understanding of Word Embeddings: From Count Vectors to Word2Vec</h1>
+      
+
+    </div>
+    <div class='entry-meta'>
+  <span class='posted-on'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+  <line x1="16" y1="2" x2="16" y2="6"/>
+  <line x1="8" y1="2" x2="8" y2="6"/>
+  <line x1="3" y1="10" x2="21" y2="10"/>
+  
+</svg>
+<span class='screen-reader-text'>Posted on </span>
+  <time class='entry-date' datetime='2019-12-06T19:43:51&#43;08:00'>2019, Dec 06</time>
+</span>
+
+  <span class='byline'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M21,21V20c0-2.76-4-5-9-5s-9,2.24-9,5v1"/>
+  <path d="M16,6.37A4,4,0,1,1,12.63,3,4,4,0,0,1,16,6.37Z"/>
+  
+</svg>
+<span class='screen-reader-text'> by </span><a href='/authors/mannuan'>mannuan</a></span>
+  
+<span class='reading-time'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <circle cx="12" cy="12" r="10"/>
+  <polyline points="12 6 12 12 15 15"/>
+  
+</svg>
+21 mins read
+</span>
+
+
+</div>
+
+
+  </div>
+</header>
+
+  
+  
+<details class='container entry-toc'>
+  <summary class='title'>
+    <span>Table of Contents</span>
+  </summary>
+  <nav id="TableOfContents">
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#what-are-word-embeddings">What are Word Embeddings?</a></li>
+<li><a href="#different-types-of-word-embeddings">Different types of Word Embeddings</a>
+<ul>
+<li><a href="#frequency-based-embedding">Frequency based Embedding</a>
+<ul>
+<li><a href="#count-vector">Count Vector</a></li>
+<li><a href="#tf-idf-vectorization">TF-IDF vectorization</a></li>
+<li><a href="#co-occurrence-matrix-with-a-fixed-context-window">Co-Occurrence Matrix with a fixed context window</a>
+<ul>
+<li><a href="#variations-of-co-occurrence-matrix">Variations of Co-occurrence Matrix</a></li>
+<li><a href="#advantages-of-co-occurrence-matrix">Advantages of Co-occurrence Matrix</a></li>
+<li><a href="#disadvantages-of-co-occurrence-matrix">Disadvantages of Co-Occurrence Matrix</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#prediction-based-vector">Prediction based Vector</a>
+<ul>
+<li><a href="#cbow-continuous-bag-of-words">CBOW(Continuous Bag of words)</a>
+<ul>
+<li><a href="#advantages-of-cbow">Advantages of CBOW:</a></li>
+<li><a href="#disadvantages-of-cbow">Disadvantages of CBOW:</a></li>
+</ul></li>
+<li><a href="#skip-gram-model">Skip–Gram model</a>
+<ul>
+<li><a href="#advantages-of-skip-gram-model">Advantages of Skip-Gram Model</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+<li><a href="#word-embeddings-use-case-scenarios">Word Embeddings use case scenarios</a></li>
+<li><a href="#using-pre-trained-word-vectors">Using pre-trained word vectors</a></li>
+<li><a href="#training-your-own-word-vectors">Training your own word vectors</a></li>
+<li><a href="#end-notes">End Notes</a></li>
+</ul>
+</nav>
+</details>
+
+
+  <div class='container entry-content'>
+  
+
+<h1 id="introduction">Introduction</h1>
+
+<p>Before we start, have a look at the below examples.<br></p>
+
+<ol>
+<li>You open Google and search for a news article on the ongoing Champions trophy and get hundreds of search results in return about it.<br></li>
+<li>Nate silver analysed millions of tweets and correctly predicted the results of 49 out of 50 states in 2008 U.S Presidential Elections.<br></li>
+<li>You type a sentence in google translate in English and get an Equivalent Chinese conversion.<br>
+<img src="/images/collage.png" data-action="zoom"></li>
+</ol>
+
+<p>So what do the above examples have in common?<br></p>
+
+<p>You possible guessed it right – <strong>TEXT processing</strong>. All the above three scenarios deal with humongous amount of text to perform different range of tasks like clustering in the google search example, classification in the second and Machine Translation in the third.<br></p>
+
+<p>Humans can deal with text format quite intuitively but provided we have millions of documents being generated in a single day, we cannot have humans performing the above the three tasks. It is neither scalable nor effective.<br></p>
+
+<div style="text-align: center;">
+<img src="/images/joke-297x300.jpg" data-action="zoom">
+</div>
+
+<p>So, how do we make computers of today perform clustering, classification etc on a text data since we know that they are generally inefficient at handling and processing strings or texts for any fruitful outputs?<br></p>
+
+<p>Sure, a computer can match two strings and tell you whether they are same or not. But how do we make computers tell you about football or Ronaldo when you search for Messi? How do you make a computer understand that “Apple” in “Apple is a tasty fruit” is a fruit that can be eaten and not a company?<br></p>
+
+<p>The answer to the above questions lie in creating a representation for words that capture their <em>meanings, semantic relationships</em> and the different types of contexts they are used in.<br></p>
+
+<p>And all of these are implemented by using Word Embeddings or numerical representations of texts so that computers may handle them.<br></p>
+
+<p>Below, we will see formally what are Word Embeddings and their different types and how we can actually implement them to perform the tasks like returning efficient Google search results.<br></p>
+
+<h1 id="what-are-word-embeddings">What are Word Embeddings?</h1>
+
+<p>In very simplistic terms, Word Embeddings are the texts converted into numbers and there may be different numerical representations of the same text. But before we dive into the details of Word Embeddings, the following question should be asked – Why do we need Word Embeddings?<br></p>
+
+<p>As it turns out, many Machine Learning algorithms and almost all Deep Learning Architectures are incapable of processing <em>strings</em> or <em>plain</em> text in their raw form. They require numbers as inputs to perform any sort of job, be it classification, regression etc. in broad terms. And with the huge amount of data that is present in the text format, it is imperative to extract knowledge out of it and build applications. Some real world applications of text applications are – sentiment analysis of reviews by Amazon etc., document or news classification or clustering by Google etc.<br></p>
+
+<p>Let us now define Word Embeddings formally. A Word Embedding format generally tries to map a word using a dictionary to a vector. Let us break this sentence down into finer details to have a clear view.<br></p>
+
+<p>Take a look at this example – <strong>sentence</strong>=&ldquo;Word Embeddings are Word converted into numbers&rdquo;<br></p>
+
+<p>A word in this <strong>sentence</strong> may be “Embeddings” or “numbers ” etc.<br></p>
+
+<p>A dictionary may be the list of all unique words in the <strong>sentence</strong>. So, a dictionary may look like – [‘Word’,’Embeddings’,’are’,’Converted’,’into’,’numbers’]<br></p>
+
+<p>A vector representation of a word may be a one-hot encoded vector where 1 stands for the position where the word exists and 0 everywhere else. The vector representation of &ldquo;numbers&rdquo; in this format according to the above dictionary is [0,0,0,0,0,1] and of converted is[0,0,0,1,0,0].<br></p>
+
+<p>This is just a very simple method to represent a word in the vector form. Let us look at different types of Word Embeddings or Word Vectors and their advantages and disadvantages over the rest.<br></p>
+
+<h1 id="different-types-of-word-embeddings">Different types of Word Embeddings</h1>
+
+<p>The different types of word embeddings can be broadly classified into two categories-<br></p>
+
+<ol>
+<li>Frequency based Embedding</li>
+<li>Prediction based Embedding</li>
+</ol>
+
+<p>Let us try to understand each of these methods in detail.<br></p>
+
+<h2 id="frequency-based-embedding">Frequency based Embedding</h2>
+
+<p>There are generally three types of vectors that we encounter under this category.<br></p>
+
+<ol>
+<li>Count Vector</li>
+<li>TF-IDF Vector</li>
+<li>Co-Occurrence Vector</li>
+</ol>
+
+<p>Let us look into each of these vectorization methods in detail.<br></p>
+
+<h3 id="count-vector">Count Vector</h3>
+
+<p>Consider a Corpus C of D documents \(\{d_1,d_2,\cdots,d_D\}\) and N unique tokens extracted out of the corpus C. The N tokens will form our dictionary and the size of the Count Vector matrix M will be given by \(D\times N\). Each row in the matrix M contains the frequency of tokens in document D(i).<br></p>
+
+<p>Let us understand this using a simple example.<br></p>
+
+<p>D1: He is a lazy boy. She is also lazy.<br></p>
+
+<p>D2: Neeraj is a lazy person.<br></p>
+
+<p>The dictionary created may be a list of unique tokens(words) in the corpus =[&ldquo;He&rdquo;, &ldquo;She&rdquo;, &ldquo;lazy&rdquo;, &ldquo;boy&rdquo;, &ldquo;Neeraj&rdquo;, &ldquo;person&rdquo;]<br></p>
+
+<p>Here, D=2, N=6<br></p>
+
+<p>The count matrix M of size 2 X 6 will be represented as –<br></p>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th>He</th>
+<th>She</th>
+<th>lazy</th>
+<th>boy</th>
+<th>Neeraj</th>
+<th>person</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>D1</td>
+<td>1</td>
+<td>1</td>
+<td>2</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+</tr>
+
+<tr>
+<td>D2</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+
+<p>Now, a column can also be understood as word vector for the corresponding word in the matrix M. For example, the word vector for &ldquo;lazy&rdquo; in the above matrix is [2,1] and so on.Here, the <em>rows</em> correspond to the <em>documents</em> in the corpus and the <em>columns</em> correspond to the <em>tokens</em> in the dictionary. The second row in the above matrix may be read as – D2 contains &ldquo;lazy&rdquo;: once, &ldquo;Neeraj&rdquo;: once and &ldquo;person&rdquo; once.<br></p>
+
+<p>Now there may be quite a few variations while preparing the above matrix M. The variations will be generally in-<br></p>
+
+<ol>
+<li>The way dictionary is prepared.<br>
+Why? Because in real world applications we might have a corpus which contains millions of documents. And with millions of document, we can extract hundreds of millions of unique words. So basically, the matrix that will be prepared like above will be a very sparse one and inefficient for any computation. So an alternative to using every unique word as a dictionary element would be to pick say top 10,000 words based on frequency and then prepare a dictionary.</li>
+<li>The way count is taken for each word.<br>
+We may either take the frequency (number of times a word has appeared in the document) or the presence(has the word appeared in the document?) to be the entry in the count matrix M. But generally, frequency method is preferred over the latter.</li>
+</ol>
+
+<p>Below is a representational image of the matrix M for easy understanding.<br>
+<div style="text-align: center;">
+<img src="/images/count-vector.png" data-action="zoom">
+</div></p>
+
+<h3 id="tf-idf-vectorization">TF-IDF vectorization</h3>
+
+<p>This is another method which is based on the frequency method but it is different to the count vectorization in the sense that it takes into account not just the occurrence of a word in a single document but in the entire corpus. So, what is the rationale behind this? Let us try to understand.<br></p>
+
+<p>Common words like &ldquo;is&rdquo;, &ldquo;the&rdquo;, &ldquo;a&rdquo; etc. tend to appear quite frequently in comparison to the words which are important to a document. For example, a document <strong>A</strong> on Lionel Messi is going to contain more occurences of the word &ldquo;Messi&rdquo; in comparison to other documents. But common words like &ldquo;the&rdquo; etc. are also going to be present in higher frequency in almost every document.<br></p>
+
+<p>Ideally, what we would want is to down weight the common words occurring in almost all documents and give more importance to words that appear in a subset of documents.<br></p>
+
+<p>TF-IDF works by penalising these common words by assigning them lower weights while giving importance to words like &ldquo;Messi&rdquo; in a particular document.<br></p>
+
+<p>So, how exactly does TF-IDF work?<br></p>
+
+<p>Consider the below sample table which gives the count of terms(tokens/words) in two documents.<br></p>
+
+<div style="text-align: center;">
+<img src="/images/Tf-IDF.png" data-action="zoom">
+</div>
+
+<p>Now, let us define a few terms related to TF-IDF.<br></p>
+
+<p>TF = (Number of times term t appears in a document)/(Number of terms in the document)<br></p>
+
+<p>So, TF(This,Document1) = <sup>1</sup>&frasl;<sub>8</sub><br></p>
+
+<p>TF(This, Document2)=<sup>1</sup>&frasl;<sub>5</sub><br></p>
+
+<p>It denotes the contribution of the word to the document i.e words relevant to the document should be frequent. eg: A document about Messi should contain the word &ldquo;Messi&rdquo; in large number.<br></p>
+
+<p>IDF = log(N/n), where, N is the number of documents and n is the number of documents a term t has appeared in.<br></p>
+
+<p>So, IDF(This) = log(<sup>2</sup>&frasl;<sub>2</sub>) = 0.<br></p>
+
+<p>So, how do we explain the reasoning behind IDF? Ideally, if a word has appeared in all the document, then probably that word is not relevant to a particular document. But if it has appeared in a subset of documents then probably the word is of some relevance to the documents it is present in.<br></p>
+
+<p>Let us compute IDF for the word &ldquo;Messi&rdquo;.<br></p>
+
+<p>IDF(Messi) = log(<sup>2</sup>&frasl;<sub>1</sub>) = 0.301.<br></p>
+
+<p>Now, let us compare the TF-IDF for a common word &ldquo;This&rdquo; and a word &ldquo;Messi&rdquo; which seems to be of relevance to Document 1.<br></p>
+
+<p>TF-IDF(This,Document1) = (<sup>1</sup>&frasl;<sub>8</sub>) * (0) = 0<br></p>
+
+<p>TF-IDF(This, Document2) = (<sup>1</sup>&frasl;<sub>5</sub>) * (0) = 0<br></p>
+
+<p>TF-IDF(Messi, Document1) = (<sup>4</sup>&frasl;<sub>8</sub>)*0.301 = 0.15<br></p>
+
+<p>As, you can see for Document1 , TF-IDF method heavily penalises the word &ldquo;This&rdquo; but assigns greater weight to &ldquo;Messi&rdquo;. So, this may be understood as &ldquo;Messi&rdquo; is an important word for Document1 from the context of the entire corpus.<br></p>
+
+<h3 id="co-occurrence-matrix-with-a-fixed-context-window">Co-Occurrence Matrix with a fixed context window</h3>
+
+<p><strong>The big idea</strong> – Similar words tend to occur together and will have similar context for example – Apple is a fruit. Mango is a fruit.<br>
+Apple and mango tend to have a similar context i.e fruit.<br></p>
+
+<p>Before I dive into the details of how a co-occurrence matrix is constructed, there are two concepts that need to be clarified – Co-Occurrence and Context Window.<br></p>
+
+<p>Co-occurrence – For a given corpus, the co-occurrence of a pair of words say w1 and w2 is the number of times they have appeared together in a Context Window.<br></p>
+
+<p>Context Window – Context window is specified by a number and the direction. So what does a context window of 2 (around) means? Let us see an example below,<br></p>
+
+<table>
+<tr>
+<td style="background: #98FB98;">Quick</td>
+<td style="background: #98FB98;">Brown</td>
+<td style="background: #FF4500;">Fox</td>
+<td style="background: #98FB98;">Jump</td>
+<td style="background: #98FB98;">Over</td>
+<td>The</td>
+<td>Lazy</td>
+<td>Dog</td>
+</tr>
+</table>
+
+<p>The green words are a 2 (around) context window for the word &ldquo;Fox&rdquo; and for calculating the co-occurrence only these words will be counted. Let us see context window for the word &ldquo;Over&rdquo;.<br></p>
+
+<table>
+<tr>
+<td>Quick</td>
+<td>Brown</td>
+<td style="background: #98FB98;">Fox</td>
+<td style="background: #98FB98;">Jump</td>
+<td style="background: #FF4500;">Over</td>
+<td style="background: #98FB98;">The</td>
+<td style="background: #98FB98;">Lazy</td>
+<td>Dog</td>
+</tr>
+</table>
+
+<p>Now, let us take an example corpus to calculate a co-occurrence matrix.<br></p>
+
+<p>Corpus = He is not lazy. He is intelligent. He is smart.<br></p>
+
+<table>
+<tr>
+<td style="background: #CAFF70;"></td>
+<td style="background: #CAFF70;">He</td>
+<td style="background: #CAFF70;">is</td>
+<td style="background: #CAFF70;">not</td>
+<td style="background: #CAFF70;">lazy</td>
+<td style="background: #CAFF70;">intelligent</td>
+<td style="background: #CAFF70;">smart</td>
+</tr>
+<tr>
+<td style="background: #CAFF70;">He</td>
+<td style="background: #DCDCDC;">0</td>
+<td style="background: red;">4</td>
+<td style="background: #DCDCDC;">2</td>
+<td style="background: #DCDCDC;">1</td>
+<td style="background: #DCDCDC;">2</td>
+<td style="background: #DCDCDC;">1</td>
+</tr>
+<tr>
+<td style="background: #CAFF70;">is</td>
+<td style="background: #DCDCDC;">4</td>
+<td style="background: #DCDCDC;">0</td>
+<td style="background: #DCDCDC;">1</td>
+<td style="background: #DCDCDC;">2</td>
+<td style="background: #DCDCDC;">2</td>
+<td style="background: #DCDCDC;">1</td>
+</tr>
+<tr>
+<td style="background: #CAFF70;">not</td>
+<td style="background: #DCDCDC;">2</td>
+<td style="background: #DCDCDC;">1</td>
+<td style="background: #DCDCDC;">0</td>
+<td style="background: #DCDCDC;">1</td>
+<td style="background: #DCDCDC;">0</td>
+<td style="background: #DCDCDC;">0</td>
+</tr>
+<tr>
+<td style="background: #CAFF70;">lazy</td>
+<td style="background: #DCDCDC;">1</td>
+<td style="background: #DCDCDC;">2</td>
+<td style="background: #DCDCDC;">1</td>
+<td style="background: #DCDCDC;">0</td>
+<td style="background: skyblue;">0</td>
+<td style="background: #DCDCDC;">0</td>
+</tr>
+<tr>
+<td style="background: #CAFF70;">intelligent</td>
+<td style="background: #DCDCDC;">2</td>
+<td style="background: #DCDCDC;">2</td>
+<td style="background: #DCDCDC;">0</td>
+<td style="background: #DCDCDC;">0</td>
+<td style="background: #DCDCDC;">0</td>
+<td style="background: #DCDCDC;">0</td>
+</tr>
+<tr>
+<td style="background: #CAFF70;">smart</td>
+<td style="background: #DCDCDC;">1</td>
+<td style="background: #DCDCDC;">1</td>
+<td style="background: #DCDCDC;">0</td>
+<td style="background: #DCDCDC;">0</td>
+<td style="background: #DCDCDC;">0</td>
+<td style="background: #DCDCDC;">0</td>
+</tr>
+</table>
+
+<p>Let us understand this co-occurrence matrix by seeing two examples in the table above. Red and the blue box.<br></p>
+
+<p>Red box- It is the number of times &ldquo;He&rdquo; and &ldquo;is&rdquo; have appeared in the context window 2 and it can be seen that the count turns out to be 4. The below table will help you visualise the count.<br></p>
+
+<table>
+<tr>
+<td style="background: #CDAD00;">He</td>
+<td style="background: #CDAD00;">is</td>
+<td>not</td>
+<td>lazy</td>
+<td>He</td>
+<td>is</td>
+<td>intelligent</td>
+<td>He</td>
+<td>is</td>
+<td>smart</td>
+</tr>
+<tr>
+<td>He</td>
+<td>is</td>
+<td>not</td>
+<td>lazy</td>
+<td style="background: #CDAD00;">He</td>
+<td style="background: #CDAD00;">is</td>
+<td>intelligent</td>
+<td>He</td>
+<td>is</td>
+<td>smart</td>
+</tr>
+<tr>
+<td>He</td>
+<td>is</td>
+<td>not</td>
+<td>lazy</td>
+<td>He</td>
+<td style="background: #CDAD00;">is</td>
+<td>intelligent</td>
+<td style="background: #CDAD00;">He</td>
+<td>is</td>
+<td>smart</td>
+</tr>
+<tr>
+<td>He</td>
+<td>is</td>
+<td>not</td>
+<td>lazy</td>
+<td>He</td>
+<td>is</td>
+<td>intelligent</td>
+<td style="background: #CDAD00;">He</td>
+<td style="background: #CDAD00;">is</td>
+<td>smart</td>
+</tr>
+</table>
+
+<p>while the word &ldquo;lazy&rdquo; has never appeared with &ldquo;intelligent&rdquo; in the context window and therefore has been assigned 0 in the blue box.<br></p>
+
+<h4 id="variations-of-co-occurrence-matrix">Variations of Co-occurrence Matrix</h4>
+
+<p>Let’s say there are V unique words in the corpus. So Vocabulary size = V. The columns of the Co-occurrence matrix form the <em>context words</em>. The different variations of Co-Occurrence Matrix are-<br></p>
+
+<ol>
+<li>A co-occurrence matrix of size V X V. Now, for even a decent corpus V gets very large and difficult to handle. So generally, this architecture is never preferred in practice.<br></li>
+<li>A co-occurrence matrix of size V X N where N is a subset of V and can be obtained by removing irrelevant words like stopwords etc. for example. This is still very large and presents computational difficulties.<br></li>
+</ol>
+
+<p>But, remember this co-occurrence matrix is not the word vector representation that is generally used. Instead, this Co-occurrence matrix is decomposed using techniques like PCA, SVD etc. into factors and combination of these factors forms the word vector representation.<br></p>
+
+<p>Let me illustrate this more clearly. For example, you perform PCA on the above matrix of size VXV. You will obtain V principal components. You can choose k components out of these V components. So, the new matrix will be of the form \(V\times k\).</p>
+
+<p>And, a single word, instead of being represented in V dimensions will be represented in k dimensions while still capturing almost the same semantic meaning. k is generally of the order of hundreds.<br></p>
+
+<p>So, what PCA does at the back is decompose Co-Occurrence matrix into three matrices, U,S and V where U and V are both orthogonal matrices. What is of importance is that dot product of U and S gives the word vector representation and V gives the word context representation.<br></p>
+
+<p><img src="/images/svd2.png" data-action="zoom"></p>
+
+<h4 id="advantages-of-co-occurrence-matrix">Advantages of Co-occurrence Matrix</h4>
+
+<ol>
+<li>It preserves the semantic relationship between words. i.e man and woman tend to be closer than man and apple.</li>
+<li>It uses SVD at its core, which produces more accurate word vector representations than existing methods.</li>
+<li>It uses factorization which is a well-defined problem and can be efficiently solved.</li>
+<li>It has to be computed once and can be used anytime once computed. In this sense, it is faster in comparison to others.</li>
+</ol>
+
+<h4 id="disadvantages-of-co-occurrence-matrix">Disadvantages of Co-Occurrence Matrix</h4>
+
+<ol>
+<li>It requires huge memory to store the co-occurrence matrix.
+But, this problem can be circumvented by factorizing the matrix out of the system for example in Hadoop clusters etc. and can be saved.</li>
+</ol>
+
+<h2 id="prediction-based-vector">Prediction based Vector</h2>
+
+<p><strong>Pre-requisite</strong>: This section assumes that you have a working knowledge of how a neural network works and the mechanisms by which weights in an NN are updated. If you are new to Neural Network, I would suggest you go through <a href="https://www.analyticsvidhya.com/blog/2017/05/neural-network-from-scratch-in-python-and-r/" target="_blank">this awesome article</a> by Sunil to gain a very good understanding of how NN works.<br></p>
+
+<p>So far, we have seen deterministic methods to determine word vectors. But these methods proved to be limited in their word representations until Mitolov etc. el introduced word2vec to the NLP community. These methods were prediction based in the sense that they provided probabilities to the words and proved to be state of the art for tasks like word analogies and word similarities. They were also able to achieve tasks like King -man +woman = Queen, which was considered a result almost magical. So let us look at the word2vec model used as of today to generate word vectors.<br></p>
+
+<p>Word2vec is not a single algorithm but a combination of two techniques – CBOW(Continuous bag of words) and Skip-gram model. Both of these are shallow neural networks which map word(s) to the target variable which is also a word(s). Both of these techniques learn weights which act as word vector representations. Let us discuss both these methods separately and gain intuition into their working.<br></p>
+
+<h3 id="cbow-continuous-bag-of-words">CBOW(Continuous Bag of words)</h3>
+
+<p>The way CBOW work is that it tends to predict the probability of a word given a context. A context may be a single word or a group of words. But for simplicity, I will take a single context word and try to predict a single target word.<br></p>
+
+<p>Suppose, we have a corpus C = &ldquo;Hey, this is sample corpus using only one context word.&rdquo; and we have defined a context window of 1. This corpus may be converted into a training set for a CBOW model as follow. The input is shown below. The matrix on the right in the below image contains the one-hot encoded from of the input on the left.<br></p>
+
+<p><img src="/images/cbow1.png" data-action="zoom"></p>
+
+<p>The target for a single datapoint say Datapoint 4 is shown as below<br></p>
+
+<table>
+<thead>
+<tr>
+<th>Hey</th>
+<th>this</th>
+<th>is</th>
+<th>sample</th>
+<th>corpus</th>
+<th>using</th>
+<th>only</th>
+<th>one</th>
+<th>context</th>
+<th>word</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+
+<p>This matrix shown in the above image is sent into a shallow neural network with three layers: an input layer, a hidden layer and an output layer. The output layer is a softmax layer which is used to sum the probabilities obtained in the output layer to 1. Now let us see how the forward propagation will work to calculate the hidden layer activation.<br></p>
+
+<p>Let us first see a diagrammatic representation of the CBOW model.<br></p>
+
+<div style="text-align: center;">
+<img src="/images/Screenshot-from-2017-06-04-22-40-29.png" data-action="zoom">
+</div>
+
+<p>The matrix representation of the above image for a single data point is below.<br></p>
+
+<p><img src="/images/Screenshot-from-2017-06-04-22-19-202.png" data-action="zoom"></p>
+
+<p>The flow is as follows:<br></p>
+
+<ol>
+<li>The input layer and the target, both are one- hot encoded of size \([1\times V]\). Here V=10 in the above example.</li>
+<li>There are two sets of weights. one is between the input and the hidden layer and second between hidden and output layer.<br>
+Input-Hidden layer matrix size =\([V\times N]\), hidden-Output layer matrix  size =\([N\times V]\) : Where N is the number of dimensions we choose to represent our word in. It is arbitary and a hyper-parameter for a Neural Network. Also, N is the number of neurons in the hidden layer. Here, N=4.</li>
+<li>There is a no activation function between any layers.( More specifically, I am referring to linear activation)</li>
+<li>The input is multiplied by the input-hidden weights and called hidden activation. It is simply the corresponding row in the input-hidden matrix copied.</li>
+<li>The hidden input gets multiplied by hidden- output weights and output is calculated.</li>
+<li>Error between output and target is calculated and propagated back to re-adjust the weights.</li>
+<li>The weight  between the hidden layer and the output layer is taken as the word vector representation of the word.</li>
+</ol>
+
+<p>We saw the above steps for a single context word. Now, what about if we have multiple context words? The image below describes the architecture for multiple context words.<br></p>
+
+<div style="text-align: center;">
+<img src="/images/Screenshot-from-2017-06-04-22-05-44-261x300.png" data-action="zoom">
+</div>
+
+<p>Below is a matrix representation of the above architecture for an easy understanding.<br></p>
+
+<p><img src="/images/Screenshot-from-2017-06-04-22-14-311.png" data-action="zoom"></p>
+
+<p>The image above takes 3 context words and predicts the probability of a target word. The input can be assumed as taking three one-hot encoded vectors in the input layer as shown above in red, blue and green.<br></p>
+
+<p>So, the input layer will have 3\([1\times V]\) Vectors in the input as shown above and 1\([1\times V]\) in the output layer. Rest of the architecture is same as for a 1-context CBOW.<br></p>
+
+<p>The steps remain the same, only the calculation of hidden activation changes. Instead of just copying the corresponding rows of the input-hidden weight matrix to the hidden layer, an average is taken over all the corresponding rows of the matrix. We can understand this with the above figure. The average vector calculated becomes the hidden activation. So, if we have three context words for a single target word, we will have three initial hidden activations which are then averaged element-wise to obtain the final activation.<br></p>
+
+<p>In both a single context word and multiple context word, I have shown the images till the calculation of the hidden activations since this is the part where CBOW differs from a simple MLP network. The steps after the calculation of hidden layer are same as that of the MLP as mentioned in this article – <a href="https://www.analyticsvidhya.com/blog/2017/05/neural-network-from-scratch-in-python-and-r/" target="_blank">Understanding and Coding Neural Networks from scratch</a>.<br></p>
+
+<p>The differences between MLP and CBOW are  mentioned below for clarification:<br></p>
+
+<ol>
+<li>The objective function in MLP is a MSE(mean square error) whereas in CBOW it is negative log likelihood of a word given a set of context i.e -log(p(wo/wi)), where p(wo/wi) is given as</li>
+</ol>
+
+<div style="text-align: center;">
+<img src="/images/AAEAAQAAAAAAAA18AAAAJGNkMGYxMDIxLWY5NjgtNGEzMy1hMjAyLWU4MmI4ZWUwNDNhYw-300x91.jpg" data-action="zoom">
+</div>
+
+<p>wo : output word<br>
+wi: context words<br></p>
+
+<ol>
+<li>The gradient of error with respect to hidden-output weights and input-hidden weights are different since MLP has  sigmoid activations(generally) but CBOW has linear activations. The method however to calculate the gradient is same as an MLP.</li>
+</ol>
+
+<h4 id="advantages-of-cbow">Advantages of CBOW:</h4>
+
+<ol>
+<li>Being probabilistic is nature, it is supposed to perform superior to deterministic methods(generally).</li>
+<li>It is low on memory. It does not need to have huge RAM requirements like that of co-occurrence matrix where it needs to store three huge matrices.</li>
+</ol>
+
+<h4 id="disadvantages-of-cbow">Disadvantages of CBOW:</h4>
+
+<ol>
+<li>CBOW takes the average of the context of a word (as seen above in calculation of hidden activation). For example, Apple can be both a fruit and a company but CBOW takes an average of both the contexts and places it in between a cluster for fruits and companies.</li>
+<li>Training a CBOW from scratch can take forever if not properly optimized.</li>
+</ol>
+
+<h3 id="skip-gram-model">Skip–Gram model</h3>
+
+<p>Skip–gram follows the same topology as of CBOW. It just flips CBOW’s architecture on its head. The aim of skip-gram is to predict the context given a word. Let us take the same corpus that we built our CBOW model on. C=&ldquo;Hey, this is sample corpus using only one context word.&rdquo; Let us construct the training data.<br></p>
+
+<div style="text-align: center;">
+<img src="/images/Capture1-300x222.png" data-action="zoom">
+</div>
+
+<p>The input vector for skip-gram is going to be similar to a 1-context CBOW model. Also, the calculations up to hidden layer activations are going to be the same. The difference will be in the target variable. Since we have defined a context window of 1 on both the sides, there will be <strong>&ldquo;two&rdquo; one hot encoded target variables</strong> and <strong>&ldquo;two&rdquo; corresponding outputs</strong> as can be seen by the blue section in the image.<br></p>
+
+<p>Two separate errors are calculated with respect to the two target variables and the two error vectors obtained are added element-wise to obtain a final error vector which is propagated back to update the weights.<br></p>
+
+<p>The weights between the input and the hidden layer are taken as the word vector representation after training. The loss function or the objective is of the same type as of the CBOW model.<br></p>
+
+<p>The skip-gram architecture is shown below.<br></p>
+
+<div style="text-align: center;">
+<img src="/images/Capture2-276x300.png" data-action="zoom">
+</div>
+
+<p>For a better understanding, matrix style structure with calculation has been shown below.<br></p>
+
+<p><img src="/images/skip.png" data-action="zoom"></p>
+
+<p>Let us break down the above image.<br></p>
+
+<p>Input layer  size–\([1\times V]\), Input hidden weight matrix size–\([V\times N]\), Number of neurons in hidden layer – N, Hidden-Output weight matrix size–\([N\times V]\), Output layer size–C\([1\times V]\)<br></p>
+
+<p>In the above example, C is the number of context words=2, V= 10, N=4<br></p>
+
+<ol>
+<li>The row in red is the hidden activation corresponding to the input one-hot encoded vector. It is basically the corresponding row of input-hidden matrix copied.</li>
+<li>The yellow matrix is the weight between the hidden layer and the output layer.</li>
+<li>The blue matrix is obtained by the matrix multiplication of hidden activation and the hidden output weights. There will be two rows calculated for two target(context) words.</li>
+<li>Each row of the blue matrix is converted into its softmax probabilities individually as shown in the green box.</li>
+<li>The grey matrix contains the one hot encoded vectors of the two context words(target).</li>
+<li>Error is calculated by substracting the first row of the grey matrix(target) from the first row of the green matrix(output) element-wise. This is repeated for the next row. Therefore, for <strong>n</strong> target context words, we will have <strong>n</strong> error vectors.</li>
+<li>Element-wise sum is taken over all the error vectors to obtain a final error vector.</li>
+<li>This error vector is propagated back to update the weights.</li>
+</ol>
+
+<h4 id="advantages-of-skip-gram-model">Advantages of Skip-Gram Model</h4>
+
+<ol>
+<li>Skip-gram model can capture two semantics for a single word. i.e it will have two vector representations of Apple. One for the company and other for the fruit.</li>
+<li>Skip-gram with negative sub-sampling outperforms every other method generally.</li>
+</ol>
+
+<p><a href="http://bit.ly/wevi-online" target="_blank">This</a> is an excellent interactive tool to visualise CBOW and skip gram in action. I would suggest you to really go through this link for a better understanding.</p>
+
+<h1 id="word-embeddings-use-case-scenarios">Word Embeddings use case scenarios</h1>
+
+<p>Since word embeddings or word Vectors are numerical representations of contextual similarities between words, they can be manipulated and made to perform amazing tasks like-<br></p>
+
+<ol>
+<li>Finding the degree of similarity between two words.</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">model<span style="color:#f92672">.</span>similarity(<span style="color:#e6db74">&#39;woman&#39;</span>,<span style="color:#e6db74">&#39;man&#39;</span>)
+<span style="color:#ae81ff">0.73723527</span></code></pre></div>
+<ol>
+<li>Finding odd one out.</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">model<span style="color:#f92672">.</span>doesnt_match(<span style="color:#e6db74">&#39;breakfast cereal dinner lunch&#39;</span>;<span style="color:#f92672">.</span>split())
+<span style="color:#e6db74">&#39;cereal&#39;</span></code></pre></div>
+<ol>
+<li>Amazing things like woman+king-man =queen</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">model<span style="color:#f92672">.</span>most_similar(positive<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;woman&#39;</span>,<span style="color:#e6db74">&#39;king&#39;</span>],negative<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;man&#39;</span>],topn<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>)
+queen: <span style="color:#ae81ff">0.508</span></code></pre></div>
+<ol>
+<li>Probability of a text under the model</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">model<span style="color:#f92672">.</span>score([<span style="color:#e6db74">&#39;The fox jumped over the lazy dog&#39;</span><span style="color:#f92672">.</span>split()])
+<span style="color:#ae81ff">0.21</span></code></pre></div>
+<p>Below is one interesting visualisation of word2vec.<br></p>
+
+<div style="text-align: center;">
+<img src="/images/graph1-300x277.jpg" data-action="zoom">
+</div>
+
+<p>The above image is a t-SNE representation of word vectors in 2 dimension and you can see that two contexts of apple have been captured. One is a fruit and the other company.<br></p>
+
+<ol>
+<li>It can be used to perform Machine Translation.</li>
+</ol>
+
+<div style="text-align: center;">
+<img src="/images/ml-300x211.png" data-action="zoom">
+</div>
+
+<p>The above graph is a bilingual embedding with chinese in green and english in yellow. If we know the words having similar meanings in chinese and english, the above bilingual embedding can be used to translate one language into the other.<br></p>
+
+<h1 id="using-pre-trained-word-vectors">Using pre-trained word vectors</h1>
+
+<p>We are going to use google’s pre-trained model. It contains word vectors for a vocabulary of 3 million words trained on around 100 billion words from the google news dataset. The downlaod link for the model is <a href="https://drive.google.com/file/d/0B7XkCwpI5KDYNlNUTTlSS21pQmM/edit" target="_blank">this</a>. Beware it is a 1.5 GB download.<br></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> gensim.models <span style="color:#f92672">import</span> Word2Vec
+
+<span style="color:#75715e">#loading the downloaded model</span>
+model <span style="color:#f92672">=</span> Word2Vec<span style="color:#f92672">.</span>load_word2vec_format(<span style="color:#e6db74">&#39;GoogleNews-vectors-negative300.bin&#39;</span>, binary<span style="color:#f92672">=</span>True, norm_only<span style="color:#f92672">=</span>True)
+
+<span style="color:#75715e">#the model is loaded. It can be used to perform all of the tasks mentioned above.</span>
+
+<span style="color:#75715e"># getting word vectors of a word</span>
+dog <span style="color:#f92672">=</span> model[<span style="color:#e6db74">&#39;dog&#39;</span>]
+
+<span style="color:#75715e">#performing king queen magic</span>
+<span style="color:#66d9ef">print</span>(model<span style="color:#f92672">.</span>most_similar(positive<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;woman&#39;</span>, <span style="color:#e6db74">&#39;king&#39;</span>], negative<span style="color:#f92672">=</span>[<span style="color:#e6db74">&#39;man&#39;</span>]))
+
+<span style="color:#75715e">#picking odd one out</span>
+<span style="color:#66d9ef">print</span>(model<span style="color:#f92672">.</span>doesnt_match(<span style="color:#e6db74">&#34;breakfast cereal dinner lunch&#34;</span><span style="color:#f92672">.</span>split()))
+
+<span style="color:#75715e">#printing similarity index</span>
+<span style="color:#66d9ef">print</span>(model<span style="color:#f92672">.</span>similarity(<span style="color:#e6db74">&#39;woman&#39;</span>, <span style="color:#e6db74">&#39;man&#39;</span>))</code></pre></div>
+<h1 id="training-your-own-word-vectors">Training your own word vectors</h1>
+
+<p>We will be training our own word2vec on a custom corpus. For training the model we will be using gensim and the steps are illustrated as below.<br></p>
+
+<p>word2Vec requires that a format of list of list for training where every document is contained in a list and every list contains list of tokens of that documents. I won’t be covering the pre-preprocessing part here. So let’s take an example list of list to train our word2vec model.<br></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python">sentence<span style="color:#f92672">=</span>[[<span style="color:#e6db74">&#34;Neeraj&#34;</span>,<span style="color:#e6db74">&#34;Boy&#34;</span>],[<span style="color:#e6db74">&#34;Sarwan&#34;</span>,<span style="color:#e6db74">&#34;is&#34;</span>],[<span style="color:#e6db74">&#34;good&#34;</span>,<span style="color:#e6db74">&#34;boy&#34;</span>]]
+<span style="color:#75715e">#training word2vec on 3 sentences</span>
+model <span style="color:#f92672">=</span> gensim<span style="color:#f92672">.</span>models<span style="color:#f92672">.</span>Word2Vec(sentence, min_count<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>,size<span style="color:#f92672">=</span><span style="color:#ae81ff">300</span>,workers<span style="color:#f92672">=</span><span style="color:#ae81ff">4</span>)</code></pre></div>
+<p>Let us try to understand the parameters of this model.<br></p>
+
+<p>sentence – list of list of our corpus<br>
+min_count=1 -the threshold value for the words. Word with frequency greater than this only are going to be included into the model.<br>
+size=300 – the number of dimensions in which we wish to represent our word. This is the size of the word vector.<br>
+workers=4 – used for parallelization<br></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">#using the model</span>
+<span style="color:#75715e">#The new trained model can be used similar to the pre-trained ones.</span>
+<span style="color:#75715e">#printing similarity index</span>
+<span style="color:#66d9ef">print</span>(model<span style="color:#f92672">.</span>similarity(<span style="color:#e6db74">&#39;woman&#39;</span>, <span style="color:#e6db74">&#39;man&#39;</span>))</code></pre></div>
+<h1 id="end-notes">End Notes</h1>
+
+<p>Word Embeddings is an active research area trying to figure out better word representations than the existing ones. But, with time they have grown large in number and more complex. This article was aimed at simplying some of the workings of these embedding models without carrying the mathematical overhead. If you feel think that I was able to clear some of your confusion, comment below. Any changes or suggestions would be welcomed.<br></p>
+
+<p>Note: We also have a <a href="https://courses.analyticsvidhya.com/courses/natural-language-processing-nlp/about?utm_source=blog&amp;utm_medium=word-embeddings-count-word2veec" target="_blank">video course</a> on Natural Language Processing covering many NLP topics including word embeddings. Do check it out!</p>
+
+</div>
+
+  
+<footer class='entry-footer'>
+  <div class='container sep-before'><div class='categories'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M22,19a2,2,0,0,1-2,2H4a2,2,0,0,1-2-2V5A2,2,0,0,1,4,3H9l2,3h9a2,2,0,0,1,2,2Z"/>
+  
+</svg>
+<span class='screen-reader-text'>Categories: </span><a class='category' href='/categories/nlp/'>nlp</a></div>
+<div class='tags'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M20.59,13.41l-7.17,7.17a2,2,0,0,1-2.83,0L2,12V2H12l8.59,8.59A2,2,0,0,1,20.59,13.41Z"/>
+  <line x1="7" y1="7" x2="7" y2="7"/>
+  
+</svg>
+<span class='screen-reader-text'>Tags: </span><a class='tag' href='/tags/word-embedding/'>word embedding</a></div>
+
+  </div>
+</footer>
+
+
+</article>
+
+<nav class='entry-nav'>
+  <div class='container'><div class='prev-entry sep-before'>
+      <a href='/post/20191115113824/'>
+        <span aria-hidden='true'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="20" y1="12" x2="4" y2="12"/>
+  <polyline points="10 18 4 12 10 6"/>
+  
+</svg>
+ Previous</span>
+        <span class='screen-reader-text'>Previous post: </span>Git服务器搭建</a>
+    </div><div class='next-entry sep-before'>
+      <a href='/post/20191206220609/'>
+        <span class='screen-reader-text'>Next post: </span>对单词嵌入的直观理解：从计数向量到Word2Vec<span aria-hidden='true'>Next <svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="4" y1="12" x2="20" y2="12"/>
+  <polyline points="14 6 20 12 14 18"/>
+  
+</svg>
+</span>
+      </a>
+    </div></div>
+</nav>
+
+
+
+
+      </main>
+
+      <footer id='footer' class='footer'>
+        <div class='container sep-before'><section class='widget widget-social_menu sep-after'><nav aria-label='Social Menu'>
+    <ul><li>
+        <a href='https://github.com/mannuan' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Open Github account in new tab</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='mailto:mannuandeyangguang@163.com' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>Contact via Email</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+  <polyline points="22,6 12,13 2,6"/>
+  
+</svg>
+</a>
+      </li></ul>
+  </nav>
+</section><div class='copyright'>
+  <p> &copy; 2019 mannuan </p>
+</div>
+
+        </div>
+      </footer>
+
+    </div>
+  </div><script>window.__assets_js_src="/assets/js/"</script>
+
+<script src='/assets/js/main.67d669ac.js'></script><script src='/js/custom.js'></script><script src='/js/zooming.min.js'></script><script type='text/x-mathjax-config'>
+  MathJax.Hub.Config({})
+</script>
+
+<script type='text/javascript' async src='//unpkg.com/mathjax/MathJax.js?config=TeX-MML-AM_CHTML'></script>
+
+</body>
+
+</html>
+

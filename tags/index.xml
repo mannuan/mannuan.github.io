@@ -5,10 +5,28 @@
     <link>https://mannuan.github.io/tags/</link>
     <description>Recent content in Tags on mannuan</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 07 Nov 2019 15:58:45 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 06 Dec 2019 22:06:09 +0800</lastBuildDate>
     
 	<atom:link href="https://mannuan.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>word embedding</title>
+      <link>https://mannuan.github.io/tags/word-embedding/</link>
+      <pubDate>Fri, 06 Dec 2019 22:06:09 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/tags/word-embedding/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>git</title>
+      <link>https://mannuan.github.io/tags/git/</link>
+      <pubDate>Fri, 15 Nov 2019 11:38:24 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/tags/git/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>ECS</title>

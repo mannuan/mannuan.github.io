@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>word embedding on mannuan</title>
+    <link>https://mannuan.github.io/tags/word-embedding/</link>
+    <description>Recent content in word embedding on mannuan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 06 Dec 2019 22:06:09 +0800</lastBuildDate>
+    
+	<atom:link href="https://mannuan.github.io/tags/word-embedding/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>对单词嵌入的直观理解：从计数向量到Word2Vec</title>
+      <link>https://mannuan.github.io/post/20191206220609/</link>
+      <pubDate>Fri, 06 Dec 2019 22:06:09 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20191206220609/</guid>
+      <description>词嵌入 用非常简单的术语来说，“词嵌入”就是将文本转换为数字，并且同一文本可能会有不同的数字表示形式。在深入研究Word Embedding的细节之前，我们应该回答以下问题——为什么需要Word Embedding?</description>
+    </item>
+    
+    <item>
+      <title>An Intuitive Understanding of Word Embeddings: From Count Vectors to Word2Vec</title>
+      <link>https://mannuan.github.io/post/20191206194350/</link>
+      <pubDate>Fri, 06 Dec 2019 19:43:51 +0800</pubDate>
+      
+      <guid>https://mannuan.github.io/post/20191206194350/</guid>
+      <description>Introduction Before we start, have a look at the below examples.
+ You open Google and search for a news article on the ongoing Champions trophy and get hundreds of search results in return about it.
+ Nate silver analysed millions of tweets and correctly predicted the results of 49 out of 50 states in 2008 U.S Presidential Elections.
+ You type a sentence in google translate in English and get an Equivalent Chinese conversion.</description>
+    </item>
+    
+  </channel>
+</rss>
