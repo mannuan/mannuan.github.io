@@ -19,6 +19,6 @@ function getQueryStringArgs() {
 }
 
 let args = getQueryStringArgs(location.href);
-if(JSON.stringify(args) !== "{}"){
+if(JSON.stringify(args) == "{}"){
     location.href = "//blog.mannuan.group";
 }
